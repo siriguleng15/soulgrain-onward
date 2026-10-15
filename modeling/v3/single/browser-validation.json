@@ -1,0 +1,14 @@
+{
+  "renderer": "Chromium software WebGL",
+  "actual_glb_meshes": 31,
+  "mouse_orbit_pixel_change": true,
+  "six_view_presets": true,
+  "reset": true,
+  "local_glb_file_input": true,
+  "simulated_single_finger_orbit": true,
+  "touch_page_scroll_contained": true,
+  "runtime_page_errors": 0,
+  "ipad_safari_hardware_tested": false,
+  "visual_similarity_approved": false,
+  "glb_sha256": "eff7c8e88fb123c716cebf00eb5b6af00ec9c590a3b9ce57f742511cf08570c0"
+}
