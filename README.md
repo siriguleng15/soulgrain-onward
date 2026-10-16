@@ -18,6 +18,26 @@ npm run build    # TypeScript 严格检查并生成 dist/
 npm run preview # 检查生产产物，默认端口 4173
 ```
 
+## 双形态鞋型工作台（V6）
+
+开发或预览服务器启动后，打开 `/design-lab.html`。这是独立的三维编辑入口，主站的产品舞台继续使用 V2 素材。
+
+- 单指／鼠标拖动旋转，双指／滚轮缩放，支持恢复视角。
+- 「外翻折下／高帮展开」切换同一套鞋筒、长鞋舌、鞋眼、包边和缝线的形态，保留已选颜色与印花。
+- 可分别编辑 13 个材质区域，上传本地 JPG／PNG／WebP，调整图案重复与旋转，并下载当前设计的 GLB。图片只在本机处理。
+
+双形态模型：`public/assets/soulgrain_onward_fold_modes_v6.glb`；可编辑工程：`modeling/fold-modes/soulgrain_onward_fold_modes_v6.blend`。Blender 的 `Shaft_Upright` 形态键为 0 时折下、1 时展开。导出的 GLB 保留当前权重、另一形态的数据、原尺寸与 UV；其他查看器须支持形态键才能自行切换，两端之间没有布料模拟动画。
+
+重建时使用已校验的原始 Sketchfab GLB，脚本不会导入或覆盖 V2、V3、V4、V5 模型：
+
+```sh
+/workspace/blender-install/bin/blender-5.2.2 --background --threads 4 --python-exit-code 1 --python modeling/fold-modes/build_fold_modes.py
+python3 modeling/fold-modes/verify_glb.py
+/workspace/blender-install/bin/blender-5.2.2 --background --threads 2 --python-exit-code 1 --python modeling/fold-modes/check_geometry.py
+```
+
+原始文件可放在脚本中的 `S` 路径；找不到时，脚本从仓库根目录五个原始分卷恢复到临时文件，并强制核对 SHA-256。来源仍为下文署名的 theunclerulez / CC BY 4.0，保留原鞋下部几何、修改上部结构与中性材质。翻筒、长鞋舌的版型与褶皱依据照片估计，两态不是严格等距的布料模拟，局部拉伸、细褶及裁片比例仍需实物尺寸和人工塑形精修；本版不声称达到扫描或量产精度。iPad Safari 的真实手势、内存与持续使用温度仍需真机确认。
+
 ## 导入真实素材
 
 将已获授权的文件放入 `public/assets/`，编辑 `src/product.ts`：
@@ -58,7 +78,7 @@ V2 不含最终原创鞋款配色与纹样、购物支付或最终设计解构�
 
 测试白模改编自 **theunclerulez** 在 Sketchfab 发布的 [Generic “Converse style” Sneakers](https://sketchfab.com/3d-models/generic-converse-style-sneakers-f7858a5612504c4193ca4c61125d6244)，采用 [Creative Commons Attribution 4.0 International（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/) 许可。
 
-仓库提供的版本已修改模型材质为无最终配色和纹样的测试白模。本次展示集成不再修改原始几何结构或材质；仅调整场景中的统一缩放、居中、镜头和灯光。原作者不代表对 SoulGrain 品牌的认可，白模不代表 SoulGrain 最终原创鞋型。网站产品舞台下方保留相同署名与许可链接。
+V2 测试白模已移除最终配色和纹样，V2 展示集成仅调整场景中的统一缩放、居中、镜头和灯光。V6 工作台另用新文件保存单鞋、可翻折鞋筒与鞋舌，以及可替换的中性材质，不覆盖 V2。原作者不代表对 SoulGrain 品牌的认可，研究模型不代表 SoulGrain 最终原创鞋型。网站与工作台均保留署名与许可链接。
 
 ## V2 验证与真机检查
 

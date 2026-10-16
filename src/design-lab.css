@@ -34,6 +34,11 @@ a { color: inherit; }
 .control-section { border-top: 1px solid #ffffff1c; padding: 23px 0; }
 .control-label { display: block; font-size: 12px; font-weight: 500; margin-bottom: 13px; }
 .step-number { color: #8e9baa; font-size: 10px; margin-right: 10px; }
+.shape-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.shape-switch button { min-height: 46px; font-size: 12px; padding: 11px 8px; }
+.shape-switch button[aria-pressed=true] { background: #e9e5dc; border-color: #e9e5dc; color: #18202b; }
+.shape-switch button[aria-pressed=true]:hover { background: #fff; }
+.shape-note { font-size: 10px; line-height: 1.9; color: #9ca8b8; margin: 12px 0 0; }
 select { width: 100%; background: #1b2531; border: 1px solid #ffffff29; color: #f2eee5; padding: 12px; min-height: 44px; border-radius: 4px; }
 .selected-name { font-size: 10px; color: #8f9aaa; margin: 9px 0 0; letter-spacing: .03em; min-height: 14px; }
 .color-row { display: flex; gap: 10px; align-items: center; }

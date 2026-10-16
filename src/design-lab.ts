@@ -9,9 +9,10 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 
-const MODEL_URL = '/assets/soulgrain_onward_editable_v5.glb';
+const MODEL_URL = `${import.meta.env.BASE_URL}assets/soulgrain_onward_fold_modes_v6.glb`;
+const SHAFT_TARGET = 'Shaft_Upright';
 const labels: Record<string, string> = {
-  Body_Canvas: '鞋身帆布', Body_Inner_Canvas: '鞋身内侧', Collar_Canvas: '外翻鞋筒', Tongue_Canvas: '翻折鞋舌',
+  Body_Canvas: '鞋身帆布', Body_Inner_Canvas: '鞋身内侧', Collar_Canvas: '高帮鞋筒', Tongue_Canvas: '长鞋舌',
   Rubber_Toe: '橡胶鞋头', Rubber_Foxing: '鞋底橡胶围条', Rubber_Outsole: '外底',
   Laces: '鞋带', Eyelets: '金属鞋眼', Heel_Strip: '后跟条', Canvas_Trim: '帆布包边',
   Stitching: '缝线', Inner_Lining: '内衬',
@@ -20,7 +21,7 @@ const canvasPartNames = new Set(['Body_Canvas', 'Body_Inner_Canvas', 'Collar_Can
 const root = document.querySelector<HTMLDivElement>('#design-lab')!;
 root.innerHTML = `
   <header class="lab-header">
-    <a class="brand" href="/" aria-label="返回 SoulGrain 网站">SOULGRAIN<sup>™</sup></a>
+    <a class="brand" href="${import.meta.env.BASE_URL}" aria-label="返回 SoulGrain 网站">SOULGRAIN<sup>™</sup></a>
     <span class="header-note">ONWARD / SHAPE & MATERIAL STUDY</span>
   </header>
   <main class="lab-layout">
@@ -32,11 +33,12 @@ root.innerHTML = `
     </section>
     <aside class="controls-panel" aria-label="部件外观编辑">
       <p class="eyebrow">YOUR INTERPRETATION</p><h2 class="panel-heading">鞋型工作台</h2>
-      <p class="panel-intro">外观可以改变，鞋型始终保持。选择部件，调整颜色，或用自己的图片试穿印花。</p>
-      <section class="control-section"><label class="control-label" for="part"><span class="step-number">01</span>选择部件</label><select id="part" disabled><option>等待模型加载</option></select><p class="selected-name" id="part-name"></p></section>
-      <section class="control-section"><label class="control-label" for="part-color"><span class="step-number">02</span>部件颜色</label><div class="color-row"><div class="color-input-wrap"><input type="color" id="part-color" value="#dad8d1" disabled aria-label="选择部件颜色"></div><input id="color-code" class="color-code" aria-label="十六进制颜色" value="#DAD8D1" maxlength="7" spellcheck="false" disabled></div><div class="swatches">${[['#e4e0d7','暖白'],['#242a35','墨蓝'],['#595b61','岩灰'],['#83748e','烟紫'],['#9e383e','暗红'],['#b9a88c','沙色']].map(([color,label]) => `<button class="swatch" data-color="${color}" style="--swatch:${color}" aria-label="${label}" title="${label}" disabled></button>`).join('')}</div></section>
-      <section class="control-section"><span class="control-label"><span class="step-number">03</span>试穿印花</span><input class="file-input" type="file" id="print-file" accept="image/png,image/jpeg,image/webp" disabled><label for="print-file" class="upload-label">＋ 选择本地图片<span>JPG / PNG / WebP · 图片仅在此设备处理</span></label><p class="print-hint" id="print-note">印花沿部件 UV 展开，不改变立体形状。帆布部件的效果最适合观察图案。</p><div class="pattern-controls" id="pattern-controls" hidden><label class="range-row" for="print-scale"><span>重复</span><input id="print-scale" type="range" min="0.25" max="8" step="0.05" value="1"><output id="scale-output">1.0×</output></label><label class="range-row" for="print-angle"><span>旋转</span><input id="print-angle" type="range" min="-180" max="180" step="1" value="0"><output id="angle-output">0°</output></label></div><button class="small-button" id="clear-print" disabled>移除此部件印花</button><p class="material-note">颜色会与图片叠加。想保留原图颜色，可将部件设为白色。</p></section>
-      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="soulgrain_onward_editable_v5.glb">下载本版基础鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 包含当前颜色与印花，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
+      <p class="panel-intro">同一只鞋，两种形态。翻起或折下鞋筒与鞋舌，再为每个部件选择自己的颜色和印花。</p>
+      <section class="control-section shape-section"><span class="control-label"><span class="step-number">01</span>鞋筒与鞋舌形态</span><div class="shape-switch" role="group" aria-label="切换同一鞋模的形态"><button id="mode-folded" type="button" aria-pressed="true" disabled>外翻折下</button><button id="mode-upright" type="button" aria-pressed="false" disabled>高帮展开</button></div><p class="shape-note" id="shape-status" role="status" aria-live="polite">同一模型切换形态，颜色与印花始终保留。</p></section>
+      <section class="control-section"><label class="control-label" for="part"><span class="step-number">02</span>选择部件</label><select id="part" disabled><option>等待模型加载</option></select><p class="selected-name" id="part-name"></p></section>
+      <section class="control-section"><label class="control-label" for="part-color"><span class="step-number">03</span>部件颜色</label><div class="color-row"><div class="color-input-wrap"><input type="color" id="part-color" value="#dad8d1" disabled aria-label="选择部件颜色"></div><input id="color-code" class="color-code" aria-label="十六进制颜色" value="#DAD8D1" maxlength="7" spellcheck="false" disabled></div><div class="swatches">${[['#e4e0d7','暖白'],['#242a35','墨蓝'],['#595b61','岩灰'],['#83748e','烟紫'],['#9e383e','暗红'],['#b9a88c','沙色']].map(([color,label]) => `<button class="swatch" data-color="${color}" style="--swatch:${color}" aria-label="${label}" title="${label}" disabled></button>`).join('')}</div></section>
+      <section class="control-section"><span class="control-label"><span class="step-number">04</span>试穿印花</span><input class="file-input" type="file" id="print-file" accept="image/png,image/jpeg,image/webp" disabled><label for="print-file" class="upload-label">＋ 选择本地图片<span>JPG / PNG / WebP · 图片仅在此设备处理</span></label><p class="print-hint" id="print-note">印花沿部件 UV 展开，不改变立体形状。帆布部件的效果最适合观察图案。</p><div class="pattern-controls" id="pattern-controls" hidden><label class="range-row" for="print-scale"><span>重复</span><input id="print-scale" type="range" min="0.25" max="8" step="0.05" value="1"><output id="scale-output">1.0×</output></label><label class="range-row" for="print-angle"><span>旋转</span><input id="print-angle" type="range" min="-180" max="180" step="1" value="0"><output id="angle-output">0°</output></label></div><button class="small-button" id="clear-print" disabled>移除此部件印花</button><p class="material-note">颜色会与图片叠加。想保留原图颜色，可将部件设为白色。</p></section>
+      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="soulgrain_onward_fold_modes_v6.glb">下载本版双形态基础鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 保留当前形态、颜色、印花与两个形态的数据，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
       <p class="toast" id="notice" role="status" aria-live="polite"></p>
       <footer class="credit"><p>鞋型研究版本 · 尚待实物对照精修<br>此工作台用于形状与材质预览，不代表最终量产设计。</p><p>基础模型：theunclerulez · <a href="https://sketchfab.com/3d-models/generic-converse-style-sneakers-f7858a5612504c4193ca4c61125d6244" target="_blank" rel="noreferrer">Generic “Converse style” Sneakers</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。已修改几何和材质。</p></footer>
     </aside>
@@ -57,11 +59,16 @@ const clearPrint = el<HTMLButtonElement>('clear-print');
 const exportButton = el<HTMLButtonElement>('export-glb');
 const resetView = el<HTMLButtonElement>('reset-view');
 const resetStyles = el<HTMLButtonElement>('reset-styles');
+const foldedButton = el<HTMLButtonElement>('mode-folded');
+const uprightButton = el<HTMLButtonElement>('mode-upright');
 const retry = el<HTMLButtonElement>('retry');
 retry.addEventListener('click', () => location.reload());
 
 type Part = { material: MeshStandardMaterial; initialColor: Color; initialMap: Texture | null; print: CanvasTexture | null; repeat: number; angle: number; imageName: string; supportsPrint: boolean; };
 const parts = new Map<string, Part>();
+const morphMeshes: Mesh[] = [];
+type ShapeMode = 'folded' | 'upright';
+let shapeMode: ShapeMode = 'folded';
 let selected = '';
 let renderer: WebGLRenderer;
 let controls: OrbitControls;
@@ -90,6 +97,24 @@ function invalidate() {
 }
 
 function activePart() { return parts.get(selected); }
+function applyShapeMode(targetModel: Group, mode: ShapeMode) {
+  targetModel.traverse(node => {
+    if (!(node instanceof Mesh) || !node.morphTargetInfluences) return;
+    const target = node.morphTargetDictionary?.[SHAFT_TARGET];
+    if (target !== undefined) node.morphTargetInfluences[target] = mode === 'upright' ? 1 : 0;
+  });
+}
+function selectShapeMode(mode: ShapeMode) {
+  if (!modelLoaded || mode === shapeMode) return;
+  applyShapeMode(model, mode);
+  shapeMode = mode;
+  foldedButton.setAttribute('aria-pressed', String(mode === 'folded'));
+  uprightButton.setAttribute('aria-pressed', String(mode === 'upright'));
+  el('shape-status').textContent = mode === 'upright' ? '当前：高帮展开。颜色与印花保持不变。' : '当前：外翻折下。颜色与印花保持不变。';
+  stage.dataset.shapeMode = mode;
+  renderer.shadowMap.needsUpdate = true;
+  invalidate();
+}
 function hasUsableUVs(mesh: Mesh) {
   const uv = mesh.geometry.getAttribute('uv');
   if (!uv || !uv.count) return false;
@@ -113,9 +138,17 @@ function setColor(hex: string) {
 }
 function updatePrint(part: Part) {
   if (!part.print) return;
+  const radians = part.angle * Math.PI / 180;
+  const cosine = Math.cos(radians), sine = Math.sin(radians);
   part.print.repeat.set(part.repeat, part.repeat);
-  part.print.center.set(.5, .5);
-  part.print.rotation = part.angle * Math.PI / 180;
+  // glTF texture transforms have no center property: bake rotation around the
+  // fabric's center into offset so the downloaded GLB matches this preview.
+  part.print.center.set(0, 0);
+  part.print.offset.set(
+    .5 - part.repeat * (cosine + sine) * .5,
+    .5 - part.repeat * (cosine - sine) * .5,
+  );
+  part.print.rotation = radians;
   part.print.updateMatrix();
   invalidate();
 }
@@ -140,6 +173,8 @@ function reflectSelection() {
 }
 
 partSelect.addEventListener('change', () => { selected = partSelect.value; reflectSelection(); notice.textContent = ''; });
+foldedButton.addEventListener('click', () => selectShapeMode('folded'));
+uprightButton.addEventListener('click', () => selectShapeMode('upright'));
 colorInput.addEventListener('input', () => setColor(colorInput.value));
 colorCode.addEventListener('change', () => { const hex = colorCode.value.startsWith('#') ? colorCode.value : `#${colorCode.value}`; if (/^#[0-9a-f]{6}$/i.test(hex)) setColor(hex); else { reflectSelection(); notice.textContent = '请输入六位颜色值，例如 #E4E0D7。'; } });
 document.querySelectorAll<HTMLButtonElement>('.swatch').forEach(button => button.addEventListener('click', () => setColor(button.dataset.color!)));
@@ -210,10 +245,12 @@ resetView.addEventListener('click', () => {
 exportButton.addEventListener('click', async () => {
   if (!modelLoaded) return;
   exportButton.disabled = true;
-  notice.textContent = '正在将当前材质与印花打包为 GLB…';
+  const exportedMode = shapeMode;
+  notice.textContent = '正在将当前形态、材质与印花打包为 GLB…';
   try {
     const exporter = new GLTFExporter();
     const exportModel = model.clone(true);
+    applyShapeMode(exportModel, exportedMode);
     exportModel.position.copy(originalModelPosition);
     exportModel.updateMatrix();
     const result = await exporter.parseAsync(exportModel, { binary: true, onlyVisible: true, maxTextureSize: 2048 });
@@ -221,10 +258,10 @@ exportButton.addEventListener('click', async () => {
     const blob = new Blob([result], { type: 'model/gltf-binary' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
-    anchor.href = url; anchor.download = 'soulgrain-onward-my-design.glb'; anchor.style.display = 'none';
+    anchor.href = url; anchor.download = `soulgrain-onward-${exportedMode}-my-design.glb`; anchor.style.display = 'none';
     document.body.appendChild(anchor); anchor.click(); anchor.remove();
     setTimeout(() => URL.revokeObjectURL(url), 60_000);
-    notice.textContent = `设计已导出（${(result.byteLength / 1024 / 1024).toFixed(1)} MB）。部件形状保持不变。`;
+    notice.textContent = `设计已导出（${(result.byteLength / 1024 / 1024).toFixed(1)} MB）。默认显示${exportedMode === 'upright' ? '高帮展开' : '外翻折下'}，保留双形态数据。`;
   } catch (error) { console.error(error); notice.textContent = '导出未完成。可减少印花数量后重试，原模型不会受影响。'; }
   finally { exportButton.disabled = false; }
 });
@@ -252,10 +289,10 @@ async function init() {
   controls.rotateSpeed = .65; controls.zoomSpeed = .8;
   controls.minPolarAngle = .08; controls.maxPolarAngle = Math.PI * .91;
   controls.addEventListener('change', invalidate);
-  scene.add(new HemisphereLight(0xe2eaff, 0x41404d, 1.2));
-  const key = new DirectionalLight(0xfff4e5, 2.4); scene.add(key);
-  const fill = new DirectionalLight(0xd4e2ff, 1.0); scene.add(fill);
-  const rim = new DirectionalLight(0xe5dcff, 1.6); scene.add(rim);
+  scene.add(new HemisphereLight(0xf1f4f8, 0x76787b, 1.2));
+  const key = new DirectionalLight(0xfff7ed, 2.2); scene.add(key);
+  const fill = new DirectionalLight(0xebf0f8, 1.35); scene.add(fill);
+  const rim = new DirectionalLight(0xeff1ff, 1.2); scene.add(rim);
   const resize = () => {
     const width = stage.clientWidth, height = stage.clientHeight;
     if (!width || !height) return;
@@ -286,6 +323,7 @@ async function init() {
     model.traverse(node => {
       if (!(node instanceof Mesh)) return;
       meshCount++;
+      if (node.morphTargetInfluences && node.morphTargetDictionary?.[SHAFT_TARGET] !== undefined) morphMeshes.push(node);
       node.castShadow = true; node.receiveShadow = true;
       const supportsPrint = hasUsableUVs(node);
       const materialArray = Array.isArray(node.material) ? node.material : [node.material];
@@ -309,7 +347,15 @@ async function init() {
       });
       node.material = Array.isArray(node.material) ? replacements : replacements[0];
     });
-    const box = new Box3().setFromObject(model);
+    if (!morphMeshes.length) {
+      failure('此文件未包含鞋筒双形态数据，暂时无法切换。请检查双形态模型文件。');
+      return;
+    }
+    applyShapeMode(model, 'folded');
+    const box = new Box3().setFromObject(model, true);
+    applyShapeMode(model, 'upright');
+    box.union(new Box3().setFromObject(model, true));
+    applyShapeMode(model, 'folded');
     if (box.isEmpty()) throw new Error('模型不包含可见网格');
     const center = box.getCenter(new Vector3());
     const size = box.getSize(new Vector3());
@@ -332,16 +378,17 @@ async function init() {
     key.shadow.mapSize.set(1024, 1024); key.shadow.camera.left = key.shadow.camera.bottom = -maxSize;
     key.shadow.camera.right = key.shadow.camera.top = maxSize; key.shadow.camera.near = maxSize * .1;
     key.shadow.camera.far = maxSize * 8; key.shadow.bias = -0.0002; key.shadow.normalBias = maxSize * .002;
-    fill.position.set(maxSize * 1.8, maxSize, -maxSize * .8);
+    fill.position.set(-maxSize * 1.7, 0, maxSize * 1.7);
     rim.position.set(maxSize * .5, maxSize * 2, -maxSize * 2);
     const known = Object.keys(labels);
     const names = [...parts.keys()].sort((a, b) => (known.indexOf(a) < 0 ? 99 : known.indexOf(a)) - (known.indexOf(b) < 0 ? 99 : known.indexOf(b)));
     partSelect.replaceChildren(...names.map(name => { const option = document.createElement('option'); option.value = name; option.textContent = labels[name] ?? name; return option; }));
     selected = names.includes('Body_Canvas') ? 'Body_Canvas' : names[0]; partSelect.value = selected;
-    document.querySelectorAll<HTMLInputElement | HTMLButtonElement | HTMLSelectElement>('#part, #part-color, #color-code, #print-file, .swatch, #reset-view, #reset-styles, #export-glb').forEach(input => input.disabled = false);
+    document.querySelectorAll<HTMLInputElement | HTMLButtonElement | HTMLSelectElement>('#part, #part-color, #color-code, #print-file, .swatch, #reset-view, #reset-styles, #export-glb, #mode-folded, #mode-upright').forEach(input => input.disabled = false);
     reflectSelection(); message.hidden = true; modelLoaded = true;
     renderer.shadowMap.needsUpdate = true;
     stage.dataset.loaded = 'true'; stage.dataset.parts = String(parts.size); stage.dataset.meshes = String(meshCount);
+    stage.dataset.shapeMode = shapeMode; stage.dataset.morphMeshes = String(morphMeshes.length);
     invalidate();
   } catch (error) { console.error(error); failure('鞋型未能加载。请检查网络后重新加载；页面不会用其他鞋型替代。'); }
 }
