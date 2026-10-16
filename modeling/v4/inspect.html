@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ONWARD V4 结构检查</title>
+<style>body{margin:0;background:#d7d9dc;color:#202630;font:14px system-ui}header,footer{padding:16px 24px}h1{font-size:20px;margin:0 0 10px}p{line-height:1.7}#stage{height:70svh;min-height:350px}canvas{display:block;touch-action:none;overscroll-behavior:contain}button{font:inherit;min-height:44px;padding:10px 20px;cursor:pointer}#state{min-height:25px}a{color:inherit}</style>
+<header><h1>V4 · 已校验原始源文件的单鞋审阅</h1><p>单指/鼠标旋转，双指/滚轮缩放。当前是建模候选，外形相似度须查看照片对照；不是已批准的精确复刻。</p><button id="reset">恢复视角</button><p id="state" role="status">正在加载真实 GLB…</p></header><div id="stage"></div><footer>来源：theunclerulez · Generic “Converse style” Sneakers · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。原始材质已移除，几何经过 V4 修改。没有自动旋转或动画。</footer>
+<script type="module">
+import * as T from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+const stage=document.querySelector('#stage'),state=document.querySelector('#state');
+try {
+ const renderer=new T.WebGLRenderer({antialias:true,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0xd7d9dc);stage.append(renderer.domElement);
+ const scene=new T.Scene(),camera=new T.PerspectiveCamera(36,1,.001,100),orbit=new OrbitControls(camera,renderer.domElement);orbit.enablePan=false;orbit.enableDamping=false;
+ scene.add(new T.HemisphereLight(0xffffff,0x606878,1.2));
+ for(const [p,intensity] of [[[3,4,3],2.2],[[-3,2,-2],1.4]]){const l=new T.DirectionalLight(0xffffff,intensity);l.position.set(...p);scene.add(l)}
+ let radius=.2,ready=false,lost=false;
+ const render=()=>{if(!lost)renderer.render(scene,camera)};orbit.addEventListener('change',render);
+ function fit(){const box=stage.getBoundingClientRect();renderer.setSize(box.width,box.height);camera.aspect=box.width/box.height;camera.updateProjectionMatrix();const v=T.MathUtils.degToRad(camera.fov),h=2*Math.atan(Math.tan(v/2)*camera.aspect),distance=radius/Math.sin(Math.min(v,h)/2)*1.12;camera.position.copy(new T.Vector3(-.75,.42,1).normalize().multiplyScalar(distance));orbit.target.set(0,0,0);orbit.minDistance=radius*1.2;orbit.maxDistance=distance*2.5;orbit.update();render()}
+ new ResizeObserver(fit).observe(stage);document.querySelector('#reset').onclick=fit;
+ renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;state.textContent='WebGL 上下文丢失，请刷新检查页面。'});
+ new GLTFLoader().load('/assets/soulgrain_onward_v4_original_review.glb',gltf=>{const b=new T.Box3().setFromObject(gltf.scene),s=b.getBoundingSphere(new T.Sphere());if(!Number.isFinite(s.radius)||!s.radius){state.textContent='模型边界无效';return}gltf.scene.position.sub(s.center);radius=s.radius;scene.add(gltf.scene);let count=0;gltf.scene.traverse(n=>{if(n.isMesh)count++});stage.dataset.meshes=count;ready=true;fit();state.textContent=`真实单鞋 GLB 已载入：${count} 个网格。请完整绕视检查，不以加载成功代替形似验收。`},undefined,error=>{state.textContent='模型加载失败：'+error.message});
+} catch(error){state.textContent='无法创建 WebGL 2：'+error.message}
+</script></html>

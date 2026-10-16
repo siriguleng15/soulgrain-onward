@@ -1,0 +1,41 @@
+{
+  "verified_original_source": "af09c38e980c87a0f78469ce43aa2ea3f4841a4b4a8500b01a979a2a84da6e65",
+  "new_fabric": {
+    "SourceSeamFoldedCuff": {
+      "vertices": 43594,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "bvh_contact_pairs": 0,
+      "proper_self_crossings": 0
+    },
+    "ReshapedNativeTongue": {
+      "vertices": 159634,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "bvh_contact_pairs": 393,
+      "proper_self_crossings": 279
+    }
+  },
+  "visual_similarity_approved": false,
+  "root_sample_max_displacement_m": 0.0,
+  "exported_mesh_count": 13,
+  "exported_mesh_names": [
+    "NativeLacesAndHardware",
+    "NativeShoeBody",
+    "ReshapedNativeTongue",
+    "NativeInnerLining",
+    "SourceSeamFoldedCuff",
+    "GreyEyelet_A_1",
+    "GreyEyelet_A_2",
+    "GreyEyelet_A_3",
+    "GreyEyelet_A_4",
+    "GreyEyelet_B_1",
+    "GreyEyelet_B_2",
+    "GreyEyelet_B_3",
+    "GreyEyelet_B_4"
+  ],
+  "exported_bytes": 11143888,
+  "exported_sha256": "d341621aa2735f809d81589de41da84e5c41e04b0f582aa9b29a5ced9653a000",
+  "has_image_textures": false,
+  "root_check_scope": "Unmodified control cage samples, not the subdivided exported boundary"
+}
