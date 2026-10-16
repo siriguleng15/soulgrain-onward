@@ -1,0 +1,34 @@
+{
+  "original_name": "generic_converse_style_sneakers.glb",
+  "original_bytes": 82944572,
+  "original_sha256": "af09c38e980c87a0f78469ce43aa2ea3f4841a4b4a8500b01a979a2a84da6e65",
+  "part_size_bytes": 16777216,
+  "parts": [
+    {
+      "name": "generic_converse_style_sneakers.glb.part01",
+      "bytes": 16777216,
+      "sha256": "224ac7bc1a6f37e2a367d5709d7608cd540c218143e5b4b1eadcbafa1b92c245"
+    },
+    {
+      "name": "generic_converse_style_sneakers.glb.part02",
+      "bytes": 16777216,
+      "sha256": "0ba7f422e0191b35bac3879653540e404d1e5d4140d58c8b43478ebf39b4e2fe"
+    },
+    {
+      "name": "generic_converse_style_sneakers.glb.part03",
+      "bytes": 16777216,
+      "sha256": "1aee562b59c42b6cd5178d2d8ab72e6c763cd4988830f8c9f21967d63795fa5c"
+    },
+    {
+      "name": "generic_converse_style_sneakers.glb.part04",
+      "bytes": 16777216,
+      "sha256": "e65116fd35a97750cd885dc3b629f36660805539099eb126769e3c2469f79df5"
+    },
+    {
+      "name": "generic_converse_style_sneakers.glb.part05",
+      "bytes": 15835708,
+      "sha256": "5413ee11eb024fd13a9bbf6daac7b4dd5796d53d7eb2cd3cb5ccd537a8229863"
+    }
+  ],
+  "license": "Sketchfab Generic Converse style Sneakers by theunclerulez, CC BY 4.0; retain attribution and note changes."
+}
