@@ -1,23 +1,27 @@
 import './design-lab.css';
 import {
   ACESFilmicToneMapping, Box3, CanvasTexture, Color, DirectionalLight, Group,
-  HemisphereLight, Mesh, MeshStandardMaterial, PCFSoftShadowMap, PerspectiveCamera,
+  HemisphereLight, Mesh, MeshStandardMaterial, PCFSoftShadowMap, PerspectiveCamera, PMREMGenerator,
   PlaneGeometry, RepeatWrapping, Scene, ShadowMaterial, SRGBColorSpace,
   Texture, Vector3, WebGLRenderer,
 } from 'three';
+import type { WebGLRenderTarget } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const MODEL_URL = `${import.meta.env.BASE_URL}assets/soulgrain_onward_fold_modes_v6.glb`;
+const MODEL_URL = `${import.meta.env.BASE_URL}assets/soulgrain_onward_refined_v7.glb`;
 const SHAFT_TARGET = 'Shaft_Upright';
 const labels: Record<string, string> = {
-  Body_Canvas: '鞋身帆布', Body_Inner_Canvas: '鞋身内侧', Collar_Canvas: '高帮鞋筒', Tongue_Canvas: '长鞋舌',
+  Body_Canvas: '鞋身帆布', Body_Inner_Canvas: '鞋身内侧',
+  Collar_Outer_Canvas: '鞋筒外面（展开可见）', Collar_Canvas: '鞋筒内面（翻下可见）',
+  Tongue_Canvas: '鞋舌正面', Tongue_Reverse_Canvas: '鞋舌背面',
   Rubber_Toe: '橡胶鞋头', Rubber_Foxing: '鞋底橡胶围条', Rubber_Outsole: '外底',
   Laces: '鞋带', Eyelets: '金属鞋眼', Heel_Strip: '后跟条', Canvas_Trim: '帆布包边',
   Stitching: '缝线', Inner_Lining: '内衬',
 };
-const canvasPartNames = new Set(['Body_Canvas', 'Body_Inner_Canvas', 'Collar_Canvas', 'Tongue_Canvas', 'Heel_Strip', 'Canvas_Trim', 'Inner_Lining']);
+const canvasPartNames = new Set(['Body_Canvas', 'Body_Inner_Canvas', 'Collar_Outer_Canvas', 'Collar_Canvas', 'Tongue_Canvas', 'Tongue_Reverse_Canvas', 'Heel_Strip', 'Canvas_Trim', 'Inner_Lining']);
 const root = document.querySelector<HTMLDivElement>('#design-lab')!;
 root.innerHTML = `
   <header class="lab-header">
@@ -38,7 +42,7 @@ root.innerHTML = `
       <section class="control-section"><label class="control-label" for="part"><span class="step-number">02</span>选择部件</label><select id="part" disabled><option>等待模型加载</option></select><p class="selected-name" id="part-name"></p></section>
       <section class="control-section"><label class="control-label" for="part-color"><span class="step-number">03</span>部件颜色</label><div class="color-row"><div class="color-input-wrap"><input type="color" id="part-color" value="#dad8d1" disabled aria-label="选择部件颜色"></div><input id="color-code" class="color-code" aria-label="十六进制颜色" value="#DAD8D1" maxlength="7" spellcheck="false" disabled></div><div class="swatches">${[['#e4e0d7','暖白'],['#242a35','墨蓝'],['#595b61','岩灰'],['#83748e','烟紫'],['#9e383e','暗红'],['#b9a88c','沙色']].map(([color,label]) => `<button class="swatch" data-color="${color}" style="--swatch:${color}" aria-label="${label}" title="${label}" disabled></button>`).join('')}</div></section>
       <section class="control-section"><span class="control-label"><span class="step-number">04</span>试穿印花</span><input class="file-input" type="file" id="print-file" accept="image/png,image/jpeg,image/webp" disabled><label for="print-file" class="upload-label">＋ 选择本地图片<span>JPG / PNG / WebP · 图片仅在此设备处理</span></label><p class="print-hint" id="print-note">印花沿部件 UV 展开，不改变立体形状。帆布部件的效果最适合观察图案。</p><div class="pattern-controls" id="pattern-controls" hidden><label class="range-row" for="print-scale"><span>重复</span><input id="print-scale" type="range" min="0.25" max="8" step="0.05" value="1"><output id="scale-output">1.0×</output></label><label class="range-row" for="print-angle"><span>旋转</span><input id="print-angle" type="range" min="-180" max="180" step="1" value="0"><output id="angle-output">0°</output></label></div><button class="small-button" id="clear-print" disabled>移除此部件印花</button><p class="material-note">颜色会与图片叠加。想保留原图颜色，可将部件设为白色。</p></section>
-      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="soulgrain_onward_fold_modes_v6.glb">下载本版双形态基础鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 保留当前形态、颜色、印花与两个形态的数据，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
+      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="soulgrain_onward_refined_v7.glb">下载本版双形态基础鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 保留当前形态、颜色、印花与两个形态的数据，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
       <p class="toast" id="notice" role="status" aria-live="polite"></p>
       <footer class="credit"><p>鞋型研究版本 · 尚待实物对照精修<br>此工作台用于形状与材质预览，不代表最终量产设计。</p><p>基础模型：theunclerulez · <a href="https://sketchfab.com/3d-models/generic-converse-style-sneakers-f7858a5612504c4193ca4c61125d6244" target="_blank" rel="noreferrer">Generic “Converse style” Sneakers</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。已修改几何和材质。</p></footer>
     </aside>
@@ -75,6 +79,7 @@ let controls: OrbitControls;
 let camera: PerspectiveCamera;
 let model: Group;
 let scene: Scene;
+let environmentTarget: WebGLRenderTarget | undefined;
 let frame = 0;
 let disposed = false;
 let hidden = false;
@@ -289,10 +294,24 @@ async function init() {
   controls.rotateSpeed = .65; controls.zoomSpeed = .8;
   controls.minPolarAngle = .08; controls.maxPolarAngle = Math.PI * .91;
   controls.addEventListener('change', invalidate);
-  scene.add(new HemisphereLight(0xf1f4f8, 0x76787b, 1.2));
-  const key = new DirectionalLight(0xfff7ed, 2.2); scene.add(key);
-  const fill = new DirectionalLight(0xebf0f8, 1.35); scene.add(fill);
-  const rim = new DirectionalLight(0xeff1ff, 1.2); scene.add(rim);
+  const room = new RoomEnvironment();
+  const pmrem = new PMREMGenerator(renderer);
+  try {
+    environmentTarget = pmrem.fromScene(room, .04, .1, 100, { size: 256 });
+    scene.environment = environmentTarget.texture;
+    scene.environmentIntensity = .55;
+    stage.dataset.environment = 'studio';
+  } catch (error) {
+    console.warn('Studio reflection unavailable; retaining direct lights.', error);
+    stage.dataset.environment = 'direct';
+  } finally {
+    pmrem.dispose();
+    room.dispose();
+  }
+  scene.add(new HemisphereLight(0xf1f4f8, 0x76787b, .85));
+  const key = new DirectionalLight(0xfff7ed, 1.9); scene.add(key);
+  const fill = new DirectionalLight(0xebf0f8, .95); scene.add(fill);
+  const rim = new DirectionalLight(0xeff1ff, 1.1); scene.add(rim);
   const resize = () => {
     const width = stage.clientWidth, height = stage.clientHeight;
     if (!width || !height) return;
@@ -393,5 +412,5 @@ async function init() {
   } catch (error) { console.error(error); failure('鞋型未能加载。请检查网络后重新加载；页面不会用其他鞋型替代。'); }
 }
 
-window.addEventListener('pagehide', (event) => { if (!event.persisted) { disposed = true; cancelAnimationFrame(frame); controls?.dispose(); renderer?.dispose(); } });
+window.addEventListener('pagehide', (event) => { if (!event.persisted) { disposed = true; cancelAnimationFrame(frame); controls?.dispose(); environmentTarget?.dispose(); renderer?.dispose(); } });
 void init();
