@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+
+:root {
+  --sg-font-body: Arial, 'Noto Sans SC', sans-serif;
+  --sg-font-display: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
+  --sg-background: #080e1b;
+  --sg-foreground: #e9eaf0;
+  --sg-accent: #aea0cf;
+}

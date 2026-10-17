@@ -26,7 +26,7 @@ const root = document.querySelector<HTMLDivElement>('#design-lab')!;
 root.innerHTML = `
   <header class="lab-header">
     <a class="brand" href="${import.meta.env.BASE_URL}" aria-label="返回 SoulGrain 网站">SOULGRAIN<sup>™</sup></a>
-    <span class="header-note">ONWARD / SHAPE & MATERIAL STUDY</span>
+    <div class="lab-navigation"><span class="header-note">ONWARD / 3D DESIGN LAB</span><a class="return-link" href="${import.meta.env.BASE_URL}" aria-label="返回 SoulGrain 官网">← 返回官网</a></div>
   </header>
   <main class="lab-layout">
     <section class="viewport" aria-label="可旋转的三维鞋型">
