@@ -1,0 +1,10 @@
+{
+  "source_repository": "siriguleng15/soulgrain-onward",
+  "source_branch": "feat/onward-clasp-layout-study",
+  "source_commit": "8d1863e3902843294e499ac1df9ada280bc32a11",
+  "source_path": "research/clasp-layout/index.html",
+  "sha256": "54aa356af81198f71439c94f432227415076ddc3371edbb734093f389acac4f6",
+  "bytes": 624291,
+  "publishing_branch": "gh-pages",
+  "target_url": "https://siriguleng15.github.io/soulgrain-onward/"
+}
