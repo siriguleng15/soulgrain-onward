@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f1eb"><meta name="description" content="SoulGrain ONWARD 蒙古扣二维几何布局研究。四方案、可调坐标、结构校核与矢量导出。非量产纸样。">
+<title>SoulGrain ONWARD — 蒙古扣几何研究</title>
+<style>__STYLE__</style>
+</head>
+<body>
+<header class="masthead"><div><span class="brand">SoulGrain</span><span class="chapter">ONWARD / 前进</span></div><span class="document-code">PLACEMENT STUDY · 01<br>二维设计参考 / 待确认</span></header>
+<main>
+<section class="intro"><p class="kicker">STRUCTURE → GEOMETRY → EXPRESSION</p><h1>两枚扣件，<br class="mobile-break">一种结构秩序。</h1><p class="lede">从你提供的鞋侧手绘出发，比较蒙古扣的四种布局逻辑。每一条辅助线，都对应可查的坐标与公式。</p><p class="scope-note">手绘图像坐标，单位 u（原图像素），不是毫米。原图左上为 (0,0)，x 向右、y 向下；角度由 +x 轴顺时针计。交界 R 是端点参考弦，局部可偏离墨线10–15u；人工读点误差约±4u或更多。该侧视投影不是工业展开纸样。</p></section>
+<nav class="scheme-tabs" aria-label="选择布局方案" id="scheme-tabs"></nav>
+<section class="workspace" aria-label="蒙古扣布局工作区">
+ <div class="drawing-column">
+  <div class="sheet-toolbar"><div><span class="kicker" id="scheme-code">方案 C</span><h2 id="scheme-title">结构线延伸</h2></div><span class="edit-badge" id="edit-badge">原始方案</span></div>
+  <div class="view-options"><label><input type="checkbox" id="show-guides" checked>数学辅助线</label><label><input type="checkbox" id="show-clasps" checked>蒙古扣</label><label><input type="checkbox" id="show-points">关键坐标</label><label><input type="checkbox" id="show-compare">原图对照</label><label><input type="checkbox" id="show-source">叠加手绘</label></div>
+  <div class="canvas-pair" id="canvas-pair"><figure class="original-sheet" id="original-sheet" hidden><figcaption>原始手绘 · 仅裁去软件界面</figcaption><svg viewBox="60 185 1110 590" role="img" aria-label="用户提供的原始鞋侧手绘"><image href="__SHOE_IMAGE__" x="0" y="0" width="1280" height="894"/></svg></figure><figure class="design-sheet"><figcaption id="drawing-caption">设计图 · 拖动扣件或使用右侧数值调整</figcaption><svg id="design-svg" viewBox="60 185 1110 590" role="img" aria-label="可调整蒙古扣的鞋侧矢量设计图"></svg></figure></div>
+  <div class="legend"><span class="legend-original">原始结构 / 缝线</span><span class="legend-extended">结构延长 / 定位线</span><span class="legend-geometric">数学参考</span><span class="legend-clasp">扣形符号 / 非最终材质</span></div>
+  <p class="interaction-note">点选并拖动扣件；键盘方向键微调 1u，Shift + 方向键微调 5u。空白处可正常滚动页面。</p>
+  <div class="logic-panel"><h3>构图依据</h3><p id="scheme-explanation"></p><div id="formula-list" class="formulas"></div><p class="honesty" id="constraint-note"></p></div>
+  <div class="metrics-grid" id="metrics-grid"></div>
+  <div class="coordinate-table"><h3>当前定位数据</h3><table><thead><tr><th>扣件</th><th>中点 M (u)</th><th>角度</th><th>翻筒端 P (u)</th><th>鞋身端 Q (u)</th></tr></thead><tbody id="coordinate-rows"></tbody></table></div>
+ </div>
+ <aside class="editor" aria-label="扣件参数编辑">
+  <p class="kicker">ADJUST / OBSERVE / COMPARE</p><h2>定位编辑</h2>
+  <div class="clasp-tabs" role="group" aria-label="选择扣件"><button id="select-0" type="button" aria-pressed="true">扣件 1</button><button id="select-1" type="button" aria-pressed="false">扣件 2</button></div>
+  <div class="xy-fields"><label>中点 x · u<input id="x" type="number" step="0.1" min="60" max="1170"></label><label>中点 y · u<input id="y" type="number" step="0.1" min="185" max="775"></label></div>
+  <div id="dimension-controls"></div>
+  <label class="snap-option"><input id="snap-boundary" type="checkbox">拖动时将中点吸附到交界参考线 R</label>
+  <p class="editor-note">L 是两端定位中心的距离；W 是矩形扣身宽，r 是圆头半径。P、Q 为定位示意点，不代表已确定的缝制节点。</p>
+  <div class="actions"><button id="undo" type="button">撤销一步</button><button id="reset" type="button">恢复本方案</button></div>
+  <section class="clearance-panel"><h3>二维干涉检查</h3><div id="clearance-list" aria-live="polite"></div><p>检查整个扣形的抽样轮廓与图示布片、鞋眼、缝线和鞋底。近似区域与安全裕度均为设计参数，不是工厂验收标准。</p></section>
+  <section class="export-panel"><h3>保留你的研究版本</h3><button class="primary" id="export-svg" type="button">导出当前 SVG</button><button id="export-png" type="button">导出高清 PNG · 3840 px</button><button id="export-json" type="button">导出坐标与公式 JSON</button><button id="export-story" type="button">导出当前方案设计故事 SVG</button><p id="export-status" role="status" aria-live="polite"></p></section>
+ </aside>
+</section>
+<section class="structure-section"><div class="section-top"><p class="kicker">01 / READ THE EXISTING SHOE</p><h2>结构先于构图。</h2></div><p>轮廓逐段描自你提供的第一张图，保留后跟在左、鞋头在右、外翻鞋筒与向右展开的长鞋舌。下图使用弦线拟合关键曲线，不把手绘的微小误差当成精确结构。</p><div id="structure-diagram"></div><div class="structure-data" id="structure-data"></div><button id="export-structure" type="button">导出结构分析 SVG</button></section>
+<section class="comparison-section"><div class="section-top"><p class="kicker">02 / REASONED COMPARISON</p><h2>比较理由，不打美学分数。</h2></div><div id="evaluation-cards" class="evaluation-cards"></div><div class="recommendation"><strong>待确认候选：C + D</strong><p>C 用现有缝线建立可复用的定位秩序；D 保留更自由的角度和留白，适合作为视觉对照样。D 上扣圆头当前靠近缝线，必须先复核。二者都应先打印纸样贴附再比较；暂不定稿。A、B 作为数学构图研究保留，不以“黄金”替代实际审美与工艺判断。</p></div></section>
+<section class="story-section"><div class="section-top"><p class="kicker">03 / TELL ONLY WHAT THE DESIGN DOES</p><h2>让推导成为设计故事。</h2></div><p>下面的故事板由当前方案和当前参数生成，包含原结构、几何推导、两端定位和结果。若手动调整偏离预设，故事板会同步注明，不把修改后的结果继续宣称为黄金比例。</p><div id="story-board"></div></section>
+<section class="factory-section"><div class="section-top"><p class="kicker">04 / QUESTIONS BEFORE SAMPLING</p><h2>交给鞋厂之前。</h2></div><ul><li>提供真实鞋长、鞋帮高、翻筒展开高、缝份和分码纸样；以同一实物至少两处已知尺寸校准，不能只将 u 等比改成毫米。</li><li>确认翻筒与鞋身的两端分别落在哪层布、补强片与针线可达区域，测量距鞋眼、折边和接缝的实际边距。</li><li>确认扣身可用长度、圆头尺寸、开合方向、回折余量与穿着松量；两端定位关系不等于已解决扣合机构。</li><li>检验鞋筒展开／折下、脚踝弯曲、走动与穿脱时的活动量、拉扯、磨脚和对鞋带的干涉。</li><li>讨论针距、线材、背衬、局部拉力、反复开合、洗涤和金属腐蚀／脱落；本阶段没有定材料和固定工艺。</li><li>先做透明定位模板与左右脚镜像样，确认定位基准、尺寸公差、分码放缩和批量检验方式。</li></ul></section>
+<details class="references"><summary>查看两张原始参考与研究边界</summary><div class="reference-grid"><figure><img src="__SHOE_IMAGE__" alt="用户提供的鞋侧手绘原图，保留软件界面以便追溯" loading="lazy"><figcaption>主要底稿：鞋侧结构手绘。交互页的矢量轮廓由人工描摹获得，非扫描或工业纸样。</figcaption></figure><figure><img src="__GOLDEN_IMAGE__" alt="用户提供的黄金比例与螺旋示意截图" loading="lazy"><figcaption>构图参考：φ≈1.618。图示的方格圆弧不能直接作为严格对数螺线；B 方案采用独立公式计算。</figcaption></figure></div></details>
+<footer><span>SoulGrain · ONWARD / 前进</span><p>文化灵感：蒙古族传统服饰结构与蒙古扣。此处仅研究矩形扣身与圆形扣头的布局，不宣称完整历史复原或最终量产方案。</p><span>2D REFERENCE / NOT A PRODUCTION PATTERN</span></footer>
+</main>
+<script>globalThis.StudyAssets=__ASSETS__;</script><script>__TRACE__</script><script>__GEOMETRY__</script><script>__APP__</script>
+</body></html>

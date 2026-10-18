@@ -1,0 +1,55 @@
+<svg class="analysis-svg" xmlns="http://www.w3.org/2000/svg" viewBox="60 185 1110 610" role="img" aria-labelledby="title desc">
+<title id="title">SoulGrain ONWARD｜手绘鞋侧面结构分析</title>
+<desc id="desc">忠实人工描摹用户提供的手绘图。原轮廓深灰，原结构缝线青色，赤褐色虚线为结构弦的辅助延长线，紫色为测量参考。两条分割缝弦与鞋眼片方向近似垂直。所有坐标为原截图像素，属于二维设计参考，非生产尺寸。</desc>
+<defs><marker id="end" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6Z" fill="#85709b"/></marker></defs>
+<style>.analysis-svg text{font-family:Arial,'PingFang SC','Noto Sans CJK SC',sans-serif;fill:#26303b}.analysis-svg .point{font-size:11px;font-weight:700;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}.analysis-svg .small{font-size:11px}.analysis-svg .data{font-size:12px;font-variant-numeric:tabular-nums}.analysis-svg .label{font-size:12px;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}</style>
+<rect x="60" y="185" width="1110" height="610" fill="#fff"/>
+<text x="78" y="204" font-size="14" font-weight="700" letter-spacing="1">SOULGRAIN / ONWARD — 结构提取</text>
+<text x="708" y="204" class="small">源图 1280×894 px · 保留手绘不对称 · 未添加蒙古扣</text>
+
+    <g id="shoe-original" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+      <g class="shoe-outline" fill="#fff" stroke="#26303b" stroke-width="2.2">
+        <path data-structure="body" d="M 600 270 C 630 282 646 317 671 342 C 704 377 737 398 781 416 C 839 440 895 449 945 467 C 995 484 1027 520 1043 576 C 971 607 881 619 797 620 C 746 618 696 614 637 618 C 569 623 496 628 425 640 L 418 650 L 382 667 L 322 619 L 203 551 C 208 593 211 633 223 666" />
+        <path data-structure="tongue" d="M 557 253 C 577 239 593 219 610 213 C 629 211 650 222 666 230 C 689 235 708 237 725 243 C 789 272 858 304 925 330 L 927 334 C 899 347 865 352 837 360 L 762 343 C 736 327 704 318 682 303 C 674 292 664 294 651 289 L 600 270 Z" />
+        <path data-structure="cuffOuter" d="M 186 218 C 174 219 163 245 158 269 L 148 344 L 115 432 C 100 453 90 480 83 505 L 203 551 C 245 572 286 594 322 619 L 369 657 C 382 670 399 664 418 650 C 444 599 455 547 477 494 C 513 408 554 329 600 270 L 556 254 C 532 250 510 245 490 242 C 434 242 371 234 315 229 C 270 226 222 223 186 218 Z" />
+      </g>
+      <g class="shoe-base-lines" fill="none" stroke="#26303b" stroke-width="2.2">
+        <path data-structure="soleUpper" d="M 223 666 C 280 663 312 653 352 649 M 425 640 C 495 628 570 623 637 618 C 693 614 745 618 797 620 C 880 619 973 607 1043 576 C 1086 561 1104 543 1115 511" /><path data-structure="soleLower" d="M 225 673 C 238 692 246 719 257 735 C 286 751 327 749 366 748 C 445 731 519 712 608 700 C 684 692 748 704 834 714 C 927 706 1027 680 1090 644 L 1138 607 C 1132 595 1132 584 1137 564 C 1144 541 1129 522 1115 511" /><path data-structure="foxingStripe" d="M 239 698 C 290 724 350 709 407 703 C 478 694 540 676 607 674 C 680 670 732 678 795 680 C 842 681 879 678 909 674" /><path data-structure="toeCap" d="M 958 472 C 1007 468 1077 466 1103 493 C 1108 499 1112 504 1115 511 M 958 472 C 999 494 1030 526 1043 576" /><path data-structure="foxingFrontSeam" d="M 902 623 C 912 642 912 673 916 701" /><path data-structure="tongueFold" d="M 557 253 C 588 236 620 228 666 230" />
+      </g>
+      <g class="structure-seams" fill="none" stroke="#287d87" stroke-width="2.2">
+        <path data-structure="cuffSplitUpper" d="M 148 344 C 224 358 320 409 398 459" /><path data-structure="cuffSplitLower" d="M 115 432 C 184 444 268 507 346 555" /><path data-structure="cuffBoundary" d="M 83 505 L 203 551 C 245 572 286 594 322 619 L 369 657 C 382 670 399 664 418 650" /><path data-structure="cuffEyeletRear" d="M 490 242 C 461 302 432 374 398 459 C 380 503 362 547 346 555 L 322 619" /><path data-structure="cuffEyeletFront" d="M 600 270 C 567 329 530 396 505 461 C 470 545 442 611 418 650" /><path data-structure="bodyPanelSeam" d="M 551 351 C 585 397 614 440 659 466 C 701 491 743 499 792 508 L 889 531 C 924 541 946 563 960 591" /><path data-structure="heelSeam" d="M 203 551 C 207 594 211 633 223 666" />
+      </g>
+      <g class="fold-return" fill="none" stroke="#687b86" stroke-width="1.3">
+        <path data-structure="cuffInnerFold" d="M 585 286 C 556 345 535 404 512 460 C 481 532 455 594 433 635" />
+      </g>
+      <g class="shoe-eyelets" fill="#fff" stroke="#26303b" stroke-width="2.2">
+        <ellipse data-part="cuff" cx="510" cy="284" rx="16" ry="14" transform="rotate(-25 510 284)"/><ellipse data-part="cuff" cx="475" cy="368" rx="17" ry="15" transform="rotate(-34 475 368)"/><ellipse data-part="cuff" cx="442" cy="440" rx="15" ry="18" transform="rotate(-7 442 440)"/><ellipse data-part="cuff" cx="410" cy="513" rx="13" ry="15" transform="rotate(-18 410 513)"/><ellipse data-part="cuff" cx="381" cy="583" rx="13" ry="14" transform="rotate(-15 381 583)"/><ellipse data-part="body" cx="583" cy="338" rx="12" ry="17" transform="rotate(14 583 338)"/><ellipse data-part="body" cx="626" cy="395" rx="12" ry="15" transform="rotate(-17 626 395)"/><ellipse data-part="body" cx="678" cy="435" rx="15" ry="15" transform="rotate(14 678 435)"/><ellipse data-part="body" cx="741" cy="457" rx="13" ry="15" transform="rotate(-9 741 457)"/><ellipse data-part="body" cx="802" cy="478" rx="13" ry="15" transform="rotate(14 802 478)"/><ellipse data-part="body" cx="865" cy="487" rx="13" ry="15" transform="rotate(-12 865 487)"/><ellipse data-part="body" cx="928" cy="500" rx="12" ry="15" transform="rotate(3 928 500)"/>
+      </g>
+    </g>
+<g fill="none" stroke="#b16445" stroke-width="1.5" stroke-dasharray="7 5">
+  <path d="M 503 213 L 300 669"/>
+  <path d="M 125 333.4 L 449 482.4"/>
+  <path d="M 96 421.9 L 387 576.8"/>
+</g>
+<g fill="none" stroke="#85709b" stroke-width="1.2">
+  <path d="M 83 738 L 83 758 M 1138 620 L 1138 758" stroke-dasharray="3 4"/>
+  <path d="M 86 758 H 1135" marker-start="url(#end)" marker-end="url(#end)"/>
+  <path d="M 750 658 H 830 M 750 658 V 716" marker-end="url(#end)"/>
+</g>
+<g><circle cx="490" cy="242" r="3.8" fill="#287d87"/><text x="485" y="228" class="point">E0</text></g><g><circle cx="600" cy="270" r="3.8" fill="#287d87"/><text x="613" y="262" class="point">F</text></g><g><circle cx="148" cy="344" r="3.8" fill="#287d87"/><text x="136" y="332" class="point">S0</text></g><g><circle cx="398" cy="459" r="3.8" fill="#287d87"/><text x="404" y="447" class="point">S1</text></g><g><circle cx="115" cy="432" r="3.8" fill="#287d87"/><text x="97" y="420" class="point">T0</text></g><g><circle cx="346" cy="555" r="3.8" fill="#287d87"/><text x="298" y="563" class="point">T1</text></g><g><circle cx="83" cy="505" r="3.8" fill="#287d87"/><text x="81" y="527" class="point">R</text></g><g><circle cx="203" cy="551" r="3.8" fill="#287d87"/><text x="174" y="575" class="point">B0</text></g><g><circle cx="322" cy="619" r="3.8" fill="#287d87"/><text x="275" y="627" class="point">B1</text></g><g><circle cx="382" cy="667" r="3.8" fill="#287d87"/><text x="369" y="689" class="point">B2</text></g><g><circle cx="418" cy="650" r="3.8" fill="#287d87"/><text x="430" y="668" class="point">B3</text></g><g><circle cx="223" cy="666" r="3.8" fill="#287d87"/><text x="191" y="685" class="point">L</text></g><g><circle cx="1043" cy="576" r="3.8" fill="#287d87"/><text x="1051" y="596" class="point">P</text></g>
+<g>
+  <circle cx="394.09932200405035" cy="457.20568812186315" r="6.3" fill="none" stroke="#85709b" stroke-width="1.4"/>
+  <circle cx="349.65308906645873" cy="556.9451513211014" r="6.3" fill="none" stroke="#85709b" stroke-width="1.4"/>
+  <text x="206" y="388" class="label" fill="#287d87">上分割缝弦 24.70°</text>
+  <text x="167" y="475" class="label" fill="#287d87">下分割缝弦 28.03°</text>
+  <text x="325" y="300" class="label" fill="#b16445">眼片后缘弦 114.02°</text>
+  <text x="630" y="546" class="data">弦线夹角：上 89.32° / 下 85.99°</text>
+  <text x="630" y="566" class="data">并非严格正交：真实缝线有弧度与手绘误差</text>
+  <text x="630" y="586" class="data">延长线交点 I₁ (394.1, 457.2)</text>
+  <text x="630" y="606" class="data">延长线交点 I₂ (349.7, 556.9)</text>
+  <text x="837" y="663" class="small">x →</text><text x="759" y="716" class="small">y ↓</text>
+  <text x="770" y="640" class="small">坐标沿源截图右、下递增</text>
+  <text x="440" y="752" class="small">图形横向跨度 1055 参考单位；不是鞋长或毫米</text>
+</g>
+<g class="small"><path d="M 81 770 H 106" stroke="#26303b" stroke-width="2.2"/><text x="111" y="774">原轮廓</text><path d="M 187 770 H 212" stroke="#287d87" stroke-width="2.2"/><text x="217" y="774">原缝线</text><path d="M 291 770 H 317" stroke="#b16445" stroke-dasharray="6 4"/><text x="322" y="774">弦线延长</text><path d="M 423 770 H 448" stroke="#85709b"/><text x="454" y="774">几何参考</text><text x="665" y="774">二维设计研究 · 手描拟合非工业纸样 · 不用于直接定位缝制</text></g>
+</svg>

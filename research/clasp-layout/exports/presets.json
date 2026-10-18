@@ -1,0 +1,3122 @@
+[
+  {
+    "brand": "SoulGrain",
+    "product": "ONWARD / 前进",
+    "scheme": "A",
+    "schemeName": "黄金分割 · 边界节奏",
+    "coordinateSystem": "原始手绘截图坐标；原点左上；X向右、Y向下；单位u等于图像像素；角度为SVG屏幕顺时针度。",
+    "disclaimer": "二维设计研究参考。无鞋楦尺寸、透视校正、展开纸样或工艺公差，不能作为量产尺寸。",
+    "traceUncertainty": "关键点人工描读误差约±4u或更多；交界R是端点参考弦，对原弯曲墨线的局部偏离可约10–15u，非逐点精确边界；截图透视未矫正。",
+    "formula": "R(t)=(600,270)+t(-182,380); t₁=φ⁻², t₂=φ⁻¹, φ=(1+√5)/2。",
+    "designChoices": "只将扣件中心在交界线R上的站位设为0.381966与0.618034；角度按可见孔位避让选择，不把整只鞋、扣长或角度包装为黄金比例。",
+    "manuallyEdited": false,
+    "clasps": [
+      {
+        "x": 530.4821859524809,
+        "y": 415.14708427503996,
+        "angle": 10,
+        "length": 128,
+        "width": 18,
+        "headRadius": 12
+      },
+      {
+        "x": 487.51781404751915,
+        "y": 504.85291572496,
+        "angle": 24.70243022777131,
+        "length": 128,
+        "width": 18,
+        "headRadius": 12
+      }
+    ],
+    "anchors": [
+      {
+        "cuff": {
+          "x": 467.4544897596996,
+          "y": 404.03360090435643
+        },
+        "body": {
+          "x": 593.5098821452622,
+          "y": 426.2605676457235
+        }
+      },
+      {
+        "cuff": {
+          "x": 429.37442507609035,
+          "y": 478.1069567981028
+        },
+        "body": {
+          "x": 545.661203018948,
+          "y": 531.5988746518173
+        }
+      }
+    ],
+    "metrics": {
+      "centerDistance": 99.4639303934312,
+      "deltaAngle": 14.702430227771309,
+      "lengthRatio": 1,
+      "widthRatio": 1,
+      "stationT": [
+        0.38196601125010504,
+        0.6180339887498947
+      ],
+      "boundarySpacing": 99.46393039343121,
+      "boundaryLength": 421.33597045588215,
+      "centerOfTwo": {
+        "x": 509,
+        "y": 460
+      },
+      "note": "双中心均值不代表真实质量重心或客观视觉重心。"
+    },
+    "validation": [
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "完整扣形距鞋身鞋眼片下缝仅0.76u，低于4u研究余量；圆头及扣身需实样复核。"
+        ],
+        "anchors": {
+          "cuff": {
+            "x": 467.4544897596996,
+            "y": 404.03360090435643
+          },
+          "body": {
+            "x": 593.5098821452622,
+            "y": 426.2605676457235
+          }
+        },
+        "boundaryT": 0.38196601125010504,
+        "boundaryOffset": 3.552713678800501e-14,
+        "cuffSigned": -61.64481636499849,
+        "bodySigned": 61.64481636499852,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔2",
+            "clearance": 7.796433642353236
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 97.59797111372126
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 7.796433642353236
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 12.36649235372822
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 93.01623606332166
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 168.7485508878748
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 57.09466942074795
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 14.086925463460076
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 53.94090706474975
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 119.65937596534633
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 183.81410126764305
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 247.2016583981827
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 311.52174066241
+            }
+          ],
+          "cuffEdge": 61.64481636499847,
+          "bodyEdge": 61.64481636499852,
+          "seam": 4.763245467837908,
+          "seamName": "鞋身鞋眼片下缝",
+          "anchorPatchSeam": 4.763245467837908,
+          "anchorPatchSeamName": "鞋身鞋眼片下缝",
+          "footprintSeam": 0.7632454678379084,
+          "footprintSeamName": "鞋身鞋眼片下缝",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 75.87090628103769
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 181.56875139727654
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 0.9970001720512904
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 0.7632454678379084
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 64.60403396993901
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 154.24776797131977
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 301.5040006757536
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 289.891362903988
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 226.00569771161855
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 185.32458722254145
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 195.81277775565235
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 268.96831798886575
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 373.4040837576375
+            }
+          ],
+          "sole": 185.372215243787
+        },
+        "bounds": {
+          "minY": 393.6074975282442,
+          "maxY": 438.2605676457235
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      },
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 429.37442507609035,
+            "y": 478.1069567981028
+          },
+          "body": {
+            "x": 545.661203018948,
+            "y": 531.5988746518173
+          }
+        },
+        "boundaryT": 0.6180339887498947,
+        "boundaryOffset": -1.4210854715202004e-14,
+        "cuffSigned": -63.992286973879814,
+        "bodySigned": 63.99228697387983,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔3",
+            "clearance": 10.896104999568216
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 182.03819697721167
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 90.09830266408635
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 10.896104999568216
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 11.796677509396353
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 87.51027183562877
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 163.4868219335152
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 127.47263125380854
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 132.8441325479482
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 178.09863152426942
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 230.88245111430098
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 291.43809774515495
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 352.6423393685575
+            }
+          ],
+          "cuffEdge": 63.99228697387983,
+          "bodyEdge": 63.99228697387983,
+          "seam": 28.734593327540352,
+          "seamName": "翻筒分割缝 S",
+          "anchorPatchSeam": 28.734593327540352,
+          "anchorPatchSeamName": "翻筒分割缝 S",
+          "footprintSeam": 27.488270042083798,
+          "footprintSeamName": "翻筒分割缝 S",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 27.488270042083798
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 101.7656797653333
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 116.63903928208646
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 111.74613935718578
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 118.95379053962876
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 188.0132181194377
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 331.3393192794042
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 225.10524972168685
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 131.4029102390217
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 84.66323674054662
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 143.8253965475587
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 254.4318859121551
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 384.81544467119954
+            }
+          ],
+          "sole": 84.71086476179218
+        },
+        "bounds": {
+          "minY": 466.16939224990625,
+          "maxY": 543.5988746518173
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      }
+    ],
+    "layoutValidation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "扣1：完整扣形距鞋身鞋眼片下缝仅0.76u，低于4u研究余量；圆头及扣身需实样复核。"
+      ],
+      "results": [
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "完整扣形距鞋身鞋眼片下缝仅0.76u，低于4u研究余量；圆头及扣身需实样复核。"
+          ],
+          "anchors": {
+            "cuff": {
+              "x": 467.4544897596996,
+              "y": 404.03360090435643
+            },
+            "body": {
+              "x": 593.5098821452622,
+              "y": 426.2605676457235
+            }
+          },
+          "boundaryT": 0.38196601125010504,
+          "boundaryOffset": 3.552713678800501e-14,
+          "cuffSigned": -61.64481636499849,
+          "bodySigned": 61.64481636499852,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔2",
+              "clearance": 7.796433642353236
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 97.59797111372126
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 7.796433642353236
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 12.36649235372822
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 93.01623606332166
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 168.7485508878748
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 57.09466942074795
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 14.086925463460076
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 53.94090706474975
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 119.65937596534633
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 183.81410126764305
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 247.2016583981827
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 311.52174066241
+              }
+            ],
+            "cuffEdge": 61.64481636499847,
+            "bodyEdge": 61.64481636499852,
+            "seam": 4.763245467837908,
+            "seamName": "鞋身鞋眼片下缝",
+            "anchorPatchSeam": 4.763245467837908,
+            "anchorPatchSeamName": "鞋身鞋眼片下缝",
+            "footprintSeam": 0.7632454678379084,
+            "footprintSeamName": "鞋身鞋眼片下缝",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 75.87090628103769
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 181.56875139727654
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 0.9970001720512904
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 0.7632454678379084
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 64.60403396993901
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 154.24776797131977
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 301.5040006757536
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 289.891362903988
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 226.00569771161855
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 185.32458722254145
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 195.81277775565235
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 268.96831798886575
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 373.4040837576375
+              }
+            ],
+            "sole": 185.372215243787
+          },
+          "bounds": {
+            "minY": 393.6074975282442,
+            "maxY": 438.2605676457235
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 429.37442507609035,
+              "y": 478.1069567981028
+            },
+            "body": {
+              "x": 545.661203018948,
+              "y": 531.5988746518173
+            }
+          },
+          "boundaryT": 0.6180339887498947,
+          "boundaryOffset": -1.4210854715202004e-14,
+          "cuffSigned": -63.992286973879814,
+          "bodySigned": 63.99228697387983,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔3",
+              "clearance": 10.896104999568216
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 182.03819697721167
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 90.09830266408635
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 10.896104999568216
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 11.796677509396353
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 87.51027183562877
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 163.4868219335152
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 127.47263125380854
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 132.8441325479482
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 178.09863152426942
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 230.88245111430098
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 291.43809774515495
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 352.6423393685575
+              }
+            ],
+            "cuffEdge": 63.99228697387983,
+            "bodyEdge": 63.99228697387983,
+            "seam": 28.734593327540352,
+            "seamName": "翻筒分割缝 S",
+            "anchorPatchSeam": 28.734593327540352,
+            "anchorPatchSeamName": "翻筒分割缝 S",
+            "footprintSeam": 27.488270042083798,
+            "footprintSeamName": "翻筒分割缝 S",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 27.488270042083798
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 101.7656797653333
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 116.63903928208646
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 111.74613935718578
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 118.95379053962876
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 188.0132181194377
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 331.3393192794042
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 225.10524972168685
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 131.4029102390217
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 84.66323674054662
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 143.8253965475587
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 254.4318859121551
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 384.81544467119954
+              }
+            ],
+            "sole": 84.71086476179218
+          },
+          "bounds": {
+            "minY": 466.16939224990625,
+            "maxY": 543.5988746518173
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        }
+      ],
+      "pairGaps": [
+        {
+          "i": 0,
+          "j": 1,
+          "clearance": 63.21930557936858
+        }
+      ]
+    },
+    "sourceImageSize": {
+      "width": 1280,
+      "height": 894,
+      "coordinates": "source-image pixels; x rightwards, y downwards",
+      "method": "Manual vector tracing of the user-supplied side-view drawing; curves retain sketch asymmetry.",
+      "caution": "2D design reference only. Perspective and hand-drawn error remain. Not production dimensions."
+    },
+    "geometryVersion": "1.0"
+  },
+  {
+    "brand": "SoulGrain",
+    "product": "ONWARD / 前进",
+    "scheme": "B",
+    "schemeName": "螺线映射 · 法向展开",
+    "coordinateSystem": "原始手绘截图坐标；原点左上；X向右、Y向下；单位u等于图像像素；角度为SVG屏幕顺时针度。",
+    "disclaimer": "二维设计研究参考。无鞋楦尺寸、透视校正、展开纸样或工艺公差，不能作为量产尺寸。",
+    "traceUncertainty": "关键点人工描读误差约±4u或更多；交界R是端点参考弦，对原弯曲墨线的局部偏离可约10–15u，非逐点精确边界；截图透视未矫正。",
+    "formula": "P(θ)=C+r₀eᵇ⁽θ−θ₀⁾(cosθ,sinθ); b=2lnφ/π; Δθ=π/12; α=θ+atan2(1,b)−π/2。",
+    "designChoices": "以R(0.40)/R(0.64)为人为选定的两站，令黄金对数螺线在15°参数间隔内经过两站；扣轴取螺线法线。旁列斐波那契圆弧近似，二者明确区分。",
+    "manuallyEdited": false,
+    "clasps": [
+      {
+        "x": 527.2,
+        "y": 422,
+        "angle": 17.991611658287226,
+        "length": 160,
+        "width": 18,
+        "headRadius": 12
+      },
+      {
+        "x": 483.52,
+        "y": 513.2,
+        "angle": 32.9916116582872,
+        "length": 160,
+        "width": 18,
+        "headRadius": 12
+      }
+    ],
+    "anchors": [
+      {
+        "cuff": {
+          "x": 451.1118602013908,
+          "y": 397.2897798069847
+        },
+        "body": {
+          "x": 603.2881397986092,
+          "y": 446.7102201930153
+        }
+      },
+      {
+        "cuff": {
+          "x": 416.41997628885946,
+          "y": 469.63870045597383
+        },
+        "body": {
+          "x": 550.6200237111406,
+          "y": 556.7612995440262
+        }
+      }
+    ],
+    "metrics": {
+      "centerDistance": 101.1206329094118,
+      "deltaAngle": 14.999999999999972,
+      "lengthRatio": 1,
+      "widthRatio": 1,
+      "stationT": [
+        0.39999999999999997,
+        0.6400000000000001
+      ],
+      "boundarySpacing": 101.12063290941178,
+      "boundaryLength": 421.33597045588215,
+      "centerOfTwo": {
+        "x": 505.36,
+        "y": 467.6
+      },
+      "note": "双中心均值不代表真实质量重心或客观视觉重心。"
+    },
+    "validation": [
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 451.1118602013908,
+            "y": 397.2897798069847
+          },
+          "body": {
+            "x": 603.2881397986092,
+            "y": 446.7102201930153
+          }
+        },
+        "boundaryT": 0.39999999999999997,
+        "boundaryOffset": 4.263256414560601e-14,
+        "cuffSigned": -79.29717741034571,
+        "bodySigned": 79.29717741034575,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔2",
+            "clearance": 6.236075688118746
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 97.9393438111026
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 6.236075688118746
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 14.436215960248347
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 94.75073160368538
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 170.28558221745382
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 69.12792537316781
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 25.4780972255408
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 44.624012798323875
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 107.09574942265098
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 170.16026870400287
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 233.7949473214464
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 298.0556074394181
+            }
+          ],
+          "cuffEdge": 79.29717741034571,
+          "bodyEdge": 79.29717741034575,
+          "seam": 13.839588197356896,
+          "seamName": "鞋身鞋眼片下缝",
+          "anchorPatchSeam": 13.839588197356896,
+          "anchorPatchSeamName": "鞋身鞋眼片下缝",
+          "footprintSeam": 9.839588197356896,
+          "footprintSeamName": "鞋身鞋眼片下缝",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 69.80753157539246
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 178.53846455951768
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 19.880243537725878
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 9.839588197356896
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 46.95682294782568
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 137.17648927762013
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 285.88594132595284
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 279.1851473095199
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 223.06323971421884
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 164.08576575535315
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 173.16377540074606
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 247.91081656644536
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 355.59172622732626
+            }
+          ],
+          "sole": 164.1333937765987
+        },
+        "bounds": {
+          "minY": 385.94996430792696,
+          "maxY": 458.7102201930153
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      },
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 416.41997628885946,
+            "y": 469.63870045597383
+          },
+          "body": {
+            "x": 550.6200237111406,
+            "y": 556.7612995440262
+          }
+        },
+        "boundaryT": 0.6400000000000001,
+        "boundaryOffset": 1.4210854715202004e-14,
+        "cuffSigned": -79.33375707533189,
+        "bodySigned": 79.33375707533192,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔3",
+            "clearance": 9.788207232344035
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 179.12719960439338
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 88.14726463428133
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 9.788207232344035
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 11.865084221682174
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 86.36857605363966
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 173.11752791039441
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 147.46248584921483
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 145.2142798583602
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 183.9345301678156
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 232.429753036462
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 291.0270305509387
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 350.62480478829826
+            }
+          ],
+          "cuffEdge": 79.33375707533189,
+          "bodyEdge": 71.15931167811031,
+          "seam": 13.271517902446043,
+          "seamName": "翻筒分割缝 S",
+          "anchorPatchSeam": 13.271517902446043,
+          "anchorPatchSeamName": "翻筒分割缝 S",
+          "footprintSeam": 12.242705788286997,
+          "footprintSeamName": "翻筒分割缝 S",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 12.242705788286997
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 101.00524815778341
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 136.79053124152722
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 127.53954588991019
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 129.36418483935097
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 188.864190441992
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 327.3591797895648
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 215.83544600850993
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 118.82886769702911
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 59.15931167811031
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 127.10010599140278
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 242.36632236099834
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 376.14397270118616
+            }
+          ],
+          "sole": 59.20693969935599
+        },
+        "bounds": {
+          "minY": 457.1893015897676,
+          "maxY": 568.7612995440262
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      }
+    ],
+    "layoutValidation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "results": [
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 451.1118602013908,
+              "y": 397.2897798069847
+            },
+            "body": {
+              "x": 603.2881397986092,
+              "y": 446.7102201930153
+            }
+          },
+          "boundaryT": 0.39999999999999997,
+          "boundaryOffset": 4.263256414560601e-14,
+          "cuffSigned": -79.29717741034571,
+          "bodySigned": 79.29717741034575,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔2",
+              "clearance": 6.236075688118746
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 97.9393438111026
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 6.236075688118746
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 14.436215960248347
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 94.75073160368538
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 170.28558221745382
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 69.12792537316781
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 25.4780972255408
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 44.624012798323875
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 107.09574942265098
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 170.16026870400287
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 233.7949473214464
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 298.0556074394181
+              }
+            ],
+            "cuffEdge": 79.29717741034571,
+            "bodyEdge": 79.29717741034575,
+            "seam": 13.839588197356896,
+            "seamName": "鞋身鞋眼片下缝",
+            "anchorPatchSeam": 13.839588197356896,
+            "anchorPatchSeamName": "鞋身鞋眼片下缝",
+            "footprintSeam": 9.839588197356896,
+            "footprintSeamName": "鞋身鞋眼片下缝",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 69.80753157539246
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 178.53846455951768
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 19.880243537725878
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 9.839588197356896
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 46.95682294782568
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 137.17648927762013
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 285.88594132595284
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 279.1851473095199
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 223.06323971421884
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 164.08576575535315
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 173.16377540074606
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 247.91081656644536
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 355.59172622732626
+              }
+            ],
+            "sole": 164.1333937765987
+          },
+          "bounds": {
+            "minY": 385.94996430792696,
+            "maxY": 458.7102201930153
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 416.41997628885946,
+              "y": 469.63870045597383
+            },
+            "body": {
+              "x": 550.6200237111406,
+              "y": 556.7612995440262
+            }
+          },
+          "boundaryT": 0.6400000000000001,
+          "boundaryOffset": 1.4210854715202004e-14,
+          "cuffSigned": -79.33375707533189,
+          "bodySigned": 79.33375707533192,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔3",
+              "clearance": 9.788207232344035
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 179.12719960439338
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 88.14726463428133
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 9.788207232344035
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 11.865084221682174
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 86.36857605363966
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 173.11752791039441
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 147.46248584921483
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 145.2142798583602
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 183.9345301678156
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 232.429753036462
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 291.0270305509387
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 350.62480478829826
+              }
+            ],
+            "cuffEdge": 79.33375707533189,
+            "bodyEdge": 71.15931167811031,
+            "seam": 13.271517902446043,
+            "seamName": "翻筒分割缝 S",
+            "anchorPatchSeam": 13.271517902446043,
+            "anchorPatchSeamName": "翻筒分割缝 S",
+            "footprintSeam": 12.242705788286997,
+            "footprintSeamName": "翻筒分割缝 S",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 12.242705788286997
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 101.00524815778341
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 136.79053124152722
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 127.53954588991019
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 129.36418483935097
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 188.864190441992
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 327.3591797895648
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 215.83544600850993
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 118.82886769702911
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 59.15931167811031
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 127.10010599140278
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 242.36632236099834
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 376.14397270118616
+              }
+            ],
+            "sole": 59.20693969935599
+          },
+          "bounds": {
+            "minY": 457.1893015897676,
+            "maxY": 568.7612995440262
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        }
+      ],
+      "pairGaps": [
+        {
+          "i": 0,
+          "j": 1,
+          "clearance": 60.04106931829361
+        }
+      ]
+    },
+    "sourceImageSize": {
+      "width": 1280,
+      "height": 894,
+      "coordinates": "source-image pixels; x rightwards, y downwards",
+      "method": "Manual vector tracing of the user-supplied side-view drawing; curves retain sketch asymmetry.",
+      "caution": "2D design reference only. Perspective and hand-drawn error remain. Not production dimensions."
+    },
+    "geometryVersion": "1.0"
+  },
+  {
+    "brand": "SoulGrain",
+    "product": "ONWARD / 前进",
+    "scheme": "C",
+    "schemeName": "结构延伸 · 同向缝线",
+    "coordinateSystem": "原始手绘截图坐标；原点左上；X向右、Y向下；单位u等于图像像素；角度为SVG屏幕顺时针度。",
+    "disclaimer": "二维设计研究参考。无鞋楦尺寸、透视校正、展开纸样或工艺公差，不能作为量产尺寸。",
+    "traceUncertainty": "关键点人工描读误差约±4u或更多；交界R是端点参考弦，对原弯曲墨线的局部偏离可约10–15u，非逐点精确边界；截图透视未矫正。",
+    "formula": "G₁=(E₂+E₃)/2=(458.5,404), G₂=(E₃+E₄)/2=(426,476.5); Cᵢ=R∩{Gᵢ+λ(250,115)}; α=atan2(115,250)。",
+    "designChoices": "扣轴平行翻筒分割缝S，分别经过相邻孔2/3与孔3/4的中点；这些线与可见交界R的交点就是扣件中心。使用现成结构定位置，不强加比例。",
+    "manuallyEdited": false,
+    "clasps": [
+      {
+        "x": 521.8615112567929,
+        "y": 433.1462951781248,
+        "angle": 24.70243022777131,
+        "length": 160,
+        "width": 18,
+        "headRadius": 12
+      },
+      {
+        "x": 487.5392909514362,
+        "y": 504.80807383766063,
+        "angle": 24.70243022777131,
+        "length": 160,
+        "width": 18,
+        "headRadius": 12
+      }
+    ],
+    "anchors": [
+      {
+        "cuff": {
+          "x": 449.18227504250694,
+          "y": 399.7138465195532
+        },
+        "body": {
+          "x": 594.5407474710789,
+          "y": 466.57874383669633
+        }
+      },
+      {
+        "cuff": {
+          "x": 414.8600547371502,
+          "y": 471.37562517908907
+        },
+        "body": {
+          "x": 560.2185271657222,
+          "y": 538.2405224962322
+        }
+      }
+    ],
+    "metrics": {
+      "centerDistance": 79.45706593713204,
+      "deltaAngle": 0,
+      "lengthRatio": 1,
+      "widthRatio": 1,
+      "stationT": [
+        0.42933235573190726,
+        0.6179159837833175
+      ],
+      "boundarySpacing": 79.45706593713204,
+      "boundaryLength": 421.33597045588215,
+      "centerOfTwo": {
+        "x": 504.7004011041146,
+        "y": 468.97718450789273
+      },
+      "note": "双中心均值不代表真实质量重心或客观视觉重心。"
+    },
+    "validation": [
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 449.18227504250694,
+            "y": 399.7138465195532
+          },
+          "body": {
+            "x": 594.5407474710789,
+            "y": 466.57874383669633
+          }
+        },
+        "boundaryT": 0.42933235573190726,
+        "boundaryOffset": 7.105427357601002e-14,
+        "cuffSigned": -79.99035871734971,
+        "bodySigned": 79.99035871734984,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔3",
+            "clearance": 10.601098832259048
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 102.54099314538442
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 10.60109883225909
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 10.601098832259048
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 91.29388134122361
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 167.00747566745602
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 83.98961810168791
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 47.18696271705289
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 58.2337598389192
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 115.77215330170546
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 176.77340193635578
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 240.2291189783832
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 304.1299053511637
+            }
+          ],
+          "cuffEdge": 79.99035871734978,
+          "bodyEdge": 79.9903587173498,
+          "seam": 34.59120322166091,
+          "seamName": "鞋身鞋眼片下缝",
+          "anchorPatchSeam": 34.59120322166091,
+          "anchorPatchSeamName": "鞋身鞋眼片下缝",
+          "footprintSeam": 30.591203221660912,
+          "footprintSeamName": "鞋身鞋眼片下缝",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 67.46081720563723
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 176.31682451343954
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 39.866851205235804
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 30.591203221660912
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 52.461850586340844
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 139.95817685354254
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 289.42387039773223
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 276.4808179401103
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 210.90011407084899
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 145.07467968804056
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 159.0618722226457
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 242.02328786411584
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 355.7025703891437
+            }
+          ],
+          "sole": 145.1223077092861
+        },
+        "bounds": {
+          "minY": 387.77628197135675,
+          "maxY": 478.57874383669633
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      },
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 414.8600547371502,
+            "y": 471.37562517908907
+          },
+          "body": {
+            "x": 560.2185271657222,
+            "y": 538.2405224962322
+          }
+        },
+        "boundaryT": 0.6179159837833175,
+        "boundaryOffset": -1.4210854715202004e-14,
+        "cuffSigned": -79.99035871734978,
+        "bodySigned": 79.99035871734975,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔3",
+            "clearance": 10.846391254482256
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 181.98848323212573
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 90.0485889190004
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 10.846391254482256
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 11.846391254482313
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 87.55998558071471
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 163.4371081884292
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 126.62312474139199
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 125.62401102100131
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 167.19677952880951
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 218.17303456941661
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 278.0587926733658
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 338.76418068944355
+            }
+          ],
+          "cuffEdge": 79.99035871734978,
+          "bodyEdge": 79.99035871734978,
+          "seam": 12.914529502549296,
+          "seamName": "翻筒分割缝 S",
+          "anchorPatchSeam": 12.914529502549296,
+          "anchorPatchSeamName": "翻筒分割缝 S",
+          "footprintSeam": 11.489041928059436,
+          "footprintSeamName": "翻筒分割缝 S",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 11.489041928059436
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 97.5410333639917
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 117.5020925159462
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 107.2509605892493
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 110.37839868962901
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 174.94620995688877
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 316.8611896303597
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 213.6010592061495
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 131.45262398410767
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 76.75224548847974
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 128.0300137411302
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 238.49965676475279
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 369.3207380304146
+            }
+          ],
+          "sole": 76.79987350972533
+        },
+        "bounds": {
+          "minY": 459.4380606308926,
+          "maxY": 550.2405224962322
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      }
+    ],
+    "layoutValidation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "results": [
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 449.18227504250694,
+              "y": 399.7138465195532
+            },
+            "body": {
+              "x": 594.5407474710789,
+              "y": 466.57874383669633
+            }
+          },
+          "boundaryT": 0.42933235573190726,
+          "boundaryOffset": 7.105427357601002e-14,
+          "cuffSigned": -79.99035871734971,
+          "bodySigned": 79.99035871734984,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔3",
+              "clearance": 10.601098832259048
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 102.54099314538442
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 10.60109883225909
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 10.601098832259048
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 91.29388134122361
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 167.00747566745602
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 83.98961810168791
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 47.18696271705289
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 58.2337598389192
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 115.77215330170546
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 176.77340193635578
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 240.2291189783832
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 304.1299053511637
+              }
+            ],
+            "cuffEdge": 79.99035871734978,
+            "bodyEdge": 79.9903587173498,
+            "seam": 34.59120322166091,
+            "seamName": "鞋身鞋眼片下缝",
+            "anchorPatchSeam": 34.59120322166091,
+            "anchorPatchSeamName": "鞋身鞋眼片下缝",
+            "footprintSeam": 30.591203221660912,
+            "footprintSeamName": "鞋身鞋眼片下缝",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 67.46081720563723
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 176.31682451343954
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 39.866851205235804
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 30.591203221660912
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 52.461850586340844
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 139.95817685354254
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 289.42387039773223
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 276.4808179401103
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 210.90011407084899
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 145.07467968804056
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 159.0618722226457
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 242.02328786411584
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 355.7025703891437
+              }
+            ],
+            "sole": 145.1223077092861
+          },
+          "bounds": {
+            "minY": 387.77628197135675,
+            "maxY": 478.57874383669633
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 414.8600547371502,
+              "y": 471.37562517908907
+            },
+            "body": {
+              "x": 560.2185271657222,
+              "y": 538.2405224962322
+            }
+          },
+          "boundaryT": 0.6179159837833175,
+          "boundaryOffset": -1.4210854715202004e-14,
+          "cuffSigned": -79.99035871734978,
+          "bodySigned": 79.99035871734975,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔3",
+              "clearance": 10.846391254482256
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 181.98848323212573
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 90.0485889190004
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 10.846391254482256
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 11.846391254482313
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 87.55998558071471
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 163.4371081884292
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 126.62312474139199
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 125.62401102100131
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 167.19677952880951
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 218.17303456941661
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 278.0587926733658
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 338.76418068944355
+              }
+            ],
+            "cuffEdge": 79.99035871734978,
+            "bodyEdge": 79.99035871734978,
+            "seam": 12.914529502549296,
+            "seamName": "翻筒分割缝 S",
+            "anchorPatchSeam": 12.914529502549296,
+            "anchorPatchSeamName": "翻筒分割缝 S",
+            "footprintSeam": 11.489041928059436,
+            "footprintSeamName": "翻筒分割缝 S",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 11.489041928059436
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 97.5410333639917
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 117.5020925159462
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 107.2509605892493
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 110.37839868962901
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 174.94620995688877
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 316.8611896303597
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 213.6010592061495
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 131.45262398410767
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 76.75224548847974
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 128.0300137411302
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 238.49965676475279
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 369.3207380304146
+              }
+            ],
+            "sole": 76.79987350972533
+          },
+          "bounds": {
+            "minY": 459.4380606308926,
+            "maxY": 550.2405224962322
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        }
+      ],
+      "pairGaps": [
+        {
+          "i": 0,
+          "j": 1,
+          "clearance": 55.45706593713204
+        }
+      ]
+    },
+    "sourceImageSize": {
+      "width": 1280,
+      "height": 894,
+      "coordinates": "source-image pixels; x rightwards, y downwards",
+      "method": "Manual vector tracing of the user-supplied side-view drawing; curves retain sketch asymmetry.",
+      "caution": "2D design reference only. Perspective and hand-drawn error remain. Not production dimensions."
+    },
+    "geometryVersion": "1.0"
+  },
+  {
+    "brand": "SoulGrain",
+    "product": "ONWARD / 前进",
+    "scheme": "D",
+    "schemeName": "平行构成 · 克制留白",
+    "coordinateSystem": "原始手绘截图坐标；原点左上；X向右、Y向下；单位u等于图像像素；角度为SVG屏幕顺时针度。",
+    "disclaimer": "二维设计研究参考。无鞋楦尺寸、透视校正、展开纸样或工艺公差，不能作为量产尺寸。",
+    "traceUncertainty": "关键点人工描读误差约±4u或更多；交界R是端点参考弦，对原弯曲墨线的局部偏离可约10–15u，非逐点精确边界；截图透视未矫正。",
+    "formula": "α=atan2(623−666,902−223); C₁=R(.39), C₂=R(.565); L₁=L₂=108u, W₁=W₂=18u, r₁=r₂=11u。",
+    "designChoices": "两扣采用同尺寸矩形＋圆头，轴线平行鞋底参考弦T；较短扣身保留鞋身留白。站位0.39/0.565由可见孔位与留白调节，无黄金比例主张。",
+    "manuallyEdited": false,
+    "clasps": [
+      {
+        "x": 529.02,
+        "y": 418.20000000000005,
+        "angle": -3.6236124439972692,
+        "length": 108,
+        "width": 18,
+        "headRadius": 11
+      },
+      {
+        "x": 497.17,
+        "y": 484.7,
+        "angle": -3.6236124439972692,
+        "length": 108,
+        "width": 18,
+        "headRadius": 11
+      }
+    ],
+    "anchors": [
+      {
+        "cuff": {
+          "x": 475.1279585944715,
+          "y": 421.61289805660937
+        },
+        "body": {
+          "x": 582.9120414055284,
+          "y": 414.7871019433907
+        }
+      },
+      {
+        "cuff": {
+          "x": 443.27795859447156,
+          "y": 488.1128980566093
+        },
+        "body": {
+          "x": 551.0620414055285,
+          "y": 481.28710194339067
+        }
+      }
+    ],
+    "metrics": {
+      "centerDistance": 73.73379482977931,
+      "deltaAngle": 0,
+      "lengthRatio": 1,
+      "widthRatio": 1,
+      "stationT": [
+        0.39000000000000007,
+        0.565
+      ],
+      "boundarySpacing": 73.73379482977933,
+      "boundaryLength": 421.33597045588215,
+      "centerOfTwo": {
+        "x": 513.095,
+        "y": 451.45000000000005
+      },
+      "note": "双中心均值不代表真实质量重心或客观视觉重心。"
+    },
+    "validation": [
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "完整扣形距鞋身鞋眼片下缝仅2.44u，低于4u研究余量；圆头及扣身需实样复核。"
+        ],
+        "anchors": {
+          "cuff": {
+            "x": 475.1279585944715,
+            "y": 421.61289805660937
+          },
+          "body": {
+            "x": 582.9120414055284,
+            "y": 414.7871019433907
+          }
+        },
+        "boundaryT": 0.39000000000000007,
+        "boundaryOffset": 0,
+        "cuffSigned": -47.130626578860344,
+        "bodySigned": 47.1306265788603,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔3",
+            "clearance": 6.24689658507863
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 107.13380143812276
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 24.513800584732692
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 6.24689658507863
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 80.56777302334594
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 155.3596197199717
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 46.7871523210688
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 17.41414956694924
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 67.21255637781994
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 133.6268053067866
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 198.0250075798884
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 261.1843385722017
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 325.45314341289173
+            }
+          ],
+          "cuffEdge": 47.130626578860344,
+          "bodyEdge": 47.13062657886029,
+          "seam": 5.438511075635244,
+          "seamName": "鞋身鞋眼片下缝",
+          "anchorPatchSeam": 5.438511075635244,
+          "anchorPatchSeamName": "鞋身鞋眼片下缝",
+          "footprintSeam": 2.438511075635244,
+          "footprintSeamName": "鞋身鞋眼片下缝",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 74.13890853076047
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 172.93778980966584
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 2.438511075635244
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 6.089284786347392
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 80.71771023325147
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 169.886612788338
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 316.4068967985354
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 289.6656910527058
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 208.4286340249392
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 198.6957969988162
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 211.61047633869057
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 285.55688753414665
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 389.11898417755555
+            }
+          ],
+          "sole": 198.73945601829126
+        },
+        "bounds": {
+          "minY": 403.7871019433907,
+          "maxY": 431.163721300299
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      },
+      {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "anchors": {
+          "cuff": {
+            "x": 443.27795859447156,
+            "y": 488.1128980566093
+          },
+          "body": {
+            "x": 551.0620414055285,
+            "y": 481.28710194339067
+          }
+        },
+        "boundaryT": 0.565,
+        "boundaryOffset": 0,
+        "cuffSigned": -47.130626578860344,
+        "bodySigned": 47.13062657886036,
+        "cuffInside": true,
+        "bodyInside": true,
+        "clearances": {
+          "nearestEye": {
+            "name": "翻筒孔4",
+            "clearance": 10.214005782412396
+          },
+          "eyelets": [
+            {
+              "name": "翻筒孔1",
+              "clearance": 171.48787459302335
+            },
+            {
+              "name": "翻筒孔2",
+              "clearance": 88.86787373963328
+            },
+            {
+              "name": "翻筒孔3",
+              "clearance": 19.097478455745495
+            },
+            {
+              "name": "翻筒孔4",
+              "clearance": 10.214005782412396
+            },
+            {
+              "name": "翻筒孔5",
+              "clearance": 81.91428886891808
+            },
+            {
+              "name": "鞋身孔1",
+              "clearance": 116.80336093740434
+            },
+            {
+              "name": "鞋身孔2",
+              "clearance": 84.2854391429452
+            },
+            {
+              "name": "鞋身孔3",
+              "clearance": 105.11380809691369
+            },
+            {
+              "name": "鞋身孔4",
+              "clearance": 161.48444175922972
+            },
+            {
+              "name": "鞋身孔5",
+              "clearance": 220.9594869749836
+            },
+            {
+              "name": "鞋身孔6",
+              "clearance": 283.9899346327352
+            },
+            {
+              "name": "鞋身孔7",
+              "clearance": 347.4021690227079
+            }
+          ],
+          "cuffEdge": 47.130626578860316,
+          "bodyEdge": 47.13062657886037,
+          "seam": 45.82986501689565,
+          "seamName": "翻筒分割缝 S",
+          "anchorPatchSeam": 45.82986501689565,
+          "anchorPatchSeamName": "翻筒分割缝 S",
+          "footprintSeam": 41.290508484332484,
+          "footprintSeamName": "翻筒分割缝 S",
+          "footprintSeamSegments": [
+            {
+              "name": "翻筒分割缝 S",
+              "id": "cuffSplit",
+              "segment": 0,
+              "clearance": 41.290508484332484
+            },
+            {
+              "name": "翻筒下分割缝",
+              "id": "cuffLowerSplit",
+              "segment": 0,
+              "clearance": 105.7563040829173
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 0,
+              "clearance": 71.39480369202705
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 1,
+              "clearance": 71.1516437916902
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 2,
+              "clearance": 98.01512918567528
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 3,
+              "clearance": 181.7535387664177
+            },
+            {
+              "name": "鞋身鞋眼片下缝",
+              "id": "bodyEyeletLower",
+              "segment": 4,
+              "clearance": 330.57493481253215
+            },
+            {
+              "name": "后跟结构线",
+              "id": "heel",
+              "segment": 0,
+              "clearance": 237.92021621137602
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 0,
+              "clearance": 140.4703249463329
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 1,
+              "clearance": 135.29460937470455
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 2,
+              "clearance": 173.4654010829064
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 3,
+              "clearance": 271.3592526638348
+            },
+            {
+              "name": "鞋底上缘",
+              "id": "soleTop",
+              "segment": 4,
+              "clearance": 392.7217625050917
+            }
+          ],
+          "sole": 135.33826839417972
+        },
+        "bounds": {
+          "minY": 470.28710194339067,
+          "maxY": 497.66372130029896
+        },
+        "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+      }
+    ],
+    "layoutValidation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "扣1：完整扣形距鞋身鞋眼片下缝仅2.44u，低于4u研究余量；圆头及扣身需实样复核。"
+      ],
+      "results": [
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "完整扣形距鞋身鞋眼片下缝仅2.44u，低于4u研究余量；圆头及扣身需实样复核。"
+          ],
+          "anchors": {
+            "cuff": {
+              "x": 475.1279585944715,
+              "y": 421.61289805660937
+            },
+            "body": {
+              "x": 582.9120414055284,
+              "y": 414.7871019433907
+            }
+          },
+          "boundaryT": 0.39000000000000007,
+          "boundaryOffset": 0,
+          "cuffSigned": -47.130626578860344,
+          "bodySigned": 47.1306265788603,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔3",
+              "clearance": 6.24689658507863
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 107.13380143812276
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 24.513800584732692
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 6.24689658507863
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 80.56777302334594
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 155.3596197199717
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 46.7871523210688
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 17.41414956694924
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 67.21255637781994
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 133.6268053067866
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 198.0250075798884
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 261.1843385722017
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 325.45314341289173
+              }
+            ],
+            "cuffEdge": 47.130626578860344,
+            "bodyEdge": 47.13062657886029,
+            "seam": 5.438511075635244,
+            "seamName": "鞋身鞋眼片下缝",
+            "anchorPatchSeam": 5.438511075635244,
+            "anchorPatchSeamName": "鞋身鞋眼片下缝",
+            "footprintSeam": 2.438511075635244,
+            "footprintSeamName": "鞋身鞋眼片下缝",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 74.13890853076047
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 172.93778980966584
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 2.438511075635244
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 6.089284786347392
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 80.71771023325147
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 169.886612788338
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 316.4068967985354
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 289.6656910527058
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 208.4286340249392
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 198.6957969988162
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 211.61047633869057
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 285.55688753414665
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 389.11898417755555
+              }
+            ],
+            "sole": 198.73945601829126
+          },
+          "bounds": {
+            "minY": 403.7871019433907,
+            "maxY": 431.163721300299
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "anchors": {
+            "cuff": {
+              "x": 443.27795859447156,
+              "y": 488.1128980566093
+            },
+            "body": {
+              "x": 551.0620414055285,
+              "y": 481.28710194339067
+            }
+          },
+          "boundaryT": 0.565,
+          "boundaryOffset": 0,
+          "cuffSigned": -47.130626578860344,
+          "bodySigned": 47.13062657886036,
+          "cuffInside": true,
+          "bodyInside": true,
+          "clearances": {
+            "nearestEye": {
+              "name": "翻筒孔4",
+              "clearance": 10.214005782412396
+            },
+            "eyelets": [
+              {
+                "name": "翻筒孔1",
+                "clearance": 171.48787459302335
+              },
+              {
+                "name": "翻筒孔2",
+                "clearance": 88.86787373963328
+              },
+              {
+                "name": "翻筒孔3",
+                "clearance": 19.097478455745495
+              },
+              {
+                "name": "翻筒孔4",
+                "clearance": 10.214005782412396
+              },
+              {
+                "name": "翻筒孔5",
+                "clearance": 81.91428886891808
+              },
+              {
+                "name": "鞋身孔1",
+                "clearance": 116.80336093740434
+              },
+              {
+                "name": "鞋身孔2",
+                "clearance": 84.2854391429452
+              },
+              {
+                "name": "鞋身孔3",
+                "clearance": 105.11380809691369
+              },
+              {
+                "name": "鞋身孔4",
+                "clearance": 161.48444175922972
+              },
+              {
+                "name": "鞋身孔5",
+                "clearance": 220.9594869749836
+              },
+              {
+                "name": "鞋身孔6",
+                "clearance": 283.9899346327352
+              },
+              {
+                "name": "鞋身孔7",
+                "clearance": 347.4021690227079
+              }
+            ],
+            "cuffEdge": 47.130626578860316,
+            "bodyEdge": 47.13062657886037,
+            "seam": 45.82986501689565,
+            "seamName": "翻筒分割缝 S",
+            "anchorPatchSeam": 45.82986501689565,
+            "anchorPatchSeamName": "翻筒分割缝 S",
+            "footprintSeam": 41.290508484332484,
+            "footprintSeamName": "翻筒分割缝 S",
+            "footprintSeamSegments": [
+              {
+                "name": "翻筒分割缝 S",
+                "id": "cuffSplit",
+                "segment": 0,
+                "clearance": 41.290508484332484
+              },
+              {
+                "name": "翻筒下分割缝",
+                "id": "cuffLowerSplit",
+                "segment": 0,
+                "clearance": 105.7563040829173
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 0,
+                "clearance": 71.39480369202705
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 1,
+                "clearance": 71.1516437916902
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 2,
+                "clearance": 98.01512918567528
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 3,
+                "clearance": 181.7535387664177
+              },
+              {
+                "name": "鞋身鞋眼片下缝",
+                "id": "bodyEyeletLower",
+                "segment": 4,
+                "clearance": 330.57493481253215
+              },
+              {
+                "name": "后跟结构线",
+                "id": "heel",
+                "segment": 0,
+                "clearance": 237.92021621137602
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 0,
+                "clearance": 140.4703249463329
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 1,
+                "clearance": 135.29460937470455
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 2,
+                "clearance": 173.4654010829064
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 3,
+                "clearance": 271.3592526638348
+              },
+              {
+                "name": "鞋底上缘",
+                "id": "soleTop",
+                "segment": 4,
+                "clearance": 392.7217625050917
+              }
+            ],
+            "sole": 135.33826839417972
+          },
+          "bounds": {
+            "minY": 470.28710194339067,
+            "maxY": 497.66372130029896
+          },
+          "note": "4u为屏幕筛查余量，不是4mm；anchorPatchSeam仅为两锚点减8u以内研究脚印的旧指标；footprintSeam为矩形＋完整圆头到关键缝线有限折线段的严格二维距离（圆头穿入可为负、矩形相交为0），不含显示描边；原缝线曲率、描图误差、透视、布料运动和缝制公差未计入。"
+        }
+      ],
+      "pairGaps": [
+        {
+          "i": 0,
+          "j": 1,
+          "clearance": 44.35407315490059
+        }
+      ]
+    },
+    "sourceImageSize": {
+      "width": 1280,
+      "height": 894,
+      "coordinates": "source-image pixels; x rightwards, y downwards",
+      "method": "Manual vector tracing of the user-supplied side-view drawing; curves retain sketch asymmetry.",
+      "caution": "2D design reference only. Perspective and hand-drawn error remain. Not production dimensions."
+    },
+    "geometryVersion": "1.0"
+  }
+]
