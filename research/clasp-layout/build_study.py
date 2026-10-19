@@ -29,6 +29,7 @@ def main():
         "__ASSETS__": script(json.dumps(assets, ensure_ascii=False)),
         "__TRACE__": script((ROOT / "shoe-trace.js").read_text()),
         "__GEOMETRY__": script((ROOT / "geometry-data.js").read_text()),
+        "__ADVANCED__": script((ROOT / "advanced-geometry.js").read_text()),
         "__APP__": script((ROOT / "app.js").read_text()),
     }
     output = (ROOT / "index.template.html").read_text()

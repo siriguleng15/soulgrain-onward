@@ -1,6 +1,6 @@
 (() => {
  'use strict';
- const G=globalThis.ClaspGeometry,T=globalThis.ShoeTrace,A=globalThis.StudyAssets;
+ const G=globalThis.ClaspGeometry,T=globalThis.ShoeTrace,A=globalThis.StudyAssets,X=globalThis.ClaspAdvanced;
  const $=id=>document.getElementById(id),clone=o=>JSON.parse(JSON.stringify(o));
  const fmt=(n,p=2)=>Number(n).toFixed(p),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
  let scheme=G.presets.find(p=>p.id==='C'),items=clone(scheme.clasps),selected=0,history=[];
@@ -9,13 +9,26 @@
  const line=(a,b,cls='geom-guide')=>`<line class="${cls}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
  const text=(p,s,cls='svg-label')=>`<text class="${cls}" x="${p.x}" y="${p.y}">${esc(s)}</text>`;
  const dot=(p,r=3,color='#85709b')=>`<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${color}"/>`;
+ const isAdvanced=p=>!!X?.presets.some(e=>e.id===p.id);
+ function wrappedLines(value,width,fontSize){
+  const result=[];let row='',units=0;
+  for(const c of String(value)){const w=/[\u0000-\u00ff]/.test(c)?.58:1;if(units+w>width/fontSize&&row){result.push(row);row='';units=0;}row+=c;units+=w;}
+  if(row)result.push(row);return result;
+ }
+ function paragraph(x,y,value,width=620,fontSize=11,maxLines=3,color='#697574'){
+  const rows=wrappedLines(value,width,fontSize),limited=rows.slice(0,maxLines);
+  if(rows.length>maxLines)limited[maxLines-1]+='…';
+  return `<text x="${x}" y="${y}" font-size="${fontSize}" fill="${color}">${limited.map((s,i)=>`<tspan x="${x}" dy="${i?fontSize*1.6:0}">${esc(s)}</tspan>`).join('')}</text>`;
+ }
  const shoe=(id='main')=>T.markup.replace('id="shoe-original"',`id="shoe-original-${id}"`);
  function guideMarkup(p=scheme){
   const d=G.boundaryVector,n=G.boundaryNormal,extended=(a,v,before,after)=>line(G.add(a,G.mul(v,before)),G.add(a,G.mul(v,after)),'extension-guide');
   let s=line(G.boundaryStart,G.boundaryEnd)+text({x:611,y:266},'R₀ (600,270)')+text({x:425,y:676},'R₁ (418,650)');
   const stations=p.guides.stations||p.clasps.map(c=>G.validate(c).boundaryT);
-  stations.forEach(t=>{const q=G.atBoundary(t);s+=line(G.add(q,G.mul(n,-9)),G.add(q,G.mul(n,9)))+text(G.add(q,{x:18,y:-10}),`t=${fmt(t,3)}`);});
-  if(p.id==='A'){
+  stations.forEach(t=>{const q=G.atBoundary(t);s+=line(G.add(q,G.mul(n,-9)),G.add(q,G.mul(n,9)))+(p.id==='E'?'':text(G.add(q,{x:18,y:-10}),`t=${fmt(t,3)}`));});
+  if(isAdvanced(p)){
+   s+=X.renderGuides(p);
+  }else if(p.id==='A'){
    const a=G.atBoundary(1/(G.phi*G.phi)),b=G.atBoundary(1/G.phi);
    s+=text({x:655,y:214},'φ=(1+√5)/2 ≈ 1.618034')+text({x:655,y:234},'R(φ⁻²), R(φ⁻¹) · 仅约束中点站位');
    s+=line(a,b)+dot(a)+dot(b);
@@ -44,11 +57,11 @@
  }
  function pointsMarkup(){return `<g id="reference-keypoints">${T.keypoints.map(p=>dot(p,2.5,'#287d87')+text(G.add(p,{x:6,y:-8}),`${p.id} (${p.x},${p.y})`)).join('')}</g>`;}
  function modified(){return items.some((c,i)=>Object.keys(c).some(k=>typeof c[k]==='number'&&Math.abs(c[k]-scheme.clasps[i][k])>1e-6));}
- function metadata(){return {brand:'SoulGrain',product:'ONWARD / 前进',scheme:scheme.id,schemeName:scheme.name,coordinateSystem:G.coordinateSystem,disclaimer:G.disclaimer,traceUncertainty:G.traceUncertainty,formula:scheme.formula,designChoices:scheme.rationale,manuallyEdited:modified(),clasps:clone(items),anchors:items.map(G.anchors),metrics:G.metrics(items),validation:items.map(c=>G.validate(c)),layoutValidation:G.validateLayout(items),sourceImageSize:T.source,geometryVersion:G.version};}
+ function metadata(){return {brand:'SoulGrain',product:'ONWARD / 前进',scheme:scheme.id,schemeName:scheme.name,coordinateSystem:G.coordinateSystem,disclaimer:G.disclaimer,traceUncertainty:G.traceUncertainty,formula:scheme.formula,designChoices:scheme.rationale,manuallyEdited:modified(),clasps:clone(items),anchors:items.map(G.anchors),metrics:G.metrics(items),validation:items.map(c=>G.validate(c)),layoutValidation:G.validateLayout(items),sourceImageSize:T.source,geometryVersion:G.version,advancedExperiment:isAdvanced(scheme)?{intent:scheme.intent,decision:scheme.decision,manufacturing:scheme.manufacturing,marketing:scheme.marketing,analysis:X.analysis(scheme,items),construction:scheme.guides}:undefined};}
  function svgContent(settings={}){
   const o={...opts,...settings};
   const check=G.validateLayout(items),risk=check.errors.length?' · 存在干涉，需修正':check.warnings.length?' · 存在靠缝／净空警告，需复核':'';
-  return `<rect x="60" y="185" width="1110" height="590" fill="#fff"/>${shoe()}${o.source?`<g id="reference-overlay" opacity=".27"><image href="${A.shoeImage}" x="0" y="0" width="1280" height="894"/></g>`:''}${o.guides?guideMarkup():''}${o.points?pointsMarkup():''}${o.clasps?items.map((c,i)=>buckleMarkup(c,i,!!o.interactive)).join(''):''}<text class="svg-small" x="78" y="762">SOULGRAIN / ONWARD · ${scheme.id} · ${modified()?'手动调整 / 约束见数据':'预设方案'} · 原图坐标 u，非 mm，非生产纸样${risk}</text>`;
+  return `<rect x="60" y="185" width="1110" height="590" fill="#fff"/>${shoe()}${o.source?`<g id="reference-overlay" opacity=".27"><image href="${A.shoeImage}" x="0" y="0" width="1280" height="894"/></g>`:''}${o.guides?guideMarkup():''}${o.points?pointsMarkup():''}${o.clasps?items.map((c,i)=>buckleMarkup(c,i,!!o.interactive)).join(''):''}${isAdvanced(scheme)&&modified()&&o.guides?text({x:78,y:202},'已手动调整；辅助图和刻度保留原预设，当前关系以数据与残差为准。'):''}<text class="svg-small" x="78" y="762">SOULGRAIN / ONWARD · ${scheme.id} · ${modified()?'手动调整 / 约束见数据':'预设方案'} · 原图坐标 u，非 mm，非生产纸样${risk}</text>`;
  }
  function drawingSvg(settings={}){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${T.viewBox}" width="2220" height="1180" role="img"><title>SoulGrain ONWARD — ${scheme.id} ${esc(scheme.shortName)}</title><desc>${esc(G.disclaimer+' '+scheme.rationale)}</desc><metadata>${esc(JSON.stringify(metadata()))}</metadata><defs><style>${style}</style></defs>${svgContent({...settings,source:false,interactive:false})}</svg>`;}
  function renderEditor(){const c=items[selected];['x','y','angle','length','width','headRadius'].forEach(k=>{const e=$(k);if(e)e.value=fmt(c[k],k==='angle'?2:1);if($(k+'-range'))$(k+'-range').value=c[k];});[0,1].forEach(i=>$('select-'+i).setAttribute('aria-pressed',String(i===selected)));$('undo').disabled=!history.length;}
@@ -65,7 +78,33 @@
   if(scheme.id==='B'){const sp=G.spiral,error=Math.max(...items.map((c,i)=>G.distance(c,sp.pointAt(i?sp.delta:0))));note+=` 当前中点距螺线两站最大偏差 ${fmt(error)}u，扣轴对预设法线偏角 ${items.map((c,i)=>fmt(c.angle-sp.normalAngle(i?sp.delta:0))+'°').join(' / ')}；90°半径比 φ，15°站位半径比 ${fmt(Math.exp(sp.b*sp.delta),5)}。`;}
   if(scheme.id==='C')note+=` 当前中点距原交点偏差 ${items.map((c,i)=>fmt(G.distance(c,scheme.clasps[i]))+'u').join(' / ')}；当前扣轴对 S 的偏角 ${items.map(c=>fmt(c.angle-G.seamAngle)+'°').join(' / ')}。`;
   if(scheme.id==='D')note+=' 当前方向以实际坐标为准，不主张黄金分割或“客观最美”。';
+  if(isAdvanced(scheme))note+=' '+X.analysis(scheme,items).summary+' 辅助图和刻度展示原预设，调整后的数值以当前数据与残差为准。';
   $('constraint-note').textContent=note;
+ }
+ function comparisonSvg(p,current=false){
+  const data=current?items:p.clasps;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${T.viewBox}" width="2220" height="1180" role="img" aria-label="${esc(p.id+' '+p.shortName+'方案对照')}"><defs><style>${style}</style></defs><rect x="60" y="185" width="1110" height="590" fill="#fff"/>${shoe('compare-'+p.id)}${opts.guides?guideMarkup(p):''}${opts.clasps?data.map((c,i)=>buckleMarkup(c,i)).join(''):''}<text x="78" y="762" class="svg-small">${esc(p.id+' / '+p.shortName)} · ${current?'当前参数':'第一轮固定预设'} · 二维参考，非生产纸样</text></svg>`;
+ }
+ function renderComparison(){
+  const visible=$('show-baseline').checked;$('baseline-pair').hidden=!visible;
+  if(!visible)return;
+  const p=G.presets.find(p=>p.id===$('baseline-select').value);
+  $('current-compare').innerHTML=comparisonSvg(scheme,true);
+  $('baseline-compare').innerHTML=comparisonSvg(p);
+  $('current-compare-caption').textContent=`当前 ${scheme.id} · 参数同步${modified()?' / 已手动调整':''}`;
+  $('baseline-caption').textContent=`第一轮 ${p.id} · ${p.shortName} / 固定起始值`;
+ }
+ function renderExperiment(){
+  const advanced=isAdvanced(scheme);$('experiment-context').hidden=!advanced;
+  if(!advanced)return;
+  const rows=[['为什么在这只鞋上试',scheme.intent],['先定义哪些自由参数',(scheme.freeParameters||[]).join('；')||'见构图依据中的明确选参'],['工艺适用性与风险',scheme.manufacturing],['可以讲述的品牌故事',scheme.marketing],['预设研究取舍（不代替当前筛查）',scheme.decision]];
+  $('experiment-reasoning').innerHTML=rows.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('');
+  const result=X.analysis(scheme,items);
+  $('experiment-measures').innerHTML=(result.residuals||[]).map(r=>{if(typeof r==='string')return `<div><strong>${esc(r)}</strong></div>`;const value=typeof r.value==='number'?(Math.abs(r.value)<1e-6?'≈0':fmt(r.value,3)):r.value??r.detail??'';return `<div data-satisfied="${r.satisfied!==false}"><strong>${esc(r.label||r.name||'当前约束')}</strong><small>${esc(value)}${r.unit?' '+esc(r.unit):''}${r.satisfied===false?' · 已偏离预设关系':''}${r.note?'<br>'+esc(r.note):''}</small></div>`;}).join('');
+  let detail='';
+  if(scheme.id==='E')detail=`<h3>同种子、同长边：三种根号比例的实际结果</h3><p class="editor-note">${esc(result.details.adopted)}</p><div class="coordinate-table"><table><thead><tr><th>网格</th><th>短边 (u)</th><th>第二中心 (u)</th><th>二维筛查</th></tr></thead><tbody>${result.details.rootRectangles.map(r=>`<tr><td>√${r.root}</td><td>${fmt(r.height,3)}</td><td>(${fmt(r.centers[1].x)}, ${fmt(r.centers[1].y)})</td><td>${esc([...r.errors,...r.warnings].join('；')||'无额外警告')}</td></tr>`).join('')}</tbody></table></div>`;
+  if(scheme.id==='F')detail=`<details class="experiment-detail"><summary>只改变扣长，会发生什么？</summary><p class="editor-note">保留G₁/G₂、三角形、扣件中点与角度，仅让两扣同长变化。96u可通过当前初筛，但比160u缩短40%，不代表穿脱、扣合或视觉验证完成；这否定的是当前规格组合，不是否定黄金三角方法。</p><table><thead><tr><th>L (u)</th><th>完整扣形最近缝线 (u)</th><th>结果</th></tr></thead><tbody>${[160,112,100,96].map(length=>{const v=G.validateLayout(scheme.clasps.map(c=>({...c,length})));return `<tr><td>${length}</td><td>${fmt(Math.min(...v.results.map(r=>r.clearances.footprintSeam)),3)}</td><td>${v.errors.length?'干涉':v.warnings.length?'净空警告':'仅二维初筛通过'}</td></tr>`;}).join('')}</tbody></table><p class="editor-note">可在右侧逐个调整两扣长度复现；恢复本方案会回到160u负例。</p></details>`;
+  $('experiment-details').innerHTML=detail;
  }
  function render(){
   $('design-svg').innerHTML=`<defs><style>${style}</style></defs>${svgContent({interactive:true})}`;
@@ -73,7 +112,7 @@
   $('formula-list').innerHTML=[scheme.formula,...scheme.construction].map(s=>`<code>${esc(s)}</code>`).join('');
   $('edit-badge').textContent=modified()?'存在手动调整':'原始方案';
   document.querySelectorAll('#scheme-tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.scheme===scheme.id)));
-  renderEditor();metricsRender();$('story-board').innerHTML=storySvg();
+  renderEditor();metricsRender();renderExperiment();renderComparison();$('story-board').innerHTML=storySvg();
  }
  function remember(){history.push(clone(items));if(history.length>50)history.shift();}
  function choose(id){const p=G.presets.find(p=>p.id===id);if(!p)return;scheme=p;items=clone(p.clasps);history=[];selected=0;render();}
@@ -81,7 +120,9 @@
   if($('snap-boundary').checked){const d=G.boundaryVector,t=Math.max(0,Math.min(1,G.dot(G.sub(p,G.boundaryStart),d)/G.dot(d,d)));p=G.atBoundary(t);}
   item.x=Math.max(60,Math.min(1170,p.x));item.y=Math.max(185,Math.min(775,p.y));
  }
- $('scheme-tabs').innerHTML=G.presets.map(p=>`<button type="button" role="tab" aria-selected="${p.id===scheme.id}" data-scheme="${p.id}"><span class="letter">${p.id}</span><span>${esc(p.shortName)}<small>${{A:'GOLDEN DIVISION',B:'SPIRAL & NORMALS',C:'STRUCTURAL EXTENSIONS',D:'FREE GEOMETRY'}[p.id]}</small></span></button>`).join('');
+ const tabLabel={A:'GOLDEN DIVISION',B:'SPIRAL & NORMALS',C:'STRUCTURAL EXTENSIONS',D:'FREE GEOMETRY',E:'DYNAMIC SYMMETRY',F:'GOLDEN TRIANGLE',G:'VESICA PISCIS',H:'PYTHAGOREAN 3:4:5',I:'CIRCLE TANGENCY'};
+ const tab=p=>`<button type="button" role="tab" aria-selected="${p.id===scheme.id}" data-scheme="${p.id}"><span class="letter">${p.id}</span><span>${esc(p.shortName)}<small>${tabLabel[p.id]}</small></span></button>`;
+ $('scheme-tabs').innerHTML=`<div class="scheme-group-label">第一轮 / A–D<span>原方案保留，坐标与参数不变</span></div><div class="scheme-group-row">${G.presets.filter(p=>!isAdvanced(p)).map(tab).join('')}</div><div class="scheme-group-label">新增实验 / E–I<span>ADVANCED GEOMETRY EXPERIMENTS · 方法成立也可以不适合这只鞋</span></div><div class="scheme-group-row advanced">${G.presets.filter(isAdvanced).map(tab).join('')}</div>`;
  $('scheme-tabs').setAttribute('role','tablist');$('scheme-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-scheme]');if(b)choose(b.dataset.scheme);});
  [['angle','角度 α · 顺时针 °',-90,90,.5],['length','锚点距 L · u',80,220,1],['width','扣身宽 W · u',10,36,.5],['headRadius','圆头半径 r · u',7,24,.5]].forEach(([k,label,min,max,step])=>{
   $('dimension-controls').insertAdjacentHTML('beforeend',`<div class="dimension-field"><label for="${k}">${label}</label><input id="${k}-range" type="range" min="${min}" max="${max}" step="${step}" aria-label="${label}"><input id="${k}" type="number" min="${k==='angle'?-180:min}" max="${k==='angle'?180:max}" step="${step}" aria-label="${label}数值"></div>`);
@@ -91,6 +132,7 @@
  $('undo').addEventListener('click',()=>{if(history.length){items=history.pop();render();}});$('reset').addEventListener('click',()=>{remember();items=clone(scheme.clasps);render();});
  [['show-guides','guides'],['show-clasps','clasps'],['show-points','points'],['show-source','source']].forEach(([id,key])=>$(id).addEventListener('change',()=>{opts[key]=$(id).checked;render();}));
  $('show-compare').addEventListener('change',()=>{$('original-sheet').hidden=!$('show-compare').checked;$('canvas-pair').classList.toggle('comparing',$('show-compare').checked);});
+ $('show-baseline').addEventListener('change',renderComparison);$('baseline-select').addEventListener('change',renderComparison);
  let drag=null;const svg=$('design-svg');
  const svgPoint=e=>{const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(svg.getScreenCTM().inverse());};
  svg.addEventListener('pointerdown',e=>{const b=e.target.closest('.buckle-group');if(!b)return;e.preventDefault();selected=Number(b.dataset.index);remember();const p=svgPoint(e);drag={id:e.pointerId,dx:items[selected].x-p.x,dy:items[selected].y-p.y};svg.setPointerCapture(e.pointerId);setSelection(selected);});
@@ -98,11 +140,15 @@
  const stop=e=>{if(!drag)return;if(svg.hasPointerCapture(e.pointerId))svg.releasePointerCapture(e.pointerId);drag=null;};svg.addEventListener('pointerup',stop);svg.addEventListener('pointercancel',stop);
  svg.addEventListener('keydown',e=>{const b=e.target.closest('.buckle-group');if(!b)return;const shifts={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]};if(!shifts[e.key])return;e.preventDefault();selected=Number(b.dataset.index);remember();const m=e.shiftKey?5:1,[dx,dy]=shifts[e.key];move(items[selected],{x:items[selected].x+dx*m,y:items[selected].y+dy*m});render();svg.querySelector(`[data-index="${selected}"]`).focus();});
  function storySvg(){
-  const captions=[['01 / 原始结构','保留手绘鞋型、翻筒分割、斜眼片和鞋底。'],['02 / 几何推导',scheme.shortName+'；参考线是设计方法，不是鞋型天然定律。'],['03 / 两端定位','每扣 P 在翻筒、Q 在鞋身；坐标仅为二维定位参考。'],['04 / 当前结果',modified()?'已手调：原公式作参考，当前坐标和偏差优先。':(['A','D'].includes(scheme.id)?'当前有靠缝警告，先在真实纸样复核；不是生产定稿。':'预设方案：先比较纸样与实物，再确认最终布局。')]];
-  const panels=captions.map(([title,caption],i)=>{const x=i%2?740:40,y=i<2?130:625;let content=shoe('story-'+i);if(i===1)content+=guideMarkup();if(i>=2)content+=items.map((c,j)=>buckleMarkup(c,j)).join('');if(i===2)content+=items.map((c,j)=>{const e=G.anchors(c);return line(e.cuff,e.body)+text(G.add(e.cuff,{x:-5,y:-18}),`P${j+1}`)+text(G.add(e.body,{x:8,y:20}),`Q${j+1}`);}).join('');return `<g><rect x="${x}" y="${y}" width="660" height="450" fill="#fff" stroke="#d8d7cf"/><text x="${x+20}" y="${y+28}" font-size="14" fill="#294e50">${esc(title)}</text><g transform="translate(${x+18} ${y+53}) scale(.562)"><g transform="translate(-60 -185)">${content}</g></g><text x="${x+20}" y="${y+408}" font-size="11" fill="#697574">${esc(caption)}</text></g>`;}).join('');
+  const advanced=isAdvanced(scheme),check=G.validateLayout(items),height=advanced?1460:1290;
+  const resultCaption=advanced?`${check.errors.length?'当前有几何干涉':check.warnings.length?'当前有净空警告':'二维筛查未见额外警告'}；${scheme.decision}`:modified()?'已手调：原公式作参考，当前坐标和偏差优先。':(['A','D'].includes(scheme.id)?'当前有靠缝警告，先在真实纸样复核；不是生产定稿。':'预设方案：先比较纸样与实物，再确认最终布局。');
+  const captions=[['01 / 原始结构','保留手绘鞋型、翻筒分割、斜眼片和鞋底。'],['02 / 几何推导',advanced?scheme.intent:scheme.shortName+'；参考线是设计方法，不是鞋型天然定律。'],['03 / 两端定位','每扣 P 在翻筒、Q 在鞋身；坐标仅为二维定位参考。'],['04 / 当前结果',modified()&&advanced?'已手调：以实际坐标、当前残差与干涉检查为准；不得沿用预设的精确关系。':resultCaption]];
+  const panels=captions.map(([title,caption],i)=>{const x=i%2?740:40,y=i<2?130:625;let content=shoe('story-'+i);if(i===1)content+=guideMarkup();if(i>=2)content+=items.map((c,j)=>buckleMarkup(c,j)).join('');if(i===2)content+=items.map((c,j)=>{const e=G.anchors(c);return line(e.cuff,e.body)+text(G.add(e.cuff,{x:-5,y:-18}),`P${j+1}`)+text(G.add(e.body,{x:8,y:20}),`Q${j+1}`);}).join('');return `<g><rect x="${x}" y="${y}" width="660" height="450" fill="#fff" stroke="#d8d7cf"/><text x="${x+20}" y="${y+28}" font-size="14" fill="#294e50">${esc(title)}</text><g transform="translate(${x+18} ${y+53}) scale(.562)"><g transform="translate(-60 -185)">${content}</g></g>${advanced?paragraph(x+20,y+394,caption,620,11,3):`<text x="${x+20}" y="${y+408}" font-size="11" fill="#697574">${esc(caption)}</text>`}</g>`;}).join('');
   const formula=scheme.formula.match(/.{1,110}/gu)||[];
   const formulaText=formula.map((s,i)=>`<text x="40" y="${1145+i*20}" font-size="10" fill="#294e50">${esc(s)}</text>`).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1290" width="1440" height="1290"><title>SoulGrain ONWARD — ${scheme.id} 设计故事</title><metadata>${esc(JSON.stringify(metadata()))}</metadata><defs><style>${style}</style></defs><rect width="1440" height="1290" fill="#f5f3ed"/><text x="40" y="54" font-size="29" fill="#26383a">SoulGrain / ONWARD — 前进</text><text x="40" y="87" font-size="14" fill="#697574">${scheme.id} · ${esc(scheme.name)} · 设计研究，候选而非定稿</text>${panels}<text x="40" y="1117" font-size="11" fill="#26383a">M₁=(${fmt(items[0].x)},${fmt(items[0].y)}) α₁=${fmt(items[0].angle)}°　 M₂=(${fmt(items[1].x)},${fmt(items[1].y)}) α₂=${fmt(items[1].angle)}°</text>${formulaText}<text x="40" y="1210" font-size="11" fill="#697574">原图坐标 u，非毫米；未校正透视、布料展开、缝份、受力和活动量。数学方法不代表传统文化历史中的黄金定律。</text><text x="40" y="1241" font-size="11" fill="#697574">文化灵感：蒙古族传统服饰结构与蒙古扣的矩形扣身／圆形扣头。未指定最终材料和固定工艺。</text></svg>`;
+  const advancedStory=advanced?paragraph(40,1220,'品牌叙事：'+scheme.marketing,1360,12,3,'#294e50')+paragraph(40,1290,'工艺复核：'+scheme.manufacturing,1360,11,3):'';
+  const headline={E:'让孔位筛选比例。',F:'比例之外，结构作答。',G:'相近的形态，不同的提问。',H:'方向，落成坐标。',I:'先定关系，再定尺度。'}[scheme.id];
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 ${height}" width="1440" height="${height}"><title>SoulGrain ONWARD — ${scheme.id} 设计故事</title><metadata>${esc(JSON.stringify(metadata()))}</metadata><defs><style>${style}</style></defs><rect width="1440" height="${height}" fill="#f5f3ed"/><text x="40" y="54" font-size="29" fill="#26383a">SoulGrain / ONWARD — 前进</text><text x="40" y="87" font-size="14" fill="#697574">${scheme.id} · ${esc(scheme.name)} · ${advanced&&check.errors.length?'研究负例，不推荐当前规格':'设计研究，候选而非定稿'}</text>${advanced?`<text x="40" y="114" font-size="16" fill="#294e50">${esc(headline)}</text>`:''}${panels}<text x="40" y="1117" font-size="11" fill="#26383a">M₁=(${fmt(items[0].x)},${fmt(items[0].y)}) α₁=${fmt(items[0].angle)}°　 M₂=(${fmt(items[1].x)},${fmt(items[1].y)}) α₂=${fmt(items[1].angle)}°</text>${formulaText}${advancedStory}<text x="40" y="${advanced?1380:1210}" font-size="11" fill="#697574">原图坐标 u，非毫米；未校正透视、布料展开、缝份、受力和活动量。数学方法不代表传统文化历史中的黄金定律。</text><text x="40" y="${advanced?1411:1241}" font-size="11" fill="#697574">文化灵感：蒙古族传统服饰结构与蒙古扣的矩形扣身／圆形扣头。未指定最终材料和固定工艺。</text></svg>`;
  }
  function save(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();$('export-status').innerHTML=`已生成 ${esc(name)}。<a href="${u}" target="_blank" rel="noopener">若未下载，点此查看／保存原文件</a>`;setTimeout(()=>URL.revokeObjectURL(u),300000);}
  async function pngBlob(source,width=3840){
@@ -125,7 +171,9 @@
   D:['扣轴平行鞋底弦，同长同宽同圆头；不强求黄金。','短扣身保留鞋身留白，方向与斜眼片形成受控对照。','保留矩形与圆头的双扣节奏，避免堆叠未确认的文化符号。','较短零件、统一方向便于模板化；上扣圆头靠缝，仅2.439u图上净空，必须先复核。','可讲克制留白与当代服饰语言，叙事以实际构图为准。']
  };
  const dimensions=['数学与几何逻辑','视觉美感与协调','文化元素融合','缝制与量产可行性','品牌故事潜力'];
- $('evaluation-cards').innerHTML=G.presets.map(p=>`<article class="evaluation-card"><h3>${p.id} / ${esc(p.shortName)}</h3><dl>${evaluations[p.id].map((v,i)=>`<dt>${dimensions[i]}</dt><dd>${v}</dd>`).join('')}</dl></article>`).join('');
- globalThis.ClaspStudy={choose,getState:()=>metadata(),drawingSvg,storySvg,pngBlob,structureSvg:()=>A.structureSvg,setClasp:(i,values)=>{Object.assign(items[i],values);render();},reset:()=>choose(scheme.id)};
- render();
+ $('evaluation-cards').innerHTML=G.presets.map(p=>`<article class="evaluation-card"><h3>${p.id} / ${esc(p.shortName)}</h3><dl>${(evaluations[p.id]||p.evaluation).map((v,i)=>`<dt>${dimensions[i]}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${p.decision?`<p class="decision">本轮取舍：${esc(p.decision)}</p>`:''}</article>`).join('');
+ $('advanced-recommendations').innerHTML='<strong>第二轮建议：把深化、叙事和打样分别判断。</strong><div class="rank-list"><div><h3>继续深化 · C / H / I</h3><p>C 保留结构出发的基准，H 检验4:3方向，I检验固定参考后求长度。H/I外观很接近，不包装成两种截然不同的鞋。</p></div><div><h3>营销故事 · C / H</h3><p><b>C：从结构长出的秩序。</b><br><b>H：方向，落成坐标。</b><br>两种推导都能在真实扣形中读出，不依赖神秘比例。</p></div><div><h3>先做打样验证 · C / H</h3><p>同规格、同方向的双扣更适合先做控制样。I的实际锚点有定位优势，但偏距仍需从真实纸样重定，作为后续对照。</p></div></div><p>E 暂留比例研究，F 的160u规格是保留负例，G 仅作C的微角度对照。以上是验证次序，未定稿，也不是客观美学排名。</p>';
+ globalThis.ClaspStudy={choose,getState:()=>metadata(),drawingSvg,storySvg,pngBlob,comparisonSvg:id=>comparisonSvg(G.presets.find(p=>p.id===id)),catalog:()=>G.presets.map(p=>({id:p.id,name:p.name,shortName:p.shortName,decision:p.decision,advanced:isAdvanced(p)})),structureSvg:()=>A.structureSvg,setClasp:(i,values)=>{Object.assign(items[i],values);render();},reset:()=>choose(scheme.id)};
+ const initial=new URLSearchParams(location.search).get('scheme');
+ if(G.presets.some(p=>p.id===initial))choose(initial);else render();
 })();

@@ -2,15 +2,16 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f3f1eb"><meta name="description" content="SoulGrain ONWARD 蒙古扣二维几何布局研究。四方案、可调坐标、结构校核与矢量导出。非量产纸样。">
+<meta name="theme-color" content="#f3f1eb"><meta name="description" content="SoulGrain ONWARD 蒙古扣二维几何布局研究。保留A–D，增量研究E–I；九方案、可调坐标、结构校核与矢量导出。非量产纸样。">
 <title>SoulGrain ONWARD — 蒙古扣几何研究</title>
 <style>__STYLE__</style>
 </head>
 <body>
-<header class="masthead"><div><span class="brand">SoulGrain</span><span class="chapter">ONWARD / 前进</span></div><span class="document-code">PLACEMENT STUDY · 01<br>二维设计参考 / 待确认</span></header>
+<header class="masthead"><div><span class="brand">SoulGrain</span><span class="chapter">ONWARD / 前进</span></div><span class="document-code">PLACEMENT STUDY · 02<br>二维设计参考 / 待确认</span></header>
 <main>
-<section class="intro"><p class="kicker">STRUCTURE → GEOMETRY → EXPRESSION</p><h1>两枚扣件，<br class="mobile-break">一种结构秩序。</h1><p class="lede">从你提供的鞋侧手绘出发，比较蒙古扣的四种布局逻辑。每一条辅助线，都对应可查的坐标与公式。</p><p class="scope-note">手绘图像坐标，单位 u（原图像素），不是毫米。原图左上为 (0,0)，x 向右、y 向下；角度由 +x 轴顺时针计。交界 R 是端点参考弦，局部可偏离墨线10–15u；人工读点误差约±4u或更多。该侧视投影不是工业展开纸样。</p></section>
-<nav class="scheme-tabs" aria-label="选择布局方案" id="scheme-tabs"></nav>
+<section class="intro"><p class="kicker">STRUCTURE → GEOMETRY → EXPRESSION</p><h1>两枚扣件，<br class="mobile-break">一种结构秩序。</h1><p class="lede">从你提供的鞋侧手绘出发，保留蒙古扣的四种起始布局，增量研究五种新几何方法。每一条辅助线，都对应可查的坐标与公式。</p><p class="scope-note">手绘图像坐标，单位 u（原图像素），不是毫米。原图左上为 (0,0)，x 向右、y 向下；角度由 +x 轴顺时针计。交界 R 是端点参考弦，局部可偏离墨线10–15u；人工读点误差约±4u或更多。该侧视投影不是工业展开纸样。</p></section>
+<p class="extension-note">第一轮 A–D 原样保留。本轮增加 E–I：先提出结构问题，再用几何验证位置、方向与净空；不以公式名称代替设计理由。</p>
+<nav class="scheme-tabs" aria-label="选择原方案或高级几何实验" id="scheme-tabs"></nav>
 <section class="workspace" aria-label="蒙古扣布局工作区">
  <div class="drawing-column">
   <div class="sheet-toolbar"><div><span class="kicker" id="scheme-code">方案 C</span><h2 id="scheme-title">结构线延伸</h2></div><span class="edit-badge" id="edit-badge">原始方案</span></div>
@@ -18,7 +19,10 @@
   <div class="canvas-pair" id="canvas-pair"><figure class="original-sheet" id="original-sheet" hidden><figcaption>原始手绘 · 仅裁去软件界面</figcaption><svg viewBox="60 185 1110 590" role="img" aria-label="用户提供的原始鞋侧手绘"><image href="__SHOE_IMAGE__" x="0" y="0" width="1280" height="894"/></svg></figure><figure class="design-sheet"><figcaption id="drawing-caption">设计图 · 拖动扣件或使用右侧数值调整</figcaption><svg id="design-svg" viewBox="60 185 1110 590" role="img" aria-label="可调整蒙古扣的鞋侧矢量设计图"></svg></figure></div>
   <div class="legend"><span class="legend-original">原始结构 / 缝线</span><span class="legend-extended">结构延长 / 定位线</span><span class="legend-geometric">数学参考</span><span class="legend-clasp">扣形符号 / 非最终材质</span></div>
   <p class="interaction-note">点选并拖动扣件；键盘方向键微调 1u，Shift + 方向键微调 5u。空白处可正常滚动页面。</p>
+  <div class="baseline-toolbar"><label><input id="show-baseline" type="checkbox">与第一轮方案并排比较</label><label>对照方案<select id="baseline-select" aria-label="选择第一轮对照方案"><option value="A">A · 黄金分割</option><option value="B">B · 螺线映射</option><option value="C" selected>C · 结构延伸</option><option value="D">D · 自由几何</option></select></label></div>
+  <div class="baseline-pair" id="baseline-pair" hidden><figure><figcaption id="current-compare-caption">当前方案 · 同步参数</figcaption><div id="current-compare"></div></figure><figure><figcaption id="baseline-caption">第一轮 C · 固定起始值</figcaption><div id="baseline-compare"></div></figure></div>
   <div class="logic-panel"><h3>构图依据</h3><p id="scheme-explanation"></p><div id="formula-list" class="formulas"></div><p class="honesty" id="constraint-note"></p></div>
+  <section id="experiment-context" class="experiment-context" hidden><p class="kicker">ADVANCED GEOMETRY / DESIGN REASONING</p><dl id="experiment-reasoning"></dl><div id="experiment-measures" class="experiment-measures"></div><p class="editor-note">残差是公式校核，接近数值零显示为≈0；不是实物测量精度。原始浮点数据保留在 JSON 中。</p><div id="experiment-details"></div></section>
   <div class="metrics-grid" id="metrics-grid"></div>
   <div class="coordinate-table"><h3>当前定位数据</h3><table><thead><tr><th>扣件</th><th>中点 M (u)</th><th>角度</th><th>翻筒端 P (u)</th><th>鞋身端 Q (u)</th></tr></thead><tbody id="coordinate-rows"></tbody></table></div>
  </div>
@@ -35,11 +39,11 @@
  </aside>
 </section>
 <section class="structure-section"><div class="section-top"><p class="kicker">01 / READ THE EXISTING SHOE</p><h2>结构先于构图。</h2></div><p>轮廓逐段描自你提供的第一张图，保留后跟在左、鞋头在右、外翻鞋筒与向右展开的长鞋舌。下图使用弦线拟合关键曲线，不把手绘的微小误差当成精确结构。</p><div id="structure-diagram"></div><div class="structure-data" id="structure-data"></div><button id="export-structure" type="button">导出结构分析 SVG</button></section>
-<section class="comparison-section"><div class="section-top"><p class="kicker">02 / REASONED COMPARISON</p><h2>比较理由，不打美学分数。</h2></div><div id="evaluation-cards" class="evaluation-cards"></div><div class="recommendation"><strong>待确认候选：C + D</strong><p>C 用现有缝线建立可复用的定位秩序；D 保留更自由的角度和留白，适合作为视觉对照样。D 上扣圆头当前靠近缝线，必须先复核。二者都应先打印纸样贴附再比较；暂不定稿。A、B 作为数学构图研究保留，不以“黄金”替代实际审美与工艺判断。</p></div></section>
+<section class="comparison-section"><div class="section-top"><p class="kicker">02 / REASONED COMPARISON</p><h2>比较理由，不打美学分数。</h2></div><p class="comparison-intro">九个方案用同一鞋型、相同坐标和同一净空筛查比较。先隐藏辅助线看扣形，再打开推导检查理由；工艺判断还需真实纸样、布样和试穿。</p><div id="evaluation-cards" class="evaluation-cards"></div><div class="recommendation" id="advanced-recommendations"></div><details class="first-round-record"><summary>保留第一轮候选记录：C + D</summary><p>C 用现有缝线建立可复用的定位秩序；D 保留更自由的角度和留白，适合作为视觉对照样。D 上扣圆头当前靠近缝线，必须先复核。该记录是第一轮判断，未定稿；本轮新增实验与其比较，不删除原方案。</p></details></section>
 <section class="story-section"><div class="section-top"><p class="kicker">03 / TELL ONLY WHAT THE DESIGN DOES</p><h2>让推导成为设计故事。</h2></div><p>下面的故事板由当前方案和当前参数生成，包含原结构、几何推导、两端定位和结果。若手动调整偏离预设，故事板会同步注明，不把修改后的结果继续宣称为黄金比例。</p><div id="story-board"></div></section>
 <section class="factory-section"><div class="section-top"><p class="kicker">04 / QUESTIONS BEFORE SAMPLING</p><h2>交给鞋厂之前。</h2></div><ul><li>提供真实鞋长、鞋帮高、翻筒展开高、缝份和分码纸样；以同一实物至少两处已知尺寸校准，不能只将 u 等比改成毫米。</li><li>确认翻筒与鞋身的两端分别落在哪层布、补强片与针线可达区域，测量距鞋眼、折边和接缝的实际边距。</li><li>确认扣身可用长度、圆头尺寸、开合方向、回折余量与穿着松量；两端定位关系不等于已解决扣合机构。</li><li>检验鞋筒展开／折下、脚踝弯曲、走动与穿脱时的活动量、拉扯、磨脚和对鞋带的干涉。</li><li>讨论针距、线材、背衬、局部拉力、反复开合、洗涤和金属腐蚀／脱落；本阶段没有定材料和固定工艺。</li><li>先做透明定位模板与左右脚镜像样，确认定位基准、尺寸公差、分码放缩和批量检验方式。</li></ul></section>
 <details class="references"><summary>查看两张原始参考与研究边界</summary><div class="reference-grid"><figure><img src="__SHOE_IMAGE__" alt="用户提供的鞋侧手绘原图，保留软件界面以便追溯" loading="lazy"><figcaption>主要底稿：鞋侧结构手绘。交互页的矢量轮廓由人工描摹获得，非扫描或工业纸样。</figcaption></figure><figure><img src="__GOLDEN_IMAGE__" alt="用户提供的黄金比例与螺旋示意截图" loading="lazy"><figcaption>构图参考：φ≈1.618。图示的方格圆弧不能直接作为严格对数螺线；B 方案采用独立公式计算。</figcaption></figure></div></details>
 <footer><span>SoulGrain · ONWARD / 前进</span><p>文化灵感：蒙古族传统服饰结构与蒙古扣。此处仅研究矩形扣身与圆形扣头的布局，不宣称完整历史复原或最终量产方案。</p><span>2D REFERENCE / NOT A PRODUCTION PATTERN</span></footer>
 </main>
-<script>globalThis.StudyAssets=__ASSETS__;</script><script>__TRACE__</script><script>__GEOMETRY__</script><script>__APP__</script>
+<script>globalThis.StudyAssets=__ASSETS__;</script><script>__TRACE__</script><script>__GEOMETRY__</script><script>__ADVANCED__</script><script>__APP__</script>
 </body></html>
