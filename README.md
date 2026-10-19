@@ -1,9 +1,11 @@
-# SoulGrain ONWARD — standalone clasp-layout research
+# SoulGrain ONWARD — standalone clasp study, round 2
 
-This branch contains only the independent research page, copied byte-for-byte from `feat/onward-clasp-layout-study` at commit `8d1863e3902843294e499ac1df9ada280bc32a11`. It contains no shoe model or production website code.
+A–D remain unchanged. E–I extend the same interactive page.
 
-To enable publishing, open the repository Settings → Pages → Build and deployment. Choose **Deploy from a branch**, branch **gh-pages**, folder **/ (root)**, then Save. This is separate from the Vercel production website.
+Source: `feat/onward-clasp-layout-study` at `e36e4f733d5b16b798d93b7fd0c08005265e5721`.
 
-Target after a successful Pages deployment: https://siriguleng15.github.io/soulgrain-onward/
+The root HTML is byte-identical to `research/clasp-layout/index.html`; it has no external dependencies and no website or shoe-model files.
 
-`deployment.json` records the exact source commit and page checksum. The target URL is not proof of successful activation.
+To enable Pages: repository Settings → Pages → Deploy from a branch → gh-pages → / (root) → Save.
+
+Target: https://siriguleng15.github.io/soulgrain-onward/ . This URL and branch are not proof of activation; the current Codex egress policy blocks verification of github.io.

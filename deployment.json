@@ -1,10 +1,12 @@
 {
   "source_repository": "siriguleng15/soulgrain-onward",
   "source_branch": "feat/onward-clasp-layout-study",
-  "source_commit": "8d1863e3902843294e499ac1df9ada280bc32a11",
+  "source_commit": "e36e4f733d5b16b798d93b7fd0c08005265e5721",
   "source_path": "research/clasp-layout/index.html",
-  "sha256": "54aa356af81198f71439c94f432227415076ddc3371edbb734093f389acac4f6",
-  "bytes": 624291,
+  "study_revision": 2,
+  "schemes": "A\u2013I",
+  "sha256": "8dbcad8244a3f5f988dc9dc3b9e03be3b0023c5e2de9216831532a68db28f6e8",
+  "bytes": 672348,
   "publishing_branch": "gh-pages",
   "target_url": "https://siriguleng15.github.io/soulgrain-onward/"
 }
