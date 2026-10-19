@@ -1,5 +1,7 @@
 # SoulGrain ONWARD — 蒙古扣几何研究页
 
+[新增24秒设计动效样稿：让连接，自成风格](marketing-motion/onward-connection-study.mp4) · [播放页](connection-preview.html) · [动效源文件说明](marketing-motion/README.md)。沿用C方案展示从鞋面结构到双扣出现的过程，不增加比例方案或改变现有设计。
+
 本目录是独立二维研究，不改变官网、V7 设计工作台、鞋模、材质或动画。仅依据用户第一轮提供的两张截图制作；鞋型由第一张手绘人工逐段描摹。第一轮 A–D 的参数和图稿保留。本轮在同一页面增量加入 E–I；全部仍是研究候选或研究负例，未定稿。
 
 [九方案总览](exports/overview.png) · [保留第一轮总览](exports/overview-A-D.png) · [结构图](exports/structure-analysis.png) · [C 设计故事](exports/story-C.png) · [H 设计故事](exports/story-H.png) · [I 设计故事](exports/story-I.png) · [九方案比较与取舍](COMPARISON.zh-CN.md) · [完整文件包](SoulGrain-ONWARD-clasp-study.zip)

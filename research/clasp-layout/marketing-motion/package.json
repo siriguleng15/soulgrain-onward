@@ -1,0 +1,12 @@
+{
+  "name": "marketing-motion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:source": "node build.mjs",
+    "dev": "npx --yes hyperframes@0.8.174 preview",
+    "check": "npx --yes hyperframes@0.8.174 check",
+    "render": "npx --yes hyperframes@0.8.174 render --output onward-connection-study.mp4 --fps 30 --quality standard --workers 2",
+    "publish": "npx --yes hyperframes@0.8.174 publish"
+  }
+}
