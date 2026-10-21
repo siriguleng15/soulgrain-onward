@@ -20,10 +20,10 @@ export class Narrative {
     const focus={...root,yaw:Math.round(this.state.yaw/(Math.PI*2))*Math.PI*2,shoeX:0,cameraX:.025,cameraY:.130,cameraZ:.325,targetX:.080,targetY:.087,targetZ:.04,framing:.21,focusLight:1};
     const flat={...focus,unfold:1,shoeX:-.01,cameraX:center-.01,cameraY:.142,cameraZ:.40,targetX:center-.01,targetY:.093,targetZ:.052,framing:0};
     const bottom=this.meta.anchor[1]-this.meta.height/2+.015;
-    const pair={...focus,shoeX:-.145,cameraX:-.10,cameraY:.24,cameraZ:.92,targetX:-.01,targetY:.055,targetZ:0,framing:0,
+    const pair={...focus,shoeX:-.145,cameraX:-.09,cameraY:.22,cameraZ:.81,targetX:-.006,targetY:.055,targetZ:0,framing:0,
       copy:1,wrap:1,white:1,cover:.93,lattice:1,roof:1,rods:1,leftStructure:0,demoX:.18-center,demoY:-.0228-bottom*.75,demoZ:-this.meta.anchor[2]-.014};
     if(id==='ROOT')return whole;if(id==='A1')return focus;if(id==='A1.1')return flat;
-    return {...pair,notes:id==='A1.1.1.1'?4:0,framing:id==='A1.1.1.1'?-.06:0};
+    return {...pair,notes:id==='A1.1.1.1'?4:0,cameraZ:id==='A1.1.1.1'?.90:.81,cameraY:id==='A1.1.1.1'?.24:.22,framing:id==='A1.1.1.1'?-.06:0};
   }
   go(id:NodeId,replay=false):Promise<boolean>{
     if(this.busy&&id===this.target&&!replay)return Promise.resolve(false);
@@ -58,7 +58,7 @@ export class Narrative {
         tl.to(this.state,{focusLight:.68,duration:2.4*speed,ease:'sine.inOut'},13.4*speed);
         tl.to({}, {duration:1.4*speed},15.8*speed);
       }else if(id==='A1.1.1.1'&&from==='A1.1.1'){
-        tl.to(this.state,{framing:-.06,duration:1.4*speed,ease:'power2.inOut'},0);
+        tl.to(this.state,{framing:-.06,cameraZ:pose.cameraZ,cameraY:pose.cameraY,duration:1.4*speed,ease:'power2.inOut'},0);
         tl.to(this.state,{notes:4,duration:5.8*speed,ease:'none'},.1*speed);
       }else ordinary();
     });

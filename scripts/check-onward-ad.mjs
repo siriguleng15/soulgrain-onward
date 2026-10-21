@@ -3,7 +3,7 @@
  * node scripts/check-onward-ad.mjs http://127.0.0.1:4195
  */
 import {spawn} from 'node:child_process';
-import {mkdtemp,readFile,writeFile} from 'node:fs/promises';
+import {mkdtemp,readFile,writeFile,mkdir} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -29,6 +29,8 @@ try{
  await call('Page.navigate',{url:origin+'/onward-ad.html?review=1'});await until(()=>evaluate('!!window.__onwardAd'));
  assert.equal((await snap()).node,'ROOT');assert.equal(await evaluate('document.querySelectorAll("[data-branch]:disabled").length'),7);
  check('V8 asset loaded; ROOT visible; B–H honestly disabled');
+ const repaired=await evaluate('window.__onwardAd.performance().normalRepair');
+ assert.equal(repaired.repairedMaterials,9);assert.ok(repaired.normalValidation.minimumDecodedZ>.98);check('Nine verified invalid canvas normals repaired without replacing artwork',repaired);
  await evaluate('document.querySelector("#ad-home").click();true');assert.equal((await snap()).controlsEnabled,true);check('Current-node navigation keeps orbit enabled');
  const before=await snap();
  await call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:500,y:460,id:1}]});
@@ -49,6 +51,8 @@ try{
  await sleep(250);assert.equal((await snap()).node,'A1.1');assert.equal((await snap()).busy,false);check('Node waits for input; no automatic story advance');
  await navigate('A1.1.1');await evaluate('window.__onwardAd.seek(9.5);true');const parallel=await snap();assert.ok(parallel.state.wrap>0&&parallel.state.wrap<1);assert.ok(parallel.state.unfold>0&&parallel.state.unfold<1);assert.ok(parallel.state.copy>.99);check('Right-side assembly and original cuff return run simultaneously');
  await finish();assert.equal((await snap()).state.unfold,0);assert.equal((await snap()).state.wrap,1);assert.equal((await snap()).node,'A1.1.1');check('Complete V8 shoe restored beside white ger');
+ const solid=await evaluate('window.__onwardAd.performance().demonstration');
+ assert.equal(solid.visible,true);assert.equal(solid.roofOpacity,1);assert.equal(solid.wallCoverage,1);assert.equal(solid.transparentMaterials,0);assert.equal(solid.depthWritingMaterials,solid.visibleMaterials);check('Completed ger has fully opaque roof and wall with solid depth occlusion',solid);
  await navigate('A1.1.1.1');await evaluate('window.__onwardAd.seek(2.8);true');assert.ok((await snap()).state.notes>1&&(await snap()).state.notes<3);await finish();assert.equal((await snap()).state.notes,4);check('User-triggered sequential cultural annotations');
  await navigate('A1.1');await finish();assert.equal((await snap()).state.copy,0);assert.equal((await snap()).state.unfold,1);check('Parent navigation restores correct mesh/camera state');
  await navigate('A1.1.1');await evaluate('window.__onwardAd.seek(8.2);true');await navigate('ROOT');await finish();assert.equal((await snap()).node,'ROOT');assert.equal((await snap()).state.copy,0);assert.equal((await snap()).state.unfold,0);check('Interrupt during assembly returns cleanly to ROOT');
@@ -57,7 +61,7 @@ try{
  await evaluate('document.querySelector("#ad-replay").click();true');await navigate('ROOT');await finish();await sleep(300);assert.equal((await snap()).target,'ROOT');check('Replay cancellation cannot restart a stale child node');
  await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});await until(()=>evaluate('document.querySelector("#ad-motion").textContent==="动态 减"'));assert.equal(await evaluate('document.querySelector("#ad-motion").textContent'),'动态 减');
  const y0=(await snap()).state.yaw;await sleep(500);assert.equal((await snap()).state.yaw,y0);check('System reduced-motion preference stops idle rotation');
- const perf=await evaluate('window.__onwardAd.performance()');assert.ok(perf.pixelRatio<=1.25);check('Coarse-pointer rendering resolution capped',perf);
+ const perf=await evaluate('window.__onwardAd.performance()');assert.ok(perf.pixelRatio<=1.5&&perf.pixelRatio>=1);check('Coarse-pointer rendering resolution capped',perf);
  await call('Emulation.setDeviceMetricsOverride',{width:720,height:960,deviceScaleFactor:1,mobile:false});await sleep(200);assert.equal(await evaluate('document.documentElement.scrollWidth>innerWidth'),false);check('Portrait viewport has no horizontal document overflow');
  assert.deepEqual(errors,[]);check('No JavaScript exceptions or shader compile errors');
  // Error branches get separate reloads and are excluded from the clean-scene assertion above.
@@ -67,6 +71,7 @@ try{
  await until(()=>evaluate('!document.querySelector("#ad-retry")?.hidden && document.querySelector("#ad-load-text")?.textContent.includes("未能载入")'));
  assert.equal(await evaluate('document.querySelector("#onward-ad").dataset.loaded'),undefined);check('Missing GLB produces an explicit error and never a substitute shoe');
  const result={testedAt:new Date().toISOString(),environment:'Linux Chromium + SwiftShader; simulated coarse-pointer/touch viewports. NOT physical iPad Safari.',checks,performance:perf};
- await writeFile('previews/interactive-ad-v1/verification.json',JSON.stringify(result,null,2)+'\n');
+ const output=process.env.ONWARD_QA_OUTPUT??'previews/interactive-ad-v1/verification.json';await mkdir(path.dirname(output),{recursive:true});
+ await writeFile(output,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify({passed:checks.length,performance:perf},null,2));
 }finally{socket?.close();chrome.kill('SIGTERM');}

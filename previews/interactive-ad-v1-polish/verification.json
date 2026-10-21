@@ -1,0 +1,214 @@
+{
+  "testedAt": "2026-10-21T11:39:27.949Z",
+  "environment": "Linux Chromium + SwiftShader; simulated coarse-pointer/touch viewports. NOT physical iPad Safari.",
+  "checks": [
+    {
+      "name": "V8 asset loaded; ROOT visible; B–H honestly disabled",
+      "passed": true
+    },
+    {
+      "name": "Nine verified invalid canvas normals repaired without replacing artwork",
+      "passed": true,
+      "repairedMaterials": 9,
+      "names": [
+        "Collar_Outer_Canvas",
+        "Collar_Canvas",
+        "Canvas_Trim",
+        "Body_Canvas",
+        "Inner_Lining",
+        "Body_Inner_Canvas",
+        "Tongue_Reverse_Canvas",
+        "Tongue_Canvas",
+        "Heel_Strip"
+      ],
+      "replacementTextures": 9,
+      "generatedPixelsBytes": 65536,
+      "normalValidation": {
+        "size": 128,
+        "minimumDecodedZ": 0.9921568627450981,
+        "meanDecodedNormal": [
+          1.3877787807814457e-17,
+          6.844026213814747e-19,
+          0.9960784313725526
+        ],
+        "maximumUnitLengthError": 0.0036994239516665584
+      }
+    },
+    {
+      "name": "Current-node navigation keeps orbit enabled",
+      "passed": true
+    },
+    {
+      "name": "Single-finger orbit without accidental selection or page scrolling",
+      "passed": true
+    },
+    {
+      "name": "Two-finger pinch zoom without triggering cuff selection",
+      "passed": true
+    },
+    {
+      "name": "Touch raycast on actual cuff enters A1",
+      "passed": true
+    },
+    {
+      "name": "Continuous, geometry-driven cuff unfold reaches rectangular state",
+      "passed": true
+    },
+    {
+      "name": "Node waits for input; no automatic story advance",
+      "passed": true
+    },
+    {
+      "name": "Right-side assembly and original cuff return run simultaneously",
+      "passed": true
+    },
+    {
+      "name": "Complete V8 shoe restored beside white ger",
+      "passed": true
+    },
+    {
+      "name": "Completed ger has fully opaque roof and wall with solid depth occlusion",
+      "passed": true,
+      "visible": true,
+      "visibleMaterials": 24,
+      "transparentMaterials": 0,
+      "depthWritingMaterials": 24,
+      "roofOpacity": 1,
+      "wallCoverage": 1
+    },
+    {
+      "name": "User-triggered sequential cultural annotations",
+      "passed": true
+    },
+    {
+      "name": "Parent navigation restores correct mesh/camera state",
+      "passed": true
+    },
+    {
+      "name": "Interrupt during assembly returns cleanly to ROOT",
+      "passed": true
+    },
+    {
+      "name": "Rapid navigation: latest destination wins",
+      "passed": true
+    },
+    {
+      "name": "Replay cancellation cannot restart a stale child node",
+      "passed": true
+    },
+    {
+      "name": "System reduced-motion preference stops idle rotation",
+      "passed": true
+    },
+    {
+      "name": "Coarse-pointer rendering resolution capped",
+      "passed": true,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "drawCalls": 43,
+      "triangles": 463514,
+      "pixelRatio": 1,
+      "textures": 24,
+      "normalRepair": {
+        "repairedMaterials": 9,
+        "names": [
+          "Collar_Outer_Canvas",
+          "Collar_Canvas",
+          "Canvas_Trim",
+          "Body_Canvas",
+          "Inner_Lining",
+          "Body_Inner_Canvas",
+          "Tongue_Reverse_Canvas",
+          "Tongue_Canvas",
+          "Heel_Strip"
+        ],
+        "replacementTextures": 9,
+        "generatedPixelsBytes": 65536,
+        "normalValidation": {
+          "size": 128,
+          "minimumDecodedZ": 0.9921568627450981,
+          "meanDecodedNormal": [
+            1.3877787807814457e-17,
+            6.844026213814747e-19,
+            0.9960784313725526
+          ],
+          "maximumUnitLengthError": 0.0036994239516665584
+        }
+      },
+      "demonstration": {
+        "visible": false,
+        "visibleMaterials": 16,
+        "transparentMaterials": 0,
+        "depthWritingMaterials": 16,
+        "roofOpacity": 0,
+        "wallCoverage": 0
+      },
+      "sampleCount": 28,
+      "meanFrameIntervalMs": 2820.128571428572,
+      "meanSubmitMs": 49.524999999574256,
+      "coarse": true,
+      "realSafari": false
+    },
+    {
+      "name": "Portrait viewport has no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript exceptions or shader compile errors",
+      "passed": true
+    },
+    {
+      "name": "WebGL context loss produces an explicit reload recovery state",
+      "passed": true
+    },
+    {
+      "name": "Missing GLB produces an explicit error and never a substitute shoe",
+      "passed": true
+    }
+  ],
+  "performance": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "drawCalls": 43,
+    "triangles": 463514,
+    "pixelRatio": 1,
+    "textures": 24,
+    "normalRepair": {
+      "repairedMaterials": 9,
+      "names": [
+        "Collar_Outer_Canvas",
+        "Collar_Canvas",
+        "Canvas_Trim",
+        "Body_Canvas",
+        "Inner_Lining",
+        "Body_Inner_Canvas",
+        "Tongue_Reverse_Canvas",
+        "Tongue_Canvas",
+        "Heel_Strip"
+      ],
+      "replacementTextures": 9,
+      "generatedPixelsBytes": 65536,
+      "normalValidation": {
+        "size": 128,
+        "minimumDecodedZ": 0.9921568627450981,
+        "meanDecodedNormal": [
+          1.3877787807814457e-17,
+          6.844026213814747e-19,
+          0.9960784313725526
+        ],
+        "maximumUnitLengthError": 0.0036994239516665584
+      }
+    },
+    "demonstration": {
+      "visible": false,
+      "visibleMaterials": 16,
+      "transparentMaterials": 0,
+      "depthWritingMaterials": 16,
+      "roofOpacity": 0,
+      "wallCoverage": 0
+    },
+    "sampleCount": 28,
+    "meanFrameIntervalMs": 2820.128571428572,
+    "meanSubmitMs": 49.524999999574256,
+    "coarse": true,
+    "realSafari": false
+  }
+}

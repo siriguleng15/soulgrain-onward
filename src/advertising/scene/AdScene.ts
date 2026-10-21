@@ -10,6 +10,7 @@ import { CameraRig } from './CameraRig';
 import { CuffCurve } from '../geometry/CuffCurve';
 import { CuffMaterial } from '../geometry/CuffMaterial';
 import { Structure } from '../geometry/Structure';
+import { StudioMaterials } from './StudioMaterials';
 import type { CuffMetadata, NarrativeState } from '../types';
 
 function actorOf(object: Object3D): string {
@@ -27,28 +28,32 @@ export class AdScene {
   private readonly rim: DirectionalLight;
   private readonly resources: Material[]=[];
   private currentRatio: number;
+  private requestedRatio: number;
+  private readonly coarse = matchMedia('(pointer:coarse)').matches;
+  private readonly studioMaterials = new StudioMaterials();
   loaded = false;lost = false;
   constructor(readonly container: HTMLElement, readonly contextLost: () => void) {
     this.renderer=new WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
     this.renderer.outputColorSpace=SRGBColorSpace;this.renderer.toneMapping=ACESFilmicToneMapping;this.renderer.toneMappingExposure=.95;
     this.renderer.setClearColor(0x070d19,1);
-    this.currentRatio=Math.min(devicePixelRatio||1,matchMedia('(pointer:coarse)').matches?1.25:1.5);
+    this.requestedRatio=Math.min(devicePixelRatio||1,this.coarse?1.5:1.75);
+    this.currentRatio=this.requestedRatio;
     this.renderer.setPixelRatio(this.currentRatio);this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=PCFSoftShadowMap;this.renderer.shadowMap.autoUpdate=false;
     const canvas=this.renderer.domElement;canvas.setAttribute('aria-label','ONWARD三维叙事空间。单指旋转，双指缩放。');canvas.tabIndex=0;
     canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();this.lost=true;contextLost();});
     canvas.addEventListener('webglcontextrestored',()=>{this.lost=false;contextLost();});
     container.append(canvas);this.rig=new CameraRig(canvas);
     const room=new RoomEnvironment();const pmrem=new PMREMGenerator(this.renderer);
-    this.target=pmrem.fromScene(room,.035,.1,100,{size:256});this.scene.environment=this.target.texture;this.scene.environmentIntensity=.48;
+    this.target=pmrem.fromScene(room,.035,.1,100,{size:256});this.scene.environment=this.target.texture;this.scene.environmentIntensity=.38;
     pmrem.dispose();room.dispose();
-    this.scene.add(new HemisphereLight(0xb7c8e5,0x1a2339,.60));
-    this.key=new DirectionalLight(0xfff4e6,2.8);this.key.position.set(-.26,.48,.36);this.key.castShadow=true;
-    this.key.shadow.mapSize.set(1024,1024);this.key.shadow.camera.left=-.55;this.key.shadow.camera.right=.55;this.key.shadow.camera.top=.48;this.key.shadow.camera.bottom=-.22;
-    this.key.shadow.camera.near=.02;this.key.shadow.camera.far=2;this.key.shadow.normalBias=.0005;this.key.shadow.bias=-.00005;this.scene.add(this.key);
-    this.fill=new DirectionalLight(0xc8d9f5,.9);this.fill.position.set(.12,.16,-.3);this.scene.add(this.fill);
-    this.rim=new DirectionalLight(0xb7a6db,1.6);this.rim.position.set(.33,.29,.04);this.scene.add(this.rim);
+    this.scene.add(new HemisphereLight(0xb7c8e5,0x1a2339,.34));
+    this.key=new DirectionalLight(0xfff4e6,3.1);this.key.position.set(-.28,.42,.34);this.key.castShadow=true;
+    const shadowSize=this.coarse?1024:1536;this.key.shadow.mapSize.set(shadowSize,shadowSize);this.key.shadow.camera.left=-.36;this.key.shadow.camera.right=.36;this.key.shadow.camera.top=.32;this.key.shadow.camera.bottom=-.28;
+    this.key.shadow.camera.near=.02;this.key.shadow.camera.far=2;this.key.shadow.normalBias=.00018;this.key.shadow.bias=-.000012;this.scene.add(this.key);
+    this.fill=new DirectionalLight(0xc8d9f5,.48);this.fill.position.set(.12,.16,-.3);this.scene.add(this.fill);
+    this.rim=new DirectionalLight(0xc9d6ed,1.05);this.rim.position.set(.33,.29,.04);this.scene.add(this.rim);
     this.scene.add(this.shoe,this.demo);
-    const floor=new Mesh(new PlaneGeometry(4,4),new ShadowMaterial({opacity:.22}));floor.rotation.x=-Math.PI/2;floor.position.y=-.0228;floor.receiveShadow=true;this.scene.add(floor);
+    const floor=new Mesh(new PlaneGeometry(4,4),new ShadowMaterial({opacity:.42}));floor.rotation.x=-Math.PI/2;floor.position.y=-.0228;floor.receiveShadow=true;this.scene.add(floor);
   }
   async load(progress:(ratio:number)=>void) {
     const base=`${import.meta.env.BASE_URL}assets/onward-ad-v1/`;
@@ -62,6 +67,14 @@ export class AdScene {
     original.traverse(node=>{
       if(!(node instanceof Mesh))return;
       node.castShadow=node.receiveShadow=true;
+      // Repair the invalid neutral normal tile only in this advertising scene.
+      // Color artwork, UVs, mesh and original GLB bytes stay unchanged.
+      const sourceMaterials=Array.isArray(node.material)?node.material:[node.material];
+      sourceMaterials.forEach(material=>{
+        if(!(material instanceof MeshStandardMaterial))return;
+        this.studioMaterials.apply(material);
+        if(material.map){material.map.anisotropy=Math.min(4,this.renderer.capabilities.getMaxAnisotropy());material.map.needsUpdate=true;}
+      });
       if(!node.geometry.hasAttribute('_sg_param'))return;
       const role=actorOf(node);this.hitTargets.push(node);
       const materials=Array.isArray(node.material)?node.material:[node.material];
@@ -92,18 +105,29 @@ export class AdScene {
     this.leftStructure.update(state.roof,state.rods,state.leftStructure,0,0,0);
     this.rightStructure.update(state.roof,state.rods,state.copy,state.wrap,state.cover,state.lattice);
     const breath=reduced?0:Math.sin(time*.63)*.025;
-    this.key.intensity=2.8+state.focusLight*.45+breath;
-    this.fill.intensity=.9-state.focusLight*.14;
-    this.rim.intensity=1.6+state.focusLight*.25+breath*.5;
+    this.key.intensity=3.1+state.focusLight*.34+breath;
+    this.fill.intensity=.48-state.focusLight*.08;
+    this.rim.intensity=1.05+state.focusLight*.16+breath*.5;
   }
   render(){if(!this.lost)this.renderer.render(this.scene,this.rig.camera);}
-  resize(state:NarrativeState){const r=this.container.getBoundingClientRect();this.renderer.setSize(r.width,r.height,false);this.rig.resize(r.width,r.height,state.framing);}
-  lowerResolution(){if(this.currentRatio<=.85)return false;this.currentRatio=Math.max(.85,this.currentRatio-.15);this.renderer.setPixelRatio(this.currentRatio);return true;}
-  info(){return {drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,pixelRatio:this.currentRatio,textures:this.renderer.info.memory.textures};}
+  resize(state:NarrativeState){
+    const r=this.container.getBoundingClientRect();
+    const budget=this.coarse?2_800_000:3_800_000;
+    this.currentRatio=Math.max(1,Math.min(this.requestedRatio,Math.sqrt(budget/Math.max(1,r.width*r.height))));
+    this.renderer.setPixelRatio(this.currentRatio);this.renderer.setSize(r.width,r.height,false);this.rig.resize(r.width,r.height,state.framing);
+  }
+  lowerResolution(){if(this.requestedRatio<=1)return false;this.requestedRatio=Math.max(1,this.requestedRatio-.10);return true;}
+  info(){
+    const materials=new Set<MeshStandardMaterial>();
+    this.demo.traverse(node=>{if(node instanceof Mesh){for(const material of Array.isArray(node.material)?node.material:[node.material]){if(material instanceof MeshStandardMaterial&&material.visible)materials.add(material);}}});
+    return {drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,pixelRatio:this.currentRatio,textures:this.renderer.info.memory.textures,normalRepair:this.studioMaterials.info(),
+      demonstration:{visible:this.demo.visible,visibleMaterials:materials.size,transparentMaterials:[...materials].filter(material=>material.transparent).length,depthWritingMaterials:[...materials].filter(material=>material.depthWrite).length,
+        roofOpacity:this.rightStructure?.roof.material.opacity,wallCoverage:this.copy?.uniforms.sgOpacity.value}};
+  }
   cuffAnchor(){return new Vector3(.088,.072,.046).applyMatrix4(this.shoe.matrixWorld);}
   dispose(){
     this.original?.dispose();this.copy?.dispose();this.leftStructure?.dispose();this.rightStructure?.dispose();this.resources.forEach(m=>m.dispose());
-    this.target?.dispose();this.rig.dispose();this.renderer.dispose();
+    this.studioMaterials.dispose();this.target?.dispose();this.rig.dispose();this.renderer.dispose();
     this.scene.traverse(node=>{if(node instanceof Mesh){node.geometry.dispose();const ms=Array.isArray(node.material)?node.material:[node.material];ms.forEach(m=>m.dispose());}});
   }
 }
