@@ -1,0 +1,14 @@
+{
+  "passed": 6,
+  "normalValidation": {
+    "size": 128,
+    "minimumDecodedZ": 0.9921568627450981,
+    "meanDecodedNormal": [
+      1.3877787807814457e-17,
+      6.844026213814747e-19,
+      0.9960784313725526
+    ],
+    "maximumUnitLengthError": 0.0036994239516665584
+  },
+  "environment": "Node 24, actual Three.js materials; no source asset modifications"
+}

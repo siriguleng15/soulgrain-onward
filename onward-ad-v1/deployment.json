@@ -1,17 +1,17 @@
 {
   "sourceBranch": "feat/onward-interactive-ad-v1",
-  "sourceCommit": "14e09b0aa8b08e834e9a20090c66971956003981",
+  "sourceCommit": "a4739e290b139838c9a0f908f7b5d0d3015242cd",
   "sourceV8": "b169dde54caf700d2557dcfbafad6024c6ffe50b",
   "entry": "onward-ad-v1/onward-ad.html",
   "type": "isolated preview; not production",
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "assets/onward-ad-BCOA3XVj.js": "62e6fbdc6864cf18d328819a895cf6c3650a03f2170805e1f8ceb721405f63e2",
     "assets/onward-ad-CanSmhIq.css": "24abf4378cdbabdb4b52b757a0a90c3160e991e5c3e278758456ab53f62240ea",
+    "assets/onward-ad-DqDGmlyy.js": "d7174326e6a095fafc7d29b1feb1ef2990346bd0705eee3c64d55af4147ba821",
     "assets/onward-ad-v1/cuff-structure.json": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085",
     "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
     "index.html": "0ccdc54d6c22c9b3efb3d234ed1dcf4340c660b34977737950bbc53580e2a871",
-    "onward-ad.html": "a93107dcbdc878a416b4698ebd8094909c1b3900f4271446bbd15d9b9bc95560",
+    "onward-ad.html": "2c9d11d6dfdc5b0025026c7238efa3c7ed5618aa622178ab3822a71dfca3b6c0",
     "review/01-root.png": "ea8a65b7611eadceace25a3abb6aa09645dfef67822b13149d3e68773ccfe98c",
     "review/02-cuff-focus.png": "d96d9d17f132ce73df1e5bfb6de9f544b32fc76c9e2d92b3b90af9ea66f5a6a7",
     "review/03-cuff-unfolded.png": "fb95cf5d1105ffa8cb2e977f33cea39767b978dfb4be4a6dd0f7bca8f7f15743",
@@ -25,6 +25,17 @@
     "review/index.html": "2089d9b483bf1b680c3fb932f9d6dce0d055f6565dc308037119222e2c9344af",
     "review/recording.json": "0591897d4506fe8011c89c9819dc01f046103a06d0ffed91903071d3a85b02a4",
     "review/source-verification.json": "513759a9ee1d2027116cf9578fb74fd38da96a92091199bbb3805e786709d3be",
-    "review/verification.json": "cab099a3e54f9c25382e4a5c77c05f8d1c49235d6c2303992f07f8558df9ab94"
+    "review/verification.json": "cab099a3e54f9c25382e4a5c77c05f8d1c49235d6c2303992f07f8558df9ab94",
+    "review-polish/README.zh-CN.md": "68ad1793f7afd0a6ac85622ef0dafba3c19b064140918750043c7d400dddfd7e",
+    "review-polish/assembly-after.png": "b3550f9373292b342f4accb1809891f0b3be04bdc5f5c9cdf2a1a0c4adfbaac9",
+    "review-polish/capture.json": "77c54a2dbe921f397816f8e22f05abf7c68da90e1b92b66a262efa23ed0a6a56",
+    "review-polish/cuff-after.png": "d092ad756ca30d3a8b512da757bcf828b304e60692e168c40d73e26275b811a5",
+    "review-polish/index.html": "bc68a32cb2f36cc740fd74332d0a165230712de5c9e45fc72fac45b5c89ecc74",
+    "review-polish/material-verification.json": "6e46e07eef136600853632afc2189a2ed049b07bae3447ebd58531a05574cdc3",
+    "review-polish/notes-after.png": "35526dd97f278f1d0b3c06f003cf7adf2ff1741b8fbc024a40841129f4c6bb5e",
+    "review-polish/pair-after.png": "aa6f7046b6dc51e593cfb1777660d2b0da2fb9e9795e7fe9795ed67e129b23cc",
+    "review-polish/root-after.png": "267785ed132fc6a9299cd0b16cad0f80c5fc85d99156256ccbca00e514a5a633",
+    "review-polish/structure-after.png": "d3d5c64600131f96bf08b47358f9416b9dba849093836a0ff0998fdd9eacdb76",
+    "review-polish/verification.json": "af86fb44b086b128d5b4a306dd97f6dc5358702aeae8b7177c375a7c36f25e35"
   }
 }

@@ -1,0 +1,39 @@
+{
+  "capturedAt": "2026-10-21T11:40:18.185066+00:00",
+  "method": "Actual Chromium WebGL screenshots at deterministic narrative states; no image repainting, filters or generated product images.",
+  "environment": "Linux Chromium + ANGLE SwiftShader software renderer; NOT physical iPad Safari.",
+  "size": [
+    1366,
+    1024
+  ],
+  "screenshots": {
+    "root-after.png": "ROOT, canonical camera, clock 1.54166667",
+    "cuff-after.png": "A1, canonical camera, clock 5.5",
+    "structure-after.png": "A1.1 -> A1.1.1 at 4.7 seconds, crown and rods",
+    "assembly-after.png": "A1.1 -> A1.1.1 at 9.8 seconds, simultaneous assembly and original cuff return",
+    "pair-after.png": "A1.1.1 at story completion, 17.2 seconds",
+    "notes-after.png": "A1.1.1.1 at completion, 5.9 seconds"
+  },
+  "sourceV8": "b169dde54caf700d2557dcfbafad6024c6ffe50b",
+  "sourceV8GLBSHA256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63",
+  "runtimeFileSHA256": {
+    "src/advertising/geometry/CuffCurve.ts": "817f2b43f5a77225d9bd71c50b03fd76b20e10395aa9be487df46db1bd9846ac",
+    "src/advertising/geometry/CuffMaterial.ts": "8c22858a3b938989cbb8d3f669f31cb54d55bf0c83014091990bdb2150c8631f",
+    "src/advertising/geometry/Structure.ts": "98aa2c0a0741edcdf19a44000f2940e0facf23786fcbbf1688db67946a50fabe",
+    "src/advertising/interaction/PartInteraction.ts": "5c170fd149f5e6fe0e447e79c35ec4d375d030692bb75fab8265f895edde5d8c",
+    "src/advertising/main.ts": "0225c9c6f4e19f6bc8b2f79d200fb0ac1d0f1ca1ec2ae99972a63cb6e7de781e",
+    "src/advertising/narrative/Narrative.ts": "d58ae41b115a8a095991c77862175eb582c508cd61b90195ebca2846c582f8a0",
+    "src/advertising/scene/AdScene.ts": "c716b494af4b676f67d9883e4c596106e28a662f437cbfe735ea25fbaa7ccac0",
+    "src/advertising/scene/CameraRig.ts": "fc18513b63a48700e1c50bbab705d3f6530e8c62b7503d46ffd9dee34bc03285",
+    "src/advertising/scene/StudioMaterials.ts": "3e386e05d9f095ef6474ce5e91033aaceb566be78379c3b5896ed2e77af71f1d",
+    "src/advertising/tree.ts": "6c0d314488afd21a6a91e7d957fad9a3e6e443a0df479bc8d757b752ba6dc1a8",
+    "src/advertising/types.ts": "6a1209a1657d355cd89abe188dc9e97d069b2edc82a122e212e5b340c446d5f8",
+    "src/advertising/ui/AdUI.ts": "63bbd9befefdb45c11a78c90822ecc41c1133a81130c3f6b23ae9b3eeb67569c"
+  },
+  "notes": [
+    "The final pair camera is slightly closer than V1; comparisons are not pixel-identical crop tests.",
+    "Original V8 geometry, UV, artwork, source GLB and editable Blender files were not changed.",
+    "Old V1 video is archived in ../interactive-ad-v1 and does not show this polish.",
+    "Root toe-cap surface irregularities belong to the confirmed V8 geometry; no vertex smoothing or rebuilding performed."
+  ]
+}
