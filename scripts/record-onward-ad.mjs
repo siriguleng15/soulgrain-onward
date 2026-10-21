@@ -3,7 +3,7 @@
  * This is an animation review replay, not a hardware FPS benchmark.
  * node scripts/record-onward-ad.mjs http://127.0.0.1:4195 http://127.0.0.1:9237
  */
-import {spawn} from 'node:child_process';
+import {spawn,spawnSync} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {once} from 'node:events';
 const origin=process.argv[2]??'http://127.0.0.1:4195';const endpoint=process.argv[3]??'http://127.0.0.1:9237';
@@ -19,6 +19,7 @@ await metrics(1024,768);await call('Page.navigate',{url:origin+'/onward-ad.html?
 for(let i=0;i<240;i++){if(await evaluate('!!window.__onwardAd && document.querySelector("#ad-overlay").hidden'))break;await sleep(200);}
 if(!await evaluate('!!window.__onwardAd'))throw Error('Advertisement did not load');
 await evaluate("window.__onwardAd.canonical('ROOT');window.__onwardAd.stop();true");
+const sourceCommit=spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim();
 const fps=24;let clock=0,frames=0;const shots=[];
 const encoder=spawn('ffmpeg',['-y','-f','image2pipe','-vcodec','mjpeg','-framerate',String(fps),'-i','pipe:0','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart','-an',out+'/full-path-review.mp4'],{stdio:['pipe','ignore','pipe']});let encoderLog='';encoder.stderr.on('data',data=>encoderLog+=data);
 async function frame(t){await evaluate(`window.__onwardAd.seek(${t},${clock});true`);const r=await call('Page.captureScreenshot',{format:'jpeg',quality:89,captureBeyondViewport:false});if(!encoder.stdin.write(Buffer.from(r.data,'base64')))await once(encoder.stdin,'drain');frames++;clock+=1/fps;}
@@ -41,6 +42,6 @@ try{
  await segment('A1.1.1',1,[[5.2,'04-toono-and-uni'],[6.3,'05-clasp-lift'],[10,'06-ger-assembly'],[17.2,'07-shoe-and-ger']]);
  await segment('A1.1.1.1',1.8,[[5.9,'08-cultural-notes']]);
  encoder.stdin.end();const [code]=await once(encoder,'close');if(code!==0)throw Error(encoderLog);
- await writeFile(out+'/recording.json',JSON.stringify({method:'Real WebGL application, existing GSAP story timeline sampled deterministically; actual DOM action clicks between nodes. Not real-time hardware performance footage.',fps,width:1024,height:768,frames,duration:frames/fps,screenshots:shots,screenshotSize:[1366,1024],errors},null,2)+'\n');
+ await writeFile(out+'/recording.json',JSON.stringify({method:'Real WebGL application, existing GSAP story timeline sampled deterministically; actual DOM action clicks between nodes. Not real-time hardware performance footage.',sourceCommit,fps,width:1024,height:768,frames,duration:frames/fps,screenshots:shots,screenshotSize:[1366,1024],errors},null,2)+'\n');
  if(errors.length)throw Error('Runtime errors occurred during recording');console.log('RECORDED',frames/fps,'seconds',shots);
 }finally{ws.close();if(!encoder.killed)encoder.kill('SIGTERM');}

@@ -11,7 +11,7 @@ const root=document.querySelector<HTMLElement>('#onward-ad')!;
 const ui=new AdUI(root);
 let scene:AdScene;let narrative:Narrative;let raf=0;let lastFrame=0;let hidden=false;let lastTouch=0;let shadowStamp=0;
 let reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let disposed=false;let samples:number[]=[];let frameTimes:number[]=[];let intervals:number[]=[];let rendererName='unknown';
+let dirty=true;let disposed=false;let samples:number[]=[];let frameTimes:number[]=[];let intervals:number[]=[];let rendererName='unknown';
 const coarse=matchMedia('(pointer:coarse)').matches;
 const goto=(id:NodeId)=>{
   if(!narrative||!scene.loaded||id===narrative.node&&!narrative.busy)return Promise.resolve(false);
@@ -20,7 +20,7 @@ const goto=(id:NodeId)=>{
 };
 const updateUI=()=>{if(!narrative)return;scene.rig.controls.enabled=!narrative.busy;ui.update(narrative.target,narrative.busy,narrative.timeline?.progress()??0);};
 const completed=()=>{
-  scene.rig.controls.enabled=true;scene.rig.apply(narrative.state);updateUI();
+  scene.rig.controls.enabled=true;scene.rig.apply(narrative.state);dirty=true;updateUI();
   history.replaceState({node:narrative.node},'',`#${narrative.node}`);
 };
 const updateOverlays=()=>{
@@ -36,16 +36,17 @@ const animate=(stamp:number)=>{
   if(hidden||!scene.loaded||scene.lost)return;
   const fps=coarse?(narrative.busy||stamp-lastTouch<1800?30:20):narrative.busy?60:30;const step=1000/fps;
   if(stamp-lastFrame<step-.6)return;
+  if(reduced&&!narrative.busy&&!dirty&&stamp-lastTouch>1800){lastFrame=stamp;return;}
   const actualInterval=stamp-lastFrame;const dt=Math.min(.07,actualInterval/1000);lastFrame=stamp;
   intervals.push(actualInterval);if(intervals.length>120)intervals.shift();
   if(narrative.node==='ROOT'&&!narrative.busy&&!reduced&&stamp-lastTouch>3500)narrative.state.yaw+=dt*.075;
   if(narrative.busy)scene.rig.apply(narrative.state);else scene.rig.controls.update(dt);
   scene.apply(narrative.state,stamp/1000,reduced);
   if((narrative.busy||narrative.node==='ROOT')&&stamp-shadowStamp>95){scene.renderer.shadowMap.needsUpdate=true;shadowStamp=stamp;}
-  const before=performance.now();scene.render();const elapsed=performance.now()-before;
+  const before=performance.now();scene.render();const elapsed=performance.now()-before;dirty=false;
   frameTimes.push(elapsed);if(frameTimes.length>300)frameTimes.shift();
-  samples.push(Math.min(250,actualInterval));
-  if(samples.length>=30){const avg=samples.reduce((a,b)=>a+b)/samples.length;if(avg>43&&scene.lowerResolution())scene.resize(narrative.state);samples=[];}
+  samples.push(Math.min(250,actualInterval)/step);
+  if(samples.length>=30){const avg=samples.reduce((a,b)=>a+b)/samples.length;if(avg>1.55&&scene.lowerResolution())scene.resize(narrative.state);samples=[];}
   updateOverlays();
   if(narrative.busy)updateUI();
 };
@@ -56,13 +57,14 @@ async function start(){
     await scene.load(value=>ui.loading(value));
     narrative=new Narrative(scene.metadata,updateUI,completed);narrative.reduced=reduced;
     scene.rig.apply(narrative.state);scene.resize(narrative.state);ui.motion(reduced);ui.ready();
-    ui.bind(goto,()=>void narrative.replay(),()=>{reduced=!reduced;narrative.reduced=reduced;ui.motion(reduced);});
+    ui.bind(goto,()=>void narrative.replay(),()=>{reduced=!reduced;narrative.reduced=reduced;dirty=true;ui.motion(reduced);});
     new PartInteraction(scene,()=>narrative.node==='ROOT'&&!narrative.busy,()=>goto('A1'));
-    scene.rig.controls.addEventListener('start',()=>{lastTouch=performance.now();});
+    scene.rig.controls.addEventListener('change',()=>{dirty=true;});
+    scene.rig.controls.addEventListener('start',()=>{dirty=true;lastTouch=performance.now();});
     scene.rig.controls.addEventListener('end',()=>{lastTouch=performance.now();scene.rig.capture(narrative.state);});
-    new ResizeObserver(()=>scene.resize(narrative.state)).observe(ui.canvasHost);
-    document.addEventListener('visibilitychange',()=>{hidden=document.hidden;if(hidden)narrative.pause();else{lastFrame=performance.now();narrative.resume();}});
-    matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>{reduced=e.matches;narrative.reduced=reduced;ui.motion(reduced);});
+    new ResizeObserver(()=>{scene.resize(narrative.state);dirty=true;}).observe(ui.canvasHost);
+    document.addEventListener('visibilitychange',()=>{hidden=document.hidden;if(hidden)narrative.pause();else{dirty=true;lastFrame=performance.now();narrative.resume();}});
+    matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',e=>{reduced=e.matches;narrative.reduced=reduced;dirty=true;ui.motion(reduced);});
     window.addEventListener('popstate',()=>{const id=location.hash.slice(1);if(isNode(id))goto(id);});
     root.dataset.loaded='true';updateUI();raf=requestAnimationFrame(animate);
     if(import.meta.env.DEV||new URLSearchParams(location.search).has('review')){
@@ -78,7 +80,7 @@ async function start(){
       }});
     }
     window.addEventListener('pagehide',e=>{if(e.persisted){hidden=true;narrative.pause();return;}disposed=true;cancelAnimationFrame(raf);narrative.dispose();scene.dispose();});
-    window.addEventListener('pageshow',()=>{hidden=false;lastFrame=performance.now();narrative.resume();});
+    window.addEventListener('pageshow',()=>{hidden=false;dirty=true;lastFrame=performance.now();narrative.resume();});
   }catch(error){console.error(error);ui.failure('三维空间未能载入。请检查网络或 WebGL 支持后重试；原鞋模不会被替代。');}
 }
 void start();
