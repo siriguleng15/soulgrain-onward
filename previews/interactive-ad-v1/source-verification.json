@@ -1,0 +1,62 @@
+{
+  "method": "Read-only per-face comparison: material name, rest positions and UVs rounded to 5 decimal places; exact packed image SHA256. Runtime construction deformation is separate.",
+  "source": {
+    "objects": 26,
+    "faces": 235040,
+    "faceDigest": "0feaf47ceddf70e258b3e64b475928c4bd805a7e51f8d6a08f0ba9d6c04bdaa2",
+    "bounds": [
+      [
+        -0.129752,
+        0.135893
+      ],
+      [
+        -0.045047,
+        0.05804
+      ],
+      [
+        -0.020561,
+        0.117218
+      ]
+    ],
+    "textures": {
+      "01-overall.jpg": "dc132e6dab33963e426440d4d412e2683ebb4f09f51223a521c74a8b74742f63",
+      "02-body-print.jpg": "8d4e2348bc93c09a2fa16b1178fff32f7e4dbba490073d5c7e8e439104952d90",
+      "04-heel-leather.jpg": "dd9d94924389ce4119a55886f376f75fcbf8fbab1a9262055f45da475a72286b",
+      "06-aglet-artwork.jpg": "1faade90a21032557217ccadc7ed217c8027d3db3fd212fed4b44193e63e0405",
+      "07-tongue-front-back.jpg": "c8a87242e9057d6986bbadb867d46ff9d39120601e74b4088be384e6c8aa9240",
+      "09-heel-logo.jpg": "d4d7f06730f6a5a7c5a8c1aab87962f331da72c6806b6ce51cc7298733fbd287",
+      "cuff-reconstructed.png": "cdb4a7ab73554b47094fd1ffdf6a2b2c6e7c12af35c6096e70da1d92222fd226",
+      "tongue-velvet-reconstructed.png": "81574a2ff8aefb48ff7c2647c79dac86777ce3b3cd0a3acd1fdbf01f6ebcb861"
+    }
+  },
+  "derivative": {
+    "objects": 29,
+    "faces": 235040,
+    "faceDigest": "0feaf47ceddf70e258b3e64b475928c4bd805a7e51f8d6a08f0ba9d6c04bdaa2",
+    "bounds": [
+      [
+        -0.129752,
+        0.135893
+      ],
+      [
+        -0.045047,
+        0.05804
+      ],
+      [
+        -0.020561,
+        0.117218
+      ]
+    ],
+    "textures": {
+      "01-overall.jpg": "dc132e6dab33963e426440d4d412e2683ebb4f09f51223a521c74a8b74742f63",
+      "02-body-print.jpg": "8d4e2348bc93c09a2fa16b1178fff32f7e4dbba490073d5c7e8e439104952d90",
+      "04-heel-leather.jpg": "dd9d94924389ce4119a55886f376f75fcbf8fbab1a9262055f45da475a72286b",
+      "06-aglet-artwork.jpg": "1faade90a21032557217ccadc7ed217c8027d3db3fd212fed4b44193e63e0405",
+      "07-tongue-front-back.jpg": "c8a87242e9057d6986bbadb867d46ff9d39120601e74b4088be384e6c8aa9240",
+      "09-heel-logo.jpg": "d4d7f06730f6a5a7c5a8c1aab87962f331da72c6806b6ce51cc7298733fbd287",
+      "cuff-reconstructed.png": "cdb4a7ab73554b47094fd1ffdf6a2b2c6e7c12af35c6096e70da1d92222fd226",
+      "tongue-velvet-reconstructed.png": "81574a2ff8aefb48ff7c2647c79dac86777ce3b3cd0a3acd1fdbf01f6ebcb861"
+    }
+  },
+  "restGeometryUVMaterialsAndTexturesMatch": true
+}

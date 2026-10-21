@@ -4,7 +4,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: { main: 'index.html', designLab: 'design-lab.html' },
+      input: { main: 'index.html', designLab: 'design-lab.html', onwardAd: 'onward-ad.html' },
     },
   },
 });
