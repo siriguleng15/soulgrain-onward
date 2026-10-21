@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "environment": "studio",
+    "loaded": "true",
+    "parts": "25",
+    "meshes": "40",
+    "shapeMode": "folded",
+    "morphMeshes": "20",
+    "modelVersion": "v8"
+  },
+  "touchRotate": true,
+  "pinch": true,
+  "scrollUnchanged": true,
+  "exportBytes": 29853768,
+  "exportMorphMeshes": 20,
+  "printTransform": {
+    "offset": [
+      -0.28042278792860764,
+      0.08504184297481332
+    ],
+    "rotation": 0.29670597283903605,
+    "scale": [
+      1.25,
+      1.25
+    ]
+  },
+  "restored": {
+    "color": "#ffffff",
+    "hasPrint": false,
+    "mode": "folded"
+  },
+  "legacy": {
+    "environment": "studio",
+    "loaded": "true",
+    "parts": "15",
+    "meshes": "26",
+    "shapeMode": "folded",
+    "morphMeshes": "14",
+    "modelVersion": "v7"
+  },
+  "errors": [],
+  "environment": "Chromium with iPad-size viewport and touch emulation; not physical Safari"
+}

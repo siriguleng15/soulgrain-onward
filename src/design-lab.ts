@@ -11,7 +11,9 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const MODEL_URL = `${import.meta.env.BASE_URL}assets/soulgrain_onward_refined_v7.glb`;
+const isFinished = new URLSearchParams(location.search).get('model') !== 'v7';
+const modelFile = isFinished ? 'soulgrain_onward_finished_v8.glb' : 'soulgrain_onward_refined_v7.glb';
+const MODEL_URL = `${import.meta.env.BASE_URL}assets/${modelFile}`;
 const SHAFT_TARGET = 'Shaft_Upright';
 const labels: Record<string, string> = {
   Body_Canvas: '鞋身帆布', Body_Inner_Canvas: '鞋身内侧',
@@ -20,6 +22,10 @@ const labels: Record<string, string> = {
   Rubber_Toe: '橡胶鞋头', Rubber_Foxing: '鞋底橡胶围条', Rubber_Outsole: '外底',
   Laces: '鞋带', Eyelets: '金属鞋眼', Heel_Strip: '后跟条', Canvas_Trim: '帆布包边',
   Stitching: '缝线', Inner_Lining: '内衬',
+  Red_Rubber_Piping: '红色橡胶包边', Foxing_Navy_Stripe: '鞋底藏蓝围线',
+  Hardware_Silver: '鞋带头金属端帽', Aglet_Artwork: '鞋带头印花', Heel_Logo: '鞋底后跟 Logo',
+  Cuff_Border: '翻筒回纹饰边', Clasp_Cream_Cord: '蒙古扣绳袢与布袢',
+  Clasp_Engraved_Head: '蒙古扣圆头', Rhinestone_Silver: '鞋舌烫钻', Border_Studs: '鞋舌边缘饰钉',
 };
 const canvasPartNames = new Set(['Body_Canvas', 'Body_Inner_Canvas', 'Collar_Outer_Canvas', 'Collar_Canvas', 'Tongue_Canvas', 'Tongue_Reverse_Canvas', 'Heel_Strip', 'Canvas_Trim', 'Inner_Lining']);
 const root = document.querySelector<HTMLDivElement>('#design-lab')!;
@@ -37,14 +43,15 @@ root.innerHTML = `
     </section>
     <aside class="controls-panel" aria-label="部件外观编辑">
       <p class="eyebrow">YOUR INTERPRETATION</p><h2 class="panel-heading">鞋型工作台</h2>
-      <p class="panel-intro">同一只鞋，两种形态。翻起或折下鞋筒与鞋舌，再为每个部件选择自己的颜色和印花。</p>
+      <p class="panel-intro">${isFinished ? '成品参考版：根据提供的图案与部件图片，完成 V7 鞋型的材质和细节。保留双形态与分区编辑。' : 'V7 基础版：同一只鞋，两种形态。翻起或折下鞋筒与鞋舌，再为每个部件选择自己的颜色和印花。'}</p>
+      <nav class="model-version" aria-label="选择鞋模版本"><a href="${import.meta.env.BASE_URL}design-lab.html" ${isFinished ? 'aria-current="page"' : ''}>成品参考 · V8</a><a href="${import.meta.env.BASE_URL}design-lab.html?model=v7" ${!isFinished ? 'aria-current="page"' : ''}>基础鞋型 · V7</a></nav>
       <section class="control-section shape-section"><span class="control-label"><span class="step-number">01</span>鞋筒与鞋舌形态</span><div class="shape-switch" role="group" aria-label="切换同一鞋模的形态"><button id="mode-folded" type="button" aria-pressed="true" disabled>外翻折下</button><button id="mode-upright" type="button" aria-pressed="false" disabled>高帮展开</button></div><p class="shape-note" id="shape-status" role="status" aria-live="polite">同一模型切换形态，颜色与印花始终保留。</p></section>
       <section class="control-section"><label class="control-label" for="part"><span class="step-number">02</span>选择部件</label><select id="part" disabled><option>等待模型加载</option></select><p class="selected-name" id="part-name"></p></section>
       <section class="control-section"><label class="control-label" for="part-color"><span class="step-number">03</span>部件颜色</label><div class="color-row"><div class="color-input-wrap"><input type="color" id="part-color" value="#dad8d1" disabled aria-label="选择部件颜色"></div><input id="color-code" class="color-code" aria-label="十六进制颜色" value="#DAD8D1" maxlength="7" spellcheck="false" disabled></div><div class="swatches">${[['#e4e0d7','暖白'],['#242a35','墨蓝'],['#595b61','岩灰'],['#83748e','烟紫'],['#9e383e','暗红'],['#b9a88c','沙色']].map(([color,label]) => `<button class="swatch" data-color="${color}" style="--swatch:${color}" aria-label="${label}" title="${label}" disabled></button>`).join('')}</div></section>
       <section class="control-section"><span class="control-label"><span class="step-number">04</span>试穿印花</span><input class="file-input" type="file" id="print-file" accept="image/png,image/jpeg,image/webp" disabled><label for="print-file" class="upload-label">＋ 选择本地图片<span>JPG / PNG / WebP · 图片仅在此设备处理</span></label><p class="print-hint" id="print-note">印花沿部件 UV 展开，不改变立体形状。帆布部件的效果最适合观察图案。</p><div class="pattern-controls" id="pattern-controls" hidden><label class="range-row" for="print-scale"><span>重复</span><input id="print-scale" type="range" min="0.25" max="8" step="0.05" value="1"><output id="scale-output">1.0×</output></label><label class="range-row" for="print-angle"><span>旋转</span><input id="print-angle" type="range" min="-180" max="180" step="1" value="0"><output id="angle-output">0°</output></label></div><button class="small-button" id="clear-print" disabled>移除此部件印花</button><p class="material-note">颜色会与图片叠加。想保留原图颜色，可将部件设为白色。</p></section>
-      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="soulgrain_onward_refined_v7.glb">下载本版双形态基础鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 保留当前形态、颜色、印花与两个形态的数据，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
+      <section class="control-section"><button class="primary-action" id="export-glb" disabled>下载当前设计 · GLB ↓</button><a class="action-link" href="${MODEL_URL}" download="${modelFile}">下载本版双形态${isFinished ? '成品参考' : '基础'}鞋模</a><button class="reset-styles" id="reset-styles" disabled>恢复所有部件的初始外观</button><p class="export-note">GLB 保留当前形态、颜色、印花与两个形态的数据，可继续旋转查看或导入 Blender 编辑。不会更改服务器上的模型。</p></section>
       <p class="toast" id="notice" role="status" aria-live="polite"></p>
-      <footer class="credit"><p>鞋型研究版本 · 尚待实物对照精修<br>此工作台用于形状与材质预览，不代表最终量产设计。</p><p>基础模型：theunclerulez · <a href="https://sketchfab.com/3d-models/generic-converse-style-sneakers-f7858a5612504c4193ca4c61125d6244" target="_blank" rel="noreferrer">Generic “Converse style” Sneakers</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。已修改几何和材质。</p></footer>
+      <footer class="credit"><p>${isFinished ? '成品参考版本 · 翻筒织物为参考照片重建的重复纹理；扣件尺寸及未展示部位为估计。高帮展开时扣袢解开，圆扣头保留在鞋身。' : '鞋型研究版本 · 尚待实物对照精修'}<br>此工作台用于形状与材质预览，不代表最终量产设计。</p><p>基础模型：theunclerulez · <a href="https://sketchfab.com/3d-models/generic-converse-style-sneakers-f7858a5612504c4193ca4c61125d6244" target="_blank" rel="noreferrer">Generic “Converse style” Sneakers</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。已修改几何和材质。</p></footer>
     </aside>
   </main>`;
 
@@ -115,7 +122,7 @@ function selectShapeMode(mode: ShapeMode) {
   shapeMode = mode;
   foldedButton.setAttribute('aria-pressed', String(mode === 'folded'));
   uprightButton.setAttribute('aria-pressed', String(mode === 'upright'));
-  el('shape-status').textContent = mode === 'upright' ? '当前：高帮展开。颜色与印花保持不变。' : '当前：外翻折下。颜色与印花保持不变。';
+  el('shape-status').textContent = mode === 'upright' ? `当前：高帮展开。${isFinished ? '扣袢呈解开状态。' : ''}颜色与印花保持不变。` : '当前：外翻折下。颜色与印花保持不变。';
   stage.dataset.shapeMode = mode;
   renderer.shadowMap.needsUpdate = true;
   invalidate();
@@ -408,6 +415,7 @@ async function init() {
     renderer.shadowMap.needsUpdate = true;
     stage.dataset.loaded = 'true'; stage.dataset.parts = String(parts.size); stage.dataset.meshes = String(meshCount);
     stage.dataset.shapeMode = shapeMode; stage.dataset.morphMeshes = String(morphMeshes.length);
+    stage.dataset.modelVersion = isFinished ? 'v8' : 'v7';
     invalidate();
   } catch (error) { console.error(error); failure('鞋型未能加载。请检查网络后重新加载；页面不会用其他鞋型替代。'); }
 }

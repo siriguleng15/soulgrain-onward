@@ -1,0 +1,11 @@
+{
+  "file": "soulgrain_onward_finished_v8.glb",
+  "bytes": 26661468,
+  "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63",
+  "materials": 25,
+  "embedded_images": 9,
+  "primitive_vertices": 292661,
+  "morph_primitives": 20,
+  "finite_base_and_upright_positions": true,
+  "v7_source_unchanged": true
+}

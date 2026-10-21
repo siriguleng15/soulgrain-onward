@@ -1,0 +1,24 @@
+{
+  "base_blend_sha256": "d1ed797ba3bc93b9335100c0bac9bf8e4522e11bd6436c3a2544decb4f58443e",
+  "original_geometry_unchanged": true,
+  "original_objects": {
+    "Original_Lower_Laces": "5f2e49140ed10250f1ba849f41e99469854988882811ffc3b91b90fd268b0e67",
+    "Shoe_Body": "cc04d3452efa72ffe237bf000101ddaf2cdf7df0e0d175eaaff9c9902214bf77",
+    "Original_Vamp": "6148ba50f51ce9b8e938ec9005f146bca80208272033fc818f8bfb8440bae9a0",
+    "Inner_Lining": "238609c57c7178fb3970f5f9c8e66694e601cbbcdce32ce5982d5d80f95209e2",
+    "Convertible_Shaft": "0911e45d98ff2535bb461a604a597d24dfc8ef9b506f15bc5e04467d27aba129",
+    "Convertible_Tongue": "e887d97e9e7eb40ddc54c18386a4369935be83f636ee61b66f1ac92091f70df9",
+    "Convertible_Upper_Eyelets": "3591446e3acb2eb269dd4e3d4241f0768b846a8506ce0e21836d0753505a339a",
+    "Convertible_Tongue_Eyelets": "a08ceb659de9cfa693eb392b3cb7e65aab991cb9f8e3e8a9e256749ae965163e",
+    "Lower_Shoe_Eyelets": "46614607247b2c3429b6d8cac8bc7ad8d8606ea54b53f6006807cfdd60c3f6fc",
+    "Rubber_Toe_Bumper_Relief": "caf9bf0581a879bf05e374ddfa7eb4c2f60ac6578a199cb8c1267f4b7b0b41d2",
+    "Rubber_Foxing_Moulded_Lip": "2a17b0f01ffb57204016c973df96f8dbf4e06fe030605aa62d2567980821738e",
+    "Draped_Lace_Ends": "55f492d1e0ba96378195a8cefb8a72334b4ee27c67dfe3aeecc7e9be6cc3ff12",
+    "Garment_Binding": "2b73ebad884a15c55e84f42ac3936f3b06b014289a9a023f220bb4cc9b5fe4d8",
+    "Garment_Stitching": "f9443b60ef0f0e5446742b7b0b960fcf33b7018472fc7c465598163bbcbe52a3",
+    "Quilt_Seam_Channels": "7de05a2ff97493ccbb3273c3362f96d70a464385580f992edc792924032245b9",
+    "Heel_Seam_Stitch": "ed0ee265229c307715a227d7f507e6c3d8de6faea5e048e8a95e17bea8b7b414"
+  },
+  "rhinestone_count": 785,
+  "output_glb_bytes": 26661468
+}

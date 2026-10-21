@@ -1,0 +1,93 @@
+[
+  {
+    "file": "references/01-overall.jpg",
+    "sha256": "dc132e6dab33963e426440d4d412e2683ebb4f09f51223a521c74a8b74742f63",
+    "size": [
+      1280,
+      895
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/02-body-print.jpg",
+    "sha256": "8d4e2348bc93c09a2fa16b1178fff32f7e4dbba490073d5c7e8e439104952d90",
+    "size": [
+      1254,
+      1254
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/03-cuff-fabric.jpg",
+    "sha256": "5f7a6692d25b709003749486d029c89da438d8549354ff3a72edd7dd1df655cf",
+    "size": [
+      590,
+      1280
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/04-heel-leather.jpg",
+    "sha256": "dd9d94924389ce4119a55886f376f75fcbf8fbab1a9262055f45da475a72286b",
+    "size": [
+      590,
+      1280
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/05-aglet-reference.jpg",
+    "sha256": "d5927c6133cd0becad3684a6167716f40f142b5ae325a8266765e822121d47ac",
+    "size": [
+      1066,
+      1280
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/06-aglet-artwork.jpg",
+    "sha256": "1faade90a21032557217ccadc7ed217c8027d3db3fd212fed4b44193e63e0405",
+    "size": [
+      703,
+      1280
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/07-tongue-front-back.jpg",
+    "sha256": "c8a87242e9057d6986bbadb867d46ff9d39120601e74b4088be384e6c8aa9240",
+    "size": [
+      1280,
+      853
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/08-rhinestone-layout.jpg",
+    "sha256": "a8c2df0fdd6e18db5ed6552573f9a12250797198d223db0d93d5d4ed6b1a86df",
+    "size": [
+      1254,
+      1254
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "references/09-heel-logo.jpg",
+    "sha256": "d4d7f06730f6a5a7c5a8c1aab87962f331da72c6806b6ce51cc7298733fbd287",
+    "size": [
+      1280,
+      640
+    ],
+    "source": "User-supplied reference, copied byte-for-byte"
+  },
+  {
+    "file": "textures/cuff-reconstructed.png",
+    "source": "Image generation from supplied fabric photograph: reconstructed repeat, not exact extracted factory artwork",
+    "sha256": "cdb4a7ab73554b47094fd1ffdf6a2b2c6e7c12af35c6096e70da1d92222fd226"
+  },
+  {
+    "file": "textures/tongue-velvet-reconstructed.png",
+    "source": "Image generation from tongue reference: blank purple velvet repeat, no text or stones; reconstructed material only",
+    "sha256": "81574a2ff8aefb48ff7c2647c79dac86777ce3b3cd0a3acd1fdbf01f6ebcb861"
+  }
+]
