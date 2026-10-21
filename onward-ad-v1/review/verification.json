@@ -1,0 +1,108 @@
+{
+  "testedAt": "2026-10-21T10:19:59.386Z",
+  "environment": "Linux Chromium + SwiftShader; simulated coarse-pointer/touch viewports. NOT physical iPad Safari.",
+  "checks": [
+    {
+      "name": "V8 asset loaded; ROOT visible; B–H honestly disabled",
+      "passed": true
+    },
+    {
+      "name": "Current-node navigation keeps orbit enabled",
+      "passed": true
+    },
+    {
+      "name": "Single-finger orbit without accidental selection or page scrolling",
+      "passed": true
+    },
+    {
+      "name": "Two-finger pinch zoom without triggering cuff selection",
+      "passed": true
+    },
+    {
+      "name": "Touch raycast on actual cuff enters A1",
+      "passed": true
+    },
+    {
+      "name": "Continuous, geometry-driven cuff unfold reaches rectangular state",
+      "passed": true
+    },
+    {
+      "name": "Node waits for input; no automatic story advance",
+      "passed": true
+    },
+    {
+      "name": "Right-side assembly and original cuff return run simultaneously",
+      "passed": true
+    },
+    {
+      "name": "Complete V8 shoe restored beside white ger",
+      "passed": true
+    },
+    {
+      "name": "User-triggered sequential cultural annotations",
+      "passed": true
+    },
+    {
+      "name": "Parent navigation restores correct mesh/camera state",
+      "passed": true
+    },
+    {
+      "name": "Interrupt during assembly returns cleanly to ROOT",
+      "passed": true
+    },
+    {
+      "name": "Rapid navigation: latest destination wins",
+      "passed": true
+    },
+    {
+      "name": "Replay cancellation cannot restart a stale child node",
+      "passed": true
+    },
+    {
+      "name": "System reduced-motion preference stops idle rotation",
+      "passed": true
+    },
+    {
+      "name": "Coarse-pointer rendering resolution capped",
+      "passed": true,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "drawCalls": 43,
+      "triangles": 463514,
+      "pixelRatio": 1,
+      "textures": 15,
+      "sampleCount": 26,
+      "meanFrameIntervalMs": 2583.0730769230768,
+      "meanSubmitMs": 57.36923076785528,
+      "coarse": true,
+      "realSafari": false
+    },
+    {
+      "name": "Portrait viewport has no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript exceptions or shader compile errors",
+      "passed": true
+    },
+    {
+      "name": "WebGL context loss produces an explicit reload recovery state",
+      "passed": true
+    },
+    {
+      "name": "Missing GLB produces an explicit error and never a substitute shoe",
+      "passed": true
+    }
+  ],
+  "performance": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "drawCalls": 43,
+    "triangles": 463514,
+    "pixelRatio": 1,
+    "textures": 15,
+    "sampleCount": 26,
+    "meanFrameIntervalMs": 2583.0730769230768,
+    "meanSubmitMs": 57.36923076785528,
+    "coarse": true,
+    "realSafari": false
+  }
+}

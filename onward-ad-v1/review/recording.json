@@ -1,0 +1,25 @@
+{
+  "method": "Real WebGL application, existing GSAP story timeline sampled deterministically; actual DOM action clicks between nodes. Not real-time hardware performance footage.",
+  "fps": 24,
+  "width": 1024,
+  "height": 768,
+  "frames": 922,
+  "duration": 38.416666666666664,
+  "screenshots": [
+    "01-root.png",
+    "02-cuff-focus.png",
+    "03-cuff-unfolded.png",
+    "04-toono-and-uni.png",
+    "05-clasp-lift.png",
+    "06-ger-assembly.png",
+    "07-shoe-and-ger.png",
+    "08-cultural-notes.png"
+  ],
+  "screenshotSize": [
+    1366,
+    1024
+  ],
+  "errors": [],
+  "visualRuntimeSource": "f47c2efe3ab4ea430cfe574bc57dca0f928f3212",
+  "laterChanges": "Only adaptive-quality accounting and reduced-motion redraw scheduling changed after capture; geometry, materials, camera poses and story timelines are unchanged."
+}
