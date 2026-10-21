@@ -1,0 +1,16 @@
+{
+  "sourceBranch": "feat/onward-interactive-ad-v1",
+  "sourceCommit": "f47c2efe3ab4ea430cfe574bc57dca0f928f3212",
+  "sourceV8": "b169dde54caf700d2557dcfbafad6024c6ffe50b",
+  "entry": "onward-ad-v1/onward-ad.html",
+  "type": "isolated preview; not production",
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/onward-ad-C7I2a-dh.js": "f6fb227b969e085beca5ebaaf842b41de685442e471f783ae7e088e8cbac7893",
+    "assets/onward-ad-CanSmhIq.css": "24abf4378cdbabdb4b52b757a0a90c3160e991e5c3e278758456ab53f62240ea",
+    "assets/onward-ad-v1/cuff-structure.json": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085",
+    "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+    "index.html": "0ccdc54d6c22c9b3efb3d234ed1dcf4340c660b34977737950bbc53580e2a871",
+    "onward-ad.html": "fb0d35b8cddf9f67ee30b45fb1482bb02db01661451ddd79f7d55645f35eea48"
+  }
+}
