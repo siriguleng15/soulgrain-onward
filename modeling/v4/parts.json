@@ -1,0 +1,145 @@
+[
+  {
+    "name": "NativeLacesAndHardware",
+    "vertices": 8581,
+    "triangles": 16936,
+    "non_manifold_edges": 258,
+    "dimensions_m": [
+      0.11705465614795685,
+      0.07153373956680298,
+      0.07973423600196838
+    ]
+  },
+  {
+    "name": "NativeShoeBody",
+    "vertices": 2442,
+    "triangles": 4758,
+    "non_manifold_edges": 124,
+    "dimensions_m": [
+      0.2619132697582245,
+      0.08950157463550568,
+      0.11156327277421951
+    ]
+  },
+  {
+    "name": "ReshapedNativeTongue",
+    "vertices": 159634,
+    "triangles": 319264,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.13262329995632172,
+      0.07416118681430817,
+      0.10704355686903
+    ]
+  },
+  {
+    "name": "NativeInnerLining",
+    "vertices": 602,
+    "triangles": 1080,
+    "non_manifold_edges": 122,
+    "dimensions_m": [
+      0.10254174470901489,
+      0.06561940908432007,
+      0.07910681515932083
+    ]
+  },
+  {
+    "name": "SourceSeamFoldedCuff",
+    "vertices": 43594,
+    "triangles": 87216,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.14416609704494476,
+      0.10317305475473404,
+      0.08270231634378433
+    ]
+  },
+  {
+    "name": "GreyEyelet_A_1",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005399999674409628,
+      0.005399999674409628,
+      0.0009510564850643277
+    ]
+  },
+  {
+    "name": "GreyEyelet_A_2",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005400000140070915,
+      0.0009510564850643277
+    ]
+  },
+  {
+    "name": "GreyEyelet_A_3",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005400000140070915,
+      0.0009510565432719886
+    ]
+  },
+  {
+    "name": "GreyEyelet_A_4",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005400000140070915,
+      0.0009510565432719886
+    ]
+  },
+  {
+    "name": "GreyEyelet_B_1",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005399999674409628,
+      0.0009510564268566668
+    ]
+  },
+  {
+    "name": "GreyEyelet_B_2",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005400000140070915,
+      0.0009510564268566668
+    ]
+  },
+  {
+    "name": "GreyEyelet_B_3",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005399999674409628,
+      0.0009510564850643277
+    ]
+  },
+  {
+    "name": "GreyEyelet_B_4",
+    "vertices": 320,
+    "triangles": 640,
+    "non_manifold_edges": 0,
+    "dimensions_m": [
+      0.005400000140070915,
+      0.005400000140070915,
+      0.0009510565432719886
+    ]
+  }
+]
