@@ -1,0 +1,21 @@
+{
+  "sourceBranch": "feat/onward-v9-refined-base",
+  "sourceCommit": "47abd332d238bb34c3c3cc0ed97e093867cf26e6",
+  "geometrySourceURL": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/682cf319ffe5dc4169fc28a95fc527f77b6a7e35/already.glb",
+  "geometrySourceSHA256": "43653b568a738b04513ca34dd0a23025f6f03072e7c20aa962581e4d400e2d80",
+  "entry": "onward-v9/model-review.html",
+  "type": "independent model review; not production",
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/model-review-DZxlHWQB.css": "d992593ef35684f4b69fe8415e9da68e2a12feb4f42e33f5bbdbe6427d0cbdee",
+    "assets/model-review-Dvqz-e1J.js": "0bf37e995b87a2a037675dfb75927625c7fc7c28674fbbf2290770713bca48a7",
+    "assets/soulgrain_onward_refined_v9.glb": "91aba2e587c694f9cee14e340e45eabf808507b9182c380b963a71d1ffdae843",
+    "index.html": "36ac32ceba249a6f126ba69cc5e8049815e487eb03708593c954e9ca66c1e2e4",
+    "model-review.html": "568abd7ae8fcef1d4fcd85a598e09faa4935d16ec0bf524a1279955badcd727a",
+    "review/browser-three-quarter.png": "368ebe4c259326533a9d2d19d8fe64fdc89865f73ad254698ccf2b37fd3037c9",
+    "review/browser-verification.json": "a33ffddd81defda765a4dd75552becea1b11f26c82bb98f672dab06c9c3d716f",
+    "review/rear.png": "da7bcb21505e4b824a3a9e873e6596c90c8c4e04e54012cd6092389671d94eac",
+    "review/side.png": "62841e52d398298da2e90cd895bc65b5f9df96058b97337ca3069a1f8f4076ab",
+    "review/three-quarter.png": "5fe870b24e670bb6b5a1cadad573dd19c10085b38221682d073df3d574920c13"
+  }
+}
