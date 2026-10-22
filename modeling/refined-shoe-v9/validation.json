@@ -1,0 +1,266 @@
+{
+  "source_sha256": "43653b568a738b04513ca34dd0a23025f6f03072e7c20aa962581e4d400e2d80",
+  "source_bytes": 18373004,
+  "blender": "5.2.2 LTS",
+  "output_glb_bytes": 45653900,
+  "objects": [
+    {
+      "name": "V9_Tongue_Rhinestone_Medallion",
+      "vertices": 18840,
+      "faces": 14130,
+      "materials": [
+        "Rhinestone_Silver"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Tongue_Edge_Studs",
+      "vertices": 1170,
+      "faces": 858,
+      "materials": [
+        "Border_Studs"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Heel_Leather",
+      "vertices": 962,
+      "faces": 960,
+      "materials": [
+        "Heel_Strip"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Heel_Leather_Stitching",
+      "vertices": 384,
+      "faces": 256,
+      "materials": [
+        "Stitching"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Heel_Logo",
+      "vertices": 1078,
+      "faces": 1076,
+      "materials": [
+        "Heel_Logo"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Mongolian_Clasp_Loops",
+      "vertices": 3308,
+      "faces": 3192,
+      "materials": [
+        "Clasp_Cream_Cord",
+        "Stitching"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Mongolian_Clasp_Heads",
+      "vertices": 2096,
+      "faces": 1990,
+      "materials": [
+        "Clasp_Engraved_Head",
+        "Hardware_Silver"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Lace_Tails",
+      "vertices": 1176,
+      "faces": 1156,
+      "materials": [
+        "Laces"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Lace_Aglets",
+      "vertices": 2218,
+      "faces": 1928,
+      "materials": [
+        "Aglet_Artwork",
+        "Hardware_Silver"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Foxing_Navy_Stripe",
+      "vertices": 6581,
+      "faces": 5833,
+      "materials": [
+        "Foxing_Navy_Stripe"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Cuff_Artwork_Borders",
+      "vertices": 2568,
+      "faces": 1873,
+      "materials": [
+        "Cuff_Border"
+      ],
+      "uv": true
+    },
+    {
+      "name": "V9_Red_Contour_Piping",
+      "vertices": 5128,
+      "faces": 5122,
+      "materials": [
+        "Red_Rubber_Piping"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Body_Canvas",
+      "vertices": 142334,
+      "faces": 246537,
+      "materials": [
+        "Body_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Rubber_Midsole",
+      "vertices": 52030,
+      "faces": 88095,
+      "materials": [
+        "Rubber_Foxing"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Rubber_Toe",
+      "vertices": 84651,
+      "faces": 162585,
+      "materials": [
+        "Rubber_Toe"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Toe_Cap",
+      "vertices": 19413,
+      "faces": 31869,
+      "materials": [
+        "Rubber_Toe"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Outsole",
+      "vertices": 9134,
+      "faces": 12149,
+      "materials": [
+        "Rubber_Outsole"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Eyestay_Canvas",
+      "vertices": 48521,
+      "faces": 79375,
+      "materials": [
+        "Eyelet_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Collar_Outer_Canvas",
+      "vertices": 99301,
+      "faces": 172676,
+      "materials": [
+        "Collar_Outer_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Collar_Lining",
+      "vertices": 20086,
+      "faces": 27944,
+      "materials": [
+        "Collar_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Collar_Red_Piping",
+      "vertices": 36467,
+      "faces": 50964,
+      "materials": [
+        "Red_Rubber_Piping"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Tongue_Reverse_Canvas",
+      "vertices": 22086,
+      "faces": 34704,
+      "materials": [
+        "Tongue_Reverse_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Tongue_Canvas",
+      "vertices": 8388,
+      "faces": 10615,
+      "materials": [
+        "Tongue_Canvas"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Laces",
+      "vertices": 3975,
+      "faces": 5238,
+      "materials": [
+        "Laces"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Metal_Eyelets",
+      "vertices": 17469,
+      "faces": 29492,
+      "materials": [
+        "Eyelets"
+      ],
+      "uv": true
+    },
+    {
+      "name": "Vent_Eyelets",
+      "vertices": 6099,
+      "faces": 9756,
+      "materials": [
+        "Eyelets"
+      ],
+      "uv": true
+    }
+  ],
+  "new_accessory_objects": 10,
+  "normal_minimum_z": 0.989584410764068,
+  "upright_available": false,
+  "finishing_did_not_change_base_geometry": true,
+  "base_surface_sha256": {
+    "Body_Canvas": "6068df43d3a704d164872d77e863ee5ff7e1e79a23800f33297198c59e57755e",
+    "Rubber_Midsole": "42334c7327865f4313791e1ed3de29a8ba11069fb043cc381ab14720e686dde6",
+    "Rubber_Toe": "904d0c80ebef4ca8bc3e5208406f2a056efc03ba9bfbae413791aab6e306dce5",
+    "Toe_Cap": "3f1990069fabb39145f33147579f3f3e57c80f6f42aaafcf6764537200cd357a",
+    "Outsole": "3cb5bd8b22c40c1dfbdd40c2cb60c7add1b6b0c20041f00315c8e75587d03f40",
+    "Eyestay_Canvas": "c6fc88aa4cc09efba4e84edb664293a264236c6e473c5006e7004c1dcd93b84e",
+    "Collar_Outer_Canvas": "94c6918ca8195f854d777aec7860f66d8efef5f46e275cb7f334d16afdd921e9",
+    "Collar_Lining": "9d3de9532bc970f7e7e8c95e3c7cdfd25ad33e4edcf88efe55837e8a366d8e84",
+    "Collar_Red_Piping": "7124dbe9a106ef2e00c4434de19ca9a42aae4d56fa24b6cddf4b8fba908721e5",
+    "Tongue_Reverse_Canvas": "50cc3459e35cb7d906f6e9198feec122c4852d43265ef2b3eb99b0b394e1e831",
+    "Tongue_Canvas": "4f0edc05f0e823e38450213aa9987798a6edd10b0dd29ccfd39062c7d2cd75e8",
+    "Laces": "0b0cf53bad2c7bd7585f691c7423dcf2476e98ef79bd8a7d9d301a687395ae1c",
+    "Metal_Eyelets": "3ffc0e8b0cd66ca473cb6f445fca1844ab137ea7e894f1f18602fc4571556d91",
+    "Vent_Eyelets": "7450eb2fdb634db1b49af20f0d152314beac6b00e3d620616d3b0a0d5a79f2bc"
+  },
+  "source_surface_note": "Semantic boundaries subdivide original triangles without moving the original surface; see segmentation validation."
+}

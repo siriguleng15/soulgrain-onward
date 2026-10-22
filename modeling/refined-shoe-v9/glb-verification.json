@@ -1,0 +1,59 @@
+{
+  "bytes": 45653900,
+  "sha256": "91aba2e587c694f9cee14e340e45eabf808507b9182c380b963a71d1ffdae843",
+  "meshes": 26,
+  "vertices_including_uv_and_normal_splits": 687109,
+  "triangles": 1046119,
+  "materials": [
+    "Body_Canvas",
+    "Collar_Canvas",
+    "Collar_Outer_Canvas",
+    "Red_Rubber_Piping",
+    "Eyelet_Canvas",
+    "Laces",
+    "Eyelets",
+    "Rubber_Outsole",
+    "Rubber_Foxing",
+    "Rubber_Toe",
+    "Tongue_Canvas",
+    "Tongue_Reverse_Canvas",
+    "Cuff_Border",
+    "Foxing_Navy_Stripe",
+    "Heel_Strip",
+    "Stitching",
+    "Heel_Logo",
+    "Aglet_Artwork",
+    "Hardware_Silver",
+    "Clasp_Engraved_Head",
+    "Clasp_Cream_Cord",
+    "Border_Studs",
+    "Rhinestone_Silver"
+  ],
+  "primitives_with_uv": 29,
+  "normal_images": [
+    {
+      "name": "V9_Canvas_Tangent_Normal",
+      "size": [
+        128,
+        128
+      ],
+      "ranges": [
+        [
+          112,
+          143
+        ],
+        [
+          112,
+          143
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    }
+  ],
+  "all_materials_opaque": true,
+  "upright_targets": false,
+  "checks": "GLB container, index bounds, finite UVs, embedded normal pixels, required editable regions, opaque surfaces, source face coverage"
+}

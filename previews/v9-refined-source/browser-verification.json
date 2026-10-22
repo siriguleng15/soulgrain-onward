@@ -1,0 +1,643 @@
+{
+  "testedAt": "2026-10-22T03:05:09.170Z",
+  "environment": "Linux Chromium + ANGLE SwiftShader; CDP touch emulation. NOT physical iPad Safari or real hardware FPS.",
+  "qaBrowserCertificateWorkaround": true,
+  "checks": [
+    {
+      "name": "Actual new V9 loaded; 22+ material zones; nonexistent shape controls hidden",
+      "passed": true,
+      "detail": {
+        "meshes": 29,
+        "materials": 23,
+        "triangles": 1051245
+      }
+    },
+    {
+      "name": "Default finished model captured from real browser renderer",
+      "passed": true
+    },
+    {
+      "name": "Every loaded material zone can be selected, recolored, and restored",
+      "passed": true,
+      "detail": {
+        "zones": 23
+      }
+    },
+    {
+      "name": "Single-finger orbit changes camera without scrolling page",
+      "passed": true
+    },
+    {
+      "name": "Two-finger pinch zoom",
+      "passed": true
+    },
+    {
+      "name": "Reset restores default camera",
+      "passed": true
+    },
+    {
+      "name": "Asymmetric PNG upload and repeat/rotation controls",
+      "passed": true
+    },
+    {
+      "name": "Per-part original print restoration",
+      "passed": true
+    },
+    {
+      "name": "Downloaded GLB reparses; exact geometry/UV/index data and embedded asymmetric texture transform preserved",
+      "passed": true,
+      "detail": {
+        "bytes": 46345064,
+        "geometryPrimitives": 29,
+        "positionUVIndexSignaturesIdentical": true,
+        "textureTransform": {
+          "offset": [
+            -0.9704730598593083,
+            0.2933384887599932
+          ],
+          "rotation": 0.6457718232379019,
+          "scale": [
+            2.1,
+            2.1
+          ]
+        },
+        "embeddedAsymmetricImage": {
+          "mimeType": "image/png",
+          "bytes": 720
+        },
+        "preservedImageOrientation": true
+      }
+    },
+    {
+      "name": "Full appearance restore after edited export",
+      "passed": true
+    },
+    {
+      "name": "Portrait viewport has no horizontal document overflow",
+      "passed": true
+    },
+    {
+      "name": "High-DPR touch viewport respects 1–1.5 sampling cap",
+      "passed": true
+    },
+    {
+      "name": "Rapid asset switching and stale image decode cannot overwrite current model",
+      "passed": true
+    },
+    {
+      "name": "No unexpected JavaScript or shader errors in valid operation",
+      "passed": true
+    },
+    {
+      "name": "Missing finished GLB produces explicit failure without substituted model",
+      "passed": true
+    },
+    {
+      "name": "Asset retry genuinely recovers rendering",
+      "passed": true
+    },
+    {
+      "name": "WebGL context loss produces explicit reload recovery state",
+      "passed": true
+    },
+    {
+      "name": "Context-loss retry reloads page and restores real model",
+      "passed": true
+    }
+  ],
+  "initialSnapshot": {
+    "mode": "finished",
+    "loading": false,
+    "selected": "Body_Canvas",
+    "parts": [
+      {
+        "key": "Body_Canvas",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Collar_Canvas",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Collar_Outer_Canvas",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Red_Rubber_Piping",
+        "supportsPrint": true,
+        "color": "#be162b",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Eyelet_Canvas",
+        "supportsPrint": true,
+        "color": "#102b43",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Laces",
+        "supportsPrint": true,
+        "color": "#e9dfc9",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Eyelets",
+        "supportsPrint": true,
+        "color": "#b5b5af",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Rubber_Outsole",
+        "supportsPrint": true,
+        "color": "#c5b8a1",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Rubber_Foxing",
+        "supportsPrint": true,
+        "color": "#eee7d8",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Rubber_Toe",
+        "supportsPrint": true,
+        "color": "#eee7d8",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Tongue_Canvas",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Tongue_Reverse_Canvas",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Cuff_Border",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Foxing_Navy_Stripe",
+        "supportsPrint": true,
+        "color": "#10283f",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Heel_Strip",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Stitching",
+        "supportsPrint": true,
+        "color": "#ddd1b9",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Heel_Logo",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Aglet_Artwork",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Hardware_Silver",
+        "supportsPrint": true,
+        "color": "#b9b8b1",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Clasp_Engraved_Head",
+        "supportsPrint": true,
+        "color": "#ffffff",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Clasp_Cream_Cord",
+        "supportsPrint": true,
+        "color": "#e9dfc9",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Border_Studs",
+        "supportsPrint": false,
+        "color": "#f1eadb",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      },
+      {
+        "key": "Rhinestone_Silver",
+        "supportsPrint": false,
+        "color": "#f3f1ea",
+        "uploaded": false,
+        "repeat": 1,
+        "angle": 0
+      }
+    ],
+    "shape": 0,
+    "lastExportBytes": 0,
+    "meshes": 29,
+    "materials": 23,
+    "drawCalls": 30,
+    "triangles": 1051245,
+    "pixelRatio": 1,
+    "camera": [
+      -0.37403769240104495,
+      0.3009755863166945,
+      0.5194967950014514
+    ],
+    "target": [
+      0,
+      0.07759196446607038,
+      0
+    ],
+    "hasShape": false
+  },
+  "exportedGLB": {
+    "bytes": 46345064,
+    "geometryPrimitives": 29,
+    "positionUVIndexSignaturesIdentical": true,
+    "textureTransform": {
+      "offset": [
+        -0.9704730598593083,
+        0.2933384887599932
+      ],
+      "rotation": 0.6457718232379019,
+      "scale": [
+        2.1,
+        2.1
+      ]
+    },
+    "embeddedAsymmetricImage": {
+      "mimeType": "image/png",
+      "bytes": 720
+    },
+    "preservedImageOrientation": true
+  },
+  "unexpectedErrorsDuringValidOperation": [],
+  "intentionalErrorBranchMessages": [
+    "TypeError: Failed to fetch\n    at FileLoader.load (http://127.0.0.1:4210/node_modules/.vite/deps/chunk-MUHQBW63.js?v=b30fa4a4:23895:5)\n    at GLTFLoader.load (http://127.0.0.1:4210/node_modules/.vite/deps/three_addons_loaders_GLTFLoader__js.js?v=b30fa4a4:227:12)\n    at http://127.0.0.1:4210/node_modules/.vite/deps/chunk-MUHQBW63.js?v=b30fa4a4:23755:13\n    at new Promise (<anonymous>)\n    at GLTFLoader.loadAsync (http://127.0.0.1:4210/node_modules/.vite/deps/chunk-MUHQBW63.js?v=b30fa4a4:23754:12)\n    at ReviewScene.load (http://127.0.0.1:4210/src/model-review/ReviewScene.ts:141:41)\n    at load (http://127.0.0.1:4210/src/model-review/main.ts:119:31)\n    at http://127.0.0.1:4210/src/model-review/main.ts:299:8"
+  ],
+  "temporaryDownloads": "/tmp/onward-v9-qa-dO1FHk/downloads",
+  "testedAsset": {
+    "path": "public/assets/soulgrain_onward_refined_v9.glb",
+    "bytes": 45719796,
+    "sha256": "0e1c908d1e2bb402fed6d5eceeb4537ea65b1631e42e22a533145d8b441e25ee"
+  },
+  "applicationRuntimeSHA256": {
+    "src/model-review/main.ts": "265c1d657f030501db294092af7f9f3896ae0555c126015521f490629a6badd2",
+    "src/model-review/ReviewScene.ts": "a1f7485c041da015f3fe34daf3052c2d9403c261312ed52e4602e5c88094eddf"
+  },
+  "finalAssetRecheck": {
+    "testedAt": "2026-10-22T03:09:08.933Z",
+    "testedAsset": {
+      "path": "public/assets/soulgrain_onward_refined_v9.glb",
+      "bytes": 45653900,
+      "sha256": "91aba2e587c694f9cee14e340e45eabf808507b9182c380b963a71d1ffdae843"
+    },
+    "environment": "Linux Chromium + ANGLE SwiftShader; CDP touch emulation. NOT physical iPad Safari or real hardware FPS.",
+    "qaBrowserCertificateWorkaround": true,
+    "checks": [
+      {
+        "name": "Actual new V9 loaded; 22+ material zones; nonexistent shape controls hidden",
+        "passed": true,
+        "detail": {
+          "meshes": 29,
+          "materials": 23,
+          "triangles": 1046121
+        }
+      },
+      {
+        "name": "Default finished model captured from real browser renderer",
+        "passed": true
+      },
+      {
+        "name": "Asymmetric PNG upload and repeat/rotation controls",
+        "passed": true
+      },
+      {
+        "name": "Per-part original print restoration",
+        "passed": true
+      },
+      {
+        "name": "Downloaded GLB reparses; exact geometry/UV/index data and embedded asymmetric texture transform preserved",
+        "passed": true,
+        "detail": {
+          "bytes": 46279184,
+          "geometryPrimitives": 29,
+          "positionUVIndexSignaturesIdentical": true,
+          "textureTransform": {
+            "offset": [
+              -0.9704730598593083,
+              0.2933384887599932
+            ],
+            "rotation": 0.6457718232379019,
+            "scale": [
+              2.1,
+              2.1
+            ]
+          },
+          "embeddedAsymmetricImage": {
+            "mimeType": "image/png",
+            "bytes": 720
+          },
+          "preservedImageOrientation": true
+        }
+      }
+    ],
+    "initialSnapshot": {
+      "mode": "finished",
+      "loading": false,
+      "selected": "Body_Canvas",
+      "parts": [
+        {
+          "key": "Body_Canvas",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Collar_Canvas",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Collar_Outer_Canvas",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Red_Rubber_Piping",
+          "supportsPrint": true,
+          "color": "#be162b",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Eyelet_Canvas",
+          "supportsPrint": true,
+          "color": "#102b43",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Laces",
+          "supportsPrint": true,
+          "color": "#e9dfc9",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Eyelets",
+          "supportsPrint": true,
+          "color": "#b5b5af",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Rubber_Outsole",
+          "supportsPrint": true,
+          "color": "#c5b8a1",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Rubber_Foxing",
+          "supportsPrint": true,
+          "color": "#eee7d8",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Rubber_Toe",
+          "supportsPrint": true,
+          "color": "#eee7d8",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Tongue_Canvas",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Tongue_Reverse_Canvas",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Cuff_Border",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Foxing_Navy_Stripe",
+          "supportsPrint": true,
+          "color": "#10283f",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Heel_Strip",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Stitching",
+          "supportsPrint": true,
+          "color": "#ddd1b9",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Heel_Logo",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Aglet_Artwork",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Hardware_Silver",
+          "supportsPrint": true,
+          "color": "#b9b8b1",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Clasp_Engraved_Head",
+          "supportsPrint": true,
+          "color": "#ffffff",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Clasp_Cream_Cord",
+          "supportsPrint": true,
+          "color": "#e9dfc9",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Border_Studs",
+          "supportsPrint": false,
+          "color": "#f1eadb",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        },
+        {
+          "key": "Rhinestone_Silver",
+          "supportsPrint": false,
+          "color": "#f3f1ea",
+          "uploaded": false,
+          "repeat": 1,
+          "angle": 0
+        }
+      ],
+      "shape": 0,
+      "lastExportBytes": 0,
+      "meshes": 29,
+      "materials": 23,
+      "drawCalls": 30,
+      "triangles": 1046121,
+      "pixelRatio": 1,
+      "camera": [
+        -0.37403769240104495,
+        0.3009755863166945,
+        0.5194967950014514
+      ],
+      "target": [
+        0,
+        0.07759196446607038,
+        0
+      ],
+      "hasShape": false
+    },
+    "exportedGLB": {
+      "bytes": 46279184,
+      "geometryPrimitives": 29,
+      "positionUVIndexSignaturesIdentical": true,
+      "textureTransform": {
+        "offset": [
+          -0.9704730598593083,
+          0.2933384887599932
+        ],
+        "rotation": 0.6457718232379019,
+        "scale": [
+          2.1,
+          2.1
+        ]
+      },
+      "embeddedAsymmetricImage": {
+        "mimeType": "image/png",
+        "bytes": 720
+      },
+      "preservedImageOrientation": true
+    },
+    "unexpectedErrorsDuringValidOperation": [],
+    "intentionalErrorBranchMessages": [],
+    "temporaryDownloads": "/tmp/onward-v9-qa-xG3f3a/downloads"
+  }
+}
