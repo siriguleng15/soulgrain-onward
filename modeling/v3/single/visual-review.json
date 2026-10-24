@@ -1,0 +1,50 @@
+{
+  "status": "NOT_APPROVED_FOR_PHOTO_FIDELITY",
+  "reference_zip_sha256": "707e861e70a93f9ad5bbf66345f1c95e3db6c6d7464627a198f58292c7f46235",
+  "model_sha256": "eff7c8e88fb123c716cebf00eb5b6af00ec9c590a3b9ce57f742511cf08570c0",
+  "camera_alignment": "Approximate viewing directions only; no calibrated matching or error percentage.",
+  "views": [
+    {
+      "reference": "01_side_toe_left.jpg",
+      "render": "01_side_toe_left.png",
+      "comparison": "01_comparison.jpg",
+      "note": "Cuff is still too regular; toe and quarter curvature remain approximate.",
+      "comparison_sha256": "2bc672abd58a6b31c35cc3ae62de752cd23f9ed79c97f363ffe614107e7c502e"
+    },
+    {
+      "reference": "02_side_toe_right.jpg",
+      "render": "02_side_toe_right.png",
+      "comparison": "02_comparison.jpg",
+      "note": "Judge the same single shoe from its opposite side; not a second model.",
+      "comparison_sha256": "059603ce73c5e10cc6d5b2a960882a0f621eea969b6045564c6464b61f45b3aa"
+    },
+    {
+      "reference": "03_front_three_quarter.jpg",
+      "render": "03_front_three_quarter.png",
+      "comparison": "03_comparison.jpg",
+      "note": "Compare the foreground folded shoe; cloth contact still idealized.",
+      "comparison_sha256": "7fbceba4095595cd898eab91d1b10d8cf9ca2f3a3c10112024022ada80f7fe5e"
+    },
+    {
+      "reference": "04_extended_tongue.jpg",
+      "render": "03_front_three_quarter.png",
+      "comparison": "04_comparison.jpg",
+      "note": "The extended background shoe explains construction, not the delivered pose.",
+      "comparison_sha256": "f8b3df9c63301b4cc539dfff5e3c3456fc6fcc89f488dcb94b9219829c8e13f1"
+    },
+    {
+      "reference": "05_top_front_view.jpg",
+      "render": "05_top_front.png",
+      "comparison": "05_comparison.jpg",
+      "note": "Opening, seam routing and tongue outline are fitted estimates.",
+      "comparison_sha256": "6b44d5130528cb4355bc255ebfe507f1ac9ec18df17330bb59e5a3297fca7f94"
+    },
+    {
+      "reference": "06_rear_heels.jpg",
+      "render": "06_rear.png",
+      "comparison": "06_comparison.jpg",
+      "note": "Rear fabric creases and asymmetric collapse still differ visibly.",
+      "comparison_sha256": "78b404ec61b935b006529678eb89cafece3e401cb3b387a246b3542403f2beda"
+    }
+  ]
+}

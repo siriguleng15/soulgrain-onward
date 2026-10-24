@@ -1,0 +1,20 @@
+{
+  "V2": {
+    "file": "soulgrain_onward_template_white_preview.glb",
+    "bytes": 2569956,
+    "sha256": "62e5086e9fe65fbea747880209fcd37fa8ac1cc373229e6e898507c63912562e",
+    "mesh_objects": 4,
+    "vertices": 38662,
+    "triangles": 58848,
+    "images": 0
+  },
+  "V3": {
+    "file": "soulgrain_onward_v3_single_review.glb",
+    "bytes": 2674636,
+    "sha256": "eff7c8e88fb123c716cebf00eb5b6af00ec9c590a3b9ce57f742511cf08570c0",
+    "mesh_objects": 31,
+    "vertices": 65199,
+    "triangles": 125668,
+    "images": 0
+  }
+}

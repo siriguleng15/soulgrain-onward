@@ -1,0 +1,36 @@
+{
+  "source_hash_unchanged": true,
+  "new_parts": {
+    "L_FoldDownCuff": {
+      "vertices": 28448,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "self_intersection_triangle_pairs": 0
+    },
+    "L_FoldDownTongue": {
+      "vertices": 15762,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "self_intersection_triangle_pairs": 0
+    },
+    "L_RebuiltRubberSole": {
+      "vertices": 1600,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "self_intersection_triangle_pairs": 0
+    },
+    "L_QuarterToCuffSeam": {
+      "vertices": 3186,
+      "non_manifold_edges": 0,
+      "zero_area_faces": 0,
+      "self_intersection_triangle_pairs": 0
+    }
+  },
+  "intersections": {
+    "L_cuff_vs_tongue_faces": 0,
+    "L_FoldDownCuff_vs_base": {},
+    "L_FoldDownTongue_vs_base": {}
+  },
+  "glb_roundtrip_meshes": 31,
+  "glb_has_textures": false
+}

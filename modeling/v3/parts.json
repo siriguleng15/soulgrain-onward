@@ -1,0 +1,677 @@
+{
+  "source_sha256": "62e5086e9fe65fbea747880209fcd37fa8ac1cc373229e6e898507c63912562e",
+  "objects": [
+    {
+      "name": "L_LacesAndEyelets",
+      "vertices": 15102,
+      "triangles": 22032,
+      "non_manifold_edges": 7892,
+      "dimensions_m": [
+        0.118223,
+        0.071534,
+        0.111763
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_RubberToeCap",
+      "vertices": 495,
+      "triangles": 906,
+      "non_manifold_edges": 82,
+      "dimensions_m": [
+        0.091238,
+        0.089336,
+        0.041218
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_UpperOuter",
+      "vertices": 469,
+      "triangles": 852,
+      "non_manifold_edges": 84,
+      "dimensions_m": [
+        0.211066,
+        0.037665,
+        0.109413
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_UpperInner",
+      "vertices": 465,
+      "triangles": 846,
+      "non_manifold_edges": 82,
+      "dimensions_m": [
+        0.211222,
+        0.037782,
+        0.109452
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_Outsole",
+      "vertices": 375,
+      "triangles": 672,
+      "non_manifold_edges": 76,
+      "dimensions_m": [
+        0.254486,
+        0.086686,
+        0.017592
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelRubber",
+      "vertices": 107,
+      "triangles": 180,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.011927,
+        0.033915,
+        0.028377
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelSeam",
+      "vertices": 67,
+      "triangles": 96,
+      "non_manifold_edges": 36,
+      "dimensions_m": [
+        0.014247,
+        0.009476,
+        0.104119
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_FoxingInner",
+      "vertices": 331,
+      "triangles": 600,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.163647,
+        0.027718,
+        0.033563
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_ToeTrim",
+      "vertices": 206,
+      "triangles": 366,
+      "non_manifold_edges": 46,
+      "dimensions_m": [
+        0.041609,
+        0.070909,
+        0.016554
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_LiningInner",
+      "vertices": 277,
+      "triangles": 492,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.101471,
+        0.029641,
+        0.107483
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelSeamInner",
+      "vertices": 67,
+      "triangles": 96,
+      "non_manifold_edges": 36,
+      "dimensions_m": [
+        0.014079,
+        0.009149,
+        0.102765
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_CollarBinding",
+      "vertices": 75,
+      "triangles": 108,
+      "non_manifold_edges": 40,
+      "dimensions_m": [
+        0.048527,
+        0.048614,
+        0.00273
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_BottomBindingInner",
+      "vertices": 59,
+      "triangles": 84,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.101196,
+        0.028754,
+        0.006105
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_LiningOuter",
+      "vertices": 301,
+      "triangles": 540,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.101442,
+        0.029122,
+        0.10747
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelBinding",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.001093,
+        0.009992,
+        0.000649
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelDetailA",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.004528,
+        0.011426,
+        0.031455
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_HeelDetailB",
+      "vertices": 35,
+      "triangles": 48,
+      "non_manifold_edges": 20,
+      "dimensions_m": [
+        0.010779,
+        0.011936,
+        0.061665
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_BottomBindingOuter",
+      "vertices": 59,
+      "triangles": 84,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.1017,
+        0.027878,
+        0.006277
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingA",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.025907,
+        0.002164,
+        0.001143
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingB",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.015742,
+        0.003414,
+        0.001243
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingC",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.025231,
+        0.007242,
+        0.001116
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingD",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.016821,
+        0.002905,
+        0.00121
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingE",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.024753,
+        0.007262,
+        0.001095
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_TopBindingRear",
+      "vertices": 43,
+      "triangles": 60,
+      "non_manifold_edges": 24,
+      "dimensions_m": [
+        0.01065,
+        0.037966,
+        0.001657
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_FoxingOuter",
+      "vertices": 331,
+      "triangles": 600,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.163334,
+        0.030114,
+        0.033509
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_ToeDetail",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.007308,
+        0.007898,
+        0.008006
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "L_FoldDownCuff",
+      "vertices": 18162,
+      "triangles": 36320,
+      "non_manifold_edges": 0,
+      "dimensions_m": [
+        0.096859,
+        0.105159,
+        0.05977
+      ],
+      "thickness_m": 0.0024
+    },
+    {
+      "name": "L_FoldDownTongue",
+      "vertices": 15762,
+      "triangles": 31520,
+      "non_manifold_edges": 0,
+      "dimensions_m": [
+        0.151974,
+        0.078242,
+        0.118093
+      ],
+      "thickness_m": 0.0018
+    },
+    {
+      "name": "R_LacesAndEyelets",
+      "vertices": 15102,
+      "triangles": 22032,
+      "non_manifold_edges": 7892,
+      "dimensions_m": [
+        0.118223,
+        0.071534,
+        0.111763
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_RubberToeCap",
+      "vertices": 495,
+      "triangles": 906,
+      "non_manifold_edges": 82,
+      "dimensions_m": [
+        0.091238,
+        0.089336,
+        0.041218
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_UpperOuter",
+      "vertices": 469,
+      "triangles": 852,
+      "non_manifold_edges": 84,
+      "dimensions_m": [
+        0.211066,
+        0.037665,
+        0.109413
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_UpperInner",
+      "vertices": 465,
+      "triangles": 846,
+      "non_manifold_edges": 82,
+      "dimensions_m": [
+        0.211222,
+        0.037782,
+        0.109452
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_Outsole",
+      "vertices": 375,
+      "triangles": 672,
+      "non_manifold_edges": 76,
+      "dimensions_m": [
+        0.254486,
+        0.086686,
+        0.017592
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelRubber",
+      "vertices": 107,
+      "triangles": 180,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.011927,
+        0.033915,
+        0.028377
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelSeam",
+      "vertices": 67,
+      "triangles": 96,
+      "non_manifold_edges": 36,
+      "dimensions_m": [
+        0.014247,
+        0.009476,
+        0.104119
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_FoxingInner",
+      "vertices": 331,
+      "triangles": 600,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.163647,
+        0.027717,
+        0.033563
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_ToeTrim",
+      "vertices": 206,
+      "triangles": 366,
+      "non_manifold_edges": 46,
+      "dimensions_m": [
+        0.041609,
+        0.070909,
+        0.016554
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_LiningInner",
+      "vertices": 277,
+      "triangles": 492,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.101471,
+        0.029641,
+        0.107483
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelSeamInner",
+      "vertices": 67,
+      "triangles": 96,
+      "non_manifold_edges": 36,
+      "dimensions_m": [
+        0.014079,
+        0.009149,
+        0.102765
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_CollarBinding",
+      "vertices": 75,
+      "triangles": 108,
+      "non_manifold_edges": 40,
+      "dimensions_m": [
+        0.048527,
+        0.048614,
+        0.00273
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_BottomBindingInner",
+      "vertices": 59,
+      "triangles": 84,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.101196,
+        0.028754,
+        0.006105
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_LiningOuter",
+      "vertices": 301,
+      "triangles": 540,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.101442,
+        0.029122,
+        0.10747
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelBinding",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.001093,
+        0.009992,
+        0.000649
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelDetailA",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.004528,
+        0.011426,
+        0.031455
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_HeelDetailB",
+      "vertices": 35,
+      "triangles": 48,
+      "non_manifold_edges": 20,
+      "dimensions_m": [
+        0.010779,
+        0.011936,
+        0.061665
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_BottomBindingOuter",
+      "vertices": 59,
+      "triangles": 84,
+      "non_manifold_edges": 32,
+      "dimensions_m": [
+        0.1017,
+        0.027878,
+        0.006277
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingA",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.025907,
+        0.002164,
+        0.001143
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingB",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.015742,
+        0.003414,
+        0.001243
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingC",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.025231,
+        0.007242,
+        0.001116
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingD",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.016821,
+        0.002905,
+        0.00121
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingE",
+      "vertices": 19,
+      "triangles": 24,
+      "non_manifold_edges": 12,
+      "dimensions_m": [
+        0.024753,
+        0.007262,
+        0.001095
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_TopBindingRear",
+      "vertices": 43,
+      "triangles": 60,
+      "non_manifold_edges": 24,
+      "dimensions_m": [
+        0.01065,
+        0.037966,
+        0.001657
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_FoxingOuter",
+      "vertices": 331,
+      "triangles": 600,
+      "non_manifold_edges": 60,
+      "dimensions_m": [
+        0.163334,
+        0.030114,
+        0.033509
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_ToeDetail",
+      "vertices": 11,
+      "triangles": 12,
+      "non_manifold_edges": 8,
+      "dimensions_m": [
+        0.007308,
+        0.007898,
+        0.008006
+      ],
+      "thickness_m": null
+    },
+    {
+      "name": "R_FoldDownCuff",
+      "vertices": 18162,
+      "triangles": 36320,
+      "non_manifold_edges": 0,
+      "dimensions_m": [
+        0.096859,
+        0.105159,
+        0.05977
+      ],
+      "thickness_m": 0.0024
+    },
+    {
+      "name": "R_FoldDownTongue",
+      "vertices": 15762,
+      "triangles": 31520,
+      "non_manifold_edges": 0,
+      "dimensions_m": [
+        0.151974,
+        0.078242,
+        0.118093
+      ],
+      "thickness_m": 0.0018
+    }
+  ]
+}
