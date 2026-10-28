@@ -1,0 +1,134 @@
+[
+  {
+    "file": "01-pattern-original.jpg",
+    "role": "B factory pattern photo",
+    "size": [
+      1920,
+      2560
+    ],
+    "bytes": 840976,
+    "sha256": "6050af66bf614145cf530a24a3ee9c03ac850b3f9519a10cc024b13e30f21ac0",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "02-trace-reference.jpg",
+    "role": "C user traced outline and approximate dimensions",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 141661,
+    "sha256": "e4400e81b67dc8335705730116476a643622d6449fe5f67360e614b7075a288c",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "03-shoe-side-original.jpg",
+    "role": "A shoe side photo",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 219315,
+    "sha256": "aecad975b036a1afa4fb5aa8c66dc4f40290085c9f3ff9b2650cde2e253ec297",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "04-design-regions.jpg",
+    "role": "D1 regions",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 247543,
+    "sha256": "86e8341bf9b96f573bbacdbaaa2916e11034ebf8e6f4ba7fc6e80f2238b204e9",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "05-design-framework.jpg",
+    "role": "D2 tangent and framework",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 248678,
+    "sha256": "0d3aa4f41260452c63bd9a56a754650512a6ec3b704d2ca97af591a21b1bfa02",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "06-design-midlines.jpg",
+    "role": "D3 helper midlines",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 242961,
+    "sha256": "c39950aac2d5f3c75fa7c1cba5fd1ef01ea634894d54b219ead2d0e437dde5fc",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "07-design-spiral-first.jpg",
+    "role": "D4 first spiral",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 236697,
+    "sha256": "0551696d9b9744c61634ceaf9ad9d4a02eaab41dffb4a2b5f09bcfebf660be6b",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "08-design-center-first.jpg",
+    "role": "D5 first snap",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 237063,
+    "sha256": "44d8f9d702598e7f57e0f038cbaf8df4d379e94fd05e767db2da64dee84020b4",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "09-design-spiral-mirror.jpg",
+    "role": "D6 reversed spiral",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 229420,
+    "sha256": "8e2b0d29657ad206ed5278fbfe2efe95dde2e77c636d1461dd7e144055a06964",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "10-design-center-second.jpg",
+    "role": "D7 second snap",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 229820,
+    "sha256": "7c421395adf91624c4d2548d4ad4192f5216e90499f934218489381e3ded14a9",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "11-design-centers.jpg",
+    "role": "D8 snap centers",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 243190,
+    "sha256": "902e4f21ea526f88e8b7de2805aec8e66280e5e027ddbd01049bd1c03580b554",
+    "provenance": "user upload; original bytes preserved"
+  },
+  {
+    "file": "12-design-final-straps.jpg",
+    "role": "E final PU straps",
+    "size": [
+      1280,
+      894
+    ],
+    "bytes": 237117,
+    "sha256": "59c4cca9c0509c41d4cf0b385ac02185bf347264e3b922196e66dfc6df534a9f",
+    "provenance": "user upload; original bytes preserved"
+  }
+]
