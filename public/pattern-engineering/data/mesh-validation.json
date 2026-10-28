@@ -1,0 +1,218 @@
+{
+  "input": "public/pattern-engineering/data/pattern-mm.json",
+  "units": "mm",
+  "checks": [
+    {
+      "name": "Fixed original planar vertex identities and one indexed topology",
+      "passed": true
+    },
+    {
+      "name": "Real cut outline minus disclosed measured/approximated apertures, conforming edges, no orphan mesh stations",
+      "passed": true,
+      "detail": {
+        "areaMm2": 44302.753280457444,
+        "maxEdgeMm": 3.9993429028541123,
+        "holes": 13
+      }
+    },
+    {
+      "name": "Exact flat return, source outline identity, and zero flat strain",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "triangles": 16125,
+        "finite": true,
+        "referenceBoundaryErrorMm": 0,
+        "principalStretchMin": 1,
+        "principalStretchMax": 1,
+        "maximumPrincipalStrain": 0,
+        "areaRatioMin": 1,
+        "areaRatioMax": 1,
+        "degenerateTriangles": 0,
+        "projectedOrientationReversals": 0,
+        "selfIntersectionCheck": "not-performed",
+        "flatReturnErrorMm": 0,
+        "warnings": [
+          "E03: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E03: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E12: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E12: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E13: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E13: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "No cloth material law, seam sewing/contact solver or triangle self-intersection test is applied.",
+          "Projected orientation reversals include the intentionally turned-down cuff; they are not proof of inverted cloth."
+        ]
+      }
+    },
+    {
+      "name": "Flat, intermediate and folded states share identical vertex and triangle identities",
+      "passed": true
+    },
+    {
+      "name": "100 complete fold/expand cycles have exactly zero accumulated coordinate drift",
+      "passed": true
+    },
+    {
+      "name": "300 seeded triangle/barycentric picks map 3-D → original 2-D → 3-D without model switching",
+      "passed": true,
+      "detail": {
+        "maxRoundtripMm": 8.526512829121202e-14
+      }
+    },
+    {
+      "name": "Empty eyelet centres remain non-installable while reference features still follow the fold",
+      "passed": true
+    },
+    {
+      "name": "Explicit photo constraint layer changes only formed state, preserves exact flat, and reports residual",
+      "passed": true,
+      "detail": {
+        "residualMm": 0.16340680174219963
+      }
+    },
+    {
+      "name": "Deformation metrics disclose strain, projection reversals and unperformed collision analysis",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "triangles": 16125,
+        "finite": true,
+        "referenceBoundaryErrorMm": 0,
+        "principalStretchMin": 0.9067750288444311,
+        "principalStretchMax": 1.1203583347862889,
+        "maximumPrincipalStrain": 0.12035833478628888,
+        "areaRatioMin": 0.9297450370676525,
+        "areaRatioMax": 1.091291284459039,
+        "degenerateTriangles": 0,
+        "projectedOrientationReversals": 3413,
+        "selfIntersectionCheck": "not-performed",
+        "flatReturnErrorMm": 0,
+        "warnings": [
+          "E03: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E03: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E12: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E12: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E13: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E13: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "No cloth material law, seam sewing/contact solver or triangle self-intersection test is applied.",
+          "Projected orientation reversals include the intentionally turned-down cuff; they are not proof of inverted cloth.",
+          "Discrete principal strain exceeds 5%; this shape must not be treated as an inextensible, production-validated paper folding."
+        ]
+      }
+    },
+    {
+      "name": "Photo-default hypothesis is finite throughout 21 fold states; no collapsed final triangles; strain remains explicitly bounded",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "triangles": 16125,
+        "finite": true,
+        "referenceBoundaryErrorMm": 0,
+        "principalStretchMin": 0.9714050118117528,
+        "principalStretchMax": 1.0316101200560617,
+        "maximumPrincipalStrain": 0.031610120056061675,
+        "areaRatioMin": 0.9751272491263376,
+        "areaRatioMax": 1.0152958605834113,
+        "degenerateTriangles": 0,
+        "projectedOrientationReversals": 4739,
+        "selfIntersectionCheck": "not-performed",
+        "flatReturnErrorMm": 0,
+        "warnings": [
+          "E03: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E03: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E12: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E12: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "E13: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+          "E13: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+          "No cloth material law, seam sewing/contact solver or triangle self-intersection test is applied.",
+          "Projected orientation reversals include the intentionally turned-down cuff; they are not proof of inverted cloth."
+        ]
+      }
+    }
+  ],
+  "photoHypothesis": {
+    "parameters": {
+      "hingeXmm": 100,
+      "hingeYmm": 144.41562128,
+      "hingeAngleDeg": -10.28880149,
+      "foldAngleDeg": -176.70347315,
+      "bendWidthMm": 12.92461026,
+      "heelWrapDeg": 0,
+      "heelWrapLengthMm": 80,
+      "sideDepthMm": 0,
+      "landmarkStrength": 0,
+      "assumption": "Provisional circular-band fold fitted to 12 assumed eyelet matches in one oblique photograph. The hinge was NOT observed on the paper. No sewing, lasting, layer contact or hidden-region recovery has been verified; this does not recover the complete shoe silhouette."
+    },
+    "validation": {
+      "vertices": 8453,
+      "triangles": 16125,
+      "finite": true,
+      "referenceBoundaryErrorMm": 0,
+      "principalStretchMin": 0.9714050118117528,
+      "principalStretchMax": 1.0316101200560617,
+      "maximumPrincipalStrain": 0.031610120056061675,
+      "areaRatioMin": 0.9751272491263376,
+      "areaRatioMax": 1.0152958605834113,
+      "degenerateTriangles": 0,
+      "projectedOrientationReversals": 4739,
+      "selfIntersectionCheck": "not-performed",
+      "flatReturnErrorMm": 0,
+      "warnings": [
+        "E03: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E03: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "E12: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E12: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "E13: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E13: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "No cloth material law, seam sewing/contact solver or triangle self-intersection test is applied.",
+        "Projected orientation reversals include the intentionally turned-down cuff; they are not proof of inverted cloth."
+      ]
+    },
+    "scope": "Discrete surface metric only. A <5% numerical bound is NOT evidence of recoverable manufacturing folds or installable coordinates."
+  },
+  "mesh": {
+    "vertices": 8453,
+    "triangles": 16125,
+    "flatSHA256": "0b01583b1ac8d9072f6b68ccc08566f625451d97d8a54951d250cb5cf50b8643",
+    "indexSHA256": "6a8169db9aa4bd999f02de45748e458f41a8929a6504a838553d41a494fab253",
+    "parameters": {
+      "hingeXmm": 77.44972230636411,
+      "hingeYmm": 175.49718176576638,
+      "hingeAngleDeg": 8.523799759011915,
+      "foldAngleDeg": 180,
+      "bendWidthMm": 7.9711534269566355,
+      "heelWrapDeg": 55,
+      "heelWrapLengthMm": 80,
+      "sideDepthMm": 0,
+      "landmarkStrength": 0,
+      "assumption": "Hinge extrapolated one transverse-mark interval (22.77 mm) below the lower mark. The marks themselves are NOT treated as the manufacturing hinge; physical verification is required."
+    },
+    "validation": {
+      "vertices": 8453,
+      "triangles": 16125,
+      "finite": true,
+      "referenceBoundaryErrorMm": 0,
+      "principalStretchMin": 0.9067750288444311,
+      "principalStretchMax": 1.1203583347862889,
+      "maximumPrincipalStrain": 0.12035833478628888,
+      "areaRatioMin": 0.9297450370676525,
+      "areaRatioMax": 1.091291284459039,
+      "degenerateTriangles": 0,
+      "projectedOrientationReversals": 3413,
+      "selfIntersectionCheck": "not-performed",
+      "flatReturnErrorMm": 0,
+      "warnings": [
+        "E03: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E03: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "E12: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E12: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "E13: photograph aperture contour self-touches or crosses itself (interrupted aperture). Mesh uses the calibrated observed centre/radius circle; original measured contour is preserved in the paper data, NOT certified as the cut-hole shape.",
+        "E13: no usable simple measured hole contour; a 24-segment observed-radius approximation is used.",
+        "No cloth material law, seam sewing/contact solver or triangle self-intersection test is applied.",
+        "Projected orientation reversals include the intentionally turned-down cuff; they are not proof of inverted cloth.",
+        "Discrete principal strain exceeds 5%; this shape must not be treated as an inextensible, production-validated paper folding."
+      ]
+    }
+  },
+  "geometryPrecisionNote": "These checks validate indexed mapping and deterministic coordinates. They do NOT establish the correctness of the assumed manufacturing fold or the photograph registration."
+}
