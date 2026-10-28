@@ -1,0 +1,7 @@
+{
+  "sourceCommit": "e5dbfd00bed1679430c9218894841dad3691a2e5",
+  "sourceBranch": "feat/onward-reference-model-v10",
+  "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "purpose": "Independent review preview, not production release",
+  "previousPagesCommit": "6c6d631c29364e8ab70a4f4e6706fcd755b3a5cb"
+}
