@@ -1,0 +1,19 @@
+{
+  "units": "model-unit",
+  "productionReady": false,
+  "purpose": "Conservative visible-upper correction against user final photograph.",
+  "sourceImage": "12-design-final-straps.jpg",
+  "maximumDisplacementModelUnits": 0.04498626934822838,
+  "meanDisplacementModelUnits": 0.005223813483919064,
+  "maximumDisplacementRelativeToShoeLength": 0.023655933572746455,
+  "soleVerticesUnchanged": true,
+  "manualAuditReadUncertaintyPx": 5,
+  "globalRegistrationBeforeCorrectionRmsPx": 19.00612423254421,
+  "twoDimensionalFieldControlResidualRmsPx": 1.1287525135062715,
+  "controlResidualCaveat": "In-sample displacement-field diagnostic before 3D protection weights. Not an independent photo or physical accuracy test.",
+  "warnings": [
+    "Photo correspondences and hidden depth remain uncertain.",
+    "No real millimetre scale is inferred from the uploaded AI model.",
+    "The real paper outline and its calibration are unchanged."
+  ]
+}

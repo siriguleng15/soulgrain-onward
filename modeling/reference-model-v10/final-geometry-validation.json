@@ -1,0 +1,15 @@
+{
+  "units": "model-unit",
+  "purpose": "Final profile correction geometric sanity checks, not cloth constitutive/contact simulation",
+  "vertices": 700150,
+  "triangles": 1380348,
+  "finite": true,
+  "degenerateTriangles": 0,
+  "minimumTriangleAreaModelUnitSquared": 1.0359893289087038e-08,
+  "trianglesRotatedMoreThan90DegreesFromRepairedInput": 0,
+  "maximumTriangleNormalRotationDegrees": 41.784650224049535,
+  "topologyUnchangedByProfileCorrection": true,
+  "selfIntersectionTest": "not-performed",
+  "physicalUnitsCalibrated": false,
+  "productionReady": false
+}

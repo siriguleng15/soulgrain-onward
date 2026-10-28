@@ -1,0 +1,107 @@
+{
+  "file": "/workspace/attachments/76bb384e-7fe8-4abc-b336-1eab6ec2157d/xiezitu.glb",
+  "bytes": 33432084,
+  "sha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "generator": "xpostprocessing",
+  "gltfVersion": "2.0",
+  "objects": 1,
+  "meshes": 1,
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 1.0
+      },
+      "doubleSided": false
+    }
+  ],
+  "vertices": 696427,
+  "triangles": 1393074,
+  "attributes": [
+    "POSITION",
+    "NORMAL"
+  ],
+  "hasUV": false,
+  "hasTextures": false,
+  "hasVertexColors": false,
+  "hasMorphTargets": false,
+  "hasSkin": false,
+  "hasAnimations": false,
+  "units": "undeclared; glTF normally metres but model normalized scale cannot establish actual shoe size",
+  "bounds": {
+    "min": [
+      -0.9511350393295288,
+      -0.4456074833869934,
+      -0.37822669744491577
+    ],
+    "max": [
+      0.950555682182312,
+      0.4484129250049591,
+      0.3896404206752777
+    ],
+    "dimensions": [
+      1.9016907215118408,
+      0.8940204381942749,
+      0.7678670883178711
+    ]
+  },
+  "indicesValid": true,
+  "finitePositions": true,
+  "finiteNormals": true,
+  "normalLength": {
+    "min": 0.9999998211860657,
+    "max": 1.0000001192092896
+  },
+  "topology": {
+    "uniqueEdges": 2089611,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "connectedComponents": 1,
+    "largestComponents": [
+      {
+        "component": 0,
+        "vertices": 696427,
+        "faces": 1393074,
+        "min": [
+          -0.9511350393295288,
+          -0.4456074833869934,
+          -0.37822669744491577
+        ],
+        "max": [
+          0.950555682182312,
+          0.4484129250049591,
+          0.3896404206752777
+        ]
+      }
+    ],
+    "eulerCharacteristic": -110,
+    "repeatedIndexFaces": 0,
+    "zeroAreaFaces": 0,
+    "faceAreaQuantiles": [
+      1.0359893289087038e-08,
+      1.5104749032084342e-07,
+      1.094748350782991e-06,
+      0.0001304576524873417,
+      0.006659431286360392
+    ],
+    "signedVolumeSourceUnitsCubed": 0.2207018805070121,
+    "faceVsVertexNormalAlignmentQuantiles": [
+      -0.6348491371352102,
+      0.8641487352220102,
+      0.9922606812746161,
+      0.9996846789666792,
+      1.0000000264425495
+    ],
+    "faceVsVertexNormalOppositeCount": 32,
+    "inconsistentSharedEdgeWindingCount": 0
+  },
+  "editingConstraints": [
+    "Single unified material/object: no named tongue/cuff/strap parts to animate directly.",
+    "No UV or texture coordinates: existing print/textures cannot be preserved because file contains none.",
+    "Tongue repair requires local topology segmentation or controlled geometric replacement, plus explicit editable component separation.",
+    "At 1.39 million triangles, a separate presentation LOD is prudent for iPad review while keeping source fidelity.",
+    "Real-world scale must be calibrated via reference/pattern correspondence; normalized GLB bounds are not factory dimensions.",
+    "Intrinsic reverse mapping to original paper does not exist in this AI mesh and cannot be claimed without explicit correspondence/registration."
+  ],
+  "normalCaution": "A small face/vertex-normal dot-product sign difference is not itself proof of invalid triangle winding; shared-edge winding is checked separately."
+}

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "testedAt": "2026-10-28T10:12:38.738Z",
+  "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "environment": "Node GLTFLoader, actual corrected GLB, source orthographic side audit camera",
+  "checks": [
+    {
+      "fraction": 0,
+      "angleDegrees": 0,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 0,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 30,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 60,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 90,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 120,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 150,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 180,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 210,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 240,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 270,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 300,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.35,
+      "angleDegrees": 330,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 0,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 30,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 60,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 90,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 120,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 150,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 180,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 210,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 240,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 270,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 300,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    },
+    {
+      "fraction": 0.65,
+      "angleDegrees": 330,
+      "passed": true,
+      "firstMesh": "Tongue_Original_Position_Snap_Cap"
+    }
+  ],
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "capTriangles": 480,
+  "productionReady": false,
+  "limitations": [
+    "This verifies a closed visible cap in the reference-side view, not hidden snap/socket manufacture.",
+    "Source coordinates have no independent physical millimetre calibration."
+  ]
+}
