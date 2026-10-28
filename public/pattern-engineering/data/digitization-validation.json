@@ -1,0 +1,37 @@
+{
+  "source": "01-pattern-original.jpg",
+  "sourceSha256": "6050af66bf614145cf530a24a3ee9c03ac850b3f9519a10cc024b13e30f21ac0",
+  "gridPointsObserved": 471,
+  "fitCount": 377,
+  "heldOutCount": 94,
+  "fitRmsMm": 0.3913799822981539,
+  "heldOutRmsMm": 0.3900186384579223,
+  "maxGridResidualMm": 1.4790539008009789,
+  "boundaryVertexCount": 206,
+  "paperBoundsMm": [
+    268.6836921718148,
+    257.13856514400595
+  ],
+  "referenceAnnotationMm": [
+    267,
+    262
+  ],
+  "differenceNotForcedAwayMm": [
+    1.683692171814812,
+    -4.861434855994048
+  ],
+  "sourceMappingRoundTripMaxPixels": 6.821210263296962e-13,
+  "observedEyelets": 13,
+  "interiorPunchesFunctionUnknown": 4,
+  "boundarySimplificationTolerancePixels": 1.25,
+  "gridCoordinateModel": "10 mm nominal mat grid; single homography only; no lens-distortion fitting",
+  "outlineExtraction": "Brightness-seeded GrabCut, narrow-grid-filament suppression, full irregular contour; no fitting to shoe photo or traced sketch",
+  "productionReady": false,
+  "reviewEnvelopeMm": 2.0,
+  "limitations": [
+    "No physical measurement of mat pitch or paper flatness.",
+    "One photo cannot prove absolute dimensional accuracy.",
+    "Pencil/slot line semantics and seam/fold allowances need factory confirmation.",
+    "The separate hand trace annotation differs from grid measurement and is not forced into agreement."
+  ]
+}
