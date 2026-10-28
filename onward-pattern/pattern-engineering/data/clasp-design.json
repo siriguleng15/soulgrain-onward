@@ -1,0 +1,912 @@
+{
+  "schemaVersion": 1,
+  "units": "photo-px",
+  "photoSize": [
+    1280,
+    894
+  ],
+  "photoReference": "03-shoe-side-original.jpg",
+  "sourceFiles": {
+    "12-design-final-straps.jpg": "59c4cca9c0509c41d4cf0b385ac02185bf347264e3b922196e66dfc6df534a9f",
+    "08-design-center-first.jpg": "44d8f9d702598e7f57e0f038cbaf8df4d379e94fd05e767db2da64dee84020b4",
+    "10-design-center-second.jpg": "7c421395adf91624c4d2548d4ad4192f5216e90499f934218489381e3ded14a9",
+    "05-design-framework.jpg": "0d3aa4f41260452c63bd9a56a754650512a6ec3b704d2ca97af591a21b1bfa02",
+    "07-design-spiral-first.jpg": "0551696d9b9744c61634ceaf9ad9d4a02eaab41dffb4a2b5f09bcfebf660be6b",
+    "11-design-centers.jpg": "902e4f21ea526f88e8b7de2805aec8e66280e5e027ddbd01049bd1c03580b554",
+    "09-design-spiral-mirror.jpg": "8e2b0d29657ad206ed5278fbfe2efe95dde2e77c636d1461dd7e144055a06964",
+    "06-design-midlines.jpg": "c39950aac2d5f3c75fa7c1cba5fd1ef01ea634894d54b219ead2d0e437dde5fc",
+    "03-shoe-side-original.jpg": "aecad975b036a1afa4fb5aa8c66dc4f40290085c9f3ff9b2650cde2e253ec297",
+    "04-design-regions.jpg": "86e8341bf9b96f573bbacdbaaa2916e11034ebf8e6f4ba7fc6e80f2238b204e9"
+  },
+  "defaultLayout": "observed",
+  "frame": {
+    "lines": [
+      {
+        "slope": -0.542669,
+        "intercept": 740.963482,
+        "angleDeg": -28.487332,
+        "rmsPx": 0.890057,
+        "supportPixels": 2730,
+        "supportX": [
+          322.0,
+          1108.0
+        ],
+        "id": "topConnection"
+      },
+      {
+        "slope": -0.507801,
+        "intercept": 770.028963,
+        "angleDeg": -26.921513,
+        "rmsPx": 0.639128,
+        "supportPixels": 1195,
+        "supportX": [
+          595.0,
+          1129.0
+        ],
+        "id": "upperStrapGuide"
+      },
+      {
+        "slope": -0.470642,
+        "intercept": 797.1828,
+        "angleDeg": -25.203654,
+        "rmsPx": 0.809289,
+        "supportPixels": 1583,
+        "supportX": [
+          616.0,
+          1145.0
+        ],
+        "id": "firstCuffSeamExtension"
+      },
+      {
+        "slope": -0.485989,
+        "intercept": 863.387413,
+        "angleDeg": -25.919227,
+        "rmsPx": 0.740588,
+        "supportPixels": 1430,
+        "supportX": [
+          640.0,
+          1172.0
+        ],
+        "id": "lowerStrapGuide"
+      },
+      {
+        "slope": -0.470491,
+        "intercept": 897.085685,
+        "angleDeg": -25.19658,
+        "rmsPx": 0.590658,
+        "supportPixels": 1023,
+        "supportX": [
+          658.0,
+          1161.0
+        ],
+        "id": "secondCuffSeamExtension"
+      }
+    ],
+    "bodyBoundary": {
+      "id": "bodyAttachmentBoundary",
+      "slope": 1.841727,
+      "intercept": -630.6879,
+      "angleDeg": 61.49943,
+      "rmsPx": 0.71293,
+      "supportPixels": 396,
+      "supportY": [
+        426.0,
+        590.0
+      ]
+    },
+    "tangentIntersection": [
+      575.261409,
+      428.786682
+    ],
+    "toeConnectionPoint": [
+      319,
+      569
+    ],
+    "toeConnectionPointMethod": "Digitized user-painted toe-side endpoint, uncertainty approximately 3 photo pixels; not a factory datum",
+    "boundaryIntersections": {
+      "topConnection": [
+        575.261409,
+        428.786682
+      ],
+      "upperStrapGuide": [
+        596.169377,
+        467.293456
+      ],
+      "firstCuffSeamExtension": [
+        617.492479,
+        506.564793
+      ],
+      "lowerStrapGuide": [
+        641.863266,
+        551.449134
+      ],
+      "secondCuffSeamExtension": [
+        660.73926,
+        586.213566
+      ]
+    },
+    "semanticRoles": {
+      "topConnection": "Connects body toe-side region and cuff upper-right; yellow tangent annotation is a graphical construction, not a measured curvature constraint.",
+      "firstCuffSeamExtension": "First original cuff seam extended toward the body boundary",
+      "secondCuffSeamExtension": "Second original cuff seam extended toward body boundary"
+    }
+  },
+  "observed": {
+    "clasps": [
+      {
+        "id": "clasp-1",
+        "centerPhoto": [
+          774.121565,
+          373.342457
+        ],
+        "radiusPhotoPx": 23.538266,
+        "circleFit": {
+          "center": [
+            774.121565,
+            373.342457
+          ],
+          "radiusPx": 23.538266,
+          "hullCircleRmsPx": 0.234172,
+          "bluePixelCount": 1524,
+          "method": "Blue interior convex hull least-squares circle; guide-line occlusion retained as missing data",
+          "pixelOutlineUncertaintyPx": 1.5
+        },
+        "bodyFixedEndPhoto": [
+          598.273121,
+          467.904664
+        ],
+        "cuffFixedEndPhoto": [
+          957.482527,
+          284.035444
+        ],
+        "strip": {
+          "bodyEnd": [
+            598.273121,
+            467.904664
+          ],
+          "cuffEnd": [
+            957.482527,
+            284.035444
+          ],
+          "midpoint": [
+            777.877824,
+            375.970054
+          ],
+          "axisUnit": [
+            0.89016,
+            -0.455648
+          ],
+          "angleDeg": -27.106633,
+          "lengthPx": 403.533502,
+          "widthPx": 51.028138,
+          "corners": [
+            [
+              586.647687,
+              445.193059
+            ],
+            [
+              945.857093,
+              261.323839
+            ],
+            [
+              969.107961,
+              306.747049
+            ],
+            [
+              609.898554,
+              490.616269
+            ]
+          ],
+          "method": "Minimum-area oriented rectangle fitted to both white PU halves, excluding blue button occlusion"
+        },
+        "circleToStripMidpointErrorPx": 4.584075,
+        "bodyBoundaryDistancePx": 1.557147,
+        "physical": {
+          "snapAppearanceDiameterMm": 12,
+          "puWidthMm": null,
+          "overlapMm": null,
+          "bodySeamAllowanceMm": null,
+          "cuffSeamAllowanceMm": null,
+          "maleInstallCenterPatternMm": null,
+          "femaleInstallCenterPatternMm": null,
+          "status": "Photo observation only; 12 mm is a preset appearance diameter, not a global screenshot scale or PU width."
+        }
+      },
+      {
+        "id": "clasp-2",
+        "centerPhoto": [
+          812.649906,
+          452.448903
+        ],
+        "radiusPhotoPx": 23.667144,
+        "circleFit": {
+          "center": [
+            812.649906,
+            452.448903
+          ],
+          "radiusPx": 23.667144,
+          "hullCircleRmsPx": 0.205759,
+          "bluePixelCount": 1628,
+          "method": "Blue interior convex hull least-squares circle; guide-line occlusion retained as missing data",
+          "pixelOutlineUncertaintyPx": 1.5
+        },
+        "bodyFixedEndPhoto": [
+          635.286722,
+          532.92046
+        ],
+        "cuffFixedEndPhoto": [
+          1000.612157,
+          371.962194
+        ],
+        "strip": {
+          "bodyEnd": [
+            635.286722,
+            532.92046
+          ],
+          "cuffEnd": [
+            1000.612157,
+            371.962194
+          ],
+          "midpoint": [
+            817.94944,
+            452.441327
+          ],
+          "axisUnit": [
+            0.915116,
+            -0.40319
+          ],
+          "angleDeg": -23.777748,
+          "lengthPx": 399.212021,
+          "widthPx": 51.268633,
+          "corners": [
+            [
+              624.951224,
+              509.462079
+            ],
+            [
+              990.276659,
+              348.503812
+            ],
+            [
+              1010.947656,
+              395.420575
+            ],
+            [
+              645.62222,
+              556.378842
+            ]
+          ],
+          "method": "Minimum-area oriented rectangle fitted to both white PU halves, excluding blue button occlusion"
+        },
+        "circleToStripMidpointErrorPx": 5.299539,
+        "bodyBoundaryDistancePx": 3.061733,
+        "physical": {
+          "snapAppearanceDiameterMm": 12,
+          "puWidthMm": null,
+          "overlapMm": null,
+          "bodySeamAllowanceMm": null,
+          "cuffSeamAllowanceMm": null,
+          "maleInstallCenterPatternMm": null,
+          "femaleInstallCenterPatternMm": null,
+          "status": "Photo observation only; 12 mm is a preset appearance diameter, not a global screenshot scale or PU width."
+        }
+      }
+    ],
+    "axisDifferenceDeg": 3.328885
+  },
+  "constraintCandidate": {
+    "userConfirmed": false,
+    "enabledByDefault": false,
+    "purpose": "Optional test of the written parallel-axis / exact midpoint rules; not a replacement of user observed design",
+    "clasps": [
+      {
+        "id": "clasp-1",
+        "centerPhoto": [
+          774.121565,
+          373.342457
+        ],
+        "bodyFixedEndPhoto": [
+          593.802168,
+          462.933703
+        ],
+        "cuffFixedEndPhoto": [
+          954.440961,
+          283.751211
+        ],
+        "axisUnit": [
+          0.895554,
+          -0.444954
+        ],
+        "angleDeg": -26.42037,
+        "observedBodyEndShiftPx": 6.685795,
+        "observedCuffEndShiftPx": 3.054818
+      },
+      {
+        "id": "clasp-2",
+        "centerPhoto": [
+          812.649906,
+          452.448903
+        ],
+        "bodyFixedEndPhoto": [
+          635.814577,
+          540.309099
+        ],
+        "cuffFixedEndPhoto": [
+          989.485235,
+          364.588707
+        ],
+        "axisUnit": [
+          0.895554,
+          -0.444954
+        ],
+        "angleDeg": -26.42037,
+        "observedBodyEndShiftPx": 7.40747,
+        "observedCuffEndShiftPx": 13.348284
+      }
+    ]
+  },
+  "golden": {
+    "phi": 1.618034,
+    "kind": "Recursive golden-rectangle quarter-circle construction; not an exact logarithmic spiral",
+    "templates": [
+      {
+        "id": "first",
+        "reference": "07-design-spiral-first.jpg",
+        "mirroredY": false,
+        "canonicalSize": [
+          1.618034,
+          1
+        ],
+        "origin": [
+          578.142269,
+          430.174475
+        ],
+        "axisX": [
+          0.877487,
+          -0.479601
+        ],
+        "axisY": [
+          0.479601,
+          0.877487
+        ],
+        "scalePxPerUnit": 176.058373,
+        "angleDeg": -28.659349,
+        "innerFrameObservedAligned": {
+          "left": 301.0,
+          "right": 585.75,
+          "top": 654.75,
+          "bottom": 831.0
+        },
+        "observedAspect": 1.615603,
+        "fittedAspect": 1.618034,
+        "fitSizeResidualPx": [
+          0.118432,
+          -0.191627
+        ],
+        "corners": [
+          [
+            578.142269,
+            430.174475
+          ],
+          [
+            828.110518,
+            293.551278
+          ],
+          [
+            912.548297,
+            448.040151
+          ],
+          [
+            662.580049,
+            584.663349
+          ]
+        ],
+        "fourthArcEndPhoto": [
+          752.564199,
+          382.206572
+        ],
+        "fifthArcFullCircleCenterPhoto": [
+          775.103822,
+          369.887265
+        ],
+        "fifthArcFullCircleDiameterPx": 51.373141,
+        "frameAgreementPx": {
+          "top": [
+            2.593831,
+            1.738584
+          ],
+          "bottom": [
+            17.825084,
+            0.619048
+          ],
+          "left": [
+            1.869526,
+            2.357421
+          ]
+        },
+        "fitUncertaintyPx": 2,
+        "canonicalArcs": [
+          {
+            "index": 1,
+            "square": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "center": [
+              1.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "startAngle": 3.141593,
+            "endAngle": 1.570796,
+            "start": [
+              0.0,
+              0.0
+            ],
+            "end": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "square": [
+              1.0,
+              0.381966,
+              0.618034
+            ],
+            "center": [
+              1.0,
+              0.381966
+            ],
+            "radius": 0.618034,
+            "startAngle": 1.570796,
+            "endAngle": 0.0,
+            "start": [
+              1.0,
+              1.0
+            ],
+            "end": [
+              1.618034,
+              0.381966
+            ]
+          },
+          {
+            "index": 3,
+            "square": [
+              1.236068,
+              0.0,
+              0.381966
+            ],
+            "center": [
+              1.236068,
+              0.381966
+            ],
+            "radius": 0.381966,
+            "startAngle": 0.0,
+            "endAngle": -1.570796,
+            "start": [
+              1.618034,
+              0.381966
+            ],
+            "end": [
+              1.236068,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "square": [
+              1.0,
+              0.0,
+              0.236068
+            ],
+            "center": [
+              1.236068,
+              0.236068
+            ],
+            "radius": 0.236068,
+            "startAngle": -1.570796,
+            "endAngle": -3.141593,
+            "start": [
+              1.236068,
+              0.0
+            ],
+            "end": [
+              1.0,
+              0.236068
+            ]
+          },
+          {
+            "index": 5,
+            "square": [
+              1.0,
+              0.236068,
+              0.145898
+            ],
+            "center": [
+              1.145898,
+              0.236068
+            ],
+            "radius": 0.145898,
+            "startAngle": -3.141593,
+            "endAngle": -4.712389,
+            "start": [
+              1.0,
+              0.236068
+            ],
+            "end": [
+              1.145898,
+              0.381966
+            ]
+          },
+          {
+            "index": 6,
+            "square": [
+              1.145898,
+              0.291796,
+              0.09017
+            ],
+            "center": [
+              1.145898,
+              0.291796
+            ],
+            "radius": 0.09017,
+            "startAngle": -4.712389,
+            "endAngle": -6.283185,
+            "start": [
+              1.145898,
+              0.381966
+            ],
+            "end": [
+              1.236068,
+              0.291796
+            ]
+          },
+          {
+            "index": 7,
+            "square": [
+              1.18034,
+              0.236068,
+              0.055728
+            ],
+            "center": [
+              1.18034,
+              0.291796
+            ],
+            "radius": 0.055728,
+            "startAngle": -6.283185,
+            "endAngle": -7.853982,
+            "start": [
+              1.236068,
+              0.291796
+            ],
+            "end": [
+              1.18034,
+              0.236068
+            ]
+          },
+          {
+            "index": 8,
+            "square": [
+              1.145898,
+              0.236068,
+              0.034442
+            ],
+            "center": [
+              1.18034,
+              0.27051
+            ],
+            "radius": 0.034442,
+            "startAngle": -7.853982,
+            "endAngle": -9.424778,
+            "start": [
+              1.18034,
+              0.236068
+            ],
+            "end": [
+              1.145898,
+              0.27051
+            ]
+          }
+        ],
+        "observedCenterToFourthEndPx": 23.308637,
+        "observedCenterToFifthCircleCenterPx": 3.592099,
+        "fifthCircleToObservedDiameterRatio": 1.091269
+      },
+      {
+        "id": "opposite",
+        "reference": "09-design-spiral-mirror.jpg",
+        "mirroredY": true,
+        "canonicalSize": [
+          1.618034,
+          1
+        ],
+        "origin": [
+          574.90908,
+          432.139285
+        ],
+        "axisX": [
+          0.876959,
+          -0.480566
+        ],
+        "axisY": [
+          0.480566,
+          0.876959
+        ],
+        "scalePxPerUnit": 175.403865,
+        "angleDeg": -28.722374,
+        "innerFrameObservedAligned": {
+          "left": 296.5,
+          "right": 580.25,
+          "top": 655.25,
+          "bottom": 830.75
+        },
+        "observedAspect": 1.616809,
+        "fittedAspect": 1.618034,
+        "fitSizeResidualPx": [
+          0.059415,
+          -0.096135
+        ],
+        "corners": [
+          [
+            574.90908,
+            432.139285
+          ],
+          [
+            823.798178,
+            295.750132
+          ],
+          [
+            908.09131,
+            449.572054
+          ],
+          [
+            659.202212,
+            585.961207
+          ]
+        ],
+        "fourthArcEndPhoto": [
+          793.125225,
+          465.355645
+        ],
+        "fifthArcFullCircleCenterPhoto": [
+          815.567541,
+          453.057443
+        ],
+        "fifthArcFullCircleDiameterPx": 51.182158,
+        "frameAgreementPx": {
+          "top": [
+            2.77863,
+            1.614374
+          ],
+          "bottom": [
+            18.33639,
+            0.882708
+          ],
+          "left": [
+            1.909384,
+            1.230359
+          ]
+        },
+        "fitUncertaintyPx": 2,
+        "canonicalArcs": [
+          {
+            "index": 1,
+            "square": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "center": [
+              1.0,
+              0.0
+            ],
+            "radius": 1.0,
+            "startAngle": 3.141593,
+            "endAngle": 1.570796,
+            "start": [
+              0.0,
+              0.0
+            ],
+            "end": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "index": 2,
+            "square": [
+              1.0,
+              0.381966,
+              0.618034
+            ],
+            "center": [
+              1.0,
+              0.381966
+            ],
+            "radius": 0.618034,
+            "startAngle": 1.570796,
+            "endAngle": 0.0,
+            "start": [
+              1.0,
+              1.0
+            ],
+            "end": [
+              1.618034,
+              0.381966
+            ]
+          },
+          {
+            "index": 3,
+            "square": [
+              1.236068,
+              0.0,
+              0.381966
+            ],
+            "center": [
+              1.236068,
+              0.381966
+            ],
+            "radius": 0.381966,
+            "startAngle": 0.0,
+            "endAngle": -1.570796,
+            "start": [
+              1.618034,
+              0.381966
+            ],
+            "end": [
+              1.236068,
+              0.0
+            ]
+          },
+          {
+            "index": 4,
+            "square": [
+              1.0,
+              0.0,
+              0.236068
+            ],
+            "center": [
+              1.236068,
+              0.236068
+            ],
+            "radius": 0.236068,
+            "startAngle": -1.570796,
+            "endAngle": -3.141593,
+            "start": [
+              1.236068,
+              0.0
+            ],
+            "end": [
+              1.0,
+              0.236068
+            ]
+          },
+          {
+            "index": 5,
+            "square": [
+              1.0,
+              0.236068,
+              0.145898
+            ],
+            "center": [
+              1.145898,
+              0.236068
+            ],
+            "radius": 0.145898,
+            "startAngle": -3.141593,
+            "endAngle": -4.712389,
+            "start": [
+              1.0,
+              0.236068
+            ],
+            "end": [
+              1.145898,
+              0.381966
+            ]
+          },
+          {
+            "index": 6,
+            "square": [
+              1.145898,
+              0.291796,
+              0.09017
+            ],
+            "center": [
+              1.145898,
+              0.291796
+            ],
+            "radius": 0.09017,
+            "startAngle": -4.712389,
+            "endAngle": -6.283185,
+            "start": [
+              1.145898,
+              0.381966
+            ],
+            "end": [
+              1.236068,
+              0.291796
+            ]
+          },
+          {
+            "index": 7,
+            "square": [
+              1.18034,
+              0.236068,
+              0.055728
+            ],
+            "center": [
+              1.18034,
+              0.291796
+            ],
+            "radius": 0.055728,
+            "startAngle": -6.283185,
+            "endAngle": -7.853982,
+            "start": [
+              1.236068,
+              0.291796
+            ],
+            "end": [
+              1.18034,
+              0.236068
+            ]
+          },
+          {
+            "index": 8,
+            "square": [
+              1.145898,
+              0.236068,
+              0.034442
+            ],
+            "center": [
+              1.18034,
+              0.27051
+            ],
+            "radius": 0.034442,
+            "startAngle": -7.853982,
+            "endAngle": -9.424778,
+            "start": [
+              1.18034,
+              0.236068
+            ],
+            "end": [
+              1.145898,
+              0.27051
+            ]
+          }
+        ],
+        "observedCenterToFourthEndPx": 23.405067,
+        "observedCenterToFifthCircleCenterPx": 2.980422,
+        "fifthCircleToObservedDiameterRatio": 1.081291
+      }
+    ],
+    "numberingIssue": "Confirmed by the user: use the photographed blue button center, meaning the center of the complete circle supporting arc 5. It is not the endpoint of arc 4. Measured blue centers remain the placement authority despite the fitted-template residual.",
+    "centerDefinition": {
+      "userConfirmed": true,
+      "confirmedDefinition": "fifth-arc-supporting-circle-center",
+      "defaultCenterSource": "observed-blue-circle",
+      "confirmation": "以图中蓝色扣心为准，即第五段完整圆的圆心",
+      "confirmationDate": "2026-10-28",
+      "note": "The confirmation resolves the geometric meaning, not the remaining hand-drawing and template-fit errors. No observed blue center is moved to enforce ideal geometry."
+    },
+    "physicalScaleIssue": "No global millimetres-per-pixel is inferred. The source cloth and hardware are not a calibrated fronto-parallel plane."
+  },
+  "manufacturing": {
+    "physicalInputRequired": [
+      "puWidthMm",
+      "overlapMm",
+      "bodySeamAllowanceMm",
+      "cuffSeamAllowanceMm"
+    ],
+    "snapMaleFemaleCenters": "Two contacts at an overlap may map to different original cloth points; each needs its own surface identity. A single visible pixel does not establish both.",
+    "cutLengthRule": "bodyPiece = measured body-end-to-snap surface arc + overlap/2 + body sew allowance; cuffPiece = cuff arc + overlap/2 + cuff sew allowance. Symmetric overlap is a named assumption, not supplied manufacturing fact."
+  },
+  "warnings": [
+    "All extracted values are screenshot pixels with anti-aliasing/hand-drawing uncertainty, not factory dimensions.",
+    "Source drawn PU axes are not exactly parallel and blue button centers are not exactly the fitted full-strip midpoints. Default preserves the observed artwork.",
+    "Green construction lines are not a strict orthogonal rectangle; simultaneous three-edge coincidence has finite residual.",
+    "Only the final assembled 3D surface/triangle identity can supply reversible pattern-mm mapping; photo coordinates alone are not a paper pattern."
+  ]
+}

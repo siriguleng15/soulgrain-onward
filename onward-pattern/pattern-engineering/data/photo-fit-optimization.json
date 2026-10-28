@@ -1,0 +1,232 @@
+{
+  "productionReady": false,
+  "method": "Bounded least-squares circular-band fold plus independent photo X/Y display scales; no shape correction and no source-paper coordinate alteration.",
+  "units": {
+    "paper": "mm",
+    "photo": "px"
+  },
+  "parameters": {
+    "hingeXmm": 100,
+    "hingeYmm": 144.4156212755967,
+    "hingeAngleDeg": -10.288801487895638,
+    "foldAngleDeg": -176.70347315240093,
+    "bendWidthMm": 12.924610259962774,
+    "heelWrapDeg": 0,
+    "sideDepthMm": 0,
+    "landmarkStrength": 0
+  },
+  "registration": {
+    "originXPx": 1194.5180123219857,
+    "originYPx": 794.9725273001696,
+    "pixelsPerMmX": 3.6271333196652296,
+    "pixelsPerMmY": 4.131371660848057,
+    "widthPx": 1280,
+    "heightPx": 894
+  },
+  "eyeletAssumptions": [
+    {
+      "id": "E01",
+      "photoPx": [
+        877.0,
+        540.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        880.2777804965212,
+        538.2897761899687
+      ],
+      "residualPx": 3.697121916271213,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E02",
+      "photoPx": [
+        846.0,
+        469.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        849.7198370977894,
+        469.841275488338
+      ],
+      "residualPx": 3.813781913189161,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E03",
+      "photoPx": [
+        818.0,
+        400.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        815.2079187360719,
+        400.7958988114953
+      ],
+      "residualPx": 2.9033037565019266,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E04",
+      "photoPx": [
+        785.0,
+        330.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        781.1016712492897,
+        330.33354088868225
+      ],
+      "residualPx": 3.9125716061227225,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E05",
+      "photoPx": [
+        760.0,
+        259.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        744.1826817035018,
+        261.21139017493476
+      ],
+      "residualPx": 15.97115539335009,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E06",
+      "photoPx": [
+        719.0,
+        209.0
+      ],
+      "enabled": false,
+      "predictedPhotoPx": [
+        706.2861992861153,
+        206.6969936549898
+      ],
+      "residualPx": 12.92070303108664,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E07",
+      "photoPx": [
+        679.0,
+        273.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        676.8277678497345,
+        272.1815532151818
+      ],
+      "residualPx": 2.321303007844133,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E08",
+      "photoPx": [
+        641.0,
+        331.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        639.6006969995701,
+        333.9063501019416
+      ],
+      "residualPx": 3.2256657920603007,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E09",
+      "photoPx": [
+        577.0,
+        384.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        588.4377968993522,
+        384.57243355319935
+      ],
+      "residualPx": 11.452112385217792,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E10",
+      "photoPx": [
+        517.0,
+        428.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        531.041065466628,
+        421.9060296687137
+      ],
+      "residualPx": 15.306469019232692,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E11",
+      "photoPx": [
+        459.0,
+        466.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        468.5086060237214,
+        456.507419000876
+      ],
+      "residualPx": 13.435872972727962,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E12",
+      "photoPx": [
+        399.0,
+        487.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        401.91896612335574,
+        486.91681071645087
+      ],
+      "residualPx": 2.920151312208989,
+      "confidence": "assumed",
+      "referenceOnly": true
+    },
+    {
+      "id": "E13",
+      "photoPx": [
+        359.0,
+        511.0
+      ],
+      "enabled": true,
+      "predictedPhotoPx": [
+        340.1752088615949,
+        521.5375065813068
+      ],
+      "residualPx": 21.573405070958543,
+      "confidence": "assumed",
+      "referenceOnly": true
+    }
+  ],
+  "inSampleRmsPx": 10.577975738836857,
+  "inSampleMaxPx": 21.573405070958543,
+  "limitations": [
+    "Eyelet correspondence identities are visually assumed, not physically confirmed.",
+    "Independent axis display scales absorb camera projection mismatch; they are not measured photo millimetre scales.",
+    "Only eyelet references are fitted; full shoe silhouette and paper lower lasting edge are not fitted or verified.",
+    "Fold axis, hidden geometry, sewing, layer contact and lasting process remain unverified.",
+    "No hold-out photograph exists, so fit residuals are not independent reconstruction errors."
+  ]
+}

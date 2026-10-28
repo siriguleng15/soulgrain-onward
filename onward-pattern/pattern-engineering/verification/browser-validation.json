@@ -1,0 +1,639 @@
+{
+  "testedAt": "2026-10-28T02:41:10.202Z",
+  "url": "http://127.0.0.1:4326/soulgrain-onward/onward-pattern/pattern-lab.html",
+  "environment": "Chromium headless Linux with SwiftShader software rendering; 1024×768 touch emulation and 1440×1000 desktop. NOT real iPad hardware or Safari.",
+  "checks": [
+    {
+      "name": "Real calibrated pattern boot",
+      "passed": true,
+      "detail": {
+        "vertexCount": 8453,
+        "triangleCount": 16125,
+        "progress": 0,
+        "pixelRatio": 1,
+        "preset": "three-quarter",
+        "contextLost": false,
+        "photoVisible": false,
+        "sameTopology": true
+      }
+    },
+    {
+      "name": "Touch 2D selection maps to same source millimetres",
+      "passed": true,
+      "detail": {
+        "triangle": 9133,
+        "barycentric": [
+          0.38413377174704416,
+          0.3588836148161791,
+          0.2569826134367768
+        ],
+        "flatMm": [
+          80.00000000000001,
+          120.00001533931847
+        ],
+        "formedMm": [
+          80.00000000000001,
+          120.00001533931847,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Touch 3D hit returns corresponding flat point",
+      "passed": true,
+      "detail": {
+        "triangle": 9133,
+        "barycentric": [
+          0.3841358285117211,
+          0.3588843594135226,
+          0.2569798120747563
+        ],
+        "flatMm": [
+          79.9999958991027,
+          120.00000782512187
+        ],
+        "formedMm": [
+          79.9999958991027,
+          120.00000782512187,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Two-finger SVG zoom",
+      "passed": true,
+      "detail": {
+        "before": "-17 -17 302.6836921718148 291.13856514400595",
+        "after": "52.85008122370793 50.18582622821515 162.98352655405412 156.76691969292628"
+      }
+    },
+    {
+      "name": "Continuous animation reaches formed endpoint",
+      "passed": true,
+      "detail": {
+        "durationMs": 1527.5999999977648,
+        "frames": 6,
+        "medianFrameMs": 383.3000000000002,
+        "p95FrameMs": 566.6000000000004,
+        "renderer": "WebKit WebGL"
+      }
+    },
+    {
+      "name": "Rapid animation interruption: last requested target wins",
+      "passed": true,
+      "detail": {
+        "progress": 0,
+        "returnError": 0
+      }
+    },
+    {
+      "name": "Two-finger Three.js zoom",
+      "passed": true,
+      "detail": {
+        "before": 1,
+        "after": 1.5908674067313278
+      }
+    },
+    {
+      "name": "Clasp process step 1",
+      "passed": true,
+      "detail": "两个安装区域。区分鞋身与翻筒；区域标记沿用原图，不据此推断隐藏缝制结构。"
+    },
+    {
+      "name": "Clasp process step 2",
+      "passed": true,
+      "detail": "结构线建立框架。保留前端连接线、翻筒缝线延长线与左侧边界的像素拟合关系。黄色切点是设计图注释，尚非实测三维相切约束。"
+    },
+    {
+      "name": "Clasp process step 3",
+      "passed": true,
+      "detail": "两条辅助定位线。显示方向辅助线与安装边界的两个交点；手绘线不被重新正交化。"
+    },
+    {
+      "name": "Clasp process step 4",
+      "passed": true,
+      "detail": "第一组黄金圆弧构图。按原图拟合旋转等比模板；轨迹由递归正方形的四分之一圆弧组成，并非精确对数螺旋。"
+    },
+    {
+      "name": "Clasp process step 5",
+      "passed": true,
+      "detail": "第一颗蓝色扣心。采用原图蓝色扣心。用户确认其几何含义为第五段圆弧所依托完整圆的圆心；保留拟合模板的剩余误差。"
+    },
+    {
+      "name": "Clasp process step 6",
+      "passed": true,
+      "detail": "反向模板定位第二组。按原图使用反向圆弧模板；第二枚扣心仍取图中观测值，不强行吸附到拟合圆心。"
+    },
+    {
+      "name": "Clasp process step 7",
+      "passed": true,
+      "detail": "第二颗蓝色扣心。第二枚蓝色扣心采用原图观测值；不将手绘扣心强行吸附到拟合模板的圆心。"
+    },
+    {
+      "name": "Clasp process step 8",
+      "passed": true,
+      "detail": "两颗扣心对照。同时保留两颗蓝色扣心，单独查看中心位置与框架的关系。12 mm 只表示预设外观直径。"
+    },
+    {
+      "name": "Clasp process step 9",
+      "passed": true,
+      "detail": "完整皮条与待确认工艺。默认复现最终白条。两条观测长轴相差约 3.33°，与严格平行、中点规则存在差异；校正候选另列且未经定稿。"
+    },
+    {
+      "name": "All observed fixed ends and separate snap projections bind",
+      "passed": true,
+      "detail": [
+        {
+          "id": "clasp-1-B",
+          "triangle": 17,
+          "flatMm": [
+            164.38460864735993,
+            79.16689424644986
+          ]
+        },
+        {
+          "id": "clasp-1-C",
+          "triangle": 1615,
+          "flatMm": [
+            77.21152612066584,
+            189.01133349186878
+          ]
+        },
+        {
+          "id": "clasp-1-S-body",
+          "triangle": 2822,
+          "flatMm": [
+            115.9032244560566,
+            102.05571054820084
+          ]
+        },
+        {
+          "id": "clasp-1-S-cuff",
+          "triangle": 15490,
+          "flatMm": [
+            132.1401054564745,
+            191.50086708455333
+          ]
+        },
+        {
+          "id": "clasp-2-B",
+          "triangle": 939,
+          "flatMm": [
+            154.17996554921234,
+            63.42979738114387
+          ]
+        },
+        {
+          "id": "clasp-2-C",
+          "triangle": 7916,
+          "flatMm": [
+            73.56654620137982,
+            213.15308615208986
+          ]
+        },
+        {
+          "id": "clasp-2-S-body",
+          "triangle": 11404,
+          "flatMm": [
+            105.28096781399853,
+            82.90796676956438
+          ]
+        },
+        {
+          "id": "clasp-2-S-cuff",
+          "triangle": 15282,
+          "flatMm": [
+            128.9316864803519,
+            213.19421036861337
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Locked material identity survives unfold",
+      "passed": true,
+      "detail": {
+        "points": 8
+      }
+    },
+    {
+      "name": "Project contains exact immutable mesh and provenance",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "triangles": 16125
+      }
+    },
+    {
+      "name": "JSON project file selection/import restores anchors",
+      "passed": true,
+      "detail": {
+        "points": 8
+      }
+    },
+    {
+      "name": "Mismatched source pattern import rejected",
+      "passed": true,
+      "detail": "无法恢复：Error: 原始裁断轮廓与当前工程不一致。"
+    },
+    {
+      "name": "SVG / JSON / CSV / high-resolution PNG downloads",
+      "passed": true,
+      "detail": [
+        "ONWARD-clasp-process-9.png",
+        "ONWARD-factory-reference.svg",
+        "ONWARD-pattern-project.json",
+        "ONWARD-pattern-view.png",
+        "ONWARD-points-mm.csv"
+      ]
+    },
+    {
+      "name": "PNG exports contain requested pixel dimensions",
+      "passed": true,
+      "detail": {
+        "flat": [
+          2400,
+          2308
+        ],
+        "clasp": [
+          2560,
+          1788
+        ]
+      }
+    },
+    {
+      "name": "Factory SVG has physical mm and nonproduction notice",
+      "passed": true,
+      "detail": {
+        "bytes": 25083
+      }
+    },
+    {
+      "name": "No uncaught browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "performance": {
+    "wireframeOn": {
+      "wireframeChecked": true,
+      "durationMs": 2031.0999999977648,
+      "frames": 11,
+      "medianFrameMs": 200.0999999999999,
+      "p95FrameMs": 533.3000000000002,
+      "renderer": "WebKit WebGL"
+    },
+    "wireframeOff": {
+      "wireframeChecked": false,
+      "durationMs": 1630.5,
+      "frames": 12,
+      "medianFrameMs": 33.399999999999636,
+      "p95FrameMs": 1016.6999999999998,
+      "renderer": "WebKit WebGL"
+    },
+    "cpuProgressUpdates": {
+      "updates": 20,
+      "totalMs": 67.40000000223517,
+      "medianMs": 3.100000001490116,
+      "maxMs": 6.300000000745058
+    },
+    "idleRaf": {
+      "frames": 56,
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.700000000000728
+    }
+  },
+  "errors": [],
+  "failedRequests": [],
+  "downloadEvents": [
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "2E9F42F2CE10731C641392154036B752",
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "url": "blob:http://127.0.0.1:4326/1cd53d6b-0dab-48df-9fd0-1c0d3310b2e9",
+        "suggestedFilename": "ONWARD-factory-reference.svg"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 29174,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 29174,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 29174,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 29174,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "c14c4874-bf62-4701-9e1f-5211cab61d33",
+        "totalBytes": 29174,
+        "receivedBytes": 29174,
+        "state": "completed",
+        "filePath": "/tmp/onward-pattern-browser-qa-1793155248163/downloads/ONWARD-factory-reference.svg"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "2E9F42F2CE10731C641392154036B752",
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "url": "blob:http://127.0.0.1:4326/a23aae1d-0514-4840-8a4c-167d579dbf09",
+        "suggestedFilename": "ONWARD-pattern-project.json"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 2045080,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 2045080,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 2045080,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 2045080,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fe6370f9-75ba-4eaa-a91e-9eb2daafdd04",
+        "totalBytes": 2045080,
+        "receivedBytes": 2045080,
+        "state": "completed",
+        "filePath": "/tmp/onward-pattern-browser-qa-1793155248163/downloads/ONWARD-pattern-project.json"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "2E9F42F2CE10731C641392154036B752",
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "url": "blob:http://127.0.0.1:4326/e05285eb-ba10-4bb7-802e-015abcfc4413",
+        "suggestedFilename": "ONWARD-points-mm.csv"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 5632,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 5632,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 5632,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 5632,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "e78703b2-8780-4249-ac1a-8eb36a5f453b",
+        "totalBytes": 5632,
+        "receivedBytes": 5632,
+        "state": "completed",
+        "filePath": "/tmp/onward-pattern-browser-qa-1793155248163/downloads/ONWARD-points-mm.csv"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "2E9F42F2CE10731C641392154036B752",
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "url": "blob:http://127.0.0.1:4326/38335355-28d8-44d0-8710-5b2ab215b180",
+        "suggestedFilename": "ONWARD-pattern-view.png"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 4503004,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 4503004,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 4503004,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "90f10772-8e72-4f5c-b978-ec070c86a62e",
+        "totalBytes": 4503004,
+        "receivedBytes": 4503004,
+        "state": "completed",
+        "filePath": "/tmp/onward-pattern-browser-qa-1793155248163/downloads/ONWARD-pattern-view.png"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "2E9F42F2CE10731C641392154036B752",
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "url": "blob:http://127.0.0.1:4326/cb5883d5-d0ed-484e-945c-51b1f6124ad8",
+        "suggestedFilename": "ONWARD-clasp-process-9.png"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 4284649,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 4284649,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 4284649,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 4284649,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "deb6bbf9-757e-403a-9f72-73b430290877",
+        "totalBytes": 4284649,
+        "receivedBytes": 4284649,
+        "state": "completed",
+        "filePath": "/tmp/onward-pattern-browser-qa-1793155248163/downloads/ONWARD-clasp-process-9.png"
+      }
+    }
+  ],
+  "sourceUnchanged": true,
+  "limitations": [
+    "Frame timing is headless CPU/software rendering and does not establish real iPad performance.",
+    "Browser tests prove interaction and numerical correspondence, not physical manufacturing or silhouette accuracy.",
+    "Screenshots visibly show lasting-edge and full-body silhouette mismatch; only assumed eyelet correspondence is fitted.",
+    "Button exports and stage navigation are invoked through the real DOM; touch selection and pinch gestures use CDP touch events."
+  ],
+  "performanceTestedAt": "2026-10-28T02:44:01.940Z",
+  "performanceStateEvidence": "Each timed sample reads actual #wireframe.checked immediately before animation. Initial sample explicitly enables wireframe; second explicitly disables it."
+}
