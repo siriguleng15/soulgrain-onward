@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "units": "uncalibrated-model-unit",
+  "productionReady": false,
+  "files": {
+    "xiezitu-original.glb": {
+      "bytes": 33432084,
+      "sha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897"
+    },
+    "source-preview.glb": {
+      "bytes": 5758820,
+      "sha256": "5687e976d4ac5064acc994c7c4a9faec3fa374c847d3955d6bba8fb6193bdb6d"
+    },
+    "corrected.glb": {
+      "bytes": 5659668,
+      "sha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142"
+    },
+    "corrected-high.glb": {
+      "bytes": 33143480,
+      "sha256": "5060829d101ab888f30bbe03f6371f538e2856c68d114657b2e774c8cf1a2fbd"
+    },
+    "onward-model-v10-editable.blend": {
+      "bytes": 94321655,
+      "sha256": "5c2f433eafb158f88ff99eaf5eeb623159dc5e8af0ef630e74c41bf306470a1a"
+    }
+  }
+}

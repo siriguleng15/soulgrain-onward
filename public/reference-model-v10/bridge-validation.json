@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "testedAt": "2026-10-28T10:13:13.760Z",
+  "environment": "Node.js GLTFLoader + actual corrected GLB and real calibrated paper; not physical shoe or Safari testing",
+  "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "paperProjectSha256": "11ff21b97f58902c6c73ca8c1e45b8b91873a7bfb73203db63d80339db895ad0",
+  "checks": [
+    {
+      "name": "Static object paths, exact vertex/index fingerprints and barycentric anchors match actual GLTFLoader",
+      "passed": true,
+      "detail": {
+        "checkedAnchors": 114,
+        "maxStaticAnchorDifferenceModelUnits": 1.3597399555105182e-16
+      }
+    },
+    {
+      "name": "Actual reference-point visibility and ray hits agree; occluded points remain null",
+      "passed": true,
+      "detail": {
+        "mapped": 0,
+        "total": 8,
+        "maxRuntimeHitDifferenceModelUnits": 9.292938109463748e-16
+      }
+    },
+    {
+      "name": "Visible-cloth demonstration samples are explicitly separate from the eight installation references",
+      "passed": true,
+      "detail": {
+        "exampleCount": 8,
+        "installationCount": 8,
+        "exampleKinds": [
+          "visible-cloth-example-not-installation"
+        ]
+      }
+    },
+    {
+      "name": "Actual visible-shell subset retains original paper topology and restores flat display without drift",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "mappedVertices": 1670,
+        "drawnSourceTriangles": 2720,
+        "totalSourceTriangles": 16125,
+        "pickChecks": 101,
+        "cycles": 100,
+        "sourceFlatMmUnchanged": true
+      }
+    }
+  ],
+  "productionReady": false,
+  "limitations": [
+    "Photo registration and paper forming remain assumptions; numerical identity does not establish physical accuracy.",
+    "Only visible explicitly labelled cloth receives anchors; no hidden support cloth is fabricated.",
+    "Model units are not independently calibrated millimetres.",
+    "Linear shell interpolation is correspondence display, not a reconstructed sewing process."
+  ]
+}

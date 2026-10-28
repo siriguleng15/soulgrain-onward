@@ -1,0 +1,652 @@
+{
+  "testedAt": "2026-10-28T10:16:53.522Z",
+  "url": "http://127.0.0.1:4328/soulgrain-onward/onward-model-v10/reference-model.html",
+  "environment": "Linux Chromium headless with SwiftShader software WebGL;1024×768 touch events and1440×1000 desktop. This is NOT physical iPad hardware or Safari.",
+  "checks": [
+    {
+      "name": "Uploaded original bytes preserved",
+      "passed": true,
+      "detail": {
+        "bytes": 33432084,
+        "sha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897"
+      }
+    },
+    {
+      "name": "Runtime geometry matches published identity",
+      "passed": true,
+      "detail": {
+        "bytes": 5659668,
+        "sha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142"
+      }
+    },
+    {
+      "name": "Actual mesh has explicit cloth/excluded semantics",
+      "passed": true,
+      "detail": [
+        {
+          "name": "Cuff_Cloth",
+          "role": "cuff"
+        },
+        {
+          "name": "Footwear_Details_Unclassified",
+          "role": "excluded"
+        },
+        {
+          "name": "Tongue_Flap_And_Local_Repairs",
+          "role": "excluded"
+        },
+        {
+          "name": "Tongue_Original_Position_Snap_Cap",
+          "role": "excluded"
+        },
+        {
+          "name": "Upper_Body_Cloth",
+          "role": "body"
+        }
+      ]
+    },
+    {
+      "name": "Display scale not mislabeled physical millimetres",
+      "passed": true,
+      "detail": {
+        "units": "uncalibrated-model-unit",
+        "scaleNote": "上传模型未标定真实长度。模型坐标不当作毫米；裁片保持原来的毫米坐标与原始轮廓。"
+      }
+    },
+    {
+      "name": "Static bridge model hash agrees with runtime GLB",
+      "passed": true,
+      "detail": {
+        "actual": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+        "expected": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142"
+      }
+    },
+    {
+      "name": "Fitted shell retains original real-paper coordinates and triangle identities",
+      "passed": true,
+      "detail": {
+        "vertices": 8453,
+        "triangles": 16125
+      }
+    },
+    {
+      "name": "Fitted shell draws only explicitly mapped cloth triangles",
+      "passed": true,
+      "detail": {
+        "mapped": 1670,
+        "total": 8453,
+        "drawnTriangles": 2720,
+        "sourceTriangles": 16125
+      }
+    },
+    {
+      "name": "Unmapped model projections remain null",
+      "passed": true,
+      "detail": {
+        "unmapped": 6783
+      }
+    },
+    {
+      "name": "Actual corrected product GLB boots and renders",
+      "passed": true,
+      "detail": {
+        "scene": {
+          "loaded": true,
+          "preset": "quarter",
+          "triangles": 240480,
+          "drawCalls": 5,
+          "pixelRatio": 1,
+          "extent": 1.9191192984580994,
+          "unit": "source-model-coordinates",
+          "shell": {
+            "sourceVertices": 8453,
+            "mappedVertices": 1670,
+            "drawnTriangles": 2720,
+            "sourceTriangles": 16125,
+            "visible": false,
+            "progress": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Source/corrected comparison retains same camera",
+      "passed": true,
+      "detail": {
+        "before": {
+          "position": [
+            0.008320242166519165,
+            9.591615155339241,
+            0.006563513845887807
+          ],
+          "quaternion": [
+            -0.7070714249637121,
+            0,
+            0,
+            0.707142135641616
+          ],
+          "zoom": 1
+        },
+        "after": {
+          "position": [
+            0.008320242166519165,
+            9.591615155339241,
+            0.006563513845887807
+          ],
+          "quaternion": [
+            -0.7070714249637121,
+            0,
+            0,
+            0.707142135641616
+          ],
+          "zoom": 1
+        }
+      }
+    },
+    {
+      "name": "Original preview does not reuse corrected paper bridge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Source comparison cannot export corrected triangle IDs as source IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Single-finger orbit changes actual model camera",
+      "passed": true,
+      "detail": {
+        "before": [
+          -5.220792974327196,
+          2.984083358188011,
+          7.475765692044141
+        ],
+        "after": [
+          -7.225110738314738,
+          3.5429894890078124,
+          5.218275654319329
+        ]
+      }
+    },
+    {
+      "name": "Two-finger pinch zoom changes model camera",
+      "passed": true,
+      "detail": {
+        "before": 1,
+        "after": 1.7181238691752785
+      }
+    },
+    {
+      "name": "Final effect photo overlay and locked camera enabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original shoe photo can replace annotated final photo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Visible cloth examples remain separate from installation targets",
+      "passed": true,
+      "detail": {
+        "examples": 8,
+        "installationPairs": 8,
+        "mappedInstallationPairs": 0
+      }
+    },
+    {
+      "name": "Visible paper point reaches actual labelled cloth",
+      "passed": true,
+      "detail": {
+        "schemaVersion": 1,
+        "id": "VIS-B1",
+        "label": "可见鞋身取样 1 · 非扣件定位",
+        "kind": "visible-cloth-example-not-installation",
+        "layer": "body",
+        "paper": {
+          "triangle": 6959,
+          "barycentric": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "flatMm": [
+            176.68405892115277,
+            78.02006986870038
+          ],
+          "formedMm": [
+            176.6840589211532,
+            78.02006986870038,
+            0
+          ]
+        },
+        "photoPixel": [
+          553.661375094242,
+          472.6426217332314
+        ],
+        "actual": {
+          "gltfNode": 4,
+          "gltfMesh": 4,
+          "primitive": 0,
+          "meshName": "Upper_Body_Cloth",
+          "triangle": 2159,
+          "geometryVertexIndices": [
+            1185,
+            1124,
+            1353
+          ],
+          "meshPath": "root/4",
+          "geometrySignature": "2618:13926:2c2d7707",
+          "barycentric": [
+            0.6168075287343372,
+            0.26029705355310495,
+            0.12289541771255785
+          ],
+          "modelPosition": [
+            -0.13219053281565407,
+            -0.08248177070636677,
+            0.2920627449178873
+          ],
+          "units": "model-unit",
+          "role": "body",
+          "projectionResidualPx": 0
+        },
+        "projectionResidualPx": 0,
+        "registrationFitResidualPx": 19.00612423254421,
+        "confidence": "unverified-photo-bridge",
+        "productionReady": false,
+        "warnings": [
+          "可见面料的数值对应演示取样，不是扣件位置、钻孔或生产定位点。",
+          "取样不替代原有八个安装参考点；被皮条或硬件遮挡的安装点仍保持未映射。",
+          "照片配准、模型尺度及隐藏结构尚未通过实物验证。"
+        ]
+      }
+    },
+    {
+      "name": "Touch paper pick keeps real paper + actual model independent IDs",
+      "passed": true,
+      "detail": {
+        "pair": {
+          "schemaVersion": 1,
+          "paper": {
+            "triangle": 6959,
+            "barycentric": [
+              0.3333307262946644,
+              0.3333363502023671,
+              0.33333292350296845
+            ],
+            "flatMm": [
+              176.68405151367188,
+              78.02006538814658
+            ],
+            "formedMm": [
+              176.68405151367233,
+              78.02006538814658,
+              0
+            ]
+          },
+          "photoPixel": [
+            553.6614019621627,
+            472.64264024406435
+          ],
+          "actual": {
+            "meshPath": "root/4",
+            "meshName": "Upper_Body_Cloth",
+            "triangle": 2159,
+            "geometryVertexIndices": [
+              1185,
+              1124,
+              1353
+            ],
+            "barycentric": [
+              0.6168058270897355,
+              0.2602984315370588,
+              0.12289574137320569
+            ],
+            "modelPosition": [
+              -0.13219048765460625,
+              -0.08248179793491626,
+              0.2920627617524132
+            ],
+            "geometrySignature": "2618:13926:2c2d7707",
+            "role": "body",
+            "units": "model-unit"
+          },
+          "layer": "body",
+          "projectionResidualPx": 5.684341886080802e-14,
+          "registrationFitResidualPx": 19.00612423254421,
+          "confidence": "unverified-photo-bridge",
+          "productionReady": false,
+          "warnings": [
+            "裁片三角形与 AI 模型三角形是两个独立身份，不可互换。",
+            "照片桥接依赖未验证的裁片形变与模型相机配准；AI 模型单位未获实物尺度校准。",
+            "数值投影残差仅检查同一相机计算自洽，不表示实物定位误差。"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Touch actual cloth pick maps back to same paper location",
+      "passed": true,
+      "detail": {
+        "before": [
+          176.68405151367188,
+          78.02006538814658
+        ],
+        "after": [
+          176.71402773387726,
+          78.02543809295499
+        ]
+      }
+    },
+    {
+      "name": "Foreground snap/PU target does not invent a hidden cloth anchor",
+      "passed": true,
+      "detail": {
+        "anchor": null,
+        "candidateCount": 0,
+        "ambiguous": false,
+        "warnings": [
+          "照片射线首先命中扣件、鞋带、鞋舌或其他排除结构；未将其后方不可见面料当作已观察安装面。",
+          "照片桥接依赖未验证的裁片形变与模型相机配准；AI 模型单位未获实物尺度校准。"
+        ]
+      }
+    },
+    {
+      "name": "Outside photograph remains unmapped",
+      "passed": true,
+      "detail": {
+        "anchor": null,
+        "candidateCount": 0,
+        "ambiguous": false,
+        "warnings": [
+          "位置不在源照片范围内。",
+          "照片桥接依赖未验证的裁片形变与模型相机配准；AI 模型单位未获实物尺度校准。"
+        ]
+      }
+    },
+    {
+      "name": "Manual pair keeps independent identities",
+      "passed": true,
+      "detail": {
+        "before": 8,
+        "points": 9
+      }
+    },
+    {
+      "name": "Matching actual model/paper shell identity is enabled",
+      "passed": true,
+      "detail": {
+        "shell": {
+          "sourceVertices": 8453,
+          "mappedVertices": 1670,
+          "drawnTriangles": 2720,
+          "sourceTriangles": 16125,
+          "visible": false,
+          "progress": 1
+        }
+      }
+    },
+    {
+      "name": "Rapid shell animation interruption: last target wins",
+      "passed": true,
+      "detail": {
+        "sourceVertices": 8453,
+        "mappedVertices": 1670,
+        "drawnTriangles": 2720,
+        "sourceTriangles": 16125,
+        "visible": true,
+        "progress": 0
+      }
+    },
+    {
+      "name": "Same-source shell display interpolation reaches actual model",
+      "passed": true,
+      "detail": {
+        "elapsedMs": 1539.6000000014901,
+        "frames": 9,
+        "medianFrameMs": 183.29999999999927,
+        "p95FrameMs": 366.59999999999854,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Shell interpolation leaves authoritative paper coordinates unchanged",
+      "passed": true,
+      "detail": {
+        "sourceVertices": 8453
+      }
+    },
+    {
+      "name": "Registration edits invalidate stale fitted shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Restoring exact registration re-enables shell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pair JSON and paper SVG actually download",
+      "passed": true,
+      "detail": [
+        "ONWARD-paper-model-reference.svg",
+        "ONWARD-paper-photo-model-bridge.json"
+      ]
+    },
+    {
+      "name": "Export keeps both coordinate systems and unverified status",
+      "passed": true,
+      "detail": {
+        "status": "unverified-photo-bridge",
+        "paperUnits": "mm",
+        "modelUnits": "uncalibrated-model-unit",
+        "anchorModel": "corrected",
+        "points": 9
+      }
+    },
+    {
+      "name": "Download target available: 下载修正版 GLB",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "url": "http://127.0.0.1:4328/soulgrain-onward/onward-model-v10/reference-model-v10/corrected-high.glb",
+        "contentLength": "33143480"
+      }
+    },
+    {
+      "name": "Download target available: 下载原版／预览 GLB",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "url": "http://127.0.0.1:4328/soulgrain-onward/onward-model-v10/reference-model-v10/xiezitu-original.glb",
+        "contentLength": "33432084"
+      }
+    },
+    {
+      "name": "Download target available: 下载可编辑 Blender 工程",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "url": "http://127.0.0.1:4328/soulgrain-onward/onward-model-v10/reference-model-v10/onward-model-v10-editable.blend",
+        "contentLength": "94321655"
+      }
+    },
+    {
+      "name": "Normal application assets have no failed requests",
+      "passed": true,
+      "detail": {
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "name": "Model fetch failure presents retry instead of silent success",
+      "passed": true,
+      "detail": "模型未能载入：TypeError: Failed to fetch"
+    },
+    {
+      "name": "Retry recovers actual GLB after transient load failure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No uncaught browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "failedRequests": [
+    {
+      "requestId": "40612.23",
+      "timestamp": 51762.493529,
+      "type": "Fetch",
+      "errorText": "",
+      "canceled": false,
+      "blockedReason": "inspector"
+    }
+  ],
+  "badResponses": [],
+  "downloadEvents": [
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "5432A106DFF3A1098BDADD3CADDFA849",
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "url": "blob:http://127.0.0.1:4328/c5160235-0b84-42cb-b9d9-984af986b875",
+        "suggestedFilename": "ONWARD-paper-photo-model-bridge.json"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 37841,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 37841,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 37841,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 37841,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "db95c3d7-29d7-44a9-8fb5-b86922b9d4a4",
+        "totalBytes": 37841,
+        "receivedBytes": 37841,
+        "state": "completed",
+        "filePath": "/tmp/onward-model-v10-qa-1793182590853/downloads/ONWARD-paper-photo-model-bridge.json"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "5432A106DFF3A1098BDADD3CADDFA849",
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "url": "blob:http://127.0.0.1:4328/fd55f1a5-eb1f-40f0-b2fd-59ea8ff2e15f",
+        "suggestedFilename": "ONWARD-paper-model-reference.svg"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 1895915,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 1895915,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 1895915,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "fedf9bd3-f33e-47b7-8e2c-73380420c590",
+        "totalBytes": 1895915,
+        "receivedBytes": 1895915,
+        "state": "completed",
+        "filePath": "/tmp/onward-model-v10-qa-1793182590853/downloads/ONWARD-paper-model-reference.svg"
+      }
+    }
+  ],
+  "sourceModelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "correctedModelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "limitations": [
+    "Browser functionality and numerical correspondence do not prove real manufacturing or photo/physical accuracy.",
+    "Only explicitly labelled photo-visible cloth participates. Hidden or hardware-obscured paper stays unmapped.",
+    "Software WebGL timing is not real iPad GPU performance.",
+    "A blocked source-model request is intentional during the final retry diagnostic."
+  ]
+}

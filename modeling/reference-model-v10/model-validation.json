@@ -1,0 +1,77 @@
+{
+  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "units": "model-unit",
+  "productionReady": false,
+  "sourceTriangles": 1393074,
+  "correctedHighTriangles": 1380828,
+  "sourceReviewTriangles": 239998,
+  "correctedReviewTriangles": 240480,
+  "semanticParts": [
+    {
+      "name": "Upper_Body_Cloth",
+      "bridgeRole": "body",
+      "triangles": 4642
+    },
+    {
+      "name": "Cuff_Cloth",
+      "bridgeRole": "cuff",
+      "triangles": 18155
+    },
+    {
+      "name": "Tongue_Flap_And_Local_Repairs",
+      "bridgeRole": "excluded",
+      "triangles": 9889
+    },
+    {
+      "name": "Footwear_Details_Unclassified",
+      "bridgeRole": "excluded",
+      "triangles": 207314
+    },
+    {
+      "name": "Tongue_Original_Position_Snap_Cap",
+      "bridgeRole": "excluded",
+      "triangles": 480
+    }
+  ],
+  "tongueSnapCap": {
+    "sourcePositionReference": [
+      -0.40268743,
+      -0.04069797,
+      0.08036959
+    ],
+    "center": [
+      -0.3880190728892592,
+      -0.08461025815356378,
+      0.09046719916314158
+    ],
+    "normal": [
+      0.44557140716055926,
+      -0.48642483794916247,
+      -0.7515696894813482
+    ],
+    "radiusModelUnits": 0.045,
+    "physicalDiameterMm": null,
+    "visibleFaceFit": {
+      "sourceReference": [
+        -0.40268743,
+        -0.04069797,
+        0.08036959
+      ],
+      "visibleClothSamples": 44,
+      "fitRmsModelUnits": 0.0027870769957103526,
+      "fitView": "Same orthographic side as original photo audit; source inner tongue face",
+      "physicalDiameterMm": null,
+      "sourceSideCentreOffsetModelUnits": [
+        0.014,
+        0.006
+      ],
+      "raisedLipSeatAlongViewModelUnits": 0.031,
+      "seatBasis": "Source orthographic ring silhouette and local first-surface depth; visual repair, not measured hardware manufacture."
+    }
+  },
+  "reviewLodToHighSampleCount": 2000,
+  "reviewLodToHighMeanDistanceModelUnits": 0.0003852023482808988,
+  "reviewLodToHighMaximumDistanceModelUnits": 0.01739221066236496,
+  "lodErrorCaveat": "One-way sampled geometric reduction check, not a full Hausdorff distance or real-world dimension error.",
+  "classificationCaveat": "Single-view estimated surface regions. No claim that fused AI hardware hides a recovered cloth layer."
+}

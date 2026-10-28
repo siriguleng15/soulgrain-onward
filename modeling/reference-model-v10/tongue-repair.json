@@ -1,0 +1,194 @@
+{
+  "operation": "Remove three AI-invented ring/holes from broad folded tongue; retain actual front snap.",
+  "sourceBlend": "/tmp/xiezitu-inspection.blend",
+  "coordinateSpace": "Blender world X-length Y-side Z-up; source units, not millimetres",
+  "sourceVertices": 696427,
+  "sourceFaces": 1393074,
+  "originalVertexIndicesPreserved": true,
+  "maximumOriginalVertexDisplacement": 0.014688256012810262,
+  "maximumOutsideRepairBandDisplacement": 0.0,
+  "fairing": {
+    "method": "35 bounded Taubin pairs on cap plus 15 adjacency rings, faded and pinned at outer band",
+    "affectedUsedVertices": 16353,
+    "movedOriginalVertices": 12630,
+    "maximumOriginalVertexDisplacement": 0.014688256012810262,
+    "maximumOutsideRepairBandDisplacement": 0.0,
+    "maxDisplacementRelativeToShoeLength": 0.0077237880262728854,
+    "boundSourceUnits": 0.015
+  },
+  "retainedOriginalFaces": 1372383,
+  "removedOriginalFaces": 20691,
+  "repairedVerticesIncludingOriginalUnused": 700150,
+  "usedVertices": 690070,
+  "unusedOriginalVerticesRetainedForIdentity": 10080,
+  "repairedFaces": 1380348,
+  "capFaceStart": 1372383,
+  "capFaceCount": 7965,
+  "newVertexStart": 696427,
+  "newVertexCount": 3723,
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "inconsistentSharedEdgeWinding": 0,
+  "degenerateTriangles": 0,
+  "usedSurfaceEulerCharacteristic": -104,
+  "patches": [
+    {
+      "id": "tongue-false-eyelet-1",
+      "sourceTopPixel": [
+        388,
+        294
+      ],
+      "center": [
+        -0.2452274616,
+        0.1714355883,
+        0.06614784
+      ],
+      "normal": [
+        -0.5070064993308494,
+        0.66680216911995,
+        0.5461861192791398
+      ],
+      "u": [
+        0.7328554244693053,
+        -8.105426463923425e-05,
+        0.6803843915435749
+      ],
+      "radius": 0.046,
+      "minimumDepth": -0.03,
+      "v": [
+        0.4537260588308675,
+        0.7452347688394145,
+        -0.4886284916484839
+      ],
+      "removedFaces": 5248,
+      "nearbyFacesExcluded": 0,
+      "capFaceStartWithinCaps": 0,
+      "capFaceCount": 3390,
+      "loops": [
+        {
+          "boundaryVertices": 81,
+          "boundaryDepthMean": 0.001322364360096427,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 568,
+          "newFaces": 1215
+        },
+        {
+          "boundaryVertices": 145,
+          "boundaryDepthMean": -0.026884246450378867,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 1016,
+          "newFaces": 2175
+        }
+      ]
+    },
+    {
+      "id": "tongue-false-eyelet-2",
+      "sourceTopPixel": [
+        480,
+        247
+      ],
+      "center": [
+        -0.044028586,
+        0.2742219704,
+        0.11451284
+      ],
+      "normal": [
+        -0.43925249998941623,
+        0.7805502199811927,
+        0.4447455399892839
+      ],
+      "u": [
+        0.7114872710435247,
+        4.139414941035646e-07,
+        0.7026989847316322
+      ],
+      "radius": 0.06,
+      "minimumDepth": -0.03,
+      "v": [
+        0.5484916630142029,
+        0.6250930763391485,
+        -0.5553517277516778
+      ],
+      "removedFaces": 5328,
+      "nearbyFacesExcluded": 0,
+      "capFaceStartWithinCaps": 3390,
+      "capFaceCount": 1470,
+      "loops": [
+        {
+          "boundaryVertices": 44,
+          "boundaryDepthMean": -0.0009954188255132152,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 309,
+          "newFaces": 660
+        },
+        {
+          "boundaryVertices": 54,
+          "boundaryDepthMean": -0.019094626205837014,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 379,
+          "newFaces": 810
+        }
+      ]
+    },
+    {
+      "id": "tongue-false-eyelet-3",
+      "sourceTopPixel": [
+        484,
+        290
+      ],
+      "center": [
+        -0.0352808088,
+        0.1801833655,
+        0.26603902
+      ],
+      "normal": [
+        -0.48200396051363686,
+        0.6828662507276814,
+        0.5489680005849956
+      ],
+      "u": [
+        0.7513628086774446,
+        -0.0001439062242600586,
+        0.6598893157396476
+      ],
+      "radius": 0.055,
+      "minimumDepth": -0.04,
+      "v": [
+        0.45069514284659207,
+        0.7305434024807274,
+        -0.5130109407277509
+      ],
+      "removedFaces": 10115,
+      "nearbyFacesExcluded": 327,
+      "capFaceStartWithinCaps": 4860,
+      "capFaceCount": 3105,
+      "loops": [
+        {
+          "boundaryVertices": 46,
+          "boundaryDepthMean": -0.0006564945154839526,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 323,
+          "newFaces": 690
+        },
+        {
+          "boundaryVertices": 161,
+          "boundaryDepthMean": -0.03263464247886255,
+          "method": "3D Hermite cap with unchanged adjacent-cloth tangents",
+          "newVertices": 1128,
+          "newFaces": 2415
+        }
+      ]
+    }
+  ],
+  "preserved": [
+    "Tongue front snap at source-top pixel 316,391",
+    "Actual laced-body and cuff eyelets",
+    "Shoe laces, cuff, straps, sole and all source positions outside the documented local repair band"
+  ],
+  "limitations": [
+    "Repair is based on supplied single-side reference and clearly invented tongue rings.",
+    "No UV or print exists in the uploaded source.",
+    "Smooth caps approximate missing cloth locally; they are not recovered factory topology.",
+    "No new real-world dimensional precision is asserted."
+  ]
+}

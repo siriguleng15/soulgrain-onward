@@ -1,0 +1,251 @@
+{
+  "pairs": [
+    {
+      "id": "cuff-back-top",
+      "sourceAuditPixel": [
+        890,
+        182
+      ],
+      "targetPhotoPixel": [
+        1113,
+        139
+      ],
+      "weight": 1
+    },
+    {
+      "id": "cuff-back-bottom",
+      "sourceAuditPixel": [
+        933,
+        401
+      ],
+      "targetPhotoPixel": [
+        1209,
+        411
+      ],
+      "weight": 1
+    },
+    {
+      "id": "cuff-front-top",
+      "sourceAuditPixel": [
+        544,
+        253
+      ],
+      "targetPhotoPixel": [
+        697,
+        220
+      ],
+      "weight": 0.8
+    },
+    {
+      "id": "cuff-front-bottom",
+      "sourceAuditPixel": [
+        668,
+        509
+      ],
+      "targetPhotoPixel": [
+        867,
+        595
+      ],
+      "weight": 1
+    },
+    {
+      "id": "cuff-eye-1",
+      "sourceAuditPixel": [
+        602,
+        273
+      ],
+      "targetPhotoPixel": [
+        765,
+        258
+      ],
+      "weight": 1
+    },
+    {
+      "id": "cuff-eye-3",
+      "sourceAuditPixel": [
+        640,
+        380
+      ],
+      "targetPhotoPixel": [
+        817,
+        399
+      ],
+      "weight": 1
+    },
+    {
+      "id": "cuff-eye-5",
+      "sourceAuditPixel": [
+        689,
+        486
+      ],
+      "targetPhotoPixel": [
+        875,
+        542
+      ],
+      "weight": 1
+    },
+    {
+      "id": "snap-upper",
+      "sourceAuditPixel": [
+        609,
+        358
+      ],
+      "targetPhotoPixel": [
+        774.121565,
+        373.342457
+      ],
+      "weight": 1
+    },
+    {
+      "id": "snap-lower",
+      "sourceAuditPixel": [
+        637,
+        413
+      ],
+      "targetPhotoPixel": [
+        812.649906,
+        452.448903
+      ],
+      "weight": 1
+    },
+    {
+      "id": "strap-upper-body",
+      "sourceAuditPixel": [
+        489,
+        416
+      ],
+      "targetPhotoPixel": [
+        598.273121,
+        467.904664
+      ],
+      "weight": 1
+    },
+    {
+      "id": "strap-upper-cuff",
+      "sourceAuditPixel": [
+        745,
+        293
+      ],
+      "targetPhotoPixel": [
+        957.482527,
+        284.035444
+      ],
+      "weight": 1
+    },
+    {
+      "id": "strap-lower-body",
+      "sourceAuditPixel": [
+        520,
+        466
+      ],
+      "targetPhotoPixel": [
+        635.286722,
+        532.92046
+      ],
+      "weight": 1
+    },
+    {
+      "id": "strap-lower-cuff",
+      "sourceAuditPixel": [
+        774,
+        360
+      ],
+      "targetPhotoPixel": [
+        1000.612157,
+        371.962194
+      ],
+      "weight": 1
+    },
+    {
+      "id": "toe-bottom",
+      "sourceAuditPixel": [
+        162,
+        585
+      ],
+      "targetPhotoPixel": [
+        234,
+        690
+      ],
+      "weight": 0.25
+    },
+    {
+      "id": "sole-heel",
+      "sourceAuditPixel": [
+        871,
+        550
+      ],
+      "targetPhotoPixel": [
+        1120,
+        640
+      ],
+      "weight": 0.25
+    },
+    {
+      "id": "toe-front",
+      "sourceAuditPixel": [
+        70,
+        483
+      ],
+      "targetPhotoPixel": [
+        75,
+        570
+      ],
+      "weight": 0.25
+    }
+  ],
+  "sourceAuditCamera": {
+    "orthoScale": 2.1869443,
+    "imageSize": [
+      1000,
+      750
+    ],
+    "centerGLTF": [
+      -0.0002896789,
+      0.0014027208,
+      0.0057068616
+    ],
+    "rightWorld": [
+      1,
+      0,
+      0
+    ],
+    "upWorld": [
+      0,
+      0.9928768384869221,
+      -0.11914522061843064
+    ],
+    "viewDirectionWorld": [
+      0,
+      -0.11914522061843064,
+      -0.9928768384869221
+    ]
+  },
+  "registration": {
+    "widthPx": 1280,
+    "heightPx": 894,
+    "originXPx": 632.3062455839536,
+    "originYPx": 398.2609984370778,
+    "pixelsPerUnitX": 594.9357250824125,
+    "pixelsPerUnitY": 637.4177052734955,
+    "rightWorld": [
+      1,
+      0,
+      0
+    ],
+    "upWorld": [
+      0,
+      0.9928768384869221,
+      -0.11914522061843064
+    ],
+    "viewDirectionWorld": [
+      0,
+      -0.11914522061843064,
+      -0.9928768384869221
+    ],
+    "units": "model-unit",
+    "assumption": "Manual correspondences from uploaded model orthographic audit and final source photograph; independent display scales, not physical millimetres. Hidden geometry, camera perspective and manual feature reading remain uncertain.",
+    "fitResidualPx": 19.00612423254421
+  },
+  "manualReadingUncertaintyPx": 5,
+  "method": "Provisional orthographic feature fit. Target snapshot retains exact measured blue circle/white strap pixel observations; other silhouette and audit-view correspondences are manually read and approximate."
+}
