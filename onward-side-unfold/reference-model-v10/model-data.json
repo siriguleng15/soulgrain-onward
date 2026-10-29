@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "sourcePreviewFile": "source-preview.glb",
+  "sourceFile": "xiezitu-original.glb",
+  "correctedFile": "corrected.glb",
+  "highResolutionFile": "corrected-high.glb",
+  "correctedDownloadFile": "corrected-high.glb",
+  "blenderFile": "onward-model-v10-editable.blend",
+  "units": "uncalibrated-model-unit",
+  "scaleNote": "上传模型未标定真实长度。模型坐标不当作毫米；裁片保持原来的毫米坐标与原始轮廓。",
+  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "correctedSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "tongueObjectNames": [
+    "Tongue_Flap_And_Local_Repairs",
+    "Tongue_Original_Position_Snap_Cap"
+  ],
+  "photoRegistration": {
+    "widthPx": 1280,
+    "heightPx": 894,
+    "originXPx": 632.3062455839536,
+    "originYPx": 398.2609984370778,
+    "pixelsPerUnitX": 594.9357250824125,
+    "pixelsPerUnitY": 637.4177052734955,
+    "rightWorld": [
+      1,
+      0,
+      0
+    ],
+    "upWorld": [
+      0,
+      0.9928768384869221,
+      -0.11914522061843064
+    ],
+    "viewDirectionWorld": [
+      0,
+      -0.11914522061843064,
+      -0.9928768384869221
+    ],
+    "units": "model-unit",
+    "assumption": "Manual correspondences from uploaded model orthographic audit and final source photograph; independent display scales, not physical millimetres. Hidden geometry, camera perspective and manual feature reading remain uncertain.",
+    "fitResidualPx": 19.00612423254421
+  },
+  "corrections": [
+    "移除 AI 在鞋舌远侧额外生成的三处鞋眼孔及局部圈边，补回连续布面；保留前方扣件位置并补为参考图中的浅凸银色闭合扣帽。",
+    "局部补面与小范围平顺处理保留修补邻域外的源几何；闭合边、面绕序和退化面单独检查。",
+    "以最终白色皮条效果图约束翻筒与皮条的可见关系，进行限幅的外侧鞋面轮廓校准；鞋底保护区保持不变。",
+    "单独保留上传原版、高精度修正版、展示网格及可编辑 Blender 工程。"
+  ],
+  "notes": [
+    "模型原文件没有 UV 或纹理，本轮保留中性几何材质。",
+    "外翻鞋舌的隐藏面和背面仅由当前模型与单张照片约束，尚未经实物核验。",
+    "布面分类来自照片中的可见区域，遮挡处不会强行绑定到皮条或扣具。"
+  ]
+}

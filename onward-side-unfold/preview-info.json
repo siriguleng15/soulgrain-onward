@@ -1,0 +1,8 @@
+{
+  "sourceBranch": "feat/onward-detachable-side-panel",
+  "sourceCommit": "bb1610d1d2d48d7b496ddc648133a8c261b2a4b1",
+  "previousPagesCommit": "7235b460eb4e75d4495d7930992aa5a7c07dcd6c",
+  "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+  "scope": "New isolated prefix only; existing website and earlier models/previews unchanged.",
+  "realIpadSafariTested": false
+}

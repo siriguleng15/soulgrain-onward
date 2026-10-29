@@ -1,0 +1,1365 @@
+{
+  "sourceVertexCount": 8453,
+  "sourceTriangleCount": 16125,
+  "vertexCountWithExactTrimIntersections": 8963,
+  "originalCoordinatesAndIdsUnchanged": true,
+  "fullSourceAreaMm2": 44302.75328045732,
+  "flatMaximumErrorMm": 0.0,
+  "smoothDepthObservedSampleRmsModelUnits": 0.02406954580307644,
+  "allVisiblePanelVerticesFinite": true,
+  "visiblePanelHasNoUnmappedVertices": true,
+  "observedOriginalVertexCount": 2019,
+  "completedOriginalVertexCount": 6434,
+  "trimPhysicalBoundaryValidated": false,
+  "restoredFlatState": "Uniform rigid display transform of immutable millimetre paper, exact per source vertex; not AI-mesh unwrapping.",
+  "geometricRegularization": {
+    "method": "120 local/global rest-gradient SVD projections with sparse global solve",
+    "softAttachmentPin": 0.0003,
+    "restAreaWeightFloorMm2": 0.02,
+    "sourceTargetRmsDistanceModelUnits": 0.02658599267411469,
+    "sourceTargetMaximumDistanceModelUnits": 0.0970703907033149,
+    "sourceTargetDisplacementRelativeToShoeLength": 0.013980187416655581,
+    "isPhysicalClothSolver": false,
+    "fitResidualAppliesTo": "Initial attached regularisation before the separately reported crease-orientation adjustment."
+  },
+  "clippingTopology": [
+    {
+      "id": "traced-lower-pencil-reference",
+      "refinedTriangles": 16,
+      "newInteriorVertices": 16,
+      "splitEdges": 16
+    },
+    {
+      "id": "full-source-no-exclusion",
+      "refinedTriangles": 0,
+      "newInteriorVertices": 0,
+      "splitEdges": 0
+    },
+    {
+      "id": "photo-inferred-sole-top",
+      "refinedTriangles": 14,
+      "newInteriorVertices": 14,
+      "splitEdges": 14
+    }
+  ],
+  "attachedMetric": {
+    "triangles": 15033,
+    "finite": true,
+    "minimumPrincipalStretch": 0.7880156042551594,
+    "maximumPrincipalStretch": 1.2315930519196545,
+    "minimumAreaRatio": 0.7964255970395281,
+    "maximumAreaRatio": 1.2042401001326,
+    "degenerateTriangles": 0,
+    "percentOfTrianglesAbove10PercentStrain": 13.397192842413357,
+    "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+  },
+  "flatMetric": {
+    "triangles": 15033,
+    "finite": true,
+    "minimumPrincipalStretch": 0.9999999999993471,
+    "maximumPrincipalStretch": 1.0000000000010627,
+    "minimumAreaRatio": 0.9999999999995249,
+    "maximumAreaRatio": 1.000000000000964,
+    "degenerateTriangles": 0,
+    "percentOfTrianglesAbove10PercentStrain": 0.0,
+    "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+  },
+  "removedOriginalAiTriangles": 68356,
+  "keptOriginalAiTriangles": 172124,
+  "selfIntersectionTest": "not-performed",
+  "productionReady": false,
+  "poseMetricBounds": [
+    {
+      "formedAmount": 0.0,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9999999999993471,
+      "maximumPrincipalStretch": 1.0000000000010627,
+      "minimumAreaRatio": 0.9999999999995249,
+      "maximumAreaRatio": 1.000000000000964,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.0625,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9952525944849656,
+      "maximumPrincipalStretch": 1.0016588380074718,
+      "minimumAreaRatio": 0.9952542484067701,
+      "maximumAreaRatio": 1.000900466623524,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.125,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9789961280309762,
+      "maximumPrincipalStretch": 1.0063103166942173,
+      "minimumAreaRatio": 0.9785945521271814,
+      "maximumAreaRatio": 1.0033932973213957,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.1875,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9284315514022469,
+      "maximumPrincipalStretch": 1.0134278584818834,
+      "minimumAreaRatio": 0.9258607487528282,
+      "maximumAreaRatio": 1.0071126544063724,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8660596445911638,
+      "maximumPrincipalStretch": 1.0245455058877035,
+      "minimumAreaRatio": 0.8621620851924149,
+      "maximumAreaRatio": 1.0125873167719537,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.013304064391671656,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.3125,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.813256289469599,
+      "maximumPrincipalStretch": 1.0376216365657782,
+      "minimumAreaRatio": 0.8076502149778356,
+      "maximumAreaRatio": 1.0266954348219453,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 4.5965542473225565,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.375,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7694172918094553,
+      "maximumPrincipalStretch": 1.0635047650828584,
+      "minimumAreaRatio": 0.7632290678349076,
+      "maximumAreaRatio": 1.0467814507376236,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 16.277522783210273,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.4375,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7316872577774229,
+      "maximumPrincipalStretch": 1.0939598395190318,
+      "minimumAreaRatio": 0.7248846560652776,
+      "maximumAreaRatio": 1.0709681382528007,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.25763320694472,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6989998163097025,
+      "maximumPrincipalStretch": 1.129779862247837,
+      "minimumAreaRatio": 0.6917268975383544,
+      "maximumAreaRatio": 1.1049663003674877,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.415086809020156,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.5625,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6897468621810252,
+      "maximumPrincipalStretch": 1.1579863575234888,
+      "minimumAreaRatio": 0.6818459671878176,
+      "maximumAreaRatio": 1.1244188080140485,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 21.007117674449542,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.625,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6977226663438186,
+      "maximumPrincipalStretch": 1.176782517955609,
+      "minimumAreaRatio": 0.689275273768084,
+      "maximumAreaRatio": 1.1490787290980677,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.721080290028603,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.6875,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.715361248120292,
+      "maximumPrincipalStretch": 1.1916589895166645,
+      "minimumAreaRatio": 0.7067861325517512,
+      "maximumAreaRatio": 1.143535088418378,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.41728197964478,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7376370963906733,
+      "maximumPrincipalStretch": 1.1935487195947199,
+      "minimumAreaRatio": 0.729736962191381,
+      "maximumAreaRatio": 1.1289155979721441,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 16.357347169560303,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.8125,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7599226805155646,
+      "maximumPrincipalStretch": 1.1881441477401895,
+      "minimumAreaRatio": 0.7530648451226034,
+      "maximumAreaRatio": 1.1319548656046219,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 14.920508215259762,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.875,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7777732301932488,
+      "maximumPrincipalStretch": 1.198770545671541,
+      "minimumAreaRatio": 0.7734612576637315,
+      "maximumAreaRatio": 1.1527458278718425,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.929355418080224,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.9375,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.783975063656118,
+      "maximumPrincipalStretch": 1.2120331637282165,
+      "minimumAreaRatio": 0.7872608107155562,
+      "maximumAreaRatio": 1.1747372357622903,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.397192842413357,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 1.0,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7880156042551594,
+      "maximumPrincipalStretch": 1.2315930519196545,
+      "minimumAreaRatio": 0.7964255970395281,
+      "maximumAreaRatio": 1.2042401001326,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.397192842413357,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    }
+  ],
+  "creaseOrientationStabilization": {
+    "version": "analytic-two-fold-normal-v4-whole-paper",
+    "method": "Whole-paper polar-frame bias +1.0 analytic two-fold references; reject opposite-normal polar branches; 90 sparse local/global iterations per nonflat pose",
+    "normalReference": "Analytic cuff crease plus 90-degree under-sole wrap from stored hypotheses; geometric orientation constraints, not measured cloth normals",
+    "isPhysicalClothSolver": false,
+    "creaseTriangles": 16125,
+    "cuffReferenceTriangles": 5107,
+    "underSoleReferenceTriangles": 4737,
+    "normalReferenceBias": 1.0,
+    "relaxedCreaseVertices": 441,
+    "creaseVertexPinCap": 0.0003,
+    "inputPoseSha256": "bec821262b741865d73ccbe9f06a70417b663c3d0fc9cd0cf4120f567f50ced0",
+    "outputPoseSha256": "8d4f55769b2c1cbe26caea6ed7f1fcb3ecfbede5ed3b879aa0f49212b7d67a97",
+    "immutableIdentitySha256": "a4c58b0f67a1674e4fa56271ae96567470131d14e5d361fb81ef7d96680575ea",
+    "attachedAdjustmentRmsModelUnits": 0.04201016742327084,
+    "attachedAdjustmentMaximumModelUnits": 0.1857289602971764,
+    "perPoseAdjustments": [
+      {
+        "formedAmount": 1.0,
+        "rmsAdjustmentModelUnits": 0.04201016742327084,
+        "maximumAdjustmentModelUnits": 0.1857289602971764
+      },
+      {
+        "formedAmount": 0.9375,
+        "rmsAdjustmentModelUnits": 0.04093674539343886,
+        "maximumAdjustmentModelUnits": 0.1818261693462783
+      },
+      {
+        "formedAmount": 0.875,
+        "rmsAdjustmentModelUnits": 0.039708560464688736,
+        "maximumAdjustmentModelUnits": 0.1765577140601604
+      },
+      {
+        "formedAmount": 0.8125,
+        "rmsAdjustmentModelUnits": 0.03759581578435153,
+        "maximumAdjustmentModelUnits": 0.16944645848807233
+      },
+      {
+        "formedAmount": 0.75,
+        "rmsAdjustmentModelUnits": 0.0347627127576385,
+        "maximumAdjustmentModelUnits": 0.16206136503768112
+      },
+      {
+        "formedAmount": 0.6875,
+        "rmsAdjustmentModelUnits": 0.03128428936614866,
+        "maximumAdjustmentModelUnits": 0.1516786048983162
+      },
+      {
+        "formedAmount": 0.625,
+        "rmsAdjustmentModelUnits": 0.027367680938360218,
+        "maximumAdjustmentModelUnits": 0.14074021362274317
+      },
+      {
+        "formedAmount": 0.5625,
+        "rmsAdjustmentModelUnits": 0.023536597500650378,
+        "maximumAdjustmentModelUnits": 0.12751150422587784
+      },
+      {
+        "formedAmount": 0.5,
+        "rmsAdjustmentModelUnits": 0.020193839005745482,
+        "maximumAdjustmentModelUnits": 0.10869266093457881
+      },
+      {
+        "formedAmount": 0.4375,
+        "rmsAdjustmentModelUnits": 0.01743154518767846,
+        "maximumAdjustmentModelUnits": 0.08754829179961057
+      },
+      {
+        "formedAmount": 0.375,
+        "rmsAdjustmentModelUnits": 0.014450077732075805,
+        "maximumAdjustmentModelUnits": 0.06369356138961238
+      },
+      {
+        "formedAmount": 0.3125,
+        "rmsAdjustmentModelUnits": 0.011526446581418574,
+        "maximumAdjustmentModelUnits": 0.04580072387663102
+      },
+      {
+        "formedAmount": 0.25,
+        "rmsAdjustmentModelUnits": 0.008687017099575036,
+        "maximumAdjustmentModelUnits": 0.024611889553543115
+      },
+      {
+        "formedAmount": 0.1875,
+        "rmsAdjustmentModelUnits": 0.006005259438819666,
+        "maximumAdjustmentModelUnits": 0.018596821465411563
+      },
+      {
+        "formedAmount": 0.125,
+        "rmsAdjustmentModelUnits": 0.003936398332914869,
+        "maximumAdjustmentModelUnits": 0.014086406246226365
+      },
+      {
+        "formedAmount": 0.0625,
+        "rmsAdjustmentModelUnits": 0.002047476095962698,
+        "maximumAdjustmentModelUnits": 0.0079760321538919
+      }
+    ]
+  },
+  "interpolatedMidpointMetricBounds": [
+    {
+      "formedAmount": 0.03125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.994722354128458,
+      "maximumPrincipalStretch": 1.0008036546731118,
+      "minimumAreaRatio": 0.994582936015488,
+      "maximumAreaRatio": 1.0004265411300959,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.09375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9871060703077913,
+      "maximumPrincipalStretch": 1.0039441841938461,
+      "minimumAreaRatio": 0.9868072216164095,
+      "maximumAreaRatio": 1.0021025594775268,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.15625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9536440989895105,
+      "maximumPrincipalStretch": 1.009799801638578,
+      "minimumAreaRatio": 0.9519114530370181,
+      "maximumAreaRatio": 1.00519300568421,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.21875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8968346871688995,
+      "maximumPrincipalStretch": 1.0188335507504729,
+      "minimumAreaRatio": 0.8934687354997826,
+      "maximumAreaRatio": 1.0097677001897942,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.006652032195835828,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.28125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8389149428154561,
+      "maximumPrincipalStretch": 1.0302835428737267,
+      "minimumAreaRatio": 0.8340425378842579,
+      "maximumAreaRatio": 1.0154922924654615,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.11973657952504489,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.34375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7901220143356823,
+      "maximumPrincipalStretch": 1.0482678865728559,
+      "minimumAreaRatio": 0.7841500331335423,
+      "maximumAreaRatio": 1.0326469595996892,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.051287168229894,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.40625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7484645926447219,
+      "maximumPrincipalStretch": 1.0764935737132488,
+      "minimumAreaRatio": 0.7418914117452483,
+      "maximumAreaRatio": 1.0549946996200048,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 18.313044635136034,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.46875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7120008851431199,
+      "maximumPrincipalStretch": 1.1097515385208254,
+      "minimumAreaRatio": 0.7048773357903552,
+      "maximumAreaRatio": 1.0841292823116702,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.96274861970332,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.53125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6907965709063665,
+      "maximumPrincipalStretch": 1.1422816342407969,
+      "minimumAreaRatio": 0.6831031696177418,
+      "maximumAreaRatio": 1.1114284786583961,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.847468901749487,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.59375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6906252614779684,
+      "maximumPrincipalStretch": 1.1659160700517093,
+      "minimumAreaRatio": 0.6822946620660761,
+      "maximumAreaRatio": 1.132870156025486,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 21.04037783542872,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.65625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7044218608304417,
+      "maximumPrincipalStretch": 1.1817008690347084,
+      "minimumAreaRatio": 0.6957293031303635,
+      "maximumAreaRatio": 1.1386768042511577,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.388478680236812,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.71875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7252944725967788,
+      "maximumPrincipalStretch": 1.1911511538402748,
+      "minimumAreaRatio": 0.7168694789870226,
+      "maximumAreaRatio": 1.1332186906431378,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 17.880662542406707,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.78125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7481913571410805,
+      "maximumPrincipalStretch": 1.1892320166420751,
+      "minimumAreaRatio": 0.7406554421854954,
+      "maximumAreaRatio": 1.1180202178202965,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 15.6522317568017,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.84375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7693940902933657,
+      "maximumPrincipalStretch": 1.193057665887516,
+      "minimumAreaRatio": 0.7629508939559518,
+      "maximumAreaRatio": 1.1369479286448072,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 14.494778154726268,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.90625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7806782371476683,
+      "maximumPrincipalStretch": 1.204817028986162,
+      "minimumAreaRatio": 0.7802778435463829,
+      "maximumAreaRatio": 1.1580667557957476,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.656622098050955,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.96875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7860334060934785,
+      "maximumPrincipalStretch": 1.2213585057861782,
+      "minimumAreaRatio": 0.7923070890485352,
+      "maximumAreaRatio": 1.183557009277057,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.4238009711967,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    }
+  ],
+  "interpolatedQuarterMetricBounds": [
+    {
+      "formedAmount": 0.015625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9962251525321497,
+      "maximumPrincipalStretch": 1.0003954069073098,
+      "minimumAreaRatio": 0.9961324727891279,
+      "maximumAreaRatio": 1.0002073372141878,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.03125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.994722354128458,
+      "maximumPrincipalStretch": 1.0008036546731118,
+      "minimumAreaRatio": 0.994582936015488,
+      "maximumAreaRatio": 1.0004265411300959,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.046875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.995499463306715,
+      "maximumPrincipalStretch": 1.001224785278738,
+      "minimumAreaRatio": 0.9952970464262582,
+      "maximumAreaRatio": 1.0006575912362181,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.078125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9911756357816239,
+      "maximumPrincipalStretch": 1.0027914145981096,
+      "minimumAreaRatio": 0.9910012172325503,
+      "maximumAreaRatio": 1.001491714353561,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.09375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9871060703077913,
+      "maximumPrincipalStretch": 1.0039441841938461,
+      "minimumAreaRatio": 0.9868072216164095,
+      "maximumAreaRatio": 1.0021025594775268,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.109375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9830460866107508,
+      "maximumPrincipalStretch": 1.0051171510472439,
+      "minimumAreaRatio": 0.9826718176427982,
+      "maximumAreaRatio": 1.0027329035724784,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.140625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9663287068946455,
+      "maximumPrincipalStretch": 1.008036542411052,
+      "minimumAreaRatio": 0.96517417103346,
+      "maximumAreaRatio": 1.004274062293175,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.15625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9536440989895105,
+      "maximumPrincipalStretch": 1.009799801638578,
+      "minimumAreaRatio": 0.9519114530370181,
+      "maximumAreaRatio": 1.00519300568421,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.171875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9410049370336645,
+      "maximumPrincipalStretch": 1.0115973577430553,
+      "minimumAreaRatio": 0.9388068198505025,
+      "maximumAreaRatio": 1.0061392719986442,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.203125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.9125388341615491,
+      "maximumPrincipalStretch": 1.0161127924355167,
+      "minimumAreaRatio": 0.9095333553536703,
+      "maximumAreaRatio": 1.0084097598985253,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.0,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.21875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8968346871688995,
+      "maximumPrincipalStretch": 1.0188335507504729,
+      "minimumAreaRatio": 0.8934687354997826,
+      "maximumAreaRatio": 1.0097677001897942,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.006652032195835828,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.234375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8813368097703727,
+      "maximumPrincipalStretch": 1.0216628081359054,
+      "minimumAreaRatio": 0.8776753316192657,
+      "maximumAreaRatio": 1.0111603299317635,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.006652032195835828,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.265625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8523098616449524,
+      "maximumPrincipalStretch": 1.0273860343309749,
+      "minimumAreaRatio": 0.8478935525626449,
+      "maximumAreaRatio": 1.0140173759723168,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.019956096587507483,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.28125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8389149428154561,
+      "maximumPrincipalStretch": 1.0302835428737267,
+      "minimumAreaRatio": 0.8340425378842579,
+      "maximumAreaRatio": 1.0154922924654615,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 0.11973657952504489,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.296875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8258915844246593,
+      "maximumPrincipalStretch": 1.033236999222923,
+      "minimumAreaRatio": 0.8206232377028067,
+      "maximumAreaRatio": 1.019712854680484,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 1.0909332801170757,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.328125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.8013974595576492,
+      "maximumPrincipalStretch": 1.042397100815915,
+      "minimumAreaRatio": 0.7955890369275245,
+      "maximumAreaRatio": 1.028641840545528,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 9.665402780549458,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.34375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7901220143356823,
+      "maximumPrincipalStretch": 1.0482678865728559,
+      "minimumAreaRatio": 0.7841500331335423,
+      "maximumAreaRatio": 1.0326469595996892,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.051287168229894,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.359375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7794541838849722,
+      "maximumPrincipalStretch": 1.0552742025820474,
+      "minimumAreaRatio": 0.7733559085057053,
+      "maximumAreaRatio": 1.0387007679984044,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 15.066852923568149,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.390625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7584372606552322,
+      "maximumPrincipalStretch": 1.0694494011173805,
+      "minimumAreaRatio": 0.7520366826544359,
+      "maximumAreaRatio": 1.0499110576064012,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 17.494844675048228,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.40625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7484645926447219,
+      "maximumPrincipalStretch": 1.0764935737132488,
+      "minimumAreaRatio": 0.7418914117452483,
+      "maximumAreaRatio": 1.0549946996200048,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 18.313044635136034,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.421875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7395367335207735,
+      "maximumPrincipalStretch": 1.0846492597556436,
+      "minimumAreaRatio": 0.7328295944795644,
+      "maximumAreaRatio": 1.062020947117826,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 18.93168362934877,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.453125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7210343643402081,
+      "maximumPrincipalStretch": 1.1013315471497063,
+      "minimumAreaRatio": 0.7140499330789941,
+      "maximumAreaRatio": 1.076582552726629,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.696667331869886,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.46875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7120008851431199,
+      "maximumPrincipalStretch": 1.1097515385208254,
+      "minimumAreaRatio": 0.7048773357903552,
+      "maximumAreaRatio": 1.0841292823116702,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.96274861970332,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.484375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7046417478160831,
+      "maximumPrincipalStretch": 1.1192252704459784,
+      "minimumAreaRatio": 0.6974214906491861,
+      "maximumAreaRatio": 1.093597351725794,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.208873810949246,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.515625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6940062566418224,
+      "maximumPrincipalStretch": 1.1356252066869272,
+      "minimumAreaRatio": 0.6864993744868189,
+      "maximumAreaRatio": 1.107381740799488,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.654559968070245,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.53125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6907965709063665,
+      "maximumPrincipalStretch": 1.1422816342407969,
+      "minimumAreaRatio": 0.6831031696177418,
+      "maximumAreaRatio": 1.1114284786583961,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.847468901749487,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.546875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6893796993100461,
+      "maximumPrincipalStretch": 1.14973445608057,
+      "minimumAreaRatio": 0.681552265840417,
+      "maximumAreaRatio": 1.1171090109505875,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.953901416882857,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.578125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.68939031145833,
+      "maximumPrincipalStretch": 1.1615775087486901,
+      "minimumAreaRatio": 0.6812417990048047,
+      "maximumAreaRatio": 1.1276778471536786,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 21.06698596421207,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.59375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.6906252614779684,
+      "maximumPrincipalStretch": 1.1659160700517093,
+      "minimumAreaRatio": 0.6822946620660761,
+      "maximumAreaRatio": 1.132870156025486,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 21.04037783542872,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.609375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.693418871025648,
+      "maximumPrincipalStretch": 1.1709837684110869,
+      "minimumAreaRatio": 0.6849833211532438,
+      "maximumAreaRatio": 1.140004219152958,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.92064125590368,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.640625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7005205510863808,
+      "maximumPrincipalStretch": 1.1785754844836278,
+      "minimumAreaRatio": 0.6919125193593988,
+      "maximumAreaRatio": 1.1420009261192106,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.687820129049424,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.65625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7044218608304417,
+      "maximumPrincipalStretch": 1.1817008690347084,
+      "minimumAreaRatio": 0.6957293031303635,
+      "maximumAreaRatio": 1.1386768042511577,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 20.388478680236812,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.671875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7093853807570033,
+      "maximumPrincipalStretch": 1.186068544198324,
+      "minimumAreaRatio": 0.700697991633771,
+      "maximumAreaRatio": 1.1391768736678782,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 19.98935674848666,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.703125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7200104498958945,
+      "maximumPrincipalStretch": 1.191010139692225,
+      "minimumAreaRatio": 0.7114699995605112,
+      "maximumAreaRatio": 1.1376426439293303,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 18.65229827712366,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.71875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7252944725967788,
+      "maximumPrincipalStretch": 1.1911511538402748,
+      "minimumAreaRatio": 0.7168694789870226,
+      "maximumAreaRatio": 1.1332186906431378,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 17.880662542406707,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.734375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7311818021154445,
+      "maximumPrincipalStretch": 1.1920152458514794,
+      "minimumAreaRatio": 0.7229653152220302,
+      "maximumAreaRatio": 1.1302993808026507,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 17.102374775493914,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.765625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7427586342277177,
+      "maximumPrincipalStretch": 1.1909915469031247,
+      "minimumAreaRatio": 0.7350053345088214,
+      "maximumAreaRatio": 1.1194312129724233,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 15.978181334397659,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.78125,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7481913571410805,
+      "maximumPrincipalStretch": 1.1892320166420751,
+      "minimumAreaRatio": 0.7406554421854954,
+      "maximumAreaRatio": 1.1180202178202965,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 15.6522317568017,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.796875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7539186995541537,
+      "maximumPrincipalStretch": 1.188195476754479,
+      "minimumAreaRatio": 0.7466783331299948,
+      "maximumAreaRatio": 1.1235747593420309,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 15.286369986030731,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.828125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7646042610109075,
+      "maximumPrincipalStretch": 1.1904963757515137,
+      "minimumAreaRatio": 0.7579286828426958,
+      "maximumAreaRatio": 1.1331043065863562,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 14.707643184993016,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.84375,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7693940902933657,
+      "maximumPrincipalStretch": 1.193057665887516,
+      "minimumAreaRatio": 0.7629508939559518,
+      "maximumAreaRatio": 1.1369479286448072,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 14.494778154726268,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.859375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7742868921634669,
+      "maximumPrincipalStretch": 1.195816546629601,
+      "minimumAreaRatio": 0.7681291839718569,
+      "maximumAreaRatio": 1.143497484294983,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 14.222044834697002,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.890625,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7791760302777505,
+      "maximumPrincipalStretch": 1.2016546954443446,
+      "minimumAreaRatio": 0.7768487943144063,
+      "maximumAreaRatio": 1.1539873638169005,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.802966806359343,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.90625,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7806782371476683,
+      "maximumPrincipalStretch": 1.204817028986162,
+      "minimumAreaRatio": 0.7802778435463829,
+      "maximumAreaRatio": 1.1580667557957476,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.656622098050955,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.921875,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7822784753628476,
+      "maximumPrincipalStretch": 1.208268633380176,
+      "minimumAreaRatio": 0.7837484878678938,
+      "maximumAreaRatio": 1.1649886631083661,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.516929421938404,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.953125,
+      "intervalFraction": 0.25,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7850122872515608,
+      "maximumPrincipalStretch": 1.2165890141813442,
+      "minimumAreaRatio": 0.7904127155089352,
+      "maximumAreaRatio": 1.1776683572158864,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.370584713630013,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.96875,
+      "intervalFraction": 0.5,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7860334060934785,
+      "maximumPrincipalStretch": 1.2213585057861782,
+      "minimumAreaRatio": 0.7923070890485352,
+      "maximumAreaRatio": 1.183557009277057,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.4238009711967,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    },
+    {
+      "formedAmount": 0.984375,
+      "intervalFraction": 0.75,
+      "triangles": 15033,
+      "finite": true,
+      "minimumPrincipalStretch": 0.7870354209330377,
+      "maximumPrincipalStretch": 1.226353152721998,
+      "minimumAreaRatio": 0.7943117496843819,
+      "maximumAreaRatio": 1.1924168392581604,
+      "degenerateTriangles": 0,
+      "percentOfTrianglesAbove10PercentStrain": 13.383888778021685,
+      "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+    }
+  ],
+  "continuousLinearSegmentMetricBounds": {
+    "minimumSingularValueLowerBound": 0.6710612945283246,
+    "maximumSingularValueUpperBound": 1.2562591967542684,
+    "method": "Per-triangle Weyl perturbation bound from 0,1/4,1/2,3/4,1 samples; positions linear between stored poses; positive lower bound excludes rank-collapse throughout each segment.",
+    "doesNotCheckSelfIntersectionsOrContact": true
+  },
+  "anatomicalReplacementRegions": {
+    "body": [
+      [
+        270.0,
+        553.0
+      ],
+      [
+        323.0,
+        476.0
+      ],
+      [
+        420.0,
+        447.0
+      ],
+      [
+        508.0,
+        417.0
+      ],
+      [
+        579.0,
+        373.0
+      ],
+      [
+        651.0,
+        311.0
+      ],
+      [
+        703.0,
+        242.0
+      ],
+      [
+        741.0,
+        376.0
+      ],
+      [
+        766.0,
+        458.0
+      ],
+      [
+        815.0,
+        563.0
+      ]
+    ],
+    "legacySeamOnlyBody": [
+      [
+        270.0,
+        553.0
+      ],
+      [
+        333.0,
+        511.0
+      ],
+      [
+        430.0,
+        482.0
+      ],
+      [
+        518.0,
+        452.0
+      ],
+      [
+        589.0,
+        408.0
+      ],
+      [
+        661.0,
+        346.0
+      ],
+      [
+        713.0,
+        277.0
+      ],
+      [
+        741.0,
+        376.0
+      ],
+      [
+        766.0,
+        458.0
+      ],
+      [
+        815.0,
+        563.0
+      ]
+    ],
+    "eyeletBankUpperChainOffsetPx": [
+      -10,
+      -35
+    ],
+    "cuff": [
+      [
+        700.0,
+        218.0
+      ],
+      [
+        1115.0,
+        127.0
+      ],
+      [
+        1214.0,
+        416.0
+      ],
+      [
+        870.0,
+        596.0
+      ]
+    ],
+    "expansion": 1.055,
+    "protectedTongueFlap": [
+      [
+        300.0,
+        355.0
+      ],
+      [
+        331.0,
+        291.0
+      ],
+      [
+        430.0,
+        220.0
+      ],
+      [
+        625.0,
+        132.0
+      ],
+      [
+        698.0,
+        164.0
+      ],
+      [
+        650.0,
+        235.0
+      ],
+      [
+        540.0,
+        300.0
+      ],
+      [
+        465.0,
+        365.0
+      ],
+      [
+        360.0,
+        414.0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+  "sourceModelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "paperProjectSha256": "11ff21b97f58902c6c73ca8c1e45b8b91873a7bfb73203db63d80339db895ad0",
+  "panelVertices": 8963,
+  "panelTriangles": 15033,
+  "shapeKeyPoseCount": 17,
+  "originalConnectorPieces": 6,
+  "connectorsIncludedInGlb": false,
+  "animationFrames": 289,
+  "fps": 24,
+  "restShoe": [
+    {
+      "name": "Cuff_Cloth",
+      "sourceTriangles": 18155,
+      "removedTriangles": 17925,
+      "retainedTriangles": 230
+    },
+    {
+      "name": "Footwear_Details_Unclassified",
+      "sourceTriangles": 207314,
+      "removedTriangles": 45789,
+      "retainedTriangles": 161525
+    },
+    {
+      "name": "Tongue_Flap_And_Local_Repairs",
+      "sourceTriangles": 9889,
+      "removedTriangles": 0,
+      "retainedTriangles": 9889
+    },
+    {
+      "name": "Tongue_Original_Position_Snap_Cap",
+      "sourceTriangles": 480,
+      "removedTriangles": 0,
+      "retainedTriangles": 480
+    },
+    {
+      "name": "Upper_Body_Cloth",
+      "sourceTriangles": 4642,
+      "removedTriangles": 4642,
+      "retainedTriangles": 0
+    }
+  ],
+  "productionReady": false,
+  "files": {
+    "detachable-side.glb": {
+      "bytes": 7579632,
+      "sha256": "b3a8a509ea68b81385b72880bc43c0d07d7dbdc8332451cfd53e0e595b9fd34e"
+    },
+    "detachable-side-editable.blend": {
+      "bytes": 13072365,
+      "sha256": "47ef5c326f8dd158c35eafe363b7f1de310b817fd3034fb24947946ee97ab6d3"
+    }
+  }
+}
