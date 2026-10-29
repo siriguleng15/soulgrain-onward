@@ -76,7 +76,7 @@ node scripts/check-immersive-showcase.mjs http://127.0.0.1:4521/immersive-showca
 
 正常整鞋采样为 43 次绘制、463,514 个渲染三角形（含地面），均衡档开场结束后粒子绘制为零。Linux SwiftShader 逐帧间隔约为秒级，不能代表目标设备的实时性能；没有宣称已经达到桌面或 iPad 的某个帧率。过程视频由真实页面确定性渲染编码，只用于审核构图及连续性。
 
-验证原始数据在在线审核页的 `verification/` 内：`browser-validation.json`（完整功能组）、`detail-review-validation.json`（细节构图及横屏视频）、`final-layout-validation.json`（最终竖屏断点与 bundle 哈希）、`source-validation.json`（原资产哈希）。公网发布后另运行 `scripts/check-immersive-public.mjs`，核对正式预览 URL 的实际响应、GLB 字节、源码包、真实浏览器渲染与翻筒往返。
+验证原始数据在在线审核页的 `verification/` 内：`browser-validation.json`（基准功能组）、`detail-review-validation.json`（最终自然完成镜头、翻筒与构图回归）、`final-layout-validation.json`（同次运行派生的布局检查与 bundle 哈希）、`video-validation.json`（真实横竖屏切换回归及过程视频）、`source-validation.json`（原资产哈希）。视频使用正常 replayIntro／selectPart／setUnfold／home 指令，驱动原 Scene.loop 与原速度曲线；没有强制完成镜头或逐帧替代位置。公网发布后另运行 `scripts/check-immersive-public.mjs`，核对预览 URL 的实际响应、GLB 字节、源码包、真实浏览器渲染与自然完成的翻筒往返。
 
 源码包仅含可编辑展示代码和必要资产，不是双击运行的离线网页，不重复打包所有截图。打包命令为 `node scripts/package-immersive-showcase.mjs /tmp/onward-immersive-preview`；包内提供运行说明、逐文件哈希和来源提交。访客直接使用上方 HTTPS 预览，不需要安装环境。
 

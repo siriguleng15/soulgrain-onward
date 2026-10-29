@@ -19,8 +19,12 @@ const model=await get('assets/onward-ad-v1/onward-ad-v1.glb');
 check('Public GLB is byte-identical to the confirmed colored source',model.sha256==='1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4',{bytes:model.bytes.length,sha256:model.sha256});
 const bundlePath=html.bytes.toString().match(/<script[^>]*src="([^"]+)"/)?.[1];assert.ok(bundlePath);
 const bundle=await get(bundlePath);check('Public entry serves its real compiled scene bundle',bundle.bytes.length>500000,{url:bundle.url,sha256:bundle.sha256});
-for(const relative of['immersive-showcase/review.html','immersive-showcase/verification/browser-validation.json','immersive-showcase/verification/detail-review-validation.json','immersive-showcase/verification/final-layout-validation.json','immersive-showcase/verification/showcase-exploration.mp4','ONWARD-immersive-v1-source.zip']){
- const result=await get(relative);check('Published review artifact: '+relative,result.bytes.length>0,{url:result.url,bytes:result.bytes.length,sha256:result.sha256});
+for(const relative of['immersive-showcase/review.html','immersive-showcase/verification/browser-validation.json','immersive-showcase/verification/detail-review-validation.json','immersive-showcase/verification/final-layout-validation.json','immersive-showcase/verification/video-validation.json','immersive-showcase/verification/showcase-exploration.mp4','ONWARD-immersive-v1-source.zip']){
+ const result=await get(relative);let valid=result.bytes.length>0;
+ if(relative.endsWith('.json')){const report=JSON.parse(result.bytes.toString());valid=report.checks?.length>0&&report.checks.every(c=>c.passed);if(relative.endsWith('detail-review-validation.json')){const tested=report.finalBundles.find(b=>b.url.endsWith(new URL(bundle.url).pathname.split('/').pop()));valid=valid&&tested?.sha256===bundle.sha256;}}
+ if(relative.endsWith('.mp4'))valid=result.bytes.subarray(4,8).toString()==='ftyp';
+ if(relative.endsWith('.zip'))valid=result.bytes[0]===80&&result.bytes[1]===75&&result.bytes.length>1000000;
+ check('Published review artifact: '+relative,valid,{url:result.url,bytes:result.bytes.length,sha256:result.sha256});
 }
 const profile=await mkdtemp('/tmp/onward-public-chrome-'),port=9537;
 const chrome=spawn('/usr/bin/chromium',['--headless=new','--no-sandbox','--disable-dev-shm-usage','--ignore-certificate-errors','--use-angle=swiftshader','--enable-unsafe-swiftshader','--remote-debugging-port='+port,'--user-data-dir='+profile,'about:blank'],{stdio:'ignore'});
@@ -34,7 +38,8 @@ try{
  const wait=async(expression,label)=>{const until=Date.now()+120000;while(Date.now()<until){if(await run(expression))return;await pause(250);}throw Error('Timed out: '+label);};
  await cdp('Page.enable');await cdp('Runtime.enable');await cdp('Network.enable');await cdp('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});await cdp('Page.navigate',{url:entry});
  await wait('window.__onwardShowcase?.getState().ready&&window.__onwardShowcase.getState().renderedFrames>3','public textured model');await run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false)');
- await wait('window.__onwardShowcase.getState().productReveal===1&&window.__onwardShowcase.getState().triangles>400000&&window.__onwardShowcase.getState().drawCalls>10','public opaque PBR draw');
+ const handoffFrame=await run('window.__onwardShowcase.scene.renderedFrames');
+ await wait(`window.__onwardShowcase.getState().renderedFrames>${handoffFrame}&&window.__onwardShowcase.getState().productReveal===1&&window.__onwardShowcase.getState().triangles>400000&&window.__onwardShowcase.getState().drawCalls>10`,'public opaque PBR draw');
  const state=await run('window.__onwardShowcase.getState()');
  check('Published browser runs real PBR geometry and all seven part targets',state.ready&&state.parts.length===7&&state.triangles>400000&&state.productReveal===1,{parts:state.parts.map(p=>({id:p.id,meshes:p.meshes})),drawCalls:state.drawCalls,triangles:state.triangles,sourceModelSHA:state.sourceModelSHA});
  await run('window.__onwardShowcase.selectPart("cuff")');await wait('!window.__onwardShowcase.getState().isTransitioning','public cuff camera');

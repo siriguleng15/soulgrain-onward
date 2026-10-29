@@ -1,0 +1,280 @@
+{
+  "testedAt": "2026-10-29T23:04:57.423Z",
+  "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/immersive-showcase.html",
+  "sources": [
+    {
+      "file": "public/assets/soulgrain_onward_finished_v8.glb",
+      "bytes": 26661468,
+      "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/cuff-structure.json",
+      "bytes": 40413,
+      "sha256": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085"
+    }
+  ],
+  "layouts": [
+    {
+      "width": 768,
+      "height": 1024,
+      "part": "cuff",
+      "panel": {
+        "left": 46.078125,
+        "top": 619.015625,
+        "bottom": 918,
+        "width": 675.84375,
+        "bottomInset": 106
+      },
+      "close": {
+        "left": 677.921875,
+        "right": 721.921875,
+        "top": 636.015625,
+        "bottom": 680.015625
+      },
+      "targetY": 337.9200000000001,
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "part": "tongue",
+      "panel": {
+        "left": 46.078125,
+        "top": 620.015625,
+        "bottom": 918,
+        "width": 675.84375,
+        "bottomInset": 106
+      },
+      "close": {
+        "left": 677.921875,
+        "right": 721.921875,
+        "top": 637.015625,
+        "bottom": 681.015625
+      },
+      "targetY": 337.92000000000013,
+      "scrollWidth": 768
+    },
+    {
+      "width": 1032,
+      "height": 1376,
+      "part": "cuff",
+      "panel": {
+        "left": 61.90625,
+        "top": 971.015625,
+        "bottom": 1270,
+        "width": 908.1875,
+        "bottomInset": 106
+      },
+      "close": {
+        "left": 926.09375,
+        "right": 970.09375,
+        "top": 988.015625,
+        "bottom": 1032.015625
+      },
+      "targetY": 454.08000000000027,
+      "scrollWidth": 1032
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "part": "cuff",
+      "panel": {
+        "left": 23.390625,
+        "top": 413.015625,
+        "bottom": 712,
+        "width": 343.21875,
+        "bottomInset": 132
+      },
+      "close": {
+        "left": 322.609375,
+        "right": 366.609375,
+        "top": 430.015625,
+        "bottom": 474.015625
+      },
+      "targetY": 278.52000000000004,
+      "scrollWidth": 390
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader. 768×1024,1032×1376 and390×844 viewport + touch emulation, NOT real iPad/iPhone Safari.",
+  "bundles": [
+    {
+      "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/assets/immersive-showcase-DsLSsYDg.js",
+      "sha256": "07414e21228692e4c0234aa2da7656b8cd5e0ba84ba795428c8691c520390dc6"
+    },
+    {
+      "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/assets/immersive-showcase-CjmCKWZ-.css",
+      "sha256": "e0d63da1be5712735638e15e11ec66439141fdd5a56fccc0519ceb2dc7d16c31"
+    }
+  ],
+  "sourceReport": "detail-review-validation.json",
+  "derivation": "Direct summary of the same captured layout records and passed assertions; no additional test run claimed.",
+  "checks": [
+    {
+      "name": "Tablet portrait detail panels match the camera aspect layout including 1032px",
+      "passed": true,
+      "detail": [
+        {
+          "width": 768,
+          "height": 1024,
+          "part": "cuff",
+          "panel": {
+            "left": 46.078125,
+            "top": 619.015625,
+            "bottom": 918,
+            "width": 675.84375,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 677.921875,
+            "right": 721.921875,
+            "top": 636.015625,
+            "bottom": 680.015625
+          },
+          "targetY": 337.9200000000001,
+          "scrollWidth": 768
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "part": "tongue",
+          "panel": {
+            "left": 46.078125,
+            "top": 620.015625,
+            "bottom": 918,
+            "width": 675.84375,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 677.921875,
+            "right": 721.921875,
+            "top": 637.015625,
+            "bottom": 681.015625
+          },
+          "targetY": 337.92000000000013,
+          "scrollWidth": 768
+        },
+        {
+          "width": 1032,
+          "height": 1376,
+          "part": "cuff",
+          "panel": {
+            "left": 61.90625,
+            "top": 971.015625,
+            "bottom": 1270,
+            "width": 908.1875,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 926.09375,
+            "right": 970.09375,
+            "top": 988.015625,
+            "bottom": 1032.015625
+          },
+          "targetY": 454.08000000000027,
+          "scrollWidth": 1032
+        }
+      ]
+    },
+    {
+      "name": "All narrow focal centers and close controls stay clear of the bottom panel",
+      "passed": true,
+      "detail": [
+        {
+          "width": 768,
+          "height": 1024,
+          "part": "cuff",
+          "panel": {
+            "left": 46.078125,
+            "top": 619.015625,
+            "bottom": 918,
+            "width": 675.84375,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 677.921875,
+            "right": 721.921875,
+            "top": 636.015625,
+            "bottom": 680.015625
+          },
+          "targetY": 337.9200000000001,
+          "scrollWidth": 768
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "part": "tongue",
+          "panel": {
+            "left": 46.078125,
+            "top": 620.015625,
+            "bottom": 918,
+            "width": 675.84375,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 677.921875,
+            "right": 721.921875,
+            "top": 637.015625,
+            "bottom": 681.015625
+          },
+          "targetY": 337.92000000000013,
+          "scrollWidth": 768
+        },
+        {
+          "width": 1032,
+          "height": 1376,
+          "part": "cuff",
+          "panel": {
+            "left": 61.90625,
+            "top": 971.015625,
+            "bottom": 1270,
+            "width": 908.1875,
+            "bottomInset": 106
+          },
+          "close": {
+            "left": 926.09375,
+            "right": 970.09375,
+            "top": 988.015625,
+            "bottom": 1032.015625
+          },
+          "targetY": 454.08000000000027,
+          "scrollWidth": 1032
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "part": "cuff",
+          "panel": {
+            "left": 23.390625,
+            "top": 413.015625,
+            "bottom": 712,
+            "width": 343.21875,
+            "bottomInset": 132
+          },
+          "close": {
+            "left": 322.609375,
+            "right": 366.609375,
+            "top": 430.015625,
+            "bottom": 474.015625
+          },
+          "targetY": 278.52000000000004,
+          "scrollWidth": 390
+        }
+      ]
+    },
+    {
+      "name": "Supplementary closeup views have no JavaScript or shader errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Final rendered review contains no JavaScript or shader errors",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}
