@@ -1,0 +1,13 @@
+import {spawnSync} from 'node:child_process';
+import {cp,mkdir,readdir,writeFile} from 'node:fs/promises';
+import path from 'node:path';
+const root=process.cwd(),out=path.resolve(process.argv[2]??'/tmp/onward-immersive-preview'),base=process.argv[3]??'/soulgrain-onward/onward-immersive/';
+if(!out.startsWith('/tmp/')&&!out.startsWith(root+'/preview-build/'))throw Error('Use isolated build output');
+const result=spawnSync(process.execPath,['node_modules/vite/bin/vite.js','build','--config','vite.immersive-showcase.config.ts','--base',base,'--outDir',out,'--emptyOutDir'],{stdio:'inherit'});if(result.status)process.exit(result.status);
+await mkdir(out+'/assets/onward-ad-v1',{recursive:true});for(const file of['onward-ad-v1.glb','cuff-structure.json'])await cp(root+'/public/assets/onward-ad-v1/'+file,out+'/assets/onward-ad-v1/'+file);
+await cp(root+'/public/immersive-showcase',out+'/immersive-showcase',{recursive:true});
+for(const file of await readdir(root+'/research/immersive-showcase'))if(file.endsWith('.md'))await cp(root+'/research/immersive-showcase/'+file,out+'/immersive-showcase/'+file);
+await cp(root+'/research/immersive-showcase/README.zh-CN.md',out+'/immersive-showcase/research-readme.md');
+const revision=spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}),branch=spawnSync('git',['branch','--show-current'],{encoding:'utf8'});
+await writeFile(out+'/preview-info.json',JSON.stringify({sourceCommit:revision.stdout.trim(),sourceBranch:branch.stdout.trim(),builtAt:new Date().toISOString(),modelSha256:'1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4',entry:'immersive-showcase.html',review:'immersive-showcase/review.html',physicalIPadSafariTested:false,scope:'Independent preview. Original website, workbench and model source files unchanged.'},null,2)+'\n');
+await writeFile(out+'/index.html','<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=immersive-showcase.html"><title>SOULGRAIN / NIGHTFALL</title><a href="immersive-showcase.html">打开 Nightfall 沉浸体验</a></html>');await writeFile(out+'/.nojekyll','');console.log('Isolated showcase:',out,base);
