@@ -1,0 +1,1936 @@
+{
+  "testedAt": "2026-10-29T00:05:42.650Z",
+  "url": "http://127.0.0.1:4389/soulgrain-onward/onward-side-unfold/detachable-side.html",
+  "environment": "Linux Chromium headless with SwiftShader software WebGL;1280×900 and1024×768 emulated touch. NOT real iPad or Safari.",
+  "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+  "sourceModelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+  "checks": [
+    {
+      "name": "Real source paper and corrected model hashes match generated panel",
+      "passed": true,
+      "detail": {
+        "paperSha256": "11ff21b97f58902c6c73ca8c1e45b8b91873a7bfb73203db63d80339db895ad0",
+        "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+        "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a"
+      }
+    },
+    {
+      "name": "Every original paper vertex and triangle identity is retained",
+      "passed": true,
+      "detail": {
+        "originalVertices": 8453,
+        "originalTriangles": 16125,
+        "totalVertices": 8963,
+        "appendedTrimAndConformityVertices": 510
+      }
+    },
+    {
+      "name": "Full independent panel has a finite formed position for every vertex",
+      "passed": true,
+      "detail": {
+        "fullVertices": 8963,
+        "observed": 2019,
+        "inferredOrDerived": 6944
+      }
+    },
+    {
+      "name": "Exact trim and conformity-refinement vertices retain original-triangle barycentric provenance",
+      "passed": true,
+      "detail": {
+        "verticesChecked": 8963,
+        "maximumFlatProvenanceErrorMm": 5.695433295429594e-14
+      }
+    },
+    {
+      "name": "Flat endpoint independently fits the original paper with one uniform rigid display scale",
+      "passed": true,
+      "detail": {
+        "scale": 0.006399999999999994,
+        "xAxis": [
+          -0.006400000000000011,
+          -7.523534983314888e-18,
+          1.880883745828722e-18
+        ],
+        "yAxis": [
+          4.0752481159622304e-18,
+          0.0063544117663162794,
+          -0.0007625294119579517
+        ],
+        "axisLengthDifference": 3.2959746043559335e-17,
+        "orthogonality": 1.8389515708275093e-15,
+        "maxResidualModelUnits": 5.498166034355414e-15,
+        "maxResidualMm": 8.590884428680342e-13
+      }
+    },
+    {
+      "name": "Exact sole clipping preserves original cut/hole edges: traced-lower-pencil-reference",
+      "passed": true,
+      "detail": {
+        "boundaryEdges": 901,
+        "boundaryComponents": 14,
+        "branchedBoundaryVertices": 0,
+        "nonManifoldEdges": 0,
+        "sourceAreaMm2": 44302.753280457335,
+        "visibleAreaMm2": 40548.39689218848,
+        "excludedAreaMm2": 3754.3563882688413,
+        "excludedAreaPercent": 8.474318434572213,
+        "partitionAreaErrorMm2": -1.4551915228366852e-11,
+        "maximumBoundaryOffReferenceMm": 2.9975109314944764e-14,
+        "physicalSoleBoundaryValidated": false
+      }
+    },
+    {
+      "name": "Exact sole clipping preserves original cut/hole edges: full-source-no-exclusion",
+      "passed": true,
+      "detail": {
+        "boundaryEdges": 805,
+        "boundaryComponents": 14,
+        "branchedBoundaryVertices": 0,
+        "nonManifoldEdges": 0,
+        "sourceAreaMm2": 44302.753280457335,
+        "visibleAreaMm2": 44302.753280457335,
+        "excludedAreaMm2": 0,
+        "excludedAreaPercent": 0,
+        "partitionAreaErrorMm2": 0,
+        "maximumBoundaryOffReferenceMm": 2.908489009271089e-14,
+        "physicalSoleBoundaryValidated": false
+      }
+    },
+    {
+      "name": "Exact sole clipping preserves original cut/hole edges: photo-inferred-sole-top",
+      "passed": true,
+      "detail": {
+        "boundaryEdges": 866,
+        "boundaryComponents": 14,
+        "branchedBoundaryVertices": 0,
+        "nonManifoldEdges": 0,
+        "sourceAreaMm2": 44302.753280457335,
+        "visibleAreaMm2": 30552.89961165244,
+        "excludedAreaMm2": 13749.853668804726,
+        "excludedAreaPercent": 31.03611547968963,
+        "partitionAreaErrorMm2": -1.673470251262188e-10,
+        "maximumBoundaryOffReferenceMm": 3.4114933389727113e-14,
+        "physicalSoleBoundaryValidated": false
+      }
+    },
+    {
+      "name": "Unverified formation and sole-boundary hypotheses remain explicit",
+      "passed": true,
+      "detail": {
+        "defaultTrimId": "traced-lower-pencil-reference",
+        "assumptions": [
+          "The AI source does not possess paper-compatible topology. The displayed shoe side is explicitly replaced with this complete, paper-owned independent panel before detach animation.",
+          "Flat rest shape, cut boundary and eyelet topology come from the existing calibrated paper mesh; the original AI triangles remain a separate source asset.",
+          "Visible source cloth constrains a robust smooth depth field; samples are not pinned through occlusion discontinuities. Other vertices are same-layer inferred completions.",
+          "The traced lower pencil line is only a provisional default exclusion. Full-paper and photo-inferred diagnostic variants remain available; no physical sole cut is certified.",
+          "Every analytic circular crease target is rest-metric regularised using the same material topology; adjacent samples form a continuous animation, not a validated cloth/contact simulation.",
+          "Physical sewing, exact hidden wrap, actual model scale and self-intersections remain unverified.",
+          "Crease normals are regularised toward the explicitly assumed analytic fold orientation to prevent opposite local branches and interpolation collapse; no recovered manufacturing/contact process is claimed."
+        ]
+      }
+    },
+    {
+      "name": "Actual evaluator returns exact canonical paper endpoint",
+      "passed": true,
+      "detail": {
+        "vertices": 8963
+      }
+    },
+    {
+      "name": "All same-topology unfold key poses are finite and nondegenerate",
+      "passed": true,
+      "detail": {
+        "poses": 17,
+        "minimumAreaModelUnitsSquared": 9.279065196423291e-10,
+        "degenerateTriangles": 0,
+        "attachedMetric": {
+          "triangles": 15033,
+          "finite": true,
+          "minimumPrincipalStretch": 0.7880156042551594,
+          "maximumPrincipalStretch": 1.2315930519196545,
+          "minimumAreaRatio": 0.7964255970395281,
+          "maximumAreaRatio": 1.2042401001326,
+          "degenerateTriangles": 0,
+          "percentOfTrianglesAbove10PercentStrain": 13.397192842413357,
+          "warning": "Relative to assumed uniform model display scale. Not a validated physical cloth law or manufacture."
+        }
+      }
+    },
+    {
+      "name": "Every visible triangle and interpolation interval avoids rank collapse: traced-lower-pencil-reference",
+      "passed": true,
+      "detail": {
+        "trimId": "traced-lower-pencil-reference",
+        "triangles": 15033,
+        "samples": 65,
+        "minimumPrincipalStretch": 0.6893796993100445,
+        "maximumPrincipalStretch": 1.2315930519196547,
+        "continuousMinimumSingularValueLowerBound": 0.6710612945283231,
+        "continuousMaximumSingularValueUpperBound": 1.2562591967542687,
+        "poseStretch": [
+          {
+            "formedAmount": 0,
+            "minimumPrincipalStretch": 0.9999999999993471,
+            "maximumPrincipalStretch": 1.0000000000010636
+          },
+          {
+            "formedAmount": 0.0625,
+            "minimumPrincipalStretch": 0.9952525944849658,
+            "maximumPrincipalStretch": 1.0016588380074716
+          },
+          {
+            "formedAmount": 0.125,
+            "minimumPrincipalStretch": 0.9789961280309761,
+            "maximumPrincipalStretch": 1.0063103166942176
+          },
+          {
+            "formedAmount": 0.1875,
+            "minimumPrincipalStretch": 0.928431551402247,
+            "maximumPrincipalStretch": 1.0134278584818832
+          },
+          {
+            "formedAmount": 0.25,
+            "minimumPrincipalStretch": 0.8660596445911639,
+            "maximumPrincipalStretch": 1.0245455058877035
+          },
+          {
+            "formedAmount": 0.3125,
+            "minimumPrincipalStretch": 0.8132562894695989,
+            "maximumPrincipalStretch": 1.0376216365657782
+          },
+          {
+            "formedAmount": 0.375,
+            "minimumPrincipalStretch": 0.7694172918094554,
+            "maximumPrincipalStretch": 1.0635047650828577
+          },
+          {
+            "formedAmount": 0.4375,
+            "minimumPrincipalStretch": 0.731687257777423,
+            "maximumPrincipalStretch": 1.0939598395190313
+          },
+          {
+            "formedAmount": 0.5,
+            "minimumPrincipalStretch": 0.6989998163097024,
+            "maximumPrincipalStretch": 1.1297798622478368
+          },
+          {
+            "formedAmount": 0.5625,
+            "minimumPrincipalStretch": 0.6897468621810253,
+            "maximumPrincipalStretch": 1.1579863575234879
+          },
+          {
+            "formedAmount": 0.625,
+            "minimumPrincipalStretch": 0.6977226663438186,
+            "maximumPrincipalStretch": 1.1767825179556088
+          },
+          {
+            "formedAmount": 0.6875,
+            "minimumPrincipalStretch": 0.715361248120292,
+            "maximumPrincipalStretch": 1.1916589895166638
+          },
+          {
+            "formedAmount": 0.75,
+            "minimumPrincipalStretch": 0.7376370963906735,
+            "maximumPrincipalStretch": 1.1935487195947199
+          },
+          {
+            "formedAmount": 0.8125,
+            "minimumPrincipalStretch": 0.7599226805155644,
+            "maximumPrincipalStretch": 1.1881441477401895
+          },
+          {
+            "formedAmount": 0.875,
+            "minimumPrincipalStretch": 0.7777732301932488,
+            "maximumPrincipalStretch": 1.198770545671541
+          },
+          {
+            "formedAmount": 0.9375,
+            "minimumPrincipalStretch": 0.783975063656118,
+            "maximumPrincipalStretch": 1.2120331637282165
+          },
+          {
+            "formedAmount": 1,
+            "minimumPrincipalStretch": 0.7880156042551593,
+            "maximumPrincipalStretch": 1.2315930519196547
+          },
+          {
+            "formedAmount": 0.015625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9962251525320694,
+            "maximumPrincipalStretch": 1.0003954069073795
+          },
+          {
+            "formedAmount": 0.03125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9947223541285177,
+            "maximumPrincipalStretch": 1.000803654673188
+          },
+          {
+            "formedAmount": 0.046875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9954994633067945,
+            "maximumPrincipalStretch": 1.0012247852786686
+          },
+          {
+            "formedAmount": 0.078125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9911756357816229,
+            "maximumPrincipalStretch": 1.0027914145981505
+          },
+          {
+            "formedAmount": 0.09375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9871060703077918,
+            "maximumPrincipalStretch": 1.0039441841938561
+          },
+          {
+            "formedAmount": 0.109375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9830460866107518,
+            "maximumPrincipalStretch": 1.0051171510472023
+          },
+          {
+            "formedAmount": 0.140625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9663287068946459,
+            "maximumPrincipalStretch": 1.008036542411091
+          },
+          {
+            "formedAmount": 0.15625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9536440989895111,
+            "maximumPrincipalStretch": 1.009799801638628
+          },
+          {
+            "formedAmount": 0.171875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9410049370336651,
+            "maximumPrincipalStretch": 1.0115973577430148
+          },
+          {
+            "formedAmount": 0.203125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9125388341615469,
+            "maximumPrincipalStretch": 1.016112792435578
+          },
+          {
+            "formedAmount": 0.21875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8968346871689004,
+            "maximumPrincipalStretch": 1.0188335507504178
+          },
+          {
+            "formedAmount": 0.234375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8813368097703749,
+            "maximumPrincipalStretch": 1.0216628081358914
+          },
+          {
+            "formedAmount": 0.265625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8523098616449511,
+            "maximumPrincipalStretch": 1.027386034330983
+          },
+          {
+            "formedAmount": 0.28125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8389149428154561,
+            "maximumPrincipalStretch": 1.0302835428737505
+          },
+          {
+            "formedAmount": 0.296875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8258915844246609,
+            "maximumPrincipalStretch": 1.0332369992229153
+          },
+          {
+            "formedAmount": 0.328125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8013974595576479,
+            "maximumPrincipalStretch": 1.0423971008158697
+          },
+          {
+            "formedAmount": 0.34375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7901220143356819,
+            "maximumPrincipalStretch": 1.0482678865728792
+          },
+          {
+            "formedAmount": 0.359375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7794541838849735,
+            "maximumPrincipalStretch": 1.0552742025820758
+          },
+          {
+            "formedAmount": 0.390625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7584372606552312,
+            "maximumPrincipalStretch": 1.0694494011174176
+          },
+          {
+            "formedAmount": 0.40625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7484645926447225,
+            "maximumPrincipalStretch": 1.0764935737132602
+          },
+          {
+            "formedAmount": 0.421875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7395367335207748,
+            "maximumPrincipalStretch": 1.084649259755608
+          },
+          {
+            "formedAmount": 0.453125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7210343643402092,
+            "maximumPrincipalStretch": 1.1013315471497265
+          },
+          {
+            "formedAmount": 0.46875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.712000885143122,
+            "maximumPrincipalStretch": 1.1097515385208416
+          },
+          {
+            "formedAmount": 0.484375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.704641747816082,
+            "maximumPrincipalStretch": 1.1192252704459538
+          },
+          {
+            "formedAmount": 0.515625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6940062566418242,
+            "maximumPrincipalStretch": 1.1356252066869075
+          },
+          {
+            "formedAmount": 0.53125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.690796570906363,
+            "maximumPrincipalStretch": 1.1422816342407527
+          },
+          {
+            "formedAmount": 0.546875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6893796993100445,
+            "maximumPrincipalStretch": 1.1497344560805873
+          },
+          {
+            "formedAmount": 0.578125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6893903114583229,
+            "maximumPrincipalStretch": 1.1615775087486957
+          },
+          {
+            "formedAmount": 0.59375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6906252614779684,
+            "maximumPrincipalStretch": 1.1659160700517115
+          },
+          {
+            "formedAmount": 0.609375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6934188710256561,
+            "maximumPrincipalStretch": 1.1709837684110798
+          },
+          {
+            "formedAmount": 0.640625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7005205510863792,
+            "maximumPrincipalStretch": 1.1785754844836176
+          },
+          {
+            "formedAmount": 0.65625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7044218608304403,
+            "maximumPrincipalStretch": 1.1817008690347084
+          },
+          {
+            "formedAmount": 0.671875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7093853807570055,
+            "maximumPrincipalStretch": 1.1860685441983345
+          },
+          {
+            "formedAmount": 0.703125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7200104498958942,
+            "maximumPrincipalStretch": 1.1910101396921862
+          },
+          {
+            "formedAmount": 0.71875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7252944725967758,
+            "maximumPrincipalStretch": 1.1911511538402717
+          },
+          {
+            "formedAmount": 0.734375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.731181802115445,
+            "maximumPrincipalStretch": 1.1920152458515179
+          },
+          {
+            "formedAmount": 0.765625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7427586342277142,
+            "maximumPrincipalStretch": 1.1909915469031325
+          },
+          {
+            "formedAmount": 0.78125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.748191357141082,
+            "maximumPrincipalStretch": 1.189232016642076
+          },
+          {
+            "formedAmount": 0.796875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7539186995541574,
+            "maximumPrincipalStretch": 1.1881954767544711
+          },
+          {
+            "formedAmount": 0.828125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7646042610109081,
+            "maximumPrincipalStretch": 1.1904963757515088
+          },
+          {
+            "formedAmount": 0.84375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7693940902933687,
+            "maximumPrincipalStretch": 1.1930576658875065
+          },
+          {
+            "formedAmount": 0.859375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7742868921634639,
+            "maximumPrincipalStretch": 1.1958165466296056
+          },
+          {
+            "formedAmount": 0.890625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.779176030277749,
+            "maximumPrincipalStretch": 1.2016546954443548
+          },
+          {
+            "formedAmount": 0.90625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7806782371476709,
+            "maximumPrincipalStretch": 1.2048170289861473
+          },
+          {
+            "formedAmount": 0.921875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.782278475362849,
+            "maximumPrincipalStretch": 1.2082686333801649
+          },
+          {
+            "formedAmount": 0.953125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7850122872515604,
+            "maximumPrincipalStretch": 1.2165890141813493
+          },
+          {
+            "formedAmount": 0.96875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7860334060934876,
+            "maximumPrincipalStretch": 1.2213585057861809
+          },
+          {
+            "formedAmount": 0.984375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7870354209330379,
+            "maximumPrincipalStretch": 1.2263531527219926
+          }
+        ],
+        "physicalClothValidation": false,
+        "doesNotTestContactOrSelfIntersections": true
+      }
+    },
+    {
+      "name": "Every visible triangle and interpolation interval avoids rank collapse: full-source-no-exclusion",
+      "passed": true,
+      "detail": {
+        "trimId": "full-source-no-exclusion",
+        "triangles": 16125,
+        "samples": 65,
+        "minimumPrincipalStretch": 0.6893796993100445,
+        "maximumPrincipalStretch": 1.2315930519196547,
+        "continuousMinimumSingularValueLowerBound": 0.6710612945283231,
+        "continuousMaximumSingularValueUpperBound": 1.2562591967542687,
+        "poseStretch": [
+          {
+            "formedAmount": 0,
+            "minimumPrincipalStretch": 0.9999999999997107,
+            "maximumPrincipalStretch": 1.0000000000004075
+          },
+          {
+            "formedAmount": 0.0625,
+            "minimumPrincipalStretch": 0.9952525944849658,
+            "maximumPrincipalStretch": 1.0016588380074716
+          },
+          {
+            "formedAmount": 0.125,
+            "minimumPrincipalStretch": 0.9789961280309761,
+            "maximumPrincipalStretch": 1.0063103166942176
+          },
+          {
+            "formedAmount": 0.1875,
+            "minimumPrincipalStretch": 0.928431551402247,
+            "maximumPrincipalStretch": 1.0134278584818832
+          },
+          {
+            "formedAmount": 0.25,
+            "minimumPrincipalStretch": 0.8660596445911639,
+            "maximumPrincipalStretch": 1.0245455058877035
+          },
+          {
+            "formedAmount": 0.3125,
+            "minimumPrincipalStretch": 0.8132562894695989,
+            "maximumPrincipalStretch": 1.0376216365657782
+          },
+          {
+            "formedAmount": 0.375,
+            "minimumPrincipalStretch": 0.7694172918094554,
+            "maximumPrincipalStretch": 1.0635047650828577
+          },
+          {
+            "formedAmount": 0.4375,
+            "minimumPrincipalStretch": 0.731687257777423,
+            "maximumPrincipalStretch": 1.0939598395190313
+          },
+          {
+            "formedAmount": 0.5,
+            "minimumPrincipalStretch": 0.6989998163097024,
+            "maximumPrincipalStretch": 1.1297798622478368
+          },
+          {
+            "formedAmount": 0.5625,
+            "minimumPrincipalStretch": 0.6897468621810253,
+            "maximumPrincipalStretch": 1.1579863575234879
+          },
+          {
+            "formedAmount": 0.625,
+            "minimumPrincipalStretch": 0.6977226663438186,
+            "maximumPrincipalStretch": 1.1767825179556088
+          },
+          {
+            "formedAmount": 0.6875,
+            "minimumPrincipalStretch": 0.715361248120292,
+            "maximumPrincipalStretch": 1.1916589895166638
+          },
+          {
+            "formedAmount": 0.75,
+            "minimumPrincipalStretch": 0.7376370963906735,
+            "maximumPrincipalStretch": 1.1935487195947199
+          },
+          {
+            "formedAmount": 0.8125,
+            "minimumPrincipalStretch": 0.7599226805155644,
+            "maximumPrincipalStretch": 1.1881441477401895
+          },
+          {
+            "formedAmount": 0.875,
+            "minimumPrincipalStretch": 0.7777732301932566,
+            "maximumPrincipalStretch": 1.198770545671541
+          },
+          {
+            "formedAmount": 0.9375,
+            "minimumPrincipalStretch": 0.7839750636561172,
+            "maximumPrincipalStretch": 1.2120331637282165
+          },
+          {
+            "formedAmount": 1,
+            "minimumPrincipalStretch": 0.7880156042551664,
+            "maximumPrincipalStretch": 1.2315930519196547
+          },
+          {
+            "formedAmount": 0.015625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9962251525320694,
+            "maximumPrincipalStretch": 1.0003954069073795
+          },
+          {
+            "formedAmount": 0.03125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9947223541285177,
+            "maximumPrincipalStretch": 1.000803654673188
+          },
+          {
+            "formedAmount": 0.046875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9954994633067945,
+            "maximumPrincipalStretch": 1.0012247852786686
+          },
+          {
+            "formedAmount": 0.078125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9911756357816229,
+            "maximumPrincipalStretch": 1.0027914145981505
+          },
+          {
+            "formedAmount": 0.09375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9871060703077918,
+            "maximumPrincipalStretch": 1.0039441841938561
+          },
+          {
+            "formedAmount": 0.109375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9830460866107518,
+            "maximumPrincipalStretch": 1.0051171510472023
+          },
+          {
+            "formedAmount": 0.140625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9663287068946459,
+            "maximumPrincipalStretch": 1.008036542411091
+          },
+          {
+            "formedAmount": 0.15625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9536440989895111,
+            "maximumPrincipalStretch": 1.009799801638628
+          },
+          {
+            "formedAmount": 0.171875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9410049370336651,
+            "maximumPrincipalStretch": 1.0115973577430148
+          },
+          {
+            "formedAmount": 0.203125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9125388341615469,
+            "maximumPrincipalStretch": 1.016112792435578
+          },
+          {
+            "formedAmount": 0.21875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8968346871689004,
+            "maximumPrincipalStretch": 1.0188335507504178
+          },
+          {
+            "formedAmount": 0.234375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8813368097703749,
+            "maximumPrincipalStretch": 1.0216628081358914
+          },
+          {
+            "formedAmount": 0.265625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8523098616449511,
+            "maximumPrincipalStretch": 1.027386034330983
+          },
+          {
+            "formedAmount": 0.28125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8389149428154561,
+            "maximumPrincipalStretch": 1.0302835428737505
+          },
+          {
+            "formedAmount": 0.296875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8258915844246609,
+            "maximumPrincipalStretch": 1.0332369992229153
+          },
+          {
+            "formedAmount": 0.328125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8013974595576479,
+            "maximumPrincipalStretch": 1.0423971008158697
+          },
+          {
+            "formedAmount": 0.34375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7901220143356819,
+            "maximumPrincipalStretch": 1.0482678865728792
+          },
+          {
+            "formedAmount": 0.359375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7794541838849735,
+            "maximumPrincipalStretch": 1.0552742025820758
+          },
+          {
+            "formedAmount": 0.390625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7584372606552312,
+            "maximumPrincipalStretch": 1.0694494011174176
+          },
+          {
+            "formedAmount": 0.40625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7484645926447225,
+            "maximumPrincipalStretch": 1.0764935737132602
+          },
+          {
+            "formedAmount": 0.421875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7395367335207748,
+            "maximumPrincipalStretch": 1.084649259755608
+          },
+          {
+            "formedAmount": 0.453125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7210343643402092,
+            "maximumPrincipalStretch": 1.1013315471497265
+          },
+          {
+            "formedAmount": 0.46875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.712000885143122,
+            "maximumPrincipalStretch": 1.1097515385208416
+          },
+          {
+            "formedAmount": 0.484375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.704641747816082,
+            "maximumPrincipalStretch": 1.1192252704459538
+          },
+          {
+            "formedAmount": 0.515625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6940062566418242,
+            "maximumPrincipalStretch": 1.1356252066869075
+          },
+          {
+            "formedAmount": 0.53125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.690796570906363,
+            "maximumPrincipalStretch": 1.1422816342407527
+          },
+          {
+            "formedAmount": 0.546875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6893796993100445,
+            "maximumPrincipalStretch": 1.1497344560805873
+          },
+          {
+            "formedAmount": 0.578125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6893903114583229,
+            "maximumPrincipalStretch": 1.1615775087486957
+          },
+          {
+            "formedAmount": 0.59375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6906252614779684,
+            "maximumPrincipalStretch": 1.1659160700517115
+          },
+          {
+            "formedAmount": 0.609375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.6934188710256561,
+            "maximumPrincipalStretch": 1.1709837684110798
+          },
+          {
+            "formedAmount": 0.640625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7005205510863792,
+            "maximumPrincipalStretch": 1.1785754844836176
+          },
+          {
+            "formedAmount": 0.65625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7044218608304403,
+            "maximumPrincipalStretch": 1.1817008690347084
+          },
+          {
+            "formedAmount": 0.671875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7093853807570055,
+            "maximumPrincipalStretch": 1.1860685441983345
+          },
+          {
+            "formedAmount": 0.703125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7200104498958942,
+            "maximumPrincipalStretch": 1.1910101396921862
+          },
+          {
+            "formedAmount": 0.71875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7252944725967758,
+            "maximumPrincipalStretch": 1.1911511538402717
+          },
+          {
+            "formedAmount": 0.734375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.731181802115445,
+            "maximumPrincipalStretch": 1.1920152458515179
+          },
+          {
+            "formedAmount": 0.765625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7427586342277142,
+            "maximumPrincipalStretch": 1.1909915469031325
+          },
+          {
+            "formedAmount": 0.78125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.748191357141082,
+            "maximumPrincipalStretch": 1.189232016642076
+          },
+          {
+            "formedAmount": 0.796875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7539186995541574,
+            "maximumPrincipalStretch": 1.1881954767544711
+          },
+          {
+            "formedAmount": 0.828125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7646042610109081,
+            "maximumPrincipalStretch": 1.1904963757515088
+          },
+          {
+            "formedAmount": 0.84375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7693940902933687,
+            "maximumPrincipalStretch": 1.1930576658875065
+          },
+          {
+            "formedAmount": 0.859375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7742868921634639,
+            "maximumPrincipalStretch": 1.1958165466296056
+          },
+          {
+            "formedAmount": 0.890625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7791760302777544,
+            "maximumPrincipalStretch": 1.2016546954443548
+          },
+          {
+            "formedAmount": 0.90625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7806782371476745,
+            "maximumPrincipalStretch": 1.2048170289861473
+          },
+          {
+            "formedAmount": 0.921875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7822784753628504,
+            "maximumPrincipalStretch": 1.2082686333801649
+          },
+          {
+            "formedAmount": 0.953125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7850122872515616,
+            "maximumPrincipalStretch": 1.2165890141813493
+          },
+          {
+            "formedAmount": 0.96875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7860334060934909,
+            "maximumPrincipalStretch": 1.2213585057861809
+          },
+          {
+            "formedAmount": 0.984375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.7870354209330431,
+            "maximumPrincipalStretch": 1.2263531527219926
+          }
+        ],
+        "physicalClothValidation": false,
+        "doesNotTestContactOrSelfIntersections": true
+      }
+    },
+    {
+      "name": "Every visible triangle and interpolation interval avoids rank collapse: photo-inferred-sole-top",
+      "passed": true,
+      "detail": {
+        "trimId": "photo-inferred-sole-top",
+        "triangles": 11636,
+        "samples": 65,
+        "minimumPrincipalStretch": 0.8185378313604387,
+        "maximumPrincipalStretch": 1.2315930519196547,
+        "continuousMinimumSingularValueLowerBound": 0.7936222723621305,
+        "continuousMaximumSingularValueUpperBound": 1.2562591967542687,
+        "poseStretch": [
+          {
+            "formedAmount": 0,
+            "minimumPrincipalStretch": 0.9999999999992416,
+            "maximumPrincipalStretch": 1.0000000000033002
+          },
+          {
+            "formedAmount": 0.0625,
+            "minimumPrincipalStretch": 0.9978045280623264,
+            "maximumPrincipalStretch": 1.0016588380074716
+          },
+          {
+            "formedAmount": 0.125,
+            "minimumPrincipalStretch": 0.9921273666249157,
+            "maximumPrincipalStretch": 1.0063103166942176
+          },
+          {
+            "formedAmount": 0.1875,
+            "minimumPrincipalStretch": 0.984486469655267,
+            "maximumPrincipalStretch": 1.0134278584818832
+          },
+          {
+            "formedAmount": 0.25,
+            "minimumPrincipalStretch": 0.9746751168264906,
+            "maximumPrincipalStretch": 1.0245455058877035
+          },
+          {
+            "formedAmount": 0.3125,
+            "minimumPrincipalStretch": 0.94376755516839,
+            "maximumPrincipalStretch": 1.0376216365657782
+          },
+          {
+            "formedAmount": 0.375,
+            "minimumPrincipalStretch": 0.9191300406124849,
+            "maximumPrincipalStretch": 1.0635047650828577
+          },
+          {
+            "formedAmount": 0.4375,
+            "minimumPrincipalStretch": 0.8925528924024864,
+            "maximumPrincipalStretch": 1.0939598395190313
+          },
+          {
+            "formedAmount": 0.5,
+            "minimumPrincipalStretch": 0.8631453324691073,
+            "maximumPrincipalStretch": 1.1297798622478368
+          },
+          {
+            "formedAmount": 0.5625,
+            "minimumPrincipalStretch": 0.8447603806188794,
+            "maximumPrincipalStretch": 1.1579863575234879
+          },
+          {
+            "formedAmount": 0.625,
+            "minimumPrincipalStretch": 0.830326176421469,
+            "maximumPrincipalStretch": 1.1767825179556088
+          },
+          {
+            "formedAmount": 0.6875,
+            "minimumPrincipalStretch": 0.8220962280571801,
+            "maximumPrincipalStretch": 1.1916589895166638
+          },
+          {
+            "formedAmount": 0.75,
+            "minimumPrincipalStretch": 0.8187675640136911,
+            "maximumPrincipalStretch": 1.1935487195947199
+          },
+          {
+            "formedAmount": 0.8125,
+            "minimumPrincipalStretch": 0.8220037602101579,
+            "maximumPrincipalStretch": 1.1881441477401895
+          },
+          {
+            "formedAmount": 0.875,
+            "minimumPrincipalStretch": 0.8288045146360075,
+            "maximumPrincipalStretch": 1.198770545671541
+          },
+          {
+            "formedAmount": 0.9375,
+            "minimumPrincipalStretch": 0.8358084216506886,
+            "maximumPrincipalStretch": 1.2120331637282165
+          },
+          {
+            "formedAmount": 1,
+            "minimumPrincipalStretch": 0.842361001826753,
+            "maximumPrincipalStretch": 1.2315930519196547
+          },
+          {
+            "formedAmount": 0.015625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9962251525320694,
+            "maximumPrincipalStretch": 1.0003954069073795
+          },
+          {
+            "formedAmount": 0.03125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9947223541285177,
+            "maximumPrincipalStretch": 1.000803654673188
+          },
+          {
+            "formedAmount": 0.046875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9954994633067945,
+            "maximumPrincipalStretch": 1.0012247852786686
+          },
+          {
+            "formedAmount": 0.078125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9943670920680748,
+            "maximumPrincipalStretch": 1.0027914145981505
+          },
+          {
+            "formedAmount": 0.09375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9926160394242919,
+            "maximumPrincipalStretch": 1.0039441841938561
+          },
+          {
+            "formedAmount": 0.109375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9931745040196357,
+            "maximumPrincipalStretch": 1.0051171510472023
+          },
+          {
+            "formedAmount": 0.140625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9901100464524243,
+            "maximumPrincipalStretch": 1.008036542411091
+          },
+          {
+            "formedAmount": 0.15625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9881632376109705,
+            "maximumPrincipalStretch": 1.009799801638628
+          },
+          {
+            "formedAmount": 0.171875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.986288409455721,
+            "maximumPrincipalStretch": 1.0115973577430148
+          },
+          {
+            "formedAmount": 0.203125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9822971284918063,
+            "maximumPrincipalStretch": 1.016112792435578
+          },
+          {
+            "formedAmount": 0.21875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.980198157269925,
+            "maximumPrincipalStretch": 1.0188335507504178
+          },
+          {
+            "formedAmount": 0.234375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.977701734007372,
+            "maximumPrincipalStretch": 1.0216628081358914
+          },
+          {
+            "formedAmount": 0.265625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9675625590835609,
+            "maximumPrincipalStretch": 1.027386034330983
+          },
+          {
+            "formedAmount": 0.28125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9583243858749231,
+            "maximumPrincipalStretch": 1.0302835428737505
+          },
+          {
+            "formedAmount": 0.296875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9504255812785954,
+            "maximumPrincipalStretch": 1.0332369992229153
+          },
+          {
+            "formedAmount": 0.328125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9356985437181851,
+            "maximumPrincipalStretch": 1.0423971008158697
+          },
+          {
+            "formedAmount": 0.34375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9288601332069499,
+            "maximumPrincipalStretch": 1.0482678865728792
+          },
+          {
+            "formedAmount": 0.359375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9233472041329942,
+            "maximumPrincipalStretch": 1.0552742025820758
+          },
+          {
+            "formedAmount": 0.390625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9105854351124852,
+            "maximumPrincipalStretch": 1.0694494011174176
+          },
+          {
+            "formedAmount": 0.40625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.9033002010378195,
+            "maximumPrincipalStretch": 1.0764935737132602
+          },
+          {
+            "formedAmount": 0.421875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8973048205349508,
+            "maximumPrincipalStretch": 1.084649259755608
+          },
+          {
+            "formedAmount": 0.453125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8825195697988613,
+            "maximumPrincipalStretch": 1.1013315471497265
+          },
+          {
+            "formedAmount": 0.46875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.874203912046794,
+            "maximumPrincipalStretch": 1.1097515385208416
+          },
+          {
+            "formedAmount": 0.484375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8677384704290327,
+            "maximumPrincipalStretch": 1.1192252704459538
+          },
+          {
+            "formedAmount": 0.515625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8559576787785711,
+            "maximumPrincipalStretch": 1.1356252066869075
+          },
+          {
+            "formedAmount": 0.53125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8504898074148731,
+            "maximumPrincipalStretch": 1.1422816342407527
+          },
+          {
+            "formedAmount": 0.546875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8467753027036702,
+            "maximumPrincipalStretch": 1.1497344560805873
+          },
+          {
+            "formedAmount": 0.578125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8381559206116536,
+            "maximumPrincipalStretch": 1.1615775087486957
+          },
+          {
+            "formedAmount": 0.59375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8335317419781821,
+            "maximumPrincipalStretch": 1.1659160700517115
+          },
+          {
+            "formedAmount": 0.609375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8309379066660519,
+            "maximumPrincipalStretch": 1.1709837684110798
+          },
+          {
+            "formedAmount": 0.640625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8259859617850426,
+            "maximumPrincipalStretch": 1.1785754844836176
+          },
+          {
+            "formedAmount": 0.65625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8236728605408149,
+            "maximumPrincipalStretch": 1.1817008690347084
+          },
+          {
+            "formedAmount": 0.671875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8232423588077401,
+            "maximumPrincipalStretch": 1.1860685441983345
+          },
+          {
+            "formedAmount": 0.703125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.820142412068053,
+            "maximumPrincipalStretch": 1.1910101396921862
+          },
+          {
+            "formedAmount": 0.71875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8189676769451818,
+            "maximumPrincipalStretch": 1.1911511538402717
+          },
+          {
+            "formedAmount": 0.734375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8185378313604387,
+            "maximumPrincipalStretch": 1.1920152458515179
+          },
+          {
+            "formedAmount": 0.765625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8186692980777923,
+            "maximumPrincipalStretch": 1.1909915469031325
+          },
+          {
+            "formedAmount": 0.78125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8192332927717662,
+            "maximumPrincipalStretch": 1.189232016642076
+          },
+          {
+            "formedAmount": 0.796875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8203848769010872,
+            "maximumPrincipalStretch": 1.1881954767544711
+          },
+          {
+            "formedAmount": 0.828125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8231663872467201,
+            "maximumPrincipalStretch": 1.1904963757515088
+          },
+          {
+            "formedAmount": 0.84375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8247638593678328,
+            "maximumPrincipalStretch": 1.1930576658875065
+          },
+          {
+            "formedAmount": 0.859375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.826689159927626,
+            "maximumPrincipalStretch": 1.1958165466296056
+          },
+          {
+            "formedAmount": 0.890625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8304254049333828,
+            "maximumPrincipalStretch": 1.2016546954443548
+          },
+          {
+            "formedAmount": 0.90625,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8322061595399856,
+            "maximumPrincipalStretch": 1.2048170289861473
+          },
+          {
+            "formedAmount": 0.921875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8340385113458522,
+            "maximumPrincipalStretch": 1.2082686333801649
+          },
+          {
+            "formedAmount": 0.953125,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8377037115821439,
+            "maximumPrincipalStretch": 1.2165890141813493
+          },
+          {
+            "formedAmount": 0.96875,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8394746210488023,
+            "maximumPrincipalStretch": 1.2213585057861809
+          },
+          {
+            "formedAmount": 0.984375,
+            "interpolated": true,
+            "minimumPrincipalStretch": 0.8410450868312402,
+            "maximumPrincipalStretch": 1.2263531527219926
+          }
+        ],
+        "physicalClothValidation": false,
+        "doesNotTestContactOrSelfIntersections": true
+      }
+    },
+    {
+      "name": "100 detach/flat/reassembly evaluations have no cumulative drift",
+      "passed": true,
+      "detail": {
+        "cycles": 100,
+        "canonicalEndpointUnchanged": true,
+        "originalFlatIdsUnchanged": true
+      }
+    },
+    {
+      "name": "Replacement mask points at real source triangles and removes a substantial independent side",
+      "passed": true,
+      "detail": {
+        "actualRemovedTriangles": 68356,
+        "originalRuntimeTriangles": 240480
+      }
+    },
+    {
+      "name": "Editable asset bytes match its export manifest: detachable-side.glb",
+      "passed": true,
+      "detail": {
+        "bytes": 7579632,
+        "sha256": "b3a8a509ea68b81385b72880bc43c0d07d7dbdc8332451cfd53e0e595b9fd34e"
+      }
+    },
+    {
+      "name": "Editable asset bytes match its export manifest: detachable-side-editable.blend",
+      "passed": true,
+      "detail": {
+        "bytes": 13072365,
+        "sha256": "47ef5c326f8dd158c35eafe363b7f1de310b817fd3034fb24947946ee97ab6d3"
+      }
+    },
+    {
+      "name": "Actual editable animation is tied to this exact full panel data",
+      "passed": true,
+      "detail": {
+        "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+        "declaredExportPanelSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+        "exportedPanelMeshes": 1,
+        "animations": 1
+      }
+    },
+    {
+      "name": "Actual GLB morph buffers preserve paper IDs and the same analytic unfold poses",
+      "passed": true,
+      "detail": {
+        "morphPoseCount": 16,
+        "checkedMorphVertices": 127280,
+        "maximumMorphErrorModelUnits": 1.2366535264270472e-7,
+        "physicalAccuracy": false
+      }
+    },
+    {
+      "name": "Browser uses this exact generated full panel data, not a stale build",
+      "passed": true,
+      "detail": {
+        "canonicalPanelSha256": "105322af9907fc0f61c23a3f5ef811635f65678ce4f3aee2f57ad27d67482f2f"
+      }
+    },
+    {
+      "name": "Actual full detachable panel and corrected model boot together",
+      "passed": true,
+      "detail": {
+        "ready": true,
+        "progress": 0,
+        "selectedTrimId": "traced-lower-pencil-reference",
+        "playing": false,
+        "phase": "attached",
+        "selection": null,
+        "flatErrorMm": null,
+        "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+        "indexCount": 45099,
+        "indexArrayType": "Uint16Array",
+        "vertexCount": 8963,
+        "removedTriangles": 68356,
+        "hardware": {
+          "sourceTriangles": 8510,
+          "visible": false
+        },
+        "scene": {
+          "loaded": true,
+          "preset": "quarter",
+          "triangles": 187157,
+          "drawCalls": 8,
+          "pixelRatio": 1,
+          "extent": 1.9191192984580994,
+          "unit": "source-model-coordinates",
+          "shell": null
+        },
+        "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+        "hasOriginalSourceIds": true
+      }
+    },
+    {
+      "name": "Actual connector layer uses only the first-visible source triangle selection",
+      "passed": true,
+      "detail": {
+        "candidateTriangles": 10415,
+        "retainedFirstVisibleTriangles": 8510,
+        "actualRenderedConnectorTriangles": 8510,
+        "sourceModelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142"
+      }
+    },
+    {
+      "name": "Actual base draw buffers omit the declared original side triangles",
+      "passed": true,
+      "detail": {
+        "removedTriangles": 68356,
+        "expectedRemovedTriangles": 68356
+      }
+    },
+    {
+      "name": "All detach/unfold/overlay stages use the same actual geometry object and index buffer",
+      "passed": true,
+      "detail": [
+        {
+          "progress": 0,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "sameGeometry": true,
+          "sameIndex": true,
+          "panelVisible": true,
+          "flatErrorMm": null
+        },
+        {
+          "progress": 0.24,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "sameGeometry": true,
+          "sameIndex": true,
+          "panelVisible": true,
+          "flatErrorMm": null
+        },
+        {
+          "progress": 0.57,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "sameGeometry": true,
+          "sameIndex": true,
+          "panelVisible": true,
+          "flatErrorMm": null
+        },
+        {
+          "progress": 0.84,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "sameGeometry": true,
+          "sameIndex": true,
+          "panelVisible": true,
+          "flatErrorMm": 0
+        },
+        {
+          "progress": 1,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "sameGeometry": true,
+          "sameIndex": true,
+          "panelVisible": true,
+          "flatErrorMm": 0
+        }
+      ]
+    },
+    {
+      "name": "Rendered Float32 flat plane agrees with the same real millimetre pattern",
+      "passed": true,
+      "detail": {
+        "scale": 0.006399999996912251,
+        "xAxis": [
+          -0.006399999992186009,
+          1.0301048550005134e-12,
+          -1.9780878178131504e-12
+        ],
+        "yAxis": [
+          -3.269938335766934e-13,
+          0.006354411767785578,
+          -0.0007625294134660441
+        ],
+        "axisLengthDifference": 9.452484801830696e-12,
+        "orthogonality": 2.4772512447012467e-10,
+        "maxResidualModelUnits": 1.324785559431024e-7,
+        "maxResidualMm": 0.00002069977437609658,
+        "canonicalExactErrorMm": 0
+      }
+    },
+    {
+      "name": "100 actual evaluator cycles leave source identities and rendered flat endpoint unchanged",
+      "passed": true,
+      "detail": {
+        "paperUnchanged": true,
+        "idsUnchanged": true,
+        "indexSame": true,
+        "flatErrorMm": 0
+      }
+    },
+    {
+      "name": "Invalid progress input cannot corrupt panel state",
+      "passed": true,
+      "detail": {
+        "before": 1,
+        "after": 1,
+        "result": false
+      }
+    },
+    {
+      "name": "User pause stops the one-time unfolding narrative",
+      "passed": true,
+      "detail": {
+        "paused": 0.07270833333084965,
+        "after": 0.07270833333084965
+      }
+    },
+    {
+      "name": "Rapid forward/reverse/seek interruption keeps the last requested state",
+      "passed": true,
+      "detail": {
+        "ready": true,
+        "progress": 0.57,
+        "selectedTrimId": "traced-lower-pencil-reference",
+        "playing": false,
+        "phase": "unfold",
+        "selection": null,
+        "flatErrorMm": null,
+        "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+        "indexCount": 45099,
+        "indexArrayType": "Uint16Array",
+        "vertexCount": 8963,
+        "removedTriangles": 68356,
+        "hardware": {
+          "sourceTriangles": 8510,
+          "visible": false
+        },
+        "scene": {
+          "loaded": true,
+          "preset": "quarter",
+          "triangles": 187157,
+          "drawCalls": 8,
+          "pixelRatio": 1,
+          "extent": 1.9191192984580994,
+          "unit": "source-model-coordinates",
+          "shell": null
+        },
+        "modelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+        "hasOriginalSourceIds": true
+      }
+    },
+    {
+      "name": "Complete staged animation reaches and retains the exact flat comparison state",
+      "passed": true,
+      "detail": {
+        "elapsedMs": 1353.5,
+        "frames": 6,
+        "medianFrameMs": 200,
+        "p95FrameMs": 350.0000000000009,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Reverse narrative returns the same actual panel to the attached shoe",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Actual single-finger touch rotates the model and independent side",
+      "passed": true,
+      "detail": {
+        "before": [
+          0.07195428013801575,
+          0.6021523464867641,
+          11.990632020730112
+        ],
+        "after": [
+          -3.0442789467267843,
+          1.2341290834216896,
+          11.52832792652178
+        ]
+      }
+    },
+    {
+      "name": "Actual two-finger pinch changes model zoom",
+      "passed": true,
+      "detail": {
+        "before": 1,
+        "after": 1.7444702229723346
+      }
+    },
+    {
+      "name": "Actual touch dragging the timeline seeks the same panel",
+      "passed": true,
+      "detail": {
+        "progress": 0.683,
+        "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741"
+      }
+    },
+    {
+      "name": "Actual paper touch selects a corresponding triangle of the detachable panel",
+      "passed": true,
+      "detail": {
+        "triangle": 14922,
+        "barycentric": [
+          0.3333250538024098,
+          0.33335055498275956,
+          0.3333243912148307
+        ],
+        "flatMm": [
+          179.1048583984375,
+          110.36976631588095
+        ],
+        "vertexIds": [
+          1094,
+          2024,
+          2486
+        ],
+        "confidence": [
+          "inferred-smooth-surface-completion",
+          "inferred-smooth-surface-completion",
+          "inferred-smooth-surface-completion"
+        ]
+      }
+    },
+    {
+      "name": "Actual detached panel touch maps back to the same millimetre paper location",
+      "passed": true,
+      "detail": {
+        "before": [
+          179.1048583984375,
+          110.36976631588095
+        ],
+        "after": [
+          179.1048583984375,
+          110.36976631588095
+        ]
+      }
+    },
+    {
+      "name": "Overlay, seam, confidence and wire switches preserve the same side geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Observed and inferred cloth regions are visibly distinguished when enabled",
+      "passed": true,
+      "detail": {
+        "colors": 3,
+        "vertexColorsEnabled": true,
+        "observed": 2019,
+        "inferred": 6944
+      }
+    },
+    {
+      "name": "Paper-facing camera preserves geometry and exact flat correspondence",
+      "passed": true,
+      "detail": {
+        "alignment": 0.9999999886197867,
+        "sameGeometry": true,
+        "flatErrorMm": 0
+      }
+    },
+    {
+      "name": "Full panel project JSON and actual flat boundary SVG download",
+      "passed": true,
+      "detail": [
+        "ONWARD-detachable-side-flat.svg",
+        "ONWARD-detachable-side-project.json"
+      ]
+    },
+    {
+      "name": "Export JSON retains exact full identity, trim provenance and unverified status",
+      "passed": true,
+      "detail": {
+        "vertices": 8963,
+        "triangles": 15033,
+        "productionReady": false,
+        "coordinateSystems": {
+          "paper": "mm",
+          "model": "uncalibrated-model-unit"
+        }
+      }
+    },
+    {
+      "name": "Export SVG has canonical millimetre dimensions and an actual flat-panel outline",
+      "passed": true,
+      "detail": {
+        "bytes": 259513,
+        "viewBox": "-10 -10 288.6836921718148 277.13856514400595"
+      }
+    },
+    {
+      "name": "Actual editable animation asset is downloadable: 侧片动画 GLB（默认底边）↗",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4389/soulgrain-onward/onward-side-unfold/detachable-side-panel/detachable-side.glb",
+        "status": 200,
+        "bytes": "7579632"
+      }
+    },
+    {
+      "name": "Actual editable animation asset is downloadable: Blender 工程（默认底边）↗",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4389/soulgrain-onward/onward-side-unfold/detachable-side-panel/detachable-side-editable.blend",
+        "status": 200,
+        "bytes": "13072365"
+      }
+    },
+    {
+      "name": "All sole-boundary configurations preserve the paper endpoint and export their active indices",
+      "passed": true,
+      "detail": [
+        {
+          "id": "traced-lower-pencil-reference",
+          "indexCount": 45099,
+          "vertexCount": 8963,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "flatErrorMm": 0
+        },
+        {
+          "id": "full-source-no-exclusion",
+          "indexCount": 48375,
+          "vertexCount": 8963,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "flatErrorMm": 0
+        },
+        {
+          "id": "photo-inferred-sole-top",
+          "indexCount": 34908,
+          "vertexCount": 8963,
+          "geometryUUID": "064ae9b0-e4b7-4afd-b309-615010a17741",
+          "flatErrorMm": 0
+        }
+      ]
+    },
+    {
+      "name": "Actual application assets load without failed requests",
+      "passed": true,
+      "detail": {
+        "failedRequests": [],
+        "badResponses": [
+          {
+            "url": "http://127.0.0.1:4389/favicon.ico",
+            "status": 404
+          }
+        ]
+      }
+    },
+    {
+      "name": "No uncaught browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "badResponses": [
+    {
+      "url": "http://127.0.0.1:4389/favicon.ico",
+      "status": 404
+    }
+  ],
+  "downloadEvents": [
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "0CDE21D52F92DE492A9FCBF2516AB89C",
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "url": "blob:http://127.0.0.1:4389/87d6bea4-2337-425a-8460-e6081780d6a3",
+        "suggestedFilename": "ONWARD-detachable-side-project.json"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "params": {
+        "frameId": "0CDE21D52F92DE492A9FCBF2516AB89C",
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "url": "blob:http://127.0.0.1:4389/57fccd36-780f-4776-83ce-5e510425dada",
+        "suggestedFilename": "ONWARD-detachable-side-flat.svg"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 0,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 259545,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 259545,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 259545,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 259545,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 25297100,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 25297100,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 25297100,
+        "state": "inProgress"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "00166406-9ffc-48b4-8988-621cfc684f0c",
+        "totalBytes": 259545,
+        "receivedBytes": 259545,
+        "state": "completed",
+        "filePath": "/tmp/onward-detachable-qa-1793232321871/downloads/ONWARD-detachable-side-flat.svg"
+      }
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "params": {
+        "guid": "1027d7d7-670e-4471-a37f-1c804f226758",
+        "totalBytes": 25297100,
+        "receivedBytes": 25297100,
+        "state": "completed",
+        "filePath": "/tmp/onward-detachable-qa-1793232321871/downloads/ONWARD-detachable-side-project.json"
+      }
+    }
+  ],
+  "productionReady": false,
+  "limitations": [
+    "Physical sole-wrap boundary, hidden folds, model scale and material strain are unverified.",
+    "An exact numerical paper endpoint is not a certified real-world flattening result.",
+    "Software WebGL timing does not establish physical iPad GPU performance."
+  ],
+  "video": {
+    "file": "unfold-process.mp4",
+    "frames": 96,
+    "inputFps": 12,
+    "durationSeconds": 8,
+    "method": "Deterministic screenshots of the actual interactive mesh at increasing progress; no image morph or substituted mesh. Encoded at12fps; not a real-time performance measurement."
+  }
+}
