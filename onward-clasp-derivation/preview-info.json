@@ -1,0 +1,9 @@
+{
+  "sourceBranch": "feat/onward-clasp-derivation",
+  "sourceCommit": "c16b60ea393d59b13a118fbc055d44717bf25529",
+  "previousPagesCommit": "c066444df3532a077580cc992bcf01db8b9d1668",
+  "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+  "claspDerivationSha256": "d99ef5b2a2d0f7a46ea8b8347becc3806b28ace9530b077f17f550d6fb19cfd3",
+  "scope": "New isolated prefix only. Accepted paper/model and earlier website/previews are unchanged.",
+  "realIpadSafariTested": false
+}

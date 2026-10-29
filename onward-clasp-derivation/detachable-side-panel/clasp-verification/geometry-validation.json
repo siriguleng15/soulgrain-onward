@@ -1,0 +1,1754 @@
+{
+  "testedAt": "2026-10-29T05:34:20.213Z",
+  "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+  "claspDerivationSha256": "d99ef5b2a2d0f7a46ea8b8347becc3806b28ace9530b077f17f550d6fb19cfd3",
+  "claspDesignSha256": "9a281b79e4721a4b26893f9bf032b7c21d0883a289f5f7f8952e8ae6a24b8909",
+  "checks": [
+    {
+      "name": "Accepted paper-driven side geometry remains byte-for-byte unchanged",
+      "passed": true,
+      "detail": {
+        "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a"
+      }
+    },
+    {
+      "name": "Original construction and final-strip reference bytes match preserved source manifest",
+      "passed": true,
+      "detail": [
+        {
+          "file": "12-design-final-straps.jpg",
+          "sha256": "59c4cca9c0509c41d4cf0b385ac02185bf347264e3b922196e66dfc6df534a9f"
+        },
+        {
+          "file": "08-design-center-first.jpg",
+          "sha256": "44d8f9d702598e7f57e0f038cbaf8df4d379e94fd05e767db2da64dee84020b4"
+        },
+        {
+          "file": "10-design-center-second.jpg",
+          "sha256": "7c421395adf91624c4d2548d4ad4192f5216e90499f934218489381e3ded14a9"
+        },
+        {
+          "file": "05-design-framework.jpg",
+          "sha256": "0d3aa4f41260452c63bd9a56a754650512a6ec3b704d2ca97af591a21b1bfa02"
+        },
+        {
+          "file": "07-design-spiral-first.jpg",
+          "sha256": "0551696d9b9744c61634ceaf9ad9d4a02eaab41dffb4a2b5f09bcfebf660be6b"
+        },
+        {
+          "file": "11-design-centers.jpg",
+          "sha256": "902e4f21ea526f88e8b7de2805aec8e66280e5e027ddbd01049bd1c03580b554"
+        },
+        {
+          "file": "09-design-spiral-mirror.jpg",
+          "sha256": "8e2b0d29657ad206ed5278fbfe2efe95dde2e77c636d1461dd7e144055a06964"
+        },
+        {
+          "file": "06-design-midlines.jpg",
+          "sha256": "c39950aac2d5f3c75fa7c1cba5fd1ef01ea634894d54b219ead2d0e437dde5fc"
+        },
+        {
+          "file": "03-shoe-side-original.jpg",
+          "sha256": "aecad975b036a1afa4fb5aa8c66dc4f40290085c9f3ff9b2650cde2e253ec297"
+        },
+        {
+          "file": "04-design-regions.jpg",
+          "sha256": "86e8341bf9b96f573bbacdbaaa2916e11034ebf8e6f4ba7fc6e80f2238b204e9"
+        }
+      ]
+    },
+    {
+      "name": "User confirmed photographed blue centers remain placement authority",
+      "passed": true,
+      "detail": {
+        "userConfirmed": true,
+        "confirmedDefinition": "fifth-arc-supporting-circle-center",
+        "defaultCenterSource": "observed-blue-circle",
+        "confirmation": "以图中蓝色扣心为准，即第五段完整圆的圆心",
+        "confirmationDate": "2026-10-28",
+        "note": "The confirmation resolves the geometric meaning, not the remaining hand-drawing and template-fit errors. No observed blue center is moved to enforce ideal geometry."
+      }
+    },
+    {
+      "name": "Five quarter circles preserve true recursive golden-square relations: first",
+      "passed": true,
+      "detail": {
+        "maximumRadiusError": 3.3750315431291256e-8,
+        "maximumEndpointError": 3.464102066193986e-7,
+        "observedCenterResidualPx": 3.5920882806769834,
+        "observedFourthEndDistancePx": 23.30859155692068,
+        "isExactLogarithmicSpiral": false
+      }
+    },
+    {
+      "name": "Five quarter circles preserve true recursive golden-square relations: opposite",
+      "passed": true,
+      "detail": {
+        "maximumRadiusError": 3.3750315431291256e-8,
+        "maximumEndpointError": 3.464102066193986e-7,
+        "observedCenterResidualPx": 2.9805126940097395,
+        "observedFourthEndDistancePx": 23.405033204662196,
+        "isExactLogarithmicSpiral": false
+      }
+    },
+    {
+      "name": "Hand-drawn template residuals and nonparallel observed strips are not erased",
+      "passed": true,
+      "detail": {
+        "golden": [
+          {
+            "template": "first",
+            "mirrored": false,
+            "fittedCenterPhoto": [
+              775.1038848768159,
+              369.88729479312906
+            ],
+            "observedBlueCenterPhoto": [
+              774.121565,
+              373.342457
+            ],
+            "remainingResidualPx": 3.5920882806769834
+          },
+          {
+            "template": "opposite",
+            "mirrored": true,
+            "fittedCenterPhoto": [
+              815.5676221981496,
+              453.05749819075373
+            ],
+            "observedBlueCenterPhoto": [
+              812.649906,
+              452.448903
+            ],
+            "remainingResidualPx": 2.9805126940097395
+          }
+        ],
+        "observedAxisDifferenceDeg": 3.328885
+      }
+    },
+    {
+      "name": "Derivation contains dense actual-surface anchors rather than a photo plane",
+      "passed": true,
+      "detail": {
+        "mappedSamples": 9097,
+        "paths": 34,
+        "coverage": 8,
+        "keypoints": 12
+      }
+    },
+    {
+      "name": "Every drawing, keypoint and coverage vertex has original-triangle identity and exact flat provenance",
+      "passed": true,
+      "detail": {
+        "samples": 9097,
+        "maximumFlatErrorMm": 6.355287432313019e-14
+      }
+    },
+    {
+      "name": "Attached projection residuals are reproducible from actual formed mesh",
+      "passed": true,
+      "detail": {
+        "maximumResidualConsistencyErrorPx": 2.5421149729252077e-13,
+        "maximumPhotoResidualPx": 2.3437142008433856e-13,
+        "nonzeroProjectionResidualSamples": 0,
+        "doesNotMeasurePhysicalAccuracy": true
+      }
+    },
+    {
+      "name": "Generated derivation is bound to the accepted panel and original observed design",
+      "passed": true,
+      "detail": {
+        "panelDataSha256": "c7409caba44e6b1ee42abd905e0d2933e88bf15f597096ee89f8f1ec9e8a6b2a",
+        "claspDesignSha256": "9a281b79e4721a4b26893f9bf032b7c21d0883a289f5f7f8952e8ae6a24b8909",
+        "correctedModelSha256": "39c1c014975b983df9489e1d4a5b1bbe872eb829d5848e3970b47e04ab8ea142",
+        "paperProjectSha256": "11ff21b97f58902c6c73ca8c1e45b8b91873a7bfb73203db63d80339db895ad0"
+      }
+    },
+    {
+      "name": "Twelve numbered surface references retain photographed construction, observed centers and fixed ends",
+      "passed": true,
+      "detail": {
+        "points": [
+          {
+            "id": "P",
+            "materialSide": 1,
+            "flatMm": [
+              240.31998453052967,
+              54.07077692353304
+            ],
+            "requestedPhotoPx": [
+              319,
+              569
+            ]
+          },
+          {
+            "id": "T",
+            "materialSide": 1,
+            "flatMm": [
+              169.80209346254924,
+              89.19726849120279
+            ],
+            "requestedPhotoPx": [
+              575.261409,
+              428.786682
+            ]
+          },
+          {
+            "id": "G1",
+            "materialSide": 1,
+            "flatMm": [
+              164.47392488600119,
+              79.66691520604185
+            ],
+            "requestedPhotoPx": [
+              596.169377,
+              467.293456
+            ]
+          },
+          {
+            "id": "G2",
+            "materialSide": 1,
+            "flatMm": [
+              152.71917452498926,
+              58.84757344076626
+            ],
+            "requestedPhotoPx": [
+              641.863266,
+              551.449134
+            ]
+          },
+          {
+            "id": "C1B",
+            "materialSide": 1,
+            "flatMm": [
+              116.50662433414315,
+              102.67322471146446
+            ],
+            "requestedPhotoPx": [
+              774.121565,
+              373.342457
+            ]
+          },
+          {
+            "id": "C1",
+            "materialSide": -1,
+            "flatMm": [
+              131.82798433770986,
+              191.75754826475847
+            ],
+            "requestedPhotoPx": [
+              774.121565,
+              373.342457
+            ]
+          },
+          {
+            "id": "B1",
+            "materialSide": 1,
+            "flatMm": [
+              163.91514903680599,
+              79.51091390671166
+            ],
+            "requestedPhotoPx": [
+              598.273121,
+              467.904664
+            ]
+          },
+          {
+            "id": "F1",
+            "materialSide": -1,
+            "flatMm": [
+              77.44136188445697,
+              187.3274444151701
+            ],
+            "requestedPhotoPx": [
+              957.482527,
+              284.035444
+            ]
+          },
+          {
+            "id": "C2B",
+            "materialSide": 1,
+            "flatMm": [
+              106.37342967871757,
+              83.32037521611934
+            ],
+            "requestedPhotoPx": [
+              812.649906,
+              452.448903
+            ]
+          },
+          {
+            "id": "C2",
+            "materialSide": -1,
+            "flatMm": [
+              128.00174327120834,
+              213.56542032766214
+            ],
+            "requestedPhotoPx": [
+              812.649906,
+              452.448903
+            ]
+          },
+          {
+            "id": "B2",
+            "materialSide": 1,
+            "flatMm": [
+              154.37737488104912,
+              63.43057487137671
+            ],
+            "requestedPhotoPx": [
+              635.286722,
+              532.92046
+            ]
+          },
+          {
+            "id": "F2",
+            "materialSide": -1,
+            "flatMm": [
+              73.59562239784145,
+              211.57035206720155
+            ],
+            "requestedPhotoPx": [
+              1000.612157,
+              371.962194
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "One visible snap center retains two distinct material installation references: 1",
+      "passed": true,
+      "detail": {
+        "bodyFlatMm": [
+          116.50662433414315,
+          102.67322471146446
+        ],
+        "cuffFlatMm": [
+          131.82798433770986,
+          191.75754826475847
+        ],
+        "samePhotoPixel": true,
+        "physicalInstallationValidated": false
+      }
+    },
+    {
+      "name": "One visible snap center retains two distinct material installation references: 2",
+      "passed": true,
+      "detail": {
+        "bodyFlatMm": [
+          106.37342967871757,
+          83.32037521611934
+        ],
+        "cuffFlatMm": [
+          128.00174327120834,
+          213.56542032766214
+        ],
+        "samePhotoPixel": true,
+        "physicalInstallationValidated": false
+      }
+    },
+    {
+      "name": "Actual mapped spiral path samples follow the preserved first and mirrored quarter-circle constructions",
+      "passed": true,
+      "detail": {
+        "maximumRadialErrorPx": 0.00006735831630066969,
+        "templateCount": 2,
+        "arcsPerTemplate": 5
+      }
+    },
+    {
+      "name": "Eight PU and snap footprints have independently computed paper areas with actual clipped source surfaces",
+      "passed": true,
+      "detail": [
+        {
+          "id": "clasp-1-body",
+          "half": "body",
+          "materialSide": 1,
+          "triangles": 372,
+          "areaFlatMm2": 667.502541828343,
+          "mappedPhotoCoverageFraction": 1.000000000000017,
+          "uncoveredPhotoAreaPx2": 0
+        },
+        {
+          "id": "clasp-1-cuff",
+          "half": "cuff",
+          "materialSide": -1,
+          "triangles": 377,
+          "areaFlatMm2": 698.0798070080009,
+          "mappedPhotoCoverageFraction": 1.000000000000014,
+          "uncoveredPhotoAreaPx2": 0
+        },
+        {
+          "id": "clasp-1-snap-body",
+          "half": "snap-body",
+          "materialSide": 1,
+          "triangles": 154,
+          "areaFlatMm2": 114.59674160972918,
+          "mappedPhotoCoverageFraction": 1.0000000000001004,
+          "uncoveredPhotoAreaPx2": 0
+        },
+        {
+          "id": "clasp-1-snap-cuff",
+          "half": "snap-cuff",
+          "materialSide": -1,
+          "triangles": 154,
+          "areaFlatMm2": 114.55944906937293,
+          "mappedPhotoCoverageFraction": 1.0000000000000502,
+          "uncoveredPhotoAreaPx2": 0
+        },
+        {
+          "id": "clasp-2-body",
+          "half": "body",
+          "materialSide": 1,
+          "triangles": 349,
+          "areaFlatMm2": 659.2129505257658,
+          "mappedPhotoCoverageFraction": 0.9999999999999825,
+          "uncoveredPhotoAreaPx2": 1.7462298274040222e-10
+        },
+        {
+          "id": "clasp-2-cuff",
+          "half": "cuff",
+          "materialSide": -1,
+          "triangles": 426,
+          "areaFlatMm2": 692.8347530817437,
+          "mappedPhotoCoverageFraction": 0.9963174610112985,
+          "uncoveredPhotoAreaPx2": 38.60155539037078
+        },
+        {
+          "id": "clasp-2-snap-body",
+          "half": "snap-body",
+          "materialSide": 1,
+          "triangles": 148,
+          "areaFlatMm2": 116.3557800718977,
+          "mappedPhotoCoverageFraction": 1.0000000000000828,
+          "uncoveredPhotoAreaPx2": 0
+        },
+        {
+          "id": "clasp-2-snap-cuff",
+          "half": "snap-cuff",
+          "materialSide": -1,
+          "triangles": 163,
+          "areaFlatMm2": 115.1067569308434,
+          "mappedPhotoCoverageFraction": 1.0000000000000828,
+          "uncoveredPhotoAreaPx2": 0
+        }
+      ]
+    },
+    {
+      "name": "Missing region paths and incomplete footprints remain reported instead of extrapolated",
+      "passed": true,
+      "detail": {
+        "unmappedPathSamples": 100,
+        "pathsWithGaps": [
+          {
+            "path": "region-body",
+            "missingSamples": 7,
+            "requestedSamples": 379
+          },
+          {
+            "path": "region-cuff",
+            "missingSamples": 93,
+            "requestedSamples": 441
+          }
+        ],
+        "incompleteCoverage": [
+          {
+            "id": "clasp-2-cuff",
+            "half": "cuff",
+            "materialSide": -1,
+            "triangles": 426,
+            "areaFlatMm2": 692.8347530817437,
+            "mappedPhotoCoverageFraction": 0.9963174610112985,
+            "uncoveredPhotoAreaPx2": 38.60155539037078
+          }
+        ]
+      }
+    },
+    {
+      "name": "12 mm appearance preset does not manufacture PU width, overlap or cut lengths",
+      "passed": true,
+      "detail": [
+        {
+          "id": "clasp-1",
+          "snapAppearanceDiameterMm": 12,
+          "puWidthMm": null,
+          "overlapMm": null,
+          "actualCutLengthsKnown": false
+        },
+        {
+          "id": "clasp-2",
+          "snapAppearanceDiameterMm": 12,
+          "puWidthMm": null,
+          "overlapMm": null,
+          "actualCutLengthsKnown": false
+        }
+      ]
+    },
+    {
+      "name": "Actual path draw ranges reveal geometry progressively, including all five arcs in both directions",
+      "passed": true,
+      "detail": [
+        {
+          "progress": 0,
+          "stage": "regions",
+          "drawnVertices": 0,
+          "paths": []
+        },
+        {
+          "progress": 0.08,
+          "stage": "regions",
+          "drawnVertices": 1140,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 588,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 552,
+              "totalCount": 690
+            }
+          ]
+        },
+        {
+          "progress": 0.15,
+          "stage": "framework",
+          "drawnVertices": 1908,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 198,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 38,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 126,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 120,
+              "totalCount": 314
+            }
+          ]
+        },
+        {
+          "progress": 0.27,
+          "stage": "guides",
+          "drawnVertices": 3078,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 194,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 192,
+              "totalCount": 336
+            }
+          ]
+        },
+        {
+          "progress": 0.35,
+          "stage": "spiral-first",
+          "drawnVertices": 4566,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 70,
+              "totalCount": 256
+            }
+          ]
+        },
+        {
+          "progress": 0.46,
+          "stage": "center-first",
+          "drawnVertices": 5346,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            }
+          ]
+        },
+        {
+          "progress": 0.5,
+          "stage": "center-first",
+          "drawnVertices": 5432,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-first",
+              "drawCount": 84,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-first",
+              "drawCount": 2,
+              "totalCount": 4
+            }
+          ]
+        },
+        {
+          "progress": 0.6,
+          "stage": "spiral-opposite",
+          "drawnVertices": 7046,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-first",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-first",
+              "drawCount": 4,
+              "totalCount": 4
+            },
+            {
+              "id": "golden-rectangle-opposite",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-opposite-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-opposite-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-opposite-2",
+              "drawCount": 118,
+              "totalCount": 118
+            },
+            {
+              "id": "golden-square-opposite-2",
+              "drawCount": 248,
+              "totalCount": 248
+            },
+            {
+              "id": "golden-square-opposite-3",
+              "drawCount": 74,
+              "totalCount": 156
+            }
+          ]
+        },
+        {
+          "progress": 0.68,
+          "stage": "center-second",
+          "drawnVertices": 7438,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-first",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-first",
+              "drawCount": 4,
+              "totalCount": 4
+            },
+            {
+              "id": "golden-rectangle-opposite",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-opposite-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-opposite-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-opposite-2",
+              "drawCount": 118,
+              "totalCount": 118
+            },
+            {
+              "id": "golden-square-opposite-2",
+              "drawCount": 248,
+              "totalCount": 248
+            },
+            {
+              "id": "spiral-opposite-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-opposite-3",
+              "drawCount": 156,
+              "totalCount": 156
+            },
+            {
+              "id": "spiral-opposite-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-opposite-4",
+              "drawCount": 92,
+              "totalCount": 92
+            },
+            {
+              "id": "spiral-opposite-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-opposite-5",
+              "drawCount": 64,
+              "totalCount": 64
+            }
+          ]
+        },
+        {
+          "progress": 0.74,
+          "stage": "both-centers",
+          "drawnVertices": 7568,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-first",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-first",
+              "drawCount": 4,
+              "totalCount": 4
+            },
+            {
+              "id": "golden-rectangle-opposite",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-opposite-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-opposite-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-opposite-2",
+              "drawCount": 118,
+              "totalCount": 118
+            },
+            {
+              "id": "golden-square-opposite-2",
+              "drawCount": 248,
+              "totalCount": 248
+            },
+            {
+              "id": "spiral-opposite-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-opposite-3",
+              "drawCount": 156,
+              "totalCount": 156
+            },
+            {
+              "id": "spiral-opposite-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-opposite-4",
+              "drawCount": 92,
+              "totalCount": 92
+            },
+            {
+              "id": "spiral-opposite-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-opposite-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-opposite",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-opposite",
+              "drawCount": 2,
+              "totalCount": 2
+            }
+          ]
+        },
+        {
+          "progress": 1,
+          "stage": "straps",
+          "drawnVertices": 7568,
+          "paths": [
+            {
+              "id": "region-body",
+              "drawCount": 736,
+              "totalCount": 736
+            },
+            {
+              "id": "region-cuff",
+              "drawCount": 690,
+              "totalCount": 690
+            },
+            {
+              "id": "top-connection",
+              "drawCount": 516,
+              "totalCount": 516
+            },
+            {
+              "id": "left-boundary",
+              "drawCount": 104,
+              "totalCount": 104
+            },
+            {
+              "id": "firstCuffSeamExtension",
+              "drawCount": 332,
+              "totalCount": 332
+            },
+            {
+              "id": "secondCuffSeamExtension",
+              "drawCount": 314,
+              "totalCount": 314
+            },
+            {
+              "id": "upperStrapGuide",
+              "drawCount": 340,
+              "totalCount": 340
+            },
+            {
+              "id": "lowerStrapGuide",
+              "drawCount": 336,
+              "totalCount": 336
+            },
+            {
+              "id": "golden-rectangle-first",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-first-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-first-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-first-2",
+              "drawCount": 120,
+              "totalCount": 120
+            },
+            {
+              "id": "golden-square-first-2",
+              "drawCount": 256,
+              "totalCount": 256
+            },
+            {
+              "id": "spiral-first-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-first-3",
+              "drawCount": 160,
+              "totalCount": 160
+            },
+            {
+              "id": "spiral-first-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-first-4",
+              "drawCount": 96,
+              "totalCount": 96
+            },
+            {
+              "id": "spiral-first-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-first-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-first",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-first",
+              "drawCount": 4,
+              "totalCount": 4
+            },
+            {
+              "id": "golden-rectangle-opposite",
+              "drawCount": 528,
+              "totalCount": 528
+            },
+            {
+              "id": "spiral-opposite-1",
+              "drawCount": 196,
+              "totalCount": 196
+            },
+            {
+              "id": "golden-square-opposite-1",
+              "drawCount": 404,
+              "totalCount": 404
+            },
+            {
+              "id": "spiral-opposite-2",
+              "drawCount": 118,
+              "totalCount": 118
+            },
+            {
+              "id": "golden-square-opposite-2",
+              "drawCount": 248,
+              "totalCount": 248
+            },
+            {
+              "id": "spiral-opposite-3",
+              "drawCount": 76,
+              "totalCount": 76
+            },
+            {
+              "id": "golden-square-opposite-3",
+              "drawCount": 156,
+              "totalCount": 156
+            },
+            {
+              "id": "spiral-opposite-4",
+              "drawCount": 48,
+              "totalCount": 48
+            },
+            {
+              "id": "golden-square-opposite-4",
+              "drawCount": 92,
+              "totalCount": 92
+            },
+            {
+              "id": "spiral-opposite-5",
+              "drawCount": 30,
+              "totalCount": 30
+            },
+            {
+              "id": "golden-square-opposite-5",
+              "drawCount": 64,
+              "totalCount": 64
+            },
+            {
+              "id": "fifth-full-circle-opposite",
+              "drawCount": 128,
+              "totalCount": 128
+            },
+            {
+              "id": "template-to-observed-centre-opposite",
+              "drawCount": 2,
+              "totalCount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Actual renderer buffers follow the same original anchors through detachment and flattening",
+      "passed": true,
+      "detail": {
+        "maximumActualSurfaceErrorModelUnits": 0,
+        "maximumSignedFaceOffsetErrorModelUnits": 1.1285354745277495e-7,
+        "poses": [
+          {
+            "unfoldProgress": 0,
+            "keypoints": 12,
+            "coverage": 8,
+            "closedBlend": 1,
+            "positionsFinite": true
+          },
+          {
+            "unfoldProgress": 0.24,
+            "keypoints": 12,
+            "coverage": 8,
+            "closedBlend": 0,
+            "positionsFinite": true
+          },
+          {
+            "unfoldProgress": 0.57,
+            "keypoints": 12,
+            "coverage": 8,
+            "closedBlend": 0,
+            "positionsFinite": true
+          },
+          {
+            "unfoldProgress": 1,
+            "keypoints": 12,
+            "coverage": 8,
+            "closedBlend": 0,
+            "positionsFinite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actual coverage winding and depth tests preserve body front and folded-cuff back at flat endpoint",
+      "passed": true,
+      "detail": [
+        {
+          "id": "clasp-1-body",
+          "materialSide": 1,
+          "minNormalAgreement": 0.9999996957311373,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-1-cuff",
+          "materialSide": -1,
+          "minNormalAgreement": 0.9999881504833876,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-1-snap-body",
+          "materialSide": 1,
+          "minNormalAgreement": 0.999999225701588,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-1-snap-cuff",
+          "materialSide": -1,
+          "minNormalAgreement": 0.9999296834429364,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-2-body",
+          "materialSide": 1,
+          "minNormalAgreement": 0.9999998009608985,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-2-cuff",
+          "materialSide": -1,
+          "minNormalAgreement": 0.9999985186799775,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-2-snap-body",
+          "materialSide": 1,
+          "minNormalAgreement": 0.9999998744302545,
+          "frontSide": true,
+          "depthTest": true
+        },
+        {
+          "id": "clasp-2-snap-cuff",
+          "materialSide": -1,
+          "minNormalAgreement": 0.999989687601479,
+          "frontSide": true,
+          "depthTest": true
+        }
+      ]
+    },
+    {
+      "name": "Actual mesh ray occlusion hides cuff coverage from front and reveals it from back",
+      "passed": true,
+      "detail": [
+        {
+          "id": "clasp-1-body",
+          "observedMaterialSide": 1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-1-body",
+          "observedMaterialSide": -1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-1-cuff",
+          "observedMaterialSide": 1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-1-cuff",
+          "observedMaterialSide": -1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-1-snap-body",
+          "observedMaterialSide": 1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-1-snap-body",
+          "observedMaterialSide": -1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-1-snap-cuff",
+          "observedMaterialSide": 1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-1-snap-cuff",
+          "observedMaterialSide": -1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-2-body",
+          "observedMaterialSide": 1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-2-body",
+          "observedMaterialSide": -1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-2-cuff",
+          "observedMaterialSide": 1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-2-cuff",
+          "observedMaterialSide": -1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-2-snap-body",
+          "observedMaterialSide": 1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        },
+        {
+          "id": "clasp-2-snap-body",
+          "observedMaterialSide": -1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-2-snap-cuff",
+          "observedMaterialSide": 1,
+          "expectedVisible": false,
+          "firstHit": "paper"
+        },
+        {
+          "id": "clasp-2-snap-cuff",
+          "observedMaterialSide": -1,
+          "expectedVisible": true,
+          "firstHit": "coverage"
+        }
+      ]
+    }
+  ],
+  "productionReady": false,
+  "limitations": [
+    "Exact attached photograph projection is conditioned on the accepted approximate formed panel, not independent physical fit.",
+    "Footprints are digital projected coverage, not finalized PU cut pieces or installed snap hardware.",
+    "Material side is preserved; actual material/contact, scale and sewing remain unverified."
+  ]
+}
