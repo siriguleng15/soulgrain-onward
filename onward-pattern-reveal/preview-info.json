@@ -1,0 +1,9 @@
+{
+  "sourceCommit": "da7888397fcd9f3564a78cefaee7e0d8ef1946e5",
+  "sourceBranch": "feat/onward-pattern-reveal-v1",
+  "builtAt": "2026-10-30T10:07:33.545Z",
+  "modelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "entry": "pattern-reveal.html",
+  "physicalIPadSafariTested": false,
+  "scope": "Independent pattern reveal preview. Original Nightfall preview preserved."
+}

@@ -1,0 +1,109 @@
+{
+  "testedAt": "2026-10-30T10:03:39.015Z",
+  "url": "http://127.0.0.1:4740/pattern-reveal.html",
+  "checks": [
+    {
+      "name": "Actual mouse events drive the production surface reveal",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": true,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          883.8911484092381,
+          579.5691301320323
+        ],
+        "pointer": [
+          883.9959716796875,
+          579.5684814453125
+        ],
+        "radius": 112.5,
+        "opacity": 1,
+        "region": "outer",
+        "hitObject": "CONVERSE_Nuovo1_0_EyeletApertures",
+        "hitPoint": [
+          0.10489017976296458,
+          -0.4081821827624773,
+          0.406675908382216
+        ],
+        "depth": 7.045898012170309,
+        "depthBand": 0.4741155451453211,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 72,
+        "pointerEvents": 62,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 162.70000000018626,
+        "rayTiming": {
+          "lastMs": 0.10000000009313226,
+          "medianMs": 0.09999999962747097,
+          "p95Ms": 0.19999999972060323,
+          "samples": 72
+        },
+        "buffer": [
+          1280,
+          900
+        ],
+        "css": [
+          1280,
+          900
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Production window naturally shrinks away",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Real UNVEIL ALL click restores the original printed state",
+      "passed": true
+    },
+    {
+      "name": "No shader, JavaScript or resource failures during the real-input film",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "frames": 176,
+  "fps": 15,
+  "durationSeconds": 11.733333333333333,
+  "sha256": "81c3ba551782f518eabac424f6bccf2adfa9e6a7600f2ac29f6394e9fab13423",
+  "method": "Actual CDP mouse movements and button clicks drive the unmodified reveal controller and Scene.loop at deterministic 15fps review timestamps. No direct mask-uniform edits. This recording is not a real-time performance benchmark.",
+  "environment": "Linux Chromium / SwiftShader with desktop mouse capability emulation, not physical iPad Safari."
+}

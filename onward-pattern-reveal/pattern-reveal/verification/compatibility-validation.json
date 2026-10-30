@@ -1,0 +1,309 @@
+{
+  "testedAt": "2026-10-30T09:58:33.929Z",
+  "url": "http://127.0.0.1:4740/pattern-reveal.html",
+  "legacy": "http://127.0.0.1:4741/immersive-showcase.html",
+  "checks": [
+    {
+      "name": "Actual linear PBR base color corresponds to source sRGB #0D2740",
+      "passed": true,
+      "detail": "0d2740"
+    },
+    {
+      "name": "Real mouse orbit exposes the opposite audited body surface",
+      "passed": true,
+      "detail": {
+        "visibleInnerPoints": 33
+      }
+    },
+    {
+      "name": "Opposite-side reveal blocks the original side despite shared UVs",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": true,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          1070.540948923173,
+          632.5698545710192
+        ],
+        "pointer": [
+          1070.835693359375,
+          632.6491088867188
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": "inner",
+        "hitObject": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+        "hitPoint": [
+          -0.37512783793092075,
+          -0.4529202789938306,
+          -0.503638573640939
+        ],
+        "depth": 7.352123154246258,
+        "depthBand": 0.4452491767702402,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 1,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 4,
+        "pointerEvents": 18,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 162.60000000009313,
+        "rayTiming": {
+          "lastMs": 0.09999999962747097,
+          "medianMs": 0.19999999972060323,
+          "p95Ms": 0.8000000002793968,
+          "samples": 4
+        },
+        "buffer": [
+          1440,
+          1000
+        ],
+        "css": [
+          1440,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Replay preserves arrival hand-off and original story input ownership",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mouse-orbit and replay edge cases have no shader or runtime errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    },
+    {
+      "name": "Cold tablet load starts fully printed without a reveal interaction",
+      "passed": true,
+      "detail": {
+        "mode": "touch-full",
+        "touchFallback": true,
+        "all": false,
+        "allUniform": 1,
+        "valid": false,
+        "pauseReason": "",
+        "inside": false,
+        "center": [
+          0,
+          0
+        ],
+        "pointer": [
+          0,
+          0
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 0,
+        "depthBand": 0.1,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 0,
+        "pointerEvents": 0,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 0,
+        "accelerationBuildMs": 0,
+        "rayTiming": {
+          "lastMs": 0,
+          "medianMs": 0,
+          "p95Ms": 0,
+          "samples": 0
+        },
+        "buffer": [
+          1180,
+          820
+        ],
+        "css": [
+          1180,
+          820
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Cold touch devices skip the reveal acceleration build and its memory cost",
+      "passed": true,
+      "detail": {
+        "mode": "touch-full",
+        "touchFallback": true,
+        "all": false,
+        "allUniform": 1,
+        "valid": false,
+        "pauseReason": "",
+        "inside": false,
+        "center": [
+          0,
+          0
+        ],
+        "pointer": [
+          0,
+          0
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 0,
+        "depthBand": 0.1,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 0,
+        "pointerEvents": 0,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 0,
+        "accelerationBuildMs": 0,
+        "rayTiming": {
+          "lastMs": 0,
+          "medianMs": 0,
+          "p95Ms": 0,
+          "samples": 0
+        },
+        "buffer": [
+          1180,
+          820
+        ],
+        "css": [
+          1180,
+          820
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Actual two-finger pinch retains product zoom",
+      "passed": true,
+      "detail": {
+        "before": 7.226437573244512,
+        "after": 3.80510152886055
+      }
+    },
+    {
+      "name": "Touch fallback spends no CPU on reveal raycasts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Cold tablet has no shader or runtime errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    },
+    {
+      "name": "Original Nightfall entry stays fully printed with no reveal controller",
+      "passed": true,
+      "detail": {
+        "patched": 0,
+        "printed": 4,
+        "parts": 7,
+        "extraControl": false
+      }
+    },
+    {
+      "name": "Shared scene hook leaves original cuff animation functional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original entry has no shader or runtime errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader. Real CDP mouse/touch events, not physical iPad Safari."
+}
