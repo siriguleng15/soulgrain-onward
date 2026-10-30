@@ -1,0 +1,995 @@
+{
+  "testedAt": "2026-10-30T11:35:49.409Z",
+  "url": "https://siriguleng15.github.io/soulgrain-onward/onward-pattern-reveal-fullshoe/pattern-reveal.html",
+  "checks": [
+    {
+      "name": "Original GLB and ALL embedded artwork remain byte-identical",
+      "passed": true,
+      "detail": {
+        "bytes": 23873476,
+        "embeddedImages": 9
+      }
+    },
+    {
+      "name": "Desktop conceals artwork across the WHOLE shoe, not just the body",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": false,
+        "pauseReason": "",
+        "inside": false,
+        "center": [
+          0,
+          0
+        ],
+        "pointer": [
+          0,
+          0
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 0,
+        "depthBand": 0.1,
+        "scope": "whole-shoe",
+        "mappedPrimitives": 16,
+        "reliefPrimitives": 1,
+        "targetCount": 17,
+        "targets": [
+          {
+            "mesh": "AD_Cuff_Shell_1",
+            "owner": "AD_Cuff_Shell",
+            "material": "Collar_Outer_Canvas",
+            "region": "cuff",
+            "base": "#172e61",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "AD_Cuff_Shell_2",
+            "owner": "AD_Cuff_Shell",
+            "material": "Collar_Canvas",
+            "region": "cuff",
+            "base": "#172e61",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Shaft_Fixed_1",
+            "owner": "Convertible_Shaft_Fixed",
+            "material": "Body_Canvas",
+            "region": "shaft",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Shaft_Fixed_3",
+            "owner": "Convertible_Shaft_Fixed",
+            "material": "Body_Inner_Canvas",
+            "region": "shaft",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001",
+            "owner": "Convertible_Tongue",
+            "material": "Tongue_Reverse_Canvas",
+            "region": "tongue",
+            "base": "#220b47",
+            "kind": "velvet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001_1",
+            "owner": "Convertible_Tongue",
+            "material": "Tongue_Canvas",
+            "region": "tongue",
+            "base": "#220b47",
+            "kind": "velvet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001_2",
+            "owner": "Convertible_Tongue",
+            "material": "Body_Canvas",
+            "region": "tongue",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Cuff_Artwork_Borders",
+            "owner": "Cuff_Artwork_Borders",
+            "material": "Cuff_Border",
+            "region": "border",
+            "base": "#102541",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Heel_Leather",
+            "owner": "Finished_Heel_Leather",
+            "material": "Heel_Strip",
+            "region": "heel",
+            "base": "#931522",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Heel_Logo",
+            "owner": "Finished_Heel_Logo",
+            "material": "Heel_Logo",
+            "region": "logo",
+            "base": "#eee9df",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Lace_Aglets_1",
+            "owner": "Finished_Lace_Aglets",
+            "material": "Aglet_Artwork",
+            "region": "aglets",
+            "base": "#142b50",
+            "kind": "aglet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Heel_Seam_Stitch",
+            "owner": "Heel_Seam_Stitch",
+            "material": "Heel_Strip",
+            "region": "heel",
+            "base": "#931522",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Mongolian_Clasp_Heads_1",
+            "owner": "Mongolian_Clasp_Heads",
+            "material": "Clasp_Engraved_Head",
+            "region": "clasps",
+            "base": "#9f9584",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Tongue_Rhinestone_Medallion",
+            "owner": "Tongue_Rhinestone_Medallion",
+            "material": "Rhinestone_Silver",
+            "region": "rhinestones",
+            "base": "#eee9df",
+            "kind": "relief",
+            "gate": 1,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 0,
+        "pointerEvents": 0,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 361.59999999962747,
+        "rayTiming": {
+          "lastMs": 0,
+          "medianMs": 0,
+          "p95Ms": 0,
+          "samples": 0
+        },
+        "buffer": [
+          1265,
+          900
+        ],
+        "css": [
+          1265,
+          900
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "All 42 mesh position/UV/index buffers retain exact source identities",
+      "passed": true,
+      "detail": {
+        "meshes": 42
+      }
+    },
+    {
+      "name": "Original PBR, weave, arrival/focus and GPU-cuff shader chains remain composed",
+      "passed": true,
+      "detail": [
+        {
+          "name": "Collar_Outer_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.6000000238418579,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": true
+        },
+        {
+          "name": "Collar_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.6000000238418579,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": true
+        },
+        {
+          "name": "Body_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Body_Inner_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Tongue_Reverse_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.8299999833106995,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Tongue_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.8299999833106995,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Body_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Cuff_Border",
+          "hasMap": true,
+          "arrival": true,
+          "roughness": 0.75,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": true
+        },
+        {
+          "name": "Heel_Strip",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.4300000071525574,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Heel_Logo",
+          "hasMap": true,
+          "arrival": true,
+          "roughness": 0.7200000286102295,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Aglet_Artwork",
+          "hasMap": true,
+          "arrival": true,
+          "roughness": 0.3799999952316284,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Heel_Strip",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.4300000071525574,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Clasp_Engraved_Head",
+          "hasMap": true,
+          "arrival": true,
+          "roughness": 0.30000001192092896,
+          "metalness": 0.7200000286102295,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Body_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Body_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Body_Inner_Canvas",
+          "hasMap": true,
+          "arrival": true,
+          "normal": "SG_Validated_Tangent_Weave",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "opaque": true,
+          "customDepth": false
+        },
+        {
+          "name": "Rhinestone_Silver",
+          "hasMap": false,
+          "arrival": true,
+          "roughness": 0.18000000715255737,
+          "metalness": 0.6800000071525574,
+          "opaque": true,
+          "customDepth": true
+        }
+      ]
+    },
+    {
+      "name": "Raised rhinestone artwork has matching masked SHADOW coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "null has genuine visible artwork hit coordinates",
+      "passed": true,
+      "detail": {
+        "points": 55
+      }
+    },
+    {
+      "name": "null actually conceals/restores its source artwork in rendered pixels",
+      "passed": true,
+      "detail": {
+        "score": 159.2,
+        "point": {
+          "x": 757.7712036270826,
+          "y": 616.3681199782636,
+          "region": "outer",
+          "hit": {
+            "eligible": true,
+            "artwork": true,
+            "region": "outer",
+            "object": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "point": [
+              -0.5276993884193474,
+              -0.4525347503250563,
+              0.48955498031394007
+            ],
+            "uv": [
+              0.29916160049682616,
+              0.9617307185083931
+            ],
+            "distance": 6.724127046441818
+          }
+        }
+      }
+    },
+    {
+      "name": "null local mouse window restores the original print at its center",
+      "passed": true,
+      "detail": {
+        "score": 159.2,
+        "point": {
+          "x": 757.7712036270826,
+          "y": 616.3681199782636,
+          "region": "outer",
+          "hit": {
+            "eligible": true,
+            "artwork": true,
+            "region": "outer",
+            "object": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "point": [
+              -0.5276993884193474,
+              -0.4525347503250563,
+              0.48955498031394007
+            ],
+            "uv": [
+              0.29916160049682616,
+              0.9617307185083931
+            ],
+            "distance": 6.724127046441818
+          }
+        },
+        "localError": 0,
+        "outsideChanges": 0,
+        "state": {
+          "mode": "explore",
+          "touchFallback": false,
+          "all": false,
+          "allUniform": 0,
+          "valid": true,
+          "pauseReason": "",
+          "inside": true,
+          "center": [
+            757.7711791992188,
+            616.3681030273438
+          ],
+          "pointer": [
+            757.7711791992188,
+            616.3681030273438
+          ],
+          "radius": 112.5,
+          "opacity": 1,
+          "region": "outer",
+          "hitObject": "CONVERSE_Nuovo1_0_EyeletApertures",
+          "hitPoint": [
+            -0.5276994950576933,
+            -0.45253466247712076,
+            0.4895549614326614
+          ],
+          "depth": 6.683054825625612,
+          "depthBand": 0.44969997811699347,
+          "scope": "whole-shoe",
+          "mappedPrimitives": 16,
+          "reliefPrimitives": 1,
+          "targetCount": 17,
+          "targets": [
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "owner": "AD_Cuff_Shell",
+              "material": "Collar_Outer_Canvas",
+              "region": "cuff",
+              "base": "#172e61",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "owner": "AD_Cuff_Shell",
+              "material": "Collar_Canvas",
+              "region": "cuff",
+              "base": "#172e61",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_1",
+              "owner": "Convertible_Shaft_Fixed",
+              "material": "Body_Canvas",
+              "region": "shaft",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "owner": "Convertible_Shaft_Fixed",
+              "material": "Body_Inner_Canvas",
+              "region": "shaft",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "owner": "Convertible_Tongue",
+              "material": "Tongue_Reverse_Canvas",
+              "region": "tongue",
+              "base": "#220b47",
+              "kind": "velvet",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "owner": "Convertible_Tongue",
+              "material": "Tongue_Canvas",
+              "region": "tongue",
+              "base": "#220b47",
+              "kind": "velvet",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "owner": "Convertible_Tongue",
+              "material": "Body_Canvas",
+              "region": "tongue",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Cuff_Artwork_Borders",
+              "owner": "Cuff_Artwork_Borders",
+              "material": "Cuff_Border",
+              "region": "border",
+              "base": "#102541",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Finished_Heel_Leather",
+              "owner": "Finished_Heel_Leather",
+              "material": "Heel_Strip",
+              "region": "heel",
+              "base": "#931522",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Finished_Heel_Logo",
+              "owner": "Finished_Heel_Logo",
+              "material": "Heel_Logo",
+              "region": "logo",
+              "base": "#eee9df",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Finished_Lace_Aglets_1",
+              "owner": "Finished_Lace_Aglets",
+              "material": "Aglet_Artwork",
+              "region": "aglets",
+              "base": "#142b50",
+              "kind": "aglet",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Heel_Seam_Stitch",
+              "owner": "Heel_Seam_Stitch",
+              "material": "Heel_Strip",
+              "region": "heel",
+              "base": "#931522",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Mongolian_Clasp_Heads_1",
+              "owner": "Mongolian_Clasp_Heads",
+              "material": "Clasp_Engraved_Head",
+              "region": "clasps",
+              "base": "#9f9584",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Original_Vamp",
+              "owner": "Original_Vamp",
+              "material": "Body_Canvas",
+              "region": "vamp",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+              "owner": "Shoe_Body",
+              "material": "Body_Canvas",
+              "region": "outer",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "owner": "Shoe_Body",
+              "material": "Body_Inner_Canvas",
+              "region": "inner",
+              "base": "#0D2740",
+              "kind": "flat",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "Tongue_Rhinestone_Medallion",
+              "owner": "Tongue_Rhinestone_Medallion",
+              "material": "Rhinestone_Silver",
+              "region": "rhinestones",
+              "base": "#eee9df",
+              "kind": "relief",
+              "gate": 1,
+              "compiles": 1
+            }
+          ],
+          "occluderCount": 42,
+          "rayCount": 23,
+          "pointerEvents": 3,
+          "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+          "acceleratedMeshes": 42,
+          "accelerationBuildMs": 361.59999999962747,
+          "rayTiming": {
+            "lastMs": 0.09999999962747097,
+            "medianMs": 0.19999999925494194,
+            "p95Ms": 0.39999999944120646,
+            "samples": 23
+          },
+          "buffer": [
+            1265,
+            900
+          ],
+          "css": [
+            1265,
+            900
+          ],
+          "baseSRGB": "#0D2740"
+        }
+      }
+    },
+    {
+      "name": "null reveal remains local instead of leaking through shared UVs",
+      "passed": true,
+      "detail": {
+        "outsideChangedPixels": 0
+      }
+    },
+    {
+      "name": "Whole view exposes real cuff coordinates for the expanded effect",
+      "passed": true,
+      "detail": {
+        "points": 64
+      }
+    },
+    {
+      "name": "Cursor inertia remains bounded and all 17 materials stay compiled",
+      "passed": true,
+      "detail": {
+        "compiles": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "rayTiming": {
+          "lastMs": 0.09999999962747097,
+          "medianMs": 0.09999999962747097,
+          "p95Ms": 0.39999999944120646,
+          "samples": 59
+        }
+      }
+    },
+    {
+      "name": "Leaving the shoe returns the entire visible surface to the clean state",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": false,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          30.000000006709474,
+          180.00000000398714
+        ],
+        "pointer": [
+          30,
+          180
+        ],
+        "radius": 0.10087341312501732,
+        "opacity": 0.0008966525611112652,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 6.602340568778693,
+        "depthBand": 0.4442687493623512,
+        "scope": "whole-shoe",
+        "mappedPrimitives": 16,
+        "reliefPrimitives": 1,
+        "targetCount": 17,
+        "targets": [
+          {
+            "mesh": "AD_Cuff_Shell_1",
+            "owner": "AD_Cuff_Shell",
+            "material": "Collar_Outer_Canvas",
+            "region": "cuff",
+            "base": "#172e61",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "AD_Cuff_Shell_2",
+            "owner": "AD_Cuff_Shell",
+            "material": "Collar_Canvas",
+            "region": "cuff",
+            "base": "#172e61",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Shaft_Fixed_1",
+            "owner": "Convertible_Shaft_Fixed",
+            "material": "Body_Canvas",
+            "region": "shaft",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Shaft_Fixed_3",
+            "owner": "Convertible_Shaft_Fixed",
+            "material": "Body_Inner_Canvas",
+            "region": "shaft",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001",
+            "owner": "Convertible_Tongue",
+            "material": "Tongue_Reverse_Canvas",
+            "region": "tongue",
+            "base": "#220b47",
+            "kind": "velvet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001_1",
+            "owner": "Convertible_Tongue",
+            "material": "Tongue_Canvas",
+            "region": "tongue",
+            "base": "#220b47",
+            "kind": "velvet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Convertible_Tongue001_2",
+            "owner": "Convertible_Tongue",
+            "material": "Body_Canvas",
+            "region": "tongue",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Cuff_Artwork_Borders",
+            "owner": "Cuff_Artwork_Borders",
+            "material": "Cuff_Border",
+            "region": "border",
+            "base": "#102541",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Heel_Leather",
+            "owner": "Finished_Heel_Leather",
+            "material": "Heel_Strip",
+            "region": "heel",
+            "base": "#931522",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Heel_Logo",
+            "owner": "Finished_Heel_Logo",
+            "material": "Heel_Logo",
+            "region": "logo",
+            "base": "#eee9df",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Finished_Lace_Aglets_1",
+            "owner": "Finished_Lace_Aglets",
+            "material": "Aglet_Artwork",
+            "region": "aglets",
+            "base": "#142b50",
+            "kind": "aglet",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Heel_Seam_Stitch",
+            "owner": "Heel_Seam_Stitch",
+            "material": "Heel_Strip",
+            "region": "heel",
+            "base": "#931522",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Mongolian_Clasp_Heads_1",
+            "owner": "Mongolian_Clasp_Heads",
+            "material": "Clasp_Engraved_Head",
+            "region": "clasps",
+            "base": "#9f9584",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "base": "#0D2740",
+            "kind": "flat",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "Tongue_Rhinestone_Medallion",
+            "owner": "Tongue_Rhinestone_Medallion",
+            "material": "Rhinestone_Silver",
+            "region": "rhinestones",
+            "base": "#eee9df",
+            "kind": "relief",
+            "gate": 1,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 63,
+        "pointerEvents": 10,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 361.59999999962747,
+        "rayTiming": {
+          "lastMs": 0.10000000055879354,
+          "medianMs": 0.09999999962747097,
+          "p95Ms": 0.39999999944120646,
+          "samples": 63
+        },
+        "buffer": [
+          1265,
+          900
+        ],
+        "css": [
+          1265,
+          900
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Desktop has no shader, JavaScript or asset-load errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader, CDP desktop mouse and touch emulation; not a physical iPad or Safari. PNG differences measure actual rendered output, not shader-uniform assertions alone."
+}
