@@ -1,0 +1,175 @@
+{
+  "testedAt": "2026-10-30T05:30:52.326Z",
+  "entry": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase.html",
+  "info": {
+    "sourceCommit": "fea6c0e753ca0b4ba6b2e32b52ae57ff57a3b1e6",
+    "sourceBranch": "feat/onward-immersive-showcase-v1",
+    "builtAt": "2026-10-30T05:17:42.704Z",
+    "modelSha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+    "entry": "immersive-showcase.html",
+    "review": "immersive-showcase/review.html",
+    "physicalIPadSafariTested": false,
+    "scope": "Independent preview. Original website, workbench and model source files unchanged."
+  },
+  "checks": [
+    {
+      "name": "Public entry and provenance identify the isolated release",
+      "passed": true,
+      "detail": {
+        "entry": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase.html",
+        "info": {
+          "sourceCommit": "fea6c0e753ca0b4ba6b2e32b52ae57ff57a3b1e6",
+          "sourceBranch": "feat/onward-immersive-showcase-v1",
+          "builtAt": "2026-10-30T05:17:42.704Z",
+          "modelSha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+          "entry": "immersive-showcase.html",
+          "review": "immersive-showcase/review.html",
+          "physicalIPadSafariTested": false,
+          "scope": "Independent preview. Original website, workbench and model source files unchanged."
+        }
+      }
+    },
+    {
+      "name": "Public GLB is byte-identical to the confirmed colored source",
+      "passed": true,
+      "detail": {
+        "bytes": 23873476,
+        "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+      }
+    },
+    {
+      "name": "Public entry serves its real compiled scene bundle",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/assets/immersive-showcase-DsLSsYDg.js",
+        "sha256": "07414e21228692e4c0234aa2da7656b8cd5e0ba84ba795428c8691c520390dc6"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/review.html",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/review.html",
+        "bytes": 15972,
+        "sha256": "c9830c5a2f7a70166d3931decfe048842c6006d14cb77d17e72fafcd6eacc198"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/verification/browser-validation.json",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/verification/browser-validation.json",
+        "bytes": 532177,
+        "sha256": "f57f42dfa2ab358fcaa9689172c65a28222dc03257bb148499f4b6f55f88bbb3"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/verification/detail-review-validation.json",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/verification/detail-review-validation.json",
+        "bytes": 171760,
+        "sha256": "7c5916d0dbc545bd184b1de886181d0e637f25e59e69f93d8d8c122123191035"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/verification/final-layout-validation.json",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/verification/final-layout-validation.json",
+        "bytes": 7422,
+        "sha256": "cb2fc0c1f11e66c4d7a3738d8ec118c0905d731390dbd7c5b99aa9d28b6af673"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/verification/video-validation.json",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/verification/video-validation.json",
+        "bytes": 90744,
+        "sha256": "01d5d0fc1b2b4dd7442531983698fc991dbda62121869272a8cc3d091496bfdb"
+      }
+    },
+    {
+      "name": "Published review artifact: immersive-showcase/verification/showcase-exploration.mp4",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/immersive-showcase/verification/showcase-exploration.mp4",
+        "bytes": 10298977,
+        "sha256": "6bbd785f82e2d29a2bf64dccbf530021157dd5297edb6cee046f2096dd23f9bb"
+      }
+    },
+    {
+      "name": "Published review artifact: ONWARD-immersive-v1-source.zip",
+      "passed": true,
+      "detail": {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/ONWARD-immersive-v1-source.zip",
+        "bytes": 17554817,
+        "sha256": "b53cdc2acfb1baf139c6a2eefeb479daa203cac52f24fd107d0ad3ebe9675984"
+      }
+    },
+    {
+      "name": "Published browser runs real PBR geometry and all seven part targets",
+      "passed": true,
+      "detail": {
+        "parts": [
+          {
+            "id": "cuff",
+            "meshes": 7
+          },
+          {
+            "id": "tongue",
+            "meshes": 6
+          },
+          {
+            "id": "pattern",
+            "meshes": 5
+          },
+          {
+            "id": "clasps",
+            "meshes": 4
+          },
+          {
+            "id": "heel",
+            "meshes": 3
+          },
+          {
+            "id": "aglets",
+            "meshes": 2
+          },
+          {
+            "id": "logo",
+            "meshes": 1
+          }
+        ],
+        "drawCalls": 43,
+        "triangles": 463514,
+        "sourceModelSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+      }
+    },
+    {
+      "name": "Published first part camera completes naturally through the layout change",
+      "passed": true,
+      "detail": {
+        "positionError": 1.355199909595506e-15,
+        "targetError": 0,
+        "focus": "cuff"
+      }
+    },
+    {
+      "name": "Published scene reaches the supported cuff expansion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Published scene has no uncaught or shader errors and no HTTP failures",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "responses": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader. Certificate errors ignored only in this test browser for the execution proxy; Node HTTP byte checks used normal TLS. Not physical iPad Safari.",
+  "scope": "Deployment smoke test. Full interaction and final composition checks are linked separately."
+}
