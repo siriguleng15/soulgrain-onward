@@ -1,0 +1,19 @@
+import {Mesh,Vector3,Box3} from 'three';
+import type {Object3D,MeshStandardMaterial} from 'three';
+/** Area-weighted deterministic samples from actual source triangles. */
+export function sampleProductSurface(root:Object3D,center:Vector3,scale:number,count=9000){
+ root.updateMatrixWorld(true);const meshes:Mesh[]=[];root.traverse(o=>{if(o instanceof Mesh)meshes.push(o);});
+ const records:{mesh:Mesh;triangle:number;area:number}[]=[];let total=0;const a=new Vector3(),b=new Vector3(),c=new Vector3(),edge=new Vector3();
+ for(const mesh of meshes){const p=mesh.geometry.getAttribute('position'),index=mesh.geometry.index,n=(index?.count??p.count)/3;for(let t=0;t<n;t++){a.fromBufferAttribute(p,index?index.getX(t*3):t*3).applyMatrix4(mesh.matrixWorld);b.fromBufferAttribute(p,index?index.getX(t*3+1):t*3+1).applyMatrix4(mesh.matrixWorld);c.fromBufferAttribute(p,index?index.getX(t*3+2):t*3+2).applyMatrix4(mesh.matrixWorld);const area=b.sub(a).cross(edge.copy(c).sub(a)).length()/2;if(area<=1e-16)continue;total+=area;records.push({mesh,triangle:t,area:total});}}
+ let seed=87913;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};const positions=new Float32Array(count*3),references:{mesh:string;triangle:number;ids:number[];barycentric:number[];sourcePosition:number[]}[]=[];
+ for(let i=0;i<count;i++){const area=random()*total;let low=0,high=records.length-1;while(low<high){const mid=(low+high)>>>1;if(records[mid].area<area)low=mid+1;else high=mid;}const record=records[low],mesh=record.mesh,p=mesh.geometry.getAttribute('position'),index=mesh.geometry.index,ids=[0,1,2].map(k=>index?index.getX(record.triangle*3+k):record.triangle*3+k),r=Math.sqrt(random()),v=random(),w=[1-r,r*(1-v),r*v],point=new Vector3();for(let k=0;k<3;k++)point.addScaledVector(a.fromBufferAttribute(p,ids[k]).applyMatrix4(mesh.matrixWorld),w[k]);if(i<128)references.push({mesh:mesh.name,triangle:record.triangle,ids,barycentric:w,sourcePosition:point.toArray()});point.sub(center).multiplyScalar(scale).toArray(positions,i*3);}
+ return{positions,references,sourceTriangleCount:records.length,method:'Area-weighted barycentric samples of unchanged GLB source triangles',normalization:{center:center.toArray(),scale}};
+}
+export interface RevealMaterial {material:MeshStandardMaterial;part?:string;reveal:{value:number};focus:{value:number};}
+/** A world-space opaque grain hand-off, preserving original artwork/UVs. */
+export function attachArrival(material:MeshStandardMaterial,part?:string):RevealMaterial{
+ const reveal={value:0},focus={value:1},previous=material.onBeforeCompile,oldKey=material.customProgramCacheKey();
+ material.onBeforeCompile=(shader,renderer)=>{previous.call(material,shader,renderer);Object.assign(shader.uniforms,{sgArrival:reveal,sgFocus:focus});shader.vertexShader='varying vec3 sgSurface;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>','sgSurface=transformed;\n#include <project_vertex>');shader.fragmentShader='uniform float sgArrival;uniform float sgFocus;varying vec3 sgSurface;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nfloat sgGrain=fract(sin(dot(floor(sgSurface*9000.0),vec3(12.9898,78.233,37.719)))*43758.5453);if(sgArrival<=0.00001||sgArrival<sgGrain)discard;');shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb*=sgFocus;');};
+ material.customProgramCacheKey=()=>oldKey+'-sg-immersive-arrival-v1';material.needsUpdate=true;return{material,part,reveal,focus};
+}
+export function meshBounds(nodes:Mesh[]){const bounds=new Box3();for(const mesh of nodes)bounds.union(new Box3().setFromObject(mesh));return bounds;}

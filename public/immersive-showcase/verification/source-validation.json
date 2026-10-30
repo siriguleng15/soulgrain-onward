@@ -1,0 +1,98 @@
+{
+  "testedAt": "2026-10-29T23:05:18.458Z",
+  "sources": [
+    {
+      "file": "public/assets/soulgrain_onward_finished_v8.glb",
+      "bytes": 26661468,
+      "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/cuff-structure.json",
+      "bytes": 40413,
+      "sha256": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Confirmed V8 model and advertising-derived source bytes remain unchanged",
+      "passed": true,
+      "detail": [
+        {
+          "file": "public/assets/soulgrain_onward_finished_v8.glb",
+          "bytes": 26661468,
+          "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63"
+        },
+        {
+          "file": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+          "bytes": 23873476,
+          "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+        },
+        {
+          "file": "public/assets/onward-ad-v1/cuff-structure.json",
+          "bytes": 40413,
+          "sha256": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085"
+        }
+      ]
+    },
+    {
+      "name": "Actual source contains textured PBR shoe geometry rather than a display-video substitute",
+      "passed": true,
+      "detail": {
+        "triangles": 463512,
+        "meshNodes": 29,
+        "primitives": 42,
+        "materials": 25,
+        "embeddedImages": 9,
+        "animations": 0
+      }
+    },
+    {
+      "name": "All seven exploration targets are backed by existing named source meshes",
+      "passed": true,
+      "detail": {
+        "cuff": [
+          "AD_Cuff_Shell"
+        ],
+        "tongue": [
+          "Convertible_Tongue",
+          "Convertible_Tongue_Eyelets",
+          "Tongue_Rhinestone_Medallion"
+        ],
+        "pattern": [
+          "Convertible_Shaft_Fixed",
+          "Original_Vamp",
+          "Shoe_Body"
+        ],
+        "clasps": [
+          "Mongolian_Clasp_Heads",
+          "Mongolian_Clasp_Loops"
+        ],
+        "heel": [
+          "Finished_Heel_Leather"
+        ],
+        "aglets": [
+          "Finished_Lace_Aglets"
+        ],
+        "logo": [
+          "Finished_Heel_Logo"
+        ]
+      }
+    },
+    {
+      "name": "Cuff deformation metadata preserves its confirmed V8 source and continuous curve samples",
+      "passed": true,
+      "detail": {
+        "sourceGLBSha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63",
+        "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b",
+        "sampleCount": 256,
+        "lengthModelUnits": 0.23195169347938965
+      }
+    }
+  ],
+  "scope": "Read-only original model audit. Does not certify real-world shoe/material manufacturing."
+}

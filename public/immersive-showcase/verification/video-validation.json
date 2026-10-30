@@ -1,0 +1,3267 @@
+{
+  "testedAt": "2026-10-29T23:15:18.563Z",
+  "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/immersive-showcase.html",
+  "sources": [
+    {
+      "file": "public/assets/soulgrain_onward_finished_v8.glb",
+      "bytes": 26661468,
+      "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+    },
+    {
+      "file": "public/assets/onward-ad-v1/cuff-structure.json",
+      "bytes": 40413,
+      "sha256": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085"
+    }
+  ],
+  "bundles": [
+    {
+      "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/assets/immersive-showcase-DsLSsYDg.js",
+      "sha256": "07414e21228692e4c0234aa2da7656b8cd5e0ba84ba795428c8691c520390dc6"
+    },
+    {
+      "url": "http://127.0.0.1:4522/soulgrain-onward/onward-immersive/assets/immersive-showcase-CjmCKWZ-.css",
+      "sha256": "e0d63da1be5712735638e15e11ec66439141fdd5a56fccc0519ceb2dc7d16c31"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Confirmed V8 model and advertising-derived source bytes remain unchanged",
+      "passed": true,
+      "detail": [
+        {
+          "file": "public/assets/soulgrain_onward_finished_v8.glb",
+          "bytes": 26661468,
+          "sha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63"
+        },
+        {
+          "file": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+          "bytes": 23873476,
+          "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4"
+        },
+        {
+          "file": "public/assets/onward-ad-v1/cuff-structure.json",
+          "bytes": 40413,
+          "sha256": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085"
+        }
+      ]
+    },
+    {
+      "name": "Actual source contains textured PBR shoe geometry rather than a display-video substitute",
+      "passed": true,
+      "detail": {
+        "triangles": 463512,
+        "meshNodes": 29,
+        "primitives": 42,
+        "materials": 25,
+        "embeddedImages": 9,
+        "animations": 0
+      }
+    },
+    {
+      "name": "All seven exploration targets are backed by existing named source meshes",
+      "passed": true,
+      "detail": {
+        "cuff": [
+          "AD_Cuff_Shell"
+        ],
+        "tongue": [
+          "Convertible_Tongue",
+          "Convertible_Tongue_Eyelets",
+          "Tongue_Rhinestone_Medallion"
+        ],
+        "pattern": [
+          "Convertible_Shaft_Fixed",
+          "Original_Vamp",
+          "Shoe_Body"
+        ],
+        "clasps": [
+          "Mongolian_Clasp_Heads",
+          "Mongolian_Clasp_Loops"
+        ],
+        "heel": [
+          "Finished_Heel_Leather"
+        ],
+        "aglets": [
+          "Finished_Lace_Aglets"
+        ],
+        "logo": [
+          "Finished_Heel_Logo"
+        ]
+      }
+    },
+    {
+      "name": "Cuff deformation metadata preserves its confirmed V8 source and continuous curve samples",
+      "passed": true,
+      "detail": {
+        "sourceGLBSha256": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63",
+        "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b",
+        "sampleCount": 256,
+        "lengthModelUnits": 0.23195169347938965
+      }
+    },
+    {
+      "name": "Real showcase exposes scene, input, intro and review controls",
+      "passed": true,
+      "detail": [
+        "scene",
+        "ui",
+        "getState",
+        "selectPart",
+        "home",
+        "skipIntro",
+        "replayIntro",
+        "setMode",
+        "setQuality",
+        "setMotion",
+        "setUnfold",
+        "setScrollProgress",
+        "seekIntro",
+        "seekTransition",
+        "seekUnfold",
+        "projectPart"
+      ]
+    },
+    {
+      "name": "Loaded scene displays the confirmed real model with all seven actual mesh targets",
+      "passed": true,
+      "detail": {
+        "ready": true,
+        "loadingError": null,
+        "introProgress": 0.11538461538461538,
+        "focusPart": null,
+        "mode": "story",
+        "unfold": 0,
+        "isTransitioning": false,
+        "camera": {
+          "generation": 1,
+          "moving": false,
+          "progress": 0,
+          "position": [
+            -3.4500000000000015,
+            1.700000000000001,
+            6.150000000000002
+          ],
+          "target": [
+            0,
+            0.12,
+            0
+          ],
+          "framing": 0.14,
+          "vertical": 0
+        },
+        "quality": "balanced",
+        "particleCount": 2800,
+        "particles": {
+          "progress": 0.11538461538461538,
+          "quality": "balanced",
+          "capacity": 9000,
+          "activeCount": 2800,
+          "sourcePointCount": 9000,
+          "visible": true,
+          "reducedMotion": false,
+          "opacity": 1,
+          "phase": "constellation",
+          "accumulation": false,
+          "preRenderedMedia": false
+        },
+        "pixelRatio": 1,
+        "drawCalls": 44,
+        "triangles": 463514,
+        "renderedFrames": 4,
+        "sourceModelSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+        "productReveal": 0,
+        "renderedParticleCount": 2800,
+        "normalRepair": {
+          "repairedMaterials": 17,
+          "names": [
+            "Collar_Outer_Canvas",
+            "Collar_Canvas",
+            "Canvas_Trim",
+            "Body_Canvas",
+            "Inner_Lining",
+            "Body_Inner_Canvas",
+            "Inner_Lining",
+            "Tongue_Reverse_Canvas",
+            "Tongue_Canvas",
+            "Body_Canvas",
+            "Heel_Strip",
+            "Canvas_Trim",
+            "Heel_Strip",
+            "Inner_Lining",
+            "Body_Canvas",
+            "Body_Canvas",
+            "Body_Inner_Canvas"
+          ],
+          "replacementTextures": 9,
+          "generatedPixelsBytes": 65536,
+          "normalValidation": {
+            "size": 128,
+            "minimumDecodedZ": 0.9921568627450981,
+            "meanDecodedNormal": [
+              1.3877787807814457e-17,
+              6.844026213814747e-19,
+              0.9960784313725526
+            ],
+            "maximumUnitLengthError": 0.0036994239516665584
+          }
+        },
+        "parts": [
+          {
+            "id": "cuff",
+            "meshes": 7,
+            "screen": {
+              "x": 1195.44834683493,
+              "y": 443.4393600031392,
+              "world": [
+                0.9462250862938085,
+                0.37976971944576526,
+                0.6591067821338173
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "tongue",
+            "meshes": 6,
+            "screen": {
+              "x": 844.3289449469545,
+              "y": 415.92924120280173,
+              "world": [
+                -0.3115684247848103,
+                0.4998487968678383,
+                0.0006119312244445563
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "pattern",
+            "meshes": 5,
+            "screen": {
+              "x": 964.8815576970914,
+              "y": 498.95670435591217,
+              "world": [
+                0.2478299704995356,
+                0.0998868462179962,
+                0.013076505326670651
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "clasps",
+            "meshes": 4,
+            "screen": {
+              "x": 1063.6184785050607,
+              "y": 537.6126617222226,
+              "world": [
+                0.47753575552091054,
+                -0.008699432613475527,
+                0.4156985476444195
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "heel",
+            "meshes": 3,
+            "screen": {
+              "x": 1207.9068872629068,
+              "y": 468.33896655738323,
+              "world": [
+                1.55115349446522,
+                0.0982845028197678,
+                -0.00004203812492297593
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "aglets",
+            "meshes": 2,
+            "screen": {
+              "x": 875.6344689934971,
+              "y": 655.1678461313924,
+              "world": [
+                -0.48094984696679677,
+                -0.3168146921831763,
+                0.5759132433026273
+              ],
+              "visible": true
+            }
+          },
+          {
+            "id": "logo",
+            "meshes": 1,
+            "screen": {
+              "x": 1200.0598254416318,
+              "y": 630.5083158091047,
+              "world": [
+                1.541045856559342,
+                -0.6729484910875121,
+                -0.000041994169912573653
+              ],
+              "visible": true
+            }
+          }
+        ],
+        "normalization": {
+          "center": [
+            0.003070421516895294,
+            0.04832818545401096,
+            -0.006496718153357506
+          ],
+          "scale": 12.799005563247619
+        },
+        "contextLost": false,
+        "motion": true,
+        "softwareIndependentFrameIntervals": [
+          1116.6,
+          483.3000000000002,
+          1316.6
+        ],
+        "surfaceSampling": {
+          "method": "Area-weighted barycentric samples of unchanged GLB source triangles",
+          "count": 9000,
+          "sourceTriangleCount": 463352,
+          "references": [
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 5149,
+              "ids": [
+                2721,
+                2723,
+                2724
+              ],
+              "barycentric": [
+                0.43548808622606117,
+                0.2382917878391965,
+                0.3262201259347423
+              ],
+              "sourcePosition": [
+                0.04354873012501403,
+                0.06305401710229062,
+                -0.03708989861746631
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 2853,
+              "ids": [
+                802,
+                1937,
+                125
+              ],
+              "barycentric": [
+                0.34258345987463845,
+                0.5737499927928885,
+                0.083666547332473
+              ],
+              "sourcePosition": [
+                -0.10626025677765626,
+                -0.009049801065242228,
+                -0.009218766062366117
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 2988,
+              "ids": [
+                2367,
+                2369,
+                2370
+              ],
+              "barycentric": [
+                0.3712194252524815,
+                0.514781359851999,
+                0.11399921489551947
+              ],
+              "sourcePosition": [
+                0.04990940589490006,
+                0.10329387962509136,
+                -0.04289444815331878
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 27694,
+              "ids": [
+                14308,
+                14311,
+                14314
+              ],
+              "barycentric": [
+                0.5761503986447045,
+                0.1568899394072591,
+                0.26695966194803644
+              ],
+              "sourcePosition": [
+                0.0961699011336693,
+                0.0801422734566751,
+                0.038739907014182194
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 10078,
+              "ids": [
+                11180,
+                1806,
+                13671
+              ],
+              "barycentric": [
+                0.8333408158244711,
+                0.018312699877975624,
+                0.14834648429755334
+              ],
+              "sourcePosition": [
+                0.01457414161846359,
+                0.11267487829781378,
+                0.011170993890502414
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_4",
+              "triangle": 4681,
+              "ids": [
+                2614,
+                2805,
+                2617
+              ],
+              "barycentric": [
+                0.023272138767604145,
+                0.37441440144444577,
+                0.6023134597879501
+              ],
+              "sourcePosition": [
+                0.07143063502457152,
+                0.0614998054599908,
+                -0.03548369325976575
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 408,
+              "ids": [
+                157,
+                156,
+                49
+              ],
+              "barycentric": [
+                0.5541197906569828,
+                0.42139204923950585,
+                0.024488160103511274
+              ],
+              "sourcePosition": [
+                -0.09130759793699127,
+                0.028538157206013114,
+                0.0032142610959063414
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 66146,
+              "ids": [
+                42,
+                6374,
+                23212
+              ],
+              "barycentric": [
+                0.24702770728487344,
+                0.4238093428344601,
+                0.32916294988066647
+              ],
+              "sourcePosition": [
+                -0.038459809218647625,
+                0.044347483929231685,
+                -0.009119491562911995
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 1609,
+              "ids": [
+                884,
+                1157,
+                1158
+              ],
+              "barycentric": [
+                0.5488759116197097,
+                0.17246035824429837,
+                0.278663730135992
+              ],
+              "sourcePosition": [
+                0.018398235457497594,
+                0.04109952812500476,
+                -0.038308032722122305
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 40079,
+              "ids": [
+                21538,
+                23653,
+                30405
+              ],
+              "barycentric": [
+                0.7496879706940809,
+                0.02480087770822894,
+                0.22551115159769022
+              ],
+              "sourcePosition": [
+                0.016787191669613864,
+                0.05773693977569613,
+                0.011869675885755162
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_4",
+              "triangle": 8451,
+              "ids": [
+                4529,
+                4723,
+                4530
+              ],
+              "barycentric": [
+                0.46166507589051753,
+                0.5083797860392923,
+                0.029955138070190106
+              ],
+              "sourcePosition": [
+                0.10008373339999901,
+                0.0761753741908834,
+                -0.030690527633334394
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 29271,
+              "ids": [
+                15783,
+                15788,
+                15786
+              ],
+              "barycentric": [
+                0.4256782547067509,
+                0.4237228842747226,
+                0.1505988610185265
+              ],
+              "sourcePosition": [
+                0.11090475873241812,
+                0.08024752787235012,
+                0.03588676771456057
+              ]
+            },
+            {
+              "mesh": "Inner_Lining",
+              "triangle": 453,
+              "ids": [
+                273,
+                277,
+                275
+              ],
+              "barycentric": [
+                0.11548166501960999,
+                0.7700363837788207,
+                0.11448195120156933
+              ],
+              "sourcePosition": [
+                0.045050248652115356,
+                0.01704208509046405,
+                0.025253143394088844
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_4",
+              "triangle": 3631,
+              "ids": [
+                2253,
+                2258,
+                2256
+              ],
+              "barycentric": [
+                0.21219446249731844,
+                0.016688674737612035,
+                0.7711168627650695
+              ],
+              "sourcePosition": [
+                0.05137828444180133,
+                0.057583217903532866,
+                -0.03666677956207008
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_4",
+              "triangle": 10129,
+              "ids": [
+                5375,
+                5572,
+                5378
+              ],
+              "barycentric": [
+                0.3332862784268774,
+                0.29286514645336303,
+                0.37384857511975955
+              ],
+              "sourcePosition": [
+                0.05989206831548443,
+                0.07971342720093398,
+                -0.036943136090993145
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 72,
+              "ids": [
+                144,
+                145,
+                62
+              ],
+              "barycentric": [
+                0.21115983628916057,
+                0.6177786786418505,
+                0.17106148506898883
+              ],
+              "sourcePosition": [
+                -0.10648479241099208,
+                0.02260850368111896,
+                -0.020539503380639593
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 3064,
+              "ids": [
+                4819,
+                3411,
+                130
+              ],
+              "barycentric": [
+                0.3706385820589654,
+                0.2591524251624157,
+                0.3702089927786189
+              ],
+              "sourcePosition": [
+                0.006478741170830542,
+                0.06115710124703741,
+                0.01908196512103453
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 28021,
+              "ids": [
+                14475,
+                14477,
+                14478
+              ],
+              "barycentric": [
+                0.5676128857153111,
+                0.20436208079338944,
+                0.2280250334912994
+              ],
+              "sourcePosition": [
+                0.09671267224686655,
+                0.08060958363320703,
+                -0.052242025480412735
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 25457,
+              "ids": [
+                3260,
+                18322,
+                9246
+              ],
+              "barycentric": [
+                0.19427624071092364,
+                0.392419455877111,
+                0.41330430341196533
+              ],
+              "sourcePosition": [
+                -0.02124464680809033,
+                0.08566504699528277,
+                0.00891537116023396
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 34127,
+              "ids": [
+                25386,
+                27500,
+                29661
+              ],
+              "barycentric": [
+                0.7631512703292871,
+                0.08789841051071241,
+                0.14895031916000046
+              ],
+              "sourcePosition": [
+                -0.007940174906584585,
+                0.04670818173074438,
+                -0.028781086825402022
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 816,
+              "ids": [
+                460,
+                504,
+                83
+              ],
+              "barycentric": [
+                0.4451152388742189,
+                0.19236069572620984,
+                0.36252406539957127
+              ],
+              "sourcePosition": [
+                0.048394316874412605,
+                -0.018071418611233715,
+                0.018756660084676507
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 785,
+              "ids": [
+                154,
+                478,
+                155
+              ],
+              "barycentric": [
+                0.5178594782256053,
+                0.0691531318959459,
+                0.4129873898784488
+              ],
+              "sourcePosition": [
+                -0.05319317708304646,
+                -0.019075994522983614,
+                0.03378128541073075
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 24566,
+              "ids": [
+                14189,
+                18210,
+                6695
+              ],
+              "barycentric": [
+                0.48098695106471234,
+                0.05162829813241384,
+                0.46738475080287384
+              ],
+              "sourcePosition": [
+                -0.01632217682052749,
+                0.08884445371168162,
+                -0.032598472418712915
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 947,
+              "ids": [
+                392,
+                578,
+                577
+              ],
+              "barycentric": [
+                0.06728909623829749,
+                0.7984592776168037,
+                0.13425162614489883
+              ],
+              "sourcePosition": [
+                0.050772917334554434,
+                0.04832575472257269,
+                -0.03843424579644016
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 582,
+              "ids": [
+                432,
+                436,
+                440
+              ],
+              "barycentric": [
+                0.040848141226085155,
+                0.8545404967954127,
+                0.10461136197850222
+              ],
+              "sourcePosition": [
+                0.08025228451661266,
+                0.10349831451522747,
+                -0.04139278413117743
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 50434,
+              "ids": [
+                26252,
+                26640,
+                26641
+              ],
+              "barycentric": [
+                0.011493570929336117,
+                0.5425568850145596,
+                0.4459495440561043
+              ],
+              "sourcePosition": [
+                0.10414258549939401,
+                0.05020173939235091,
+                0.04320854375085997
+              ]
+            },
+            {
+              "mesh": "AD_Garment_Binding",
+              "triangle": 4060,
+              "ids": [
+                2295,
+                2294,
+                2303
+              ],
+              "barycentric": [
+                0.3616987260643719,
+                0.5188270480531366,
+                0.11947422588249147
+              ],
+              "sourcePosition": [
+                0.06586666652281246,
+                0.019492011676117534,
+                0.04112599439344816
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 44390,
+              "ids": [
+                23530,
+                23532,
+                23535
+              ],
+              "barycentric": [
+                0.17471519509686828,
+                0.07735950608142464,
+                0.7479252988217071
+              ],
+              "sourcePosition": [
+                0.10101601903639869,
+                0.05797635562021074,
+                0.04273316767342238
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 49450,
+              "ids": [
+                25082,
+                25081,
+                25470
+              ],
+              "barycentric": [
+                0.1942895626641571,
+                0.1773760114168846,
+                0.6283344259189583
+              ],
+              "sourcePosition": [
+                0.06668864612784217,
+                0.019612603660417727,
+                -0.05408014263547091
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 9102,
+              "ids": [
+                11119,
+                1678,
+                13609
+              ],
+              "barycentric": [
+                0.2358200155033634,
+                0.2705853356032965,
+                0.4935946488933401
+              ],
+              "sourcePosition": [
+                0.015903449916516633,
+                0.11160244211150255,
+                -0.021001688758742018
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 39020,
+              "ids": [
+                356,
+                21,
+                1370
+              ],
+              "barycentric": [
+                0.06697803051980267,
+                0.7679871299544359,
+                0.1650348395257615
+              ],
+              "sourcePosition": [
+                0.01972429955616171,
+                0.10970597594765216,
+                -0.03969671422169789
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 146,
+              "ids": [
+                390,
+                393,
+                394
+              ],
+              "barycentric": [
+                0.1755436314938793,
+                0.007776002854859885,
+                0.8166803656512608
+              ],
+              "sourcePosition": [
+                0.07916500299058475,
+                -0.005964854766386991,
+                -0.039274033936710154
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 832,
+              "ids": [
+                225,
+                510,
+                131
+              ],
+              "barycentric": [
+                0.5334179539109413,
+                0.30762682035373207,
+                0.1589552257353267
+              ],
+              "sourcePosition": [
+                -0.0517843578329426,
+                -0.01928265865273703,
+                -0.006362630229249428
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 66,
+              "ids": [
+                136,
+                137,
+                49
+              ],
+              "barycentric": [
+                0.16726241632112182,
+                0.6394840108132243,
+                0.19325357286565395
+              ],
+              "sourcePosition": [
+                -0.0868799258388488,
+                0.02799254557242076,
+                0.009270039129157916
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 1656,
+              "ids": [
+                616,
+                1511,
+                140
+              ],
+              "barycentric": [
+                0.3512730352265805,
+                0.6179256590995073,
+                0.03080130567391225
+              ],
+              "sourcePosition": [
+                0.10136565827345319,
+                -0.011114676802885757,
+                -0.03434080013784479
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_1",
+              "triangle": 10664,
+              "ids": [
+                5315,
+                5320,
+                5511
+              ],
+              "barycentric": [
+                0.38762540813227697,
+                0.3020919787989764,
+                0.3102826130687466
+              ],
+              "sourcePosition": [
+                0.025140938976447782,
+                0.07822013259755284,
+                0.019177893354573483
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 9811,
+              "ids": [
+                6144,
+                8670,
+                1688
+              ],
+              "barycentric": [
+                0.19021074488352674,
+                0.0951591059559264,
+                0.7146301491605469
+              ],
+              "sourcePosition": [
+                0.016081463941961065,
+                0.11158585263506002,
+                -0.029132714907800592
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 10843,
+              "ids": [
+                5408,
+                5600,
+                5599
+              ],
+              "barycentric": [
+                0.2696151826242542,
+                0.7006245355749814,
+                0.029760281800764364
+              ],
+              "sourcePosition": [
+                0.07732825112231356,
+                0.083394264814013,
+                -0.03827843170440129
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 12587,
+              "ids": [
+                6162,
+                6550,
+                6549
+              ],
+              "barycentric": [
+                0.5206031901459752,
+                0.22166762655675828,
+                0.25772918329726646
+              ],
+              "sourcePosition": [
+                0.11741164216703584,
+                0.10190324661725446,
+                0.022220820977679537
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 21,
+              "ids": [
+                49,
+                54,
+                55
+              ],
+              "barycentric": [
+                0.49780983853392613,
+                0.4775889335483319,
+                0.024601227917741973
+              ],
+              "sourcePosition": [
+                0.12555055793882433,
+                -0.012981961430685094,
+                0.001119646748671452
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 484,
+              "ids": [
+                670,
+                638,
+                671
+              ],
+              "barycentric": [
+                0.2497017586957999,
+                0.4938581227748074,
+                0.2564401185293927
+              ],
+              "sourcePosition": [
+                0.0628993373745965,
+                0.031239237587393096,
+                -0.037629990682883946
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 9120,
+              "ids": [
+                239,
+                4836,
+                232
+              ],
+              "barycentric": [
+                0.7023276946625725,
+                0.05918919666912798,
+                0.23848310866829953
+              ],
+              "sourcePosition": [
+                -0.004152867234923589,
+                0.05222048999644017,
+                -0.03690610751380888
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 2803,
+              "ids": [
+                477,
+                475,
+                1893
+              ],
+              "barycentric": [
+                0.15831543469573273,
+                0.4028497092593752,
+                0.4388348560448921
+              ],
+              "sourcePosition": [
+                -0.027141606060966446,
+                -0.00515718200152895,
+                0.033556957585857625
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 29366,
+              "ids": [
+                15162,
+                15165,
+                15168
+              ],
+              "barycentric": [
+                0.02512598596653126,
+                0.572864483912608,
+                0.4020095301208607
+              ],
+              "sourcePosition": [
+                0.12914361759342466,
+                0.081521354877023,
+                0.004334162971119569
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 9879,
+              "ids": [
+                1805,
+                5130,
+                1726
+              ],
+              "barycentric": [
+                0.34781726826363457,
+                0.5518113988545472,
+                0.10037133288181817
+              ],
+              "sourcePosition": [
+                -0.005566577531502835,
+                0.052911350366183295,
+                0.01840684145778245
+              ]
+            },
+            {
+              "mesh": "Original_Vamp",
+              "triangle": 133,
+              "ids": [
+                92,
+                94,
+                99
+              ],
+              "barycentric": [
+                0.7479075310739525,
+                0.04537981602526588,
+                0.20671265290078164
+              ],
+              "sourcePosition": [
+                -0.023163384939460747,
+                0.0360856673769646,
+                0.016253663058170935
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 1262,
+              "ids": [
+                1010,
+                1016,
+                1015
+              ],
+              "barycentric": [
+                0.6321554618736258,
+                0.20045764467090932,
+                0.1673868934554648
+              ],
+              "sourcePosition": [
+                -0.04418831841496269,
+                0.03636325500607579,
+                -0.026638287009233184
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 2231,
+              "ids": [
+                1845,
+                1846,
+                1250
+              ],
+              "barycentric": [
+                0.09447077087303402,
+                0.22932287951120112,
+                0.6762063496157649
+              ],
+              "sourcePosition": [
+                0.12876271778400572,
+                -0.009979069238090226,
+                -0.011253384359340184
+              ]
+            },
+            {
+              "mesh": "Original_Vamp",
+              "triangle": 188,
+              "ids": [
+                122,
+                121,
+                5
+              ],
+              "barycentric": [
+                0.812608897644229,
+                0.048858651181229534,
+                0.13853245117454158
+              ],
+              "sourcePosition": [
+                -0.08153948224259756,
+                0.028487756768998524,
+                -0.004041368464876524
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 16267,
+              "ids": [
+                8724,
+                9105,
+                8725
+              ],
+              "barycentric": [
+                0.2096616665822627,
+                0.5699065456614759,
+                0.2204317877562614
+              ],
+              "sourcePosition": [
+                0.07977767465309069,
+                0.09422809202117075,
+                0.041612980518592524
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 1181,
+              "ids": [
+                672,
+                669,
+                30
+              ],
+              "barycentric": [
+                0.1313413004547509,
+                0.4949352513642195,
+                0.3737234481810296
+              ],
+              "sourcePosition": [
+                0.05803219626485462,
+                0.0347238794600542,
+                -0.038132489221452626
+              ]
+            },
+            {
+              "mesh": "Mongolian_Clasp_Loops_1",
+              "triangle": 711,
+              "ids": [
+                391,
+                403,
+                402
+              ],
+              "barycentric": [
+                0.015316731653995164,
+                0.4215465349636692,
+                0.5631367333823356
+              ],
+              "sourcePosition": [
+                0.06549392174772424,
+                0.06799817543283913,
+                0.03744600455598111
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 577,
+              "ids": [
+                201,
+                200,
+                77
+              ],
+              "barycentric": [
+                0.44361446959669015,
+                0.17689363804864858,
+                0.37949189235466124
+              ],
+              "sourcePosition": [
+                0.026903291616221653,
+                -0.018988418005832834,
+                -0.012249484900945505
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 1001,
+              "ids": [
+                781,
+                806,
+                105
+              ],
+              "barycentric": [
+                0.6072777531073701,
+                0.3152810447435758,
+                0.0774412021490541
+              ],
+              "sourcePosition": [
+                -0.10924374975844335,
+                -0.00839262424656577,
+                0.01735505156962066
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 53140,
+              "ids": [
+                580,
+                583,
+                27610
+              ],
+              "barycentric": [
+                0.4849720393995114,
+                0.0938142102128421,
+                0.4212137503876465
+              ],
+              "sourcePosition": [
+                0.13247557962759293,
+                0.05431352057555597,
+                -0.022353817035112085
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 815,
+              "ids": [
+                195,
+                504,
+                65
+              ],
+              "barycentric": [
+                0.5982016601706024,
+                0.27142725063409434,
+                0.13037108919530335
+              ],
+              "sourcePosition": [
+                0.058683687439411346,
+                -0.017649521201050393,
+                0.0013266532106453299
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 347,
+              "ids": [
+                504,
+                195,
+                59
+              ],
+              "barycentric": [
+                0.762440738044599,
+                0.06874418670093198,
+                0.16881507525446898
+              ],
+              "sourcePosition": [
+                0.05583408795378567,
+                -0.017773706510217317,
+                -0.0015486204683534477
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 849,
+              "ids": [
+                254,
+                532,
+                39
+              ],
+              "barycentric": [
+                0.29138521364476544,
+                0.4562112585969397,
+                0.2524035277582949
+              ],
+              "sourcePosition": [
+                0.07344221161192009,
+                -0.016290392218389467,
+                0.029365759112855126
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 29565,
+              "ids": [
+                15934,
+                15937,
+                15935
+              ],
+              "barycentric": [
+                0.0649813238502065,
+                0.24561944234166527,
+                0.6893992338081283
+              ],
+              "sourcePosition": [
+                0.09403698483342127,
+                0.07867600768410452,
+                -0.05478961550443978
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 1420,
+              "ids": [
+                1116,
+                1118,
+                1119
+              ],
+              "barycentric": [
+                0.5940654981357163,
+                0.2601220575343021,
+                0.1458124443299816
+              ],
+              "sourcePosition": [
+                0.1061378079393885,
+                0.05003698308194914,
+                0.016446954375113496
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 702,
+              "ids": [
+                576,
+                25,
+                27
+              ],
+              "barycentric": [
+                0.30545162699006567,
+                0.11184777636992108,
+                0.5827005966400133
+              ],
+              "sourcePosition": [
+                0.013615925672876901,
+                0.026443392526645806,
+                -0.039208421942252894
+              ]
+            },
+            {
+              "mesh": "Mongolian_Clasp_Loops_1",
+              "triangle": 3083,
+              "ids": [
+                1736,
+                1748,
+                1747
+              ],
+              "barycentric": [
+                0.3155888546566634,
+                0.1829778121709088,
+                0.5014333331724278
+              ],
+              "sourcePosition": [
+                0.05257305909937644,
+                0.040959257239967545,
+                0.029693602254374965
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 11128,
+              "ids": [
+                5894,
+                6087,
+                6090
+              ],
+              "barycentric": [
+                0.42155820172538694,
+                0.09528144088660143,
+                0.48316035738801166
+              ],
+              "sourcePosition": [
+                0.049169293120126786,
+                0.08279318095326804,
+                0.02418240092522124
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_1",
+              "triangle": 1092,
+              "ids": [
+                651,
+                652,
+                653
+              ],
+              "barycentric": [
+                0.3466951314331018,
+                0.2769837512328422,
+                0.376321117334056
+              ],
+              "sourcePosition": [
+                0.12035219018038636,
+                0.04878503066590077,
+                0.006371017812730433
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 1542,
+              "ids": [
+                1177,
+                1181,
+                1187
+              ],
+              "barycentric": [
+                0.29887240401563653,
+                0.5056151530929786,
+                0.19551244289138492
+              ],
+              "sourcePosition": [
+                -0.0010214602787345696,
+                0.05008424953277338,
+                0.015859329248259176
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 44174,
+              "ids": [
+                23409,
+                23413,
+                23416
+              ],
+              "barycentric": [
+                0.29141112264060487,
+                0.5402105213856895,
+                0.16837835597370562
+              ],
+              "sourcePosition": [
+                0.06282318633998984,
+                0.03148678171001808,
+                -0.053114607473206316
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 165,
+              "ids": [
+                311,
+                314,
+                19
+              ],
+              "barycentric": [
+                0.19945090550945055,
+                0.7138166499315964,
+                0.08673244455895304
+              ],
+              "sourcePosition": [
+                -0.1273880106350054,
+                0.012270451236247391,
+                0.006424025262629855
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 1064,
+              "ids": [
+                239,
+                910,
+                240
+              ],
+              "barycentric": [
+                0.5874471886305981,
+                0.37333410127228034,
+                0.03921871009712153
+              ],
+              "sourcePosition": [
+                0.04274941504348246,
+                0.005376794343894272,
+                -0.04124658785107176
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 1153,
+              "ids": [
+                993,
+                647,
+                182
+              ],
+              "barycentric": [
+                0.7335468542040791,
+                0.004866352063916713,
+                0.2615867937320043
+              ],
+              "sourcePosition": [
+                0.08659922552839591,
+                0.04354126554738963,
+                -0.035694566303215325
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 9986,
+              "ids": [
+                5319,
+                5511,
+                5512
+              ],
+              "barycentric": [
+                0.07804577519298395,
+                0.17700945232211077,
+                0.7449447724849053
+              ],
+              "sourcePosition": [
+                0.05082377774794488,
+                0.07949058487257739,
+                0.023491435153482787
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 162,
+              "ids": [
+                421,
+                422,
+                255
+              ],
+              "barycentric": [
+                0.44869203317153294,
+                0.13560351059641884,
+                0.4157044562320482
+              ],
+              "sourcePosition": [
+                0.030575481344945254,
+                0.0006016850557693906,
+                -0.04219915908678659
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 44146,
+              "ids": [
+                23013,
+                23400,
+                23401
+              ],
+              "barycentric": [
+                0.47381140946812084,
+                0.18346393631445007,
+                0.3427246542174291
+              ],
+              "sourcePosition": [
+                0.06739924227600012,
+                0.03690836369458319,
+                -0.0535689030101395
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 22048,
+              "ids": [
+                2816,
+                8990,
+                17896
+              ],
+              "barycentric": [
+                0.4434205551055619,
+                0.04457464895427975,
+                0.5120047959401584
+              ],
+              "sourcePosition": [
+                -0.007837727201498093,
+                0.09775748208291589,
+                -0.03768725663183996
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 90,
+              "ids": [
+                167,
+                169,
+                85
+              ],
+              "barycentric": [
+                0.19987913705703142,
+                0.682177176626024,
+                0.11794368631694457
+              ],
+              "sourcePosition": [
+                -0.08891432179269161,
+                0.0271438957581088,
+                -0.020113832880463804
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 26350,
+              "ids": [
+                9722,
+                3908,
+                12217
+              ],
+              "barycentric": [
+                0.38649295734892275,
+                0.4389358346023733,
+                0.17457120804870396
+              ],
+              "sourcePosition": [
+                -0.022680446814935865,
+                0.0819695346767827,
+                -0.017624198507606083
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 1659,
+              "ids": [
+                825,
+                824,
+                827
+              ],
+              "barycentric": [
+                0.24686647798138306,
+                0.27784615013482533,
+                0.4752873718837916
+              ],
+              "sourcePosition": [
+                0.107422585686693,
+                0.0076504599200923565,
+                -0.032214769140464485
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 18153,
+              "ids": [
+                2311,
+                17409,
+                6287
+              ],
+              "barycentric": [
+                0.07855168931539103,
+                0.49171077312541356,
+                0.4297375375591954
+              ],
+              "sourcePosition": [
+                -0.00037694731692373534,
+                0.11020360849619175,
+                -0.031617501975673555
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 212,
+              "ids": [
+                349,
+                174,
+                2
+              ],
+              "barycentric": [
+                0.20352324042282322,
+                0.2681224037201202,
+                0.5283543558570566
+              ],
+              "sourcePosition": [
+                -0.08535128047632992,
+                0.014567208647093486,
+                -0.038248115026932726
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 266,
+              "ids": [
+                455,
+                189,
+                35
+              ],
+              "barycentric": [
+                0.19312399423134308,
+                0.4942061676560093,
+                0.31266983811264765
+              ],
+              "sourcePosition": [
+                0.08818596888104617,
+                -0.016167022850881112,
+                -0.0314090190917414
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "triangle": 824,
+              "ids": [
+                228,
+                227,
+                215
+              ],
+              "barycentric": [
+                0.4219259396486964,
+                0.045348861098578906,
+                0.5327251992527247
+              ],
+              "sourcePosition": [
+                0.12290500079472692,
+                0.03855455116305474,
+                -0.01877715846369797
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 6714,
+              "ids": [
+                3661,
+                3853,
+                3854
+              ],
+              "barycentric": [
+                0.10031779889316184,
+                0.46548314216679176,
+                0.4341990589400464
+              ],
+              "sourcePosition": [
+                0.1017047046346759,
+                0.0693511670932479,
+                0.015828076758956876
+              ]
+            },
+            {
+              "mesh": "Tongue_Rhinestone_Medallion",
+              "triangle": 18080,
+              "ids": [
+                32812,
+                32809,
+                32806
+              ],
+              "barycentric": [
+                0.20403113764510983,
+                0.479416053028634,
+                0.3165528093262562
+              ],
+              "sourcePosition": [
+                -0.019336591375593036,
+                0.08845306645777729,
+                -0.023740957531252084
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_1",
+              "triangle": 36114,
+              "ids": [
+                7827,
+                20050,
+                10353
+              ],
+              "barycentric": [
+                0.16089763526831435,
+                0.6140569002421339,
+                0.2250454644895518
+              ],
+              "sourcePosition": [
+                -0.04249178639834976,
+                0.04992749705483312,
+                0.02330184758694897
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_2",
+              "triangle": 16562,
+              "ids": [
+                65,
+                64,
+                439
+              ],
+              "barycentric": [
+                0.5083944571856627,
+                0.0018893504048214165,
+                0.48971619240951597
+              ],
+              "sourcePosition": [
+                0.0741239640718907,
+                0.044960667378243335,
+                0.0239529541880567
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 50534,
+              "ids": [
+                26016,
+                26019,
+                26022
+              ],
+              "barycentric": [
+                0.2980641196349272,
+                0.018343703706411762,
+                0.683592176658661
+              ],
+              "sourcePosition": [
+                0.1272929021600452,
+                0.054158694418289285,
+                0.02326199636082331
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 37195,
+              "ids": [
+                19457,
+                19848,
+                19458
+              ],
+              "barycentric": [
+                0.12164355361461066,
+                0.0027268901106695287,
+                0.8756295562747198
+              ],
+              "sourcePosition": [
+                0.08777035428423557,
+                0.06488201598541524,
+                -0.05548311734554334
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 8452,
+              "ids": [
+                4143,
+                4142,
+                2532
+              ],
+              "barycentric": [
+                0.1604680954959946,
+                0.45535664490578337,
+                0.384175259598222
+              ],
+              "sourcePosition": [
+                -0.05691270444009668,
+                0.03682014970172487,
+                0.018919082433917732
+              ]
+            },
+            {
+              "mesh": "Rubber_Toe_Bumper_Relief",
+              "triangle": 214,
+              "ids": [
+                107,
+                252,
+                253
+              ],
+              "barycentric": [
+                0.02705508301700077,
+                0.09065238593317065,
+                0.8822925310498286
+              ],
+              "sourcePosition": [
+                -0.09775699188204512,
+                -0.011126658723902123,
+                -0.02369359834792571
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 13332,
+              "ids": [
+                7594,
+                7596,
+                7597
+              ],
+              "barycentric": [
+                0.36345826986875285,
+                0.36852220626704746,
+                0.2680195238641997
+              ],
+              "sourcePosition": [
+                0.11285387856614795,
+                0.10082378098176145,
+                0.03047274064889275
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 820,
+              "ids": [
+                206,
+                506,
+                77
+              ],
+              "barycentric": [
+                0.5755743336409606,
+                0.41616906719951574,
+                0.008256599159523684
+              ],
+              "sourcePosition": [
+                0.01741925442618645,
+                -0.0193085743626728,
+                -0.0026747900160499897
+              ]
+            },
+            {
+              "mesh": "AD_Garment_Binding",
+              "triangle": 2205,
+              "ids": [
+                1248,
+                1258,
+                1257
+              ],
+              "barycentric": [
+                0.5952208094351988,
+                0.2749820696384975,
+                0.12979712092630366
+              ],
+              "sourcePosition": [
+                0.08463228443452127,
+                0.02882484875745851,
+                -0.05631937404377524
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 26037,
+              "ids": [
+                18394,
+                3419,
+                14284
+              ],
+              "barycentric": [
+                0.7678660615576589,
+                0.20764573186486654,
+                0.024488206577474567
+              ],
+              "sourcePosition": [
+                -0.02237750524201775,
+                0.08160707839152248,
+                0.015425254706745346
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 13,
+              "ids": [
+                31,
+                35,
+                36
+              ],
+              "barycentric": [
+                0.3684860901626048,
+                0.5374790061653771,
+                0.09403490367201806
+              ],
+              "sourcePosition": [
+                -0.12233306257277285,
+                0.0004239647819501682,
+                0.01776048707833207
+              ]
+            },
+            {
+              "mesh": "Finished_Heel_Leather",
+              "triangle": 1170,
+              "ids": [
+                633,
+                634,
+                647
+              ],
+              "barycentric": [
+                0.127372683033121,
+                0.761848005472503,
+                0.110779311494376
+              ],
+              "sourcePosition": [
+                0.11645959665033126,
+                0.08317539791050771,
+                -0.011018068871774797
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 2259,
+              "ids": [
+                1057,
+                1249,
+                1248
+              ],
+              "barycentric": [
+                0.7956753693784476,
+                0.05127640500378879,
+                0.15304822561776354
+              ],
+              "sourcePosition": [
+                -0.016555063148987522,
+                0.050826588774352366,
+                -0.02535596652931081
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001",
+              "triangle": 35140,
+              "ids": [
+                19532,
+                14867,
+                4607
+              ],
+              "barycentric": [
+                0.48644891452971684,
+                0.37667547310638483,
+                0.13687561236389834
+              ],
+              "sourcePosition": [
+                -0.04404776716555829,
+                0.05351456857723806,
+                -0.000288159505597162
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 15816,
+              "ids": [
+                7917,
+                7922,
+                8113
+              ],
+              "barycentric": [
+                0.011264810687565463,
+                0.6530140479876645,
+                0.33572114132477004
+              ],
+              "sourcePosition": [
+                0.08708678649153805,
+                0.10116060585089567,
+                -0.040882404757104376
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 24299,
+              "ids": [
+                12852,
+                13229,
+                12853
+              ],
+              "barycentric": [
+                0.775509040368582,
+                0.009918145337210428,
+                0.21457281429420755
+              ],
+              "sourcePosition": [
+                0.07688370519798206,
+                0.08195550805653004,
+                -0.054469578275514734
+              ]
+            },
+            {
+              "mesh": "Convertible_Upper_Eyelets",
+              "triangle": 5544,
+              "ids": [
+                2772,
+                2773,
+                2813
+              ],
+              "barycentric": [
+                0.056701462571983385,
+                0.21418119686395512,
+                0.7291173405640615
+              ],
+              "sourcePosition": [
+                0.06383017547026891,
+                0.041293968171456585,
+                -0.05200136477425601
+              ]
+            },
+            {
+              "mesh": "Finished_Heel_Leather",
+              "triangle": 69,
+              "ids": [
+                36,
+                50,
+                49
+              ],
+              "barycentric": [
+                0.09392200475485901,
+                0.42399205232214954,
+                0.48208594292299145
+              ],
+              "sourcePosition": [
+                0.1305880309729855,
+                0.011601288844844612,
+                -0.011661324953688216
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 2905,
+              "ids": [
+                447,
+                445,
+                1979
+              ],
+              "barycentric": [
+                0.7433882198438617,
+                0.11521341064079878,
+                0.14139836951533957
+              ],
+              "sourcePosition": [
+                0.0008275213679354164,
+                -0.004624622150191316,
+                -0.04580780039281178
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+              "triangle": 1597,
+              "ids": [
+                904,
+                1002,
+                7
+              ],
+              "barycentric": [
+                0.3655620474351936,
+                0.17975975565712568,
+                0.4546781969076807
+              ],
+              "sourcePosition": [
+                0.02089360388963977,
+                0.027718322667150172,
+                0.02523848194967016
+              ]
+            },
+            {
+              "mesh": "Original_Vamp",
+              "triangle": 256,
+              "ids": [
+                86,
+                80,
+                132
+              ],
+              "barycentric": [
+                0.027904124588402968,
+                0.8980860075702054,
+                0.07400986784139157
+              ],
+              "sourcePosition": [
+                -0.03416046839624425,
+                0.039254273787376275,
+                -0.021811778236783194
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+              "triangle": 745,
+              "ids": [
+                893,
+                889,
+                894
+              ],
+              "barycentric": [
+                0.20926703187359963,
+                0.11704531239291437,
+                0.673687655733486
+              ],
+              "sourcePosition": [
+                -0.007562670950374502,
+                0.04188079613102498,
+                0.021593934319731944
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 2672,
+              "ids": [
+                1822,
+                2208,
+                2211
+              ],
+              "barycentric": [
+                0.11388536335363253,
+                0.13289816742770053,
+                0.7532164692186669
+              ],
+              "sourcePosition": [
+                0.1168562441699364,
+                0.10972081498742771,
+                -0.0026493673839105988
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_1",
+              "triangle": 5756,
+              "ids": [
+                3029,
+                3030,
+                3031
+              ],
+              "barycentric": [
+                0.00415770020657702,
+                0.18128470392025137,
+                0.8145575958731716
+              ],
+              "sourcePosition": [
+                0.03783426592302691,
+                0.0654626546148913,
+                0.021689827099850224
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 25744,
+              "ids": [
+                3275,
+                10065,
+                15896
+              ],
+              "barycentric": [
+                0.40781313913041384,
+                0.20801067978285265,
+                0.3841761810867335
+              ],
+              "sourcePosition": [
+                0.01687643040383312,
+                0.08967535968017885,
+                0.008491582730607527
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 6391,
+              "ids": [
+                813,
+                810,
+                815
+              ],
+              "barycentric": [
+                0.21778756206801475,
+                0.5157996395076018,
+                0.2664127984243835
+              ],
+              "sourcePosition": [
+                -0.0604153687452427,
+                0.03742904744453551,
+                -0.0043908140484306794
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_2",
+              "triangle": 291,
+              "ids": [
+                393,
+                236,
+                238
+              ],
+              "barycentric": [
+                0.8068385276013446,
+                0.015784649593605916,
+                0.1773768228050495
+              ],
+              "sourcePosition": [
+                -0.10745821618761564,
+                0.01388658466013586,
+                -0.0317824971234367
+              ]
+            },
+            {
+              "mesh": "Inner_Lining",
+              "triangle": 632,
+              "ids": [
+                240,
+                341,
+                342
+              ],
+              "barycentric": [
+                0.40708851497092957,
+                0.5567015956654254,
+                0.03620988936364501
+              ],
+              "sourcePosition": [
+                0.10592200410842968,
+                0.044517430554105404,
+                -0.02991930284476926
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 835,
+              "ids": [
+                231,
+                511,
+                149
+              ],
+              "barycentric": [
+                0.037874747842718826,
+                0.9023878288013872,
+                0.059737423355893916
+              ],
+              "sourcePosition": [
+                -0.06478348258169546,
+                -0.0178371961010802,
+                0.00608790641437933
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 827,
+              "ids": [
+                213,
+                508,
+                119
+              ],
+              "barycentric": [
+                0.48778687354369765,
+                0.09133081115027814,
+                0.4208823153060242
+              ],
+              "sourcePosition": [
+                -0.013168083985946419,
+                -0.020227102982174252,
+                0.003635791582464327
+              ]
+            },
+            {
+              "mesh": "Tongue_Rhinestone_Medallion",
+              "triangle": 14771,
+              "ids": [
+                26855,
+                26856,
+                26878
+              ],
+              "barycentric": [
+                0.030914616213178148,
+                0.2500533250932995,
+                0.7190320586935223
+              ],
+              "sourcePosition": [
+                -0.02152023128586982,
+                0.08581210744749998,
+                0.009699347459031445
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 10891,
+              "ids": [
+                9125,
+                11277,
+                14039
+              ],
+              "barycentric": [
+                0.3328590070352627,
+                0.5314272976574351,
+                0.13571369530730215
+              ],
+              "sourcePosition": [
+                0.03353253578722097,
+                0.06381561928201675,
+                0.012245949047334496
+              ]
+            },
+            {
+              "mesh": "Inner_Lining",
+              "triangle": 137,
+              "ids": [
+                96,
+                102,
+                103
+              ],
+              "barycentric": [
+                0.6095792156808097,
+                0.35138550513291034,
+                0.03903527918627998
+              ],
+              "sourcePosition": [
+                0.03034652631765056,
+                0.010109585349769884,
+                0.026027911884799325
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+              "triangle": 1374,
+              "ids": [
+                222,
+                748,
+                223
+              ],
+              "barycentric": [
+                0.4044987508579365,
+                0.009490742608683059,
+                0.5860105065333804
+              ],
+              "sourcePosition": [
+                0.10735594578455775,
+                0.038010494647968816,
+                0.018727571455052563
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_1",
+              "triangle": 17903,
+              "ids": [
+                9277,
+                9283,
+                9278
+              ],
+              "barycentric": [
+                0.36163070118287544,
+                0.16377013028125117,
+                0.4745991685358734
+              ],
+              "sourcePosition": [
+                0.12202199015798537,
+                0.09488950074116492,
+                0.019489812688809623
+              ]
+            },
+            {
+              "mesh": "Convertible_Tongue001_2",
+              "triangle": 58229,
+              "ids": [
+                32674,
+                20134,
+                26912
+              ],
+              "barycentric": [
+                0.29483250143564754,
+                0.04462656712415583,
+                0.6605409314401967
+              ],
+              "sourcePosition": [
+                0.012206180090171702,
+                0.08872616547422633,
+                -0.005763905649591207
+              ]
+            },
+            {
+              "mesh": "Original_Vamp",
+              "triangle": 33,
+              "ids": [
+                23,
+                26,
+                16
+              ],
+              "barycentric": [
+                0.4457700735776934,
+                0.14918919613142156,
+                0.40504073029088505
+              ],
+              "sourcePosition": [
+                -0.052386738044392124,
+                0.02370816112300935,
+                0.021409591040877505
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 2878,
+              "ids": [
+                4641,
+                4643,
+                2886
+              ],
+              "barycentric": [
+                0.44205307020859264,
+                0.10092638265308693,
+                0.45702054713832047
+              ],
+              "sourcePosition": [
+                -0.03660660365571405,
+                0.045752727225873285,
+                0.011465515802413138
+              ]
+            },
+            {
+              "mesh": "AD_Garment_Binding",
+              "triangle": 4387,
+              "ids": [
+                2484,
+                2492,
+                2493
+              ],
+              "barycentric": [
+                0.33650604720162236,
+                0.355067505644655,
+                0.30842644715372264
+              ],
+              "sourcePosition": [
+                0.02576967677080525,
+                0.09677350952959413,
+                -0.04593813473891744
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 3529,
+              "ids": [
+                506,
+                508,
+                511
+              ],
+              "barycentric": [
+                0.7270418622377134,
+                0.11545439923624468,
+                0.15750373852604194
+              ],
+              "sourcePosition": [
+                -0.08080431178047633,
+                0.0009828974889819256,
+                -0.043925837871246556
+              ]
+            },
+            {
+              "mesh": "AD_Cuff_Shell_2",
+              "triangle": 49763,
+              "ids": [
+                25910,
+                26299,
+                25911
+              ],
+              "barycentric": [
+                0.049470328005750686,
+                0.32804744194013435,
+                0.622482230054115
+              ],
+              "sourcePosition": [
+                0.12959980619121847,
+                0.056020988232288516,
+                0.02237306081863868
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_1",
+              "triangle": 12861,
+              "ids": [
+                6617,
+                6619,
+                6620
+              ],
+              "barycentric": [
+                0.13023790574068728,
+                0.6412874135926672,
+                0.2284746806666456
+              ],
+              "sourcePosition": [
+                0.1068955938044275,
+                0.09242278328506359,
+                0.017021573226813205
+              ]
+            },
+            {
+              "mesh": "Convertible_Shaft_Fixed_3",
+              "triangle": 16017,
+              "ids": [
+                8017,
+                8213,
+                8210
+              ],
+              "barycentric": [
+                0.0566105868351523,
+                0.7899223777439343,
+                0.15346703542091342
+              ],
+              "sourcePosition": [
+                0.02965272061090537,
+                0.09345657478483702,
+                -0.0410492416958782
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_3",
+              "triangle": 3021,
+              "ids": [
+                567,
+                1163,
+                568
+              ],
+              "barycentric": [
+                0.6183645440571743,
+                0.3763878487624362,
+                0.005247607180389455
+              ],
+              "sourcePosition": [
+                -0.09532223529528147,
+                -0.007986926886298722,
+                -0.038272978559895705
+              ]
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_4",
+              "triangle": 824,
+              "ids": [
+                207,
+                507,
+                101
+              ],
+              "barycentric": [
+                0.06658509839803639,
+                0.08286861744331693,
+                0.8505462841586466
+              ],
+              "sourcePosition": [
+                0.005961535358537396,
+                -0.01964881286871596,
+                0.01663589398947519
+              ]
+            },
+            {
+              "mesh": "Original_Lower_Laces",
+              "triangle": 537,
+              "ids": [
+                1108,
+                1111,
+                1104
+              ],
+              "barycentric": [
+                0.6263592881640413,
+                0.2941195156973614,
+                0.07952119613859733
+              ],
+              "sourcePosition": [
+                -0.03673325357931527,
+                0.03855799872509986,
+                0.018301545494018967
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verified invalid cloth normals are repaired at runtime without changing source artwork",
+      "passed": true,
+      "detail": {
+        "repairedMaterials": 17,
+        "names": [
+          "Collar_Outer_Canvas",
+          "Collar_Canvas",
+          "Canvas_Trim",
+          "Body_Canvas",
+          "Inner_Lining",
+          "Body_Inner_Canvas",
+          "Inner_Lining",
+          "Tongue_Reverse_Canvas",
+          "Tongue_Canvas",
+          "Body_Canvas",
+          "Heel_Strip",
+          "Canvas_Trim",
+          "Heel_Strip",
+          "Inner_Lining",
+          "Body_Canvas",
+          "Body_Canvas",
+          "Body_Inner_Canvas"
+        ],
+        "replacementTextures": 9,
+        "generatedPixelsBytes": 65536,
+        "normalValidation": {
+          "size": 128,
+          "minimumDecodedZ": 0.9921568627450981,
+          "meanDecodedNormal": [
+            1.3877787807814457e-17,
+            6.844026213814747e-19,
+            0.9960784313725526
+          ],
+          "maximumUnitLengthError": 0.0036994239516665584
+        }
+      }
+    },
+    {
+      "name": "Genuine landscape-to-portrait resize retargets and naturally completes the active camera",
+      "passed": true,
+      "detail": {
+        "resizeStart": {
+          "generation": 3,
+          "moving": true,
+          "progress": 0
+        },
+        "viewport": [
+          768,
+          1024
+        ],
+        "generation": 4,
+        "hasJourney": true,
+        "position": [
+          -1.8893219535923151,
+          2.515705704221995,
+          4.112480841440895
+        ],
+        "target": [
+          -0.3163313870540567,
+          0.5172053323068266,
+          0.013430863846776553
+        ],
+        "expectedPosition": [
+          -1.889321953592315,
+          2.5157057042219955,
+          4.112480841440897
+        ],
+        "expectedTarget": [
+          -0.3163313870540567,
+          0.5172053323068266,
+          0.013430863846776553
+        ],
+        "progress": 1,
+        "moving": false
+      }
+    },
+    {
+      "name": "Recorded intro naturally reaches its real completion",
+      "passed": true,
+      "detail": {
+        "frames": 64
+      }
+    },
+    {
+      "name": "Recorded cuff / unfold0 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "cuff",
+        "unfold": 0,
+        "position": [
+          0.8427860204787181,
+          1.1824045523010143,
+          3.2363917691229833
+        ],
+        "target": [
+          1.0811220922133167,
+          0.48702994159860086,
+          0.5657832115652518
+        ],
+        "expectedPosition": [
+          0.8427860204787179,
+          1.1824045523010145,
+          3.2363917691229833
+        ],
+        "expectedTarget": [
+          1.0811220922133167,
+          0.48702994159860075,
+          0.5657832115652518
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded cuff / unfold1 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "cuff",
+        "unfold": 1,
+        "position": [
+          1.9956460037899837,
+          2.1887983065775396,
+          5.87909881438156
+        ],
+        "target": [
+          2.0778137014171527,
+          0.9434597425566482,
+          0.6632690308831524
+        ],
+        "expectedPosition": [
+          1.9956460037899837,
+          2.18879830657754,
+          5.8790988143815595
+        ],
+        "expectedTarget": [
+          2.0778137014171527,
+          0.9434597425566482,
+          0.6632690308831524
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded cuff / unfold0 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "cuff",
+        "unfold": 0,
+        "position": [
+          0.8427860204787179,
+          1.1824045523010143,
+          3.236391769122983
+        ],
+        "target": [
+          1.0811220922133167,
+          0.48702994159860086,
+          0.5657832115652518
+        ],
+        "expectedPosition": [
+          0.8427860204787179,
+          1.1824045523010145,
+          3.2363917691229833
+        ],
+        "expectedTarget": [
+          1.0811220922133167,
+          0.48702994159860075,
+          0.5657832115652518
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded tongue / unfold0 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "tongue",
+        "unfold": 0,
+        "position": [
+          -1.3075919516289944,
+          1.8130906100539188,
+          2.789581063312486
+        ],
+        "target": [
+          -0.3165871935216553,
+          0.47634518441810025,
+          0.020822995793705498
+        ],
+        "expectedPosition": [
+          -1.3075919516289944,
+          1.8130906100539184,
+          2.789581063312486
+        ],
+        "expectedTarget": [
+          -0.31658719352165543,
+          0.47634518441810025,
+          0.0208229957937055
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded heel / unfold0 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "heel",
+        "unfold": 0,
+        "position": [
+          4.108836226471546,
+          0.12853639739107053,
+          0.05831549745139411
+        ],
+        "target": [
+          1.5469958989468986,
+          -0.1806396386771908,
+          -0.09879693041326071
+        ],
+        "expectedPosition": [
+          4.108836226471546,
+          0.1285363973910708,
+          0.058315497451394346
+        ],
+        "expectedTarget": [
+          1.5469958989468986,
+          -0.18063963867719074,
+          -0.09879693041326072
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded logo / unfold0 reaches production narrative endpoint",
+      "passed": true,
+      "detail": {
+        "part": "logo",
+        "unfold": 0,
+        "position": [
+          3.844666910923725,
+          -0.32885384744896995,
+          -0.12522790905797246
+        ],
+        "target": [
+          1.5455007825754827,
+          -0.6751650671260672,
+          -0.09870144336962067
+        ],
+        "expectedPosition": [
+          3.844666910923725,
+          -0.3288538474489698,
+          -0.12522790905797224
+        ],
+        "expectedTarget": [
+          1.5455007825754827,
+          -0.6751650671260672,
+          -0.09870144336962067
+        ],
+        "moving": false,
+        "progress": 1
+      }
+    },
+    {
+      "name": "Recorded return naturally restores the complete shoe",
+      "passed": true,
+      "detail": {
+        "camera": {
+          "generation": 13,
+          "moving": false,
+          "progress": 1,
+          "position": [
+            -3.4500000000000015,
+            1.7000000000000006,
+            6.150000000000001
+          ],
+          "target": [
+            0,
+            0.12,
+            0
+          ],
+          "framing": 0.14,
+          "vertical": 0
+        },
+        "mode": "story",
+        "unfold": 0
+      }
+    },
+    {
+      "name": "Natural production-timeline movie has no JavaScript or shader errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "video": {
+    "file": "showcase-exploration.mp4",
+    "frames": 260,
+    "fps": 12,
+    "durationSeconds": 21.666666666666668,
+    "keyframes": [
+      {
+        "part": "cuff",
+        "unfold": 0,
+        "frameIndex": 99,
+        "pose": {
+          "part": "cuff",
+          "unfold": 0,
+          "position": [
+            0.8427860204787181,
+            1.1824045523010143,
+            3.2363917691229833
+          ],
+          "target": [
+            1.0811220922133167,
+            0.48702994159860086,
+            0.5657832115652518
+          ],
+          "expectedPosition": [
+            0.8427860204787179,
+            1.1824045523010145,
+            3.2363917691229833
+          ],
+          "expectedTarget": [
+            1.0811220922133167,
+            0.48702994159860075,
+            0.5657832115652518
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      },
+      {
+        "part": "cuff",
+        "unfold": 1,
+        "frameIndex": 125,
+        "pose": {
+          "part": "cuff",
+          "unfold": 1,
+          "position": [
+            1.9956460037899837,
+            2.1887983065775396,
+            5.87909881438156
+          ],
+          "target": [
+            2.0778137014171527,
+            0.9434597425566482,
+            0.6632690308831524
+          ],
+          "expectedPosition": [
+            1.9956460037899837,
+            2.18879830657754,
+            5.8790988143815595
+          ],
+          "expectedTarget": [
+            2.0778137014171527,
+            0.9434597425566482,
+            0.6632690308831524
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      },
+      {
+        "part": "cuff",
+        "unfold": 0,
+        "frameIndex": 163,
+        "pose": {
+          "part": "cuff",
+          "unfold": 0,
+          "position": [
+            0.8427860204787179,
+            1.1824045523010143,
+            3.236391769122983
+          ],
+          "target": [
+            1.0811220922133167,
+            0.48702994159860086,
+            0.5657832115652518
+          ],
+          "expectedPosition": [
+            0.8427860204787179,
+            1.1824045523010145,
+            3.2363917691229833
+          ],
+          "expectedTarget": [
+            1.0811220922133167,
+            0.48702994159860075,
+            0.5657832115652518
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      },
+      {
+        "part": "tongue",
+        "unfold": 0,
+        "frameIndex": 187,
+        "pose": {
+          "part": "tongue",
+          "unfold": 0,
+          "position": [
+            -1.3075919516289944,
+            1.8130906100539188,
+            2.789581063312486
+          ],
+          "target": [
+            -0.3165871935216553,
+            0.47634518441810025,
+            0.020822995793705498
+          ],
+          "expectedPosition": [
+            -1.3075919516289944,
+            1.8130906100539184,
+            2.789581063312486
+          ],
+          "expectedTarget": [
+            -0.31658719352165543,
+            0.47634518441810025,
+            0.0208229957937055
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      },
+      {
+        "part": "heel",
+        "unfold": 0,
+        "frameIndex": 211,
+        "pose": {
+          "part": "heel",
+          "unfold": 0,
+          "position": [
+            4.108836226471546,
+            0.12853639739107053,
+            0.05831549745139411
+          ],
+          "target": [
+            1.5469958989468986,
+            -0.1806396386771908,
+            -0.09879693041326071
+          ],
+          "expectedPosition": [
+            4.108836226471546,
+            0.1285363973910708,
+            0.058315497451394346
+          ],
+          "expectedTarget": [
+            1.5469958989468986,
+            -0.18063963867719074,
+            -0.09879693041326072
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      },
+      {
+        "part": "logo",
+        "unfold": 0,
+        "frameIndex": 235,
+        "pose": {
+          "part": "logo",
+          "unfold": 0,
+          "position": [
+            3.844666910923725,
+            -0.32885384744896995,
+            -0.12522790905797246
+          ],
+          "target": [
+            1.5455007825754827,
+            -0.6751650671260672,
+            -0.09870144336962067
+          ],
+          "expectedPosition": [
+            3.844666910923725,
+            -0.3288538474489698,
+            -0.12522790905797224
+          ],
+          "expectedTarget": [
+            1.5455007825754827,
+            -0.6751650671260672,
+            -0.09870144336962067
+          ],
+          "moving": false,
+          "progress": 1
+        }
+      }
+    ],
+    "method": "Actual WebGL-rendered frames driven by the unmodified Scene.loop at synthetic12fps timestamps. Standard replayIntro/selectPart/setUnfold/home APIs run the production easing and coupled camera/cloth animation. No seekTransition/seekUnfold or forced director completion is used. The normal RAF is paused only while capturing; encoded12fps is NOT real-time performance."
+  },
+  "errors": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "environment": "Linux Chromium / SwiftShader. Synthetic12fps review frames; NOT real-time GPU or iPad Safari performance."
+}
