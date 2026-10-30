@@ -1,0 +1,34 @@
+{
+  "testedAt": "2026-10-30T10:13:00.360Z",
+  "base": "https://siriguleng15.github.io/soulgrain-onward/onward-pattern-reveal/",
+  "checks": [
+    {
+      "file": "preview-info.json",
+      "status": 200,
+      "bytes": 401,
+      "sha256": "e7bdca51e53eeda7c53365da12400b7115b9b7965554e1e0aad89d861fee548f",
+      "passed": true
+    },
+    {
+      "file": "pattern-reveal/review.html",
+      "status": 200,
+      "bytes": 7532,
+      "sha256": "82c1b8c95cbc02eb4c1df951174bcfb238c93a4c5523ddf9edccab25b82e5fb6",
+      "passed": true
+    },
+    {
+      "file": "pattern-reveal/verification/pattern-reveal-demo.mp4",
+      "status": 200,
+      "bytes": 245044,
+      "sha256": "81c3ba551782f518eabac424f6bccf2adfa9e6a7600f2ac29f6394e9fab13423",
+      "passed": true
+    },
+    {
+      "file": "assets/onward-ad-v1/onward-ad-v1.glb",
+      "status": 200,
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "passed": true
+    }
+  ]
+}
