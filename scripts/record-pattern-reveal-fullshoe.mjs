@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {mkdir,mkdtemp,writeFile,copyFile,readFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {openBrowser,visibleTargets} from './lib/reveal-browser.mjs';
+const url=process.argv[2]??'http://127.0.0.1:4742/pattern-reveal.html',out='public/pattern-reveal-fullshoe/verification';
+await mkdir(out,{recursive:true});const frames=await mkdtemp('/tmp/onward-fullshoe-film-'),checks=[];
+const b=await openBrowser(url,{width:1280,height:900,port:9582});
+try{
+ const{run,cdp,mouse}=b;let frame=0;
+ await run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false);window.__onwardShowcase.setQuality("balanced");window.__onwardShowcase.setMode("free")');await b.settled();
+ await run('(()=>{const s=window.__onwardShowcase.scene;cancelAnimationFrame(s.frame);s.frame=0;s.last=0;s.clock=0;s.setMotion(true);})()');
+ const capture=async()=>{await run(`(()=>{const s=window.__onwardShowcase.scene;s.last=${frame*1000/15};s.lastRender=-Infinity;s.loop(${(frame+1)*1000/15});cancelAnimationFrame(s.frame);s.frame=0;})()`);const r=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await writeFile(frames+'/'+String(frame++).padStart(4,'0')+'.png',Buffer.from(r.data,'base64'));};
+ const hold=async n=>{for(let i=0;i<n;i++)await capture();};
+ const click=async selector=>{const p=await run(`(()=>{const r=document.querySelector(${JSON.stringify(selector)}).getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2};})()`);await mouse(p.x,p.y);await cdp('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,x:p.x,y:p.y});await cdp('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:p.x,y:p.y});};
+ const hover=async(region,n)=>{const pts=(await run(visibleTargets)).filter(p=>p.region===region);assert.ok(pts.length,'visible '+region);const c=pts.reduce((a,p)=>({x:a.x+p.x/pts.length,y:a.y+p.y/pts.length}),{x:0,y:0});pts.sort((a,b)=>Math.hypot(a.x-c.x,a.y-c.y)-Math.hypot(b.x-c.x,b.y-c.y));const a=pts[0],z=pts.find(p=>Math.hypot(p.x-a.x,p.y-a.y)>35)??pts.at(-1);for(let i=0;i<n;i++){const t=(Math.sin(i/(n-1)*Math.PI-Math.PI/2)+1)/2;await mouse(a.x+(z.x-a.x)*t,a.y+(z.y-a.y)*t);await capture();}const s=await run('window.__onwardShowcase.getRevealState()');checks.push({name:'Real mouse reveals '+region,passed:s.valid&&s.opacity>.9,region:s.region,opacity:s.opacity});assert.ok(checks.at(-1).passed);console.log('Recorded',region,frame);};
+ const part=async(id)=>{await click('[data-part="'+id+'"]');await hold(29);assert.equal(await run('window.__onwardShowcase.getState().isTransitioning'),false);};
+ await mouse(300,165);await hold(8);await hover('outer',24);await hover('cuff',24);
+ await part('cuff');await hover('cuff',18);await copyFile(frames+'/'+String(frame-1).padStart(4,'0')+'.png',out+'/video-poster.png');
+ await part('tongue');await hover('rhinestones',20);
+ await part('heel');await hover('heel',20);
+ await part('logo');await hover('logo',18);
+ await click('[data-reveal="all"]');await hold(18);assert.equal(await run('window.__onwardShowcase.getRevealState().allUniform'),1);
+ await click('[data-ui="home"]');await hold(29);await hold(12);
+ await click('[data-reveal="all"]');await hold(18);await hover('cuff',18);await mouse(30,180);await hold(18);
+ checks.push({name:'Exit naturally removes the window',passed:await run('window.__onwardShowcase.getRevealState().opacity<.002')});assert.ok(checks.at(-1).passed);
+ checks.push({name:'Real full-shoe journey has no shader/runtime/resource errors',passed:b.errors.length===0&&b.requests.length===0,errors:b.errors,requests:b.requests});assert.ok(checks.at(-1).passed);
+ const video=out+'/pattern-reveal-fullshoe.mp4',encoded=spawnSync('ffmpeg',['-y','-loglevel','error','-framerate','15','-i',frames+'/%04d.png','-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',video],{encoding:'utf8'});assert.equal(encoded.status,0,encoded.stderr);
+ const sha256=createHash('sha256').update(await readFile(video)).digest('hex');
+ await writeFile(out+'/video-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url,checks,frames:frame,fps:15,durationSeconds:frame/15,sha256,method:'Actual CDP mouse movements and clicks on existing part navigation / UNVEIL ALL drive the production controller and Scene.loop at deterministic review timestamps. Camera transitions run in continuous 3D time. No direct mask-uniform edits. This video is not a real-time FPS benchmark.',environment:'Linux Chromium / SwiftShader, not physical iPad Safari.'},null,2)+'\n');console.log(JSON.stringify({passed:true,frames:frame,duration:frame/15,video,sha256}));
+}finally{b.close();}

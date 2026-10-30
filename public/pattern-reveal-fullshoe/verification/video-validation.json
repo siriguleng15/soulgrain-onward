@@ -1,0 +1,64 @@
+{
+  "testedAt": "2026-10-30T11:39:12.697Z",
+  "url": "http://127.0.0.1:4742/pattern-reveal.html",
+  "checks": [
+    {
+      "name": "Real mouse reveals outer",
+      "passed": true,
+      "region": "outer",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals cuff",
+      "passed": true,
+      "region": "cuff",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals cuff",
+      "passed": true,
+      "region": "cuff",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals rhinestones",
+      "passed": true,
+      "region": "rhinestones",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals heel",
+      "passed": true,
+      "region": "heel",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals logo",
+      "passed": true,
+      "region": "logo",
+      "opacity": 1
+    },
+    {
+      "name": "Real mouse reveals cuff",
+      "passed": true,
+      "region": "cuff",
+      "opacity": 1
+    },
+    {
+      "name": "Exit naturally removes the window",
+      "passed": true
+    },
+    {
+      "name": "Real full-shoe journey has no shader/runtime/resource errors",
+      "passed": true,
+      "errors": [],
+      "requests": []
+    }
+  ],
+  "frames": 361,
+  "fps": 15,
+  "durationSeconds": 24.066666666666666,
+  "sha256": "11219a422b319ac4ae90c055a3e809bb7d18eaebda4024f26041f53a96f53a58",
+  "method": "Actual CDP mouse movements and clicks on existing part navigation / UNVEIL ALL drive the production controller and Scene.loop at deterministic review timestamps. Camera transitions run in continuous 3D time. No direct mask-uniform edits. This video is not a real-time FPS benchmark.",
+  "environment": "Linux Chromium / SwiftShader, not physical iPad Safari."
+}
