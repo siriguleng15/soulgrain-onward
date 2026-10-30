@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "8d8099c9890cb6f13e324d7798b6d0c4fd294b2b",
+  "sourceBranch": "feat/onward-pattern-reveal-fullshoe",
+  "builtAt": "2026-10-30T11:26:15.387Z",
+  "scope": "Whole-shoe artwork reveal. Previous body-only preview and original Nightfall preserved.",
+  "mappedPrimitives": 16,
+  "reliefPrimitives": 1,
+  "modelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "entry": "pattern-reveal.html",
+  "physicalIPadSafariTested": false
+}
