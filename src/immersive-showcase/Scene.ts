@@ -22,6 +22,13 @@ const clamp=(n:number,a=0,b=1)=>Math.max(a,Math.min(b,n));
 const smooth=(n:number)=>{n=clamp(n);return n*n*(3-2*n);};
 const PART_IDS:PartId[]=['cuff','tongue','pattern','clasps','heel','aglets','logo'];
 interface Events {onReady():void;onPart(part:PartId):void;onMode(mode:ShowcaseMode):void;onError(message:string):void;onLoad(progress:number):void;onFrame?():void;}
+/** Optional per-page behavior. The original Nightfall entry supplies no extension. */
+export interface ShowcaseExtension {
+ onLoaded(scene:ShowcaseScene):void;
+ update(scene:ShowcaseScene,dt:number):boolean;
+ beforeRender(scene:ShowcaseScene):void;
+ dispose():void;
+}
 function labels(node:Object3D){let n:Object3D|null=node,s='';while(n){s+=' '+n.name+' '+String(n.userData.part??'')+' '+String(n.userData.adActor??'');n=n.parent;}return s;}
 function classify(mesh:Mesh):PartId|undefined{
  const name=labels(mesh),materials=(Array.isArray(mesh.material)?mesh.material:[mesh.material]).map(m=>m.name).join(' ');
@@ -46,7 +53,7 @@ export class ShowcaseScene {
  private readonly coarse=matchMedia('(pointer:coarse)').matches;
  private readonly cameraCurve=new CatmullRomCurve3([new Vector3(-3.45,1.7,6.15),new Vector3(-2.45,2.3,5.8),new Vector3(2.6,1.5,5.9),new Vector3(-3.1,2.2,6.1)]);
  private readonly targetCurve=new CatmullRomCurve3([new Vector3(0,.12,0),new Vector3(.22,.28,0),new Vector3(.25,.32,0),new Vector3(0,.1,0)]);
- constructor(readonly host:HTMLElement,readonly events:Events){
+ constructor(readonly host:HTMLElement,readonly events:Events,private readonly extension?:ShowcaseExtension){
   this.quality=this.coarse?'balanced':'high';this.motion=!matchMedia('(prefers-reduced-motion: reduce)').matches;
   this.renderer=new WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});this.renderer.outputColorSpace=SRGBColorSpace;this.renderer.toneMapping=ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.02;
   this.renderer.setClearColor(0x030812,0);this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=PCFSoftShadowMap;this.renderer.shadowMap.autoUpdate=false;
@@ -78,6 +85,7 @@ export class ShowcaseScene {
    });
    this.asset=asset;this.normalized.position.copy(this.sourceCenter).multiplyScalar(-this.sourceScale);this.normalized.scale.setScalar(this.sourceScale);this.normalized.add(asset);
    if(PART_IDS.some(id=>!this.parts.get(id)!.length))throw Error('展示资产缺少独立部位，未创建虚假的探索目标。');
+   this.extension?.onLoaded(this);
    this.ready=true;this.events.onLoad(1);this.replayIntro();this.events.onReady();this.renderer.shadowMap.needsUpdate=true;
   }catch(error){if(this.disposed||generation!==this.loadGeneration)return;this.loadingError=String(error);this.events.onError(this.loadingError);}
  }
@@ -144,11 +152,12 @@ export class ShowcaseScene {
    this.particles?.update(this.introProgress,this.clock,!this.motion);for(const r of this.materials){const target=this.focusPart&&r.part!==this.focusPart? .68:1;r.focus.value+=(target-r.focus.value)*(1-Math.exp(-dt*5));}
    if(this.motion){this.key.position.x=-3.5+Math.sin(this.clock*.18)*.4;this.rim.intensity=3.5+Math.sin(this.clock*.55)*.12;}
   }
-  this.controls.update();const active=this.director.moving||Boolean(this.unfoldMotion)||this.introProgress<1||this.pointerDown.size>0,interval=active?1000/(this.coarse?40:60):1000/24;
-  if(!this.contextLost&&timestamp-this.lastRender>=interval){this.renderer.render(this.scene,this.camera);this.lastRender=timestamp;this.renderedFrames++;this.renderedAt.push(timestamp);if(this.renderedAt.length>80)this.renderedAt.shift();this.events.onFrame?.();}
+  this.controls.update();const extensionActive=this.ready?(this.extension?.update(this,dt)??false):false;
+  const active=this.director.moving||Boolean(this.unfoldMotion)||this.introProgress<1||this.pointerDown.size>0||extensionActive,interval=active?1000/(this.coarse?40:60):1000/24;
+  if(!this.contextLost&&timestamp-this.lastRender>=interval){if(this.ready)this.extension?.beforeRender(this);this.renderer.render(this.scene,this.camera);this.lastRender=timestamp;this.renderedFrames++;this.renderedAt.push(timestamp);if(this.renderedAt.length>80)this.renderedAt.shift();this.events.onFrame?.();}
   this.frame=requestAnimationFrame(this.loop);
  }
  get isTransitioning(){return this.director.moving||Boolean(this.unfoldMotion);}
  getState(){const timings=this.renderedAt.slice(1).map((n,i)=>n-this.renderedAt[i]);return{ready:this.ready,loadingError:this.loadingError??null,introProgress:this.introProgress,focusPart:this.focusPart??null,mode:this.mode,unfold:this.unfold,isTransitioning:this.director.moving||Boolean(this.unfoldMotion),camera:this.director.getState(),quality:this.quality,particleCount:this.particles?.getState().activeCount??0,particles:this.particles?.getState(),pixelRatio:this.renderer.getPixelRatio(),drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,renderedFrames:this.renderedFrames,sourceModelSHA:SOURCE_MODEL_SHA,productReveal:this.materials[0]?.reveal.value??0,renderedParticleCount:this.particles?.group.visible?(this.particles.getState().activeCount):0,normalRepair:this.repairs.info(),parts:PART_IDS.map(id=>({id,meshes:this.parts.get(id)?.length??0,screen:this.ready?this.projectPart(id):null})),normalization:{center:this.sourceCenter.toArray(),scale:this.sourceScale},contextLost:this.contextLost,motion:this.motion,softwareIndependentFrameIntervals:timings,surfaceSampling:this.surfaceSamples?{method:this.surfaceSamples.method,count:this.surfaceSamples.positions.length/3,sourceTriangleCount:this.surfaceSamples.sourceTriangleCount,references:this.surfaceSamples.references}:undefined};}
- dispose(){this.disposed=true;this.abortController.abort();this.loadGeneration++;cancelAnimationFrame(this.frame);this.observer.disconnect();document.removeEventListener('visibilitychange',this.visibility);const canvas=this.renderer.domElement;canvas.removeEventListener('pointerdown',this.down,true);canvas.removeEventListener('pointermove',this.move);canvas.removeEventListener('pointerup',this.up);canvas.removeEventListener('pointercancel',this.cancelPointer);canvas.removeEventListener('webglcontextlost',this.lost);canvas.removeEventListener('webglcontextrestored',this.restored);this.controls.dispose();this.particles?.dispose();this.cuff?.dispose();this.repairs.dispose();this.environment?.dispose();this.scene.traverse(o=>{if(o instanceof Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});this.renderer.dispose();this.renderer.forceContextLoss();canvas.remove();}
+ dispose(){this.disposed=true;this.abortController.abort();this.loadGeneration++;cancelAnimationFrame(this.frame);this.extension?.dispose();this.observer.disconnect();document.removeEventListener('visibilitychange',this.visibility);const canvas=this.renderer.domElement;canvas.removeEventListener('pointerdown',this.down,true);canvas.removeEventListener('pointermove',this.move);canvas.removeEventListener('pointerup',this.up);canvas.removeEventListener('pointercancel',this.cancelPointer);canvas.removeEventListener('webglcontextlost',this.lost);canvas.removeEventListener('webglcontextrestored',this.restored);this.controls.dispose();this.particles?.dispose();this.cuff?.dispose();this.repairs.dispose();this.environment?.dispose();this.scene.traverse(o=>{if(o instanceof Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});this.renderer.dispose();this.renderer.forceContextLoss();canvas.remove();}
 }
