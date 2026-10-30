@@ -1,0 +1,958 @@
+{
+  "testedAt": "2026-10-30T09:57:23.155Z",
+  "url": "http://127.0.0.1:4740/pattern-reveal.html",
+  "environment": "Linux Chromium / SwiftShader; viewport and touch emulation, NOT physical iPad Safari.",
+  "checks": [
+    {
+      "name": "Original GLB and original print remain unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Desktop starts with clean navy body and exactly three audited targets",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": false,
+        "pauseReason": "",
+        "inside": false,
+        "center": [
+          0,
+          0
+        ],
+        "pointer": [
+          0,
+          0
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 0,
+        "depthBand": 0.1,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 0,
+        "pointerEvents": 0,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0,
+          "medianMs": 0,
+          "p95Ms": 0,
+          "samples": 0
+        },
+        "buffer": [
+          1425,
+          1000
+        ],
+        "css": [
+          1425,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Reveal preserves original PBR, weave normals and the arrival shader chain",
+      "passed": true,
+      "detail": {
+        "source": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+        "patched": [
+          {
+            "owner": "Scene",
+            "material": "Body_Canvas",
+            "normal": "SG_Validated_Tangent_Weave",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "transparent": false,
+            "depthWrite": true,
+            "hasMap": true,
+            "arrivalKey": "onBeforeCompile(){}-sg-immersive-arrival-v1-sg-pattern-window-v1"
+          },
+          {
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "normal": "SG_Validated_Tangent_Weave",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "transparent": false,
+            "depthWrite": true,
+            "hasMap": true,
+            "arrivalKey": "onBeforeCompile(){}-sg-immersive-arrival-v1-sg-pattern-window-v1"
+          },
+          {
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "normal": "SG_Validated_Tangent_Weave",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "transparent": false,
+            "depthWrite": true,
+            "hasMap": true,
+            "arrivalKey": "onBeforeCompile(){}-sg-immersive-arrival-v1-sg-pattern-window-v1"
+          }
+        ],
+        "drawCalls": 43,
+        "triangles": 463514,
+        "programs": 16
+      }
+    },
+    {
+      "name": "Indirect ray acceleration preserves exact source positions, UVs and triangle indices",
+      "passed": true,
+      "detail": [
+        {
+          "material": "Body_Canvas",
+          "position": "5c0e84f3f2d28c8d649504264e042f849166d47dd2530d40dd8ceb71e0d114e7",
+          "uv": "761d89875fb28c1a153d2127fa29a42b43f3335d775a93cd18fb3bdeeb46c5fb",
+          "index": "45c9291180365b00f442fbcfe6623e88a9a8489896aa3ab4e899242bd013c7e2",
+          "indirect": true
+        },
+        {
+          "material": "Body_Canvas",
+          "position": "c221a478d43875b5e72eb73c14c4d46d67a776f9b82783505988028e5a76f5a5",
+          "uv": "ee74d661648180466121f24966666a1e8b9afb0ebe28f883997cc24f5908d87a",
+          "index": "6ce53e7fe7ec38e413c15b127de00f819c7cd6228339d57537ca6ebf20c08760",
+          "indirect": true
+        },
+        {
+          "material": "Body_Inner_Canvas",
+          "position": "88172382ed89592d8daa61815dc8f612a2a2b668a7339204500cbcc46b03e422",
+          "uv": "e86b2f5fbd02bc811f900be4057dfb92729775699760a4d7a9ea3d9f8efcefe2",
+          "index": "d40ceb4287de8cf386fa7de6329957aae2bc70f2ac13a11699af5ee54831f53e",
+          "indirect": true
+        }
+      ]
+    },
+    {
+      "name": "Surface coordinates come from ray-verified real target geometry",
+      "passed": true,
+      "detail": {
+        "candidates": 55
+      }
+    },
+    {
+      "name": "Mouse reveals a feathered local window at the actual body hit",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": true,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          970.3307495117188,
+          603.7715454101562
+        ],
+        "pointer": [
+          970.3307495117188,
+          603.7715454101562
+        ],
+        "radius": 125,
+        "opacity": 1,
+        "region": "outer",
+        "hitObject": "CONVERSE_Nuovo1_0_EyeletApertures",
+        "hitPoint": [
+          0.040964594962875224,
+          -0.23113584832484485,
+          0.40414750617894857
+        ],
+        "depth": 6.978821143725981,
+        "depthBand": 0.42264177352307997,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 11,
+        "pointerEvents": 2,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0.10000000009313226,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.19999999995343387,
+          "samples": 11
+        },
+        "buffer": [
+          1425,
+          1000
+        ],
+        "css": [
+          1425,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Cursor smoothing stays bounded and converges without a delayed jump",
+      "passed": true,
+      "detail": {
+        "moving": [
+          1005.3177050129009,
+          607.7700546102914
+        ],
+        "pointer": [
+          1005.3307495117188,
+          607.7715454101562
+        ],
+        "following": [
+          1005.3177050129009,
+          607.7700546102914
+        ]
+      }
+    },
+    {
+      "name": "Leaving the shoe shrinks and fades back to plain fabric",
+      "passed": true,
+      "detail": {
+        "samples": [
+          {
+            "opacity": 1,
+            "radius": 125
+          },
+          {
+            "opacity": 0.04251515251442983,
+            "radius": 5.314394064303729
+          },
+          {
+            "opacity": 0.0018075381933252293,
+            "radius": 0.22594227416565366
+          }
+        ],
+        "final": {
+          "mode": "explore",
+          "touchFallback": false,
+          "all": false,
+          "allUniform": 0,
+          "valid": false,
+          "pauseReason": "",
+          "inside": true,
+          "center": [
+            50.00000004945679,
+            50.000000028875746
+          ],
+          "pointer": [
+            50,
+            50
+          ],
+          "radius": 0.22594227416565366,
+          "opacity": 0.0018075381933252293,
+          "region": null,
+          "hitObject": null,
+          "hitPoint": null,
+          "depth": 7.064950442642127,
+          "depthBand": 0.42785781773692905,
+          "targetCount": 3,
+          "targets": [
+            {
+              "mesh": "Original_Vamp",
+              "owner": "Original_Vamp",
+              "material": "Body_Canvas",
+              "region": "vamp",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+              "owner": "Shoe_Body",
+              "material": "Body_Canvas",
+              "region": "outer",
+              "gate": 1,
+              "compiles": 1
+            },
+            {
+              "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+              "owner": "Shoe_Body",
+              "material": "Body_Inner_Canvas",
+              "region": "inner",
+              "gate": 0,
+              "compiles": 1
+            }
+          ],
+          "occluderCount": 42,
+          "rayCount": 15,
+          "pointerEvents": 4,
+          "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+          "acceleratedMeshes": 42,
+          "accelerationBuildMs": 168.5999999998603,
+          "rayTiming": {
+            "lastMs": 0,
+            "medianMs": 0.10000000009313226,
+            "p95Ms": 0.19999999995343387,
+            "samples": 15
+          },
+          "buffer": [
+            1425,
+            1000
+          ],
+          "css": [
+            1425,
+            1000
+          ],
+          "baseSRGB": "#0D2740"
+        }
+      }
+    },
+    {
+      "name": "UNVEIL ALL restores original print without replacing geometry",
+      "passed": true,
+      "detail": {
+        "mode": "all",
+        "touchFallback": false,
+        "all": true,
+        "allUniform": 1,
+        "valid": false,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          50,
+          50
+        ],
+        "pointer": [
+          50,
+          50
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 7.064950442642127,
+        "depthBand": 0.42785781773692905,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 15,
+        "pointerEvents": 4,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.19999999995343387,
+          "samples": 15
+        },
+        "buffer": [
+          1425,
+          1000
+        ],
+        "css": [
+          1425,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Repeated toggling returns to exploration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pointer motion and toggling do not recompile materials",
+      "passed": true,
+      "detail": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Local reveal does not copy through overlapping UVs onto the opposite side",
+      "passed": true,
+      "detail": [
+        {
+          "mesh": "Original_Vamp",
+          "owner": "Original_Vamp",
+          "material": "Body_Canvas",
+          "region": "vamp",
+          "gate": 1,
+          "compiles": 1
+        },
+        {
+          "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+          "owner": "Shoe_Body",
+          "material": "Body_Canvas",
+          "region": "outer",
+          "gate": 1,
+          "compiles": 1
+        },
+        {
+          "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+          "owner": "Shoe_Body",
+          "material": "Body_Inner_Canvas",
+          "region": "inner",
+          "gate": 0,
+          "compiles": 1
+        }
+      ]
+    },
+    {
+      "name": "Full-shoe ray includes real foreground hardware and laces",
+      "passed": true,
+      "detail": {
+        "x": 983.6184785050609,
+        "y": 496.6126617222226,
+        "hit": {
+          "eligible": false,
+          "region": null,
+          "object": "Original_Lower_Laces",
+          "owner": "",
+          "material": "Laces",
+          "point": [
+            0.14201766053578715,
+            0.18365616838176568,
+            0.33414673707961384
+          ],
+          "uv": [
+            0.5440242166885916,
+            0.6430106761693616
+          ],
+          "distance": 7.0018596576273495
+        }
+      }
+    },
+    {
+      "name": "Foreground hardware blocks activation on the body behind it",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0,
+        "valid": false,
+        "pauseReason": "",
+        "inside": true,
+        "center": [
+          983.6184692375933,
+          496.61267090398513
+        ],
+        "pointer": [
+          983.6184692382812,
+          496.6126708984375
+        ],
+        "radius": 0.22586647897660778,
+        "opacity": 0.0018069318318128622,
+        "region": null,
+        "hitObject": "Original_Lower_Laces",
+        "hitPoint": [
+          0.1420176074230415,
+          0.18365613950316895,
+          0.33414675302318286
+        ],
+        "depth": 6.978820750103173,
+        "depthBand": 0.42264174968503654,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 1,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 23,
+        "pointerEvents": 6,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0.10000000009313226,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.20000000018626451,
+          "samples": 23
+        },
+        "buffer": [
+          1425,
+          1000
+        ],
+        "css": [
+          1425,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Stationary pointer is revalidated while the model moves",
+      "passed": true,
+      "detail": {
+        "before": [
+          0.040996418754813156,
+          -0.23097845512046816,
+          0.4041309389647306
+        ],
+        "after": [
+          0.04111271138966093,
+          -0.23121778354180555,
+          0.4039037182180354
+        ],
+        "rayTimes": {
+          "lastMs": 0.10000000009313226,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.20000000018626451,
+          "samples": 28
+        }
+      }
+    },
+    {
+      "name": "Original detail remains available: tongue",
+      "passed": true,
+      "detail": {
+        "focus": "tongue",
+        "error": 1.897149936107019e-15
+      }
+    },
+    {
+      "name": "Original detail remains available: clasps",
+      "passed": true,
+      "detail": {
+        "focus": "clasps",
+        "error": 7.850462293418876e-17
+      }
+    },
+    {
+      "name": "Original detail remains available: heel",
+      "passed": true,
+      "detail": {
+        "focus": "heel",
+        "error": 3.787898901196402e-16
+      }
+    },
+    {
+      "name": "Original detail remains available: aglets",
+      "passed": true,
+      "detail": {
+        "focus": "aglets",
+        "error": 5.438959822042073e-16
+      }
+    },
+    {
+      "name": "Original detail remains available: logo",
+      "passed": true,
+      "detail": {
+        "focus": "logo",
+        "error": 3.2398021848425308e-16
+      }
+    },
+    {
+      "name": "Original detail remains available: pattern",
+      "passed": true,
+      "detail": {
+        "focus": "pattern",
+        "error": 1.7806883670196607e-15
+      }
+    },
+    {
+      "name": "Original detail remains available: cuff",
+      "passed": true,
+      "detail": {
+        "focus": "cuff",
+        "error": 8.95090418262362e-16
+      }
+    },
+    {
+      "name": "Reveal pauses during the original GPU cuff expansion",
+      "passed": true,
+      "detail": {
+        "mode": "explore",
+        "touchFallback": false,
+        "all": false,
+        "allUniform": 0.00009797783966128833,
+        "valid": false,
+        "pauseReason": "cuff-unfolded",
+        "inside": true,
+        "center": [
+          40,
+          200
+        ],
+        "pointer": [
+          40,
+          200
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 6.979117244709783,
+        "depthBand": 0.4226597055838619,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 46,
+        "pointerEvents": 8,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0.10000000009313226,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.20000000018626451,
+          "samples": 46
+        },
+        "buffer": [
+          1440,
+          1000
+        ],
+        "css": [
+          1440,
+          1000
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Tablet defaults to full print and preserves one live canvas",
+      "passed": true,
+      "detail": {
+        "mode": "touch-full",
+        "touchFallback": true,
+        "all": false,
+        "allUniform": 1,
+        "valid": false,
+        "pauseReason": "",
+        "inside": false,
+        "center": [
+          40,
+          200
+        ],
+        "pointer": [
+          40,
+          200
+        ],
+        "radius": 0,
+        "opacity": 0,
+        "region": null,
+        "hitObject": null,
+        "hitPoint": null,
+        "depth": 6.979117244709783,
+        "depthBand": 0.4226597055838619,
+        "targetCount": 3,
+        "targets": [
+          {
+            "mesh": "Original_Vamp",
+            "owner": "Original_Vamp",
+            "material": "Body_Canvas",
+            "region": "vamp",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+            "owner": "Shoe_Body",
+            "material": "Body_Canvas",
+            "region": "outer",
+            "gate": 0,
+            "compiles": 1
+          },
+          {
+            "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+            "owner": "Shoe_Body",
+            "material": "Body_Inner_Canvas",
+            "region": "inner",
+            "gate": 0,
+            "compiles": 1
+          }
+        ],
+        "occluderCount": 42,
+        "rayCount": 48,
+        "pointerEvents": 8,
+        "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+        "acceleratedMeshes": 42,
+        "accelerationBuildMs": 168.5999999998603,
+        "rayTiming": {
+          "lastMs": 0.09999999962747097,
+          "medianMs": 0.10000000009313226,
+          "p95Ms": 0.20000000018626451,
+          "samples": 48
+        },
+        "buffer": [
+          1534,
+          1066
+        ],
+        "css": [
+          1180,
+          820
+        ],
+        "baseSRGB": "#0D2740"
+      }
+    },
+    {
+      "name": "Touch rotation remains owned by OrbitControls",
+      "passed": true,
+      "detail": {
+        "before": [
+          -3.4500000000000015,
+          1.700000000000001,
+          6.150000000000002
+        ],
+        "after": [
+          -4.463894675883952,
+          1.3845514113472142,
+          5.540392950926379
+        ]
+      }
+    },
+    {
+      "name": "Phone layout and full-pattern fallback stay usable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Shader uses capped drawing-buffer pixels rather than raw device pixel ratio",
+      "passed": true,
+      "detail": {
+        "css": [
+          390,
+          844
+        ],
+        "buffer": [
+          507,
+          1097
+        ],
+        "pixelRatio": 1.3,
+        "devicePixelRatio": 2
+      }
+    },
+    {
+      "name": "No application, shader or resource errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "point": {
+    "x": 970.3307525185229,
+    "y": 603.7715531864994,
+    "region": "outer",
+    "hit": {
+      "eligible": true,
+      "region": "outer",
+      "object": "CONVERSE_Nuovo1_0_EyeletApertures",
+      "owner": "Shoe_Body",
+      "material": "Body_Canvas",
+      "point": [
+        0.04096460817680373,
+        -0.23113588204049718,
+        0.404147508047319
+      ],
+      "uv": [
+        0.5330054228226068,
+        0.870687921387641
+      ],
+      "distance": 6.995065442847996
+    }
+  },
+  "performance": {
+    "mode": "touch-full",
+    "touchFallback": true,
+    "all": false,
+    "allUniform": 1,
+    "valid": false,
+    "pauseReason": "",
+    "inside": false,
+    "center": [
+      40,
+      200
+    ],
+    "pointer": [
+      40,
+      200
+    ],
+    "radius": 0,
+    "opacity": 0,
+    "region": null,
+    "hitObject": null,
+    "hitPoint": null,
+    "depth": 6.979117244709783,
+    "depthBand": 0.4226597055838619,
+    "targetCount": 3,
+    "targets": [
+      {
+        "mesh": "Original_Vamp",
+        "owner": "Original_Vamp",
+        "material": "Body_Canvas",
+        "region": "vamp",
+        "gate": 0,
+        "compiles": 1
+      },
+      {
+        "mesh": "CONVERSE_Nuovo1_0_EyeletApertures",
+        "owner": "Shoe_Body",
+        "material": "Body_Canvas",
+        "region": "outer",
+        "gate": 0,
+        "compiles": 1
+      },
+      {
+        "mesh": "CONVERSE_Nuovo1_0_EyeletApertures_1",
+        "owner": "Shoe_Body",
+        "material": "Body_Inner_Canvas",
+        "region": "inner",
+        "gate": 0,
+        "compiles": 1
+      }
+    ],
+    "occluderCount": 42,
+    "rayCount": 48,
+    "pointerEvents": 8,
+    "acceleration": "Per-instance indirect BVH; original UV/position/index buffers retained",
+    "acceleratedMeshes": 42,
+    "accelerationBuildMs": 168.5999999998603,
+    "rayTiming": {
+      "lastMs": 0.09999999962747097,
+      "medianMs": 0.10000000009313226,
+      "p95Ms": 0.20000000018626451,
+      "samples": 48
+    },
+    "buffer": [
+      507,
+      1097
+    ],
+    "css": [
+      390,
+      844
+    ],
+    "baseSRGB": "#0D2740"
+  },
+  "bundleURLs": [
+    "http://127.0.0.1:4740/assets/pattern-reveal-jzSx5Na7.js"
+  ],
+  "limitations": [
+    "Software rendering timings are not target-device GPU performance.",
+    "Lithos reference was blocked by proxy CONNECT403."
+  ]
+}

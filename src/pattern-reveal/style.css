@@ -1,0 +1,9 @@
+.sgp-control{position:fixed;z-index:6;left:4.2vw;top:calc(98px + env(safe-area-inset-top));display:flex;align-items:center;gap:22px;transition:opacity .35s;pointer-events:none}
+.sgp-control button{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:30px;border:1px solid #90aab452;padding:0 16px;min-height:44px;font:9px ui-monospace,monospace;letter-spacing:1.6px;background:#050a1259;transition:border-color .2s,background .2s}
+.sgp-control button:hover,.sgp-control button[aria-pressed=true]{border-color:#b8d3dd;background:#142533b0}
+.sgp-control button i{font-size:17px;font-style:normal;letter-spacing:0;font-weight:300}
+.sgp-control p{font-size:9px;letter-spacing:.8px;color:#91a8b9;line-height:1.7}
+.sgx-app:not([data-state=ready]) .sgp-control{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-aspect-ratio:112/100){.sgp-control{left:6vw;right:6vw;top:calc(78px + env(safe-area-inset-top));gap:15px}.sgp-control p{font-size:8px}.sgp-control button{font-size:8px;letter-spacing:1.1px;padding-inline:12px;gap:19px}}
+@media(max-height:720px) and (min-aspect-ratio:113/100){.sgp-control{top:calc(64px + env(safe-area-inset-top))}.sgp-control p{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.sgp-control,.sgp-control button{transition:none}}
