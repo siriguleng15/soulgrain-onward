@@ -19,7 +19,7 @@ const pixels=(plain,all,local,points)=>{
 };
 let b;
 try{
- b=await openBrowser(url,{width:1280,height:900});const{run,wait,mouse,shot,cdp}=b,state=()=>run('window.__onwardShowcase.getRevealState()');
+ b=await openBrowser(url,{width:1280,height:900,port:Number(process.env.REVEAL_TEST_PORT??9583)});const{run,wait,mouse,shot,cdp}=b,state=()=>run('window.__onwardShowcase.getRevealState()');
  await run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false);window.__onwardShowcase.setQuality("balanced")');await b.settled();
  const initial=await state();
  check('Desktop conceals artwork across the WHOLE shoe, not just the body',initial.mode==='explore'&&initial.allUniform===0&&initial.targetCount===17&&initial.mappedPrimitives===16&&['cuff','tongue','border','heel','logo','aglets','clasps','rhinestones','shaft','outer','inner','vamp'].every(r=>initial.targets.some(t=>t.region===r)),initial);
@@ -75,7 +75,7 @@ try{
  }
  check('Desktop has no shader, JavaScript or asset-load errors',b.errors.length===0&&b.requests.length===0,{errors:b.errors,requests:b.requests});b.close();b=undefined;
  if(!quick){
-  b=await openBrowser(url,{width:1180,height:820,touch:true});const{run,wait,cdp}=b;
+  b=await openBrowser(url,{width:1180,height:820,touch:true,port:9584});const{run,wait,cdp}=b;
   await run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false);window.__onwardShowcase.setMode("free")');await b.settled();const cold=await run('window.__onwardShowcase.getRevealState()');
   check('iPad-size cold start shows ALL artwork including the raised medallion',cold.touchFallback&&cold.allUniform===1&&cold.targetCount===17,cold);
   check('Touch devices still skip reveal raycasts and BVH allocations',cold.rayCount===0&&cold.acceleratedMeshes===0,cold);
@@ -86,7 +86,7 @@ try{
   const distance=()=>run('window.__onwardShowcase.scene.camera.position.distanceTo(window.__onwardShowcase.scene.controls.target)');const before=await distance();
   await cdp('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:570,y:430,id:1},{x:650,y:430,id:2}]});for(let i=1;i<=5;i++)await cdp('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:570-i*12,y:430,id:1},{x:650+i*12,y:430,id:2}]});await cdp('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await pause(250);const after=await distance();check('Two-finger pinch remains available',after<before,{before,after});
   check('Touch interaction has no errors or reveal ray work',b.errors.length===0&&b.requests.length===0&&await run('window.__onwardShowcase.getRevealState().rayCount===0'),{errors:b.errors,requests:b.requests});b.close();b=undefined;
-  b=await openBrowser(url,{width:390,height:844,touch:true});await b.run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false)');await b.settled();await b.shot(out+'/12-phone-full-pattern.png');check('Phone layout retains full-pattern fallback without horizontal overflow',await b.run('window.__onwardShowcase.getRevealState().allUniform===1&&document.documentElement.scrollWidth<=innerWidth+1'),null);check('Phone rendering has no errors',b.errors.length===0&&b.requests.length===0,{errors:b.errors,requests:b.requests});
+  b=await openBrowser(url,{width:390,height:844,touch:true,port:9585});await b.run('window.__onwardShowcase.skipIntro();window.__onwardShowcase.setMotion(false)');await b.settled();await b.shot(out+'/12-phone-full-pattern.png');check('Phone layout retains full-pattern fallback without horizontal overflow',await b.run('window.__onwardShowcase.getRevealState().allUniform===1&&document.documentElement.scrollWidth<=innerWidth+1'),null);check('Phone rendering has no errors',b.errors.length===0&&b.requests.length===0,{errors:b.errors,requests:b.requests});
  }
 }finally{
  b?.close();await writeFile(out+'/fullshoe-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url,checks,environment:'Linux Chromium / SwiftShader, CDP desktop mouse and touch emulation; not a physical iPad or Safari. PNG differences measure actual rendered output, not shader-uniform assertions alone.'},null,2)+'\n');

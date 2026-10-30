@@ -55,3 +55,7 @@ node scripts/record-pattern-reveal-fullshoe.mjs http://127.0.0.1:4742/pattern-re
 视频以真实 CDP 鼠标移动、导航点击和 UNVEIL ALL 点击驱动同一个生产控制器与 Scene.loop，在连续、可重复的动画时间点逐帧记录。H.264 / yuv420p / faststart 供 Safari 查看；编码帧率不等于实时性能。最终结果见 `verification/fullshoe-validation.json` 和 `verification/video-validation.json`，公网另行验证。
 
 测试环境是 Linux Chromium / SwiftShader 与 CDP 触控模拟，**没有进行实体 iPad Safari 测试**，不报告虚构的实机帧率。源模型仍为既有 V8 广告派生的绳扣版本，不冒充后来扁平 PU 工程模型。基础鞋模来源 theunclerulez / Generic “Converse style” Sneakers，CC BY 4.0；保留原有署名。
+
+2026-10-30：TypeScript 和独立 Vite 构建通过，主体实测 **49 项通过**，涵盖各部位的实际三态像素对照、42 个网格的缓冲哈希、原动画、触控旋转及双指缩放。公开预览与操作视频分别另有报告，不将上述模拟测试称为 Safari 实机测试。
+
+线上 canonical 构建实际交互 **13 项通过**，HTML / CSS / JS / GLB 与发布构建逐字节一致。操作视频 **9 项通过**，361 帧、15fps、24.067 秒；H.264、1280×900、yuv420p，MP4 含 faststart。应用实现提交为 `8d8099c`；后续提交补齐验证数据与审核素材。

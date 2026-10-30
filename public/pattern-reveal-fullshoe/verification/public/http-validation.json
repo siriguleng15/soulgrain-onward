@@ -1,0 +1,41 @@
+{
+  "testedAt": "2026-10-30T11:37:44.631Z",
+  "base": "https://siriguleng15.github.io/soulgrain-onward/onward-pattern-reveal-fullshoe/",
+  "checks": [
+    {
+      "path": "pattern-reveal.html",
+      "status": 200,
+      "bytes": 773,
+      "sha256": "12ab23148a754327502693476090719e24800ba2a80a26d7fce1d5b142cca0f5",
+      "passed": true
+    },
+    {
+      "path": "preview-info.json",
+      "status": 200,
+      "bytes": 472,
+      "sha256": "18406bc3602feb13a468694ec22fbf0b11a358c8b52848e4ad59424adff0f4eb",
+      "passed": true
+    },
+    {
+      "path": "assets/onward-ad-v1/onward-ad-v1.glb",
+      "status": 200,
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "passed": true
+    },
+    {
+      "path": "assets/pattern-reveal--Yh9T8aU.css",
+      "status": 200,
+      "bytes": 21943,
+      "sha256": "6a2ff8874ab431e9aa2b08243d7f047128813bd11c5b84cf9dca06be6746e45d",
+      "passed": true
+    },
+    {
+      "path": "assets/pattern-reveal-BGQLuXib.js",
+      "status": 200,
+      "bytes": 737471,
+      "sha256": "1e2b535f198d784171b9e202bacb62dc4c2c7601674635a6a096df830d55b232",
+      "passed": true
+    }
+  ]
+}
