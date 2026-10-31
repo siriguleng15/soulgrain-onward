@@ -1,0 +1,27 @@
+{
+  "testedAt": "2026-10-31T18:24:37.437Z",
+  "url": "http://127.0.0.1:4761/",
+  "frames": 188,
+  "fps": 12,
+  "duration": 15.666666666666666,
+  "sha256": "341477bf09969b027bfee14567c63785e2a58d07f03e517e4ed9361c84034cba",
+  "gesture": {
+    "valid": true,
+    "reason": "\u96f6\u5df2\u95ed\u5408",
+    "closure": 0,
+    "roundness": 0.9990578349955855,
+    "radialCV": 0.01548719467766599,
+    "turns": 0.9999999999999997,
+    "directionConsistency": 1,
+    "aspect": 0.9255601746737098,
+    "length": 1027.4341194920926,
+    "points": 49,
+    "center": {
+      "x": 513.6090642404137,
+      "y": 336.9999993358253
+    }
+  },
+  "passed": true,
+  "method": "Real CDP touch events and visible restart control drive the production loop at deterministic review timestamps. No uniform injection. Encoded FPS is not hardware performance. Linux Chromium / SwiftShader, not physical Safari.",
+  "codec": "H.264 / yuv420p / limited range / faststart"
+}

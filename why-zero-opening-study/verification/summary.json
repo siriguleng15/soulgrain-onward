@@ -1,0 +1,12 @@
+{
+  "browserChecks": {
+    "desktop": 13,
+    "tablet": 13,
+    "phone": 13
+  },
+  "gestureFixtures": 12,
+  "videoFrames": 188,
+  "videoSeconds": 15.666666666666666,
+  "realSafariTested": false,
+  "referenceVisualAuditCompleted": false
+}

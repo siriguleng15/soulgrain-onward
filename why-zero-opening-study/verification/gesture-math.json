@@ -1,0 +1,221 @@
+{
+  "testedAt": "2026-10-31T18:14:06.946Z",
+  "cases": [
+    {
+      "name": "circle clockwise",
+      "expected": true,
+      "valid": true,
+      "reason": "零已闭合",
+      "closure": 1.5466065281397447e-16,
+      "roundness": 0.9995797797197021,
+      "radialCV": 0.008128482103190804,
+      "turns": 0.9999999999999999,
+      "directionConsistency": 1,
+      "aspect": 0.9897387156907044,
+      "length": 816.7207872056426,
+      "points": 121,
+      "center": {
+        "x": 481.3541666666666,
+        "y": 369.99999999999983
+      }
+    },
+    {
+      "name": "circle counterclockwise",
+      "expected": true,
+      "valid": true,
+      "reason": "零已闭合",
+      "closure": 1.5466065281397444e-16,
+      "roundness": 0.9995797797197016,
+      "radialCV": 0.008128482103190754,
+      "turns": -0.9999999999999997,
+      "directionConsistency": 1,
+      "aspect": 0.9897387156907047,
+      "length": 816.7207872056429,
+      "points": 121,
+      "center": {
+        "x": 481.3541666666666,
+        "y": 370.00000000000017
+      }
+    },
+    {
+      "name": "oval zero",
+      "expected": true,
+      "valid": true,
+      "reason": "零已闭合",
+      "closure": 1.4138349832164397e-16,
+      "roundness": 0.9961648013877804,
+      "radialCV": 0.034796096597388006,
+      "turns": 0.9999999999999996,
+      "directionConsistency": 1,
+      "aspect": 0.7686540761078251,
+      "length": 886.571232714055,
+      "points": 121,
+      "center": {
+        "x": 481.19799764513533,
+        "y": 369.99999999999983
+      }
+    },
+    {
+      "name": "tilted oval",
+      "expected": true,
+      "valid": true,
+      "reason": "零已闭合",
+      "closure": 0.0025117803042029392,
+      "roundness": 0.988212648387354,
+      "radialCV": 0.043168007589783015,
+      "turns": 0.9999999554358056,
+      "directionConsistency": 1,
+      "aspect": 0.685368885295791,
+      "length": 857.717194987347,
+      "points": 121,
+      "center": {
+        "x": 480.87656195642313,
+        "y": 370.6046137174937
+      }
+    },
+    {
+      "name": "slightly noisy circle",
+      "expected": true,
+      "valid": true,
+      "reason": "零已闭合",
+      "closure": 0.007037601405817845,
+      "roundness": 0.979360009519151,
+      "radialCV": 0.010363050801678592,
+      "turns": 1.0000000837114162,
+      "directionConsistency": 1,
+      "aspect": 0.9893734569025504,
+      "length": 868.4206109546384,
+      "points": 121,
+      "center": {
+        "x": 481.41986355351537,
+        "y": 369.9968055539435
+      }
+    },
+    {
+      "name": "open three-quarter arc",
+      "expected": false,
+      "valid": false,
+      "reason": "把起点与终点连起来",
+      "closure": 0.5157563938936899,
+      "roundness": 0.9364517653202824,
+      "radialCV": 0.18815058213752908,
+      "turns": 0.8472161200386522,
+      "directionConsistency": 1,
+      "aspect": 0.7053025603844338,
+      "length": 604.4046174599755,
+      "points": 121,
+      "center": {
+        "x": 453.0297248540085,
+        "y": 398.72042593428097
+      }
+    },
+    {
+      "name": "small circle",
+      "expected": false,
+      "valid": false,
+      "reason": "画大一点，让零的轮廓更清晰",
+      "closure": 0,
+      "roundness": 0.9995797797197007,
+      "radialCV": 0.008128482103185041,
+      "turns": 0.9999999999999997,
+      "directionConsistency": 1,
+      "aspect": 0.9897387156907046,
+      "length": 100.51948150223292,
+      "points": 121,
+      "center": {
+        "x": 480.1666666666665,
+        "y": 370
+      }
+    },
+    {
+      "name": "double loop",
+      "expected": false,
+      "valid": false,
+      "reason": "沿一个方向绕完整一圈",
+      "closure": 1.5472755275466417e-16,
+      "roundness": 0.49921963738491704,
+      "radialCV": 0.007800848947222878,
+      "turns": 1.9999999999999993,
+      "directionConsistency": 1,
+      "aspect": 0.9897248947643723,
+      "length": 1632.88183477985,
+      "points": 121,
+      "center": {
+        "x": 481.35416666666674,
+        "y": 369.99999999999994
+      }
+    },
+    {
+      "name": "square",
+      "expected": false,
+      "valid": false,
+      "reason": "再试一次，画得圆一些",
+      "closure": 0,
+      "roundness": 0.81738789822413,
+      "radialCV": 0.10891189001172051,
+      "turns": 1,
+      "directionConsistency": 1,
+      "aspect": 0.9845749108635873,
+      "length": 960.0000000000015,
+      "points": 120,
+      "center": {
+        "x": 478.73684210526307,
+        "y": 368.7368421052632
+      }
+    },
+    {
+      "name": "triangle",
+      "expected": false,
+      "valid": false,
+      "reason": "再试一次，画得圆一些",
+      "closure": 0,
+      "roundness": 0.6322088959971938,
+      "radialCV": 0.22408919674827948,
+      "turns": 1.0000000000000002,
+      "directionConsistency": 1,
+      "aspect": 0.9093054866047041,
+      "length": 935.2952069707434,
+      "points": 90,
+      "center": {
+        "x": 480.00000000000006,
+        "y": 392.9619358009998
+      }
+    },
+    {
+      "name": "line",
+      "expected": false,
+      "valid": false,
+      "reason": "画大一点，让零的轮廓更清晰",
+      "closure": 1,
+      "roundness": 3.152413656261534e-14,
+      "radialCV": 0.5772249625643432,
+      "turns": 0.49999999999997546,
+      "directionConsistency": 0.9999999999992876,
+      "aspect": 0.0011536364473419501,
+      "length": 297.16495419211174,
+      "points": 100,
+      "center": {
+        "x": 248.50000000000003,
+        "y": 204.95000000000002
+      }
+    },
+    {
+      "name": "figure eight",
+      "expected": false,
+      "valid": false,
+      "reason": "沿一个方向绕完整一圈",
+      "closure": 2.0272921405936646e-16,
+      "roundness": 4.82003705862962e-17,
+      "radialCV": 0.4323571532691745,
+      "turns": -0.3567929384123306,
+      "directionConsistency": 0.24677018542438348,
+      "aspect": 0.7937976098169184,
+      "length": 1273.4619434532592,
+      "points": 121,
+      "center": {
+        "x": 400,
+        "y": 400
+      }
+    }
+  ]
+}

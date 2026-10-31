@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "93c18b0a7c0963e1eaf33c23c4b7fded76f2ea0b",
+  "sourceBranch": "research/why-zero-intro-v1",
+  "builtAt": "2026-10-31T18:31:16.662Z",
+  "scope": "Independent opening-only technical study. Original Soulgrain pages and assets untouched.",
+  "referenceAccess": "Both reference site and Codrops article blocked by CONNECT 403",
+  "originalVisualComparisonCompleted": false,
+  "physicalIPadSafariTested": false,
+  "handLicense": "MIT / immersive-web webxr-input-profiles",
+  "entry": "index.html"
+}
