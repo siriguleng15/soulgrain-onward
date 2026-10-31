@@ -1,0 +1,296 @@
+{
+  "testedAt": "2026-10-31T18:23:57.860Z",
+  "url": "http://127.0.0.1:4761/",
+  "width": 1280,
+  "height": 800,
+  "touch": false,
+  "checks": [
+    {
+      "name": "Count and shattering advance to guide without forced state injection",
+      "passed": true,
+      "detail": [
+        {
+          "phase": "countdown",
+          "time": 0
+        },
+        {
+          "phase": "shattering",
+          "time": 4.266628000000001
+        },
+        {
+          "phase": "guide",
+          "time": 5.133128000000001
+        }
+      ]
+    },
+    {
+      "name": "Real skinned hand loads from the local licensed asset",
+      "passed": true,
+      "detail": {
+        "ready": true,
+        "opacity": 0.9999999897869549,
+        "error": null,
+        "asset": "MIT / immersive-web generic-hand"
+      }
+    },
+    {
+      "name": "An actual line gesture is rejected",
+      "passed": true,
+      "detail": {
+        "valid": false,
+        "reason": "画大一点，让零的轮廓更清晰",
+        "closure": 0.9998290248581049,
+        "roundness": 0.06394709095749243,
+        "radialCV": 0.41397265367522823,
+        "turns": -0.5268637987842067,
+        "directionConsistency": 0.4727297847936043,
+        "aspect": 0.01343893989662131,
+        "length": 320.2396909500549,
+        "points": 21,
+        "center": {
+          "x": 639.994102198886,
+          "y": 352.0152026253006
+        }
+      }
+    },
+    {
+      "name": "A real mouse zero passes geometry validation",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "reason": "零已闭合",
+        "closure": 0,
+        "roundness": 0.9990928088151605,
+        "radialCV": 0.015233162662795575,
+        "turns": 1.0000000000000002,
+        "directionConsistency": 1,
+        "aspect": 0.9277482426628394,
+        "length": 1066.3065540771624,
+        "points": 101,
+        "center": {
+          "x": 641.6805963243597,
+          "y": 352.00000005023935
+        }
+      }
+    },
+    {
+      "name": "Success enters the thaw instead of replacing the page",
+      "passed": true,
+      "detail": "melting"
+    },
+    {
+      "name": "Melt and dawn reach a continuous completed state",
+      "passed": true,
+      "detail": {
+        "phase": "done",
+        "time": 62.63079799999998,
+        "values": {
+          "number": 0,
+          "shatter": 1,
+          "melt": 1,
+          "dawn": 1,
+          "flash": 0,
+          "hand": 0,
+          "orb": 1
+        },
+        "gesture": {
+          "valid": true,
+          "reason": "零已闭合",
+          "closure": 0,
+          "roundness": 0.9990928088151605,
+          "radialCV": 0.015233162662795575,
+          "turns": 1.0000000000000002,
+          "directionConsistency": 1,
+          "aspect": 0.9277482426628394,
+          "length": 1066.3065540771624,
+          "points": 101,
+          "center": {
+            "x": 641.6805963243597,
+            "y": 352.00000005023935
+          }
+        },
+        "activePointer": null,
+        "strokePoints": 101,
+        "hand": {
+          "ready": true,
+          "opacity": 1.1505564171470163e-276,
+          "error": null,
+          "asset": "MIT / immersive-web generic-hand"
+        },
+        "render": {
+          "quality": "high",
+          "buffer": [
+            1280,
+            800
+          ],
+          "field": [
+            512,
+            512
+          ],
+          "floatField": true,
+          "queue": 0,
+          "passes": "sharp scene, hand, heat ping-pong, horizontal blur, vertical blur, frost composite"
+        },
+        "frameMs": {
+          "median": 316.59999999999854,
+          "p95": 666.6999999999998
+        },
+        "benchmark": null,
+        "history": [
+          {
+            "phase": "countdown",
+            "time": 0
+          },
+          {
+            "phase": "shattering",
+            "time": 4.266628000000001
+          },
+          {
+            "phase": "guide",
+            "time": 5.133128000000001
+          },
+          {
+            "phase": "drawing",
+            "time": 9.683028
+          },
+          {
+            "phase": "guide",
+            "time": 19.815928000000003
+          },
+          {
+            "phase": "drawing",
+            "time": 19.815928000000003
+          },
+          {
+            "phase": "melting",
+            "time": 54.864528
+          },
+          {
+            "phase": "transition",
+            "time": 57.480997999999985
+          },
+          {
+            "phase": "done",
+            "time": 59.514197999999986
+          }
+        ],
+        "contextLost": false,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "Visible restart clears the prior gesture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Visible skip enters an interactive guide",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Interrupted input never unlocks the next scene",
+      "passed": true,
+      "detail": {
+        "phase": "guide",
+        "time": 0.44990000000000147,
+        "values": {
+          "number": 0,
+          "shatter": 1,
+          "melt": 0,
+          "dawn": 0,
+          "flash": 0,
+          "hand": 0,
+          "orb": 0
+        },
+        "gesture": {
+          "valid": false,
+          "reason": "请画一个完整的零",
+          "closure": 1,
+          "roundness": 0,
+          "radialCV": 1,
+          "turns": 0,
+          "directionConsistency": 0,
+          "aspect": 0,
+          "length": 0,
+          "points": 2,
+          "center": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "activePointer": null,
+        "strokePoints": 2,
+        "hand": {
+          "ready": true,
+          "opacity": 5.202820827546882e-279,
+          "error": null,
+          "asset": "MIT / immersive-web generic-hand"
+        },
+        "render": {
+          "quality": "high",
+          "buffer": [
+            1280,
+            800
+          ],
+          "field": [
+            512,
+            512
+          ],
+          "floatField": true,
+          "queue": 0,
+          "passes": "sharp scene, hand, heat ping-pong, horizontal blur, vertical blur, frost composite"
+        },
+        "frameMs": {
+          "median": 316.59999999999854,
+          "p95": 666.6999999999998
+        },
+        "benchmark": null,
+        "history": [
+          {
+            "phase": "countdown",
+            "time": 0
+          },
+          {
+            "phase": "guide",
+            "time": 0
+          },
+          {
+            "phase": "drawing",
+            "time": 0
+          },
+          {
+            "phase": "guide",
+            "time": 0.4333000000000029
+          }
+        ],
+        "contextLost": false,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "Debug panel serializes actual scene and gesture diagnostics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Debug panel has readable live data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No overflow on the target viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No shader, JavaScript or resource errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader with real CDP input events. Touch is simulated, not physical iPad Safari. A real rendered melt midpoint is paused via the debug frame hook for its screenshot, then resumed; no mask uniforms are injected."
+}

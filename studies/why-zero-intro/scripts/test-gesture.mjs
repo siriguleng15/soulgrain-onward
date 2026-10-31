@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+const source=await readFile(new URL('../src/gesture.ts',import.meta.url),'utf8'),code=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ESNext}}).outputText;
+const{recognizeZero}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const circle=(rx=130,ry=130,turns=1,noise=0,tilt=0)=>Array.from({length:121},(_,i)=>{const a=i/120*Math.PI*2*turns,r=1+Math.sin(i*13.7)*noise,x=Math.cos(a)*rx*r,y=Math.sin(a)*ry*r;return{x:480+x*Math.cos(tilt)-y*Math.sin(tilt),y:370+x*Math.sin(tilt)+y*Math.cos(tilt)};});
+const polygon=vertices=>vertices.flatMap((a,i)=>Array.from({length:30},(_,j)=>{const b=vertices[(i+1)%vertices.length],t=j/29;return{x:480+a[0]+(b[0]-a[0])*t,y:370+a[1]+(b[1]-a[1])*t};}));
+const cases=[['circle clockwise',circle(),true],['circle counterclockwise',circle(130,130,-1),true],['oval zero',circle(115,165),true],['tilted oval',circle(100,165,1,.012,.6),true],['slightly noisy circle',circle(130,130,1,.025),true],['open three-quarter arc',circle(130,130,.74),false],['small circle',circle(16,16),false],['double loop',circle(130,130,2),false],['square',polygon([[-120,-120],[120,-120],[120,120],[-120,120]]),false],['triangle',polygon([[0,-160],[150,120],[-150,120]]),false],['line',Array.from({length:100},(_,i)=>({x:100+i*3,y:200+i*.1})),false],['figure eight',Array.from({length:121},(_,i)=>({x:400+Math.sin(i/120*Math.PI*2)*150,y:400+Math.sin(i/120*Math.PI*4)*130})),false]];
+const results=[];for(const[name,points,expected]of cases){const result=recognizeZero(points);results.push({name,expected,...result});assert.equal(result.valid,expected,JSON.stringify(results.at(-1)));console.log('PASS',name);}
+await mkdir(new URL('../public/verification',import.meta.url),{recursive:true});await writeFile(new URL('../public/verification/gesture-math.json',import.meta.url),JSON.stringify({testedAt:new Date().toISOString(),cases:results},null,2)+'\n');

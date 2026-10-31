@@ -1,0 +1,10 @@
+{
+  "asset": "generic-hand/right.glb",
+  "source": "https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/assets/profiles/generic-hand",
+  "license": "MIT",
+  "licenseFile": "HAND-LICENSE.txt",
+  "copyright": "2019 Amazon; see upstream asset package license",
+  "bytes": 94004,
+  "sha256": "291790c14f7f88a7f9bd35330c47392ed8e8d395ae6728f4bb7089f1bc1f2b96",
+  "purpose": "Independently posed green instructional hand. Not an original Why Zero asset."
+}
