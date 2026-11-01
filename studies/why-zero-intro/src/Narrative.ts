@@ -41,6 +41,7 @@ export class Narrative {
     return true;
   }
   invalid() { if(this.phase==='drawing'){this.set('guide');this.values.hand=1;} }
+  post(){this.timeline?.kill();this.timeline=undefined;Object.assign(this.values,{number:0,freeze:1,shatter:1,melt:1,dawn:1,flash:0,hand:0,orb:0});this.set('done');}
 
   success() {
     if(this.phase!=='drawing')return;

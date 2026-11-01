@@ -49,5 +49,5 @@ try{
   const state=await b.run('window.__frostDemo.getState()');
   check('The direct core entry works without downloading a hand model',state.phase==='guide'&&!state.hand.ready&&state.render.photoReady,state);
   check('Direct mobile entry has no render or resource errors',b.errors.length===0&&b.requests.length===0,{errors:b.errors,requests:b.requests});
-}finally{b.close();await mkdir('public/verification-v2',{recursive:true});await writeFile('public/verification-v2/resilience-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url:base,checks,environment:'Linux Chromium / SwiftShader with actual CDP touch input. Not physical iPad Safari.'},null,2)+'\n');}
+}finally{b.close();const out=process.env.PROOF_DIR??'public/verification-v2';await mkdir(out,{recursive:true});await writeFile(out+'/resilience-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url:base,checks,environment:'Linux Chromium / SwiftShader with actual CDP touch input. Not physical iPad Safari.'},null,2)+'\n');}
 console.log(JSON.stringify({passed:true,checks:checks.length}));

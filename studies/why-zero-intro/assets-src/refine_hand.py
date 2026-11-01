@@ -1,11 +1,13 @@
 """Editable derivative of the MIT generic WebXR hand; never uses reference-site assets.
 Run with Blender 5.2: blender -b --python assets-src/refine_hand.py
 """
-import bpy, bmesh, json
+import bpy, bmesh, json, sys
 from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
+LONG_ARM = '--long-arm' in sys.argv
+TAG = 'hand-long-v3' if LONG_ARM else 'hand-refined-v2'
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(ROOT / 'public/assets/hand-right.glb'))
 mesh = next(o for o in bpy.context.scene.objects if o.type == 'MESH')
@@ -39,7 +41,7 @@ if vertices:
     for i in range(1, 6):
         new = []
         for v in vertices:
-            p = center + (v.co - center) * (1 + i * .012) + direction * (.011 * i)
+            p = center + (v.co - center) * (1 + i * (.07 if LONG_ARM else .012)) + direction * ((.036 if LONG_ARM else .011) * i)
             n = bm.verts.new(p)
             if wrist:
                 n[layer][wrist.index] = 1.0
@@ -49,6 +51,10 @@ if vertices:
             a, b = [mapping[v] for v in e.verts]
             bm.faces.new((old[a], old[b], new[b], new[a]))
         old = new
+    for edge in bm.edges:
+        edge.smooth = True
+    for face in bm.faces:
+        face.smooth = True
     bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces))
     bm.normal_update()
     bm.to_mesh(mesh.data)
@@ -87,10 +93,14 @@ while mesh.modifiers.find(sub.name) > 0:
     bpy.ops.object.modifier_move_up(modifier=sub.name)
 for p in mesh.data.polygons:
     p.use_smooth = True
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / 'assets-src/hand-refined-v2.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / ('assets-src/' + TAG + '.blend')))
 # Apply subdivision before the armature, interpolating weights in the rest state.
 bpy.ops.object.modifier_apply(modifier=sub.name)
-bpy.ops.export_scene.gltf(filepath=str(ROOT / 'public/assets/hand-refined-v2.glb'), export_format='GLB', export_animations=False, export_apply=False)
-report = {'base': 'MIT immersive-web/webxr-input-profiles generic-hand/right.glb', 'vertices': len(mesh.data.vertices), 'faces': len(mesh.data.polygons), 'wristBoundaryEdges': len(edges), 'editableSource': 'assets-src/hand-refined-v2.blend'}
-(ROOT / 'assets-src/hand-report.json').write_text(json.dumps(report, indent=2) + '\n')
+for p in mesh.data.polygons:
+    p.use_smooth = True
+if mesh.data.has_custom_normals:
+    bpy.ops.mesh.customdata_custom_splitnormals_clear()
+bpy.ops.export_scene.gltf(filepath=str(ROOT / ('public/assets/' + TAG + '.glb')), export_format='GLB', export_animations=False, export_apply=False)
+report = {'base': 'MIT immersive-web/webxr-input-profiles generic-hand/right.glb', 'vertices': len(mesh.data.vertices), 'faces': len(mesh.data.polygons), 'wristBoundaryEdges': len(edges), 'editableSource': 'assets-src/' + TAG + '.blend', 'forearmExtensionMetres': .18 if LONG_ARM else .055}
+(ROOT / ('assets-src/hand-long-report.json' if LONG_ARM else 'assets-src/hand-report.json')).write_text(json.dumps(report, indent=2) + '\n')
 print('HAND_REPORT', json.dumps(report))
