@@ -6,5 +6,6 @@ const command=args=>new Promise((resolve,reject)=>{const p=spawn(process.execPat
 try{
  let ready=false;for(let i=0;i<100;i++){try{if((await fetch(url)).ok){ready=true;break;}}catch{}await pause(50);}if(!ready)throw Error('Owned test server did not start');
  await Promise.all([command(['scripts/check-browser.mjs',url]),command(['scripts/check-browser.mjs',url,'--touch']),command(['scripts/check-browser.mjs',url,'--touch','--phone'])]);
- if(process.argv.includes('--film'))await command(['scripts/record.mjs',url]);
+ await command(['scripts/check-resilience.mjs',url]);
+ if(process.argv.includes('--film'))await command(['scripts/record-v2.mjs',url]);
 }finally{server.kill('SIGTERM');}

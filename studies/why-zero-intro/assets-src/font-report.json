@@ -1,0 +1,20 @@
+[
+  {
+    "original": "space-grotesk.ttf",
+    "runtimeSubset": "zero-sans-subset.ttf",
+    "bytes": 32224,
+    "license": "SIL OFL; original notices retained; modified family renamed"
+  },
+  {
+    "original": "cormorant-garamond.ttf",
+    "runtimeSubset": "zero-serif-subset.ttf",
+    "bytes": 51940,
+    "license": "SIL OFL; original notices retained; modified family renamed"
+  },
+  {
+    "original": "cormorant-garamond-italic.ttf",
+    "runtimeSubset": "zero-serif-italic-subset.ttf",
+    "bytes": 54000,
+    "license": "SIL OFL; original notices retained; modified family renamed"
+  }
+]

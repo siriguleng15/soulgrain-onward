@@ -1,22 +1,26 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {browser,pause} from './browser.mjs';
-const url=process.argv.find(x=>x.startsWith('http'))??'http://127.0.0.1:4760/',touch=process.argv.includes('--touch'),portrait=process.argv.includes('--phone'),out=process.env.PROOF_DIR??'public/verification/'+(portrait?'phone':touch?'tablet':'desktop');await mkdir(out,{recursive:true});
+const url=process.argv.find(x=>x.startsWith('http'))??'http://127.0.0.1:4760/',touch=process.argv.includes('--touch'),portrait=process.argv.includes('--phone'),out=process.env.PROOF_DIR??'public/verification-v2/'+(portrait?'phone':touch?'tablet':'desktop');await mkdir(out,{recursive:true});
 const checks=[],check=(name,pass,detail)=>{checks.push({name,passed:!!pass,detail});assert.ok(pass,name+' '+JSON.stringify(detail));console.log('PASS',name);};
 const width=portrait?390:touch?1024:1280,height=portrait?844:touch?768:800,b=await browser(url,{width,height,touch});
 try{
  const{run,wait,shot,cdp}=b,state=()=>run('window.__frostDemo.getState()');
+ await wait('!window.__frostDemo.getState().loading','assets loaded');
  await shot(out+'/01-initial.png');
  await wait('window.__frostDemo.getState().phase==="guide"','countdown and shattering finish naturally');
  check('Count and shattering advance to guide without forced state injection',(await state()).history.some(x=>x.phase==='countdown')&&(await state()).history.some(x=>x.phase==='shattering'),(await state()).history);
  await wait('window.__frostDemo.getState().hand.ready||window.__frostDemo.getState().hand.error','licensed hand');check('Real skinned hand loads from the local licensed asset',(await state()).hand.ready,(await state()).hand);
- await wait('window.__frostDemo.getState().hand.opacity>.9','guide hand fades in');await shot(out+'/02-frost-hand.png');
+ check('New original frost material loads instead of silently using a fallback',(await state()).render.photoReady,(await state()).render);
+ await wait('window.__frostDemo.getState().hand.opacity>.9','guide hand fades in');
+ await run('window.__frostDemo.onFrame=()=>{const s=window.__frostDemo,d=s.getState();if(d.guideTime>3.9){cancelAnimationFrame(s.frame);window.__guideFrame=true;s.onFrame=undefined;}}');
+ await wait('window.__guideFrame','rendered reference pose');await shot(out+'/02-frost-hand.png');await run('window.__frostDemo.last=0;window.__frostDemo.frame=requestAnimationFrame(window.__frostDemo.loop)');
  const start=async(x,y)=>touch?cdp('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y,id:1}]}):cdp('Input.dispatchMouseEvent',{type:'mousePressed',x,y,button:'left',buttons:1,clickCount:1});
  const move=async(x,y)=>touch?cdp('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y,id:1}]}):cdp('Input.dispatchMouseEvent',{type:'mouseMoved',x,y,button:'left',buttons:1});
  const end=async(x,y)=>touch?cdp('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]}):cdp('Input.dispatchMouseEvent',{type:'mouseReleased',x,y,button:'left',buttons:0,clickCount:1});
  const center={x:width*.5,y:height*.44},rx=Math.min(width*.25,height*.20),ry=rx*1.12;
  // First demonstrate that a line really melts the material but cannot unlock.
- await start(center.x-rx,center.y);for(let i=1;i<=20;i++)await move(center.x-rx+2*rx*i/20,center.y+Math.sin(i*.3)*3);await shot(out+'/03-melt-groove.png');await end(center.x+rx,center.y);
+ await start(center.x-rx,center.y);for(let i=1;i<=20;i++)await move(center.x-rx+2*rx*i/20,center.y+Math.sin(i*.3)*3);await shot(out+'/03-melt-groove.png');check('The guiding hand remains visible during actual user input',(await state()).values.hand===1&&(await state()).hand.opacity>.8,await state());await end(center.x+rx,center.y);
  await wait('window.__frostDemo.getState().phase==="guide"','invalid stroke feedback');const invalid=await state();check('An actual line gesture is rejected',invalid.gesture&&!invalid.gesture.valid,invalid.gesture);
  await run('window.__frostDemo.onFrame=()=>{const s=window.__frostDemo,d=s.getState();if(d.values.melt>.12){cancelAnimationFrame(s.frame);window.__meltFrame=d;s.onFrame=undefined;}}');
  const draw=async()=>{await start(center.x+rx,center.y);for(let i=1;i<=100;i++){const a=i/100*Math.PI*2;await move(center.x+Math.cos(a)*rx,center.y+Math.sin(a)*ry);if(i===70)await shot(out+'/04-drawn-zero.png');}await end(center.x+rx,center.y);};
