@@ -1,0 +1,87 @@
+{
+  "state": {
+    "version": "reference-v2",
+    "phase": "guide",
+    "time": 11.0996,
+    "guideTime": 11.0996,
+    "loading": false,
+    "values": {
+      "number": 0,
+      "freeze": 1,
+      "shatter": 1,
+      "melt": 0,
+      "dawn": 0,
+      "flash": 0,
+      "hand": 1,
+      "orb": 0
+    },
+    "gesture": null,
+    "activePointer": null,
+    "strokePoints": 0,
+    "hand": {
+      "ready": true,
+      "opacity": 1,
+      "error": null,
+      "asset": "MIT WebXR hand / refined editable derivative"
+    },
+    "render": {
+      "quality": "high",
+      "buffer": [
+        1280,
+        800
+      ],
+      "field": [
+        512,
+        512
+      ],
+      "floatField": true,
+      "queue": 0,
+      "photoReady": true,
+      "photoError": null,
+      "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type",
+      "calls": 5,
+      "triangles": 62312
+    },
+    "frameMs": {
+      "median": 216.60000000000036,
+      "p95": 416.60000000000036
+    },
+    "benchmark": {
+      "samples": 47,
+      "medianFrameMs": 216.6999999999989,
+      "p95FrameMs": 366.6999999999998,
+      "environment": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "pipeline": {
+        "quality": "high",
+        "buffer": [
+          1280,
+          800
+        ],
+        "field": [
+          512,
+          512
+        ],
+        "floatField": true,
+        "queue": 0,
+        "photoReady": true,
+        "photoError": null,
+        "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type"
+      }
+    },
+    "history": [
+      {
+        "phase": "countdown",
+        "time": 0
+      },
+      {
+        "phase": "guide",
+        "time": 0
+      }
+    ],
+    "contextLost": false,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+  },
+  "environment": "Linux Chromium / SwiftShader. Software rendering, not iPad GPU performance. Real frame sample; video capture is separate.",
+  "errors": [],
+  "resourceErrors": []
+}

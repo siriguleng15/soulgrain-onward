@@ -1,0 +1,392 @@
+{
+  "testedAt": "2026-11-01T10:25:49.586Z",
+  "url": "http://127.0.0.1:4761/",
+  "width": 1024,
+  "height": 768,
+  "touch": true,
+  "checks": [
+    {
+      "name": "Count and shattering advance to guide without forced state injection",
+      "passed": true,
+      "detail": [
+        {
+          "phase": "countdown",
+          "time": 0
+        },
+        {
+          "phase": "shattering",
+          "time": 5.783
+        },
+        {
+          "phase": "guide",
+          "time": 6.683000000000001
+        }
+      ]
+    },
+    {
+      "name": "Real skinned hand loads from the local licensed asset",
+      "passed": true,
+      "detail": {
+        "ready": true,
+        "opacity": 0.8650121306363585,
+        "error": null,
+        "asset": "MIT WebXR hand / refined editable derivative"
+      }
+    },
+    {
+      "name": "New original frost material loads instead of silently using a fallback",
+      "passed": true,
+      "detail": {
+        "quality": "balanced",
+        "buffer": [
+          1024,
+          768
+        ],
+        "field": [
+          384,
+          384
+        ],
+        "floatField": true,
+        "queue": 0,
+        "photoReady": true,
+        "photoError": null,
+        "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type",
+        "calls": 9,
+        "triangles": 66472
+      }
+    },
+    {
+      "name": "The guiding hand remains visible during actual user input",
+      "passed": true,
+      "detail": {
+        "version": "reference-v2",
+        "phase": "drawing",
+        "time": 35.63177,
+        "guideTime": 29.23207,
+        "loading": false,
+        "values": {
+          "number": 0,
+          "freeze": 1,
+          "shatter": 1,
+          "melt": 0,
+          "dawn": 0,
+          "flash": 0,
+          "hand": 1,
+          "orb": 0
+        },
+        "gesture": null,
+        "activePointer": 2,
+        "strokePoints": 21,
+        "hand": {
+          "ready": true,
+          "opacity": 1,
+          "error": null,
+          "asset": "MIT WebXR hand / refined editable derivative"
+        },
+        "render": {
+          "quality": "balanced",
+          "buffer": [
+            1024,
+            768
+          ],
+          "field": [
+            384,
+            384
+          ],
+          "floatField": true,
+          "queue": 0,
+          "photoReady": true,
+          "photoError": null,
+          "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type",
+          "calls": 6,
+          "triangles": 62314
+        },
+        "frameMs": {
+          "median": 416.7000000000007,
+          "p95": 1116.6000000000058
+        },
+        "benchmark": null,
+        "history": [
+          {
+            "phase": "countdown",
+            "time": 0
+          },
+          {
+            "phase": "shattering",
+            "time": 5.783
+          },
+          {
+            "phase": "guide",
+            "time": 6.683000000000001
+          },
+          {
+            "phase": "drawing",
+            "time": 10.48277
+          }
+        ],
+        "contextLost": false,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "An actual line gesture is rejected",
+      "passed": true,
+      "detail": {
+        "valid": false,
+        "reason": "画大一点，让零的轮廓更清晰",
+        "closure": 0.9998144860305354,
+        "roundness": 0.06394573945938126,
+        "radialCV": 0.41397474856149774,
+        "turns": -0.5268637866670286,
+        "directionConsistency": 0.47273105452483055,
+        "aspect": 0.013998479660517354,
+        "length": 307.4496476546433,
+        "points": 21,
+        "center": {
+          "x": 511.9938428672445,
+          "y": 337.9352022433915
+        }
+      }
+    },
+    {
+      "name": "A real finger zero passes geometry validation",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "reason": "零已闭合",
+        "closure": 0,
+        "roundness": 0.9990928094853035,
+        "radialCV": 0.01523316712466293,
+        "turns": 1.0000000000000007,
+        "directionConsistency": 1,
+        "aspect": 0.9277482191980374,
+        "length": 1023.654289495089,
+        "points": 101,
+        "center": {
+          "x": 513.6133681001177,
+          "y": 337.92000100742695
+        }
+      }
+    },
+    {
+      "name": "Success enters the thaw instead of replacing the page",
+      "passed": true,
+      "detail": "melting"
+    },
+    {
+      "name": "Melt and dawn reach a continuous completed state",
+      "passed": true,
+      "detail": {
+        "version": "reference-v2",
+        "phase": "done",
+        "time": 128.8947400000002,
+        "guideTime": 118.14517000000015,
+        "loading": false,
+        "values": {
+          "number": 0,
+          "freeze": 1,
+          "shatter": 1,
+          "melt": 1,
+          "dawn": 1,
+          "flash": 0,
+          "hand": 0,
+          "orb": 0
+        },
+        "gesture": {
+          "valid": true,
+          "reason": "零已闭合",
+          "closure": 0,
+          "roundness": 0.9990928094853035,
+          "radialCV": 0.01523316712466293,
+          "turns": 1.0000000000000007,
+          "directionConsistency": 1,
+          "aspect": 0.9277482191980374,
+          "length": 1023.654289495089,
+          "points": 101,
+          "center": {
+            "x": 513.6133681001177,
+            "y": 337.92000100742695
+          }
+        },
+        "activePointer": null,
+        "strokePoints": 101,
+        "hand": {
+          "ready": true,
+          "opacity": 4.877524733333775e-22,
+          "error": null,
+          "asset": "MIT WebXR hand / refined editable derivative"
+        },
+        "render": {
+          "quality": "balanced",
+          "buffer": [
+            1024,
+            768
+          ],
+          "field": [
+            384,
+            384
+          ],
+          "floatField": true,
+          "queue": 0,
+          "photoReady": true,
+          "photoError": null,
+          "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type",
+          "calls": 5,
+          "triangles": 10
+        },
+        "frameMs": {
+          "median": 216.59999999999127,
+          "p95": 900
+        },
+        "benchmark": null,
+        "history": [
+          {
+            "phase": "countdown",
+            "time": 0
+          },
+          {
+            "phase": "shattering",
+            "time": 5.783
+          },
+          {
+            "phase": "guide",
+            "time": 6.683000000000001
+          },
+          {
+            "phase": "drawing",
+            "time": 10.48277
+          },
+          {
+            "phase": "guide",
+            "time": 37.031670000000005
+          },
+          {
+            "phase": "drawing",
+            "time": 38.33167
+          },
+          {
+            "phase": "melting",
+            "time": 124.54487000000016
+          },
+          {
+            "phase": "transition",
+            "time": 126.01144000000018
+          },
+          {
+            "phase": "done",
+            "time": 128.1281400000002
+          }
+        ],
+        "contextLost": false,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "Visible restart clears the prior gesture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Visible skip enters an interactive guide",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Interrupted input never unlocks the next scene",
+      "passed": true,
+      "detail": {
+        "version": "reference-v2",
+        "phase": "guide",
+        "time": 1.5832999999999884,
+        "guideTime": 1.2,
+        "loading": false,
+        "values": {
+          "number": 0,
+          "freeze": 1,
+          "shatter": 1,
+          "melt": 0,
+          "dawn": 0,
+          "flash": 0,
+          "hand": 1,
+          "orb": 0
+        },
+        "gesture": null,
+        "activePointer": null,
+        "strokePoints": 0,
+        "hand": {
+          "ready": true,
+          "opacity": 0.9999918368934249,
+          "error": null,
+          "asset": "MIT WebXR hand / refined editable derivative"
+        },
+        "render": {
+          "quality": "balanced",
+          "buffer": [
+            1024,
+            768
+          ],
+          "field": [
+            384,
+            384
+          ],
+          "floatField": true,
+          "queue": 0,
+          "photoReady": true,
+          "photoError": null,
+          "passes": "sharp scene, refined skinned hand, heat ping-pong, blur, refracting frost composite, foreground type",
+          "calls": 10,
+          "triangles": 66474
+        },
+        "frameMs": {
+          "median": 200,
+          "p95": 799.9000000000087
+        },
+        "benchmark": null,
+        "history": [
+          {
+            "phase": "countdown",
+            "time": 0
+          },
+          {
+            "phase": "guide",
+            "time": 0.38329999999998837
+          },
+          {
+            "phase": "drawing",
+            "time": 0.6333999999999942
+          },
+          {
+            "phase": "guide",
+            "time": 1.5832999999999884
+          }
+        ],
+        "contextLost": false,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "Debug panel serializes actual scene and gesture diagnostics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Debug panel has readable live data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No overflow on the target viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No shader, JavaScript or resource errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader with real CDP input events. Touch is simulated, not physical iPad Safari. A real rendered melt midpoint is paused via the debug frame hook for its screenshot, then resumed; no mask uniforms are injected."
+}
