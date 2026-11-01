@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "97230de2d2a4707cb7d4e281ebcd414940ff0661",
+  "sourceBranch": "research/why-zero-reference-v2",
+  "builtAt": "2026-11-01T10:32:03.590Z",
+  "scope": "Independent opening-only reference study V2. Soulgrain pages/assets and V1 preview untouched.",
+  "referenceAccess": "Two user-supplied recordings decoded and visually inspected. Website and official article remain blocked by CONNECT 403.",
+  "referenceVisualAuditCompleted": true,
+  "pixelIdentical": false,
+  "physicalIPadSafariTested": false,
+  "handLicense": "MIT derivative / immersive-web webxr-input-profiles; editable Blender source included",
+  "iceSource": "New generated material, not reference-site texture or recording frames",
+  "entry": "index.html"
+}
