@@ -1,0 +1,151 @@
+{
+  "testedAt": "2026-11-01T13:55:54.585Z",
+  "url": "http://127.0.0.1:4763/",
+  "fps": 24,
+  "frames": 782,
+  "duration": 32.583333333333336,
+  "sha256": "c82cfb4876185b51e6921e58fa0ba99a502ec29f4629901e6aab5f1532d2a64b",
+  "passed": true,
+  "method": "Actual CDP finger drawing, then mouse movement, presses, scroll-wheel and 3D target hold drive the production controller. Fixed 24fps review-clock sampling only; no progress, joint pose or shader uniform injection. This encoded frame rate is not physical device performance. Linux Chromium / SwiftShader, not iPad Safari.",
+  "finalState": {
+    "ready": true,
+    "error": null,
+    "progress": 3.4019999999999997,
+    "targetProgress": 3.402,
+    "chapter": "connection",
+    "pointer": [
+      0.5,
+      0.5
+    ],
+    "targetPointer": [
+      0.5,
+      0.5
+    ],
+    "holding": false,
+    "hold": 0.000006142962200461824,
+    "hovered": true,
+    "green": {
+      "visible": true,
+      "opacity": 1,
+      "root": [
+        -0.7329058682856863,
+        0.10609790242014108,
+        0.15839301239374604
+      ],
+      "index": [
+        -0.17000000000000054,
+        0.1000000000000004,
+        0.4500000000000002
+      ],
+      "middle": [
+        -0.18966169579874403,
+        -0.015742964604889748,
+        0.22901529542717342
+      ],
+      "joints": [
+        {
+          "name": "index-finger-phalanx-proximal",
+          "angle": -0.09000000000000177
+        },
+        {
+          "name": "middle-finger-phalanx-proximal",
+          "angle": -0.41999999999999904
+        },
+        {
+          "name": "pinky-finger-phalanx-proximal",
+          "angle": -0.9200000000000004
+        },
+        {
+          "name": "ring-finger-phalanx-proximal",
+          "angle": -0.7200000000000004
+        },
+        {
+          "name": "thumb-phalanx-proximal",
+          "angle": -0.22000000000000117
+        }
+      ]
+    },
+    "human": {
+      "visible": true,
+      "opacity": 1,
+      "root": [
+        0.7646416302195947,
+        -0.37476779939807414,
+        0.46151147423217376
+      ],
+      "index": [
+        0.22,
+        -0.09999999999999984,
+        0.4400000000000001
+      ],
+      "middle": [
+        0.1978761490104165,
+        -0.22796544106573396,
+        0.561067906792476
+      ],
+      "joints": [
+        {
+          "name": "index-finger-phalanx-proximal",
+          "angle": -0.06
+        },
+        {
+          "name": "middle-finger-phalanx-proximal",
+          "angle": -0.3
+        },
+        {
+          "name": "pinky-finger-phalanx-proximal",
+          "angle": -0.65
+        },
+        {
+          "name": "ring-finger-phalanx-proximal",
+          "angle": -0.55
+        },
+        {
+          "name": "thumb-phalanx-proximal",
+          "angle": -0.16
+        }
+      ]
+    },
+    "coins": {
+      "visible": false,
+      "positions": [
+        [
+          0.5908678408734668,
+          -0.21128527730946456,
+          0.0041423134944524875
+        ],
+        [
+          0.5300216353029338,
+          0.2934884785163008,
+          0.35260545854182496
+        ],
+        [
+          -0.06084620557053279,
+          0.5047737558257656,
+          0.49846314504737255
+        ],
+        [
+          -0.5908678408734668,
+          0.21128527730946464,
+          0.29585768650554756
+        ],
+        [
+          -0.5300216353029334,
+          -0.29348847851630105,
+          -0.05260545854182519
+        ],
+        [
+          0.060846205570532705,
+          -0.5047737558257656,
+          -0.19846314504737264
+        ]
+      ]
+    },
+    "petals": 70,
+    "field": [
+      1030,
+      606
+    ],
+    "sceneType": "3D skinned hands, orbiting discs, instanced petals, independently generated environment plate"
+  }
+}

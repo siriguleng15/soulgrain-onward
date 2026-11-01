@@ -1,0 +1,220 @@
+{
+  "data": {
+    "version": "hand-narrative-v3",
+    "experience": {
+      "ready": true,
+      "error": null,
+      "progress": 3.4,
+      "targetProgress": 3.4,
+      "chapter": "connection",
+      "pointer": [
+        0.5,
+        0.5
+      ],
+      "targetPointer": [
+        0.5,
+        0.5
+      ],
+      "holding": false,
+      "hold": 0,
+      "hovered": false,
+      "green": {
+        "visible": true,
+        "opacity": 1,
+        "root": [
+          -0.7329058688917897,
+          0.10609790343152856,
+          0.15839301358489166
+        ],
+        "index": [
+          -0.16999999999999993,
+          0.09999999999999995,
+          0.45
+        ],
+        "middle": [
+          -0.18966169621254303,
+          -0.015742963684563675,
+          0.22901529498195802
+        ],
+        "joints": [
+          {
+            "name": "index-finger-phalanx-proximal",
+            "angle": -0.09
+          },
+          {
+            "name": "middle-finger-phalanx-proximal",
+            "angle": -0.42
+          },
+          {
+            "name": "pinky-finger-phalanx-proximal",
+            "angle": -0.92
+          },
+          {
+            "name": "ring-finger-phalanx-proximal",
+            "angle": -0.72
+          },
+          {
+            "name": "thumb-phalanx-proximal",
+            "angle": -0.22
+          }
+        ]
+      },
+      "human": {
+        "visible": true,
+        "opacity": 1,
+        "root": [
+          0.7646416302402582,
+          -0.3747677993802906,
+          0.46151147393614167
+        ],
+        "index": [
+          0.21999999999999986,
+          -0.10000000000000002,
+          0.43999999999999995
+        ],
+        "middle": [
+          0.1978761490803993,
+          -0.22796544106645644,
+          0.5610679068045009
+        ],
+        "joints": [
+          {
+            "name": "index-finger-phalanx-proximal",
+            "angle": -0.06
+          },
+          {
+            "name": "middle-finger-phalanx-proximal",
+            "angle": -0.3
+          },
+          {
+            "name": "pinky-finger-phalanx-proximal",
+            "angle": -0.65
+          },
+          {
+            "name": "ring-finger-phalanx-proximal",
+            "angle": -0.55
+          },
+          {
+            "name": "thumb-phalanx-proximal",
+            "angle": -0.16
+          }
+        ]
+      },
+      "coins": {
+        "visible": false,
+        "positions": [
+          [
+            -0.3758449471840025,
+            -0.413650536372713,
+            -0.1355575694880661
+          ],
+          [
+            0.2713491581872657,
+            -0.46070846045974273,
+            -0.16804331589923063
+          ],
+          [
+            0.6471941053712684,
+            -0.04705792408702998,
+            0.11751425358883533
+          ],
+          [
+            0.37584494718400263,
+            0.413650536372713,
+            0.4355575694880661
+          ],
+          [
+            -0.27134915818726507,
+            0.46070846045974295,
+            0.46804331589923076
+          ],
+          [
+            -0.6471941053712685,
+            0.04705792408702914,
+            0.1824857464111641
+          ]
+        ]
+      },
+      "petals": 70,
+      "field": [
+        1030,
+        606
+      ],
+      "sceneType": "3D skinned hands, orbiting discs, instanced petals, independently generated environment plate"
+    },
+    "phase": "done",
+    "time": 12.799499999999997,
+    "guideTime": 0,
+    "loading": false,
+    "values": {
+      "number": 0,
+      "freeze": 1,
+      "shatter": 1,
+      "melt": 1,
+      "dawn": 1,
+      "flash": 0,
+      "hand": 0,
+      "orb": 0
+    },
+    "gesture": null,
+    "activePointer": null,
+    "strokePoints": 0,
+    "hand": {
+      "ready": true,
+      "opacity": 0,
+      "error": null,
+      "asset": "MIT WebXR hand / refined editable derivative"
+    },
+    "render": {
+      "active": "hand-narrative",
+      "quality": "balanced",
+      "buffer": [
+        1030,
+        606
+      ],
+      "passes": "3D skinned hands / discs / instanced petals into scene target, then environment / fog / contact composite",
+      "visibleSkinnedHands": 2,
+      "petalInstances": 70,
+      "openingPassesSuspended": true,
+      "calls": 7,
+      "triangles": 145372
+    },
+    "frameMs": {
+      "median": 166.70000000000073,
+      "p95": 399.89999999999964
+    },
+    "benchmark": {
+      "samples": 59,
+      "medianFrameMs": 166.69999999999982,
+      "p95FrameMs": 366.6999999999998,
+      "environment": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "pipeline": {
+        "active": "hand-narrative",
+        "quality": "balanced",
+        "buffer": [
+          1030,
+          606
+        ],
+        "passes": "3D skinned hands / discs / instanced petals into scene target, then environment / fog / contact composite",
+        "visibleSkinnedHands": 2,
+        "petalInstances": 70,
+        "openingPassesSuspended": true
+      }
+    },
+    "history": [
+      {
+        "phase": "countdown",
+        "time": 0
+      },
+      {
+        "phase": "done",
+        "time": 0
+      }
+    ],
+    "contextLost": false,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+  },
+  "environment": "Linux Chromium / SwiftShader. Live software rendering of the two-hand scene; not physical Safari/iPad GPU performance.",
+  "errors": [],
+  "requests": []
+}
