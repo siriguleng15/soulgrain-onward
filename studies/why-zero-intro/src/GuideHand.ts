@@ -1,4 +1,4 @@
-import {AmbientLight,Bone,Color,DirectionalLight,Group,Mesh,MeshPhysicalMaterial,Quaternion,Scene,SkinnedMesh,Vector3} from 'three';
+import {AmbientLight,Bone,Color,DirectionalLight,Group,Mesh,MeshPhysicalMaterial,Quaternion,Scene,SkinnedMesh,Vector2,Vector3} from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 
 export class GuideHand {
@@ -7,6 +7,9 @@ export class GuideHand {
   ready=false;
   error?:string;
   private tip?:Bone;
+  private cursor=new Vector2(.5,.5);private cursorAt=-100000;private follow=0;
+  setPointer(x:number,y:number){this.cursor.set(x,y);this.cursorAt=performance.now();}
+  leavePointer(){this.cursorAt=-100000;}
   private readonly materials:MeshPhysicalMaterial[]=[];
   private readonly flex:{bone:Bone;rest:Quaternion;axis:Vector3;amount:number}[]=[];
   get contact(){return this.tip?.getWorldPosition(new Vector3());}
@@ -69,13 +72,15 @@ export class GuideHand {
     }catch(error){this.error=String(error);this.ready=false;}
   }
 
-  update(guideTime:number,opacity:number,aspect:number){
+  update(guideTime:number,opacity:number,aspect:number,dt=1/60){
     if(!this.ready||!this.tip)return;
     this.root.visible=opacity>.002;
     if(!this.root.visible)return;
     const cycle=guideTime%3.8,progress=Math.min(1,cycle/2.6),theta=progress*Math.PI*2;
     const radius=aspect<.8?.43:.80;
     const target=new Vector3(Math.sin(theta)*radius,Math.cos(theta)*radius-(1-opacity)*.6,.6);
+    this.follow+=((performance.now()-this.cursorAt<1300?1:0)-this.follow)*(1-Math.exp(-dt*12));
+    target.lerp(new Vector3((this.cursor.x-.5)*aspect*1.7,(this.cursor.y-.5)*1.7,.6),this.follow*.80);
     this.root.rotation.set(0,.06+Math.sin(theta)*.12,Math.PI-.08+Math.sin(theta)*.11);
     for(const f of this.flex){const sign=f.bone.name.includes('phalanx')?-1:1;f.bone.quaternion.copy(f.rest).multiply(new Quaternion().setFromAxisAngle(f.axis,sign*f.amount*(1+Math.sin(guideTime*1.8)*.012)));}
     this.root.updateMatrixWorld(true);

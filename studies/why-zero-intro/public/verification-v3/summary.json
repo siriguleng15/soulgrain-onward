@@ -1,0 +1,23 @@
+{
+  "version": "hand-narrative-v3",
+  "handChecks": {
+    "desktop": 14,
+    "tablet": 14,
+    "phone": 14
+  },
+  "openingChecks": [
+    15,
+    15
+  ],
+  "resilienceChecks": 10,
+  "browserCheckTotal": 82,
+  "gestureFixtures": 12,
+  "videoFrames": 782,
+  "videoFPS": 24,
+  "videoSeconds": 32.583333333333336,
+  "encodedVideoIsHardwarePerformance": false,
+  "physicalSafariTested": false,
+  "recordedScopeCovered": "Frost and unlock; pointer-reactive green hand; gesture press/release; orbiting discs; College/a JOB; Creation composition; 3D hold/release and scene-light change",
+  "pixelIdentical": false,
+  "environment": "Real 3D hands, discs, petals, raycast target; original generated 2.5D garden plate"
+}

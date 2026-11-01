@@ -11,6 +11,7 @@ import {NextScene} from './NextScene.ts';
 import {recognizeZero} from './gesture.ts';
 import type {Point,GestureResult} from './gesture.ts';
 import {quadVertex,backdropFragment} from './shaders.ts';
+import {HandNarrative} from './HandNarrative.ts';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 
@@ -24,11 +25,18 @@ class FrostDemo {
   readonly hand=new GuideHand();
   readonly countdown=new Countdown();
   readonly nextScene=new NextScene();
+  readonly post:HandNarrative;
   readonly backdrop=new ShaderMaterial({vertexShader:quadVertex,fragmentShader:backdropFragment,depthWrite:false,depthTest:false,uniforms:{uTime:{value:0},uDawn:{value:0}}});
   private width=0;
   private height=0;
   private aspect=1;
   private pointer:number|null=null;
+  private postPointer:number|null=null;
+  private postLastY=0;
+  private postStartY=0;
+  private postStartX=0;
+  private postScrubbing=false;
+  private postContact=false;
   private points:Point[]=[];
   private lastUv?:Vector2;
   private handOpacity=0;
@@ -74,6 +82,7 @@ class FrostDemo {
     const room=new RoomEnvironment(),pmrem=new PMREMGenerator(this.renderer),environment=pmrem.fromScene(room,.04);
     this.scene.environment=environment.texture;
     this.hand.scene.environment=environment.texture;
+    this.post=new HandNarrative(this.renderer,environment.texture);
     pmrem.dispose();room.dispose();
     this.narrative=new Narrative(phase=>{
       this.phaseHistory.push({phase,time:this.narrative?.time??0});
@@ -92,17 +101,19 @@ class FrostDemo {
     await Promise.allSettled([
       this.pipeline.loadPhoto(import.meta.env.BASE_URL+'assets/frost-study-v2.webp'),
       this.coreOnly?Promise.resolve():this.hand.load(import.meta.env.BASE_URL+'assets/hand-refined-v2.glb'),
+      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/hand-long-v3.glb',import.meta.env.BASE_URL+'assets/garden-v3.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp'),
       font,
     ]);
     this.loading=false;
     el('loading').hidden=true;
-    if(this.pipeline.photoError||(!this.coreOnly&&this.hand.error)){
+    if(this.pipeline.photoError||(!this.coreOnly&&(this.hand.error||this.post.error))){
       el('error').hidden=false;
-      el('error').textContent='部分研究资产未加载成功，当前为降级显示。请重新加载页面。'+(this.pipeline.photoError??this.hand.error);
+      el('error').textContent='部分研究资产未加载成功，当前为降级显示。请重新加载页面。'+(this.pipeline.photoError??this.hand.error??this.post.error);
     }
     this.restart();
     const initial=new URLSearchParams(location.search).get('stage');
     if(this.pendingSkip||initial==='core'||initial==='hand'||initial==='gesture')this.narrative.guide();
+    if(initial==='hands'||initial==='creation'){this.narrative.post();this.post.jump(initial==='creation'?3.4:1.25);this.post.progress=this.post.targetProgress;}
   }
 
   private bind(){
@@ -112,6 +123,14 @@ class FrostDemo {
     canvas.addEventListener('pointerup',this.up);
     canvas.addEventListener('pointercancel',this.cancel);
     canvas.addEventListener('lostpointercapture',this.cancel);
+    canvas.addEventListener('pointerleave',()=>{this.hand.leavePointer();if(this.postPointer===null)this.post.pointerTarget.set(.5,.5);});
+    canvas.addEventListener('wheel',event=>{if(this.narrative.phase==='done'){event.preventDefault();this.post.scroll(event.deltaY);}},{passive:false});
+    canvas.addEventListener('keydown',event=>{
+      if(this.narrative.phase!=='done')return;
+      if(['ArrowDown','ArrowRight','PageDown'].includes(event.code)){event.preventDefault();this.post.scroll(230);}
+      if(['ArrowUp','ArrowLeft','PageUp'].includes(event.code)){event.preventDefault();this.post.scroll(-230);}
+      if(event.code==='End'){event.preventDefault();this.post.jump(3.4);}
+    });
     canvas.addEventListener('contextmenu',event=>event.preventDefault());
     canvas.addEventListener('webglcontextlost',event=>{
       event.preventDefault();this.contextLost=true;
@@ -120,6 +139,11 @@ class FrostDemo {
     document.addEventListener('visibilitychange',()=>{this.hidden=document.hidden;this.last=0;if(this.hidden)this.abortStroke();});
     window.addEventListener('blur',()=>this.abortStroke());
     el('restart').onclick=el('again').onclick=()=>this.restart();
+    el('to-hands').onclick=()=>{if(!this.loading){this.abortStroke();this.narrative.post();this.post.jump(1.25);}};
+    el('story-next').onclick=()=>this.post.progress>3.1?this.post.jump(1.25):this.post.next();
+    el('story-back').onclick=()=>this.post.jump(this.post.targetProgress>2.5?1.25:0);
+    el('story-menu-toggle').onclick=()=>{el('story-menu').hidden=!el('story-menu').hidden;};
+    for(const button of document.querySelectorAll<HTMLButtonElement>('[data-chapter]'))button.onclick=()=>{this.post.jump(Number(button.dataset.chapter));el('story-menu').hidden=true;};
     el('skip').onclick=()=>{
       if(this.loading){this.pendingSkip=true;return;}
       this.abortStroke();this.pipeline.reset();this.guideTime=0;this.narrative.guide();
@@ -141,12 +165,20 @@ class FrostDemo {
     this.abortStroke();this.width=width;this.height=height;this.aspect=width/height;
     this.camera.left=-this.aspect;this.camera.right=this.aspect;this.camera.top=1;this.camera.bottom=-1;this.camera.updateProjectionMatrix();
     this.pipeline.resize(width,height,this.quality);
+    this.post?.resize(width,height);
   }
   private location(event:PointerEvent){const r=this.renderer.domElement.getBoundingClientRect();return{x:event.clientX-r.left,y:event.clientY-r.top,t:performance.now()};}
   private uv(p:Point){return new Vector2(p.x/this.width,1-p.y/this.height);}
 
   private down=(event:PointerEvent)=>{
     if(this.loading||(event.pointerType==='mouse'&&event.button!==0))return;
+    if(this.narrative.phase==='done'){
+      if(this.postPointer!==null){this.post.release();this.postPointer=null;return;}
+      event.preventDefault();this.postPointer=event.pointerId;this.postLastY=this.postStartY=event.clientY;this.postStartX=event.clientX;this.postScrubbing=false;
+      this.postContact=this.post.down(event.clientX/this.width,1-event.clientY/this.height);
+      try{this.renderer.domElement.setPointerCapture(event.pointerId);}catch{}
+      return;
+    }
     if(this.pointer!==null){this.abortStroke();return;}
     if(!this.narrative.drawing())return;
     event.preventDefault();this.pointer=event.pointerId;this.points=[];this.lastUv=undefined;this.message='';
@@ -155,6 +187,19 @@ class FrostDemo {
     try{this.renderer.domElement.setPointerCapture(event.pointerId);}catch{}
   };
   private move=(event:PointerEvent)=>{
+    this.hand.setPointer(event.clientX/this.width,1-event.clientY/this.height);
+    if(this.narrative.phase==='done'){
+      this.post.move(event.clientX/this.width,1-event.clientY/this.height);
+      if(event.pointerId===this.postPointer){
+        event.preventDefault();
+        const dragY=Math.abs(event.clientY-this.postStartY),dragX=Math.abs(event.clientX-this.postStartX);
+        if(event.pointerType==='touch'&&!this.postContact&&(this.postScrubbing||(dragY>12&&dragY>dragX*1.1))){
+          this.postScrubbing=true;this.post.scroll((this.postLastY-event.clientY)*2.5);
+        }
+        this.postLastY=event.clientY;
+      }
+      return;
+    }
     if(event.pointerId!==this.pointer)return;
     event.preventDefault();
     const coalesced=event.getCoalescedEvents?.()??[event];
@@ -169,6 +214,7 @@ class FrostDemo {
     this.pipeline.finalMaterial.uniforms.uPointer.value.copy(uv);
   }
   private up=(event:PointerEvent)=>{
+    if(event.pointerId===this.postPointer){this.postPointer=null;this.post.release();try{this.renderer.domElement.releasePointerCapture(event.pointerId);}catch{}return;}
     if(event.pointerId!==this.pointer)return;
     this.acceptPoint(this.location(event));this.pointer=null;
     try{if(this.renderer.domElement.hasPointerCapture(event.pointerId))this.renderer.domElement.releasePointerCapture(event.pointerId);}catch{}
@@ -181,8 +227,10 @@ class FrostDemo {
       this.pipeline.cool();this.narrative.invalid();
     }
   };
-  private cancel=(event:PointerEvent)=>{if(event.pointerId===this.pointer)this.abortStroke();};
+  private cancel=(event:PointerEvent)=>{if(event.pointerId===this.pointer||event.pointerId===this.postPointer)this.abortStroke();};
   private abortStroke(){
+    const postId=this.postPointer;this.postPointer=null;this.post?.release();
+    if(postId!==null)try{this.renderer.domElement.releasePointerCapture(postId);}catch{}
     const id=this.pointer;this.pointer=null;this.points=[];this.lastUv=undefined;
     if(id!==null){
       try{if(this.renderer.domElement.hasPointerCapture(id))this.renderer.domElement.releasePointerCapture(id);}catch{}
@@ -193,6 +241,7 @@ class FrostDemo {
   restart(){
     this.abortStroke();this.pipeline.reset();this.lastGesture=undefined;this.message='';
     this.phaseHistory=[];this.guideTime=0;this.handOpacity=0;
+    this.post.reset();
     this.narrative.restart();this.pipeline.finalMaterial.uniforms.uCenter.value.set(.5,.5);
     this.updateUi(true);
   }
@@ -201,6 +250,7 @@ class FrostDemo {
     const phase=this.narrative.phase,message=this.narrative.time<this.messageUntil?this.message:'',key=phase+message;
     if(!force&&key===this.uiKey)return;
     this.uiKey=key;el('app').dataset.state=phase;
+    el('story-hud').hidden=phase!=='done';
     el('end-copy').hidden=!['transition','done'].includes(phase);
     el('skip').hidden=!['countdown','shattering'].includes(phase);
     el('phase').textContent=['countdown','shattering'].includes(phase)?'01 / ARRIVAL':['guide','drawing'].includes(phase)?'02 / FROST UNLOCK':phase==='done'?'04 / YOU BELIEVED':'03 / THE THAW';
@@ -216,20 +266,31 @@ class FrostDemo {
       this.benchmark.frames.push(actual);
       if(performance.now()-this.benchmark.start>10000){
         const a=[...this.benchmark.frames].sort((a,b)=>a-b);
-        this.benchmarkResult={samples:a.length,medianFrameMs:a[Math.floor(a.length*.5)],p95FrameMs:a[Math.floor(a.length*.95)],environment:navigator.userAgent,pipeline:this.pipeline.info()};
+        this.benchmarkResult={samples:a.length,medianFrameMs:a[Math.floor(a.length*.5)],p95FrameMs:a[Math.floor(a.length*.95)],environment:navigator.userAgent,pipeline:this.renderInfo()};
         this.benchmark=undefined;el('benchmark').textContent='重新采样 10 秒';
       }
     }
     if(!this.loading)this.narrative.update(dt);
     const v=this.narrative.values,phase=this.narrative.phase;
+    const postActive=phase==='done';
+    this.post.update(dt,postActive);
     if(phase==='guide'||phase==='drawing')this.guideTime+=dt;
     this.handOpacity+=(v.hand-this.handOpacity)*(1-Math.exp(-dt*12));
-    this.hand.update(this.guideTime,this.coreOnly?0:this.handOpacity,this.aspect);
+    this.hand.update(this.guideTime,this.coreOnly?0:this.handOpacity,this.aspect,dt);
     this.countdown.update(v.number,v.shatter,this.narrative.time,this.aspect,this.guideTime);
     this.overlay.visible=!this.loading&&!['melting','transition','done'].includes(phase);
     this.nextScene.update(this.narrative.time,v.orb);
     const titleOpacity=Math.max(0,(v.dawn-.78)/.22)*(1-v.orb);
-    el('end-copy').style.opacity=String(titleOpacity);
+    const storyProgress=this.post.progress;
+    el('end-copy').style.opacity=String(titleOpacity*Math.max(0,1-storyProgress*2.8));
+    el('end-copy').style.pointerEvents=postActive&&storyProgress>.3?'none':'';
+    el('again').hidden=postActive;
+    el('college-copy').style.opacity=String(postActive?Math.max(0,Math.min((storyProgress-1.5)/.30,(2.65-storyProgress)/.35,1)):0);
+    el('college-copy').style.transform='translateY('+((1.8-storyProgress)*70)+'px)';
+    el('job-copy').style.opacity=String(postActive?Math.max(0,Math.min((storyProgress-2.35)/.25,(3.2-storyProgress)/.25,1)):0);
+    el('hold-copy').hidden=!postActive||storyProgress<3.1;
+    el('story-ruler-label').textContent=storyProgress>2.5?'-75 BZ':'-100 BZ';
+    el('story-next').textContent=storyProgress>3.1?'REPLAY THE HANDS':'CONTINUE EXPLORING';
     el('reward').style.opacity=String(v.orb);
     this.backdrop.uniforms.uTime.value=this.narrative.time;
     this.backdrop.uniforms.uDawn.value=v.dawn;
@@ -238,20 +299,28 @@ class FrostDemo {
     u.uGuideTime.value=this.guideTime;u.uGuidance.value=this.handOpacity;
     u.uPointerActive.value=this.pointer!==null?1:0;
     this.renderer.info.reset();
-    this.pipeline.render(this.scene,this.camera,this.hand.scene,dt,this.narrative.time);
-    const clear=this.renderer.autoClear;this.renderer.autoClear=false;
-    this.renderer.clearDepth();this.renderer.render(this.overlay,this.camera);this.renderer.autoClear=clear;
+    if(!postActive||!this.post.ready){
+      this.pipeline.render(this.scene,this.camera,this.hand.scene,dt,this.narrative.time);
+      const clear=this.renderer.autoClear;this.renderer.autoClear=false;
+      this.renderer.clearDepth();this.renderer.render(this.overlay,this.camera);this.renderer.autoClear=clear;
+    }
+    if(postActive)this.post.render(1);
     this.updateUi();this.onFrame?.();
     if(timestamp-this.lastPanel>350){this.lastPanel=timestamp;if(!el('debug').hidden)el('stats').textContent=JSON.stringify(this.getState(),null,2);}
   };
 
+  private renderInfo(){
+    const opening=this.pipeline.info();
+    if(this.narrative.phase==='done'&&this.post.ready)return{active:'hand-narrative',quality:opening.quality,buffer:opening.buffer,passes:'3D skinned hands / discs / instanced petals into scene target, then environment / fog / contact composite',visibleSkinnedHands:Number(!!this.post.green?.root.visible)+Number(!!this.post.human?.root.visible),petalInstances:this.post.petals.mesh.count,openingPassesSuspended:true};
+    return{active:'frost',...opening};
+  }
   getState(){
     const a=[...this.frameTimes].sort((a,b)=>a-b),v=this.narrative?.values;
-    return{version:'reference-v2',phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
+    return{version:'hand-narrative-v3',experience:this.post.state(),phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
       values:{number:v?.number,freeze:v?.freeze,shatter:v?.shatter,melt:v?.melt,dawn:v?.dawn,flash:v?.flash,hand:v?.hand,orb:v?.orb},
       gesture:this.lastGesture??null,activePointer:this.pointer,strokePoints:this.points.length,
       hand:{ready:this.hand.ready,opacity:this.handOpacity,error:this.hand.error??null,asset:'MIT WebXR hand / refined editable derivative'},
-      render:{...this.pipeline.info(),calls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles},
+      render:{...this.renderInfo(),calls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles},
       frameMs:{median:a[Math.floor(a.length*.5)]??0,p95:a[Math.floor(a.length*.95)]??0},benchmark:this.benchmarkResult??null,
       history:this.phaseHistory,contextLost:this.contextLost,userAgent:navigator.userAgent};
   }

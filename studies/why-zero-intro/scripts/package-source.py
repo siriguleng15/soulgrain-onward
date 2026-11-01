@@ -12,12 +12,12 @@ with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
         paths=[p] if p.is_file() else p.rglob('*')
         for f in paths:
             if f.is_file() and f.suffix not in ['.blend1','.blend2'] and '__pycache__' not in f.parts:
-                archive.write(f,'zero-opening-v2/'+str(f.relative_to(root)))
+                archive.write(f,'zero-hand-narrative-v3/'+str(f.relative_to(root)))
     try:
         commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True,stderr=subprocess.DEVNULL).strip()
     except subprocess.CalledProcessError:
         metadata=root/'SOURCE-COMMIT.txt'
         commit=metadata.read_text().strip() if metadata.exists() else 'working-copy'
-    archive.writestr('zero-opening-v2/SOURCE-COMMIT.txt',commit+'\n')
-    archive.writestr('zero-opening-v2/VERIFICATION.txt','Runtime sources and editable assets are included. Large screenshot/video evidence is available at https://siriguleng15.github.io/soulgrain-onward/why-zero-opening-v2/review.html and in the GitHub source branch. Run scripts/verify.mjs to regenerate it.\n')
+    archive.writestr('zero-hand-narrative-v3/SOURCE-COMMIT.txt',commit+'\n')
+    archive.writestr('zero-hand-narrative-v3/VERIFICATION.txt','Runtime sources and editable assets are included. Screenshot/video evidence is at https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-narrative-v3/review.html and in the GitHub source branch. Run scripts/verify-v3.mjs to regenerate it.\n')
 print('Source archive:',out.stat().st_size,'bytes')

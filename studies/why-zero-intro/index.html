@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#205d49">
-  <meta name="description" content="基于用户提供录屏校准的实时 WebGL 开场研究：结霜、画零与冰面解锁。">
+  <meta name="description" content="绿色手的完整实时三维互动：跟随指针、手势变化、圆牌、滚动转场、双手与长按反馈。">
   <link rel="icon" href="data:,">
-  <title>Zero — Opening Reference Study V2</title>
+  <title>Zero — Full Hand Interaction V3</title>
 </head>
 <body>
   <main id="app" data-state="countdown">
@@ -16,15 +16,16 @@
       <h1 id="title">DRAW A ZERO</h1>
       <p id="hint" class="sr-only">按住冰面画一个闭合的零，松开验证。</p>
     </section>
-    <span id="loading" role="status">PREPARING THE ICE</span>
+    <span id="loading" role="status">PREPARING THE SCENE</span>
     <span id="phase" class="sr-only">01 / ARRIVAL</span>
     <nav class="study-controls" aria-label="演示控制">
       <button id="restart" title="重新开始" aria-label="重新开始">↺</button>
       <button id="skip" title="跳过倒数，开始画零" aria-label="跳过倒数">↓</button>
+      <button id="to-hands" title="直接进入完整手部互动" aria-label="直接进入手部互动">↗</button>
     </nav>
     <button id="debug-toggle" aria-label="调试与性能" aria-expanded="false" aria-controls="debug" title="调试与性能"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10.8A9.2 9.2 0 0 1 9.2 22 10.8 10.8 0 0 0 21 10.8Z"/></svg></button>
     <aside id="debug" hidden>
-      <div class="debug-top"><strong>REFERENCE STUDY / V2</strong><button id="debug-close" aria-label="关闭调试面板">×</button></div>
+      <div class="debug-top"><strong>HAND NARRATIVE / V3</strong><button id="debug-close" aria-label="关闭调试面板">×</button></div>
       <label>显示质量<select id="quality"><option value="high">完整 / HIGH</option><option value="balanced">均衡 / BALANCED</option><option value="low">轻量 / LOW</option></select></label>
       <button id="benchmark">开始 10 秒性能采样</button>
       <button id="export-report">导出诊断 JSON</button>
@@ -37,6 +38,17 @@
       <button id="again" aria-label="重新体验开场">REPLAY THE OPENING <span>↺</span></button>
     </section>
     <span class="reward" id="reward" aria-hidden="true">+ 100 XP</span>
+    <section id="story-hud" hidden>
+      <button id="story-back" aria-label="返回上一段">⌃</button>
+      <div class="story-ruler" aria-hidden="true"><span>│╵╵╵╵╵╵│╵╵╵╵╵╵│╵╵╵╵╵╵│</span><small id="story-ruler-label">-100 BZ</small></div>
+      <span class="story-xp">✦ 100 XP</span>
+      <p class="story-instruction">Move the pointer. Scroll to explore.</p>
+      <div class="story-pill"><span class="study-emblem">≈</span><button id="story-next">CONTINUE EXPLORING</button><button id="story-menu-toggle" aria-label="选择互动章节">☰</button></div>
+      <nav id="story-menu" hidden><button data-chapter="0">01 · You Believed</button><button data-chapter="1.25">02 · Interactive Hand</button><button data-chapter="3.4">03 · The Connection</button></nav>
+    </section>
+    <div id="college-copy" aria-hidden="true"><div class="college-word"><i>C</i>ollege<span>would</span></div><div class="land-word"><span>land</span><i>You</i></div></div>
+    <div id="job-copy" aria-hidden="true"><i>a</i> JOB</div>
+    <span id="hold-copy" hidden>TAP<br>HOLD</span>
     <p id="error" hidden role="alert"></p>
   </main>
   <script type="module" src="./src/main.ts"></script>

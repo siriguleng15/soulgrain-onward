@@ -51,5 +51,30 @@
       "sha256": "2909dc9d969097954f4b693f204026a9dfaae69ee80558d1166fcaf78943d5c6"
     }
   ],
-  "referenceRecordingsPublished": false
+  "referenceRecordingsPublished": false,
+  "v3": {
+    "scope": "Full recorded hand interaction through Creation/hold/release",
+    "assets": [
+      {
+        "file": "hand-long-v3.glb",
+        "bytes": 2055992,
+        "sha256": "4b7c57acb8ad941707ba13a313cb6b052df060a7b33c69ca144ce84032ab9950"
+      },
+      {
+        "file": "garden-v3.webp",
+        "bytes": 405942,
+        "sha256": "e673c5b2b3b13acb293a010435572476fe64ac08ed7cfbc4ee28d5a5ad3969db"
+      },
+      {
+        "file": "skin-v3.webp",
+        "bytes": 558314,
+        "sha256": "2dc70fa7ef99bfc20d352b4cb71e9289a2cdb24f726b36f87d273d4dcfcf544c"
+      }
+    ],
+    "hand": "Same MIT WebXR base, lengthened editable forearm, original bone posing. Normals averaged across duplicate export positions without changing skin topology.",
+    "background": "Original AI-assisted generated environment plate with realtime parallax, water motion and lighting; not full 3D terrain.",
+    "skin": "Original generated surface used as micro-bump/material variation.",
+    "coins": "Original canvas-drawn simple corporate-reference motifs on real 3D discs; no original-site icon files copied.",
+    "referenceRecordingsPublished": false
+  }
 }
