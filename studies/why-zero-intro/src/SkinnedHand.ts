@@ -4,9 +4,9 @@ import {clone} from 'three/addons/utils/SkeletonUtils.js';
 export type HandPose='open'|'reach'|'humanReach'|'clench'|'defiant';
 type Joint={bone:Bone;rest:Quaternion;axis:Vector3;value:number;name:string};
 const curls:Record<HandPose,number[][]>={
-  open:[[.10,.12,.1],[.05,.08,.04],[.18,.22,.12],[.65,.9,.45],[.8,1.2,.45]],
-  reach:[[.22,.28,.2],[.09,.12,.08],[.42,.50,.22],[.72,.70,.35],[.92,.80,.4]],
-  humanReach:[[.16,.22,.1],[.06,.12,.06],[.30,.3,.12],[.55,.45,.20],[.65,.55,.25]],
+  open:[[.60,.55,.35],[.04,.08,.04],[.10,.18,.10],[.22,.36,.18],[.34,.48,.22]],
+  reach:[[.32,.38,.22],[.11,.20,.10],[.34,.46,.20],[.48,.65,.28],[.64,.78,.34]],
+  humanReach:[[.46,.48,.22],[.08,.18,.09],[.45,.60,.22],[.64,.80,.30],[.80,.92,.35]],
   clench:[[.75,.8,.6],[.85,1.65,.85],[.85,1.8,.85],[.9,1.85,.85],[1.0,1.8,.8]],
   defiant:[[.75,.8,.6],[.9,1.8,.95],[.0,.035,.02],[.95,1.8,.9],[1.05,1.75,.8]],
 };
@@ -24,6 +24,7 @@ export class SkinnedHand {
   private smoothedTip=new Vector3();
   private initialized=false;
   private targetRotation=new Quaternion();
+  private forearm?:{bone:Bone;rest:Quaternion;axis:Vector3;value:number};
 
   constructor(source:Group,readonly human=false,skin?:Texture){
     const model=clone(source);
@@ -32,6 +33,8 @@ export class SkinnedHand {
     model.traverse(n=>{if(n instanceof Bone)bones.set(n.name,n);});
     const wrist=bones.get('wrist');
     if(!wrist)throw Error('Narrative hand is missing its wrist bone');
+    const forearm=bones.get('forearm-bend');
+    if(forearm)this.forearm={bone:forearm,rest:forearm.quaternion.clone(),axis:new Vector3(1,0,0).applyQuaternion(forearm.getWorldQuaternion(new Quaternion()).invert()),value:0};
     for(const finger of fingers){
       let parent:Bone=wrist;
       const parts=finger==='thumb'?['metacarpal','phalanx-proximal','phalanx-distal','tip']:['metacarpal','phalanx-proximal','phalanx-intermediate','phalanx-distal','tip'];
@@ -45,7 +48,7 @@ export class SkinnedHand {
     }
     this.index=bones.get('index-finger-tip')!;this.middle=bones.get('middle-finger-tip')!;
     if(!this.index||!this.middle)throw Error('Narrative hand has no fingertip joints');
-    this.material=new MeshPhysicalMaterial({color:new Color(human?'#9a6e5f':'#48a823'),metalness:0,roughness:human?.51:.39,clearcoat:human?.02:.18,clearcoatRoughness:.4,transparent:true,opacity:0,envMapIntensity:human?.15:.24});
+    this.material=new MeshPhysicalMaterial({color:new Color(human?'#b58b72':'#349618'),metalness:0,roughness:human?.53:.36,clearcoat:human?.02:.23,clearcoatRoughness:.32,transparent:true,opacity:0,envMapIntensity:human?.27:.40});
     this.material.onBeforeCompile=s=>{
       Object.assign(s.uniforms,this.uniforms);
       s.uniforms.uSkin={value:skin??null};
@@ -55,9 +58,10 @@ export class SkinnedHand {
       s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
         float y=vHandLocal.y;
         float veins=sin(vHandLocal.z*170.+sin(y*65.))*sin(y*111.);
-        float icy=pow(.5+.5*sin((y+veins*.002)*140.),6.)*.55+smoothstep(.005,.048,y)*.65;
-        diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.18,.62,.68),min(1.,icy)*uIce);
-        diffuseColor.rgb*=1.+veins*${human?'.018':'.008'};
+        // Broad internal cyan scattering instead of conspicuous striped bands.
+        float icy=smoothstep(-.015,.065,y)*.62+pow(.5+.5*sin(vHandLocal.z*92.+y*20.),3.)*.16;
+        diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.12,.48,.42),min(1.,icy)*uIce);
+        diffuseColor.rgb*=1.+veins*${human?'.013':'.004'};
         ${human?'float skinTone=texture2D(uSkin,vHandLocal.zy*vec2(11.,5.)+vec2(.4,.6)).r;diffuseColor.rgb*=.90+skinTone*.13;':''}
         ${human?`float crease=exp(-pow((y+.078)/.0012,2.))*exp(-pow((vHandLocal.z+.012)/.012,2.))+exp(-pow((y+.104)/.0010,2.))*exp(-pow((vHandLocal.z+.012)/.012,2.));
         crease+=exp(-pow((y+.081)/.0013,2.))*exp(-pow((vHandLocal.z-.012)/.012,2.))+exp(-pow((y+.11)/.0011,2.))*exp(-pow((vHandLocal.z-.016)/.011,2.));
@@ -73,7 +77,7 @@ export class SkinnedHand {
         normal=normalize(abs(det)*normal-surfaceGradient);
       `);
     };
-    this.material.customProgramCacheKey=()=> 'narrative-hand-v3-'+human;
+    this.material.customProgramCacheKey=()=> 'narrative-hand-v4-'+human;
     model.traverse(n=>{
       if(!(n instanceof Mesh))return;
       // Match normals across duplicated export vertices, without changing skin topology.
@@ -95,6 +99,11 @@ export class SkinnedHand {
     this.root.visible=opacity>.001;
     if(!this.root.visible)return;
     const k=1-Math.exp(-Math.min(dt,.1)*18);
+    if(this.forearm){
+      const arm=this.forearm;
+      arm.value+=((this.human?0:-1.42*defiance)-arm.value)*k;
+      arm.bone.quaternion.copy(arm.rest).multiply(new Quaternion().setFromAxisAngle(arm.axis,arm.value));
+    }
     this.uniforms.uIce.value=ice;this.uniforms.uWristFade.value=wristFade;
     this.material.opacity=opacity;
     for(const joint of this.joints){
@@ -102,9 +111,9 @@ export class SkinnedHand {
       const part=joint.name.includes('proximal')?0:joint.name.includes('intermediate')?1:2;
       let value=0;
       if(joint.name.includes('metacarpal')){
-        value=finger===0?-.23-amount*.28-defiance*.30:(finger-2)*.025;
+        value=finger===0?(this.human?-.43:pose==='open'?-.45:-.23)-amount*.28-defiance*.30:(finger-2)*.025;
       }else{
-        const normal=curls[pose][finger][part];
+        const normal=pose==='defiant'?curls.reach[finger][part]+(curls.defiant[finger][part]-curls.reach[finger][part])*defiance:curls[pose][finger][part];
         value=-(normal+(curls.clench[finger][part]-normal)*amount);
       }
       joint.value+=(value-joint.value)*k;

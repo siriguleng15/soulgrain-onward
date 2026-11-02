@@ -28,7 +28,8 @@ try{
   const clenched=await state();
   const angle=s=>s.green.joints.find(j=>j.name==='index-finger-phalanx-proximal').angle;
   check('Pressing actually articulates the finger joints',Math.abs(angle(clenched)-angle(a))>.18,{before:angle(a),after:angle(clenched)});
-  await shot(out+'/02-pointer-grip.png');await end(width*.78,height*.45);await pause(600);
+  await shot(out+'/02-pointer-grip.png');await end(width*.78,height*.45);
+  await wait(`Math.abs(window.__frostDemo.getState().experience.green.joints.find(j=>j.name==='index-finger-phalanx-proximal').angle-(${angle(a)}))<.15`,'released finger returns to rest');
   check('Release restores the relaxed gesture',Math.abs(angle(await state())-angle(a))<.15,null);
   const orbit=(await state()).coins.positions;await pause(500);
   check('Orbiting objects continue to move in three dimensions',(await state()).coins.visible&&Math.hypot(...(await state()).coins.positions[0].map((v,i)=>v-orbit[0][i]))>.01,null);
