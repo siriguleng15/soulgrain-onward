@@ -101,7 +101,7 @@ class FrostDemo {
     await Promise.allSettled([
       this.pipeline.loadPhoto(import.meta.env.BASE_URL+'assets/frost-study-v2.webp'),
       this.coreOnly?Promise.resolve():this.hand.load(import.meta.env.BASE_URL+'assets/hand-refined-v2.glb'),
-      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/hand-long-v3.glb',import.meta.env.BASE_URL+'assets/garden-v3.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp'),
+      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/hand-studio-v4.glb',import.meta.env.BASE_URL+'assets/garden-v3.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp'),
       font,
     ]);
     this.loading=false;
@@ -287,10 +287,14 @@ class FrostDemo {
     el('again').hidden=postActive;
     el('college-copy').style.opacity=String(postActive?Math.max(0,Math.min((storyProgress-1.5)/.30,(2.65-storyProgress)/.35,1)):0);
     el('college-copy').style.transform='translateY('+((1.8-storyProgress)*70)+'px)';
+    const college=el('college-copy').querySelector<HTMLElement>('.college-word')!,land=el('college-copy').querySelector<HTMLElement>('.land-word')!;
+    college.style.opacity=String(Math.max(0,Math.min(1,(storyProgress-1.65)/.25)));
+    land.style.opacity=String(Math.max(0,Math.min(1,(storyProgress-2.0)/.25)));
+    land.style.transform='translateY('+Math.max(0,(2.25-storyProgress)*65)+'px)';
     el('job-copy').style.opacity=String(postActive?Math.max(0,Math.min((storyProgress-2.35)/.25,(3.2-storyProgress)/.25,1)):0);
     el('hold-copy').hidden=!postActive||storyProgress<3.1;
     el('story-ruler-label').textContent=storyProgress>2.5?'-75 BZ':'-100 BZ';
-    el('story-next').textContent=storyProgress>3.1?'REPLAY THE HANDS':'CONTINUE EXPLORING';
+    el('story-next').textContent=storyProgress>3.1?'Replay the hands':'Continue exploring';
     el('reward').style.opacity=String(v.orb);
     this.backdrop.uniforms.uTime.value=this.narrative.time;
     this.backdrop.uniforms.uDawn.value=v.dawn;
@@ -316,7 +320,7 @@ class FrostDemo {
   }
   getState(){
     const a=[...this.frameTimes].sort((a,b)=>a-b),v=this.narrative?.values;
-    return{version:'hand-narrative-v3',experience:this.post.state(),phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
+    return{version:'hand-polish-v4',experience:this.post.state(),phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
       values:{number:v?.number,freeze:v?.freeze,shatter:v?.shatter,melt:v?.melt,dawn:v?.dawn,flash:v?.flash,hand:v?.hand,orb:v?.orb},
       gesture:this.lastGesture??null,activePointer:this.pointer,strokePoints:this.points.length,
       hand:{ready:this.hand.ready,opacity:this.handOpacity,error:this.hand.error??null,asset:'MIT WebXR hand / refined editable derivative'},

@@ -1,0 +1,61 @@
+{
+  "base": "MIT immersive-web/webxr-input-profiles generic-hand/right.glb",
+  "baseSHA256": "291790c14f7f88a7f9bd35330c47392ed8e8d395ae6728f4bb7089f1bc1f2b96",
+  "assetSHA256": "6f1c61e16d264a16e3421e070817d3646ce3e99f069fe8de8d663e1c273ac456",
+  "asset": "public/assets/hand-studio-v4.glb",
+  "editableSource": "assets-src/hand-studio-v4.blend",
+  "generator": "assets-src/refine_hand_v4.py",
+  "vertices": 40327,
+  "faces": 40244,
+  "bones": [
+    "wrist",
+    "thumb-metacarpal",
+    "thumb-phalanx-proximal",
+    "thumb-phalanx-distal",
+    "thumb-tip",
+    "index-finger-metacarpal",
+    "index-finger-phalanx-proximal",
+    "index-finger-phalanx-intermediate",
+    "index-finger-phalanx-distal",
+    "index-finger-tip",
+    "middle-finger-metacarpal",
+    "middle-finger-phalanx-proximal",
+    "middle-finger-phalanx-intermediate",
+    "middle-finger-phalanx-distal",
+    "middle-finger-tip",
+    "ring-finger-metacarpal",
+    "ring-finger-phalanx-proximal",
+    "ring-finger-phalanx-intermediate",
+    "ring-finger-phalanx-distal",
+    "ring-finger-tip",
+    "pinky-finger-metacarpal",
+    "pinky-finger-phalanx-proximal",
+    "pinky-finger-phalanx-intermediate",
+    "pinky-finger-phalanx-distal",
+    "pinky-finger-tip",
+    "forearm-bend"
+  ],
+  "restSkeletonChanged": false,
+  "additionalController": {
+    "bone": "forearm-bend",
+    "parent": null,
+    "restMatrix": "Identical to original wrist; the original 25 bones are unchanged",
+    "influence": "Only original wrist weights, smoothly split over Blender-local z=0.045..0.090 m",
+    "pivotBlenderLocal": [
+      0.03912608325481415,
+      -0.009157166816294193,
+      0.0557754710316658
+    ],
+    "recommendedAxis": "Raw loaded glTF +X BEFORE the runtime model.rotation.y=PI/2. Transform (1,0,0) through inverse forearm.getWorldQuaternion() to bone-local Y. The mirrored green-hand runtime uses -1.42 * defiance radians; original wrist and fingers stay fixed.",
+    "boneLocalAxisForRawGLTFX": [
+      2.0321820670687885e-07,
+      1.0,
+      1.0838304120852627e-07
+    ]
+  },
+  "roundedWristBoundarySamples": 41,
+  "forearmRings": 19,
+  "forearmExtensionMetres": 0.45,
+  "unchangedProximalArmRings": 8,
+  "notes": "Rounded original rectangular wrist; elliptical taper and continuous wrist skin weights; perpendicular-only finger fullness. Independent derivative, not original-site asset."
+}

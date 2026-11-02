@@ -9,7 +9,7 @@
     "sha256": "291790c14f7f88a7f9bd35330c47392ed8e8d395ae6728f4bb7089f1bc1f2b96",
     "purpose": "Independently posed green instructional hand. Not an original Why Zero asset."
   },
-  "version": "reference-v2",
+  "version": "hand-polish-v4",
   "hand": "MIT WebXR base independently refined in Blender; code-driven mirrored pointing pose",
   "handSource": "https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/assets/profiles/generic-hand",
   "handLicense": "HAND-LICENSE.txt",
@@ -75,6 +75,15 @@
     "background": "Original AI-assisted generated environment plate with realtime parallax, water motion and lighting; not full 3D terrain.",
     "skin": "Original generated surface used as micro-bump/material variation.",
     "coins": "Original canvas-drawn simple corporate-reference motifs on real 3D discs; no original-site icon files copied.",
+    "referenceRecordingsPublished": false
+  },
+  "v4": {
+    "asset": "hand-studio-v4.glb",
+    "sha256": "6f1c61e16d264a16e3421e070817d3646ce3e99f069fe8de8d663e1c273ac456",
+    "bytes": 2638024,
+    "hand": "Independent MIT derivative with rounded elliptical forearm and 26 bones including independent forearm-bend; original 25 rest joints preserved",
+    "source": "assets-src/refine_hand_v4.py; assets-src/hand-studio-v4.blend",
+    "background": "Default retains original generated V3 environment plate, softened and recolored in shader. Optional environment=spatial procedural geometry is experimental and not presented as a finished visual match.",
     "referenceRecordingsPublished": false
   }
 }

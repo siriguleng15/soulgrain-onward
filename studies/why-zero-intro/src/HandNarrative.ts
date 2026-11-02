@@ -1,8 +1,9 @@
-import {AmbientLight,Color,DirectionalLight,Euler,Group,HalfFloatType,Mesh,MeshBasicMaterial,OrthographicCamera,PerspectiveCamera,PlaneGeometry,RepeatWrapping,RGBAFormat,Raycaster,Scene,ShaderMaterial,SphereGeometry,Texture,TextureLoader,UnsignedByteType,Vector2,Vector3,WebGLRenderer,WebGLRenderTarget} from 'three';
+import {AmbientLight,Color,DirectionalLight,Euler,Group,HalfFloatType,Mesh,MeshBasicMaterial,OrthographicCamera,PerspectiveCamera,PlaneGeometry,Quaternion,RepeatWrapping,RGBAFormat,Raycaster,Scene,ShaderMaterial,SphereGeometry,Texture,TextureLoader,UnsignedByteType,Vector2,Vector3,WebGLRenderer,WebGLRenderTarget} from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {SkinnedHand} from './SkinnedHand.ts';
 import {CoinOrbit} from './CoinOrbit.ts';
 import {PetalField} from './PetalField.ts';
+import {GardenEnvironment} from './GardenEnvironment.ts';
 import {quadVertex} from './shaders.ts';
 import {connectionFragment,handComposite} from './handSceneShaders.ts';
 
@@ -16,14 +17,16 @@ export class HandNarrative {
   readonly camera=new PerspectiveCamera(32,1,.05,30);
   readonly orbit=new CoinOrbit();
   readonly petals=new PetalField();
+  private readonly spatialGarden=new URLSearchParams(location.search).get('environment')==='spatial';
+  readonly garden=this.spatialGarden?new GardenEnvironment():undefined;
   readonly raycaster=new Raycaster();
   readonly pointer=new Vector2(.5,.5);
   readonly pointerTarget=new Vector2(.5,.5);
   readonly target=new Mesh(new SphereGeometry(.15,20,16),new MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}));
   readonly ring:Mesh;
-  readonly light=new DirectionalLight(0xfff9f1,2.4);
-  readonly fill=new DirectionalLight(0xa4e4e9,.4);
-  readonly ambient=new AmbientLight(0xe1f4eb,.25);
+  readonly light=new DirectionalLight(0xfff9f1,1.65);
+  readonly fill=new DirectionalLight(0xc6edf0,.62);
+  readonly ambient=new AmbientLight(0xe1f4eb,.36);
   private targetRT:WebGLRenderTarget;
   private readonly screen=new Scene();
   private readonly screenCamera=new OrthographicCamera(-1,1,1,-1,0,1);
@@ -43,17 +46,20 @@ export class HandNarrative {
   private width=1;
   private height=1;
   private aspect=1;
+  private readonly poseRotation=new Quaternion();
+  private readonly screenRoll=new Quaternion();
+  private readonly rollAxis=new Vector3(0,0,1);
 
   constructor(private renderer:WebGLRenderer,environment:Texture){
     this.scene.environment=environment;
     this.camera.position.z=3.6;
-    this.light.position.set(-2.5,4,2.4);this.fill.position.set(3,-1,3);
+    this.light.position.set(-2.5,3.8,2.4);this.fill.position.set(2.2,.6,3);
     this.scene.add(this.light,this.fill,this.ambient,this.orbit.group,this.petals.mesh,this.target);
-    this.target.position.set(0,0,.5);
+    this.target.position.set(0,0,.5);if(this.garden){this.garden.update(0,0,0);this.scene.add(this.garden.group);}
     this.ringMaterial=new ShaderMaterial({vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:connectionFragment,transparent:true,depthWrite:false,depthTest:false,toneMapped:false,uniforms:{uHold:{value:0},uHover:{value:0},uTime:{value:0}}});
-    this.ring=new Mesh(new PlaneGeometry(.43,.43),this.ringMaterial);this.ring.position.copy(this.target.position);this.ring.renderOrder=100;this.scene.add(this.ring);
+    this.ring=new Mesh(new PlaneGeometry(.34,.34),this.ringMaterial);this.ring.position.copy(this.target.position);this.ring.renderOrder=100;this.scene.add(this.ring);
     this.targetRT=new WebGLRenderTarget(1,1,{format:RGBAFormat,type:renderer.extensions.has('EXT_color_buffer_float')?HalfFloatType:UnsignedByteType,depthBuffer:true});
-    this.composite=new ShaderMaterial({vertexShader:quadVertex,fragmentShader:handComposite,depthWrite:false,depthTest:false,transparent:true,toneMapped:false,uniforms:{uScene:{value:this.targetRT.texture},uGarden:{value:null},uGardenAspect:{value:16/9},uPointer:{value:this.pointer},uTexel:{value:new Vector2()},uAspect:{value:1},uTime:{value:0},uProgress:{value:0},uHold:{value:0},uAlpha:{value:0}}});
+    this.composite=new ShaderMaterial({vertexShader:quadVertex,fragmentShader:handComposite,depthWrite:false,depthTest:false,transparent:true,toneMapped:false,uniforms:{uScene:{value:this.targetRT.texture},uSpatialGarden:{value:this.spatialGarden?1:0},uGarden:{value:null},uGardenAspect:{value:16/9},uPointer:{value:this.pointer},uTexel:{value:new Vector2()},uAspect:{value:1},uTime:{value:0},uProgress:{value:0},uHold:{value:0},uAlpha:{value:0}}});
     const quad=new Mesh(new PlaneGeometry(2,2),this.composite);quad.frustumCulled=false;this.screen.add(quad);
   }
 
@@ -108,23 +114,30 @@ export class HandNarrative {
     const night=smooth(.12,.8,this.hold),defiance=smooth(.28,.78,this.hold);
     const mx=(this.pointer.x-.5)*2,my=(this.pointer.y-.5)*2;
     const idle=Math.sin(this.time*.7)*.025;
-    const exploreTip=new Vector3(mx*this.aspect*.30+.10,.54+my*.18+idle,.30);
-    const leftTip=new Vector3(-.17+mx*.055,.10+my*.04,.45);
-    const greenTip=exploreTip.lerp(leftTip,reach).lerp(new Vector3(-.50,.40,.55),defiance);
-    const exploreRotation=new Euler(.10+my*.18,.08+mx*.4,2.72+mx*.16);
-    const rotation=new Euler(lerp(exploreRotation.x,2.0,reach),lerp(exploreRotation.y,.06,reach),lerp(exploreRotation.z,1.95,reach));
-    rotation.z=lerp(rotation.z,2.80,defiance);rotation.y=lerp(rotation.y,-.25,defiance);rotation.x=lerp(rotation.x,.12,defiance);
-    this.green.update(dt,greenTip,rotation,lerp(lerp(7.5,5.6,reach),8,defiance),defiance>.1?'defiant':reach>.3?'reach':'open',this.pressed&&!this.holding&&reach<.7?.58:Math.max(0,.1-my*.15)*(1-reach)*(1-defiance),appearance,lerp(.32,0,reach),1-reach,defiance);
-    const rightTip=new Vector3(.22+mx*.06,-.10+my*.04,.44).lerp(new Vector3(.30,-.03,.52),defiance);
-    this.human.update(dt,rightTip,new Euler(.06,.1+mx*.05,-1.98),5.35,'humanReach',0,smooth(2.0,2.7,p),0,0);
+    // Reference: a diagonal, open palm rises from lower left, rather than a vertical peace sign.
+    const exploreTip=new Vector3(mx*this.aspect*.28+.48,.63+my*.15+idle,.30);
+    const leftTip=new Vector3(-.17+mx*.055,-.048+my*.04,.45);
+    const greenTip=exploreTip.lerp(leftTip,reach).lerp(new Vector3(-.49,.35,.55),defiance);
+    const exploreRotation=new Euler(.15+my*.16,.12+mx*.4,2.22+mx*.16);
+    const rotation=new Euler(lerp(exploreRotation.x,1.62,reach),lerp(exploreRotation.y,.48,reach),lerp(exploreRotation.z,1.35,reach));
+    rotation.z=lerp(rotation.z,3.08,defiance);rotation.y=lerp(rotation.y,-.48,defiance);rotation.x=lerp(rotation.x,.20,defiance);
+    // Screen-space wrist roll preserves the measured fingertip anchor while bringing
+    // the relaxed green forearm in from the left, as in the recorded composition.
+    this.poseRotation.setFromEuler(rotation);
+    this.screenRoll.setFromAxisAngle(this.rollAxis,-.56*reach*(1-defiance));
+    rotation.setFromQuaternion(this.poseRotation.premultiply(this.screenRoll));
+    this.green.update(dt,greenTip,rotation,lerp(lerp(7.7,4.95,reach),3.8,defiance),defiance>.1?'defiant':reach>.3?'reach':'open',this.pressed&&!this.holding&&reach<.7?.58:Math.max(0,.1-my*.15)*(1-reach)*(1-defiance),appearance,lerp(.32,0,reach),1-reach,defiance);
+    const rightTip=new Vector3(.19+mx*.06,-.12+my*.04,.44).lerp(new Vector3(.25,-.08,.52),defiance);
+    this.human.update(dt,rightTip,new Euler(.08,.18+mx*.05,-1.98),4.1,'humanReach',0,smooth(2.0,2.7,p),0,0);
     this.orbit.update(this.time,smooth(.5,.95,p)*(1-smooth(1.65,2.1,p)),mx*.17,my*.08,this.aspect);
     this.petals.update(this.time,smooth(2.0,2.75,p),this.aspect);
+    this.garden?.update(this.time,smooth(2.0,2.75,p),night);
     this.ring.visible=p>3.08;this.target.visible=true;
     this.ring.scale.setScalar(1+this.hold*.3);
     this.ringMaterial.uniforms.uHold.value=this.hold;this.ringMaterial.uniforms.uHover.value=this.hovered?1:0;
     this.ringMaterial.uniforms.uTime.value=this.time;
     this.light.color.copy(new Color(0xfff9f1)).lerp(new Color(0xff6c4d),night);
-    this.light.intensity=lerp(2.4,1.9,night);this.ambient.intensity=lerp(.25,.08,night);
+    this.light.intensity=lerp(1.65,1.35,night);this.ambient.intensity=lerp(.36,.10,night);
     this.fill.color.copy(new Color(0xa4e4e9)).lerp(new Color(0xa7314f),night);
     const u=this.composite.uniforms;u.uTime.value=this.time;u.uProgress.value=p;u.uHold.value=night;
   }
@@ -138,6 +151,6 @@ export class HandNarrative {
     r.autoClear=auto;r.setClearColor(clearColor,clearAlpha);r.setRenderTarget(previous);
   }
   state(){
-    return{ready:this.ready,error:this.error??null,progress:this.progress,targetProgress:this.targetProgress,chapter:this.progress<.25?'belief':this.progress<1.8?'hands':this.progress<2.75?'college':this.progress<3.08?'creation':'connection',pointer:this.pointer.toArray(),targetPointer:this.pointerTarget.toArray(),holding:this.holding,hold:this.hold,hovered:this.hovered,green:this.green?.state(),human:this.human?.state(),coins:this.orbit.state(),petals:this.petals.mesh.count,field:[this.width,this.height],sceneType:'3D skinned hands, orbiting discs, instanced petals, independently generated environment plate'};
+    return{ready:this.ready,error:this.error??null,progress:this.progress,targetProgress:this.targetProgress,chapter:this.progress<.25?'belief':this.progress<1.8?'hands':this.progress<2.75?'college':this.progress<3.08?'creation':'connection',pointer:this.pointer.toArray(),targetPointer:this.pointerTarget.toArray(),holding:this.holding,hold:this.hold,hovered:this.hovered,green:this.green?.state(),human:this.human?.state(),coins:this.orbit.state(),petals:this.petals.mesh.count,field:[this.width,this.height],sceneType:this.spatialGarden?'3D skinned hands, discs, instanced petals, experimental modeled garden / columns / reflective pond':'3D skinned hands, discs, instanced petals, original softened 2.5D garden',garden:this.garden?.state()??null};
   }
 }

@@ -1,11 +1,16 @@
-import {CanvasTexture,CircleGeometry,CylinderGeometry,DoubleSide,Group,Mesh,MeshBasicMaterial,MeshPhysicalMaterial,SRGBColorSpace} from 'three';
+import {CanvasTexture,CircleGeometry,DoubleSide,Group,LatheGeometry,Mesh,MeshBasicMaterial,MeshPhysicalMaterial,SRGBColorSpace,Vector2} from 'three';
 
-/** Original small vector glyphs on genuine, bevel-edged three-dimensional discs. */
+/** Independently drawn glyphs on real discs; rounded rims catch the softbox light. */
 export class CoinOrbit {
   readonly group=new Group();
   private readonly coins:Group[]=[];
   private readonly materials:(MeshBasicMaterial|MeshPhysicalMaterial)[]=[];
   constructor(){
+    const rim=new LatheGeometry([
+      new Vector2(0,-.011),new Vector2(.121,-.011),new Vector2(.129,-.009),
+      new Vector2(.133,-.004),new Vector2(.133,.004),new Vector2(.129,.009),
+      new Vector2(.121,.011),new Vector2(0,.011),
+    ],64);
     for(let i=0;i<6;i++){
       const c=document.createElement('canvas');c.width=c.height=256;
       const ctx=c.getContext('2d')!;ctx.clearRect(0,0,256,256);ctx.fillStyle=['#88712c','#308665','#1c3043','#ad3030','#384b31','#41808b'][i];
@@ -15,22 +20,24 @@ export class CoinOrbit {
       else ctx.fillText(['G','','∞','T','','a'][i],128,137);
       const texture=new CanvasTexture(c);texture.colorSpace=SRGBColorSpace;
       const icon=new MeshBasicMaterial({map:texture,transparent:true,side:DoubleSide,depthWrite:false});
-      const shell=new MeshPhysicalMaterial({color:0xf8f7f0,roughness:.25,metalness:.08,clearcoat:.5,transparent:true,opacity:0});
+      const shell=new MeshPhysicalMaterial({color:0xf8f7f0,roughness:.28,metalness:.025,clearcoat:.3,transparent:true,opacity:0});
       this.materials.push(shell,icon);
-      const coin=new Group(),disc=new Mesh(new CylinderGeometry(.105,.105,.015,48,1),shell);
-      disc.rotation.x=Math.PI/2;
-      const face=new Mesh(new CircleGeometry(.086,48),icon);face.position.z=.008;
-      coin.add(disc,face);this.group.add(coin);this.coins.push(coin);
+      const coin=new Group(),disc=new Mesh(rim,shell);disc.rotation.x=Math.PI/2;
+      const face=new Mesh(new CircleGeometry(.111,48),icon);face.position.z=.0116;
+      const back=face.clone();back.position.z=-.0116;back.rotation.y=Math.PI;
+      coin.add(disc,face,back);this.group.add(coin);this.coins.push(coin);
     }
   }
   update(time:number,opacity:number,x:number,y:number,aspect:number){
     this.group.visible=opacity>.001;
     for(let i=0;i<6;i++){
-      const angle=time*.32+i*Math.PI/3,r=.65;
+      const angle=time*.24+i*Math.PI/3;
       const coin=this.coins[i];
-      coin.position.set(x+Math.cos(angle)*r*Math.min(1,aspect),y+Math.sin(angle)*r*.78,Math.sin(angle)*.35+.15);
-      coin.rotation.set(Math.sin(angle)*.65,Math.cos(angle)*.65,time*.12+i*.5);
-      coin.scale.setScalar(.75+Math.sin(angle)*.12);
+      // The ring occupies the lower-left wrist space, leaving the open palm readable.
+      const orbitX=Math.cos(angle)*.67,orbitY=Math.sin(angle)*.63;
+      coin.position.set(x-.12+(orbitX*.93+orbitY*.18)*Math.min(1,aspect),y-.20+orbitY*.94-orbitX*.16,Math.sin(angle+.6)*.34+.10);
+      coin.rotation.set(Math.sin(angle+.8)*1.03,Math.cos(angle-.3)*.78,time*.10+i*.63);
+      coin.scale.setScalar(.82+Math.sin(angle+.6)*.13);
     }
     for(const m of this.materials)m.opacity=opacity;
   }

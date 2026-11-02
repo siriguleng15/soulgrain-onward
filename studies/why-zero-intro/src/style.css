@@ -67,3 +67,16 @@ select{background:#204f3f;color:#e8f4ed;border:1px solid #c0ddcb66;padding:9px;f
 #hold-copy{position:fixed;left:56%;top:47%;z-index:4;font:600 clamp(12px,2.8vh,18px)/.96 'Zero Sans',monospace;color:white;letter-spacing:.8px;pointer-events:none;text-shadow:0 0 12px #fff4}
 #app[data-state=done] .study-controls{opacity:.45}
 @media(max-aspect-ratio:1/1){#story-next{min-width:210px;font-size:10px;padding:7px 14px}.story-pill{bottom:22px}.story-instruction{bottom:77px;font-size:9px}.story-xp{right:12px;font-size:10px}.story-ruler{font-size:6px;top:14px}.college-word{left:5vw;top:21vh;font-size:15vw}.land-word{right:6vw;bottom:25vh}.land-word>i{font-size:22vw}#job-copy{font-size:29vw}#hold-copy{left:61%;font-size:13px}}
+
+/* V4: the product HUD stays quiet while the hand owns the composition. */
+.story-instruction{background:#41655348;opacity:.72;font-size:9px;padding:5px 11px}
+.story-ruler{opacity:.65}.story-pill{bottom:17px;background:#f4f9f1b8}
+#hold-copy{font-size:clamp(13px,2.9vh,19px);font-weight:650;letter-spacing:.5px}
+
+#story-next{height:40px;min-width:276px;font-size:13px;letter-spacing:.1px;text-transform:none}
+.story-pill{gap:7px}.study-emblem{width:38px;height:38px}
+#story-menu-toggle{width:38px;height:38px}
+.story-instruction{bottom:70px;min-height:30px;display:flex;align-items:center;justify-content:center}
+@media(max-aspect-ratio:1/1){#story-next{min-width:210px;font-size:11px}.story-instruction{bottom:78px}}
+
+.college-c{width:2em;height:1.65em;display:inline-block;vertical-align:-.30em;margin-left:-.12em;margin-right:-.64em;overflow:visible}
