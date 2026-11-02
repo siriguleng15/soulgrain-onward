@@ -1,0 +1,47 @@
+{
+  "version": "hand-polish-v4",
+  "checks": {
+    "desktop/hand-validation.json": 14,
+    "tablet/hand-validation.json": 14,
+    "phone/hand-validation.json": 14,
+    "opening/browser-validation.json": 15,
+    "resilience-validation.json": 10
+  },
+  "browserCheckTotal": 67,
+  "gestureFixtures": 12,
+  "physicalSafariTested": false,
+  "pixelIdentical": false,
+  "defaultEnvironment": "softened independent 2.5D garden plate plus real 3D hands/discs/petals",
+  "experimentalEnvironment": "environment=spatial; not default and below visual target",
+  "handAssetSHA256": "6f1c61e16d264a16e3421e070817d3646ce3e99f069fe8de8d663e1c273ac456",
+  "unchangedHandWristVerticesAfterDistalExtension": 31253,
+  "vertexCoordinateSetDistanceMetres": 0.0,
+  "cyanBackgroundCrop": {
+    "rectangle": [
+      50,
+      200,
+      250,
+      400
+    ],
+    "referenceMeanRGB": [
+      146,
+      212,
+      217
+    ],
+    "v3MeanRGB": [
+      233.3,
+      246.1,
+      244.5
+    ],
+    "v4MeanRGB": [
+      144.4,
+      209.3,
+      212.7
+    ],
+    "scope": "Compressed screenshots and different pointer/time; descriptive color check, not pixel-identical validation"
+  },
+  "testEnvironment": "Linux Chromium / SwiftShader with real CDP mouse and simulated touch input. No physical iPad/Safari performance result.",
+  "videoChecks": 9,
+  "videoSeconds": 15,
+  "videoSHA256": "37ebf0ba5dad4bf1188576ba50af96cbdb0419a40925b20816467686c27300b7"
+}
