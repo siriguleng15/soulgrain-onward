@@ -10,6 +10,7 @@ export type {HandPose} from './HandRig.ts';
 export class SkinnedHand {
   readonly root=new Group();
   readonly rig:HandRig;
+  readonly glove:boolean;
   get joints(){return this.rig.joints;}
   readonly uniforms={uIce:{value:0},uWristFade:{value:1}};
   readonly material:MeshPhysicalMaterial;
@@ -33,10 +34,13 @@ export class SkinnedHand {
     if(forearm)this.forearm={bone:forearm,rest:forearm.quaternion.clone(),axis:new Vector3(1,0,0).applyQuaternion(forearm.getWorldQuaternion(new Quaternion()).invert()),value:0};
     let anatomical=source.userData.anatomicalV5===true;
     source.traverse(n=>{if(n.userData.anatomicalV5===true)anatomical=true;});
+    let glove=source.userData.gloveV5===true;
+    source.traverse(n=>{if(n.userData.gloveV5===true)glove=true;});
+    this.glove=glove;
     this.rig=new HandRig(bones,human,anatomical);
     this.index=bones.get('index-finger-tip')!;this.middle=bones.get('middle-finger-tip')!;
     if(!this.index||!this.middle)throw Error('Narrative hand has no fingertip joints');
-    const primary=createHandMaterial(human,skin);
+    const primary=createHandMaterial(human,skin,{gloveSurface:glove});
     primary.uniforms.uIce=this.uniforms.uIce;primary.uniforms.uWristFade=this.uniforms.uWristFade;
     this.material=primary.material;this.surfaces.push(primary);
     const materialCache=new Map<string,MeshPhysicalMaterial>();
@@ -90,5 +94,5 @@ export class SkinnedHand {
     const anchor=this.index.getWorldPosition(new Vector3()).lerp(this.middle.getWorldPosition(new Vector3()),this.human?0:defiance);
     this.root.position.copy(this.smoothedTip).sub(anchor);this.root.updateMatrixWorld(true);
   }
-  state(){return{visible:this.root.visible,anatomical:this.rig.anatomical,opacity:this.material.opacity,root:this.root.position.toArray(),index:this.index.getWorldPosition(new Vector3()).toArray(),middle:this.middle.getWorldPosition(new Vector3()).toArray(),surfaces:this.surfaces.map(s=>({name:s.material.name,authoredAlbedo:!!s.material.map,roughnessFactor:s.material.roughness})),joints:this.joints.filter(j=>j.name.includes('proximal')).map(j=>({name:j.name,angle:j.value}))};}
+  state(){return{visible:this.root.visible,anatomical:this.rig.anatomical,glove:this.glove,opacity:this.material.opacity,root:this.root.position.toArray(),index:this.index.getWorldPosition(new Vector3()).toArray(),middle:this.middle.getWorldPosition(new Vector3()).toArray(),surfaces:this.surfaces.map(s=>({name:s.material.name,authoredAlbedo:!!s.material.map,roughnessFactor:s.material.roughness})),joints:this.joints.filter(j=>j.name.includes('proximal')).map(j=>({name:j.name,angle:j.value}))};}
 }

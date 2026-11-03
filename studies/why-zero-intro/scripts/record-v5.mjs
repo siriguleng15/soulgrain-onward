@@ -43,6 +43,7 @@ try{
     if(i===63){await snapshot('grip');const s=await state();check('Press articulates actual finger joints',Math.abs(s.green.joints.find(j=>j.name==='index-finger-phalanx-proximal').angle-openAngle)>.18);}
   }
   check('Both actors use the canonical anatomical rig',initial.green.anatomical&&initial.human.anatomical);
+  check('Green hand uses the unified glove surface',initial.green.glove===true);
   check('Human UV albedo survives both material primitives',initial.human.surfaces.filter(s=>s.authoredAlbedo).length===2);
   await scrollTo(.55);await hold(32);await snapshot('mist');
   check('Actual reverse wheel can conceal the hand in white mist',(await state()).mist>.7);

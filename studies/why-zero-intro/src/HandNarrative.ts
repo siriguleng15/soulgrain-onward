@@ -72,11 +72,12 @@ export class HandNarrative {
     const quad=new Mesh(new PlaneGeometry(2,2),this.composite);quad.frustumCulled=false;this.screen.add(quad);
   }
 
-  async load(modelUrl:string,gardenUrl:string,skinUrl:string){
+  async load(modelUrl:string,gardenUrl:string,skinUrl:string,humanUrl=modelUrl){
     try{
-      const [gltf,garden,skin]=await Promise.all([new GLTFLoader().loadAsync(modelUrl),new TextureLoader().loadAsync(gardenUrl),new TextureLoader().loadAsync(skinUrl)]);
+      const loader=new GLTFLoader(),greenAsset=loader.loadAsync(modelUrl);
+      const [gltf,human,garden,skin]=await Promise.all([greenAsset,humanUrl===modelUrl?greenAsset:loader.loadAsync(humanUrl),new TextureLoader().loadAsync(gardenUrl),new TextureLoader().loadAsync(skinUrl)]);
       skin.wrapS=skin.wrapT=RepeatWrapping;
-      this.green=new SkinnedHand(gltf.scene as Group,false);this.human=new SkinnedHand(gltf.scene as Group,true,skin);
+      this.green=new SkinnedHand(gltf.scene as Group,false);this.human=new SkinnedHand(human.scene as Group,true,skin);
       this.scene.add(this.green.root,this.human.root);
       this.composite.uniforms.uGarden.value=garden;
       this.composite.uniforms.uGardenAspect.value=garden.image.width/garden.image.height;

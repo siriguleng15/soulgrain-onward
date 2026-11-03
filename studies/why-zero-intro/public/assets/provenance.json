@@ -102,7 +102,17 @@
         "assets-src/anatomical-v5-source/"
       ]
     },
-    "referenceRecordingsPublished": false
+    "referenceRecordingsPublished": false,
+    "greenGlove": {
+      "file": "green-glove-v5.glb",
+      "bytes": 937792,
+      "sha256": "0eb761b12c3749e2a71ddbbf37075ad74a1c10ca3efef86b78ef769923221188",
+      "source": "Elena FF / Rigged hand; CC BY-SA 4.0 derivative",
+      "geometry": "Single watertight glove surface; voxel union .7mm, smoothed shell, canonical skin weights transferred; no runtime vertex inflation",
+      "editable": "assets-src/green-glove-v5.blend",
+      "generator": "assets-src/create_green_glove_v5.py",
+      "rig": "Same 27 canonical joints; independent green actor, not a pose replacement"
+    }
   },
   "openingGuide": {
     "hand": "MIT WebXR base independently refined in Blender; code-driven mirrored pointing pose",

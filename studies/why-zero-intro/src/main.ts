@@ -102,7 +102,7 @@ class FrostDemo {
     await Promise.allSettled([
       this.pipeline.loadPhoto(import.meta.env.BASE_URL+'assets/frost-study-v2.webp'),
       this.coreOnly?Promise.resolve():this.hand.load(import.meta.env.BASE_URL+'assets/hand-refined-v2.glb'),
-      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/hand-anatomical-v5.glb',import.meta.env.BASE_URL+'assets/landscape-v5.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp'),
+      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/green-glove-v5.glb',import.meta.env.BASE_URL+'assets/landscape-v5.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp',import.meta.env.BASE_URL+'assets/hand-anatomical-v5.glb'),
       font,
     ]);
     this.loading=false;

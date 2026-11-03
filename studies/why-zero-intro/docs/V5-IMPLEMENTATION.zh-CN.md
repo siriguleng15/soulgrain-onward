@@ -63,3 +63,9 @@ by **Elena FF** (https://sketchfab.com/elenaferfor), licensed under
 测试环境若为 Linux Chromium / SwiftShader 与 CDP 模拟触控，应明确标注，不能称为 iPad Safari 实机测试。录屏若以固定审核时钟取帧，也不能用其流畅度代替硬件性能数据。
 
 本轮仍是根据录屏独立重建：原站模型、场景、相机轨迹、字体和光学参数没有直接取得。不能用代码构建成功或测试数量，替代对实际画面的逐帧判断，也不宣称像素完全一致。
+
+## 绿色手套表面清理
+
+绿色演员使用独立的 `green-glove-v5.glb`，真人手继续使用保留原 UV 的解剖资产。对绿色演员将原始表面做 0.7mm 体素并集、平滑和轻微厚度整理，移除指甲重叠及重复表面，再从原绑定转移骨骼权重。新表面共 16,613 顶点、33,222 三角形，27 骨骼；边界与非流形边均为 0，权重归一误差小于 5e-8。运行时不再叠加顶点法线膨胀，以避免二次挤压和闪烁。
+
+可编辑 `assets-src/green-glove-v5.blend` 与 `assets-src/create_green_glove_v5.py` 均包含在源包中；该衍生模型同样保留 Elena FF 署名与 CC BY-SA 4.0。

@@ -16,6 +16,7 @@ export interface HandSurfaceMaps {
   /** Keep false for the legacy hand, whose micro detail uses rest-space projection. */
   authoredUV?:boolean;
   role?:'skin'|'nail';
+  gloveSurface?:boolean;
 }
 
 export type HandMaterialUniforms={uIce:{value:number};uWristFade:{value:number}};
@@ -71,7 +72,7 @@ export function createHandMaterial(human:boolean,skin?:Texture,maps:HandSurfaceM
     shader.uniforms.uHandMicro={value:skin??pores()};
     shader.vertexShader=shader.vertexShader
       .replace('#include <common>','#include <common>\nvarying vec3 vHandRest;varying vec3 vHandRestNormal;varying vec2 vHandUV;')
-      .replace('#include <begin_vertex>',`#include <begin_vertex>\nvHandRest=position;vHandRestNormal=normal;vHandUV=uv;${human?'':'\ntransformed+=normal*(.0012*(1.-smoothstep(.018,.075,position.y)));'}`);
+      .replace('#include <begin_vertex>',`#include <begin_vertex>\nvHandRest=position;vHandRestNormal=normal;vHandUV=uv;${human||maps.gloveSurface?'':'\ntransformed+=normal*(.0012*(1.-smoothstep(.018,.075,position.y)));'}`);
     shader.fragmentShader=shader.fragmentShader.replace('#include <common>',`#include <common>
       varying vec3 vHandRest;varying vec3 vHandRestNormal;varying vec2 vHandUV;
       uniform float uIce,uWristFade;uniform sampler2D uHandMicro;
@@ -120,7 +121,7 @@ export function createHandMaterial(human:boolean,skin?:Texture,maps:HandSurfaceM
       normal=normalize(abs(handDet)*normal-handGradient);
     `);
   };
-  material.customProgramCacheKey=()=>`hand-v5-${human}-${nail}-${authored}-${!!maps.specularIntensity}`;
+  material.customProgramCacheKey=()=>`hand-v5-${human}-${nail}-${authored}-${!!maps.specularIntensity}-${!!maps.gloveSurface}`;
   material.userData.scattering='Bounded wrapped diffuse approximation, not measured SSS';
   return{material,uniforms};
 }
