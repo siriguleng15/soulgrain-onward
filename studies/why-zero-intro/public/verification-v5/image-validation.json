@@ -1,13 +1,13 @@
 {
   "method": "Pixel statistics from actual production-controller review frames, not reference-site matching or hardware FPS evidence",
   "saturatedGreenPixels": {
-    "full": 44368,
-    "mist": 16839,
-    "emergence": 47299
+    "full": 42107,
+    "mist": 14938,
+    "emergence": 44501
   },
   "backgroundLuminance": {
-    "earlyHold": 88.66239557422969,
-    "lateHold": 51.35162472829131
+    "earlyHold": 88.11734582633053,
+    "lateHold": 51.3505173557423
   },
   "checks": [
     {

@@ -205,7 +205,7 @@
   "forearmRingCount": 20,
   "ellipseEquationMaxError": 2.0735285288786542e-07,
   "forearmBoundarySamples": 150,
-  "forearmBRDFContinuation": "Authored boundary albedo and roughness sampled into separate derivative atlases; glTF specular factor1 matches opaque source specular alpha",
+  "forearmBRDFContinuation": "Boundary albedo and roughness sampled into derivative atlases; forearm uses constant specular factor1 while authored hand retains its variable source alpha map",
   "middleTipFromWristMetres": 0.12437118448454941,
   "sourceOpenPose": "Three.js evaluated original Open/Close animation at time 0; original vertex identity/UV/skin weights retained.",
   "sha256": "e78ca240ee503c1c7d018dca42b8c966953c926d611d82681ca33e23702730b0"

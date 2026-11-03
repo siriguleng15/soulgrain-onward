@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-03T11:43:48.994Z",
+  "testedAt": "2026-11-03T12:51:54.856Z",
   "url": "http://127.0.0.1:4785/",
   "checks": [
     {
@@ -87,6 +87,7 @@
           "green": {
             "visible": true,
             "anatomical": true,
+            "glove": true,
             "opacity": 0,
             "root": [
               0,
@@ -136,6 +137,7 @@
           "human": {
             "visible": true,
             "anatomical": true,
+            "glove": false,
             "opacity": 0,
             "root": [
               0,
@@ -236,8 +238,8 @@
           "garden": null
         },
         "phase": "guide",
-        "time": 4.3664999999999985,
-        "guideTime": 4.3664999999999985,
+        "time": 3.5831,
+        "guideTime": 3.5831,
         "loading": false,
         "values": {
           "number": 0,
@@ -278,8 +280,8 @@
           "triangles": 62312
         },
         "frameMs": {
-          "median": 150.10000000000036,
-          "p95": 550
+          "median": 116.70000000000073,
+          "p95": 450
         },
         "benchmark": null,
         "history": [
@@ -293,35 +295,35 @@
           },
           {
             "phase": "drawing",
-            "time": 0.41669999999999985
+            "time": 0.4331999999999998
           },
           {
             "phase": "guide",
-            "time": 1.2666000000000004
+            "time": 1.2164999999999997
           },
           {
             "phase": "drawing",
-            "time": 1.5831999999999997
+            "time": 1.3832999999999998
           },
           {
             "phase": "guide",
-            "time": 1.8998999999999995
+            "time": 1.5832000000000002
           },
           {
             "phase": "drawing",
-            "time": 2.5831999999999993
+            "time": 2.0330999999999997
           },
           {
             "phase": "guide",
-            "time": 2.5831999999999993
+            "time": 2.0330999999999997
           },
           {
             "phase": "drawing",
-            "time": 3.966499999999999
+            "time": 3.0664999999999996
           },
           {
             "phase": "guide",
-            "time": 4.116599999999999
+            "time": 3.1332000000000004
           }
         ],
         "contextLost": false,
@@ -377,6 +379,7 @@
           "green": {
             "visible": true,
             "anatomical": true,
+            "glove": true,
             "opacity": 0,
             "root": [
               0,
@@ -426,6 +429,7 @@
           "human": {
             "visible": true,
             "anatomical": true,
+            "glove": false,
             "opacity": 0,
             "root": [
               0,
@@ -527,7 +531,7 @@
         },
         "phase": "guide",
         "time": 4.716500000000001,
-        "guideTime": 4.249800000000001,
+        "guideTime": 4.266500000000001,
         "loading": false,
         "values": {
           "number": 0,
@@ -568,8 +572,8 @@
           "triangles": 62312
         },
         "frameMs": {
-          "median": 133.29999999999927,
-          "p95": 250
+          "median": 116.59999999999854,
+          "p95": 216.60000000000036
         },
         "benchmark": null,
         "history": [
@@ -579,7 +583,7 @@
           },
           {
             "phase": "guide",
-            "time": 0.46669999999999706
+            "time": 0.45000000000000007
           }
         ],
         "contextLost": false,
@@ -706,8 +710,8 @@
           "triangles": 8
         },
         "frameMs": {
-          "median": 3449.8,
-          "p95": 3449.8
+          "median": 2216.628,
+          "p95": 2216.628
         },
         "benchmark": null,
         "history": [
