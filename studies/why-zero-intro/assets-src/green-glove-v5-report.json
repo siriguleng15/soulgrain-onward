@@ -1,0 +1,19 @@
+{
+  "source": "Elena FF / Rigged hand",
+  "license": "CC-BY-SA-4.0",
+  "sourceBlend": "assets-src/hand-anatomical-v5.blend",
+  "asset": "public/assets/green-glove-v5.glb",
+  "editable": "assets-src/green-glove-v5.blend",
+  "generator": "assets-src/create_green_glove_v5.py",
+  "vertices": 16613,
+  "triangles": 33222,
+  "boneCount": 27,
+  "voxelSizeMetres": 0.0007,
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "unweightedVerticesRecovered": 0,
+  "maxWeightSumError": 4.842877388000488e-08,
+  "runtimeVertexOffsetRequired": false,
+  "sha256": "0eb761b12c3749e2a71ddbbf37075ad74a1c10ca3efef86b78ef769923221188",
+  "humanAssetUnchanged": true
+}

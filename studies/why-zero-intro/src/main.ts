@@ -12,6 +12,7 @@ import {recognizeZero} from './gesture.ts';
 import type {Point,GestureResult} from './gesture.ts';
 import {quadVertex,backdropFragment} from './shaders.ts';
 import {HandNarrative} from './HandNarrative.ts';
+import {createHandStudioEnvironment} from './HandStudioEnvironment.ts';
 
 const el=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 
@@ -82,7 +83,7 @@ class FrostDemo {
     const room=new RoomEnvironment(),pmrem=new PMREMGenerator(this.renderer),environment=pmrem.fromScene(room,.04);
     this.scene.environment=environment.texture;
     this.hand.scene.environment=environment.texture;
-    this.post=new HandNarrative(this.renderer,environment.texture);
+    this.post=new HandNarrative(this.renderer,createHandStudioEnvironment(this.renderer).texture);
     pmrem.dispose();room.dispose();
     this.narrative=new Narrative(phase=>{
       this.phaseHistory.push({phase,time:this.narrative?.time??0});
@@ -101,7 +102,7 @@ class FrostDemo {
     await Promise.allSettled([
       this.pipeline.loadPhoto(import.meta.env.BASE_URL+'assets/frost-study-v2.webp'),
       this.coreOnly?Promise.resolve():this.hand.load(import.meta.env.BASE_URL+'assets/hand-refined-v2.glb'),
-      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/hand-studio-v4.glb',import.meta.env.BASE_URL+'assets/garden-v3.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp'),
+      this.coreOnly?Promise.resolve():this.post.load(import.meta.env.BASE_URL+'assets/green-glove-v5.glb',import.meta.env.BASE_URL+'assets/landscape-v5.webp',import.meta.env.BASE_URL+'assets/skin-v3.webp',import.meta.env.BASE_URL+'assets/hand-anatomical-v5.glb'),
       font,
     ]);
     this.loading=false;
@@ -315,12 +316,12 @@ class FrostDemo {
 
   private renderInfo(){
     const opening=this.pipeline.info();
-    if(this.narrative.phase==='done'&&this.post.ready)return{active:'hand-narrative',quality:opening.quality,buffer:opening.buffer,passes:'3D skinned hands / discs / instanced petals into scene target, then environment / fog / contact composite',visibleSkinnedHands:Number(!!this.post.green?.root.visible)+Number(!!this.post.human?.root.visible),petalInstances:this.post.petals.mesh.count,openingPassesSuspended:true};
+    if(this.narrative.phase==='done'&&this.post.ready)return{active:'hand-narrative',quality:opening.quality,buffer:opening.buffer,passes:'Anatomical scene + depth target, two reduced-size diffusion passes, depth focus / mist / refraction composite, sharp spatial contact overlay',visibleSkinnedHands:Number(!!this.post.green?.root.visible)+Number(!!this.post.human?.root.visible),petalInstances:this.post.petals.mesh.count,openingPassesSuspended:true};
     return{active:'frost',...opening};
   }
   getState(){
     const a=[...this.frameTimes].sort((a,b)=>a-b),v=this.narrative?.values;
-    return{version:'hand-polish-v4',experience:this.post.state(),phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
+    return{version:'hand-match-v5',experience:this.post.state(),phase:this.narrative?.phase,time:this.narrative?.time,guideTime:this.guideTime,loading:this.loading,
       values:{number:v?.number,freeze:v?.freeze,shatter:v?.shatter,melt:v?.melt,dawn:v?.dawn,flash:v?.flash,hand:v?.hand,orb:v?.orb},
       gesture:this.lastGesture??null,activePointer:this.pointer,strokePoints:this.points.length,
       hand:{ready:this.hand.ready,opacity:this.handOpacity,error:this.hand.error??null,asset:'MIT WebXR hand / refined editable derivative'},

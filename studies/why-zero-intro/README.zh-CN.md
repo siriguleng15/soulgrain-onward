@@ -1,3 +1,42 @@
+# Why Zero · 解剖手部与光学对照 V5
+
+继续在现有研究工程上迭代，范围覆盖绿色手与输入、雾中显露、圆牌、文字、双手相遇、长按变化与松开恢复。原有 Soulgrain 鞋子与正式页面不改动，旧版独立预览保留。
+
+- 分支：`research/why-zero-hand-match-v5`。
+- 直接手部入口：<https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-match-v5/?stage=hands>
+- 双手入口：<https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-match-v5/?stage=creation>
+- 实际图像、视频与源包：<https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-match-v5/review.html>
+
+## V5 主要改动
+
+1. 用具有真实 UV、皮肤与指甲的解剖手模替代简化基础手，重建 27 骨骼的可编辑绑定与独立前臂。材质保留原贴图的颜色空间和粗糙度。
+2. 更新手指屈曲与拇指对掌方向，保持同一张网格的连续关节形变；沿固定静置姿态计算，避免反复操作累积漂移。
+3. 增加软箱环境、受真实灯光约束的散射近似、真实深度景深与 HDR 柔光合成。
+4. 使用新的独立环境图调整双柱、低地平线、花田和水面。默认仍为 2.5D 背景，不称为完整三维地形。
+5. 连续推进雾中露出、手的展开与两阶段长按反馈，长按后可恢复，不扩展到录屏之外的章节。
+
+[完整实现、资产与验证边界](docs/V5-IMPLEMENTATION.zh-CN.md) 说明模型来源、UV 修复、骨骼映射与光学方法。[模型报告](https://github.com/siriguleng15/soulgrain-onward/blob/research/why-zero-hand-match-v5/studies/why-zero-intro/assets-src/hand-anatomical-v5-report.json) 和 [Blender 工程](https://github.com/siriguleng15/soulgrain-onward/blob/research/why-zero-hand-match-v5/studies/why-zero-intro/assets-src/hand-anatomical-v5.blend) 保持可编辑。
+
+## 第三方手模署名
+
+本轮手模基于 [Elena FF](https://sketchfab.com/elenaferfor) 的 [Rigged hand](https://sketchfab.com/3d-models/rigged-hand-eae97cc2a742413cb5338ab942b12c1e)，按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 使用。修改后的模型、纹理和源几何仍采用相同许可；再分发时保留作者署名及相同许可。请参阅 [资产许可文件](https://github.com/siriguleng15/soulgrain-onward/blob/research/why-zero-hand-match-v5/studies/why-zero-intro/public/assets/ANATOMICAL-HAND-LICENSE.txt)。这些第三方资产不被笼统标为本项目原创或 MIT 资产。
+
+## 审核与操作
+
+桌面移动鼠标、按下收握，滚轮推进；触屏拖动、竖向滑动推进。双手场景按住中央目标，观察接近/手势变化及后续长按折射；松开或取消后恢复。章节菜单可返回。
+
+实际检查以 `public/verification-v5/` 的 JSON 和新版截图、视频为准，本文不提前宣称未运行的检查通过。Linux Chromium / SwiftShader 的模拟触控不等同于 iPad Safari 实机；固定取帧的审核视频也不代表实时硬件帧率。
+
+**不将当前结果称为像素完全一致。** 手部资产、字体、场景细节与原作的实际参数仍有差异，后续判断继续以同构图画面和交互过程为准。
+
+绿色手使用单独的连续手套曲面，真人手保留真实 UV；手套的并集、平滑与权重转移源工程均在源包中，许可与原解剖资产相同。
+
+本轮最终验证：82 项浏览器检查、12 个手势样例、16 项实际录屏输入检查和 4 项渲染帧统计检查通过；视频长约 18.67 秒。测试使用 Linux Chromium / SwiftShader 和模拟触控，不代表 iPad Safari 实机性能，也不是像素一致性证明。
+
+---
+
+以下为保留的 V4 及更早版本记录，检查数量和资产描述只属于对应旧版本。
+
 # Why Zero · 绿色手视觉精修 V4
 
 本轮在已完成的 V3 手部交互上继续优化画面，不重做交互工程，不修改 Soulgrain 鞋子与正式页面。范围依旧止于用户录屏中的双手、长按反馈和松开恢复。

@@ -1,0 +1,212 @@
+{
+  "license": "CC-BY-SA-4.0",
+  "author": "Elena FF",
+  "source": "https://sketchfab.com/3d-models/rigged-hand-eae97cc2a742413cb5338ab942b12c1e",
+  "asset": "public/assets/hand-anatomical-v5.glb",
+  "editable": "assets-src/hand-anatomical-v5.blend",
+  "generator": "assets-src/convert_anatomical_v5.py",
+  "originalVertexCount": 16330,
+  "vertices": 17301,
+  "faces": 31374,
+  "bones": [
+    "wrist",
+    "forearm-bend",
+    "thumb-metacarpal",
+    "thumb-phalanx-proximal",
+    "thumb-phalanx-distal",
+    "thumb-terminal",
+    "thumb-tip",
+    "index-finger-metacarpal",
+    "index-finger-phalanx-proximal",
+    "index-finger-phalanx-intermediate",
+    "index-finger-phalanx-distal",
+    "index-finger-tip",
+    "middle-finger-metacarpal",
+    "middle-finger-phalanx-proximal",
+    "middle-finger-phalanx-intermediate",
+    "middle-finger-phalanx-distal",
+    "middle-finger-tip",
+    "ring-finger-metacarpal",
+    "ring-finger-phalanx-proximal",
+    "ring-finger-phalanx-intermediate",
+    "ring-finger-phalanx-distal",
+    "ring-finger-tip",
+    "pinky-finger-metacarpal",
+    "pinky-finger-phalanx-proximal",
+    "pinky-finger-phalanx-intermediate",
+    "pinky-finger-phalanx-distal",
+    "pinky-finger-tip"
+  ],
+  "sourceToCanonical": {
+    "pulseR_01": "wrist",
+    "handR_02": "wrist",
+    "thumb_baseR_03": "thumb-metacarpal",
+    "thumb_01R_08": "thumb-phalanx-proximal",
+    "thumb_02R_09": "thumb-phalanx-distal",
+    "thumb_03R_010": "thumb-terminal",
+    "index_baseR_012": "index-finger-metacarpal",
+    "index_01R_017": "index-finger-phalanx-proximal",
+    "index_02R_018": "index-finger-phalanx-intermediate",
+    "index_03R_019": "index-finger-phalanx-distal",
+    "middle_baseR_020": "middle-finger-metacarpal",
+    "middle_01R_025": "middle-finger-phalanx-proximal",
+    "middle_02R_026": "middle-finger-phalanx-intermediate",
+    "middle_03R_027": "middle-finger-phalanx-distal",
+    "ring_baseR_028": "ring-finger-metacarpal",
+    "ring_01R_033": "ring-finger-phalanx-proximal",
+    "ring_02R_034": "ring-finger-phalanx-intermediate",
+    "ring_03R_035": "ring-finger-phalanx-distal",
+    "pinky_baseR_036": "pinky-finger-metacarpal",
+    "pinky_01R_041": "pinky-finger-phalanx-proximal",
+    "pinky_02R_042": "pinky-finger-phalanx-intermediate",
+    "pinky_03R_043": "pinky-finger-phalanx-distal"
+  },
+  "canonicalHeadsBlender": {
+    "wrist": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "forearm-bend": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "thumb-metacarpal": [
+      0.0014541682321578264,
+      0.0026162515860050917,
+      -0.017383448779582977
+    ],
+    "thumb-phalanx-proximal": [
+      -0.009096506983041763,
+      0.02654149755835533,
+      -0.02956150658428669
+    ],
+    "thumb-phalanx-distal": [
+      -0.003833192167803645,
+      0.0380166620016098,
+      -0.03970684856176376
+    ],
+    "thumb-terminal": [
+      -0.005489963106811047,
+      0.0464647151529789,
+      -0.04981264844536781
+    ],
+    "thumb-tip": [
+      -0.014835542067885399,
+      0.0533258318901062,
+      -0.06328883767127991
+    ],
+    "index-finger-metacarpal": [
+      0.0019784728065133095,
+      0.004501382354646921,
+      -0.034634340554475784
+    ],
+    "index-finger-phalanx-proximal": [
+      0.0030626121442764997,
+      0.02298280969262123,
+      -0.05577588453888893
+    ],
+    "index-finger-phalanx-intermediate": [
+      0.0075168064795434475,
+      0.026619669049978256,
+      -0.08434390276670456
+    ],
+    "index-finger-phalanx-distal": [
+      0.008910330012440681,
+      0.029875583946704865,
+      -0.09845810383558273
+    ],
+    "index-finger-tip": [
+      0.01048929151147604,
+      0.03198350593447685,
+      -0.11453574895858765
+    ],
+    "middle-finger-metacarpal": [
+      0.0019784728065133095,
+      0.004501382354646921,
+      -0.034634340554475784
+    ],
+    "middle-finger-phalanx-proximal": [
+      0.005152704659849405,
+      0.00985522661358118,
+      -0.05712241679430008
+    ],
+    "middle-finger-phalanx-intermediate": [
+      0.011100863106548786,
+      0.012620493769645691,
+      -0.08771121501922607
+    ],
+    "middle-finger-phalanx-distal": [
+      0.013216473162174225,
+      0.014738943427801132,
+      -0.10105504840612411
+    ],
+    "middle-finger-tip": [
+      0.01345023326575756,
+      0.01758519373834133,
+      -0.12238481640815735
+    ],
+    "ring-finger-metacarpal": [
+      0.0019784728065133095,
+      0.004501382354646921,
+      -0.034634340554475784
+    ],
+    "ring-finger-phalanx-proximal": [
+      0.0034812374506145716,
+      -0.0033193223644047976,
+      -0.055960070341825485
+    ],
+    "ring-finger-phalanx-intermediate": [
+      0.009079046547412872,
+      -0.004675609990954399,
+      -0.08642468601465225
+    ],
+    "ring-finger-phalanx-distal": [
+      0.010430059395730495,
+      -0.005372620187699795,
+      -0.10014288872480392
+    ],
+    "ring-finger-tip": [
+      0.009440471418201923,
+      -0.004041752777993679,
+      -0.1184188723564148
+    ],
+    "pinky-finger-metacarpal": [
+      0.0019784728065133095,
+      0.004501382354646921,
+      -0.034634340554475784
+    ],
+    "pinky-finger-phalanx-proximal": [
+      0.000692079309374094,
+      -0.014652173966169357,
+      -0.05079035088419914
+    ],
+    "pinky-finger-phalanx-intermediate": [
+      0.009599616751074791,
+      -0.01924448274075985,
+      -0.07595248520374298
+    ],
+    "pinky-finger-phalanx-distal": [
+      0.011555022560060024,
+      -0.020701605826616287,
+      -0.08570315688848495
+    ],
+    "pinky-finger-tip": [
+      0.008694343268871307,
+      -0.022943254560232162,
+      -0.09732960164546967
+    ]
+  },
+  "canonicalConvention": "glTF arm +Y / fingers -Y / palm thickness X / width Z; Blender arm +Z",
+  "uvCorrection": "Original glTF V converted to Blender 1-V; exporter converts back. Authored hand UVs preserved. Added forearm uses a separate derived cylindrical atlas sampled from original wrist boundary colors.",
+  "forearmLengthMetres": 0.46,
+  "forearmCrossSection": "Exact authored rim then real elliptical sections after23mm; bbox-centered, smooth edge normals and continuous new-ring skin weights",
+  "forearmRingCount": 20,
+  "ellipseEquationMaxError": 2.0735285288786542e-07,
+  "forearmBoundarySamples": 150,
+  "forearmBRDFContinuation": "Boundary albedo and roughness sampled into derivative atlases; forearm uses constant specular factor1 while authored hand retains its variable source alpha map",
+  "middleTipFromWristMetres": 0.12437118448454941,
+  "sourceOpenPose": "Three.js evaluated original Open/Close animation at time 0; original vertex identity/UV/skin weights retained.",
+  "sha256": "e78ca240ee503c1c7d018dca42b8c966953c926d611d82681ca33e23702730b0"
+}

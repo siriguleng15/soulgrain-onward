@@ -12,7 +12,9 @@ export async function browser(url,{width=1280,height=800,touch=false}={}){
   const run=async expression=>{const r=await cdp('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description??r.exceptionDetails.text);return r.result.value;};
   const wait=async(expression,label,timeout=45000)=>{const until=Date.now()+timeout;while(Date.now()<until){if(await run(expression))return;await pause(100);}throw Error('Timed out '+label+' '+await run('document.body.innerText.slice(-600)'));};
   const shot=async path=>{const r=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await writeFile(path,Buffer.from(r.data,'base64'));};
-  await cdp('Page.enable');await cdp('Runtime.enable');await cdp('Network.enable');await cdp('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:touch});await cdp('Emulation.setTouchEmulationEnabled',{enabled:touch,maxTouchPoints:5});await cdp('Page.navigate',{url});
+  await cdp('Page.enable');await cdp('Runtime.enable');await cdp('Network.enable');await cdp('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:touch});await cdp('Emulation.setTouchEmulationEnabled',{enabled:touch,maxTouchPoints:5});
+  if(globalThis.process.env.DISABLE_FLOAT_RT==='1')await cdp('Page.addScriptToEvaluateOnNewDocument',{source:`for(const type of [window.WebGLRenderingContext,window.WebGL2RenderingContext]){if(!type)continue;const get=type.prototype.getExtension;type.prototype.getExtension=function(name){return name==='EXT_color_buffer_float'?null:get.call(this,name);};}`});
+  await cdp('Page.navigate',{url});
   await wait('!!window.__frostDemo||!!(document.getElementById("error")&&!document.getElementById("error").hidden)','application');if(await run('!document.getElementById("error").hidden'))throw Error(await run('document.getElementById("error").textContent'));
   return{run,wait,shot,cdp,errors,requests,close(){socket?.close();process.kill('SIGTERM');}};
  }catch(e){socket?.close();process.kill('SIGTERM');throw e;}

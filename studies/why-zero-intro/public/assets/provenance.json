@@ -9,10 +9,10 @@
     "sha256": "291790c14f7f88a7f9bd35330c47392ed8e8d395ae6728f4bb7089f1bc1f2b96",
     "purpose": "Independently posed green instructional hand. Not an original Why Zero asset."
   },
-  "version": "hand-polish-v4",
-  "hand": "MIT WebXR base independently refined in Blender; code-driven mirrored pointing pose",
-  "handSource": "https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/assets/profiles/generic-hand",
-  "handLicense": "HAND-LICENSE.txt",
+  "version": "hand-match-v5",
+  "hand": "Active V5 interactive actors: canonical anatomical derivative of Rigged hand by Elena FF",
+  "handSource": "https://sketchfab.com/3d-models/rigged-hand-eae97cc2a742413cb5338ab942b12c1e",
+  "handLicense": "ANATOMICAL-HAND-LICENSE.txt / CC BY-SA 4.0",
   "ice": "Original AI-assisted generation for this study. Neither reference-site texture nor video screenshot. Editable original PNG is in assets-src.",
   "fonts": "Space Grotesk and Cormorant Garamond / SIL OFL; renamed ASCII subsets; complete originals and licenses retained",
   "fontSources": [
@@ -85,5 +85,39 @@
     "source": "assets-src/refine_hand_v4.py; assets-src/hand-studio-v4.blend",
     "background": "Default retains original generated V3 environment plate, softened and recolored in shader. Optional environment=spatial procedural geometry is experimental and not presented as a finished visual match.",
     "referenceRecordingsPublished": false
+  },
+  "v5": {
+    "anatomicalModel": {
+      "file": "hand-anatomical-v5.glb",
+      "sha256": "e78ca240ee503c1c7d018dca42b8c966953c926d611d82681ca33e23702730b0",
+      "bytes": 4318596,
+      "license": "CC-BY-SA-4.0",
+      "author": "Elena FF",
+      "source": "https://sketchfab.com/3d-models/rigged-hand-eae97cc2a742413cb5338ab942b12c1e",
+      "licenseFile": "ANATOMICAL-HAND-LICENSE.txt",
+      "modifications": "Open pose evaluated, canonical27bone binding, normalized orientation/scale, originalUV preserved via V conversion, forearm extension and derived wrist-color atlas. Forearm becomes a true smooth ellipse after23mm, preserves wrist rim and continuous blend weights; roughness continues authored wrist values.",
+      "sourceFiles": [
+        "assets-src/convert_anatomical_v5.py",
+        "assets-src/hand-anatomical-v5.blend",
+        "assets-src/anatomical-v5-source/"
+      ]
+    },
+    "referenceRecordingsPublished": false,
+    "greenGlove": {
+      "file": "green-glove-v5.glb",
+      "bytes": 937792,
+      "sha256": "0eb761b12c3749e2a71ddbbf37075ad74a1c10ca3efef86b78ef769923221188",
+      "source": "Elena FF / Rigged hand; CC BY-SA 4.0 derivative",
+      "geometry": "Single watertight glove surface; voxel union .7mm, smoothed shell, canonical skin weights transferred; no runtime vertex inflation",
+      "editable": "assets-src/green-glove-v5.blend",
+      "generator": "assets-src/create_green_glove_v5.py",
+      "rig": "Same 27 canonical joints; independent green actor, not a pose replacement"
+    }
+  },
+  "openingGuide": {
+    "hand": "MIT WebXR base independently refined in Blender; code-driven mirrored pointing pose",
+    "source": "https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/assets/profiles/generic-hand",
+    "license": "HAND-LICENSE.txt",
+    "scope": "Earlier ice/draw-zero guide only; not the V5 interactive actors"
   }
 }

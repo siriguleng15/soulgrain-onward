@@ -1,0 +1,272 @@
+{
+  "testedAt": "2026-11-03T12:53:39.163Z",
+  "url": "http://127.0.0.1:4785/?stage=hands",
+  "fps": 24,
+  "frames": 448,
+  "duration": 18.666666666666668,
+  "sha256": "fec48d78d174a528b42e7a7ff7948e8292527aadd7c7ba8c19541a0d1a2be7cb",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Direct entry opens interactive hands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real pointer motion moves the hand",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Press articulates actual finger joints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Both actors use the canonical anatomical rig",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Green hand uses the unified glove surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Human UV albedo survives both material primitives",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Actual reverse wheel can conceal the hand in white mist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Forward wheel restores the full hand",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real wheel advances to text transition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real wheel reaches both hands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hold begins with the articulated pose before full lens charge",
+      "passed": true,
+      "detail": 0.12661466774261745
+    },
+    {
+      "name": "Continued genuine hold charges the refractive lens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real center raycast hold changes state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hold changes the actual hand skeleton",
+      "passed": true,
+      "detail": {
+        "index": -1.18,
+        "middle": -0.025000000000000022
+      }
+    },
+    {
+      "name": "Release restores daylight without leaving the recorded scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No JavaScript, shader or failed-resource errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "method": "Actual CDP mouse movement, press/release, wheel input and 3D target hold drive the production controller. Fixed 24fps review-clock sampling only; no progress, joint pose or shader-uniform injection. Encoded frame rate is not live device performance. Linux Chromium / SwiftShader; not physical iPad Safari.",
+  "finalState": {
+    "opticsTarget": "rgba16f",
+    "ready": true,
+    "error": null,
+    "progress": 3.399999996948242,
+    "targetProgress": 3.3999999969482424,
+    "chapter": "connection",
+    "pointer": [
+      0.5,
+      0.5
+    ],
+    "targetPointer": [
+      0.5,
+      0.5
+    ],
+    "holding": false,
+    "hold": 0.000006144212352067177,
+    "charge": 0,
+    "mist": 0,
+    "contactSeconds": 0,
+    "hovered": true,
+    "green": {
+      "visible": true,
+      "anatomical": true,
+      "glove": true,
+      "opacity": 1,
+      "root": [
+        -0.9202085591529625,
+        0.1027446640660449,
+        0.43118179258006595
+      ],
+      "index": [
+        -0.12000000000000241,
+        -0.06499999999999716,
+        0.4500000000000007
+      ],
+      "middle": [
+        -0.2145924503021153,
+        -0.21782207763218964,
+        0.4326141056950764
+      ],
+      "surfaces": [
+        {
+          "name": "Lime / cyan translucent studio hand / V5",
+          "authoredAlbedo": false,
+          "roughnessFactor": 0.34
+        }
+      ],
+      "joints": [
+        {
+          "name": "index-finger-phalanx-proximal",
+          "angle": -0.10000000000000653
+        },
+        {
+          "name": "middle-finger-phalanx-proximal",
+          "angle": -0.28999999999999837
+        },
+        {
+          "name": "pinky-finger-phalanx-proximal",
+          "angle": -0.5200000000000045
+        },
+        {
+          "name": "ring-finger-phalanx-proximal",
+          "angle": -0.3900000000000049
+        },
+        {
+          "name": "thumb-phalanx-proximal",
+          "angle": -0.35000000000000436
+        }
+      ]
+    },
+    "human": {
+      "visible": true,
+      "anatomical": true,
+      "glove": false,
+      "opacity": 1,
+      "root": [
+        0.7325653179082876,
+        -0.4146385084652336,
+        0.30660281516667937
+      ],
+      "index": [
+        0.16000000000000023,
+        -0.11999999999999837,
+        0.4400000000000005
+      ],
+      "middle": [
+        0.2718032474148313,
+        -0.25596583163244213,
+        0.5718304938262324
+      ],
+      "surfaces": [
+        {
+          "name": "Anatomical skin / V5",
+          "authoredAlbedo": false,
+          "roughnessFactor": 0.49
+        },
+        {
+          "name": "Anatomical skin / V5",
+          "authoredAlbedo": true,
+          "roughnessFactor": 1
+        },
+        {
+          "name": "Anatomical skin / V5",
+          "authoredAlbedo": true,
+          "roughnessFactor": 1
+        }
+      ],
+      "joints": [
+        {
+          "name": "index-finger-phalanx-proximal",
+          "angle": -0.07000000000000027
+        },
+        {
+          "name": "middle-finger-phalanx-proximal",
+          "angle": -0.24999999999999942
+        },
+        {
+          "name": "pinky-finger-phalanx-proximal",
+          "angle": -0.42999999999999916
+        },
+        {
+          "name": "ring-finger-phalanx-proximal",
+          "angle": -0.31999999999999934
+        },
+        {
+          "name": "thumb-phalanx-proximal",
+          "angle": -0.31999999999999956
+        }
+      ]
+    },
+    "coins": {
+      "visible": false,
+      "positions": [
+        [
+          -0.31104811977036306,
+          -0.7739607334595704,
+          -0.20257757032570298
+        ],
+        [
+          0.3074102949330467,
+          -0.6437327744781637,
+          0.08300607866985688
+        ],
+        [
+          0.4984584147034099,
+          -0.06977204101859297,
+          0.38558364899555997
+        ],
+        [
+          0.07104811977036313,
+          0.3739607334595705,
+          0.40257757032570285
+        ],
+        [
+          -0.5474102949330467,
+          0.24373277447816377,
+          0.11699392133014318
+        ],
+        [
+          -0.73845841470341,
+          -0.330227958981407,
+          -0.18558364899555999
+        ]
+      ]
+    },
+    "petals": 70,
+    "field": [
+      1030,
+      606
+    ],
+    "sceneType": "Anatomical skinned hands, real depth optics, discs/petals and independent 2.5D landscape",
+    "garden": null
+  }
+}
