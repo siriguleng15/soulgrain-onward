@@ -15,6 +15,7 @@ try{
   await wait('!window.__frostDemo.getState().loading&&window.__frostDemo.getState().experience.ready','all narrative assets');
   await pause(700);
   check('Direct hand entry reaches a rendered, interactive skinned hand',(await state()).chapter==='hands'&&(await state()).green.visible,await state());
+  if(process.env.DISABLE_FLOAT_RT==='1')check('The new optical pipeline runs without float color targets',(await state()).opticsTarget==='rgba8',await state());
   const a=await state();await shot(out+'/01-hand.png');
   const start=(x,y)=>touch?cdp('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y,id:1}]}):cdp('Input.dispatchMouseEvent',{type:'mousePressed',x,y,button:'left',buttons:1,clickCount:1});
   const move=(x,y)=>touch?cdp('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y,id:1}]}):cdp('Input.dispatchMouseEvent',{type:'mouseMoved',x,y,button:'left',buttons:touch?1:0});
@@ -31,7 +32,8 @@ try{
   await shot(out+'/02-pointer-grip.png');await end(width*.78,height*.45);
   await wait(`Math.abs(window.__frostDemo.getState().experience.green.joints.find(j=>j.name==='index-finger-phalanx-proximal').angle-(${angle(a)}))<.15`,'released finger returns to rest');
   check('Release restores the relaxed gesture',Math.abs(angle(await state())-angle(a))<.15,null);
-  const orbit=(await state()).coins.positions;await pause(500);
+  const orbit=(await state()).coins.positions;
+  await wait(`(()=>{const c=window.__frostDemo.getState().experience.coins;return c.visible&&Math.hypot(...c.positions[0].map((v,i)=>v-(${JSON.stringify(orbit[0])})[i]))>.01})()`,'continuous three-dimensional orbit');
   check('Orbiting objects continue to move in three dimensions',(await state()).coins.visible&&Math.hypot(...(await state()).coins.positions[0].map((v,i)=>v-orbit[0][i]))>.01,null);
 
   const scrub=async target=>{
@@ -68,6 +70,6 @@ try{
   check('No viewport overflow',await run('document.documentElement.scrollWidth<=innerWidth'),null);
   check('No shader, JavaScript, or failed-resource errors',b.errors.length===0&&b.requests.length===0,{errors:b.errors,requests:b.requests});
 }finally{
-  b.close();await writeFile(out+'/hand-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url:u.toString(),width,height,touch,checks,environment:'Linux Chromium / SwiftShader, actual CDP input. Not physical iPad Safari. No narrative-progress or shader-uniform injection.'},null,2)+'\n');
+  b.close();await writeFile(out+'/hand-validation.json',JSON.stringify({testedAt:new Date().toISOString(),url:u.toString(),width,height,touch,floatColorBufferDisabled:process.env.DISABLE_FLOAT_RT==='1',checks,environment:'Linux Chromium / SwiftShader, actual CDP input. Not physical iPad Safari. No narrative-progress or shader-uniform injection.'},null,2)+'\n');
 }
 console.log(JSON.stringify({passed:true,checks:checks.length,out}));

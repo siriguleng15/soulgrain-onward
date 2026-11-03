@@ -12,12 +12,12 @@ with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
         paths=[p] if p.is_file() else p.rglob('*')
         for f in paths:
             if f.is_file() and f.suffix not in ['.blend1','.blend2'] and '__pycache__' not in f.parts:
-                archive.write(f,'zero-hand-polish-v4/'+str(f.relative_to(root)))
+                archive.write(f,'zero-hand-match-v5/'+str(f.relative_to(root)))
     try:
         commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True,stderr=subprocess.DEVNULL).strip()
     except subprocess.CalledProcessError:
         metadata=root/'SOURCE-COMMIT.txt'
         commit=metadata.read_text().strip() if metadata.exists() else 'working-copy'
-    archive.writestr('zero-hand-polish-v4/SOURCE-COMMIT.txt',commit+'\n')
-    archive.writestr('zero-hand-polish-v4/VERIFICATION.txt','Runtime sources and editable assets are included. Screenshot/video evidence is at https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-polish-v4/review.html and in the GitHub source branch. Run scripts/verify-v4.mjs to regenerate it.\n')
+    archive.writestr('zero-hand-match-v5/SOURCE-COMMIT.txt',commit+'\n')
+    archive.writestr('zero-hand-match-v5/VERIFICATION.txt','Runtime sources and editable assets are included. Screenshot/video evidence is at https://siriguleng15.github.io/soulgrain-onward/why-zero-hand-match-v5/review.html and in the GitHub source branch. Run scripts/verify-v5.mjs to regenerate it.\n')
 print('Source archive:',out.stat().st_size,'bytes')

@@ -1,0 +1,785 @@
+{
+  "testedAt": "2026-11-03T11:41:02.897Z",
+  "url": "http://127.0.0.1:4785/?stage=hands",
+  "width": 390,
+  "height": 844,
+  "touch": true,
+  "floatColorBufferDisabled": false,
+  "checks": [
+    {
+      "name": "Direct hand entry reaches a rendered, interactive skinned hand",
+      "passed": true,
+      "detail": {
+        "opticsTarget": "rgba16f",
+        "ready": true,
+        "error": null,
+        "progress": 1.25,
+        "targetProgress": 1.25,
+        "chapter": "hands",
+        "pointer": [
+          0.5,
+          0.5
+        ],
+        "targetPointer": [
+          0.5,
+          0.5
+        ],
+        "holding": false,
+        "hold": 0,
+        "charge": 0,
+        "mist": 0,
+        "contactSeconds": 0,
+        "hovered": false,
+        "green": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            -0.05055857780326467,
+            -0.10519771904396213,
+            0.18961063546872803
+          ],
+          "index": [
+            0.4799999999999999,
+            0.6415573214812504,
+            0.3
+          ],
+          "middle": [
+            0.5745254631505585,
+            0.5527118904215438,
+            0.3375590133685522
+          ],
+          "surfaces": [
+            {
+              "name": "Lime / cyan translucent studio hand / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.34
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.15866788626704934
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.2265144507869207
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.4898668918402264
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.3863090309052026
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.5163197039995986
+            }
+          ]
+        },
+        "human": {
+          "visible": false,
+          "anatomical": true,
+          "opacity": 0,
+          "root": [
+            0,
+            0,
+            0
+          ],
+          "index": [
+            -0.03198350640013814,
+            -0.11453574895858765,
+            -0.010489291278645403
+          ],
+          "middle": [
+            -0.017585193738341328,
+            -0.12238481640815735,
+            -0.013450233265757564
+          ],
+          "surfaces": [
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.49
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": 0
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": 0
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": 0
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": 0
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": 0
+            }
+          ]
+        },
+        "coins": {
+          "visible": true,
+          "positions": [
+            [
+              0.17265248368765812,
+              -0.19704907358437362,
+              0.3400760773780036
+            ],
+            [
+              0.025322335326241507,
+              0.32266446829614687,
+              0.428538896728227
+            ],
+            [
+              -0.26733014836141655,
+              0.31971354188052054,
+              0.18846281935022346
+            ],
+            [
+              -0.4126524836876581,
+              -0.20295092641562645,
+              -0.1400760773780036
+            ],
+            [
+              -0.2653223353262416,
+              -0.7226644682961467,
+              -0.2285388967282271
+            ],
+            [
+              0.027330148361416562,
+              -0.7197135418805205,
+              0.01153718064977638
+            ]
+          ]
+        },
+        "petals": 70,
+        "field": [
+          390,
+          844
+        ],
+        "sceneType": "Anatomical skinned hands, real depth optics, discs/petals and independent 2.5D landscape",
+        "garden": null
+      }
+    },
+    {
+      "name": "Actual pointer input changes the 3D hand position",
+      "passed": true,
+      "detail": {
+        "before": [
+          -0.05055857780326467,
+          -0.10519771904396213,
+          0.18961063546872803
+        ],
+        "after": [
+          0.19742583723985058,
+          0.10737255727032735,
+          0.002161967580311397
+        ]
+      }
+    },
+    {
+      "name": "Pressing actually articulates the finger joints",
+      "passed": true,
+      "detail": {
+        "before": -0.15866788626704934,
+        "after": -0.6733068996070464
+      }
+    },
+    {
+      "name": "Release restores the relaxed gesture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Orbiting objects continue to move in three dimensions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real scroll or swipe reaches the College transition",
+      "passed": true,
+      "detail": {
+        "opticsTarget": "rgba16f",
+        "ready": true,
+        "error": null,
+        "progress": 2.0875256549246384,
+        "targetProgress": 2.1000001220703126,
+        "chapter": "college",
+        "pointer": [
+          0.4852875833401305,
+          0.4903126244255775
+        ],
+        "targetPointer": [
+          0.5,
+          0.5
+        ],
+        "holding": false,
+        "hold": 0,
+        "charge": 0,
+        "mist": 0,
+        "contactSeconds": 0,
+        "hovered": false,
+        "green": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            -0.2791324033858793,
+            -0.05765236679896002,
+            0.1575083763675279
+          ],
+          "index": [
+            0.3825062415591327,
+            0.5402229745667716,
+            0.32253896619061234
+          ],
+          "middle": [
+            0.45716887339207213,
+            0.4337464044508426,
+            0.34484218936156397
+          ],
+          "surfaces": [
+            {
+              "name": "Lime / cyan translucent studio hand / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.34
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.15107000030861018
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.21853848333442555
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.4822046767566644
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.37764308590475665
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.5191020939683924
+            }
+          ]
+        },
+        "human": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 0.04299280451398287,
+          "root": [
+            0.7296287194310527,
+            -0.4165271872853717,
+            0.30955470765887066
+          ],
+          "index": [
+            0.15630484112696733,
+            -0.12162204903235994,
+            0.44
+          ],
+          "middle": [
+            0.26271684551745267,
+            -0.25592841102953634,
+            0.5725635393483274
+          ],
+          "surfaces": [
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.49
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.06858136485763172
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.2449334459201133
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.4212855269825948
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.313514810777745
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.313514810777745
+            }
+          ]
+        },
+        "coins": {
+          "visible": true,
+          "positions": [
+            [
+              -0.3798795934332092,
+              0.09371304694698797,
+              0.010528503890041369
+            ],
+            [
+              -0.37699314159082387,
+              -0.5080762790648481,
+              -0.2288064057052974
+            ],
+            [
+              -0.12211576982197035,
+              -0.8033393061037437,
+              -0.139334909595339
+            ],
+            [
+              0.12987515010449804,
+              -0.496813007130803,
+              0.18947149610995861
+            ],
+            [
+              0.12698869826211276,
+              0.1049763188810324,
+              0.4288064057052974
+            ],
+            [
+              -0.12788867350674088,
+              0.4002393459199285,
+              0.339334909595339
+            ]
+          ]
+        },
+        "petals": 70,
+        "field": [
+          390,
+          844
+        ],
+        "sceneType": "Anatomical skinned hands, real depth optics, discs/petals and independent 2.5D landscape",
+        "garden": null
+      }
+    },
+    {
+      "name": "Both skinned hands enter the Creation composition",
+      "passed": true,
+      "detail": {
+        "opticsTarget": "rgba16f",
+        "ready": true,
+        "error": null,
+        "progress": 3.3918729246639274,
+        "targetProgress": 3.400000106811524,
+        "chapter": "connection",
+        "pointer": [
+          0.49820268873230505,
+          0.5005622408410962
+        ],
+        "targetPointer": [
+          0.5,
+          0.5
+        ],
+        "holding": false,
+        "hold": 0,
+        "charge": 0,
+        "mist": 0,
+        "contactSeconds": 0,
+        "hovered": true,
+        "green": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            -0.9208389691977056,
+            0.10288109010265192,
+            0.43118179760874364
+          ],
+          "index": [
+            -0.12063041035399957,
+            -0.06486357598641873,
+            0.4499999999592192
+          ],
+          "middle": [
+            -0.21522286114814826,
+            -0.2176856533519139,
+            0.432614106026472
+          ],
+          "surfaces": [
+            {
+              "name": "Lime / cyan translucent studio hand / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.34
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.10000000003908421
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.2900000000333365
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.5200000000268225
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.39000000003027113
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.3500000000229907
+            }
+          ]
+        },
+        "human": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            0.7319402249309608,
+            -0.4145282929179055,
+            0.3069299297142217
+          ],
+          "index": [
+            0.1593122794411609,
+            -0.11986357616043472,
+            0.44
+          ],
+          "middle": [
+            0.2710339749201502,
+            -0.25583451980110583,
+            0.5718943435149435
+          ],
+          "surfaces": [
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.49
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.07
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.25
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.43
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.32
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.32
+            }
+          ]
+        },
+        "coins": {
+          "visible": false,
+          "positions": [
+            [
+              -0.30384920161890394,
+              -0.6695216856801574,
+              -0.23818226271562962
+            ],
+            [
+              -0.014611926759542801,
+              -0.7606655340948694,
+              -0.038684423407057605
+            ],
+            [
+              0.16862618902834503,
+              -0.29105388988013636,
+              0.2994978393085722
+            ],
+            [
+              0.06262702995687143,
+              0.2697016027493082,
+              0.43818226271562966
+            ],
+            [
+              -0.2266102449024897,
+              0.36084545116402017,
+              0.23868442340705764
+            ],
+            [
+              -0.40984836069037756,
+              -0.10876619305071283,
+              -0.09949783930857214
+            ]
+          ]
+        },
+        "petals": 70,
+        "field": [
+          390,
+          844
+        ],
+        "sceneType": "Anatomical skinned hands, real depth optics, discs/petals and independent 2.5D landscape",
+        "garden": null
+      }
+    },
+    {
+      "name": "The 3D center target accepts a genuine held input",
+      "passed": true,
+      "detail": {
+        "opticsTarget": "rgba16f",
+        "ready": true,
+        "error": null,
+        "progress": 3.4000001067794647,
+        "targetProgress": 3.400000106811524,
+        "chapter": "connection",
+        "pointer": [
+          0.5,
+          0.5
+        ],
+        "targetPointer": [
+          0.5,
+          0.5
+        ],
+        "holding": true,
+        "hold": 0.8583663295247302,
+        "charge": 0.6663895014572553,
+        "mist": 0,
+        "contactSeconds": 1.4500000000000002,
+        "hovered": true,
+        "green": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            -0.43724101872548365,
+            -0.3241992087101101,
+            0.28216791273326874
+          ],
+          "index": [
+            -0.6243542979969398,
+            -0.14366476922582913,
+            0.5157658070441186
+          ],
+          "middle": [
+            -0.4899992378302651,
+            0.3699991039355819,
+            0.5837207252664224
+          ],
+          "surfaces": [
+            {
+              "name": "Lime / cyan translucent studio hand / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.34
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -1.1799977752418482
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.02500054588973171
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -1.2499984962282862
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -1.199998331431386
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -1.0799984962282863
+            }
+          ]
+        },
+        "human": {
+          "visible": true,
+          "anatomical": true,
+          "opacity": 1,
+          "root": [
+            0.758309612976741,
+            -0.2791108929464596,
+            0.3207700587476835
+          ],
+          "index": [
+            0.19999991760327185,
+            0.11999950561963141,
+            0.5414586096436073
+          ],
+          "middle": [
+            0.14324680062226072,
+            0.03666793748120302,
+            0.5641426051956552
+          ],
+          "surfaces": [
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": false,
+              "roughnessFactor": 0.49
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            },
+            {
+              "name": "Anatomical skin / V5",
+              "authoredAlbedo": true,
+              "roughnessFactor": 1
+            }
+          ],
+          "joints": [
+            {
+              "name": "index-finger-phalanx-proximal",
+              "angle": -0.10999991760327191
+            },
+            {
+              "name": "middle-finger-phalanx-proximal",
+              "angle": -0.16000018539263822
+            },
+            {
+              "name": "pinky-finger-phalanx-proximal",
+              "angle": -0.30000026778936634
+            },
+            {
+              "name": "ring-finger-phalanx-proximal",
+              "angle": -0.22000020599182024
+            },
+            {
+              "name": "thumb-phalanx-proximal",
+              "angle": -0.2500001441942742
+            }
+          ]
+        },
+        "coins": {
+          "visible": false,
+          "positions": [
+            [
+              -0.09678643685356611,
+              -0.7998829550038642,
+              -0.12197634058768533
+            ],
+            [
+              0.14425468449197687,
+              -0.45811038593269693,
+              0.21204742813043334
+            ],
+            [
+              0.12104112134554318,
+              0.1417725690711672,
+              0.43402376871811876
+            ],
+            [
+              -0.14321356314643385,
+              0.3998829550038643,
+              0.3219763405876854
+            ],
+            [
+              -0.38425468449197697,
+              0.05811038593269653,
+              -0.012047428130433566
+            ],
+            [
+              -0.36104112134554317,
+              -0.5417725690711672,
+              -0.23402376871811872
+            ]
+          ]
+        },
+        "petals": 70,
+        "field": [
+          390,
+          844
+        ],
+        "sceneType": "Anatomical skinned hands, real depth optics, discs/petals and independent 2.5D landscape",
+        "garden": null
+      }
+    },
+    {
+      "name": "Hold changes the actual finger pose, not just a screen overlay",
+      "passed": true,
+      "detail": {
+        "index": -1.1799977752418482,
+        "middle": -0.02500054588973171
+      }
+    },
+    {
+      "name": "Release restores the scene without advancing beyond the recording",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Interrupted contact cannot leave the dark hold state stuck",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Visible chapter controls return to the interactive hand",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No viewport overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No shader, JavaScript, or failed-resource errors",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader, actual CDP input. Not physical iPad Safari. No narrative-progress or shader-uniform injection."
+}

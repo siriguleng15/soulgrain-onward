@@ -1,0 +1,10 @@
+{
+  "asset": "public/assets/landscape-v5.webp",
+  "source": "assets-src/landscape-v5.png",
+  "origin": "Independently generated original matte painting from composition description, not a reference screenshot, original-site texture or copied model",
+  "sha256": "5edcb2902982a2ee5c7d63a27177e83e79680ca0e6da5be786e9c85e13ae0bf7",
+  "bytes": 316618,
+  "composition": "Two inward-leaning ivory Corinthian columns at x30% and67%; low wildflower meadow; pond lower quarter; bright upper-right shafts; no mountains or boulders",
+  "referenceFramePublished": false,
+  "rendering": "2.5D plate, realtime depth-weighted parallax, water ripples, aerial haze, dusk grading and light rays"
+}
