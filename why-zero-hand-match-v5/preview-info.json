@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "0a281a58d53b77a2fff908a2a0ead70549a27084",
+  "sourceBranch": "research/why-zero-hand-match-v5",
+  "builtAt": "2026-11-03T12:55:43.169Z",
+  "scope": "Anatomical V5: UV-authored hand, anatomical joint axes, real depth optics, reversible mist and staged held refraction. All previous previews and Soulgrain assets unchanged.",
+  "referenceAccess": "Two user-supplied recordings decoded and visually inspected. Website and official article remain blocked by CONNECT 403.",
+  "referenceVisualAuditCompleted": true,
+  "pixelIdentical": false,
+  "physicalIPadSafariTested": false,
+  "handLicense": "Anatomical hand: Elena FF / CC BY-SA 4.0 derivative with source and editable Blender file; earlier opening guide: MIT WebXR derivative",
+  "scene": "Canonical anatomical skinned actors, preserved UV/PBR maps, real depth optics, independent generated 2.5D landscape; spatial garden remains experimental",
+  "entry": "index.html",
+  "handEntry": "?stage=hands",
+  "creationEntry": "?stage=creation"
+}
