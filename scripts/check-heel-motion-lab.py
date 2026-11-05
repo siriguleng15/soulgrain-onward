@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""Actual Chromium/SwiftShader lab interaction, geometry, touch and recording checks.
+Not a physical iPad Safari test. Writes only the new lab verification directory.
+"""
+import argparse
+import hashlib
+import json
+import math
+from pathlib import Path
+import subprocess
+import time
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from playwright.sync_api import sync_playwright
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'public/heel-motion-lab/verification'
+SHA='1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4'
+HASH_JS="""() => {const a=window.__heelLab.lab.ribbon.geometry.getAttribute('position').array;let h=2166136261;const bytes=new Uint8Array(a.buffer,a.byteOffset,a.byteLength);for(const v of bytes)h=Math.imul(h^v,16777619);return (h>>>0).toString(16)}"""
+JOIN_JS="""() => {const l=window.__heelLab.lab,a=l.actor;if(!a.group.visible||!l.ribbon.group.visible)return 0;const source=a.panel.geometry.getAttribute('uv'),p=a.group.children[0].geometry.getAttribute('position'),r=l.ribbon.geometry.getAttribute('position');let error=0;for(let i=0;i<source.count;i++){if(source.getY(i)>.173438)continue;const j=Math.round((source.getX(i)-.14576271176338196)/(.9152542352676392-.14576271176338196)*12);error=Math.max(error,Math.hypot(p.getX(i)-r.getX(j),p.getY(i)-r.getY(j),p.getZ(i)-r.getZ(j)));}return error;}"""
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--url',default='http://127.0.0.1:4537/heel-motion-lab.html')
+    parser.add_argument('--record',action='store_true')
+    args=parser.parse_args();OUT.mkdir(parents=True,exist_ok=True)
+    checks=[];errors=[];bad_responses=[];keyframes=[]
+    def check(name,ok,detail=None):
+        checks.append({'name':name,'passed':bool(ok),'detail':detail})
+        print(('PASS ' if ok else 'FAIL ')+name,flush=True)
+        assert ok,(name,detail)
+    source=ROOT/'public/assets/onward-ad-v1/onward-ad-v1.glb'
+    check('original GLB byte integrity',hashlib.sha256(source.read_bytes()).hexdigest()==SHA)
+    r=subprocess.run(['python3','-B','.agents/skills/onward-asset-contract/scripts/inspect_glb.py'],cwd=ROOT,capture_output=True,text=True)
+    asset=json.loads(r.stdout);check('asset Skill verifies all protected source contracts',r.returncode==0 and asset['passed'],{'checks':asset.get('checks')})
+    report={'testedAt':datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),'url':args.url,'environment':'Linux Chromium + SwiftShader software WebGL; desktop and emulated touch. NOT physical iPad Safari.','checks':checks,'errors':errors,'badResponses':bad_responses,'keyframes':keyframes,'limitations':['Bounding-box warnings are conservative candidates, not a triangle collision proof.','No physical iPad Safari or hardware-GPU performance certification.','This is the V1 motion study, not final advertising quality.']}
+    browser=None
+    try:
+      with sync_playwright() as p:
+        browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+        context=browser.new_context(viewport={'width':1440,'height':950},device_scale_factor=1)
+        page=context.new_page();page.on('pageerror',lambda e:errors.append(str(e)))
+        page.on('console',lambda m:errors.append(m.text) if m.type=='error' and 'favicon' not in m.text else None)
+        page.on('response',lambda r:bad_responses.append({'url':r.url,'status':r.status}) if r.status>=400 and 'favicon' not in r.url else None)
+        page.goto(args.url,wait_until='domcontentloaded',timeout=90000);page.wait_for_function('window.__heelLab && (window.__heelLab.getState().ready||window.__heelLab.getState().error)',timeout=90000)
+        state=lambda:page.evaluate('window.__heelLab.getState()')
+        check('real colored GLB loaded and SHA verified in browser',state()['ready'] and state()['browserVerifiedSHA']==SHA)
+        initial=state();check('source UV surface correspondence',initial['actor']['exactRestSurfaceError']<1e-6,initial['actor'])
+        check('one live WebGL canvas',page.locator('#stage canvas').count()==1)
+        def seek(value):return page.evaluate('(p)=>{window.__heelLab.seek(p);return window.__heelLab.getState();}',value)
+        def view(name):
+            page.evaluate('(v)=>window.__heelLab.setView(v)',name)
+            page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
+        def shot(name,progress,view_name):
+            seek(progress);view(view_name);page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
+            s=state();keyframes.append({'image':name+'.png','progress':progress,'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
+        shot('01-original-director',0,'director')
+        # Actual range drag, not a call to the scene API.
+        slider=page.locator('[data-ui="progress"]');box=slider.bounding_box();x=box['x']+box['width']*.43;y=box['y']+box['height']/2
+        page.mouse.move(box['x']+8,y);page.mouse.down();page.mouse.move(x,y,steps=12);page.mouse.up()
+        check('progress slider drag changes actual motion',.35<state()['progress']<.5 and not state()['playing'],state()['progress'])
+        page.locator('[data-action="play"]').click();page.wait_for_timeout(350);page.locator('[data-action="pause"]').click();paused=state()['progress'];page.wait_for_timeout(350)
+        check('pause holds exact scene progress',state()['progress']==paused and not state()['playing'],paused)
+        seek(.56);forward=page.evaluate(HASH_JS);pose=state()['shoe'];seek(.18);seek(.56)
+        check('reverse seek returns identical geometry and pose',page.evaluate(HASH_JS)==forward and state()['shoe']==pose)
+        for speed in [.25,.5,1]:
+            page.locator('[data-ui="speed"]').select_option(str(speed) if speed!=1 else '1')
+            delta=page.evaluate('''() => {const l=window.__heelLab.lab;l.seek(.2);l.play();l.advance(1);l.pause();return l.progress-.2;}''')
+            check('actual playback rate '+str(speed),abs(delta-speed/26)<1e-10,delta)
+        seek(.56);before=page.evaluate(HASH_JS);page.locator('[data-mode="rectangular-outline"]').click();after=page.evaluate(HASH_JS)
+        check('two modes share positions and center path',before==after and state()['mode']=='rectangular-outline' and state()['ribbon']['sharedVertexBuffers'])
+        shot('09-outline-above',.56,'above');page.locator('[data-mode="solid-ribbon"]').click()
+        # Every exposed geometry parameter must change real vertex data.
+        for key,value in [('radius',1.4),('turns',2.6),('pitch',1.2),('width',.28),('thickness',.03),('twist',260),('direction',25)]:
+            seek(.5);before=page.evaluate(HASH_JS)
+            page.locator('[data-param="'+key+'"]').evaluate('(el,v)=>{el.value=String(v);el.dispatchEvent(new Event("input",{bubbles:true}));}',value)
+            check('parameter affects geometry: '+key,page.evaluate(HASH_JS)!=before,{'value':state()['parameters'][key]})
+        page.locator('[data-action="reset-path"]').click();seek(.5)
+        page.locator('[data-ui="guides"]').check();page.locator('[data-ui="point"]').select_option('10');before=page.evaluate(HASH_JS)
+        page.locator('[data-axis="x"]').fill('0.35')
+        check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
+        shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
+        shot('02-extraction-rear',.08,'rear');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
+        samples=[]
+        for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:
+            s=seek(value);gap=page.evaluate(JOIN_JS);samples.append({'progress':value,'gap':gap,'frameError':s['path']['frameError'],'minimumFrameDot':s['path']['minimumFrameDot'],'reversals':s['path']['reversals'],'risk':s['risk']})
+        check('connected source edge throughout release and return',max(x['gap'] for x in samples)<1e-6,max(x['gap'] for x in samples))
+        check('stable orthonormal moving frames in all five stages',all(x['frameError']<1e-6 and x['minimumFrameDot']>0 and x['reversals']==0 for x in samples),{'maximumError':max(x['frameError'] for x in samples),'minimumDot':min(x['minimumFrameDot'] for x in samples)})
+        report['geometrySamples']=samples
+        view('director');seek(.72);before=state();page.locator('[data-action="return"]').click();immediate=state()
+        check('return starts from the current continuous state',math.dist(before['shoe']['position'],immediate['shoe']['position'])<.03)
+        page.evaluate('''() => {const l=window.__heelLab.lab;l.advance(5);l.pause();}''')
+        check('manual return restores source nodes and whole shoe',state()['actor']['originalPanelVisible'] and state()['actor']['originalSewingVisible'] and math.dist(state()['shoe']['position'],[0,0,0])<1e-8 and not state()['actor']['derivedVisible'])
+        for value in [.08,.33,.56,.72,.91]:
+            seek(value);page.locator('[data-action="cancel"]').click();s=state()
+            check('cancel restores from '+str(value),s['progress']==0 and s['actor']['originalPanelVisible'] and not s['ribbon']['tip'] and math.dist(s['shoe']['position'],[0,0,0])<1e-8)
+        repetitions=page.evaluate('''() => {const l=window.__heelLab.lab;for(let i=0;i<30;i++){l.replay();l.advance(30);if(l.progress!==1||l.playing||!l.actor.panel.visible)return false;l.cancel();}return window.__heelLab.integrity();}''')
+        check('30 repeated play/cancel cycles preserve source identity',isinstance(repetitions,list) and all(x['geometryUnchanged'] and x['localMatrixUnchanged'] and x['visible']==x['expectedVisible'] for x in repetitions),repetitions)
+        seek(.42);view('director');bounds=page.locator('#stage').bounding_box();cx=bounds['x']+bounds['width']*.5;cy=bounds['y']+bounds['height']*.5;old=state()['camera']
+        page.mouse.move(cx,cy);page.mouse.down();page.mouse.move(cx+120,cy+35,steps=12);page.mouse.up();page.wait_for_timeout(180)
+        check('free orbit takes camera ownership',state()['cameraOwner']=='free' and math.dist(old,state()['camera'])>.05)
+        page.locator('[data-view="director"]').click();page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
+        check('one-click director restore releases orbit ownership',state()['cameraOwner']=='director' and not page.evaluate('window.__heelLab.lab.controls.enabled'))
+        report['performanceSample']=state();context.close()
+        # Isolate GPU contexts between test groups. Touch is emulated, not Safari.
+        tablet=browser.new_context(viewport={'width':1024,'height':768},device_scale_factor=1,has_touch=True,is_mobile=True)
+        touch=tablet.new_page();touch.on('pageerror',lambda e:errors.append('touch: '+str(e)));touch.goto(args.url,wait_until='domcontentloaded',timeout=90000);touch.wait_for_function('window.__heelLab?.getState().ready',timeout=90000)
+        touch.locator('[data-action="play"]').tap();touch.wait_for_timeout(250);touch.locator('[data-action="pause"]').tap();check('touch transport controls are interactive',touch.evaluate('window.__heelLab.getState().progress')>0)
+        cdp=tablet.new_cdp_session(touch);bb=touch.locator('#stage').bounding_box();tx=bb['x']+bb['width']/2;ty=bb['y']+bb['height']/2;old=touch.evaluate('window.__heelLab.getState().camera')
+        cdp.send('Input.dispatchTouchEvent',{'type':'touchStart','touchPoints':[{'x':tx,'y':ty,'id':1}]})
+        for i in range(1,9):cdp.send('Input.dispatchTouchEvent',{'type':'touchMove','touchPoints':[{'x':tx+i*10,'y':ty+i*2,'id':1}]})
+        cdp.send('Input.dispatchTouchEvent',{'type':'touchEnd','touchPoints':[]});touch.wait_for_timeout(200)
+        check('tablet single-finger orbit',touch.evaluate('window.__heelLab.getState().cameraOwner')=='free' and math.dist(old,touch.evaluate('window.__heelLab.getState().camera'))>.05)
+        distance=lambda:touch.evaluate('window.__heelLab.lab.camera.position.distanceTo(window.__heelLab.lab.controls.target)')
+        old_distance=distance();cdp.send('Input.dispatchTouchEvent',{'type':'touchStart','touchPoints':[{'x':tx-35,'y':ty,'id':1},{'x':tx+35,'y':ty,'id':2}]})
+        for i in range(1,9):cdp.send('Input.dispatchTouchEvent',{'type':'touchMove','touchPoints':[{'x':tx-35-i*6,'y':ty,'id':1},{'x':tx+35+i*6,'y':ty,'id':2}]})
+        cdp.send('Input.dispatchTouchEvent',{'type':'touchEnd','touchPoints':[]});touch.wait_for_timeout(200);check('tablet two-finger pinch zoom',abs(distance()-old_distance)>.1)
+        touch.evaluate('window.__heelLab.seek(.33);window.__heelLab.setView("side")');touch.wait_for_function('!window.__heelLab.getState().directorMoving');touch.screenshot(path=str(OUT/'11-tablet-touch.png'));check('tablet layout has no horizontal overflow',touch.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+        touch.set_viewport_size({'width':390,'height':844});touch.wait_for_timeout(300);touch.screenshot(path=str(OUT/'12-phone-layout.png'));check('portrait touch layout has no horizontal overflow',touch.evaluate('document.documentElement.scrollWidth<=innerWidth'));tablet.close()
+        # Deliberate failure tests run in a separate context and are not mixed into normal-request errors.
+        failure=browser.new_context(viewport={'width':1100,'height':800});fault=failure.new_page()
+        fault.route('**/assets/onward-ad-v1/onward-ad-v1.glb',lambda route:route.fulfill(status=503,body='Deliberate test failure'))
+        fault.goto(args.url,wait_until='domcontentloaded',timeout=90000);fault.wait_for_function('window.__heelLab?.getState().error',timeout=30000)
+        check('model load failure stops with explicit error',not fault.evaluate('window.__heelLab.getState().ready') and fault.locator('#error').is_visible())
+        fault.unroute('**/assets/onward-ad-v1/onward-ad-v1.glb');fault.reload(wait_until='domcontentloaded',timeout=90000);fault.wait_for_function('window.__heelLab?.getState().ready',timeout=90000)
+        check('reload recovers one real source canvas',fault.locator('#stage canvas').count()==1)
+        fault.evaluate('window.__heelLab.play();window.__heelLab.lab.renderer.getContext().getExtension("WEBGL_lose_context").loseContext()')
+        fault.wait_for_function('window.__heelLab.getState().contextLost')
+        check('WebGL loss pauses and exposes recovery guidance',not fault.evaluate('window.__heelLab.getState().playing') and fault.locator('#error').is_visible())
+        failure.close()
+        check('no JavaScript or Shader errors',not errors,errors);check('all normal application requests loaded',not bad_responses,bad_responses)
+        if args.record:
+            browser.close();browser=None
+            subprocess.run(['python3','-B','scripts/record-heel-motion-lab.py','--url',args.url],cwd=ROOT,check=True)
+            report['recording']=json.loads((OUT/'recording.json').read_text())
+            check('recorded real-time playback reaches complete restoration',report['recording']['passed'])
+        if browser:browser.close();browser=None
+        report['passed']=all(c['passed'] for c in checks)
+    except Exception as error:
+        report['passed']=False;report['failure']=str(error)
+        raise
+    finally:
+        (OUT/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        if browser:
+            try:browser.close()
+            except Exception:pass
+    print(json.dumps({'passed':report['passed'],'checks':len(checks),'screenshots':len(keyframes),'report':str(OUT/'validation.json')},ensure_ascii=False),flush=True)
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,21 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 800,
+      "avg_frame_rate": "25/1"
+    }
+  ],
+  "format": {
+    "duration": "29.760000",
+    "size": "1635124"
+  },
+  "passed": true,
+  "sha256": "88b16d248e85460c5bf229beeedac3b96266f7fb2d7d4837689d5b56e6c32060",
+  "method": "Playwright actual viewport recording of button-triggered real-time WebGL playback; H.264 conversion, no synthetic/interpolated animation frames",
+  "playbackWallSeconds": 26.39083998600836,
+  "scope": "Container recording verification, not real Safari performance"
+}

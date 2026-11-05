@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:4538/heel-motion-lab.html",
+  "checks": [
+    {
+      "path": "heel-motion-lab.html",
+      "status": 200,
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "path": "heel-motion-lab/review.html",
+      "status": 200,
+      "type": "text/html;charset=utf-8"
+    },
+    {
+      "path": "heel-motion-lab/verification/validation.json",
+      "status": 200,
+      "type": "application/json"
+    },
+    {
+      "path": "heel-motion-lab/verification/06-sprint-director.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "path": "heel-motion-lab-v1.mp4",
+      "status": 206,
+      "range": "bytes 0-1/1635124",
+      "bytesRead": 2
+    },
+    {
+      "path": "heel-motion-lab-v1-24fps.mp4",
+      "status": 206,
+      "range": "bytes 0-1/2323104",
+      "bytesRead": 2
+    }
+  ],
+  "servedSourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "scope": "Local Vite Preview HTTP/media compatibility checks, not a public deployment or real Safari playback test."
+}

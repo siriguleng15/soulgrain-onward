@@ -1,0 +1,133 @@
+# Heel Motion Lab V1 · 第一轮运动审核
+
+本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、分支 `feat/heel-motion-lab-v1`。不推送、不部署、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
+
+## 直接预览
+
+开发入口：`http://127.0.0.1:4536/heel-motion-lab.html`。
+
+实际构建预览：`http://127.0.0.1:4538/heel-motion-lab.html`（Vite Preview，支持视频字节范围请求）。
+
+截图／H.264录屏审核页：同一服务器的 `/heel-motion-lab/review.html`。这是独立实验室和静态审核资料，不是正式广告入口。没有发布 HTTPS 页面。
+
+在本 worktree 运行：
+
+```bash
+node node_modules/vite/bin/vite.js --config vite.heel-motion-lab.config.ts --host 0.0.0.0
+```
+
+生成仅包含实验室和原 GLB 副本的独立构建：
+
+```bash
+node scripts/build-heel-motion-lab.mjs
+node node_modules/vite/bin/vite.js preview --config vite.heel-motion-lab.config.ts --host 0.0.0.0 --port 4538 --strictPort
+```
+
+构建会类型检查新入口，输出到专用 `/tmp/heel-motion-lab-v1-build`，不调用已有建模、展示页打包或发布脚本。GLB 是逐字节复制，SHA 检查不通过就停止。首次安装依赖应使用本分支锁文件；本次环境只读复用了原工作区已安装的同版本依赖，没有更改 package.json／package-lock.json。
+
+iPad 与本机在同一局域网时，可使用主机局域网 IP 替换 127.0.0.1；需要本机端口允许访问。localhost 链接不能直接指向另一台电脑。普通 HTTP 的 Safari 可能没有 WebCrypto，此时浏览器只检查长度与节点，完整 SHA 以本地构建／验证结果为准；界面不会把这种情况标为浏览器 SHA 已验证。
+
+## 已实现的控制
+
+- 播放、暂停、重播、连续返回、取消／复位。
+- 0–100% 进度拖动，任意顺序正向／反向查看。
+- 0.25×、0.5×、1×，实际改变时间推进速度。
+- 矩形轮廓和实体带状共用中心路径、位置及法线缓冲；切换不重设姿态。
+- 显示路径与控制点，点击三维控制点或下拉选择，通过 X/Y/Z 输入编辑偏移；原皮条三个锚点锁定。导演冲刺的最后两个点锁定，其余可编辑点会实际影响曲线。
+- 自由旋转与缩放；侧面、后面、斜上方预设；一键平滑恢复导演镜头。
+- 参数 JSON 导出与路径／参数重置。当前没有文件导入控件，可通过 UI 重填或在源码中维护导出的参数。
+
+| 参数 | 默认／范围 | 实际影响 |
+| --- | --- | --- |
+| 缠绕半径 | 1.15／0.85–1.80 | 非均匀椭圆截面及随长度变化的半径 |
+| 圈数 | 2.00／1–3 | 中心线绕鞋长轴的累计角度 |
+| 轴向节距 | 1.00／0.60–1.35 | 纵向展开跨度和局部推进，不是弹簧物理常量 |
+| 带宽 | 0.18／0.07–0.34 u | 实体与矩形轮廓的共同宽度及抽离段宽度 |
+| 厚度 | 0.012／0.003–0.040 u | 实体前后面、侧边、端盖；接合端厚度从零过渡 |
+| 扭转幅度 | 110°／0–360° | 稳定传输坐标架上的显式滚转 |
+| 空间倾角 | 0°／−35–35° | 绕鞋长轴旋转缠绕截面方向 |
+| 控制点偏移 | 0／各轴−1.5–1.5 u | 中心线控制点真实三维坐标 |
+
+u 是统一显示尺度的场景单位，不是工厂毫米。默认宽厚是广告研究参数，不是新皮条打样尺寸。
+
+## 26秒标准时间轴
+
+| 进度 | 标准时长区间 | 画面 |
+| --- | --- | --- |
+| 0–11% | 0–2.86s | 真皮条曲面逐步释放，红色延长带从其上端连续生长 |
+| 11–35% | 2.86–9.10s | 第一圈绕行；鞋子受延迟牵引发生惯性转动、退远 |
+| 35–59% | 9.10–15.34s | 第二圈绕行，半径、轴向推进及扭转不均匀 |
+| 59–74% | 15.34–19.24s | 末端沿世界空间透视路径冲向导演镜头 |
+| 74–80% | 19.24–20.80s | 终态短暂停留 |
+| 80–100% | 20.80–26s | 连续逆向收回，恢复原皮条、缝线和整鞋姿态 |
+
+标准播放完成后停止，不自动开启下一章节。“连续返回”可从任意当前状态启动独立的4.5秒回归轨道，保持起始状态连续；进度拖动会退出该临时轨道，回到标准26秒确定性时间轴。“取消／复位”直接恢复标准初态，不冒充连续返回。
+
+## 源码与几何依据
+
+| 文件 | 职责 |
+| --- | --- |
+| `heel-motion-lab.html`、`vite.heel-motion-lab.config.ts` | 独立入口及构建隔离 |
+| `src/heel-motion-lab/motion.ts` | 纯时间求值、阶段、生长与鞋子延迟惯性姿态 |
+| `src/heel-motion-lab/Surface.ts` | 读取真实皮条 UV 三角形、原表面插值及源几何指纹 |
+| `src/heel-motion-lab/HeelActor.ts` | 原皮条和缝线的派生网格，UV不变；表面与缝线同步形变及回归 |
+| `src/heel-motion-lab/Path.ts` | 可编辑 Catmull–Rom 三维路径、弧长采样、稳定宽向传播和显式扭转 |
+| `src/heel-motion-lab/Ribbon.ts` | 有前后面／侧面／端盖的矩形实体及四边轮廓，共用实际顶点缓冲 |
+| `src/heel-motion-lab/Scene.ts` | 原 GLB、PBR、唯一相机所有权、轨道控制、时间推进、诊断和资源生命周期 |
+| `src/heel-motion-lab/main.ts`、`style.css` | 调试控件、触控布局和参数导出 |
+| `scripts/check-heel-motion-lab.py` | 实际构建的浏览器测试、截图、触控模拟和实时录屏 |
+| `scripts/record-heel-motion-lab.py` | 独立实时页面录屏；在临时目录复用系统编码器，不修改全局依赖 |
+| `scripts/render-heel-motion-review.py` | 24fps逐帧真实WebGL运动审核片；明确区别于实时性能录屏 |
+
+复用了原 `StudioMaterials.ts` 修复坏法线，以及 `CameraDirector.ts` 的实时状态捕获和平滑交接；没有修改这两个模块或 immersive-showcase。相机所有权在 director、inspection、free 之间交接；轨道控件在导演及相机过渡期间禁用，按下场景时取消过渡并交给自由观察。
+
+原鞋使用 `public/assets/onward-ad-v1/onward-ad-v1.glb`，SHA-256：
+
+```text
+1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4
+```
+
+真实皮条的 lower/middle/upper 锚点取自源顶点6／396／786。源节点不重排、不改顶点和 UV；动画时隐藏原皮条与其缝线，用保留 UV 的派生副本展示可逆形变。Heel_Seam_Stitch 和 Finished_Heel_Logo 不参与抽离。回归在源曲面吻合后交还原节点，不用两张无关模型突然切换。
+
+长延伸段是纯红广告表演体，不拉长或补画原回纹。开始边由正在释放的原皮条边界约束，接合端厚度为零，沿长度过渡为设定厚度。移动前沿通过连续重采样生成，不仅裁剪 drawRange。轮廓不是 TubeGeometry 或线宽不可控的 WebGL 线条。
+
+## 验证与复验
+
+```bash
+python3 -B .agents/skills/onward-asset-contract/scripts/inspect_glb.py --self-test
+python3 -B .agents/skills/onward-ribbon-geometry/scripts/check_spec.py --self-test
+node .agents/skills/onward-asset-contract/scripts/check_restore.mjs
+python3 -B scripts/check-heel-motion-lab.py --url http://127.0.0.1:4538/heel-motion-lab.html --record
+```
+
+前两项仍是原技能的二进制／规格校验，不能代替新运行时测试。最后一项会检查真实范围拖动、暂停、逆向重定位、三种速度、两种模式、全部几何参数、路径点编辑、连接边、稳定帧、连续返回、五阶段取消恢复、30次重播、相机控制交接、触屏旋转／缩放、加载失败与 WebGL 丢失。
+
+浏览器测试需要单独可用的 Python Playwright、系统 Chromium 和 FFmpeg；这些是验证工具，不是网页运行时依赖。本轮版本与环境记录见 environment.json。
+
+实际截图、H.264录屏和详细结果位于 `public/heel-motion-lab/verification/`。录屏来自 Chromium 真实页面点击播放后的连续实时录制，不用预渲染素材或视频播放器充当实验室。自动化环境为 Linux Chromium＋SwiftShader 和模拟触控，不能称为 iPad Safari 实机结果。
+
+本轮结果：44项检查通过，包括独立录屏完成与终态恢复；真实源曲面的插值误差约1.22e-7场景单位，抽离／回归连接边最大偏差约2.52e-7，默认轨道帧正交误差低于1e-6。原工作区28个脏／未跟踪文件、HEAD、分支、索引和差异均保持不变。具体数值以 validation.json 和 source-protection.json 为准。
+
+实时片 `heel-motion-lab-v1.mp4` 为1280×800 H.264，容器时长约29.76秒（包含加载与停留），标准播放实际约26.39秒。软件环境实际呈现平均间隔约703ms，不能把编码文件的25fps当成实时渲染帧率。因此另附 `heel-motion-lab-v1-24fps.mp4`：对同一运行时以1/24秒时间间隔逐帧真实WebGL截图，编码为24fps方便审动作；不生成中间图像、不插帧，也不作为设备性能证明。
+
+单独重录或生成逐帧审核片：
+
+```bash
+python3 -B scripts/record-heel-motion-lab.py --url http://127.0.0.1:4538/heel-motion-lab.html
+python3 -B scripts/render-heel-motion-review.py --url http://127.0.0.1:4538/heel-motion-lab.html
+```
+
+开发中修复了部分抽离时的边界接缝，以及密集拖动导致重复提交绘制、低帧率拖长相机过渡的问题。时间推进改用真实经过时间；暂停、镜头和轨道阻尼稳定后按需绘制。触控与故障测试分开销毁浏览器上下文，避免软件GPU并行负载污染验证。
+
+## 第一轮艺术审核应关注的差距
+
+- **穿模：**默认轨道存在包围盒候选预警；盒内不等于实际穿入布面，盒外也不等于完整碰撞证明。尚无布料接触、自碰撞或网格级约束求解。任意缩小半径、增宽或拖动点可能产生真实穿插，应在三个观察角度逐段审核。
+- **扭转：**使用稳定移动帧和显式滚转，避免任意法线跳转；默认轨道有局部急弯，矩形边框在掠视角会变细，控制点编辑过猛仍可能出现不理想折痕。反向切线计数与最小相邻帧点积保留在诊断 API 中。
+- **透视：**冲刺目标固定在导演空间，正常导演镜头不应穿过 near plane；自由观察及其他预设不会改变这条路径，因此冲刺末端可能位于观察画面之外。它不是相机追逐特效。
+- **回归：**接合段已约束到原皮条当前边界，原图案和缝线恢复；这是广告曲面变形，不是真实皮革力学。极接近停止点的材质与曲率过渡仍需慢速艺术审核。
+- **材质与尺寸：**沿用有限分辨率的 V8 照片材质与织物近似法线，红色带为简单 PBR；没有为微距补造热压细节。没有黑膜、粒子、后期、文案章节或正式广告整合。
+- **性能：**原模型约46万三角形，实体带新增约1.56万，轮廓约0.37万。CPU重采样与高分辨率软渲染可能降帧；记录里的软件帧时间不能替代真实桌面 GPU／iPad 实测。
+
+V1用于审核运动、空间构图和可逆控制，不宣称达到最终电影级效果。硬件性能、准确碰撞约束和更细的曲率／节奏修订留待后续艺术反馈。
+
+源资产的基础鞋体署名沿用仓库记录：theunclerulez / Generic “Converse style” Sneakers，CC BY 4.0；Soulgrain产品图稿与定稿设计沿用用户提供资产。GLB内来源元数据保持不变。
