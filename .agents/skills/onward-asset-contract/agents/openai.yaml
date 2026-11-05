@@ -1,0 +1,4 @@
+interface:
+  display_name: "ONWARD 资产保护与定位"
+  short_description: "核验鞋模节点、UV、材质隔离和后跟锚点，验证原资产保护及无损复位"
+  default_prompt: "使用 $onward-asset-contract 只读核验后跟皮条、缝线和排除节点，输出资产契约与复位验证结果。"

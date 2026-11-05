@@ -1,0 +1,4 @@
+interface:
+  display_name: "ONWARD 三维矩形带状几何"
+  short_description: "规划矩形轮廓与实体带状两种模式，检查曲线坐标架、扭转、生长及表面回归"
+  default_prompt: "使用 $onward-ribbon-geometry 检查矩形轮廓和实体带状两种模式的几何契约，先验证方案，不制作动画。"

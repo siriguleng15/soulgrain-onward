@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/openai/skills",
+  "commit": "4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "url": "https://raw.githubusercontent.com/openai/skills/4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc/skills/.system/skill-creator/SKILL.md",
+      "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
+    },
+    {
+      "path": "references/openai_yaml.md",
+      "url": "https://raw.githubusercontent.com/openai/skills/4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc/skills/.system/skill-creator/references/openai_yaml.md",
+      "sha256": "9fb5928b7f4a746fdb39df503ebbd7a659d5e64b47f85a60626aa1a03fd76b17"
+    },
+    {
+      "path": "scripts/init_skill.py",
+      "url": "https://raw.githubusercontent.com/openai/skills/4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc/skills/.system/skill-creator/scripts/init_skill.py",
+      "sha256": "bcb8982d3f033a094f2f1be43123ac8537e2562d25d8ba4d8ef2196ae514d96d"
+    },
+    {
+      "path": "scripts/generate_openai_yaml.py",
+      "url": "https://raw.githubusercontent.com/openai/skills/4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc/skills/.system/skill-creator/scripts/generate_openai_yaml.py",
+      "sha256": "b8f6be33a9d72dd7a8da02e7a9fffea23dc79e94862e6dd6358b57a8899d8f73"
+    },
+    {
+      "path": "scripts/quick_validate.py",
+      "url": "https://raw.githubusercontent.com/openai/skills/4ab6e0fd99c6667163bc34173e3ed3a3fed75ebc/skills/.system/skill-creator/scripts/quick_validate.py",
+      "sha256": "6cc9dc3199c935916cf6f73fcbbbb0e3bb1b58c8f5109fefa499978908164f51"
+    }
+  ],
+  "initialization": "official source fallback; builtin skill not mounted in this session",
+  "finalization": {
+    "mode": "actual Codex CLI builtin skill-creator",
+    "codexVersion": "0.159.2",
+    "used": [
+      "SKILL.md",
+      "references/openai_yaml.md",
+      "scripts/generate_openai_yaml.py",
+      "scripts/quick_validate.py"
+    ],
+    "sha256": {
+      "SKILL.md": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+      "references/openai_yaml.md": "ffac39318e408108141d40f820968e59f70434a891694f9bf1d25be8237b150c",
+      "scripts/generate_openai_yaml.py": "816df12072d74faf924d802a6599a139997e1441e90bfe4869ec304f2e5e2851",
+      "scripts/quick_validate.py": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c"
+    }
+  }
+}

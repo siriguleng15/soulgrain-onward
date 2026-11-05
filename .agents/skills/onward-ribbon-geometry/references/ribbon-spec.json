@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "status": "preparation-only",
+  "sourceSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "targetNodes": ["Finished_Heel_Leather", "Heel_Leather_Stitching"],
+  "modes": ["rectangular-outline", "solid-ribbon"],
+  "crossSection": "rectangle",
+  "representation": "parametric-surface",
+  "units": "glTF-model-units",
+  "width": 0.014,
+  "thickness": 0.0006,
+  "outlineWidth": 0.0004,
+  "dimensionsAre": "advertising-assumptions-not-measured",
+  "outlineEdges": ["left", "right", "start", "growth-tip"],
+  "solidFaces": ["front", "back", "left", "right", "start-cap", "growth-cap"],
+  "frame": {
+    "method": "parallel-transport",
+    "handedness": "T-cross-B",
+    "initialTangent": [0, 1, 0],
+    "initialWidth": [0, 0, -1],
+    "reverseTangentPolicy": "split-or-controlled-transition",
+    "explicitTwist": true,
+    "closed": false
+  },
+  "path": {
+    "editable": true,
+    "sampling": "arc-length",
+    "nonZeroLength": true,
+    "controlPoints": [[0, 0, 0], [0, 0.0475, 0], [0, 0.095, 0]],
+    "note": "A straight validation fixture, not an authored performance path."
+  },
+  "growth": {"method": "interpolated-tip", "parameterRange": [0, 1], "zeroState": "hidden", "sharedAcrossModes": true},
+  "return": {"target": "exact-source-surface", "mapping": "source-uv-or-barycentric", "sewing": "same-surface-field", "positionTolerance": 0.000001, "restoreOriginalUV": true},
+  "camera": {"owner": "chapter-director", "nearPlaneCheckRequired": true},
+  "gpu": {"enabled": false, "normalAndShadowAndBoundsAndPickingRequired": true},
+  "validation": {"runtimeGeometry": "not-tested", "rendering": "not-tested", "iPadSafari": "not-tested"}
+}

@@ -1,0 +1,329 @@
+{
+  "testedAt": "2026-11-05T18:56:12.781617+08:00",
+  "baselineCommit": "fea6c0e753ca0b4ba6b2e32b52ae57ff57a3b1e6",
+  "branch": "chore/onward-ad-skills-v1",
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-development-skills.py",
+        "--three-root",
+        "/workspace/soulgrain-onward/node_modules/three",
+        "--skill-creator",
+        "/tmp/onward-skills-prep/codex-home/skills/.system/skill-creator"
+      ],
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "baselineCommit": "fea6c0e753ca0b4ba6b2e32b52ae57ff57a3b1e6",
+        "checks": [
+          {
+            "name": "only-new-preparation-files",
+            "passed": true,
+            "detail": {
+              "unexpected": [],
+              "modifiedBaselinePaths": []
+            }
+          },
+          {
+            "name": "AGENTS-present",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "onward-asset-contract:metadata",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "onward-asset-contract:resource-links",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "onward-asset-contract:official-skill-creator",
+            "passed": true,
+            "detail": "Skill is valid!"
+          },
+          {
+            "name": "onward-ribbon-geometry:metadata",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "onward-ribbon-geometry:resource-links",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "onward-ribbon-geometry:official-skill-creator",
+            "passed": true,
+            "detail": "Skill is valid!"
+          },
+          {
+            "name": "asset-contract-positive-and-negative",
+            "passed": true,
+            "detail": {
+              "passed": true,
+              "checks": [
+                "source identity",
+                "accessor bytes",
+                "materials and images",
+                "node roles",
+                "anchors",
+                "protected files"
+              ],
+              "errors": [],
+              "scope": "Read-only binary audit; no render, export or manufacturing certification",
+              "negativeTests": [
+                {
+                  "name": "uv-drift",
+                  "rejected": true
+                },
+                {
+                  "name": "wrong-material",
+                  "rejected": true
+                },
+                {
+                  "name": "missing-logo",
+                  "rejected": true
+                },
+                {
+                  "name": "wrong-role",
+                  "rejected": true
+                },
+                {
+                  "name": "anchor-drift",
+                  "rejected": true
+                },
+                {
+                  "name": "image-replaced",
+                  "rejected": true
+                },
+                {
+                  "name": "invalid-header",
+                  "rejected": true
+                }
+              ],
+              "sourceSummary": {
+                "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+                "counts": {
+                  "nodes": 29,
+                  "primitives": 42,
+                  "triangles": 463512,
+                  "skins": 0,
+                  "animations": 0
+                },
+                "nodes": [
+                  "Finished_Heel_Leather",
+                  "Heel_Leather_Stitching",
+                  "Heel_Seam_Stitch",
+                  "Finished_Heel_Logo"
+                ]
+              }
+            }
+          },
+          {
+            "name": "real-source-headless-restoration",
+            "passed": true,
+            "detail": {
+              "passed": true,
+              "cycles": 30,
+              "threeVersion": "0.180.0",
+              "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+              "maximumMatrixError": 3.552713678800501e-15,
+              "checks": [
+                "real source POSITION/NORMAL/UV/index bytes unchanged",
+                "attach preserves world pose",
+                "30-cycle parent/transform/material/visibility/order restoration",
+                "material isolation retains shared texture",
+                "excluded seam and logo unchanged",
+                "source file unchanged"
+              ],
+              "scope": "Headless numeric integration using real GLB accessors. No GLTFLoader/image decode, GPU render, Shader, animation or Safari test."
+            }
+          },
+          {
+            "name": "ribbon-spec-positive-and-negative",
+            "passed": true,
+            "detail": {
+              "passed": true,
+              "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+              "modes": [
+                "rectangular-outline",
+                "solid-ribbon"
+              ],
+              "selectedMode": "both",
+              "errors": [],
+              "scope": "Specification and source-contract validation only; no authored geometry, animation, render or Safari verification",
+              "negativeTests": [
+                {
+                  "name": "round-tube",
+                  "rejected": true
+                },
+                {
+                  "name": "snake",
+                  "rejected": true
+                },
+                {
+                  "name": "spiral-image",
+                  "rejected": true
+                },
+                {
+                  "name": "missing-outline-mode",
+                  "rejected": true
+                },
+                {
+                  "name": "wrong-source",
+                  "rejected": true
+                },
+                {
+                  "name": "moves-logo",
+                  "rejected": true
+                },
+                {
+                  "name": "moves-seam",
+                  "rejected": true
+                },
+                {
+                  "name": "negative-thickness",
+                  "rejected": true
+                },
+                {
+                  "name": "nan-width",
+                  "rejected": true
+                },
+                {
+                  "name": "missing-units",
+                  "rejected": true
+                },
+                {
+                  "name": "zero-path",
+                  "rejected": true
+                },
+                {
+                  "name": "parallel-frame",
+                  "rejected": true
+                },
+                {
+                  "name": "three-edge-outline",
+                  "rejected": true
+                },
+                {
+                  "name": "stepped-growth",
+                  "rejected": true
+                },
+                {
+                  "name": "approximate-return",
+                  "rejected": true
+                },
+                {
+                  "name": "loose-return",
+                  "rejected": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "ribbon-mode:rectangular-outline",
+            "passed": true,
+            "detail": {
+              "passed": true,
+              "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+              "modes": [
+                "rectangular-outline",
+                "solid-ribbon"
+              ],
+              "selectedMode": "rectangular-outline",
+              "errors": [],
+              "scope": "Specification and source-contract validation only; no authored geometry, animation, render or Safari verification"
+            }
+          },
+          {
+            "name": "ribbon-mode:solid-ribbon",
+            "passed": true,
+            "detail": {
+              "passed": true,
+              "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+              "modes": [
+                "rectangular-outline",
+                "solid-ribbon"
+              ],
+              "selectedMode": "solid-ribbon",
+              "errors": [],
+              "scope": "Specification and source-contract validation only; no authored geometry, animation, render or Safari verification"
+            }
+          },
+          {
+            "name": "repository-reference-paths",
+            "passed": true,
+            "detail": [
+              "src/immersive-showcase/Scene.ts",
+              "src/immersive-showcase/CameraDirector.ts",
+              "src/immersive-showcase/surface.ts",
+              "src/advertising/geometry/CuffCurve.ts",
+              "src/advertising/geometry/CuffMaterial.ts",
+              "src/advertising/scene/StudioMaterials.ts",
+              "modeling/finished-shoe-v8/finish_v7.py",
+              "modeling/interactive-ad-v1/build_ad_asset.py",
+              "modeling/interactive-ad-v1/verify_source.py"
+            ]
+          }
+        ],
+        "scope": "Preparation-only checks. Does not render an animation, compile shaders, test Safari or certify implicit model selection."
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check-codex-skill-discovery.py"
+      ],
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "client": "onward-skill-verification/0.159.2 (Debian 13.0.0; x86_64) dumb (onward-skill-verification; 1.0)",
+        "method": "initialize + skills/list(forceReload=true)",
+        "checks": [
+          {
+            "name": "onward-asset-contract",
+            "passed": true,
+            "scope": "repo",
+            "path": ".agents/skills/onward-asset-contract/SKILL.md",
+            "enabled": true
+          },
+          {
+            "name": "onward-ribbon-geometry",
+            "passed": true,
+            "scope": "repo",
+            "path": ".agents/skills/onward-ribbon-geometry/SKILL.md",
+            "enabled": true
+          }
+        ],
+        "errors": [],
+        "scope": "Native repository discovery and invocation metadata only. No model turn; natural-language implicit selection is not certified."
+      }
+    }
+  ],
+  "originalWorktreeProtection": {
+    "originalHEAD": "e7b3a9f57a652f0248cbc1a6b556a3905e2632d0",
+    "originalBranch": "feat/onward-pattern-reveal-fullshoe",
+    "dirtyAndUntrackedFilesChecked": 28,
+    "checks": {
+      "sameHEAD": true,
+      "sameBranch": true,
+      "sameStatus": true,
+      "sameWorkingDiff": true,
+      "sameIndexDiff": true,
+      "sameDirtyAndUntrackedBytes": true
+    }
+  },
+  "limitations": [
+    "No new production geometry or animation created.",
+    "Native Codex discovery and documented helpers verified; no model turn or exhaustive implicit-trigger evaluation.",
+    "No new browser rendering, Shader compilation, video, performance or real iPad Safari test.",
+    "Original worktree and product files unchanged; no deployment."
+  ]
+}

@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "fea6c0e753ca0b4ba6b2e32b52ae57ff57a3b1e6",
+  "units": "glTF model units; not certified manufacturing dimensions",
+  "protectedFiles": {
+    "public/assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+    "public/assets/onward-ad-v1/cuff-structure.json": "7d313b066c1007f05c4edabfdd92fd51aff78e61df91841b76080ef6209dd085",
+    "public/assets/soulgrain_onward_finished_v8.glb": "9d28c469089cb039fd17393db7e84d7c46def77db4eeb04aa05deed8a32c6f63",
+    "modeling/interactive-ad-v1/onward_ad_v1_editable.blend": "c463c70d76855a8eb06ce85de38e8114eed6ea9b4680439986fa7c05567ff0a4",
+    "modeling/finished-shoe-v8/soulgrain_onward_finished_v8.blend": "f0eb94ce8a66e1e1ecd7044d6361ead438734db9f59959609ff4308bdaec9c00",
+    "modeling/finished-shoe-v8/references/04-heel-leather.jpg": "dd9d94924389ce4119a55886f376f75fcbf8fbab1a9262055f45da475a72286b"
+  },
+  "expected": {
+    "source": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+    "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+    "bytes": 23873476,
+    "counts": {
+      "nodes": 29,
+      "primitives": 42,
+      "triangles": 463512,
+      "skins": 0,
+      "animations": 0
+    },
+    "sourceBounds": {
+      "min": [
+        -0.12975239753723145,
+        -0.020561281591653824,
+        -0.05804039165377617
+      ],
+      "max": [
+        0.13589324057102203,
+        0.11721765249967575,
+        0.04504695534706116
+      ]
+    },
+    "displayNormalization": {
+      "center": [
+        0.003070421516895294,
+        0.04832818545401096,
+        -0.006496718153357506
+      ],
+      "scale": 12.799005563247619
+    },
+    "nodes": {
+      "Finished_Heel_Leather": {
+        "role": "move-with-heel",
+        "nodeIndex": 10,
+        "meshIndex": 10,
+        "localEqualsGLTFWorld": true,
+        "primitiveMode": 4,
+        "morphTargets": 0,
+        "attributes": {
+          "POSITION": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 793,
+            "normalized": false,
+            "sha256": "c45d9268555a520615c879f5e0b4b19abf3a1754e8e9f86f1e60dc5131ba0592"
+          },
+          "NORMAL": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 793,
+            "normalized": false,
+            "sha256": "20eaa616a4ebd30867d336b9590965399bec64578b749b873758ba6f4c266326"
+          },
+          "TEXCOORD_0": {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 793,
+            "normalized": false,
+            "sha256": "1bb0ce9906a5f3933c8110aa6415470a2b4a159cbe89df636d2c56f00e1c34c6"
+          }
+        },
+        "indices": {
+          "componentType": 5123,
+          "type": "SCALAR",
+          "count": 4320,
+          "normalized": false,
+          "sha256": "33c6a8ccb1d078e0bd1759214021044d5f7bff6d07cd5f97df87b0daf71cad19"
+        },
+        "bounds": {
+          "min": [
+            0.11575143039226532,
+            0.00699999975040555,
+            -0.013500005006790161
+          ],
+          "max": [
+            0.13277597725391388,
+            0.10199999809265137,
+            0.0004999997327104211
+          ]
+        },
+        "materialIndex": 13,
+        "material": {
+          "doubleSided": true,
+          "name": "Heel_Strip",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 15,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 16
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.4300000071525574
+          }
+        },
+        "materialUsers": [
+          "Finished_Heel_Leather",
+          "Heel_Seam_Stitch"
+        ],
+        "anchors": {
+          "lower": {
+            "vertex": 6,
+            "uv": [
+              0.5305084586143494,
+              0.823437511920929
+            ],
+            "position": [
+              0.13277597725391388,
+              0.00699999975040555,
+              -0.006500000599771738
+            ],
+            "normal": [
+              0.9981020092964172,
+              0.04960010200738907,
+              -0.036500073969364166
+            ]
+          },
+          "middle": {
+            "vertex": 396,
+            "uv": [
+              0.5305084586143494,
+              0.4984375238418579
+            ],
+            "position": [
+              0.12346912920475006,
+              0.054499998688697815,
+              -0.006500002462416887
+            ],
+            "normal": [
+              0.9533020257949829,
+              0.30200064182281494,
+              0.003300006967037916
+            ]
+          },
+          "upper": {
+            "vertex": 786,
+            "uv": [
+              0.5305084586143494,
+              0.1734374761581421
+            ],
+            "position": [
+              0.11645697057247162,
+              0.10199999809265137,
+              -0.006500004790723324
+            ],
+            "normal": [
+              0.9998502731323242,
+              0.017299139872193336,
+              0.0004999751690775156
+            ]
+          }
+        },
+        "uvGrid": [
+          13,
+          61
+        ]
+      },
+      "Heel_Leather_Stitching": {
+        "role": "move-with-heel",
+        "nodeIndex": 15,
+        "meshIndex": 15,
+        "localEqualsGLTFWorld": true,
+        "primitiveMode": 4,
+        "morphTargets": 0,
+        "attributes": {
+          "POSITION": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 952,
+            "normalized": false,
+            "sha256": "9c1264c2165d84cadb6366e755b2e23cadddf997965c4eb76ce9c73801f51753"
+          },
+          "NORMAL": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 952,
+            "normalized": false,
+            "sha256": "893291494d692b1da91f09d80bd2c66755cb4a07dbabda5b0bbca0b3bbabeac1"
+          },
+          "TEXCOORD_0": {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 952,
+            "normalized": false,
+            "sha256": "63cbde8b76a975d89fe7f76f34ffb2d2337e79686f0a82fd89fbce3f4577418c"
+          }
+        },
+        "indices": {
+          "componentType": 5123,
+          "type": "SCALAR",
+          "count": 2448,
+          "normalized": false,
+          "sha256": "619a33b782e6cd76169ad3848ef65204413ce292f68a54bc3dbbe68162fe3b8b"
+        },
+        "bounds": {
+          "min": [
+            0.11587285995483398,
+            0.007263186387717724,
+            -0.013140004128217697
+          ],
+          "max": [
+            0.132035493850708,
+            0.10096806287765503,
+            0.00013999966904520988
+          ]
+        },
+        "materialIndex": 3,
+        "material": {
+          "doubleSided": true,
+          "name": "Stitching",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.7835378050804138,
+              0.672443151473999,
+              0.4969329833984375,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        "materialUsers": [
+          "AD_Garment_Stitching",
+          "Garment_Stitching_Fixed",
+          "Heel_Leather_Stitching",
+          "Mongolian_Clasp_Loops",
+          "Quilt_Seam_Channels"
+        ]
+      },
+      "Heel_Seam_Stitch": {
+        "role": "stay-on-shoe",
+        "nodeIndex": 16,
+        "meshIndex": 16,
+        "localEqualsGLTFWorld": true,
+        "primitiveMode": 4,
+        "morphTargets": 0,
+        "attributes": {
+          "POSITION": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 557,
+            "normalized": false,
+            "sha256": "6b5ec2884f956ab8f52af2f190c6264cd4caf064b0af23f03fb5719e9d950ba4"
+          },
+          "NORMAL": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 557,
+            "normalized": false,
+            "sha256": "1aa9adefe4038a002c30282782cdb1c2888a9d8e1c5aca01425fb8924c7126fd"
+          },
+          "TEXCOORD_0": {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 557,
+            "normalized": false,
+            "sha256": "75880cf3456fa936b5a43ca3b48067d0e4e00211fc067a50aa35e0adc60634e4"
+          }
+        },
+        "indices": {
+          "componentType": 5123,
+          "type": "SCALAR",
+          "count": 2916,
+          "normalized": false,
+          "sha256": "c49da3260c0314d9f9ff4aa5833c8c2cf1fceb59fccaf3b0c638e571cc0c2e64"
+        },
+        "bounds": {
+          "min": [
+            0.1163824275135994,
+            0.045103415846824646,
+            -0.007645933888852596
+          ],
+          "max": [
+            0.12657155096530914,
+            0.10501451790332794,
+            -0.006240922957658768
+          ]
+        },
+        "materialIndex": 13,
+        "material": {
+          "doubleSided": true,
+          "name": "Heel_Strip",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 15,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 16
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.4300000071525574
+          }
+        },
+        "materialUsers": [
+          "Finished_Heel_Leather",
+          "Heel_Seam_Stitch"
+        ]
+      },
+      "Finished_Heel_Logo": {
+        "role": "separate-logo",
+        "nodeIndex": 11,
+        "meshIndex": 11,
+        "localEqualsGLTFWorld": true,
+        "primitiveMode": 4,
+        "morphTargets": 0,
+        "attributes": {
+          "POSITION": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 231,
+            "normalized": false,
+            "sha256": "85e7052bef10e59c72ad28b7dbf9a408cf1eeb6522d54126c98728897034f26b"
+          },
+          "NORMAL": {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 231,
+            "normalized": false,
+            "sha256": "1377349fc77eb12afb5ed7b05dd63a04e742eae71978052f838cef4d6459006e"
+          },
+          "TEXCOORD_0": {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 231,
+            "normalized": false,
+            "sha256": "ff1e85fc5a3d7a88cf0b3c1beddf21c4452d24495e4a4d2772ced3109d89bf90"
+          }
+        },
+        "indices": {
+          "componentType": 5123,
+          "type": "SCALAR",
+          "count": 1152,
+          "normalized": false,
+          "sha256": "964b2064dcbe4364ade2350e9c1d4ab6e8990871fb4ff770a67e9f358abacb1b"
+        },
+        "bounds": {
+          "min": [
+            0.11372561007738113,
+            -0.011400001123547554,
+            -0.028999999165534973
+          ],
+          "max": [
+            0.13322235643863678,
+            0.002900000661611557,
+            0.01600000075995922
+          ]
+        },
+        "materialIndex": 14,
+        "material": {
+          "doubleSided": true,
+          "name": "Heel_Logo",
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 17
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        "materialUsers": [
+          "Finished_Heel_Logo"
+        ]
+      }
+    },
+    "images": [
+      {
+        "name": "Neutral_canvas_weave",
+        "mimeType": "image/png",
+        "bytes": 473,
+        "sha256": "905dd9207c2f48bac9e91c753b885df72bfd8886a05d02f6bb6944abd3769d45"
+      },
+      {
+        "name": "cuff-reconstructed",
+        "mimeType": "image/png",
+        "bytes": 4657266,
+        "sha256": "cdb4a7ab73554b47094fd1ffdf6a2b2c6e7c12af35c6096e70da1d92222fd226"
+      },
+      {
+        "name": "02-body-print",
+        "mimeType": "image/jpeg",
+        "bytes": 306127,
+        "sha256": "8d4e2348bc93c09a2fa16b1178fff32f7e4dbba490073d5c7e8e439104952d90"
+      },
+      {
+        "name": "tongue-velvet-reconstructed",
+        "mimeType": "image/png",
+        "bytes": 3300265,
+        "sha256": "81574a2ff8aefb48ff7c2647c79dac86777ce3b3cd0a3acd1fdbf01f6ebcb861"
+      },
+      {
+        "name": "07-tongue-front-back",
+        "mimeType": "image/jpeg",
+        "bytes": 233316,
+        "sha256": "c8a87242e9057d6986bbadb867d46ff9d39120601e74b4088be384e6c8aa9240"
+      },
+      {
+        "name": "01-overall",
+        "mimeType": "image/jpeg",
+        "bytes": 232016,
+        "sha256": "dc132e6dab33963e426440d4d412e2683ebb4f09f51223a521c74a8b74742f63"
+      },
+      {
+        "name": "04-heel-leather",
+        "mimeType": "image/jpeg",
+        "bytes": 148964,
+        "sha256": "dd9d94924389ce4119a55886f376f75fcbf8fbab1a9262055f45da475a72286b"
+      },
+      {
+        "name": "09-heel-logo",
+        "mimeType": "image/jpeg",
+        "bytes": 93150,
+        "sha256": "d4d7f06730f6a5a7c5a8c1aab87962f331da72c6806b6ce51cc7298733fbd287"
+      },
+      {
+        "name": "06-aglet-artwork",
+        "mimeType": "image/jpeg",
+        "bytes": 120823,
+        "sha256": "1faade90a21032557217ccadc7ed217c8027d3db3fd212fed4b44193e63e0405"
+      }
+    ],
+    "textures": [
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 1
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 1
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 2
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 2
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 3
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 4
+      },
+      {
+        "sampler": 0,
+        "source": 5
+      },
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 6
+      },
+      {
+        "sampler": 0,
+        "source": 7
+      },
+      {
+        "sampler": 0,
+        "source": 8
+      },
+      {
+        "sampler": 0,
+        "source": 5
+      }
+    ]
+  }
+}
