@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "baseCommit": "eabb19a9d7b55c661e0c7e392e6ea415aab430d7",
+  "originalWorktreeProtected": {
+    "same_original_HEAD": true,
+    "same_original_branch": true,
+    "same_original_status": true,
+    "same_original_diff": true,
+    "same_original_index": true,
+    "same_28_dirty_or_untracked_files": true,
+    "no_existing_tracked_file_modified": true
+  },
+  "originalDirtyOrUntrackedCount": 28,
+  "branch": "feat/heel-motion-lab-v1",
+  "onlyNewFiles": 38,
+  "existingBaselinePathsChanged": []
+}
