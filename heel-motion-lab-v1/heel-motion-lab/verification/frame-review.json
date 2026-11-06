@@ -1,11 +1,11 @@
 {
   "passed": true,
-  "file": "heel-motion-lab-v1-24fps.mp4",
-  "frames": 625,
-  "fps": 24,
-  "samplingWallSeconds": 486.1053299019999,
+  "file": "heel-motion-lab-v1-12fps.mp4",
+  "frames": 313,
+  "fps": 12,
+  "samplingWallSeconds": 240.62089821300015,
   "maximumFrameError": 8.881784197001252e-16,
-  "minimumFrameDot": 0.6598347397899486,
+  "minimumFrameDot": 0.6599029578546638,
   "phases": [
     "已复位",
     "抽离",
@@ -16,9 +16,8 @@
     "连续返回"
   ],
   "finalRestored": true,
-  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "revision": "lower-exit-diagonal-v2",
-  "sourceCodeChangeCommit": "f98d7ef",
+  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/12-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
+  "revision": "lower-exit-longitudinal-v3",
   "encoding": {
     "programs": [],
     "stream_groups": [],
@@ -27,12 +26,12 @@
         "codec_name": "h264",
         "width": 1100,
         "height": 760,
-        "avg_frame_rate": "24/1"
+        "avg_frame_rate": "12/1"
       }
     ],
     "format": {
-      "duration": "26.041667",
-      "size": "3601280"
+      "duration": "26.083333",
+      "size": "2225134"
     }
   }
 }

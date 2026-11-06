@@ -3,9 +3,9 @@
   "file": "heel-motion-lab-v1.mp4",
   "method": "Playwright actual viewport recording of button-triggered real-time WebGL playback; H.264 conversion, no synthetic/interpolated animation frames",
   "environment": "Linux Chromium + SwiftShader, not hardware-GPU or iPad Safari",
-  "playbackWallSeconds": 26.281127387000083,
+  "playbackWallSeconds": 26.41525148999972,
   "finalState": {
-    "revision": "lower-exit-diagonal-v2",
+    "revision": "lower-exit-longitudinal-v3",
     "ready": true,
     "error": null,
     "progress": 1,
@@ -69,7 +69,7 @@
         0,
         0
       ],
-      "method": "deterministic path-driven advertising inertia"
+      "method": "deterministic longitudinal-axis advertising inertia"
     },
     "actor": {
       "originalPanelVisible": true,
@@ -310,7 +310,7 @@
     "drawCalls": 43,
     "triangles": 463512,
     "pixelRatio": 1,
-    "meanFrameInterval": 759.1789473684211,
+    "meanFrameInterval": 753.8153846153846,
     "contextLost": false
   },
   "errors": []
