@@ -149,6 +149,13 @@ def main():
         check('free orbit takes camera ownership',state()['cameraOwner']=='free' and math.dist(old,state()['camera'])>.05)
         page.locator('[data-view="director"]').click();page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
         check('one-click director restore releases orbit ownership',state()['cameraOwner']=='director' and not page.evaluate('window.__heelLab.lab.controls.enabled'))
+        # Returning to the director while the close-up is moving must not chase
+        # a stale target. Its short camera handoff holds narrative time.
+        seek(.055);view('side');page.evaluate('window.__heelLab.play()')
+        held=page.locator('[data-view="director"]').evaluate('''el => {el.click();const l=window.__heelLab.lab,before=l.progress;l.advance(.25);return{before,after:l.progress};}''')
+        page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=30000);page.locator('[data-action="pause"]').click()
+        match=page.evaluate('''() => {const l=window.__heelLab.lab,p=l.directorPose();return l.camera.position.distanceTo(p.position)+l.controls.target.distanceTo(p.target);}''')
+        check('active playback hands off to the current director shot without endpoint drift',held['before']==held['after'] and match<1e-6,{'held':held,'cameraError':match})
         report['performanceSample']=state();context.close()
         # Isolate GPU contexts between test groups. Touch is emulated, not Safari.
         tablet=browser.new_context(viewport={'width':1024,'height':768},device_scale_factor=1,has_touch=True,is_mobile=True)

@@ -65,6 +65,9 @@ export class HeelLab {
   this.dirty=false;this.renderNeeded=true;
  }
  advance(dt:number){if(!this.ready)return;
+  // A director handoff targets the current shot. Hold narrative time until
+  // it arrives, so a moving close-up cannot drift away from that endpoint.
+  if(this.cameraOwner==='director'&&this.director.moving)dt=0;
   if(this.returnTrack&&this.playing){this.returnTrack.time+=dt*this.speed;this.progress=this.returnTrack.fromP+(1-this.returnTrack.fromP)*clamp(this.returnTrack.time/this.returnTrack.duration);if(this.returnTrack.time>=this.returnTrack.duration){this.returnTrack=undefined;this.progress=1;this.playing=false;}this.dirty=true;}
   else if(this.playing){this.progress=clamp(this.progress+dt*this.speed/DURATION);if(this.progress>=1)this.playing=false;this.dirty=true;}
   if(this.dirty)this.updateGeometry();
@@ -74,7 +77,7 @@ export class HeelLab {
   if(!this.contextLost&&(this.renderNeeded||this.playing||moving)&&timestamp-this.lastRendered>=interval){this.render();if(this.lastRendered)this.intervals.push(timestamp-this.lastRendered);if(this.intervals.length>120)this.intervals.shift();this.lastRendered=timestamp;if(timestamp-this.uiAt>80){this.events.change();this.uiAt=timestamp;}}
   this.frame=requestAnimationFrame(this.loop);
  };
- seek(p:number){this.playing=false;this.returnTrack=undefined;this.progress=clamp(p);this.dirty=true;this.advance(0);this.events.change();}
+ seek(p:number){this.playing=false;this.returnTrack=undefined;if(this.cameraOwner==='director')this.director.cancel();this.progress=clamp(p);this.dirty=true;this.advance(0);this.events.change();}
  play(){if(!this.ready)return;if(this.progress>=1){this.progress=0;this.returnTrack=undefined;this.dirty=true;}this.playing=true;this.events.change();}
  pause(){this.playing=false;this.events.change();}
  replay(){this.seek(0);this.play();}
