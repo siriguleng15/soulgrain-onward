@@ -1,0 +1,173 @@
+{
+  "passed": true,
+  "scope": "Synthetic calibration chart only; actual user artwork absent; no physical iPad Safari test",
+  "checks": [
+    {
+      "name": "desktop: exact file bytes identified; PBR and source aspect retained",
+      "passed": true,
+      "detail": {
+        "state": {
+          "status": "ready",
+          "source": "http://127.0.0.1:4538/qa-ribbon-artwork.png",
+          "sha256": "fa923e60726dda2d92acc6fd3790f11f51cd0f8efd4d6f4e1f16ac1e28a656a5",
+          "width": 128,
+          "height": 512,
+          "error": null
+        },
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "roughness": 0.36,
+        "metalness": 0.06,
+        "repeat": [
+          1,
+          0.25
+        ],
+        "colorSpace": "srgb",
+        "flipY": false
+      }
+    },
+    {
+      "name": "desktop: artwork does not alter V1.7 position, UV, path or camera",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: seeking never recompiles the artwork material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: missing image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "Error: 纹样加载失败 HTTP 404",
+        "same": true
+      }
+    },
+    {
+      "name": "desktop: invalid image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "EncodingError: The source image cannot be decoded.",
+        "same": true
+      }
+    },
+    {
+      "name": "desktop: replacing disposes only the owned texture, without shader churn",
+      "passed": true,
+      "detail": {
+        "disposals": 1,
+        "sameProgramVersion": true,
+        "isolated": true
+      }
+    },
+    {
+      "name": "desktop: both display modes share the artwork and position buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: manual reverse remains complete and source geometry is intact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: clear restores original ribbon color and removes the owned map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: no JavaScript errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet: exact file bytes identified; PBR and source aspect retained",
+      "passed": true,
+      "detail": {
+        "state": {
+          "status": "ready",
+          "source": "http://127.0.0.1:4538/qa-ribbon-artwork.png",
+          "sha256": "fa923e60726dda2d92acc6fd3790f11f51cd0f8efd4d6f4e1f16ac1e28a656a5",
+          "width": 128,
+          "height": 512,
+          "error": null
+        },
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "roughness": 0.36,
+        "metalness": 0.06,
+        "repeat": [
+          1,
+          0.25
+        ],
+        "colorSpace": "srgb",
+        "flipY": false
+      }
+    },
+    {
+      "name": "tablet: artwork does not alter V1.7 position, UV, path or camera",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: seeking never recompiles the artwork material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: missing image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "Error: 纹样加载失败 HTTP 404",
+        "same": true
+      }
+    },
+    {
+      "name": "tablet: invalid image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "EncodingError: The source image cannot be decoded.",
+        "same": true
+      }
+    },
+    {
+      "name": "tablet: replacing disposes only the owned texture, without shader churn",
+      "passed": true,
+      "detail": {
+        "disposals": 1,
+        "sameProgramVersion": true,
+        "isolated": true
+      }
+    },
+    {
+      "name": "tablet: both display modes share the artwork and position buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: manual reverse remains complete and source geometry is intact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: clear restores original ribbon color and removes the owned map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: no JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "baseline": "f0a7756952910f0eeb3cbfc708cd4640c3d09cdb",
+  "sourceSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "protectedWorktreeUnchanged": true
+}

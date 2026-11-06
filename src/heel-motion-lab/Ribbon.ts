@@ -42,8 +42,8 @@ export class Ribbon {
    for(let j=0;j<=this.across;j++)for(let side=0;side<2;side++){
     const p=f.point.clone().addScaledVector(f.b,params.width*(j/this.across-.5)).addScaledVector(f.n,(side?1:-1)*h/2).addScaledVector(offsets[j],join);
     p.toArray(this.positions,((i*cols+j)+side*layer)*3);
-    // Editable derived surface coordinates for future artwork; no source UV
-    // or approved pattern is modified or assigned to this red motion study.
+    // Arc length in width units, anchored to the heel rather than normalized
+    // to the growing tip. Artwork transforms account for the source aspect.
     const uvIndex=((i*cols+j)+side*layer)*2;this.uvs[uvIndex]=j/this.across;this.uvs[uvIndex+1]=distance/params.width;
    }
   }
