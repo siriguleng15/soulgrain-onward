@@ -1,10 +1,10 @@
 {
   "preview": "Heel Motion Lab V1.6",
   "revision": "heel-forward-feed-face-v8",
-  "sourceCommit": "ccbbf56cafc5b2a5e24813ede21c1692129376a2",
-  "basePagesCommit": "11309a9c6a4af381ea7ee07d5bc11d5901124111",
+  "sourceCommit": "561acb07b6b2dc8c8947ed2d1aa103e4dfe4d986",
+  "basePagesCommit": "af8e543c6a505a7b97798eadb5a180de4d720a19",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T11:41:47.846379+00:00",
+  "preparedAt": "2026-11-06T11:54:12.387078+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Independent live lab updated; review gallery stays on V1.4 until the new 24fps direction review completes; no production changes."
+  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
 }

@@ -1,0 +1,291 @@
+{
+  "testedAt": "2026-11-06T19:41:00.699832+08:00",
+  "passed": true,
+  "revision": "heel-forward-feed-face-v8",
+  "checks": [
+    {
+      "name": "desktop: broad face presented toward viewer",
+      "passed": true,
+      "detail": {
+        "aspect": 1.2636363636363637,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.3545855295114134,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.17097902693422107,
+        "bounds": [
+          -0.6181565311743752,
+          0.09101452784845171,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "desktop: face stays in frame and clear of near plane",
+      "passed": true,
+      "detail": {
+        "aspect": 1.2636363636363637,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.3545855295114134,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.17097902693422107,
+        "bounds": [
+          -0.6181565311743752,
+          0.09101452784845171,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "desktop: perspective enlargement preserves physical width and derived UVs",
+      "passed": true,
+      "detail": {
+        "aspect": 1.2636363636363637,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.3545855295114134,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.17097902693422107,
+        "bounds": [
+          -0.6181565311743752,
+          0.09101452784845171,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "no visible roll reversal during approach and surface reveal",
+      "passed": true,
+      "detail": {
+        "samples": 121,
+        "minimumTemporalWidthDot": 0.9986537363211111,
+        "minimumSpatialWidthDot": 0.9246510963013846
+      }
+    },
+    {
+      "name": "actual ribbon tip advances toward toe by the marked 26.2% stage",
+      "passed": true,
+      "detail": {
+        "rootX": 1.660102129921019,
+        "tipX": 0.9417920086839685,
+        "advancement": 0.7183101212370505
+      }
+    },
+    {
+      "name": "free inspection does not billboard or reshape the band",
+      "passed": true,
+      "detail": {
+        "sharedGeometryUnchanged": true
+      }
+    },
+    {
+      "name": "tablet: broad face presented toward viewer",
+      "passed": true,
+      "detail": {
+        "aspect": 1.1335078534031413,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.39529251408769756,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.19060769204604813,
+        "bounds": [
+          -0.6891218873041566,
+          0.10146314087123852,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "tablet: face stays in frame and clear of near plane",
+      "passed": true,
+      "detail": {
+        "aspect": 1.1335078534031413,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.39529251408769756,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.19060769204604813,
+        "bounds": [
+          -0.6891218873041566,
+          0.10146314087123852,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "tablet: perspective enlargement preserves physical width and derived UVs",
+      "passed": true,
+      "detail": {
+        "aspect": 1.1335078534031413,
+        "normalFacing": 0.9953167189600648,
+        "minimumDepth": 0.7939973613365616,
+        "width": 0.18000016649460027,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.39529251408769756,
+        "screenHeight": 0.6279316268022318,
+        "screenArea": 0.19060769204604813,
+        "bounds": [
+          -0.6891218873041566,
+          0.10146314087123852,
+          -0.8597061484149594,
+          0.3961571051895042
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "phone: broad face presented toward viewer",
+      "passed": true,
+      "detail": {
+        "aspect": 0.9430611705142252,
+        "normalFacing": 0.9958899756139796,
+        "minimumDepth": 0.842283746355905,
+        "width": 0.17999997169654186,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.4487043353585782,
+        "screenHeight": 0.5964881584161239,
+        "screenArea": 0.20527970713623792,
+        "bounds": [
+          -0.7808077243323706,
+          0.11660094638478581,
+          -0.8103914986086626,
+          0.38258481822358537
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "phone: face stays in frame and clear of near plane",
+      "passed": true,
+      "detail": {
+        "aspect": 0.9430611705142252,
+        "normalFacing": 0.9958899756139796,
+        "minimumDepth": 0.842283746355905,
+        "width": 0.17999997169654186,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.4487043353585782,
+        "screenHeight": 0.5964881584161239,
+        "screenArea": 0.20527970713623792,
+        "bounds": [
+          -0.7808077243323706,
+          0.11660094638478581,
+          -0.8103914986086626,
+          0.38258481822358537
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    },
+    {
+      "name": "phone: perspective enlargement preserves physical width and derived UVs",
+      "passed": true,
+      "detail": {
+        "aspect": 0.9430611705142252,
+        "normalFacing": 0.9958899756139796,
+        "minimumDepth": 0.842283746355905,
+        "width": 0.17999997169654186,
+        "expectedWidth": 0.18,
+        "screenWidth": 0.4487043353585782,
+        "screenHeight": 0.5964881584161239,
+        "screenArea": 0.20527970713623792,
+        "bounds": [
+          -0.7808077243323706,
+          0.11660094638478581,
+          -0.8103914986086626,
+          0.38258481822358537
+        ],
+        "uvFinite": true,
+        "revision": "heel-forward-feed-face-v8"
+      }
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "aspect": 1.2636363636363637,
+      "normalFacing": 0.9953167189600648,
+      "minimumDepth": 0.7939973613365616,
+      "width": 0.18000016649460027,
+      "expectedWidth": 0.18,
+      "screenWidth": 0.3545855295114134,
+      "screenHeight": 0.6279316268022318,
+      "screenArea": 0.17097902693422107,
+      "bounds": [
+        -0.6181565311743752,
+        0.09101452784845171,
+        -0.8597061484149594,
+        0.3961571051895042
+      ],
+      "uvFinite": true,
+      "revision": "heel-forward-feed-face-v8"
+    },
+    {
+      "device": "tablet",
+      "aspect": 1.1335078534031413,
+      "normalFacing": 0.9953167189600648,
+      "minimumDepth": 0.7939973613365616,
+      "width": 0.18000016649460027,
+      "expectedWidth": 0.18,
+      "screenWidth": 0.39529251408769756,
+      "screenHeight": 0.6279316268022318,
+      "screenArea": 0.19060769204604813,
+      "bounds": [
+        -0.6891218873041566,
+        0.10146314087123852,
+        -0.8597061484149594,
+        0.3961571051895042
+      ],
+      "uvFinite": true,
+      "revision": "heel-forward-feed-face-v8"
+    },
+    {
+      "device": "phone",
+      "aspect": 0.9430611705142252,
+      "normalFacing": 0.9958899756139796,
+      "minimumDepth": 0.842283746355905,
+      "width": 0.17999997169654186,
+      "expectedWidth": 0.18,
+      "screenWidth": 0.4487043353585782,
+      "screenHeight": 0.5964881584161239,
+      "screenArea": 0.20527970713623792,
+      "bounds": [
+        -0.7808077243323706,
+        0.11660094638478581,
+        -0.8103914986086626,
+        0.38258481822358537
+      ],
+      "uvFinite": true,
+      "revision": "heel-forward-feed-face-v8"
+    }
+  ],
+  "environment": "Linux Chromium + SwiftShader; device viewport layouts only; NOT physical iPad Safari",
+  "meaning": "The red derived band keeps its real width. Its final 3D path and transported frames present the broad surface toward the authored director camera, independently of OrbitControls."
+}

@@ -1,17 +1,18 @@
 {
-  "revision": "heel-approved-winding-toe-v7",
-  "motionSourceCommit": "54f47d0d8fa62c6023a1af355d6ce095255103f2",
+  "revision": "heel-forward-feed-face-v8",
+  "motionSourceCommit": "ccbbf56cafc5b2a5e24813ede21c1692129376a2",
   "passed": true,
   "file": "heel-motion-lab-v1-24fps.mp4",
   "frames": 721,
   "fps": 24,
   "duration": 30,
-  "samplingWallSeconds": 826.3418570169997,
-  "maximumFrameError": 8.881784197001252e-16,
-  "minimumFrameDot": 0.920520410940917,
+  "samplingWallSeconds": 643.1846727470038,
+  "maximumFrameError": 1.7763568394002505e-15,
+  "minimumFrameDot": 0.9189340545306055,
   "phases": [
     "后跟特写推进",
     "已复位",
+    "带面展示",
     "第一圈",
     "第二圈",
     "近镜冲刺",
@@ -38,5 +39,5 @@
     }
   },
   "fastStart": true,
-  "videoSHA256": "202f1de18f11bcd93c6ab15bbedccb8050a29743b3130fb114f7d9ca9073c63f"
+  "videoSHA256": "a18e88fa35bf907f12068f68b795977bdc657f6e43412b080f10e3fe098ac3b5"
 }
