@@ -8,13 +8,14 @@ export function localTrajectory(surface:HeelSurface,params:Parameters,_u:number,
  const coil=(s:number)=>{
   const angle=startAngle+Math.PI*2*params.turns*s+.09*Math.sin(s*Math.PI*3);
   const r=params.radius*(1+.13*Math.sin(s*5.5+.4)+.055*Math.sin(s*13));
-  return new Vector3(1.60-3.55*params.pitch*s+.12*Math.sin(s*Math.PI*3),-.08+r*Math.cos(angle)+.10*Math.sin(s*9),-r*.88*Math.sin(angle)).applyAxisAngle(xAxis,tilt);
+  return new Vector3(2.02-3.55*params.pitch*s+.12*Math.sin(s*Math.PI*3),-.08+r*Math.cos(angle)+.10*Math.sin(s*9),r*.88*Math.sin(angle)).applyAxisAngle(xAxis,tilt);
  };
  const points=[surface.upper.clone(),surface.middle.clone(),surface.lower.clone()];
- // A continuous inward bend: both ends match their actual surface/coil tangent.
+ // Keep the approved positive Y/Z winding; only the lead bows inward.
+ // Both ends match their actual surface/coil tangent.
  // The old pair of tightly spaced controls reversed the vertical direction.
  const a=coil(0),tangent=coil(.0001).sub(a).normalize();
- const lead=new CubicBezierCurve3(surface.lower.clone(),surface.lower.clone().addScaledVector(surface.exitTangent,.45),a.clone().addScaledVector(tangent,-.35),a);
+ const lead=new CubicBezierCurve3(surface.lower.clone(),surface.lower.clone().addScaledVector(surface.exitTangent,.45),a.clone().addScaledVector(tangent,-.55),a);
  for(let i=1;i<6;i++)points.push(lead.getPoint(i/6));
  const coilStart=points.length,loops=32;
  for(let i=0;i<=loops;i++)points.push(coil(i/loops));
@@ -25,14 +26,7 @@ export function localTrajectory(surface:HeelSurface,params:Parameters,_u:number,
  const tail=points.at(-1)!.clone().applyAxisAngle(xAxis,-tilt),r0=Math.hypot(tail.y+.08,tail.z/.88);
  for(let i=1;i<=8;i++){
   const s=i/8,angle=endAngle+(topAngle-endAngle)*s,r=r0+(.85*params.radius/1.15-r0)*s;
-  points.push(new Vector3(tail.x+(-1.42-tail.x)*s,-.08+r*Math.cos(angle),-r*.88*Math.sin(angle)).applyAxisAngle(xAxis,tilt));
- }
- // Round the upper forefoot turn in shoe space before aiming toward +Z.
- // This small overhead arc replaces the previous large outward departure.
- const top=points.at(-1)!.clone().applyAxisAngle(xAxis,-tilt);
- for(let i=1;i<=6;i++){
-  const angle=Math.PI*i/6;
-  points.push(top.clone().add(new Vector3(0,.32*(1-Math.cos(angle)),-.32*Math.sin(angle))).applyAxisAngle(xAxis,tilt));
+  points.push(new Vector3(tail.x+(-1.42-tail.x)*s,-.08+r*Math.cos(angle),r*.88*Math.sin(angle)).applyAxisAngle(xAxis,tilt));
  }
  const toeEnd=points.length-1;
  return{points:points.map((p,i)=>p.add(offsets.get(i)??new Vector3())),coilStart,loops,coilEnd,toeEnd};

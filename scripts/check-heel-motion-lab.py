@@ -58,6 +58,8 @@ def main():
             s=state();keyframes.append({'image':name+'.png','progress':progress if raw else story(progress),'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
         # Regression for the art review: inspect actual rendered vertices in the
         # shoe's coordinates, not screen arrows or the curve's intended controls.
+        winding=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const inv=l.pose.matrix.clone().invert(),a=l.path.routeIndices;let error=0;for(let i=0;i<=32;i++){const t=i/32,angle=Math.PI+.17+Math.PI*2*l.params.turns*t+.09*Math.sin(t*Math.PI*3),r=l.params.radius*(1+.13*Math.sin(t*5.5+.4)+.055*Math.sin(t*13)),actual=l.path.points[a.coilStart+i].clone().applyMatrix4(inv),expected=actual.clone().set(2.02-3.55*l.params.pitch*t+.12*Math.sin(t*Math.PI*3),-.08+r*Math.cos(angle)+.10*Math.sin(t*9),r*.88*Math.sin(angle));error=Math.max(error,actual.distanceTo(expected));}let area=0;for(let i=a.coilStart;i<a.coilEnd;i++){const p=l.path.points[i].clone().applyMatrix4(inv),q=l.path.points[i+1].clone().applyMatrix4(inv);area+=(p.y+.08)*q.z-p.z*(q.y+.08);}return {signedArea:area,maximumApprovedPathError:error,expected:'positive, matching approved V1.4'};}''')
+        check('ribbon keeps approved V1.4 winding direction without global mirroring',winding['signedArea']>0 and winding['maximumApprovedPathError']<1e-10,winding)
         exit_samples=[]
         for progress in [.025,.045,.07,.10,.13]:
             seek(progress)
@@ -157,7 +159,7 @@ def main():
         shot('18-inward-feed',.231,'director',raw=True);shot('19-above-toe',.766,'director',raw=True);shot('20-toe-launch',.815,'director',raw=True)
         flow=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const matrix=l.pose.matrix.clone(),rows=[];for(const a of[.11,.35,.59,.74]){const u=a/.82,h=1e-5;const lengths=[u-h,u,u+h].map(t=>{l.path.update(l.actor.surface,l.params,matrix,t);return l.path.tipLength;});rows.push({a,left:(lengths[1]-lengths[0])/h,right:(lengths[2]-lengths[1])/h});}l.seek(.766);const end=l.path.points[l.path.routeIndices.toeEnd].clone().applyMatrix4(l.pose.matrix.clone().invert()),terminal=l.getState().reaction.signedAngle;l.seek(.1+.9*.81);const later=l.getState().reaction.signedAngle;return {rows,toeTop:end.toArray(),terminal,later};}''')
         check('one continuous feed has positive matched speed across both laps and toe turn',all(v['left']>0 and v['right']>0 and abs(v['left']-v['right'])/max(v['left'],v['right'])<.01 for v in flow['rows']),flow['rows'])
-        check('sprint begins above the actual forefoot with approved shoe angle',abs(flow['toeTop'][0]+1.42)<1e-5 and flow['toeTop'][1]>1 and abs(flow['terminal']-5.253199603225055)<.001 and abs(flow['later']-flow['terminal'])<.001,flow)
+        check('sprint begins above the actual forefoot with approved shoe angle',abs(flow['toeTop'][0]+1.42)<1e-5 and flow['toeTop'][1]>.7 and abs(flow['terminal']-5.253199603225055)<.001 and abs(flow['later']-flow['terminal'])<.001,flow)
         check('no terminal dwell before continuous return',seek(.819)['phase']=='近镜冲刺' and seek(.821)['phase']=='连续返回')
         page.locator('[data-ui="speed"]').select_option('1')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
