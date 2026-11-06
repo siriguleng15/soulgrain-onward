@@ -1,10 +1,10 @@
 {
-  "preview": "Heel Motion Lab V1.3",
-  "revision": "tangent-flow-heel-macro-v4",
-  "sourceCommit": "94f4848839980346fd1fd2830a35d9f4f07d8208",
-  "basePagesCommit": "663c9e40452e25f5005d783fe603fe3b9559ede8",
+  "preview": "Heel Motion Lab V1.4",
+  "revision": "heel-horizontal-pull-ccw-v5",
+  "sourceCommit": "b6c0943f9df49fee3a9d0ce5cfa553698cd1cd6f",
+  "basePagesCommit": "8dc34050c34d70d3b75b4ef82179299b037b6774",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T04:09:24.748489+00:00",
+  "preparedAt": "2026-11-06T07:29:14.744935+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
+  "scope": "Independent live lab updated; review gallery stays on V1.3 until the new 12fps direction review completes; no production changes."
 }
