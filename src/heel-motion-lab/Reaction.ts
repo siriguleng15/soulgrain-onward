@@ -1,8 +1,9 @@
 import {CatmullRomCurve3,Quaternion,Vector3} from 'three';
-import {clamp,DURATION,INTRO_END,feedEase,growthParameter,segment} from './motion.ts';
+import {clamp,DURATION,INTRO_END,OUTBOUND_END,segment} from './motion.ts';
+import {continuousFeed} from './Feed.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
-import {departureTurn,flightControls,localTrajectory} from './Trajectory.ts';
+import {flightControls,localTrajectory} from './Trajectory.ts';
 
 interface Sample{position:Vector3;quaternion:Quaternion;force:Vector3;torque:Vector3;angularVelocity:Vector3;angle:number;}
 /**
@@ -18,14 +19,14 @@ export class HeelReaction {
   if(key===this.signature)return;this.signature=key;this.samples=[];
   this.pivot.copy(pivot);
   const position=new Vector3(),velocity=new Vector3(),quaternion=new Quaternion(),omega=new Vector3();
-  const dt=DURATION*(1-INTRO_END)*.74/this.steps;
+  const dt=DURATION*(1-INTRO_END)*OUTBOUND_END/this.steps;
   const shape=localTrajectory(surface,params,0,offsets),points=[...shape.points];
-  for(const point of departureTurn(points))points.push(point.add(offsets.get(points.length)??new Vector3()));
-  for(const point of flightControls())points.push(point.add(offsets.get(points.length)??new Vector3()));
+  for(const point of flightControls(points))points.push(point.add(offsets.get(points.length)??new Vector3()));
   const curve=new CatmullRomCurve3(points,false,'centripetal',.5),end=points.length-1;
   curve.arcLengthDivisions=1200;const lengths=curve.getLengths(),total=lengths[lengths.length-1];
   const arcAt=(t:number)=>{const f=t*1200,k=Math.floor(f);return(lengths[k]??total)+((lengths[Math.min(1200,k+1)]??total)-(lengths[k]??total))*(f-k);};
-  const restLength=arcAt(2/end),feedEnd=arcAt(shape.coilStart/end);
+  const restLength=arcAt(2/end);
+  const distances=[restLength,arcAt(shape.coilStart/end),arcAt((shape.coilStart+shape.loops/2)/end),arcAt(shape.coilEnd/end),arcAt(shape.toeEnd/end),total];
   // The lower attachment pulls along the departing ribbon. As requested,
   // consider only its horizontal component in the initial shoe side frame.
   // A rightward pull below the midpoint gives r × F with positive Z (CCW).
@@ -34,8 +35,7 @@ export class HeelReaction {
   let previousLength=restLength,angle=0;
   for(let i=0;i<=this.steps;i++){
    const u=i/this.steps;
-   const t=growthParameter(u,2/end,shape.coilStart/end,(shape.coilStart+shape.loops/2)/end,shape.coilEnd/end);
-   const length=u<=.11/.74?restLength+(feedEnd-restLength)*feedEase(u/(.11/.74)):arcAt(t);
+   const length=continuousFeed(u,distances);
    const feedSpeed=i?Math.max(0,(length-previousLength)/dt):0;previousLength=length;
    const force=horizontal.clone().multiplyScalar(feedSpeed),torque=new Vector3().crossVectors(lever,force);
    torque.x=torque.y=0;
@@ -50,6 +50,20 @@ export class HeelReaction {
    }
    this.samples.push({position:position.clone(),quaternion:quaternion.clone(),force,torque,angularVelocity:omega.clone(),angle});
   }
+  // Preserve the art-approved V1.4 terminal angle. Extra forefoot routing
+  // must not add another shoe tumble. Torque still determines the sign;
+  // this pose budget is advertising direction, not a physical mass model.
+  const stop=.74/OUTBOUND_END,rawEnd=this.samples[Math.round(stop*this.steps)].angle;
+  const target=5.253199603225055*(params.turns/2)*Math.sign(rawEnd);
+  for(const sample of this.samples){
+   const v=clamp(rawEnd?sample.angle/rawEnd:0),v2=v*v,v3=v2*v;
+   const h=v+4*v3-7*v3*v+3*v3*v2;
+   const derivative=(1-v)*(1-v)*(15*v2+2*v+1);
+   sample.angle=target*h;
+   sample.quaternion.setFromAxisAngle(this.axis,sample.angle);
+   sample.angularVelocity.multiplyScalar(rawEnd?target/rawEnd*derivative:0);
+  }
+
  }
  at(u:number){
   if(!this.samples.length)return{position:new Vector3(),quaternion:new Quaternion(),force:new Vector3(),torque:new Vector3(),angularVelocity:new Vector3(),angle:0};

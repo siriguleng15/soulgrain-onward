@@ -46,7 +46,7 @@ def main():
         page.goto(args.url,wait_until='domcontentloaded',timeout=90000);page.wait_for_function('window.__heelLab && (window.__heelLab.getState().ready||window.__heelLab.getState().error)',timeout=90000)
         state=lambda:page.evaluate('window.__heelLab.getState()')
         check('real colored GLB loaded and SHA verified in browser',state()['ready'] and state()['browserVerifiedSHA']==SHA)
-        initial=state();check('source UV surface correspondence',initial['actor']['exactRestSurfaceError']<1e-6,initial['actor'])
+        initial=state();report['revision']=initial['revision'];check('source UV surface correspondence',initial['actor']['exactRestSurfaceError']<1e-6,initial['actor'])
         check('one live WebGL canvas',page.locator('#stage canvas').count()==1)
         def story(value):return .10+.90*value
         def seek(value):return page.evaluate('(p)=>{window.__heelLab.seek(p);return window.__heelLab.getState();}',story(value))
@@ -133,10 +133,11 @@ def main():
         check('pause holds exact scene progress',state()['progress']==paused and not state()['playing'],paused)
         seek(.56);forward=page.evaluate(HASH_JS);pose=state()['shoe'];seek(.18);seek(.56)
         check('reverse seek returns identical geometry and pose',page.evaluate(HASH_JS)==forward and state()['shoe']==pose)
-        for speed in [.25,.5,1]:
-            page.locator('[data-ui="speed"]').select_option(str(speed) if speed!=1 else '1')
+        for speed in [.25,.5,1,2,3]:
+            page.locator('[data-ui="speed"]').select_option(str(speed))
             delta=page.evaluate('''() => {const l=window.__heelLab.lab;l.seek(.2);l.play();l.advance(1);l.pause();return l.progress-.2;}''')
             check('actual playback rate '+str(speed),abs(delta-speed/30)<1e-10,delta)
+        page.locator('[data-ui="speed"]').select_option('1')
         seek(.56);before=page.evaluate(HASH_JS);page.locator('[data-mode="rectangular-outline"]').click();after=page.evaluate(HASH_JS)
         check('two modes share positions and center path',before==after and state()['mode']=='rectangular-outline' and state()['ribbon']['sharedVertexBuffers'])
         shot('09-outline-above',.56,'above');page.locator('[data-mode="solid-ribbon"]').click()
@@ -150,7 +151,13 @@ def main():
         page.locator('[data-axis="x"]').fill('0.35')
         check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
         shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
-        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-counterclockwise-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-counterclockwise-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.815,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('18-inward-feed',.231,'director',raw=True);shot('19-above-toe',.766,'director',raw=True);shot('20-toe-launch',.815,'director',raw=True)
+        flow=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const matrix=l.pose.matrix.clone(),rows=[];for(const a of[.11,.35,.59,.74]){const u=a/.82,h=1e-5;const lengths=[u-h,u,u+h].map(t=>{l.path.update(l.actor.surface,l.params,matrix,t);return l.path.tipLength;});rows.push({a,left:(lengths[1]-lengths[0])/h,right:(lengths[2]-lengths[1])/h});}l.seek(.766);const end=l.path.points[l.path.routeIndices.toeEnd].clone().applyMatrix4(l.pose.matrix.clone().invert()),terminal=l.getState().reaction.signedAngle;l.seek(.1+.9*.81);const later=l.getState().reaction.signedAngle;return {rows,toeTop:end.toArray(),terminal,later};}''')
+        check('one continuous feed has positive matched speed across both laps and toe turn',all(v['left']>0 and v['right']>0 and abs(v['left']-v['right'])/max(v['left'],v['right'])<.01 for v in flow['rows']),flow['rows'])
+        check('sprint begins above the actual forefoot with approved shoe angle',abs(flow['toeTop'][0]+1.42)<1e-5 and flow['toeTop'][1]>1 and abs(flow['terminal']-5.253199603225055)<.001 and abs(flow['later']-flow['terminal'])<.001,flow)
+        check('no terminal dwell before continuous return',seek(.819)['phase']=='近镜冲刺' and seek(.821)['phase']=='连续返回')
+        page.locator('[data-ui="speed"]').select_option('1')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
         for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:

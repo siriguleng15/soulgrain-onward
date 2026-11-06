@@ -1,27 +1,28 @@
 import {CatmullRomCurve3,Matrix4,Quaternion,Vector3} from 'three';
-import {clamp,feedEase,growthParameter} from './motion.ts';
+import {clamp} from './motion.ts';
+import {continuousFeed} from './Feed.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
-import {departureTurn,flightControls,localTrajectory} from './Trajectory.ts';
+import {flightControls,localTrajectory} from './Trajectory.ts';
 export class MotionPath {
  points:Vector3[]=[];curve=new CatmullRomCurve3();offsets=new Map<number,Vector3>();
  samples:Vector3[]=[];tangents:Vector3[]=[];widths:Vector3[]=[];normals:Vector3[]=[];
  length=1;tipLength=0;frameError=0;minimumFrameDot=1;restLength=1;reversals=0;
+ routeIndices={coilStart:0,coilHalf:0,coilEnd:0,toeEnd:0};
  readonly count=600;
  update(surface:HeelSurface,params:Parameters,pose:Matrix4,u:number){
-  const{points:local,coilStart,loops,coilEnd}=localTrajectory(surface,params,u,this.offsets);
+  const{points:local,coilStart,loops,coilEnd,toeEnd}=localTrajectory(surface,params,u,this.offsets);
+  this.routeIndices={coilStart,coilHalf:coilStart+loops/2,coilEnd,toeEnd};
   this.points=local.map(p=>p.applyMatrix4(pose));
-  for(const p of departureTurn(this.points))this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
   // Fixed director-space flight target. Orbit inspection never changes the authored trajectory.
-  for(const p of flightControls())this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
+  for(const p of flightControls(this.points))this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
   this.curve=new CatmullRomCurve3(this.points,false,'centripetal',.5);this.curve.arcLengthDivisions=1200;this.curve.updateArcLengths();
   const lengths=this.curve.getLengths(1200),total=lengths[lengths.length-1];this.length=total;
   const arcAt=(t:number)=>{const f=t*1200,i=Math.floor(f);return(lengths[i]??total)+((lengths[Math.min(1200,i+1)]??total)-(lengths[i]??total))*(f-i);};
   // Exact control-point boundary of the lower end, not an assumed old rest length.
   this.restLength=arcAt(2/(this.points.length-1));
-  const t=growthParameter(u,2/(this.points.length-1),coilStart/(this.points.length-1),(coilStart+loops/2)/(this.points.length-1),coilEnd/(this.points.length-1));
-  const f=t*1200,i=Math.floor(f);this.tipLength=(lengths[i]??total)+((lengths[Math.min(1200,i+1)]??total)-(lengths[i]??total))*(f-i);
-  if(u<=.11/.74)this.tipLength=this.restLength+(arcAt(coilStart/(this.points.length-1))-this.restLength)*feedEase(u/(.11/.74));
+  const end=this.points.length-1;
+  this.tipLength=continuousFeed(u,[this.restLength,arcAt(coilStart/end),arcAt((coilStart+loops/2)/end),arcAt(coilEnd/end),arcAt(toeEnd/end),total]);
   this.tipLength=Math.max(this.restLength,this.tipLength);
   this.samples=this.curve.getSpacedPoints(this.count);this.tangents=[];this.widths=[];this.normals=[];this.frameError=0;this.minimumFrameDot=1;this.reversals=0;
   let previousT=new Vector3(),width=new Vector3(0,0,-1).transformDirection(pose);
