@@ -1,9 +1,11 @@
 {
-  "preview": "Heel Motion Lab V1",
-  "sourceCommit": "4eeddce0fd9322bc395b45114a8daaa245fac4b8",
-  "basePagesCommit": "d66982639c5919acc875f7138a6b7e2c9145dbf1",
+  "preview": "Heel Motion Lab V1.1",
+  "revision": "lower-exit-diagonal-v2",
+  "sourceCommit": "df336be2ff28f26df301cfa35da17788b98eb8b8",
+  "sourceCodeChangeCommit": "f98d7ef",
+  "basePagesCommit": "aa6b11c89f9e4e2be6ca6326191305f158ae4f08",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-05T20:36:55.819564+08:00",
+  "preparedAt": "2026-11-06T01:53:01.693209+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Only this new preview directory. Source feature branch and all pre-existing Pages files remain unchanged."
+  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
 }

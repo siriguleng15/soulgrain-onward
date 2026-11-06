@@ -1,17 +1,17 @@
 {
   "passed": true,
   "baseCommit": "eabb19a9d7b55c661e0c7e392e6ea415aab430d7",
+  "correctionParent": "4eeddce0fd9322bc395b45114a8daaa245fac4b8",
+  "branch": "fix/heel-motion-lower-exit-diagonal-reaction",
   "originalWorktreeProtected": {
     "same_original_HEAD": true,
     "same_original_branch": true,
     "same_original_status": true,
     "same_original_diff": true,
     "same_original_index": true,
-    "same_28_dirty_or_untracked_files": true,
-    "no_existing_tracked_file_modified": true
+    "same_individually_snapshotted_files": true,
+    "no_existing_baseline_file_modified": true
   },
-  "originalDirtyOrUntrackedCount": 28,
-  "branch": "feat/heel-motion-lab-v1",
-  "onlyNewFiles": 38,
+  "individuallySnapshottedFiles": 9,
   "existingBaselinePathsChanged": []
 }

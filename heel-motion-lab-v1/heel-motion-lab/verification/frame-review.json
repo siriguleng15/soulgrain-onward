@@ -3,9 +3,9 @@
   "file": "heel-motion-lab-v1-24fps.mp4",
   "frames": 625,
   "fps": 24,
-  "samplingWallSeconds": 463.2289060589974,
+  "samplingWallSeconds": 486.1053299019999,
   "maximumFrameError": 8.881784197001252e-16,
-  "minimumFrameDot": 0.6839505724348846,
+  "minimumFrameDot": 0.6598347397899486,
   "phases": [
     "已复位",
     "抽离",
@@ -17,6 +17,8 @@
   ],
   "finalRestored": true,
   "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
+  "revision": "lower-exit-diagonal-v2",
+  "sourceCodeChangeCommit": "f98d7ef",
   "encoding": {
     "programs": [],
     "stream_groups": [],
@@ -30,7 +32,7 @@
     ],
     "format": {
       "duration": "26.041667",
-      "size": "2323104"
+      "size": "3601280"
     }
   }
 }
