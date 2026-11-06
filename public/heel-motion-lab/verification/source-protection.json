@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "revision": "heel-forward-feed-face-v8",
+  "revision": "heel-uplift-hold-v9",
   "baseCommit": "eabb19a9d7b55c661e0c7e392e6ea415aab430d7",
-  "correctionParent": "38d7f802b11563b8232ca0e08dac392d19ce4f17",
-  "branch": "polish/heel-toe-feed-surface-presentation",
+  "correctionParent": "561acb07b6b2dc8c8947ed2d1aa103e4dfe4d986",
+  "branch": "polish/heel-uplift-hold-manual-reverse",
   "originalWorktreeProtected": {
     "same_original_HEAD": true,
     "same_original_branch": true,
