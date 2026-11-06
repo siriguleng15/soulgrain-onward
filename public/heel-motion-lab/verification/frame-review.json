@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "file": "heel-motion-lab-v1-24fps.mp4",
-  "frames": 721,
-  "fps": 24,
+  "file": "heel-motion-lab-v1-12fps.mp4",
+  "frames": 361,
+  "fps": 12,
   "duration": 30,
-  "samplingWallSeconds": 628.1475881480001,
+  "samplingWallSeconds": 319.81870171099945,
   "maximumFrameError": 1.1102230246251565e-15,
-  "minimumFrameDot": 0.6676553034598165,
+  "minimumFrameDot": 0.6232327504512487,
   "phases": [
     "后跟特写推进",
     "已复位",
@@ -18,10 +18,9 @@
     "顺势出带"
   ],
   "finalRestored": true,
-  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "revision": "tangent-flow-heel-macro-v4",
-  "motionSourceCommit": "91275a323d95b3eef7876a81d013c5b07c757e12",
-  "handoffVerification": "The optional active-playback camera handoff guard was checked separately; it does not change this default camera track.",
+  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/12-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
+  "revision": "heel-horizontal-pull-ccw-v5",
+  "motionSourceCommit": "25f76101e890c80a2fe0712d9d6433b58810310c",
   "encoding": {
     "programs": [],
     "stream_groups": [],
@@ -30,12 +29,12 @@
         "codec_name": "h264",
         "width": 1100,
         "height": 760,
-        "avg_frame_rate": "24/1"
+        "avg_frame_rate": "12/1"
       }
     ],
     "format": {
-      "duration": "30.041667",
-      "size": "4571619"
+      "duration": "30.083333",
+      "size": "4398736"
     }
   }
 }

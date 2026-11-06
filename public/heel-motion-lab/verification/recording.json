@@ -3,9 +3,9 @@
   "file": "heel-motion-lab-v1.mp4",
   "method": "Playwright actual viewport recording of button-triggered real-time WebGL playback; H.264 conversion, no synthetic/interpolated animation frames",
   "environment": "Linux Chromium + SwiftShader, not hardware-GPU or iPad Safari",
-  "playbackWallSeconds": 30.676042641000095,
+  "playbackWallSeconds": 30.030101722000836,
   "finalState": {
-    "revision": "tangent-flow-heel-macro-v4",
+    "revision": "heel-horizontal-pull-ccw-v5",
     "duration": 30,
     "ready": true,
     "error": null,
@@ -43,12 +43,32 @@
     "browserVerifiedSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
     "shoe": {
       "position": [
-        0,
+        -2.2652129819600633e-35,
         0,
         0
       ],
       "quaternion": [
         0,
+        0,
+        2.0403224682940303e-19,
+        1
+      ],
+      "pivotLocal": [
+        0,
+        -5.551115123125783e-17,
+        0
+      ],
+      "pivotWorld": [
+        0,
+        -5.551115123125783e-17,
+        0
+      ],
+      "motionTranslation": [
+        0,
+        0,
+        0
+      ],
+      "rotationAxis": [
         0,
         0,
         1
@@ -56,21 +76,23 @@
     },
     "reaction": {
       "force": [
-        0.214458858520925,
-        -0.9767330052423494,
-        0.00018566677227555697
+        1.5336170600102116e-16,
+        0,
+        0
       ],
       "torque": [
         0,
         0,
-        0
+        8.112215873722281e-17
       ],
       "angularVelocity": [
         0,
         0,
-        0
+        9.803351199010354e-18
       ],
-      "method": "deterministic longitudinal-axis advertising inertia"
+      "signedAngle": 4.08064493658806e-19,
+      "forceSpace": "initial shoe side frame; horizontal component only; not Newtons",
+      "method": "single-axis response with direction from heel lever cross horizontal pull"
     },
     "actor": {
       "surfaceMode": "source-locked-flow",
@@ -282,6 +304,46 @@
           -0.1668475113875263
         ],
         [
+          -1.6346900950304217,
+          -1.1434980908006305,
+          -0.4191132608543295
+        ],
+        [
+          -1.7314380935173457,
+          -1.0391469683545969,
+          -0.6522413933736932
+        ],
+        [
+          -1.8055149897139275,
+          -0.8461474223838388,
+          -0.8307402640813283
+        ],
+        [
+          -1.8456432476829738,
+          -0.5938818842171631,
+          -0.9274350380082894
+        ],
+        [
+          -1.8457137039122622,
+          -0.32075549524764835,
+          -0.9276048123645053
+        ],
+        [
+          -1.80571563207957,
+          -0.06834927229902155,
+          -0.8312237405432503
+        ],
+        [
+          -1.731738376038001,
+          0.12491022525289752,
+          -0.6529649670327191
+        ],
+        [
+          -1.6350443024143881,
+          0.22960099080753693,
+          -0.4199667741800839
+        ],
+        [
           -2.15,
           1.35,
           0.4
@@ -304,10 +366,10 @@
       ],
       "offsets": [],
       "frameError": 6.661338147750939e-16,
-      "minimumFrameDot": 0.6884711338296834,
+      "minimumFrameDot": 0.746855946459517,
       "reversals": 0,
-      "length": 27.890839658264273,
-      "tipLength": 1.2325800835323861
+      "length": 28.851265794090963,
+      "tipLength": 1.2339716119664996
     },
     "risk": {
       "bboxWarnings": 0,
@@ -317,7 +379,7 @@
     "drawCalls": 43,
     "triangles": 463512,
     "pixelRatio": 1,
-    "meanFrameInterval": 817.8536585365854,
+    "meanFrameInterval": 815.8,
     "contextLost": false
   },
   "errors": []

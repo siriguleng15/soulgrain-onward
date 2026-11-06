@@ -1,8 +1,8 @@
 {
   "passed": true,
   "baseCommit": "eabb19a9d7b55c661e0c7e392e6ea415aab430d7",
-  "correctionParent": "d97f902b8866a293a3c070ef368fe44ef70bc2ed",
-  "branch": "polish/heel-flow-macro-camera",
+  "correctionParent": "94f4848839980346fd1fd2830a35d9f4f07d8208",
+  "branch": "fix/heel-pull-counterclockwise",
   "originalWorktreeProtected": {
     "same_original_HEAD": true,
     "same_original_branch": true,

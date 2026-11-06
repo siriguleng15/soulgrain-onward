@@ -1,6 +1,6 @@
-# Heel Motion Lab V1.3 · 顺势出带与后跟特写运镜
+# Heel Motion Lab V1.4 · 后跟水平牵引与中点逆时针翻转
 
-本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮修订分支为 `polish/heel-flow-macro-camera`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
+本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮修订分支为 `fix/heel-pull-counterclockwise`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
 
 ## 直接预览
 
@@ -71,7 +71,7 @@ u 是统一显示尺度的场景单位，不是工厂毫米。默认宽厚是广
 | `heel-motion-lab.html`、`vite.heel-motion-lab.config.ts` | 独立入口及构建隔离 |
 | `src/heel-motion-lab/motion.ts` | 纯时间求值、阶段、生长与鞋子延迟惯性姿态 |
 | `src/heel-motion-lab/Trajectory.ts` | 上端→下端的原皮条路径、下方引出段及向鞋头推进的空间绕行 |
-| `src/heel-motion-lab/Reaction.ts` | 由绕行角速率求取的确定性延迟纵向旋转，横向角速度始终为零 |
+| `src/heel-motion-lab/Reaction.ts` | 由后跟下端的水平牵引和中点力臂判定转向，约束在鞋侧面内单轴旋转 |
 | `src/heel-motion-lab/Surface.ts` | 读取真实皮条 UV 三角形、原表面插值及源几何指纹 |
 | `src/heel-motion-lab/HeelActor.ts` | 原皮条／缝线保持源曲面与原法线，随整鞋运动；下端边界约束红带根部 |
 | `src/heel-motion-lab/Path.ts` | 可编辑 Catmull–Rom 三维路径、弧长采样、稳定宽向传播和显式扭转 |
@@ -110,20 +110,30 @@ python3 -B scripts/check-heel-motion-lab.py --url http://127.0.0.1:4538/heel-mot
 
 实际截图、H.264录屏和详细结果位于 `public/heel-motion-lab/verification/`。录屏来自 Chromium 真实页面点击播放后的连续实时录制，不用预渲染素材或视频播放器充当实验室。自动化环境为 Linux Chromium＋SwiftShader 和模拟触控，不能称为 iPad Safari 实机结果。
 
-本轮修订结果：58项检查通过（57项完整检查与1项播放中镜头交接专项检查，按改动范围分批验证），包括独立录屏完成与终态恢复；真实源曲面的插值误差约1.22e-7场景单位，抽离／回归下端连接边最大偏差约2.39e-7，默认轨道帧正交误差低于1e-6。原工作区的 HEAD、分支、状态、索引、差异与本轮单独快照的文件哈希保持不变；源契约保护文件均通过核验。具体数值以 validation.json 和 source-protection.json 为准。
+本轮63项完整浏览器检查通过，包括默认／侧面转向投影、反向牵引、中点不漂移，以及全程361个时刻的坐标架检查，包括独立录屏完成与终态恢复；真实源曲面的插值误差约1.22e-7场景单位，抽离／回归下端连接边最大偏差约2.39e-7，默认轨道帧正交误差低于1e-6。原工作区的 HEAD、分支、状态、索引、差异与本轮单独快照的文件哈希保持不变；源契约保护文件均通过核验。具体数值以 validation.json 和 source-protection.json 为准。
 
-实时片 `heel-motion-lab-v1.mp4` 为1280×800 H.264，容器时长约34.44秒（包含加载与停留），本轮标准播放实际约30.68秒。软件环境实际呈现本轮平均间隔约818ms，不能把编码文件的25fps当成实时渲染帧率。因此另附 `heel-motion-lab-v1-24fps.mp4`：对本轮出带／镜头版本以1/24秒间隔逐帧真实WebGL截图，编码为24fps方便审动作；不生成中间图像、不插帧，也不作为设备性能证明。
+实时片 `heel-motion-lab-v1.mp4` 为1280×800 H.264，容器时长约34.12秒（包含加载与停留），本轮标准播放实际约30.03秒。软件环境实际呈现本轮平均间隔约816ms，不能把编码文件的25fps当成实时渲染帧率。因此另附 `heel-motion-lab-v1-12fps.mp4`：对本轮受力转向版本以1/12秒间隔逐帧真实WebGL截图，编码为12fps方便检查方向；不生成中间图像、不插帧，也不作为设备性能证明。
 
 单独重录或生成逐帧审核片：
 
 ```bash
 python3 -B scripts/record-heel-motion-lab.py --url http://127.0.0.1:4538/heel-motion-lab.html
-python3 -B scripts/render-heel-motion-review.py --url http://127.0.0.1:4538/heel-motion-lab.html --fps 24
+python3 -B scripts/render-heel-motion-review.py --url http://127.0.0.1:4538/heel-motion-lab.html --fps 12
 ```
 
 开发中修复了部分抽离时的边界接缝，以及密集拖动导致重复提交绘制、低帧率拖长相机过渡的问题。时间推进改用真实经过时间；暂停、镜头和轨道阻尼稳定后按需绘制。触控与故障测试分开销毁浏览器上下文，避免软件GPU并行负载污染验证。
 
-## V1.3：顺势出带与后跟特写
+## V1.4：后跟水平牵引与鞋身中点
+
+- 修正上一版把“纵向”实现为鞋头—后跟轴滚转、且强制采用与绕行相反符号的问题。当前以默认侧面观察方向为准，只在鞋侧面内绕 +Z 单轴翻转。
+- 受力点取真实后跟皮条下端，旋转中心取原鞋整体包围盒的几何中点（归一化后约为原点）。这是几何中点，不冒称实测质心；后跟节点原点不作为轴心。
+- 以初始鞋侧面为参考，只考虑带根部离开方向的水平分量：`tauZ = -rY * Fx`。下端低于中点且向右拉时，结果为正，即侧面逆时针；将离开控制点改为向左时，转向相应反转。
+- 用送带弧长速度控制力的代理强度，经阻尼延迟得到展示转速。转速增益与后续翻转节奏属于广告参数；它不是在世界坐标中逐帧求解绳带张力、刚体质量与惯性矩的真实动力学仿真。调试数据明确标注初始参考系、水平投影和非牛顿单位。
+- 冲刺衔接增加沿离开切线的圆滑回弯，避免改转向后末圈直接折向固定世界空间路径。
+- 显式采用 `T(退远) T(几何中点) R T(-几何中点)`，并验证实际鞋节点变换后的中点只随既有退远轨迹平移，不跟随后跟打转。开启路径调试时，用十字标记显示中点。
+- 使用真实鞋模顶点的侧视投影检查逆时针方向，而非仅检查四元数符号；另测试反向拉力、恒定转轴、中点不漂移及任意进度复位。原先后跟特写、顺势送带、慢慢拉远及全部调试操作保留。
+
+## V1.3：顺势出带与后跟特写（沿用）
 
 - 停用原先先外抬皮条、再延长红带的几何动作。原皮条与缝线保持真实源曲面和原法线，红带从下端沿实际表面切线送出。
 - 起始段改用弧长推进，短距离内平滑加速后匀速送出；厚度按真实伸出距离形成，极短红带不会突然出现厚端头。
@@ -132,7 +142,7 @@ python3 -B scripts/render-heel-motion-review.py --url http://127.0.0.1:4538/heel
 - 特写推进中也可点击连续返回，从当前真实相机位置与目标平滑回到整鞋。自由相机仍可随时接管；恢复导演镜头的短暂交接期间停留在当前叙事时间，避免近景目标继续移动而在交接末端跳变；交接后续播。
 - 原 GLB、UV、纹理、正式展示页面保持不变。本版本仍是广告表演，不是皮革流动或布料制造仿真。
 
-## V1.2：仅沿鞋身纵向轴旋转（沿用）
+## V1.2 历史方案：沿鞋身长轴旋转（转轴与方向已由 V1.4 替代）
 
 按用户艺术反馈，停用 V1.1 的俯仰、偏航和横向转矩。鞋子仅围绕鞋头—后跟的 X 轴旋转，保留与绕行进度对应的转速、阻尼延迟及连续逆向复位。位置采用平滑退远轨迹，取消随牵引方向变化的局部摆动。
 

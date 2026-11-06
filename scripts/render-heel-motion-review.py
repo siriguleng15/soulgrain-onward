@@ -27,8 +27,9 @@ def main():
             page.screenshot(path=str(Path(folder)/f'{i:04}.png'))
             if i%48==0:print(f'Actual WebGL review frames: {i}/{count}',flush=True)
         final=page.evaluate('window.__heelLab.getState()');assert final['actor']['originalPanelVisible'] and not final['actor']['derivedVisible'];browser.close()
+      # Validate before replacing a previous review movie.
+      assert max_error<1e-6 and minimum_dot>0, (max_error,minimum_dot)
       subprocess.run(['ffmpeg','-y','-framerate',str(fps),'-i',str(Path(folder)/'%04d.png'),'-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',str(OUT/filename)],check=True,capture_output=True)
-    assert max_error<1e-6 and minimum_dot>0, (max_error,minimum_dot)
     result={'passed':True,'file':filename,'frames':count+1,'fps':fps,'duration':duration,'samplingWallSeconds':time.monotonic()-started,'maximumFrameError':max_error,'minimumFrameDot':minimum_dot,'phases':sorted(phases),'finalRestored':True,
             'method':f'Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/{fps}-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.'}
     (OUT/'frame-review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False),flush=True)
