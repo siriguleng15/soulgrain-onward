@@ -23,22 +23,19 @@ export class HeelReaction {
    for(const point of flightControls())points.push(point.add(offsets.get(points.length)??new Vector3()));
    const curve=new CatmullRomCurve3(points,false,'centripetal',.5),end=points.length-1;
    const t=growthParameter(u,2/end,shape.coilStart/end,(shape.coilStart+shape.loops/2)/end,shape.coilEnd/end);
-   // Both the departing tangent and the advancing front contribute. The
-   // lower anchor's lever arm creates coupled pitch/yaw rather than a canned tilt.
+   // Keep the path force available for inspection. Art direction now locks
+   // the shoe to its heel-to-toe X axis; transverse torque is not applied.
    const tip=curve.getPoint(t),tangent=curve.getTangent(t).normalize();
    const force=tip.sub(shape.points[2]).normalize().multiplyScalar(.72).addScaledVector(tangent,.28).normalize();
-   const traction=segment(u,.045,.18)*(1-segment(u,.88,.98));
-   const torque=surface.lower.clone().cross(force).multiplyScalar(traction);
+   const torque=new Vector3();
    const winding=clamp((t*end-shape.coilStart)/shape.loops);
    const rollRate=i?(winding-previousWinding)*Math.PI*2*params.turns/dt:0;previousWinding=winding;
    if(i){
-    // Opposing angular momentum around the long axis, with a damped delay.
-    // The transverse torque is evaluated in body coordinates, then integrated
-    // as a quaternion so the diagonal axis changes as the shoe rolls.
-    const drive=new Vector3(-.36*rollRate,0,0).addScaledVector(torque,.48);
+    // Longitudinal roll only, retaining the damped delay and reversible table.
+    const drive=new Vector3(-.36*rollRate,0,0);
     omega.addScaledVector(drive.clone().sub(omega),dt/ .62);
     const angle=omega.length()*dt;if(angle>1e-12){axis.copy(omega).normalize();delta.setFromAxisAngle(axis,angle);quaternion.multiply(delta).normalize();}
-    const retreat=segment(u,.10,.85),target=new Vector3(-.45*retreat,-.10*retreat,-1.95*retreat).addScaledVector(force,.22*traction);
+    const retreat=segment(u,.10,.85),target=new Vector3(-.45*retreat,-.10*retreat,-1.95*retreat);
     velocity.addScaledVector(target.sub(position).multiplyScalar(9).addScaledVector(velocity,-5),dt);position.addScaledVector(velocity,dt);
    }
    this.samples.push({position:position.clone(),quaternion:quaternion.clone(),force,torque,angularVelocity:omega.clone()});

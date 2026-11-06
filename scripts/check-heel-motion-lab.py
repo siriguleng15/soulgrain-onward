@@ -67,11 +67,13 @@ def main():
         seek(.012);early=state();reaction_samples=[]
         for value in [.08,.15,.23,.33,.44,.56,.68]:
             sample=seek(value);reaction_samples.append({'progress':value,**sample['reaction'],'shoe':sample['shoe']})
-        check('shoe has delayed multi-axis path-driven angular response',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and all(max(abs(s['angularVelocity'][i]) for s in reaction_samples)>.08 for i in range(3)),reaction_samples)
+        check('shoe rotates only around its longitudinal X axis with delay',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and max(abs(s['angularVelocity'][0]) for s in reaction_samples)>.08 and all(abs(s['angularVelocity'][1])+abs(s['angularVelocity'][2])+abs(s['shoe']['quaternion'][1])+abs(s['shoe']['quaternion'][2])<1e-12 for s in reaction_samples),reaction_samples)
         seek(.32);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("direction",30)');changed=state()['shoe']['quaternion']
-        check('diagonal path orientation changes shoe reaction',math.dist(before,changed)>.025,{'before':before,'after':changed})
+        check('diagonal ribbon orientation preserves longitudinal-only shoe rotation',math.dist(before,changed)<1e-12,{'before':before,'after':changed})
         page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.lab.selectPoint(10);window.__heelLab.lab.editPoint("z",.6)')
-        check('edited 3D pull path changes shoe reaction',math.dist(before,state()['shoe']['quaternion'])>.001)
+        check('edited 3D path preserves the shoe rotation axis',math.dist(before,state()['shoe']['quaternion'])<1e-12)
+        page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("turns",3)')
+        check('winding count still controls longitudinal rotation',math.dist(before,state()['shoe']['quaternion'])>.1)
         page.evaluate('window.__heelLab.lab.resetPath()')
         report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
         shot('01-original-director',0,'director')
@@ -100,7 +102,7 @@ def main():
         page.locator('[data-axis="x"]').fill('0.35')
         check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
         shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
-        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-diagonal-pull-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-longitudinal-roll-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
         for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:

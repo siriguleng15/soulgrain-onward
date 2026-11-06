@@ -1,6 +1,6 @@
-# Heel Motion Lab V1.1 · 下端引出与斜向牵引修订
+# Heel Motion Lab V1.2 · 仅沿鞋身纵向轴旋转
 
-本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮修订分支为 `fix/heel-motion-lower-exit-diagonal-reaction`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
+本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮修订分支为 `fix/heel-motion-longitudinal-only`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
 
 ## 直接预览
 
@@ -70,7 +70,7 @@ u 是统一显示尺度的场景单位，不是工厂毫米。默认宽厚是广
 | `heel-motion-lab.html`、`vite.heel-motion-lab.config.ts` | 独立入口及构建隔离 |
 | `src/heel-motion-lab/motion.ts` | 纯时间求值、阶段、生长与鞋子延迟惯性姿态 |
 | `src/heel-motion-lab/Trajectory.ts` | 上端→下端的原皮条路径、下方引出段及向鞋头推进的空间绕行 |
-| `src/heel-motion-lab/Reaction.ts` | 由同一路径牵引方向、后跟力臂与绕行角速率求取的确定性延迟多轴响应 |
+| `src/heel-motion-lab/Reaction.ts` | 由绕行角速率求取的确定性延迟纵向旋转，横向角速度始终为零 |
 | `src/heel-motion-lab/Surface.ts` | 读取真实皮条 UV 三角形、原表面插值及源几何指纹 |
 | `src/heel-motion-lab/HeelActor.ts` | 原皮条和缝线的派生网格，UV不变；表面与缝线同步形变及回归 |
 | `src/heel-motion-lab/Path.ts` | 可编辑 Catmull–Rom 三维路径、弧长采样、稳定宽向传播和显式扭转 |
@@ -79,7 +79,7 @@ u 是统一显示尺度的场景单位，不是工厂毫米。默认宽厚是广
 | `src/heel-motion-lab/main.ts`、`style.css` | 调试控件、触控布局和参数导出 |
 | `scripts/check-heel-motion-lab.py` | 实际构建的浏览器测试、截图、触控模拟和实时录屏 |
 | `scripts/record-heel-motion-lab.py` | 独立实时页面录屏；在临时目录复用系统编码器，不修改全局依赖 |
-| `scripts/render-heel-motion-review.py` | 24fps逐帧真实WebGL运动审核片；明确区别于实时性能录屏 |
+| `scripts/render-heel-motion-review.py` | 可选12／24fps逐帧真实WebGL运动审核片；明确区别于实时性能录屏 |
 
 复用了原 `StudioMaterials.ts` 修复坏法线，以及 `CameraDirector.ts` 的实时状态捕获和平滑交接；没有修改这两个模块或 immersive-showcase。相机所有权在 director、inspection、free 之间交接；轨道控件在导演及相机过渡期间禁用，按下场景时取消过渡并交给自由观察。
 
@@ -108,9 +108,9 @@ python3 -B scripts/check-heel-motion-lab.py --url http://127.0.0.1:4538/heel-mot
 
 实际截图、H.264录屏和详细结果位于 `public/heel-motion-lab/verification/`。录屏来自 Chromium 真实页面点击播放后的连续实时录制，不用预渲染素材或视频播放器充当实验室。自动化环境为 Linux Chromium＋SwiftShader 和模拟触控，不能称为 iPad Safari 实机结果。
 
-本轮修订结果：49项检查通过，包括独立录屏完成与终态恢复；真实源曲面的插值误差约1.22e-7场景单位，抽离／回归下端连接边最大偏差约2.39e-7，默认轨道帧正交误差低于1e-6。原工作区的 HEAD、分支、状态、索引、差异与本轮单独快照的文件哈希保持不变；源契约保护文件均通过核验。具体数值以 validation.json 和 source-protection.json 为准。
+本轮修订结果：50项检查通过，包括独立录屏完成与终态恢复；真实源曲面的插值误差约1.22e-7场景单位，抽离／回归下端连接边最大偏差约2.39e-7，默认轨道帧正交误差低于1e-6。原工作区的 HEAD、分支、状态、索引、差异与本轮单独快照的文件哈希保持不变；源契约保护文件均通过核验。具体数值以 validation.json 和 source-protection.json 为准。
 
-实时片 `heel-motion-lab-v1.mp4` 为1280×800 H.264，容器时长约29.64秒（包含加载与停留），本轮标准播放实际约26.28秒。软件环境实际呈现本轮平均间隔约759ms，不能把编码文件的25fps当成实时渲染帧率。因此另附 `heel-motion-lab-v1-24fps.mp4`：对同一运行时以1/24秒时间间隔逐帧真实WebGL截图，编码为24fps方便审动作；不生成中间图像、不插帧，也不作为设备性能证明。
+实时片 `heel-motion-lab-v1.mp4` 为1280×800 H.264，容器时长约30.24秒（包含加载与停留），本轮标准播放实际约26.42秒。软件环境实际呈现本轮平均间隔约754ms，不能把编码文件的25fps当成实时渲染帧率。因此另附 `heel-motion-lab-v1-12fps.mp4`：对本轮单轴版本以1/12秒时间间隔逐帧真实WebGL截图，编码为12fps方便审动作（可用 --fps 24 导出更高帧率）；不生成中间图像、不插帧，也不作为设备性能证明。
 
 单独重录或生成逐帧审核片：
 
@@ -121,7 +121,15 @@ python3 -B scripts/render-heel-motion-review.py --url http://127.0.0.1:4538/heel
 
 开发中修复了部分抽离时的边界接缝，以及密集拖动导致重复提交绘制、低帧率拖长相机过渡的问题。时间推进改用真实经过时间；暂停、镜头和轨道阻尼稳定后按需绘制。触控与故障测试分开销毁浏览器上下文，避免软件GPU并行负载污染验证。
 
-## V1.1：按下端出带与斜向牵引修订
+## V1.2：仅沿鞋身纵向轴旋转
+
+按用户艺术反馈，停用 V1.1 的俯仰、偏航和横向转矩。鞋子仅围绕鞋头—后跟的 X 轴旋转，保留与绕行进度对应的转速、阻尼延迟及连续逆向复位。位置采用平滑退远轨迹，取消随牵引方向变化的局部摆动。
+
+红带仍从原后跟皮条的下端向下、斜外方引出；红带路径、矩形轮廓／实体两种模式、自由观察和所有几何调节保持可用。空间倾角和路径点可以改变红带形状，但不会再使鞋子产生侧向翻转；圈数仍实际改变鞋子的纵向旋转总量。
+
+新增检查要求任意采样的鞋子四元数 Y/Z 分量、角速度 Y/Z 分量为零，并验证路径倾角／控制点变化不会改变旋转轴。验证结果见本版 validation.json。
+
+## V1.1 历史方案：下端出带与斜向牵引（多轴响应已被 V1.2 替代）
 
 - 路径方向改为上端→中部→下端，红色延长段与源皮条下端 UV 边连接。反转的是派生几何的路径参数，不是原 UV、源顶点或产品设计。缝线的长向／法向符号同步调整。
 - 下端之后先向下、向后跟外侧引出，第一圈从鞋底下方起绕，再沿负 X（鞋头方向）推进。上端不再伸出红带；引出段与翻筒用实际渲染顶点及翻筒模型包围范围做回归检查。

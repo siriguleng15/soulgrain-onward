@@ -1,8 +1,8 @@
 {
   "passed": true,
   "baseCommit": "eabb19a9d7b55c661e0c7e392e6ea415aab430d7",
-  "correctionParent": "4eeddce0fd9322bc395b45114a8daaa245fac4b8",
-  "branch": "fix/heel-motion-lower-exit-diagonal-reaction",
+  "correctionParent": "df336be2ff28f26df301cfa35da17788b98eb8b8",
+  "branch": "fix/heel-motion-longitudinal-only",
   "originalWorktreeProtected": {
     "same_original_HEAD": true,
     "same_original_branch": true,
