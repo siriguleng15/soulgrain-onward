@@ -2,7 +2,7 @@ import {CatmullRomCurve3,Matrix4,Quaternion,Vector3} from 'three';
 import {clamp,feedEase,growthParameter} from './motion.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
-import {flightControls,localTrajectory} from './Trajectory.ts';
+import {departureTurn,flightControls,localTrajectory} from './Trajectory.ts';
 export class MotionPath {
  points:Vector3[]=[];curve=new CatmullRomCurve3();offsets=new Map<number,Vector3>();
  samples:Vector3[]=[];tangents:Vector3[]=[];widths:Vector3[]=[];normals:Vector3[]=[];
@@ -11,6 +11,7 @@ export class MotionPath {
  update(surface:HeelSurface,params:Parameters,pose:Matrix4,u:number){
   const{points:local,coilStart,loops,coilEnd}=localTrajectory(surface,params,u,this.offsets);
   this.points=local.map(p=>p.applyMatrix4(pose));
+  for(const p of departureTurn(this.points))this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
   // Fixed director-space flight target. Orbit inspection never changes the authored trajectory.
   for(const p of flightControls())this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
   this.curve=new CatmullRomCurve3(this.points,false,'centripetal',.5);this.curve.arcLengthDivisions=1200;this.curve.updateArcLengths();

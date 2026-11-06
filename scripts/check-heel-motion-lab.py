@@ -89,6 +89,14 @@ def main():
         check('actual shoe rotates about its geometric midpoint',max(v['pivotError'] for v in projected)<1e-10 and abs(a['radius']-b['radius'])<1e-8,projected)
         report['pullDirectionProof']={'right':right,'left':left,'projected':projected,'signedScreenArea':cross}
         view('director')
+        director_projection=[]
+        for value in [.04,.06]:
+            page.evaluate('(p)=>window.__heelLab.renderAt(p)',story(value))
+            director_projection.append(page.evaluate('''()=>{const l=window.__heelLab.lab,g=l.actor.panel.geometry.getAttribute('position'),heel=l.path.points[0].clone().fromBufferAttribute(g,6).applyMatrix4(l.actor.panel.matrixWorld),center=l.shoe.localToWorld(l.rotationPivot.clone());return heel.project(l.camera).sub(center.project(l.camera)).toArray();}'''))
+        a,b=director_projection;director_cross=a[0]*b[1]-a[1]*b[0]
+        check('actual director view also shows counterclockwise heel motion',director_cross>0,{'signedScreenArea':director_cross,'samples':director_projection})
+        report['defaultDirectorProjectionProof']={'signedScreenArea':director_cross,'samples':director_projection,'counterclockwise':True}
+
         report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
         camera_samples=[]
         for progress in [0,.045,.09,.105,.145,.22,.32,.43]:
@@ -150,6 +158,9 @@ def main():
         check('connected source edge throughout release and return',max(x['gap'] for x in samples)<1e-6,max(x['gap'] for x in samples))
         check('stable orthonormal moving frames in all five stages',all(x['frameError']<1e-6 and x['minimumFrameDot']>0 and x['reversals']==0 for x in samples),{'maximumError':max(x['frameError'] for x in samples),'minimumDot':min(x['minimumFrameDot'] for x in samples)})
         report['geometrySamples']=samples
+        dense=page.evaluate('''()=>{const l=window.__heelLab.lab;let minimum=1,maximum=0;for(let i=0;i<=360;i++){l.seek(i/360);minimum=Math.min(minimum,l.path.minimumFrameDot);maximum=Math.max(maximum,l.path.frameError);}return{samples:361,minimumFrameDot:minimum,maximumFrameError:maximum,controlPoints:l.path.points.length};}''')
+        check('rounded departure remains stable over the complete animation',dense['minimumFrameDot']>0 and dense['maximumFrameError']<1e-6 and dense['controlPoints']<=64,dense)
+        report['framePreflight']=dense
         view('director');seek(.72);before=state();page.locator('[data-action="return"]').click();immediate=state()
         check('return starts from the current continuous state',math.dist(before['shoe']['position'],immediate['shoe']['position'])<.03)
         page.evaluate('''() => {const l=window.__heelLab.lab;l.advance(5);l.pause();}''')

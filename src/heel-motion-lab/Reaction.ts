@@ -2,7 +2,7 @@ import {CatmullRomCurve3,Quaternion,Vector3} from 'three';
 import {clamp,DURATION,INTRO_END,feedEase,growthParameter,segment} from './motion.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
-import {flightControls,localTrajectory} from './Trajectory.ts';
+import {departureTurn,flightControls,localTrajectory} from './Trajectory.ts';
 
 interface Sample{position:Vector3;quaternion:Quaternion;force:Vector3;torque:Vector3;angularVelocity:Vector3;angle:number;}
 /**
@@ -20,6 +20,7 @@ export class HeelReaction {
   const position=new Vector3(),velocity=new Vector3(),quaternion=new Quaternion(),omega=new Vector3();
   const dt=DURATION*(1-INTRO_END)*.74/this.steps;
   const shape=localTrajectory(surface,params,0,offsets),points=[...shape.points];
+  for(const point of departureTurn(points))points.push(point.add(offsets.get(points.length)??new Vector3()));
   for(const point of flightControls())points.push(point.add(offsets.get(points.length)??new Vector3()));
   const curve=new CatmullRomCurve3(points,false,'centripetal',.5),end=points.length-1;
   curve.arcLengthDivisions=1200;const lengths=curve.getLengths(),total=lengths[lengths.length-1];
