@@ -65,17 +65,30 @@ def main():
             exit_samples.append({'progress':story(progress),'actionProgress':progress,**result})
         check('red ribbon feeds from lower edge downward and outward',all(x['edge']=='lower' and x['down']<-.03 and x['outward']>0 for x in exit_samples),exit_samples)
         check('initial red lead stays below the actual folded cuff',all(x['maxY']<x['cuffMinY']-.02 for x in exit_samples),exit_samples)
-        seek(.012);early=state();reaction_samples=[]
+        page.evaluate('window.__heelLab.renderAt(.095)');early=state();reaction_samples=[]
         for value in [.08,.15,.23,.33,.44,.56,.68]:
             sample=seek(value);reaction_samples.append({'progress':story(value),'actionProgress':value,**sample['reaction'],'shoe':sample['shoe']})
-        check('shoe rotates only around its longitudinal X axis with delay',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and max(abs(s['angularVelocity'][0]) for s in reaction_samples)>.08 and all(abs(s['angularVelocity'][1])+abs(s['angularVelocity'][2])+abs(s['shoe']['quaternion'][1])+abs(s['shoe']['quaternion'][2])<1e-12 for s in reaction_samples),reaction_samples)
+        check('horizontal heel pull produces only positive side-plane rotation',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and max(s['angularVelocity'][2] for s in reaction_samples)>.08 and all(s['force'][0]>=0 and s['torque'][2]>=0 and s['signedAngle']>0 and abs(s['angularVelocity'][0])+abs(s['angularVelocity'][1])+abs(s['shoe']['quaternion'][0])+abs(s['shoe']['quaternion'][1])<1e-12 for s in reaction_samples),reaction_samples)
         seek(.32);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("direction",30)');changed=state()['shoe']['quaternion']
-        check('diagonal ribbon orientation preserves longitudinal-only shoe rotation',math.dist(before,changed)<1e-12,{'before':before,'after':changed})
+        check('ribbon inclination preserves the side-plane axis and pull direction',abs(changed[0])+abs(changed[1])<1e-12 and state()['reaction']['signedAngle']>0,{'before':before,'after':changed})
         page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.lab.selectPoint(10);window.__heelLab.lab.editPoint("z",.6)')
-        check('edited 3D path preserves the shoe rotation axis',math.dist(before,state()['shoe']['quaternion'])<1e-12)
-        page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("turns",3)')
-        check('winding count still controls longitudinal rotation',math.dist(before,state()['shoe']['quaternion'])>.1)
+        check('path edits preserve the constrained side-plane axis',sum(abs(x) for x in state()['shoe']['quaternion'][:2])<1e-12 and state()['reaction']['signedAngle']>0)
+        page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['reaction']['signedAngle'];page.evaluate('window.__heelLab.setParameter("turns",3)')
+        check('winding count controls the amount of counterclockwise response',state()['reaction']['signedAngle']>before+.1)
         page.evaluate('window.__heelLab.lab.resetPath()')
+        # Independent sign proof: pull right at a point below the midpoint.
+        # Reverse the departing control point to ensure the sign is geometry-led.
+        seek(.08);right=state()['reaction'];page.evaluate('window.__heelLab.lab.selectPoint(3);window.__heelLab.lab.editPoint("x",-1.2)');left=state()['reaction']
+        check('reversing the horizontal pull reverses torque and rotation',right['force'][0]>0 and right['torque'][2]>0 and right['signedAngle']>0 and left['force'][0]<0 and left['torque'][2]<0 and left['signedAngle']<0,{'right':right,'left':left})
+        page.evaluate('window.__heelLab.lab.resetPath()');view('side');projected=[]
+        for value in [.04,.06]:
+            page.evaluate('(p)=>window.__heelLab.renderAt(p)',story(value))
+            projected.append(page.evaluate('''()=>{const l=window.__heelLab.lab,g=l.actor.panel.geometry.getAttribute('position'),heel=l.path.points[0].clone().fromBufferAttribute(g,6).applyMatrix4(l.actor.panel.matrixWorld),center=l.shoe.localToWorld(l.rotationPivot.clone()),reference=l.rotationPivot.clone().add(l.pose.translation),r=heel.clone().project(l.camera).sub(center.clone().project(l.camera));const tangent=l.path.at(l.path.restLength+.1).point.clone().sub(heel),horizontal=tangent.clone().set(tangent.x,0,0),moment=heel.clone().sub(center).cross(horizontal);return{screen:r.toArray(),rightward:tangent.x,worldHorizontalMoment:moment.z,pivotError:center.distanceTo(reference),radius:heel.distanceTo(center)};}'''))
+        a,b=projected;cross=a['screen'][0]*b['screen'][1]-a['screen'][1]*b['screen'][0]
+        check('actual side-view heel motion is counterclockwise under rightward pull',cross>1e-5 and all(v['rightward']>0 and v['worldHorizontalMoment']>0 for v in projected),{'signedScreenArea':cross,'samples':projected})
+        check('actual shoe rotates about its geometric midpoint',max(v['pivotError'] for v in projected)<1e-10 and abs(a['radius']-b['radius'])<1e-8,projected)
+        report['pullDirectionProof']={'right':right,'left':left,'projected':projected,'signedScreenArea':cross}
+        view('director')
         report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
         camera_samples=[]
         for progress in [0,.045,.09,.105,.145,.22,.32,.43]:
@@ -93,8 +106,9 @@ def main():
             cap_samples.append(page.evaluate('''() => {const l=window.__heelLab.lab,r=l.ribbon,a=r.geometry.getAttribute('position'),layer=(r.segments+1)*(r.across+1),i=r.segments*(r.across+1)+r.across/2,p=l.path.points[0].clone().fromBufferAttribute(a,i),q=l.path.points[0].clone().fromBufferAttribute(a,i+layer);return{length:l.path.tipLength-l.path.restLength,thickness:p.distanceTo(q),maximum:l.params.thickness};}'''))
         check('emerging cap thickness grows with actual fed length',all(s['thickness']<s['maximum']*.9 for s in cap_samples[:2]) and cap_samples[0]['thickness']<cap_samples[-1]['thickness'],cap_samples)
         # Returning during the introductory camera move must also be continuous.
-        page.evaluate('window.__heelLab.renderAt(.075)');before=state();page.locator('[data-action="return"]').click();immediate=state()
-        check('return from camera introduction starts without a jump',math.dist(before['camera'],immediate['camera'])<1e-8 and math.dist(before['target'],immediate['target'])<1e-8)
+        page.evaluate('window.__heelLab.renderAt(.075)')
+        continuity=page.locator('[data-action="return"]').evaluate('''el=>{const l=window.__heelLab.lab,from=l.camera.position.clone(),target=l.controls.target.clone();el.click();const commanded=l.directorPose();return{actual:l.camera.position.distanceTo(from)+l.controls.target.distanceTo(target),commanded:commanded.position.distanceTo(from)+commanded.target.distanceTo(target)};}''')
+        check('return from camera introduction starts without a jump',continuity['actual']<1e-8 and continuity['commanded']<1e-8,continuity)
         page.evaluate('window.__heelLab.lab.advance(5);window.__heelLab.pause()');page.wait_for_function('Math.hypot(...window.__heelLab.getState().camera.map((v,i)=>v-[4.9,2.65,8][i]))<.001',timeout=30000)
         check('intro return restores the whole-shoe director camera',state()['actor']['originalPanelVisible'] and state()['progress']==1)
         page.evaluate('window.__heelLab.lab.cancel()')
@@ -102,6 +116,7 @@ def main():
         shot('01-original-director',0,'director',raw=True)
         shot('15-heel-camera-closeup',.095,'director',raw=True)
         shot('16-tangent-feed-closeup',.145,'director',raw=True)
+        page.locator('[data-ui="guides"]').check();shot('17-midpoint-side-proof',.18,'side');page.locator('[data-ui="guides"]').uncheck()
         # Actual range drag, not a call to the scene API.
         slider=page.locator('[data-ui="progress"]');box=slider.bounding_box();x=box['x']+box['width']*.43;y=box['y']+box['height']/2
         page.mouse.move(box['x']+8,y);page.mouse.down();page.mouse.move(x,y,steps=12);page.mouse.up()
@@ -127,7 +142,7 @@ def main():
         page.locator('[data-axis="x"]').fill('0.35')
         check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
         shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
-        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-longitudinal-roll-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-counterclockwise-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
         for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:

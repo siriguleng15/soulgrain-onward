@@ -17,9 +17,12 @@ export function phase(p:number){if(p<INTRO_END)return'后跟特写推进';const 
 export function evaluate(p:number,reaction?:HeelReaction){
  p=clamp(p);const a=actionProgress(p),outbound=a<=.74?a/.74:a<=.8?1:1-smooth((a-.8)/.2);
  const release=segment(outbound,0,.18);
- const response=reaction?.at(outbound),position=response?.position??new Vector3(),quaternion=response?.quaternion??new Quaternion();
+ const response=reaction?.at(outbound),translation=response?.position??new Vector3(),quaternion=response?.quaternion??new Quaternion(),pivot=reaction?.pivot.clone()??new Vector3();
+ // T(translation) T(midpoint) R T(-midpoint): the heel is the force point,
+ // never the rotation origin. Source geometry stays in its existing coordinates.
+ const position=translation.clone().add(pivot).sub(pivot.clone().applyQuaternion(quaternion));
  const matrix=new Matrix4().compose(position,quaternion,new Vector3(1,1,1));
- return{p,outbound,release,position,quaternion,matrix,response,phase:phase(p)};
+ return{p,outbound,release,position,translation,pivot,quaternion,matrix,response,phase:phase(p)};
 }
 /** Short smooth acceleration, steady feed, and a soft stop. */
 export function feedEase(t:number):number{
