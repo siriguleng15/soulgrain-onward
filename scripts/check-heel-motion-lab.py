@@ -48,14 +48,16 @@ def main():
         check('real colored GLB loaded and SHA verified in browser',state()['ready'] and state()['browserVerifiedSHA']==SHA)
         initial=state();report['revision']=initial['revision'];check('source UV surface correspondence',initial['actor']['exactRestSurfaceError']<1e-6,initial['actor'])
         check('one live WebGL canvas',page.locator('#stage canvas').count()==1)
-        def story(value):return .10+.90*value
+        duration=initial['duration']
+        def legacy(value):return min(1,value*30/duration)
+        def story(value):return legacy(.10+.90*value)
         def seek(value):return page.evaluate('(p)=>{window.__heelLab.seek(p);return window.__heelLab.getState();}',story(value))
         def view(name):
             page.evaluate('(v)=>window.__heelLab.setView(v)',name)
             page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
         def shot(name,progress,view_name,raw=False):
-            page.evaluate('(p)=>window.__heelLab.seek(p)',progress if raw else story(progress));view(view_name);page.locator('aside').evaluate('(el)=>el.scrollTop=0');page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
-            s=state();keyframes.append({'image':name+'.png','progress':progress if raw else story(progress),'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
+            page.evaluate('(p)=>window.__heelLab.seek(p)',legacy(progress) if raw else story(progress));view(view_name);page.locator('aside').evaluate('(el)=>el.scrollTop=0');page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
+            s=state();keyframes.append({'image':name+'.png','progress':legacy(progress) if raw else story(progress),'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
         # Regression for the art review: inspect actual rendered vertices in the
         # shoe's coordinates, not screen arrows or the curve's intended controls.
         winding=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const inv=l.pose.matrix.clone().invert(),a=l.path.routeIndices;let error=0,maxAdvance=-Infinity,previousX=Infinity;for(let i=0;i<=32;i++){const t=i/32,angle=Math.PI+.17+Math.PI*2*l.params.turns*t+.09*Math.sin(t*Math.PI*3),actual=l.path.points[a.coilStart+i].clone().applyMatrix4(inv),v=actual.clone().set(0,actual.y+.08-.10*Math.sin(t*9),actual.z/.88).normalize();error=Math.max(error,Math.abs(v.y-Math.cos(angle)),Math.abs(v.z-Math.sin(angle)));if(i)maxAdvance=Math.max(maxAdvance,actual.x-previousX);previousX=actual.x;}let area=0;for(let i=a.coilStart;i<a.coilEnd;i++){const p=l.path.points[i].clone().applyMatrix4(inv),q=l.path.points[i+1].clone().applyMatrix4(inv);area+=(p.y+.08)*q.z-p.z*(q.y+.08);}const lead=l.path.points.slice(2,a.coilStart+1).map(p=>p.clone().applyMatrix4(inv));return {signedArea:area,maximumApprovedAngleError:error,maximumCoilStepX:maxAdvance,maximumLeadX:Math.max(...lead.map(p=>p.x)),rootX:l.actor.surface.lower.x};}''')
@@ -68,7 +70,7 @@ def main():
             exit_samples.append({'progress':story(progress),'actionProgress':progress,**result})
         check('red ribbon leaves below the heel and promptly turns toward the toe',all(x['edge']=='lower' and x['down']<-.03 and x['outward']<.035 for x in exit_samples),exit_samples)
         check('initial red lead stays below the actual folded cuff',all(x['maxY']<x['cuffMinY']-.02 for x in exit_samples),exit_samples)
-        page.evaluate('window.__heelLab.renderAt(.095)');early=state();reaction_samples=[]
+        page.evaluate('(p)=>window.__heelLab.renderAt(p)',legacy(.095));early=state();reaction_samples=[]
         for value in [.08,.15,.23,.33,.44,.56,.68]:
             sample=seek(value);reaction_samples.append({'progress':story(value),'actionProgress':value,**sample['reaction'],'shoe':sample['shoe']})
         check('horizontal heel pull produces only positive side-plane rotation',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and max(s['angularVelocity'][2] for s in reaction_samples)>.08 and all(s['force'][0]>=0 and s['torque'][2]>=0 and s['signedAngle']>0 and abs(s['angularVelocity'][0])+abs(s['angularVelocity'][1])+abs(s['shoe']['quaternion'][0])+abs(s['shoe']['quaternion'][1])<1e-12 for s in reaction_samples),reaction_samples)
@@ -103,7 +105,7 @@ def main():
         report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
         camera_samples=[]
         for progress in [0,.045,.09,.105,.145,.22,.32,.43]:
-            sample=page.evaluate('(p)=>window.__heelLab.renderAt(p)',progress)
+            sample=page.evaluate('(p)=>window.__heelLab.renderAt(p)',legacy(progress))
             frame=page.evaluate('''() => {const l=window.__heelLab.lab,a=l.actor,upper=a.surface.upper.clone().applyMatrix4(l.pose.matrix).project(l.camera),lower=a.surface.lower.clone().applyMatrix4(l.pose.matrix).project(l.camera);return{distance:l.camera.position.distanceTo(l.controls.target),heelScreenHeight:Math.abs(upper.y-lower.y)/2,sourceError:a.maxRestError,rootError:l.path.points[2].clone().applyMatrix4(l.pose.matrix.clone().invert()).distanceTo(a.surface.lower)};}''')
             camera_samples.append({'progress':progress,'ribbonVisible':sample['ribbon']['tip'] is not None,**frame})
         check('camera reaches the heel before any ribbon emerges',all(not s['ribbonVisible'] for s in camera_samples[:3]) and camera_samples[2]['distance']<camera_samples[0]['distance']*.4,camera_samples[:4])
@@ -117,11 +119,11 @@ def main():
             cap_samples.append(page.evaluate('''() => {const l=window.__heelLab.lab,r=l.ribbon,a=r.geometry.getAttribute('position'),layer=(r.segments+1)*(r.across+1),i=r.segments*(r.across+1)+r.across/2,p=l.path.points[0].clone().fromBufferAttribute(a,i),q=l.path.points[0].clone().fromBufferAttribute(a,i+layer);return{length:l.path.tipLength-l.path.restLength,thickness:p.distanceTo(q),maximum:l.params.thickness};}'''))
         check('emerging cap thickness grows with actual fed length',all(s['thickness']<s['maximum']*.9 for s in cap_samples[:2]) and cap_samples[0]['thickness']<cap_samples[-1]['thickness'],cap_samples)
         # Returning during the introductory camera move must also be continuous.
-        page.evaluate('window.__heelLab.renderAt(.075)')
+        page.evaluate('(p)=>window.__heelLab.renderAt(p)',legacy(.075))
         continuity=page.locator('[data-action="return"]').evaluate('''el=>{const l=window.__heelLab.lab,from=l.camera.position.clone(),target=l.controls.target.clone();el.click();const commanded=l.directorPose();return{actual:l.camera.position.distanceTo(from)+l.controls.target.distanceTo(target),commanded:commanded.position.distanceTo(from)+commanded.target.distanceTo(target)};}''')
         check('return from camera introduction starts without a jump',continuity['actual']<1e-8 and continuity['commanded']<1e-8,continuity)
         page.evaluate('window.__heelLab.lab.advance(5);window.__heelLab.pause()');page.wait_for_function('Math.hypot(...window.__heelLab.getState().camera.map((v,i)=>v-[4.9,2.65,8][i]))<.001',timeout=30000)
-        check('intro return restores the whole-shoe director camera',state()['actor']['originalPanelVisible'] and state()['progress']==1)
+        check('intro return restores the whole-shoe director camera',state()['actor']['originalPanelVisible'] and state()['progress']==0)
         page.evaluate('window.__heelLab.lab.cancel()')
         report['cameraSamples']=camera_samples;report['capSamples']=cap_samples
         shot('01-original-director',0,'director',raw=True)
@@ -139,9 +141,9 @@ def main():
         for speed in [.25,.5,1,2,3]:
             page.locator('[data-ui="speed"]').select_option(str(speed))
             delta=page.evaluate('''() => {const l=window.__heelLab.lab;l.seek(.2);l.play();l.advance(1);l.pause();return l.progress-.2;}''')
-            check('actual playback rate '+str(speed),abs(delta-speed/30)<1e-10,delta)
+            check('actual playback rate '+str(speed),abs(delta-speed/duration)<1e-10,delta)
         rate_handoff=page.evaluate('''()=>{const l=window.__heelLab.lab,select=document.querySelector('[data-ui="speed"]'),rows=[];for(const speed of[2,3]){l.seek(.3);l.play();const before=l.progress;select.value=String(speed);select.dispatchEvent(new Event('change',{bubbles:true}));const after=l.progress;l.advance(.5);l.pause();rows.push({speed,before,after,advanced:l.progress});}return rows;}''')
-        check('changing to 2x or 3x while playing preserves current progress',all(r['before']==r['after'] and abs(r['advanced']-(.3+.5*r['speed']/30))<1e-9 for r in rate_handoff),rate_handoff)
+        check('changing to 2x or 3x while playing preserves current progress',all(r['before']==r['after'] and abs(r['advanced']-(.3+.5*r['speed']/duration))<1e-9 for r in rate_handoff),rate_handoff)
         page.locator('[data-ui="speed"]').select_option('1')
         seek(.56);before=page.evaluate(HASH_JS);page.locator('[data-mode="rectangular-outline"]').click();after=page.evaluate(HASH_JS)
         check('two modes share positions and center path',before==after and state()['mode']=='rectangular-outline' and state()['ribbon']['sharedVertexBuffers'])
@@ -156,12 +158,12 @@ def main():
         page.locator('[data-axis="x"]').fill('0.35')
         check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
         shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
-        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-counterclockwise-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.815,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-counterclockwise-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.815,'director');shot('25-terminal-hold',1,'director',raw=True);page.locator('[data-action="return"]').click();page.evaluate('window.__heelLab.lab.advance(window.__heelLab.getState().duration/2);window.__heelLab.pause()');page.screenshot(path=str(OUT/'07-return-director.png'));page.evaluate('window.__heelLab.returnToHeel();window.__heelLab.lab.advance(window.__heelLab.getState().duration)');page.screenshot(path=str(OUT/'08-restored-director.png'))
         shot('18-inward-feed',.231,'director',raw=True);shot('19-above-toe',.766,'director',raw=True);shot('20-toe-launch',.815,'director',raw=True)
-        flow=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const matrix=l.pose.matrix.clone(),rows=[];for(const a of[.11,.35,.59,.74,.785]){const u=a/.82,h=1e-5;const lengths=[u-h,u,u+h].map(t=>{l.path.update(l.actor.surface,l.params,matrix,t);return l.path.tipLength;});rows.push({a,left:(lengths[1]-lengths[0])/h,right:(lengths[2]-lengths[1])/h});}l.seek(.766);const end=l.path.points[l.path.routeIndices.toeEnd].clone().applyMatrix4(l.pose.matrix.clone().invert()),terminal=l.getState().reaction.signedAngle;l.seek(.1+.9*.81);const later=l.getState().reaction.signedAngle;return {rows,toeTop:end.toArray(),terminal,later};}''')
+        flow=page.evaluate('''()=>{const l=window.__heelLab.lab;l.seek(.5);const matrix=l.pose.matrix.clone(),rows=[];for(const a of[.11,.35,.59,.74,.785]){const u=a/.82,h=1e-5;const lengths=[u-h,u,u+h].map(t=>{l.path.update(l.actor.surface,l.params,matrix,t);return l.path.tipLength;});rows.push({a,left:(lengths[1]-lengths[0])/h,right:(lengths[2]-lengths[1])/h});}l.seek(.766*30/l.getState().duration);const end=l.path.points[l.path.routeIndices.toeEnd].clone().applyMatrix4(l.pose.matrix.clone().invert()),terminal=l.getState().reaction.signedAngle;l.seek((.1+.9*.81)*30/l.getState().duration);const later=l.getState().reaction.signedAngle;return {rows,toeTop:end.toArray(),terminal,later};}''')
         check('one continuous feed has positive matched speed across both laps and toe turn',all(v['left']>0 and v['right']>0 and abs(v['left']-v['right'])/max(v['left'],v['right'])<.01 for v in flow['rows']),flow['rows'])
         check('sprint begins above the actual forefoot with approved shoe angle',abs(flow['toeTop'][0]+1.42)<1e-5 and flow['toeTop'][1]>.7 and abs(flow['terminal']-5.253199603225055)<.001 and abs(flow['later']-flow['terminal'])<.001,flow)
-        check('no terminal dwell before continuous return',seek(.819)['phase']=='带面展示' and seek(.821)['phase']=='连续返回')
+        check('forward timeline ends at a held pose without automatic return',seek(.819)['phase']=='上翘展面' and seek(.821)['phase']=='终态定格')
         page.locator('[data-ui="speed"]').select_option('1')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
@@ -175,13 +177,17 @@ def main():
         report['framePreflight']=dense
         view('director');seek(.72);before=state();page.locator('[data-action="return"]').click();immediate=state()
         check('return starts from the current continuous state',math.dist(before['shoe']['position'],immediate['shoe']['position'])<.03)
-        page.evaluate('''() => {const l=window.__heelLab.lab;l.advance(5);l.pause();}''')
+        page.evaluate('''() => {const l=window.__heelLab.lab;l.advance(l.getState().duration);l.pause();}''')
         check('manual return restores source nodes and whole shoe',state()['actor']['originalPanelVisible'] and state()['actor']['originalSewingVisible'] and math.dist(state()['shoe']['position'],[0,0,0])<1e-8 and not state()['actor']['derivedVisible'])
         for value in [.08,.33,.56,.72,.91]:
             seek(value);page.locator('[data-action="cancel"]').click();s=state()
             check('cancel restores from '+str(value),s['progress']==0 and s['actor']['originalPanelVisible'] and not s['ribbon']['tip'] and math.dist(s['shoe']['position'],[0,0,0])<1e-8)
-        repetitions=page.evaluate('''() => {const l=window.__heelLab.lab;for(let i=0;i<30;i++){l.replay();l.advance(30);if(l.progress!==1||l.playing||!l.actor.panel.visible)return false;l.cancel();}return window.__heelLab.integrity();}''')
-        check('30 repeated play/cancel cycles preserve source identity',isinstance(repetitions,list) and all(x['geometryUnchanged'] and x['localMatrixUnchanged'] and x['visible']==x['expectedVisible'] for x in repetitions),repetitions)
+        held=page.evaluate('''()=>{const l=window.__heelLab.lab;l.cancel();l.play();l.advance(l.getState().duration);const before=l.getState();l.advance(20);return{before,after:l.getState()};}''')
+        check('terminal pose persists after time advances with no auto reverse',held['before']['progress']==1 and held['after']['progress']==1 and not held['after']['playing'] and held['before']['shoe']==held['after']['shoe'] and held['before']['ribbon']==held['after']['ribbon'])
+        reverse=page.evaluate('''()=>{const l=window.__heelLab.lab,from=l.progress;l.returnToHeel();const immediate=l.progress;l.advance(1);l.pause();return{from,immediate,after:l.progress,direction:l.playbackDirection};}''')
+        check('independent reverse starts without jumping and decreases progress',reverse['immediate']==reverse['from'] and reverse['after']<reverse['from'] and reverse['direction']==-1,reverse)
+        repetitions=page.evaluate('''() => {const l=window.__heelLab.lab;for(let i=0;i<30;i++){l.replay();l.advance(30);if(l.progress!==1||l.playing||l.actor.panel.visible)return false;l.returnToHeel();l.advance(l.getState().duration);if(l.progress!==0||l.playing||!l.actor.panel.visible)return false;l.cancel();}return window.__heelLab.integrity();}''')
+        check('30 repeated forward/reverse/reset cycles preserve source identity',isinstance(repetitions,list) and all(x['geometryUnchanged'] and x['localMatrixUnchanged'] and x['visible']==x['expectedVisible'] for x in repetitions),repetitions)
         seek(.42);view('director');bounds=page.locator('#stage').bounding_box();cx=bounds['x']+bounds['width']*.5;cy=bounds['y']+bounds['height']*.5;old=state()['camera']
         page.mouse.move(cx,cy);page.mouse.down();page.mouse.move(cx+120,cy+35,steps=12);page.mouse.up();page.wait_for_timeout(180)
         check('free orbit takes camera ownership',state()['cameraOwner']=='free' and math.dist(old,state()['camera'])>.05)
@@ -226,7 +232,7 @@ def main():
             browser.close();browser=None
             subprocess.run(['python3','-B','scripts/record-heel-motion-lab.py','--url',args.url],cwd=ROOT,check=True)
             report['recording']=json.loads((OUT/'recording.json').read_text())
-            check('recorded real-time playback reaches complete restoration',report['recording']['passed'])
+            check('recorded real-time playback ends and holds without reverse',report['recording']['passed'])
         if browser:browser.close();browser=None
         report['passed']=all(c['passed'] for c in checks)
     except Exception as error:

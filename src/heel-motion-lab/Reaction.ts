@@ -19,7 +19,8 @@ export class HeelReaction {
   if(key===this.signature)return;this.signature=key;this.samples=[];
   this.pivot.copy(pivot);
   const position=new Vector3(),velocity=new Vector3(),quaternion=new Quaternion(),omega=new Vector3();
-  const dt=DURATION*(1-INTRO_END)*OUTBOUND_END/this.steps;
+  // Keep the V1.6 approved physical timing after removing its auto-return.
+  const dt=DURATION*(1-INTRO_END)/this.steps;
   const shape=localTrajectory(surface,params,0,offsets),points=[...shape.points];
   const flight=flightControls(points);
   for(const point of flight.points)points.push(point.add(offsets.get(points.length)??new Vector3()));

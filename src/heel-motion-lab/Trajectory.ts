@@ -37,8 +37,8 @@ export function localTrajectory(surface:HeelSurface,params:Parameters,_u:number,
  return{points:points.map((p,i)=>p.add(offsets.get(i)??new Vector3())),coilStart,loops,coilEnd,toeEnd};
 }
 
-/** C1 departure from above the toe into a lens-space sprint. Debug orbit
- * never steers this authored endpoint. No extra outward world-space loop. */
+/** Frozen V1.6 flight used only by HeelReaction to preserve the approved
+ * shoe response. The visible V1.7 terminal is authored in TerminalShot.ts. */
 export function flightControls(points:Vector3[],aspect=1){
  const start=points.at(-1)!,tangent=start.clone().sub(points.at(-2)!).normalize();
  const shot=directorWideShot(1,aspect),forward=shot.target.clone().sub(shot.position).normalize();

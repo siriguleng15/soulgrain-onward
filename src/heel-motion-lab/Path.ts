@@ -3,7 +3,8 @@ import {clamp,smooth} from './motion.ts';
 import {continuousFeed} from './Feed.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
-import {flightControls,localTrajectory} from './Trajectory.ts';
+import {localTrajectory} from './Trajectory.ts';
+import {terminalFlightControls} from './TerminalShot.ts';
 export class MotionPath {
  points:Vector3[]=[];curve=new CatmullRomCurve3();offsets=new Map<number,Vector3>();
  samples:Vector3[]=[];tangents:Vector3[]=[];widths:Vector3[]=[];normals:Vector3[]=[];
@@ -13,7 +14,7 @@ export class MotionPath {
  update(surface:HeelSurface,params:Parameters,pose:Matrix4,u:number,aspect=1){
   const{points:local,coilStart,loops,coilEnd,toeEnd}=localTrajectory(surface,params,u,this.offsets);
   this.points=local.map(p=>p.applyMatrix4(pose));
-  const flight=flightControls(this.points,aspect),presentationStart=flight.presentationStart;
+  const flight=terminalFlightControls(this.points,aspect),presentationStart=flight.presentationStart;
   this.routeIndices={coilStart,coilHalf:coilStart+loops/2,coilEnd,toeEnd,presentationStart};
   // Fixed director-space flight target. Orbit inspection never changes the authored trajectory.
   for(const p of flight.points)this.points.push(p.add(this.offsets.get(this.points.length)??new Vector3()));
