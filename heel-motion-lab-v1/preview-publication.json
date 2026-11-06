@@ -1,10 +1,10 @@
 {
   "preview": "Heel Motion Lab V1.5.1",
   "revision": "heel-approved-winding-toe-v7",
-  "sourceCommit": "54f47d0d8fa62c6023a1af355d6ce095255103f2",
-  "basePagesCommit": "e21dc66f2d6683870cad3bcf3148866adf221983",
+  "sourceCommit": "38d7f802b11563b8232ca0e08dac392d19ce4f17",
+  "basePagesCommit": "3df93355cec0a4f4a8572b2b35d27c41a38a3a3f",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T09:12:01.429827+00:00",
+  "preparedAt": "2026-11-06T09:26:17.720434+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Independent live lab updated; review gallery stays on V1.4 until the new 24fps direction review completes; no production changes."
+  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
 }

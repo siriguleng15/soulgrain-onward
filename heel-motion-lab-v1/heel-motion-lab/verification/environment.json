@@ -7,6 +7,6 @@
   "three": "0.180.0",
   "renderBackend": "SwiftShader software WebGL",
   "physicalSafariTested": false,
-  "revision": "heel-continuous-inward-toe-v6",
+  "revision": "heel-approved-winding-toe-v7",
   "performanceScope": "Software WebGL on shared execution resources. No hardware-GPU or physical Safari performance certification."
 }
