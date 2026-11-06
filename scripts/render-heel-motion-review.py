@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Supplementary deterministic WebGL frame review, explicitly NOT a real-time FPS benchmark."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -33,6 +34,8 @@ def main():
       subprocess.run(['ffmpeg','-y','-framerate',str(fps),'-i',str(Path(folder)/'%04d.png'),'-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',str(OUT/filename)],check=True,capture_output=True)
     result={'revision':final['revision'],'motionSourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'passed':True,'file':filename,'frames':count+hold_frames+1,'fps':fps,'duration':duration,'samplingWallSeconds':time.monotonic()-started,'maximumFrameError':max_error,'minimumFrameDot':minimum_dot,'phases':sorted(phases),'finalHeld':True,'holdSeconds':hold_frames/fps,'automaticReverse':False,
             'method':f'Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/{fps}-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.'}
+    result['videoSHA256']=hashlib.sha256((OUT/filename).read_bytes()).hexdigest()
+    result['artwork']=final.get('artwork')
     (OUT/'frame-review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False),flush=True)
 
 

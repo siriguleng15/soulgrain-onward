@@ -1,12 +1,12 @@
 {
-  "revision": "heel-uplift-hold-v9",
-  "motionSourceCommit": "09890754a82d07c9539938c71ad0a8c5feb18ae1",
+  "revision": "heel-pattern-ribbon-v10",
+  "motionSourceCommit": "a43b13e114cc34c3048fb26c950e3c41593e401c",
   "passed": true,
   "file": "heel-motion-lab-v1-24fps.mp4",
   "frames": 640,
   "fps": 24,
   "duration": 25.14,
-  "samplingWallSeconds": 575.8019159839969,
+  "samplingWallSeconds": 580.6108270199984,
   "maximumFrameError": 1.7763568394002505e-15,
   "minimumFrameDot": 0.9050264268934367,
   "phases": [
@@ -23,22 +23,13 @@
   "holdSeconds": 1.5,
   "automaticReverse": false,
   "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "encoding": {
-    "programs": [],
-    "stream_groups": [],
-    "streams": [
-      {
-        "codec_name": "h264",
-        "width": 1100,
-        "height": 760,
-        "pix_fmt": "yuv420p",
-        "r_frame_rate": "24/1"
-      }
-    ],
-    "format": {
-      "duration": "26.666667"
-    }
-  },
-  "fastStart": true,
-  "videoSHA256": "f00d5590d64b7c3c7720907825717ec2d698adbb7761a715aa21f45d88b148d1"
+  "videoSHA256": "e2ce7fe47216acdbacd2cfeda7d42e3fecf7d87629aedb053a6de305bd0173fa",
+  "artwork": {
+    "status": "ready",
+    "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+    "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+    "width": 573,
+    "height": 756,
+    "error": null
+  }
 }

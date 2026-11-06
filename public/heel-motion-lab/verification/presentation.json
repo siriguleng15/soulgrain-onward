@@ -1,7 +1,7 @@
 {
-  "testedAt": "2026-11-07T00:26:05.214697+08:00",
+  "testedAt": "2026-11-07T01:40:48.959403+08:00",
   "passed": true,
-  "revision": "heel-uplift-hold-v9",
+  "revision": "heel-pattern-ribbon-v10",
   "checks": [
     {
       "name": "desktop: broad face presented toward viewer",
@@ -22,7 +22,7 @@
           0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -44,7 +44,7 @@
           0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -66,7 +66,7 @@
           0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -183,7 +183,7 @@
           0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -205,7 +205,7 @@
           0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -227,7 +227,7 @@
           0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -294,7 +294,7 @@
           0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -316,7 +316,7 @@
           0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -338,7 +338,7 @@
           0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-uplift-hold-v9"
+        "revision": "heel-pattern-ribbon-v10"
       }
     },
     {
@@ -405,7 +405,7 @@
         0.6009511018340217
       ],
       "uvFinite": true,
-      "revision": "heel-uplift-hold-v9"
+      "revision": "heel-pattern-ribbon-v10"
     },
     {
       "device": "tablet",
@@ -424,7 +424,7 @@
         0.6010228172893028
       ],
       "uvFinite": true,
-      "revision": "heel-uplift-hold-v9"
+      "revision": "heel-pattern-ribbon-v10"
     },
     {
       "device": "phone",
@@ -443,7 +443,7 @@
         0.6020123394081844
       ],
       "uvFinite": true,
-      "revision": "heel-uplift-hold-v9"
+      "revision": "heel-pattern-ribbon-v10"
     }
   ],
   "environment": "Linux Chromium + SwiftShader; device viewport layouts only; NOT physical iPad Safari",
