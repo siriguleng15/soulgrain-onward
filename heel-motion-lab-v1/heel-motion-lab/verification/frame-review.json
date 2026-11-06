@@ -1,26 +1,27 @@
 {
-  "revision": "heel-forward-feed-face-v8",
-  "motionSourceCommit": "ccbbf56cafc5b2a5e24813ede21c1692129376a2",
+  "revision": "heel-uplift-hold-v9",
+  "motionSourceCommit": "09890754a82d07c9539938c71ad0a8c5feb18ae1",
   "passed": true,
   "file": "heel-motion-lab-v1-24fps.mp4",
-  "frames": 721,
+  "frames": 640,
   "fps": 24,
-  "duration": 30,
-  "samplingWallSeconds": 643.1846727470038,
+  "duration": 25.14,
+  "samplingWallSeconds": 575.8019159839969,
   "maximumFrameError": 1.7763568394002505e-15,
-  "minimumFrameDot": 0.9189340545306055,
+  "minimumFrameDot": 0.9050264268934367,
   "phases": [
+    "上翘展面",
     "后跟特写推进",
-    "已复位",
-    "带面展示",
     "第一圈",
     "第二圈",
+    "终态定格",
     "近镜冲刺",
-    "连续返回",
     "鞋头绕行",
     "顺势出带"
   ],
-  "finalRestored": true,
+  "finalHeld": true,
+  "holdSeconds": 1.5,
+  "automaticReverse": false,
   "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
   "encoding": {
     "programs": [],
@@ -35,9 +36,9 @@
       }
     ],
     "format": {
-      "duration": "30.041667"
+      "duration": "26.666667"
     }
   },
   "fastStart": true,
-  "videoSHA256": "a18e88fa35bf907f12068f68b795977bdc657f6e43412b080f10e3fe098ac3b5"
+  "videoSHA256": "f00d5590d64b7c3c7720907825717ec2d698adbb7761a715aa21f45d88b148d1"
 }

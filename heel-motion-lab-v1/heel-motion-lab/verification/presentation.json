@@ -1,28 +1,28 @@
 {
-  "testedAt": "2026-11-06T19:41:00.699832+08:00",
+  "testedAt": "2026-11-07T00:26:05.214697+08:00",
   "passed": true,
-  "revision": "heel-forward-feed-face-v8",
+  "revision": "heel-uplift-hold-v9",
   "checks": [
     {
       "name": "desktop: broad face presented toward viewer",
       "passed": true,
       "detail": {
         "aspect": 1.2636363636363637,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.9737661249634184,
+        "minimumDepth": 0.8690749228191714,
+        "width": 0.18000023050400887,
         "expectedWidth": 0.18,
-        "screenWidth": 0.3545855295114134,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.17097902693422107,
+        "screenWidth": 0.27004964657553,
+        "screenHeight": 0.41135156012349516,
+        "screenArea": 0.10538706070777264,
         "bounds": [
-          -0.6181565311743752,
-          0.09101452784845171,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.8721493237961989,
+          -0.33205003064513894,
+          -0.22175201841296868,
+          0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -30,21 +30,21 @@
       "passed": true,
       "detail": {
         "aspect": 1.2636363636363637,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.9737661249634184,
+        "minimumDepth": 0.8690749228191714,
+        "width": 0.18000023050400887,
         "expectedWidth": 0.18,
-        "screenWidth": 0.3545855295114134,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.17097902693422107,
+        "screenWidth": 0.27004964657553,
+        "screenHeight": 0.41135156012349516,
+        "screenArea": 0.10538706070777264,
         "bounds": [
-          -0.6181565311743752,
-          0.09101452784845171,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.8721493237961989,
+          -0.33205003064513894,
+          -0.22175201841296868,
+          0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -52,21 +52,91 @@
       "passed": true,
       "detail": {
         "aspect": 1.2636363636363637,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.9737661249634184,
+        "minimumDepth": 0.8690749228191714,
+        "width": 0.18000023050400887,
         "expectedWidth": 0.18,
-        "screenWidth": 0.3545855295114134,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.17097902693422107,
+        "screenWidth": 0.27004964657553,
+        "screenHeight": 0.41135156012349516,
+        "screenArea": 0.10538706070777264,
         "bounds": [
-          -0.6181565311743752,
-          0.09101452784845171,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.8721493237961989,
+          -0.33205003064513894,
+          -0.22175201841296868,
+          0.6009511018340217
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
+      }
+    },
+    {
+      "name": "desktop: foreground head and shoe have separated screen regions",
+      "passed": true,
+      "detail": {
+        "face": [
+          -0.8721493237961989,
+          -0.33205003064513894,
+          -0.22175201841296868,
+          0.6009511018340217
+        ],
+        "shoe": [
+          0.08617750331064074,
+          0.6831628784841367,
+          -0.3920017916080878,
+          0.4797924711582337
+        ]
+      }
+    },
+    {
+      "name": "desktop: near connector clears the whole shoe silhouette bounds",
+      "passed": true,
+      "detail": {
+        "intersectingForegroundTriangles": 0,
+        "depthCutoff": 4.5,
+        "shoeBounds": [
+          0.08617750331064074,
+          0.6831628784841367,
+          -0.3920017916080878,
+          0.4797924711582337
+        ]
+      }
+    },
+    {
+      "name": "desktop: whole shoe remains in view",
+      "passed": true,
+      "detail": {
+        "shoe": [
+          0.08617750331064074,
+          0.6831628784841367,
+          -0.3920017916080878,
+          0.4797924711582337
+        ],
+        "nearMaxX": -0.3276376829996868
+      }
+    },
+    {
+      "name": "leading edge rises from below into the held broad face",
+      "passed": true,
+      "detail": {
+        "from": [
+          -0.6522093317556235,
+          -0.5988394482993821,
+          0.9120664782359291
+        ],
+        "to": [
+          -0.6000000000000063,
+          0.5999999999999952,
+          0.9093351626364831
+        ],
+        "up": 1.1988394482993772
+      }
+    },
+    {
+      "name": "approved early camera, shoe pose and local coil stay unchanged at real times",
+      "passed": true,
+      "detail": {
+        "maximumError": 1.7763568394002505e-15,
+        "frames": 7
       }
     },
     {
@@ -74,8 +144,8 @@
       "passed": true,
       "detail": {
         "samples": 121,
-        "minimumTemporalWidthDot": 0.9986537363211111,
-        "minimumSpatialWidthDot": 0.9246510963013846
+        "minimumTemporalWidthDot": 0.9932416558410473,
+        "minimumSpatialWidthDot": 0.9040818010813227
       }
     },
     {
@@ -99,21 +169,21 @@
       "passed": true,
       "detail": {
         "aspect": 1.1335078534031413,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.978411396028031,
+        "minimumDepth": 0.8690749746227178,
+        "width": 0.18000006433251542,
         "expectedWidth": 0.18,
-        "screenWidth": 0.39529251408769756,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.19060769204604813,
+        "screenWidth": 0.3012729559674089,
+        "screenHeight": 0.4097159675700918,
+        "screenArea": 0.11738073462971581,
         "bounds": [
-          -0.6891218873041566,
-          0.10146314087123852,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.9029141418056633,
+          -0.3003682298708455,
+          -0.2184091178508808,
+          0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -121,21 +191,21 @@
       "passed": true,
       "detail": {
         "aspect": 1.1335078534031413,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.978411396028031,
+        "minimumDepth": 0.8690749746227178,
+        "width": 0.18000006433251542,
         "expectedWidth": 0.18,
-        "screenWidth": 0.39529251408769756,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.19060769204604813,
+        "screenWidth": 0.3012729559674089,
+        "screenHeight": 0.4097159675700918,
+        "screenArea": 0.11738073462971581,
         "bounds": [
-          -0.6891218873041566,
-          0.10146314087123852,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.9029141418056633,
+          -0.3003682298708455,
+          -0.2184091178508808,
+          0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -143,21 +213,66 @@
       "passed": true,
       "detail": {
         "aspect": 1.1335078534031413,
-        "normalFacing": 0.9953167189600648,
-        "minimumDepth": 0.7939973613365616,
-        "width": 0.18000016649460027,
+        "normalFacing": 0.978411396028031,
+        "minimumDepth": 0.8690749746227178,
+        "width": 0.18000006433251542,
         "expectedWidth": 0.18,
-        "screenWidth": 0.39529251408769756,
-        "screenHeight": 0.6279316268022318,
-        "screenArea": 0.19060769204604813,
+        "screenWidth": 0.3012729559674089,
+        "screenHeight": 0.4097159675700918,
+        "screenArea": 0.11738073462971581,
         "bounds": [
-          -0.6891218873041566,
-          0.10146314087123852,
-          -0.8597061484149594,
-          0.3961571051895042
+          -0.9029141418056633,
+          -0.3003682298708455,
+          -0.2184091178508808,
+          0.6010228172893028
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
+      }
+    },
+    {
+      "name": "tablet: foreground head and shoe have separated screen regions",
+      "passed": true,
+      "detail": {
+        "face": [
+          -0.9029141418056633,
+          -0.3003682298708455,
+          -0.2184091178508808,
+          0.6010228172893028
+        ],
+        "shoe": [
+          0.09607081819837085,
+          0.7615910670113519,
+          -0.3920017916080878,
+          0.4797924711582337
+        ]
+      }
+    },
+    {
+      "name": "tablet: near connector clears the whole shoe silhouette bounds",
+      "passed": true,
+      "detail": {
+        "intersectingForegroundTriangles": 0,
+        "depthCutoff": 4.5,
+        "shoeBounds": [
+          0.09607081819837085,
+          0.7615910670113519,
+          -0.3920017916080878,
+          0.4797924711582337
+        ]
+      }
+    },
+    {
+      "name": "tablet: whole shoe remains in view",
+      "passed": true,
+      "detail": {
+        "shoe": [
+          0.09607081819837085,
+          0.7615910670113519,
+          -0.3920017916080878,
+          0.4797924711582337
+        ],
+        "nearMaxX": -0.29638341963024534
       }
     },
     {
@@ -165,21 +280,21 @@
       "passed": true,
       "detail": {
         "aspect": 0.9430611705142252,
-        "normalFacing": 0.9958899756139796,
-        "minimumDepth": 0.842283746355905,
-        "width": 0.17999997169654186,
+        "normalFacing": 0.983610250826505,
+        "minimumDepth": 0.9234100615124596,
+        "width": 0.180000090281525,
         "expectedWidth": 0.18,
-        "screenWidth": 0.4487043353585782,
-        "screenHeight": 0.5964881584161239,
-        "screenArea": 0.20527970713623792,
+        "screenWidth": 0.34954559560991477,
+        "screenHeight": 0.5875271480173618,
+        "screenArea": 0.18915362204747843,
         "bounds": [
-          -0.7808077243323706,
-          0.11660094638478581,
-          -0.8103914986086626,
-          0.38258481822358537
+          -0.9589421432200989,
+          -0.2598509520002693,
+          -0.5730419566265391,
+          0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -187,21 +302,21 @@
       "passed": true,
       "detail": {
         "aspect": 0.9430611705142252,
-        "normalFacing": 0.9958899756139796,
-        "minimumDepth": 0.842283746355905,
-        "width": 0.17999997169654186,
+        "normalFacing": 0.983610250826505,
+        "minimumDepth": 0.9234100615124596,
+        "width": 0.180000090281525,
         "expectedWidth": 0.18,
-        "screenWidth": 0.4487043353585782,
-        "screenHeight": 0.5964881584161239,
-        "screenArea": 0.20527970713623792,
+        "screenWidth": 0.34954559560991477,
+        "screenHeight": 0.5875271480173618,
+        "screenArea": 0.18915362204747843,
         "bounds": [
-          -0.7808077243323706,
-          0.11660094638478581,
-          -0.8103914986086626,
-          0.38258481822358537
+          -0.9589421432200989,
+          -0.2598509520002693,
+          -0.5730419566265391,
+          0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
       }
     },
     {
@@ -209,21 +324,66 @@
       "passed": true,
       "detail": {
         "aspect": 0.9430611705142252,
-        "normalFacing": 0.9958899756139796,
-        "minimumDepth": 0.842283746355905,
-        "width": 0.17999997169654186,
+        "normalFacing": 0.983610250826505,
+        "minimumDepth": 0.9234100615124596,
+        "width": 0.180000090281525,
         "expectedWidth": 0.18,
-        "screenWidth": 0.4487043353585782,
-        "screenHeight": 0.5964881584161239,
-        "screenArea": 0.20527970713623792,
+        "screenWidth": 0.34954559560991477,
+        "screenHeight": 0.5875271480173618,
+        "screenArea": 0.18915362204747843,
         "bounds": [
-          -0.7808077243323706,
-          0.11660094638478581,
-          -0.8103914986086626,
-          0.38258481822358537
+          -0.9589421432200989,
+          -0.2598509520002693,
+          -0.5730419566265391,
+          0.6020123394081844
         ],
         "uvFinite": true,
-        "revision": "heel-forward-feed-face-v8"
+        "revision": "heel-uplift-hold-v9"
+      }
+    },
+    {
+      "name": "phone: foreground head and shoe have separated screen regions",
+      "passed": true,
+      "detail": {
+        "face": [
+          -0.9589421432200989,
+          -0.2598509520002693,
+          -0.5730419566265391,
+          0.6020123394081844
+        ],
+        "shoe": [
+          0.09066773058510975,
+          0.8584699728439531,
+          -0.37594247075607556,
+          0.46089969737345293
+        ]
+      }
+    },
+    {
+      "name": "phone: near connector clears the whole shoe silhouette bounds",
+      "passed": true,
+      "detail": {
+        "intersectingForegroundTriangles": 0,
+        "depthCutoff": 4.5,
+        "shoeBounds": [
+          0.09066773058510975,
+          0.8584699728439531,
+          -0.37594247075607556,
+          0.46089969737345293
+        ]
+      }
+    },
+    {
+      "name": "phone: whole shoe remains in view",
+      "passed": true,
+      "detail": {
+        "shoe": [
+          0.09066773058510975,
+          0.8584699728439531,
+          -0.37594247075607556,
+          0.46089969737345293
+        ],
+        "nearMaxX": -0.2566080389812228
       }
     }
   ],
@@ -231,59 +391,59 @@
     {
       "device": "desktop",
       "aspect": 1.2636363636363637,
-      "normalFacing": 0.9953167189600648,
-      "minimumDepth": 0.7939973613365616,
-      "width": 0.18000016649460027,
+      "normalFacing": 0.9737661249634184,
+      "minimumDepth": 0.8690749228191714,
+      "width": 0.18000023050400887,
       "expectedWidth": 0.18,
-      "screenWidth": 0.3545855295114134,
-      "screenHeight": 0.6279316268022318,
-      "screenArea": 0.17097902693422107,
+      "screenWidth": 0.27004964657553,
+      "screenHeight": 0.41135156012349516,
+      "screenArea": 0.10538706070777264,
       "bounds": [
-        -0.6181565311743752,
-        0.09101452784845171,
-        -0.8597061484149594,
-        0.3961571051895042
+        -0.8721493237961989,
+        -0.33205003064513894,
+        -0.22175201841296868,
+        0.6009511018340217
       ],
       "uvFinite": true,
-      "revision": "heel-forward-feed-face-v8"
+      "revision": "heel-uplift-hold-v9"
     },
     {
       "device": "tablet",
       "aspect": 1.1335078534031413,
-      "normalFacing": 0.9953167189600648,
-      "minimumDepth": 0.7939973613365616,
-      "width": 0.18000016649460027,
+      "normalFacing": 0.978411396028031,
+      "minimumDepth": 0.8690749746227178,
+      "width": 0.18000006433251542,
       "expectedWidth": 0.18,
-      "screenWidth": 0.39529251408769756,
-      "screenHeight": 0.6279316268022318,
-      "screenArea": 0.19060769204604813,
+      "screenWidth": 0.3012729559674089,
+      "screenHeight": 0.4097159675700918,
+      "screenArea": 0.11738073462971581,
       "bounds": [
-        -0.6891218873041566,
-        0.10146314087123852,
-        -0.8597061484149594,
-        0.3961571051895042
+        -0.9029141418056633,
+        -0.3003682298708455,
+        -0.2184091178508808,
+        0.6010228172893028
       ],
       "uvFinite": true,
-      "revision": "heel-forward-feed-face-v8"
+      "revision": "heel-uplift-hold-v9"
     },
     {
       "device": "phone",
       "aspect": 0.9430611705142252,
-      "normalFacing": 0.9958899756139796,
-      "minimumDepth": 0.842283746355905,
-      "width": 0.17999997169654186,
+      "normalFacing": 0.983610250826505,
+      "minimumDepth": 0.9234100615124596,
+      "width": 0.180000090281525,
       "expectedWidth": 0.18,
-      "screenWidth": 0.4487043353585782,
-      "screenHeight": 0.5964881584161239,
-      "screenArea": 0.20527970713623792,
+      "screenWidth": 0.34954559560991477,
+      "screenHeight": 0.5875271480173618,
+      "screenArea": 0.18915362204747843,
       "bounds": [
-        -0.7808077243323706,
-        0.11660094638478581,
-        -0.8103914986086626,
-        0.38258481822358537
+        -0.9589421432200989,
+        -0.2598509520002693,
+        -0.5730419566265391,
+        0.6020123394081844
       ],
       "uvFinite": true,
-      "revision": "heel-forward-feed-face-v8"
+      "revision": "heel-uplift-hold-v9"
     }
   ],
   "environment": "Linux Chromium + SwiftShader; device viewport layouts only; NOT physical iPad Safari",

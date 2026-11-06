@@ -1,10 +1,10 @@
 {
   "preview": "Heel Motion Lab V1.7",
   "revision": "heel-uplift-hold-v9",
-  "sourceCommit": "09890754a82d07c9539938c71ad0a8c5feb18ae1",
-  "basePagesCommit": "aeb82b10f48b0761c5bcf04e190e3986d52a5ecd",
+  "sourceCommit": "f0a7756952910f0eeb3cbfc708cd4640c3d09cdb",
+  "basePagesCommit": "b226e6841c604299e966c25aabeadd3af0873cf2",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T16:34:31.922606+00:00",
+  "preparedAt": "2026-11-06T16:46:31.149884+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Independent live lab updated; review gallery stays on V1.4 until the new 24fps direction review completes; no production changes."
+  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
 }
