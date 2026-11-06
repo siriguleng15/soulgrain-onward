@@ -1,0 +1,19 @@
+{
+  "revision": "heel-continuous-inward-toe-v6",
+  "rows": [
+    {
+      "speed": 2,
+      "before": 0.3,
+      "after": 0.3,
+      "advanced": 0.3333333333333333
+    },
+    {
+      "speed": 3,
+      "before": 0.3,
+      "after": 0.3,
+      "advanced": 0.35
+    }
+  ],
+  "passed": true,
+  "environment": "Linux Chromium + SwiftShader; not physical iPad Safari"
+}

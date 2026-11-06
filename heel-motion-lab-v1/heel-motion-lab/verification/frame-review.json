@@ -1,26 +1,26 @@
 {
+  "revision": "heel-continuous-inward-toe-v6",
+  "motionSourceCommit": "0ef15789367c9ce1c3c6310e92930eb5b1d995ac",
   "passed": true,
-  "file": "heel-motion-lab-v1-12fps.mp4",
-  "frames": 361,
-  "fps": 12,
+  "file": "heel-motion-lab-v1-24fps.mp4",
+  "frames": 721,
+  "fps": 24,
   "duration": 30,
-  "samplingWallSeconds": 319.81870171099945,
-  "maximumFrameError": 1.1102230246251565e-15,
-  "minimumFrameDot": 0.6232327504512487,
+  "samplingWallSeconds": 698.1612971739996,
+  "maximumFrameError": 6.661338147750939e-16,
+  "minimumFrameDot": 0.9387633928641645,
   "phases": [
     "后跟特写推进",
     "已复位",
     "第一圈",
     "第二圈",
-    "终态停留",
     "近镜冲刺",
     "连续返回",
+    "鞋头绕行",
     "顺势出带"
   ],
   "finalRestored": true,
-  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/12-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "revision": "heel-horizontal-pull-ccw-v5",
-  "motionSourceCommit": "25f76101e890c80a2fe0712d9d6433b58810310c",
+  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
   "encoding": {
     "programs": [],
     "stream_groups": [],
@@ -29,12 +29,14 @@
         "codec_name": "h264",
         "width": 1100,
         "height": 760,
-        "avg_frame_rate": "12/1"
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "24/1"
       }
     ],
     "format": {
-      "duration": "30.083333",
-      "size": "4398736"
+      "duration": "30.041667"
     }
-  }
+  },
+  "fastStart": true,
+  "videoSHA256": "42b2af076200ad82e1f79b9c30c3cae415cd4825e70b0a373c32934be9cbb698"
 }
