@@ -3,7 +3,7 @@
 
 No product artwork is generated, and no public gallery files are overwritten.
 """
-import argparse,hashlib,io,json
+import argparse,hashlib,io,json,subprocess
 from pathlib import Path
 from PIL import Image,ImageDraw
 from playwright.sync_api import sync_playwright
@@ -34,6 +34,12 @@ def main():
    page.route('**/qa-ribbon-invalid.png',lambda r:r.fulfill(status=200,content_type='image/png',body=b'invalid-image'))
    page.goto(args.url,wait_until='domcontentloaded',timeout=90000)
    page.wait_for_function('window.__heelLab?.getState().ready',timeout=90000)
+   production=page.evaluate('window.__heelLab.getState().artwork')
+   artwork_dir=Path(__file__).resolve().parents[1]/'public/heel-motion-lab/artwork'
+   expected_sha=hashlib.sha256((artwork_dir/'heel-meander-tile.svg').read_bytes()).hexdigest()
+   check(device+': actual reconstructed meander is the default loaded material',production['status']=='ready' and production['sha256']==expected_sha and production['width']==573 and production['height']==756,production)
+   pixels=page.evaluate('''async()=>{const source=new Image(),tile=new Image();source.src=new URL('heel-motion-lab/artwork/heel-meander-trace.svg',location.href).href;tile.src=new URL('heel-motion-lab/artwork/heel-meander-tile.svg',location.href).href;await Promise.all([source.decode(),tile.decode()]);function raster(im){const c=document.createElement('canvas');c.width=im.naturalWidth;c.height=im.naturalHeight;const x=c.getContext('2d');x.drawImage(im,0,0);return x.getImageData(0,0,c.width,c.height).data;}const a=raster(source),b=raster(tile);let seam=0,repeat=0,sourceDifference=0;for(let x=0;x<573;x++)for(let c=0;c<4;c++)seam=Math.max(seam,Math.abs(b[x*4+c]-b[((755*573+x)*4)+c]));for(let y=0;y<2048;y++)for(let x=0;x<573;x++)for(let c=0;c<4;c++){const v=a[(y*573+x)*4+c];sourceDifference=Math.max(sourceDifference,Math.abs(v-b[((y%756)*573+x)*4+c]));if(y+756<2048)repeat=Math.max(repeat,Math.abs(v-a[((y+756)*573+x)*4+c]));}return{seamMaximum:seam,repeatedPeriodMaximum:repeat,fullTraceTileMaximum:sourceDifference,red:Array.from(b.slice(0,3)),white:Array.from(b.slice(120*4,120*4+3))};}''')
+   check(device+': rasterized SVG period and both tile edges match without a join',pixels['seamMaximum']==pixels['repeatedPeriodMaximum']==pixels['fullTraceTileMaximum']==0 and pixels['red']==[160,15,24] and pixels['white']==[255,255,255],pixels)
    page.evaluate('()=>{const l=window.__heelLab.lab;cancelAnimationFrame(l.frame);l.frame=0;window.originalMaps=[];l.asset.traverse(m=>{if(m.isMesh)for(const v of(Array.isArray(m.material)?m.material:[m.material]))window.originalMaps.push([v,v.map]);});}')
    before=[]
    for progress in [.14,.35,.65,1]:
@@ -58,7 +64,11 @@ def main():
    check(device+': clear restores original ribbon color and removes the owned map',page.evaluate('()=>{const l=window.__heelLab.lab;return l.ribbonArtwork.getState().status==="unassigned"&&l.ribbon.material.map===null&&l.ribbon.material.color.getHex()===0xb8192c&&window.originalMaps.every(([m,map])=>m.map===map);}'))
    check(device+': no JavaScript errors',not errors,errors);page.close()
   browser.close()
- report={'passed':True,'scope':'Synthetic calibration chart only; actual user artwork absent; no physical iPad Safari test','checks':checks}
+ root=Path(__file__).resolve().parents[1];baseline='f0a7756952910f0eeb3cbfc708cd4640c3d09cdb';unchanged=[]
+ for name in ['motion','CameraFrame','DirectorShot','Trajectory','TerminalShot','Feed','Path','Reaction','HeelActor','Surface']:
+  relative=f'src/heel-motion-lab/{name}.ts';prior=subprocess.check_output(['git','show',f'{baseline}:{relative}'],cwd=root)
+  check('approved V1.7 module byte identity: '+name,prior==(root/relative).read_bytes());unchanged.append(relative)
+ report={'passed':True,'revision':'heel-pattern-ribbon-v10','baseline':baseline,'unchangedMotionModules':unchanged,'scope':'Actual default reconstructed meander and rasterized repeat tested; synthetic calibration chart used separately for generic texture lifecycle checks; no physical iPad Safari test','checks':checks}
  path=Path(args.out);path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print('Report:',path)
 

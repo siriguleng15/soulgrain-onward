@@ -1,0 +1,32 @@
+{
+  "kind": "vector-reconstruction-from-user-inline-image",
+  "authorization": "User explicitly approved using only the displayed image and continuing development.",
+  "sourceDescription": "573 x 2048 red/white meander image in the conversation; original encoded image file was unavailable.",
+  "sourceFileRecovered": false,
+  "sourcePixelsCompared": false,
+  "redApproximation": "#A00F18",
+  "repeatPeriod": 756,
+  "landmarks": {
+    "outerWhiteLeft": 86.5,
+    "outerWhiteRight": 487,
+    "redStrokeWidth": 38.5,
+    "redCenterlines": [
+      177,
+      286.5,
+      396.5
+    ]
+  },
+  "files": {
+    "heel-meander-trace.svg": {
+      "sha256": "540dfc9e73127ba3165f46f604eae03504986eede000c8def3f49cca91f71670",
+      "width": 573,
+      "height": 2048
+    },
+    "heel-meander-tile.svg": {
+      "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+      "width": 573,
+      "height": 756
+    }
+  },
+  "scope": "New performance ribbon artwork only; source GLB, embedded textures and UV unchanged."
+}
