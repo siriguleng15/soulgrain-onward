@@ -1,0 +1,28 @@
+import {Vector3} from 'three';
+import {segment} from './motion.ts';
+import type {Parameters} from './motion.ts';
+import type {HeelSurface} from './Surface.ts';
+
+/** Shoe-local authored motion: X points toward the heel, Y upward. */
+export function localTrajectory(surface:HeelSurface,params:Parameters,u:number,offsets:Map<number,Vector3>){
+ const peel=segment(u,0,.18);
+ // Traverse the real strip FROM ITS TOP TO ITS BOTTOM. Only the bottom feeds
+ // the extension. No control point of the red lead is above the bottom edge.
+ const points=[
+  surface.upper.clone(),
+  surface.middle.clone().add(new Vector3(.12*peel,-.02*peel,.025*peel)),
+  surface.lower.clone().add(new Vector3(.18*peel,-.12*peel,.035*peel)),
+  surface.lower.clone().add(new Vector3(.35,-(.30+.28*params.radius),-.12))
+ ];
+ const coilStart=points.length,loops=32;
+ for(let i=0;i<=loops;i++){
+  const s=i/loops,angle=Math.PI+.17+Math.PI*2*params.turns*s+.09*Math.sin(s*Math.PI*3);
+  const r=params.radius*(1+.13*Math.sin(s*5.5+.4)+.055*Math.sin(s*13));
+  const point=new Vector3(2.02-3.55*params.pitch*s+.12*Math.sin(s*Math.PI*3),-.08+r*Math.cos(angle)+.10*Math.sin(s*9),r*.88*Math.sin(angle));
+  point.applyAxisAngle(new Vector3(1,0,0),params.direction*Math.PI/180);points.push(point);
+ }
+ return{points:points.map((p,i)=>p.add(offsets.get(i)??new Vector3())),coilStart,loops,coilEnd:points.length-1};
+}
+
+/** Locked lens-space endpoint, independent of the debug camera. */
+export function flightControls(){return[new Vector3(-2.15,1.35,.4),new Vector3(-1.1,.9,2.6),new Vector3(1.2,.75,4.8),new Vector3(3.55,1.85,6.05)];}

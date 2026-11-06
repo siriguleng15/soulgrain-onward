@@ -21,12 +21,13 @@ export class HeelActor {
   this.maxRestError=0;if(!active){for(const copy of this.copies){const a=copy.mesh.geometry.getAttribute('position');for(let i=0;i<a.count;i++){const p=copy.rest[i].clone().applyMatrix4(pose.matrix);a.setXYZ(i,p.x,p.y,p.z);this.maxRestError=Math.max(this.maxRestError,p.distanceTo(new Vector3().fromBufferAttribute(a,i)));}a.needsUpdate=true;}return;}
   for(const copy of this.copies){const positions=copy.mesh.geometry.getAttribute('position');
    for(let i=0;i<positions.count;i++){
-    const map=copy.map[i],rest=copy.rest[i].clone().applyMatrix4(pose.matrix),frame=path.at(path.restLength*map.s);
+    const map=copy.map[i],rest=copy.rest[i].clone().applyMatrix4(pose.matrix),frame=path.at(path.restLength*(1-map.s));
     const base=frame.point.clone().addScaledVector(frame.b,params.width*(map.v-.5));
     // Sewing gets the same surface field, including its source surface offset.
     if(copy.source===this.sewing){
      const tn=new Vector3().crossVectors(frame.b,frame.n).normalize();
-     base.addScaledVector(frame.b,map.offsetB).addScaledVector(frame.n,-map.offsetN).addScaledVector(tn,map.offsetT);
+     // Reversing traversal reverses T and N, but never the original UVs.
+     base.addScaledVector(frame.b,map.offsetB).addScaledVector(frame.n,map.offsetN).addScaledVector(tn,-map.offsetT);
     }
     // Width direction in the source is -Z. Smoothly change the actual surface, not UVs.
     const p=rest.lerp(base,r);p.toArray(positions.array as Float32Array,i*3);
@@ -35,7 +36,7 @@ export class HeelActor {
   }
  }
  sourcePoint(source:Mesh,index:number){return normalize(new Vector3().fromBufferAttribute(source.geometry.getAttribute('position'),index));}
- edge(path:MotionPath,pose:Pose,params:Parameters,v:number){const rest=this.surface.sample(1,v).applyMatrix4(pose.matrix),frame=path.at(path.restLength),motion=frame.point.clone().addScaledVector(frame.b,params.width*(v-.5));return rest.lerp(motion,pose.release);}
+ edge(path:MotionPath,pose:Pose,params:Parameters,v:number){const rest=this.surface.sample(0,v).applyMatrix4(pose.matrix),frame=path.at(path.restLength),motion=frame.point.clone().addScaledVector(frame.b,params.width*(v-.5));return rest.lerp(motion,pose.release);}
  getState(){return{originalPanelVisible:this.panel.visible,originalSewingVisible:this.sewing.visible,derivedVisible:this.group.visible,exactRestSurfaceError:this.restError,maxRestError:this.maxRestError};}
  dispose(){for(const c of this.copies){c.mesh.geometry.dispose();(c.mesh.material as MeshStandardMaterial).dispose();}}
 }

@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'public/heel-motion-lab/verification'
 SHA='1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4'
 HASH_JS="""() => {const a=window.__heelLab.lab.ribbon.geometry.getAttribute('position').array;let h=2166136261;const bytes=new Uint8Array(a.buffer,a.byteOffset,a.byteLength);for(const v of bytes)h=Math.imul(h^v,16777619);return (h>>>0).toString(16)}"""
-JOIN_JS="""() => {const l=window.__heelLab.lab,a=l.actor;if(!a.group.visible||!l.ribbon.group.visible)return 0;const source=a.panel.geometry.getAttribute('uv'),p=a.group.children[0].geometry.getAttribute('position'),r=l.ribbon.geometry.getAttribute('position');let error=0;for(let i=0;i<source.count;i++){if(source.getY(i)>.173438)continue;const j=Math.round((source.getX(i)-.14576271176338196)/(.9152542352676392-.14576271176338196)*12);error=Math.max(error,Math.hypot(p.getX(i)-r.getX(j),p.getY(i)-r.getY(j),p.getZ(i)-r.getZ(j)));}return error;}"""
+JOIN_JS="""() => {const l=window.__heelLab.lab,a=l.actor;if(!a.group.visible||!l.ribbon.group.visible)return 0;const source=a.panel.geometry.getAttribute('uv'),p=a.group.children[0].geometry.getAttribute('position'),r=l.ribbon.geometry.getAttribute('position');let error=0;for(let i=0;i<source.count;i++){if(source.getY(i)<.823437)continue;const j=Math.round((source.getX(i)-.14576271176338196)/(.9152542352676392-.14576271176338196)*12);error=Math.max(error,Math.hypot(p.getX(i)-r.getX(j),p.getY(i)-r.getY(j),p.getZ(i)-r.getZ(j)));}return error;}"""
 
 
 def main():
@@ -55,6 +55,25 @@ def main():
         def shot(name,progress,view_name):
             seek(progress);view(view_name);page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
             s=state();keyframes.append({'image':name+'.png','progress':progress,'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
+        # Regression for the art review: inspect actual rendered vertices in the
+        # shoe's coordinates, not screen arrows or the curve's intended controls.
+        exit_samples=[]
+        for progress in [.025,.045,.07,.10,.13]:
+            seek(progress)
+            result=page.evaluate('''() => {const l=window.__heelLab.lab,inv=l.pose.matrix.clone().invert(),p=l.ribbon.geometry.getAttribute('position'),cols=l.ribbon.across+1;let maxY=-Infinity;const first=l.ribbon.centers[0].clone().applyMatrix4(inv);let last=first,arc=0;for(let i=0;i<l.ribbon.centers.length;i++){const point=l.ribbon.centers[i].clone().applyMatrix4(inv);if(i)arc+=point.distanceTo(last);if(arc>.55)break;for(const j of[0,6,12]){const v=l.path.points[0].clone().fromBufferAttribute(p,i*cols+j).applyMatrix4(inv);maxY=Math.max(maxY,v.y);}last=point;}const cuff=l.asset.getObjectByName('AD_Cuff_Shell');const cuffBox=l.sourceBox.clone().makeEmpty();cuff.traverse(m=>{if(!m.isMesh)return;m.geometry.computeBoundingBox();cuffBox.union(m.geometry.boundingBox.clone().applyMatrix4(inv.clone().multiply(m.matrixWorld)));});return{edge:l.getState().path.sourceEdge,down:last.y-first.y,outward:last.x-first.x,maxY,cuffMinY:cuffBox.min.y,sourceLowerY:l.actor.surface.lower.y};}''')
+            exit_samples.append({'progress':progress,**result})
+        check('red ribbon feeds from lower edge downward and outward',all(x['edge']=='lower' and x['down']<-.03 and x['outward']>0 for x in exit_samples),exit_samples)
+        check('initial red lead stays below the actual folded cuff',all(x['maxY']<x['cuffMinY']-.02 for x in exit_samples),exit_samples)
+        seek(.012);early=state();reaction_samples=[]
+        for value in [.08,.15,.23,.33,.44,.56,.68]:
+            sample=seek(value);reaction_samples.append({'progress':value,**sample['reaction'],'shoe':sample['shoe']})
+        check('shoe has delayed multi-axis path-driven angular response',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and all(max(abs(s['angularVelocity'][i]) for s in reaction_samples)>.08 for i in range(3)),reaction_samples)
+        seek(.32);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("direction",30)');changed=state()['shoe']['quaternion']
+        check('diagonal path orientation changes shoe reaction',math.dist(before,changed)>.025,{'before':before,'after':changed})
+        page.evaluate('window.__heelLab.lab.resetPath()');seek(.44);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.lab.selectPoint(10);window.__heelLab.lab.editPoint("z",.6)')
+        check('edited 3D pull path changes shoe reaction',math.dist(before,state()['shoe']['quaternion'])>.001)
+        page.evaluate('window.__heelLab.lab.resetPath()')
+        report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
         shot('01-original-director',0,'director')
         # Actual range drag, not a call to the scene API.
         slider=page.locator('[data-ui="progress"]');box=slider.bounding_box();x=box['x']+box['width']*.43;y=box['y']+box['height']/2
@@ -81,7 +100,7 @@ def main():
         page.locator('[data-axis="x"]').fill('0.35')
         check('path point editor changes real geometry',before!=page.evaluate(HASH_JS) and len(state()['path']['offsets'])==1,state()['path']['offsets'])
         shot('10-editable-path-above',.5,'above');page.locator('[data-action="reset-path"]').click();page.locator('[data-ui="guides"]').uncheck()
-        shot('02-extraction-rear',.08,'rear');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
+        shot('02-extraction-rear',.08,'rear');shot('13-lower-exit-director',.07,'director');shot('14-diagonal-pull-director',.20,'director');shot('03-first-coil-side',.33,'side');shot('04-second-coil-above',.56,'above');shot('05-second-coil-director',.56,'director');shot('06-sprint-director',.745,'director');shot('07-return-director',.91,'director');shot('08-restored-director',1,'director')
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
         for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:
