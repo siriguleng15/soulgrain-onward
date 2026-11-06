@@ -13,7 +13,7 @@ export type Mode='rectangular-outline'|'solid-ribbon';
 export type View='director'|'side'|'rear'|'above';
 export interface Parameters {radius:number;turns:number;pitch:number;width:number;thickness:number;twist:number;direction:number;}
 export const DEFAULTS:Parameters={radius:1.15,turns:2,pitch:1,width:.18,thickness:.012,twist:110,direction:0};
-export function phase(p:number){if(p<INTRO_END)return'后跟特写推进';const a=actionProgress(p);return a<.11?'顺势出带':a<.35?'第一圈':a<.59?'第二圈':a<.74?'鞋头绕行':a<OUTBOUND_END?'近镜冲刺':a<.99999?'连续返回':'已复位';}
+export function phase(p:number){if(p<INTRO_END)return'后跟特写推进';const a=actionProgress(p);return a<.11?'顺势出带':a<.35?'第一圈':a<.59?'第二圈':a<.74?'鞋头绕行':a<.785?'近镜冲刺':a<OUTBOUND_END?'带面展示':a<.99999?'连续返回':'已复位';}
 /** Pure pose from a scalar: no accumulated integration, including the delayed recoil. */
 export function evaluate(p:number,reaction?:HeelReaction){
  p=clamp(p);const a=actionProgress(p),outbound=a<=OUTBOUND_END?a/OUTBOUND_END:1-smooth((a-OUTBOUND_END)/(1-OUTBOUND_END));

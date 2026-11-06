@@ -3,7 +3,7 @@ import {clamp,OUTBOUND_END} from './motion.ts';
 /** C1 monotone Hermite in physical arc length. Only the two outer ends stop;
  * internal knots retain a shared positive velocity (no braking each lap). */
 export function continuousFeed(u:number,distances:number[]){
- const times=[0,.11/OUTBOUND_END,.35/OUTBOUND_END,.59/OUTBOUND_END,.74/OUTBOUND_END,1];
+ const times=[0,.11/OUTBOUND_END,.35/OUTBOUND_END,.59/OUTBOUND_END,.74/OUTBOUND_END,.785/OUTBOUND_END,1];
  const h=times.slice(1).map((t,i)=>t-times[i]);
  const slopes=h.map((dt,i)=>(distances[i+1]-distances[i])/dt);
  const m=times.map((_,i)=>{

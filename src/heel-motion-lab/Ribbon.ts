@@ -8,12 +8,13 @@ export class Ribbon {
  readonly geometry=new BufferGeometry();readonly outlineGeometry=new BufferGeometry();
  readonly material=new MeshStandardMaterial({color:0xb8192c,roughness:.36,metalness:.06});
  readonly segments=300;readonly across=12;readonly centers:Vector3[]=[];
- private positions:Float32Array;private normals:Float32Array;
+ private positions:Float32Array;private normals:Float32Array;private uvs:Float32Array;
  mode:Mode='solid-ribbon';
  constructor(){
-  const rows=this.segments+1,cols=this.across+1;this.positions=new Float32Array(rows*cols*2*3);this.normals=new Float32Array(this.positions.length);
+  const rows=this.segments+1,cols=this.across+1;this.positions=new Float32Array(rows*cols*2*3);this.normals=new Float32Array(this.positions.length);this.uvs=new Float32Array(rows*cols*2*2);
   const position=new BufferAttribute(this.positions,3).setUsage(DynamicDrawUsage),normal=new BufferAttribute(this.normals,3).setUsage(DynamicDrawUsage);
-  for(const g of[this.geometry,this.outlineGeometry]){g.setAttribute('position',position);g.setAttribute('normal',normal);}
+  const uv=new BufferAttribute(this.uvs,2).setUsage(DynamicDrawUsage);
+  for(const g of[this.geometry,this.outlineGeometry]){g.setAttribute('position',position);g.setAttribute('normal',normal);g.setAttribute('uv',uv);}
   const indices:number[]=[],outline:number[]=[];
   const quad=(a:number,b:number,c:number,d:number,edge:boolean)=>{indices.push(a,b,c,b,d,c);if(edge)outline.push(a,b,c,b,d,c);};
   const layer=rows*cols;
@@ -41,9 +42,12 @@ export class Ribbon {
    for(let j=0;j<=this.across;j++)for(let side=0;side<2;side++){
     const p=f.point.clone().addScaledVector(f.b,params.width*(j/this.across-.5)).addScaledVector(f.n,(side?1:-1)*h/2).addScaledVector(offsets[j],join);
     p.toArray(this.positions,((i*cols+j)+side*layer)*3);
+    // Editable derived surface coordinates for future artwork; no source UV
+    // or approved pattern is modified or assigned to this red motion study.
+    const uvIndex=((i*cols+j)+side*layer)*2;this.uvs[uvIndex]=j/this.across;this.uvs[uvIndex+1]=distance/params.width;
    }
   }
-  this.geometry.getAttribute('position').needsUpdate=true;this.geometry.computeVertexNormals();
+  this.geometry.getAttribute('position').needsUpdate=true;this.geometry.getAttribute('uv').needsUpdate=true;this.geometry.computeVertexNormals();
  }
  stats(){return{mode:this.mode,sharedVertexBuffers:this.geometry.getAttribute('position')===this.outlineGeometry.getAttribute('position'),vertices:this.positions.length/3,solidTriangles:this.geometry.index!.count/3,outlineTriangles:this.outlineGeometry.index!.count/3,tip:this.centers.at(-1)?.toArray()??null};}
  dispose(){this.geometry.dispose();this.outlineGeometry.dispose();this.material.dispose();}

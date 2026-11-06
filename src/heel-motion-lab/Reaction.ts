@@ -21,12 +21,13 @@ export class HeelReaction {
   const position=new Vector3(),velocity=new Vector3(),quaternion=new Quaternion(),omega=new Vector3();
   const dt=DURATION*(1-INTRO_END)*OUTBOUND_END/this.steps;
   const shape=localTrajectory(surface,params,0,offsets),points=[...shape.points];
-  for(const point of flightControls(points))points.push(point.add(offsets.get(points.length)??new Vector3()));
+  const flight=flightControls(points);
+  for(const point of flight.points)points.push(point.add(offsets.get(points.length)??new Vector3()));
   const curve=new CatmullRomCurve3(points,false,'centripetal',.5),end=points.length-1;
   curve.arcLengthDivisions=1200;const lengths=curve.getLengths(),total=lengths[lengths.length-1];
   const arcAt=(t:number)=>{const f=t*1200,k=Math.floor(f);return(lengths[k]??total)+((lengths[Math.min(1200,k+1)]??total)-(lengths[k]??total))*(f-k);};
   const restLength=arcAt(2/end);
-  const distances=[restLength,arcAt(shape.coilStart/end),arcAt((shape.coilStart+shape.loops/2)/end),arcAt(shape.coilEnd/end),arcAt(shape.toeEnd/end),total];
+  const distances=[restLength,arcAt(shape.coilStart/end),arcAt((shape.coilStart+shape.loops/2)/end),arcAt(shape.coilEnd/end),arcAt(shape.toeEnd/end),arcAt(flight.presentationStart/end),total];
   // The lower attachment pulls along the departing ribbon. As requested,
   // consider only its horizontal component in the initial shoe side frame.
   // A rightward pull below the midpoint gives r × F with positive Z (CCW).
