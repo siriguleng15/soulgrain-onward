@@ -54,7 +54,7 @@ def main():
             page.evaluate('(v)=>window.__heelLab.setView(v)',name)
             page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
         def shot(name,progress,view_name,raw=False):
-            page.evaluate('(p)=>window.__heelLab.seek(p)',progress if raw else story(progress));view(view_name);page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
+            page.evaluate('(p)=>window.__heelLab.seek(p)',progress if raw else story(progress));view(view_name);page.locator('aside').evaluate('(el)=>el.scrollTop=0');page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
             s=state();keyframes.append({'image':name+'.png','progress':progress if raw else story(progress),'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
         # Regression for the art review: inspect actual rendered vertices in the
         # shoe's coordinates, not screen arrows or the curve's intended controls.
@@ -137,6 +137,8 @@ def main():
             page.locator('[data-ui="speed"]').select_option(str(speed))
             delta=page.evaluate('''() => {const l=window.__heelLab.lab;l.seek(.2);l.play();l.advance(1);l.pause();return l.progress-.2;}''')
             check('actual playback rate '+str(speed),abs(delta-speed/30)<1e-10,delta)
+        rate_handoff=page.evaluate('''()=>{const l=window.__heelLab.lab,select=document.querySelector('[data-ui="speed"]'),rows=[];for(const speed of[2,3]){l.seek(.3);l.play();const before=l.progress;select.value=String(speed);select.dispatchEvent(new Event('change',{bubbles:true}));const after=l.progress;l.advance(.5);l.pause();rows.push({speed,before,after,advanced:l.progress});}return rows;}''')
+        check('changing to 2x or 3x while playing preserves current progress',all(r['before']==r['after'] and abs(r['advanced']-(.3+.5*r['speed']/30))<1e-9 for r in rate_handoff),rate_handoff)
         page.locator('[data-ui="speed"]').select_option('1')
         seek(.56);before=page.evaluate(HASH_JS);page.locator('[data-mode="rectangular-outline"]').click();after=page.evaluate(HASH_JS)
         check('two modes share positions and center path',before==after and state()['mode']=='rectangular-outline' and state()['ribbon']['sharedVertexBuffers'])

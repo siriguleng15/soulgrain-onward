@@ -6,5 +6,7 @@
   "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
   "three": "0.180.0",
   "renderBackend": "SwiftShader software WebGL",
-  "physicalSafariTested": false
+  "physicalSafariTested": false,
+  "revision": "heel-continuous-inward-toe-v6",
+  "performanceScope": "Software WebGL on shared execution resources. No hardware-GPU or physical Safari performance certification."
 }
