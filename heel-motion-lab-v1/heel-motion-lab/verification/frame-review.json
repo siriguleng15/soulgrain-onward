@@ -1,23 +1,27 @@
 {
   "passed": true,
-  "file": "heel-motion-lab-v1-12fps.mp4",
-  "frames": 313,
-  "fps": 12,
-  "samplingWallSeconds": 240.62089821300015,
-  "maximumFrameError": 8.881784197001252e-16,
-  "minimumFrameDot": 0.6599029578546638,
+  "file": "heel-motion-lab-v1-24fps.mp4",
+  "frames": 721,
+  "fps": 24,
+  "duration": 30,
+  "samplingWallSeconds": 628.1475881480001,
+  "maximumFrameError": 1.1102230246251565e-15,
+  "minimumFrameDot": 0.6676553034598165,
   "phases": [
+    "后跟特写推进",
     "已复位",
-    "抽离",
     "第一圈",
     "第二圈",
     "终态停留",
     "近镜冲刺",
-    "连续返回"
+    "连续返回",
+    "顺势出带"
   ],
   "finalRestored": true,
-  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/12-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "revision": "lower-exit-longitudinal-v3",
+  "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
+  "revision": "tangent-flow-heel-macro-v4",
+  "motionSourceCommit": "91275a323d95b3eef7876a81d013c5b07c757e12",
+  "handoffVerification": "The optional active-playback camera handoff guard was checked separately; it does not change this default camera track.",
   "encoding": {
     "programs": [],
     "stream_groups": [],
@@ -26,12 +30,12 @@
         "codec_name": "h264",
         "width": 1100,
         "height": 760,
-        "avg_frame_rate": "12/1"
+        "avg_frame_rate": "24/1"
       }
     ],
     "format": {
-      "duration": "26.083333",
-      "size": "2225134"
+      "duration": "30.041667",
+      "size": "4571619"
     }
   }
 }
