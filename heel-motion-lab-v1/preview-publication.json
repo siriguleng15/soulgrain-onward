@@ -1,10 +1,10 @@
 {
-  "preview": "Heel Motion Lab V1.2",
-  "revision": "lower-exit-longitudinal-v3",
-  "sourceCommit": "d97f902b8866a293a3c070ef368fe44ef70bc2ed",
-  "basePagesCommit": "88c250dd97381feaf96e31961a8d59257839b419",
+  "preview": "Heel Motion Lab V1.3",
+  "revision": "tangent-flow-heel-macro-v4",
+  "sourceCommit": "91275a323d95b3eef7876a81d013c5b07c757e12",
+  "basePagesCommit": "6a076107f5577af83dafd8ea8370223cc0e30348",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T03:25:44.746021+00:00",
+  "preparedAt": "2026-11-06T03:59:47.921115+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-  "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
+  "scope": "Independent live lab updated; review gallery stays on V1.2 until the new 24fps export completes; no production changes."
 }
