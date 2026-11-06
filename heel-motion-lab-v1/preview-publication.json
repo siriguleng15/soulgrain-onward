@@ -1,10 +1,10 @@
 {
   "preview": "Heel Motion Lab V1.4",
   "revision": "heel-horizontal-pull-ccw-v5",
-  "sourceCommit": "b6c0943f9df49fee3a9d0ce5cfa553698cd1cd6f",
-  "basePagesCommit": "8dc34050c34d70d3b75b4ef82179299b037b6774",
+  "sourceCommit": "25f76101e890c80a2fe0712d9d6433b58810310c",
+  "basePagesCommit": "8ac9519838ab6eb9d8917cb305ecdae1326a2951",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T07:29:14.744935+00:00",
+  "preparedAt": "2026-11-06T07:41:28.161221+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
   "scope": "Independent live lab updated; review gallery stays on V1.3 until the new 12fps direction review completes; no production changes."
 }
