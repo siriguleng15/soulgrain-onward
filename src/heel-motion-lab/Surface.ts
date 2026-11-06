@@ -9,11 +9,12 @@ export function fingerprint(geometry:BufferGeometry){let h=2166136261;for(const 
 /** Interpolate actual source triangles in its original UV chart, not a fitted rectangle. */
 export class HeelSurface {
  private p;private uv;private normals;private triangles:{ids:number[];uv:number[][]}[]=[];
- readonly lower=new Vector3();readonly upper=new Vector3();readonly middle=new Vector3();readonly length:number;
+ readonly lower=new Vector3();readonly upper=new Vector3();readonly middle=new Vector3();readonly focus=new Vector3();readonly exitTangent=new Vector3();readonly length:number;
  constructor(readonly source:Mesh){
   const g=source.geometry;this.p=g.getAttribute('position');this.uv=g.getAttribute('uv');this.normals=g.getAttribute('normal');
   const ix=g.index!;for(let i=0;i<ix.count;i+=3){const ids=[ix.getX(i),ix.getX(i+1),ix.getX(i+2)];this.triangles.push({ids,uv:ids.map(k=>[this.uv.getX(k),this.uv.getY(k)])});}
   this.lower.copy(this.sample(0,.5));this.upper.copy(this.sample(1,.5));this.middle.copy(this.sample(.5,.5));
+  this.focus.copy(this.sample(.30,.5));this.exitTangent.copy(this.lower).sub(this.sample(.03,.5)).normalize();
   let length=0,previous=this.lower.clone();for(let i=1;i<=60;i++){const q=this.sample(i/60,.5);length+=q.distanceTo(previous);previous=q;}this.length=length;
  }
  sample(s:number,v:number,out=new Vector3(),normal=false){

@@ -1,6 +1,7 @@
 import {BufferAttribute,BufferGeometry,DynamicDrawUsage,Group,Mesh,MeshStandardMaterial,Vector3} from 'three';
 import type {Parameters,Mode} from './motion.ts';
 import type {MotionPath} from './Path.ts';
+import {smooth} from './motion.ts';
 /** Both debug modes share the very same vertex buffers and center path. */
 export class Ribbon {
  readonly group=new Group();readonly solid:Mesh;readonly outline:Mesh;
@@ -35,7 +36,8 @@ export class Ribbon {
   const offsets=Array.from({length:cols},(_,j)=>startEdge(j/this.across).sub(first.point.clone().addScaledVector(first.b,params.width*(j/this.across-.5))));
   for(let i=0;i<=this.segments;i++){
    const distance=length*i/this.segments,f=path.at(start+distance),join=Math.exp(-distance*7);this.centers.push(f.point.clone().addScaledVector(offsets[this.across/2],join));
-   const h=params.thickness*Math.min(1,i/this.segments*15);
+   // A very short emerging strip stays thin; it cannot pop up as a thick cap.
+   const h=params.thickness*smooth(distance/Math.max(.12,params.thickness*6));
    for(let j=0;j<=this.across;j++)for(let side=0;side<2;side++){
     const p=f.point.clone().addScaledVector(f.b,params.width*(j/this.across-.5)).addScaledVector(f.n,(side?1:-1)*h/2).addScaledVector(offsets[j],join);
     p.toArray(this.positions,((i*cols+j)+side*layer)*3);

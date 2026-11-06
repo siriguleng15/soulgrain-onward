@@ -4,13 +4,14 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {StudioMaterials} from '../advertising/scene/StudioMaterials.ts';
 import {CameraDirector} from '../immersive-showcase/CameraDirector.ts';
-import {DEFAULTS,DURATION,clamp,evaluate,phase,smooth} from './motion.ts';
+import {DEFAULTS,DURATION,actionToProgress,clamp,evaluate,phase,smooth} from './motion.ts';
 import type {Mode,Parameters,View} from './motion.ts';
 import {SOURCE_CENTER,SOURCE_SCALE,SOURCE_SHA,SOURCE_URL,fingerprint} from './Surface.ts';
 import {HeelActor} from './HeelActor.ts';
 import {MotionPath} from './Path.ts';
 import {Ribbon} from './Ribbon.ts';
 import {HeelReaction} from './Reaction.ts';
+import {heelDirectorShot} from './DirectorShot.ts';
 
 interface Events{ready():void;change():void;error(message:string):void;point(index:number):void;}
 export class HeelLab {
@@ -21,7 +22,7 @@ export class HeelLab {
  progress=0;playing=false;speed=1;cameraOwner:'director'|'free'|'inspection'='director';view:View='director';guides=false;selected=10;
  private repairs=new StudioMaterials();private abort=new AbortController();private dirty=true;private renderNeeded=true;private frame=0;private last=0;private uiAt=0;private observer:ResizeObserver;
  private originals=new Map<Mesh,{fingerprint:string;visible:boolean;matrix:number[]}>();private sourceBox=new Box3();private contextLost=false;private disposed=false;
- private returnTrack?:{fromU:number;fromP:number;time:number;duration:number};private lastRendered=0;private intervals:number[]=[];
+ private returnTrack?:{fromU:number;fromP:number;time:number;duration:number;cameraPosition:Vector3;cameraTarget:Vector3};private lastRendered=0;private intervals:number[]=[];
  private guideLine:Line;private handles:InstancedMesh;private selectedHandle:Mesh;private ray=new Raycaster();private pointer=new Vector2();private down?:{x:number;y:number};
  private pmremTarget;private stageGrid:GridHelper;private risk={bboxWarnings:0,nearPlaneWarnings:0,minimumCameraDepth:0};
  constructor(readonly host:HTMLElement,readonly events:Events){
@@ -52,10 +53,13 @@ export class HeelLab {
   this.normalized.add(this.asset);this.scene.updateMatrixWorld(true);this.sourceBox.setFromObject(this.shoe);this.actor=new HeelActor(panel,sewing);if(this.actor.restError>1e-6)throw Error('原表面映射误差超过契约');this.scene.add(this.actor.group);this.ready=true;this.dirty=true;this.updateGeometry();this.events.ready();
  }catch(e){if(!this.disposed){this.error=String(e);this.events.error(this.error);}}}
  private resize(){const r=this.host.getBoundingClientRect(),w=Math.max(1,r.width),h=Math.max(1,r.height);this.renderer.setPixelRatio(Math.min(devicePixelRatio||1,matchMedia('(pointer:coarse)').matches?1.25:1.5,Math.sqrt(1800000/(w*h))));this.renderer.setSize(w,h,false);this.director.resize(w,h);this.dirty=true;this.renderNeeded=true;}
- get pose(){const p=this.returnTrack ? .74*this.returnTrack.fromU*(1-smooth(this.returnTrack.time/this.returnTrack.duration)) : this.progress;return evaluate(p,this.reaction);}
- directorPose(){const u=this.pose.outbound;const position=new Vector3(4.9-.15*u,2.65+.12*u,8.0),target=new Vector3(-.12, .15,-.15*u);const aspect=this.camera.aspect;if(aspect<1)position.multiplyScalar(Math.min(1.7,1/Math.sqrt(aspect)));return{position,target,framing:0};}
+ get pose(){const p=this.returnTrack ? actionToProgress(.74*this.returnTrack.fromU*(1-smooth(this.returnTrack.time/this.returnTrack.duration))) : this.progress;return evaluate(p,this.reaction);}
+ directorPose(){
+  if(this.returnTrack){const end=heelDirectorShot(evaluate(1,this.reaction),this.actor?.surface.middle,this.camera.aspect),w=smooth(this.returnTrack.time/this.returnTrack.duration);return{position:this.returnTrack.cameraPosition.clone().lerp(end.position,w),target:this.returnTrack.cameraTarget.clone().lerp(end.target,w),framing:0};}
+  return heelDirectorShot(this.pose,this.actor?.surface.focus,this.camera.aspect);
+ }
  private updateGeometry(){if(!this.actor)return;this.reaction.rebuild(this.actor.surface,this.params,this.path.offsets);const pose=this.pose;this.shoe.position.copy(pose.position);this.shoe.quaternion.copy(pose.quaternion);this.shoe.updateMatrixWorld(true);
-  this.path.update(this.actor.surface,this.params,pose.matrix,pose.outbound);this.actor.update(this.path,pose,this.params);this.ribbon.update(this.path,this.params,pose.release,v=>this.actor!.edge(this.path,pose,this.params,v));
+  this.path.update(this.actor.surface,this.params,pose.matrix,pose.outbound);this.actor.update(pose);this.ribbon.update(this.path,this.params,pose.release,v=>this.actor!.edge(pose,v));
   const attr=this.guideLine.geometry.getAttribute('position');for(let i=0;i<this.path.samples.length;i++)this.path.samples[i].toArray(attr.array as Float32Array,i*3);attr.needsUpdate=true;
   const matrix=new Matrix4();this.handles.count=this.path.points.length;for(let i=0;i<this.path.points.length;i++)this.handles.setMatrixAt(i,matrix.makeTranslation(...this.path.points[i].toArray()));this.handles.instanceMatrix.needsUpdate=true;this.selectedHandle.position.copy(this.path.points[this.selected]??this.path.points[3]);
   this.dirty=false;this.renderNeeded=true;
@@ -74,8 +78,8 @@ export class HeelLab {
  play(){if(!this.ready)return;if(this.progress>=1){this.progress=0;this.returnTrack=undefined;this.dirty=true;}this.playing=true;this.events.change();}
  pause(){this.playing=false;this.events.change();}
  replay(){this.seek(0);this.play();}
- returnToHeel(){if(!this.ready)return;const u=this.pose.outbound;if(u<1e-8){this.cancel();return;}this.returnTrack={fromU:u,fromP:this.progress,time:0,duration:4.5};this.playing=true;this.events.change();}
- cancel(){this.playing=false;this.returnTrack=undefined;this.progress=0;this.dirty=true;this.advance(0);this.events.change();}
+ returnToHeel(){if(!this.ready)return;const u=this.pose.outbound;if(this.cameraOwner==='director')this.director.cancel();this.returnTrack={fromU:u,fromP:this.progress,time:0,duration:4.5,cameraPosition:this.camera.position.clone(),cameraTarget:this.controls.target.clone()};this.playing=true;this.events.change();}
+ cancel(){this.playing=false;this.returnTrack=undefined;if(this.cameraOwner==='director')this.director.cancel();this.progress=0;this.dirty=true;this.advance(0);this.events.change();}
  setParameter(key:keyof Parameters,value:number){const limits:Record<keyof Parameters,[number,number]>={radius:[.85,1.8],turns:[1,3],pitch:[.6,1.35],width:[.07,.34],thickness:[.003,.04],twist:[0,360],direction:[-35,35]};if(!Number.isFinite(value))return;this.params[key]=clamp(value,...limits[key]);this.dirty=true;this.advance(0);this.events.change();}
  setMode(mode:Mode){this.ribbon.setMode(mode);this.renderNeeded=true;this.events.change();}
  setGuides(show:boolean){this.guides=show;this.guideLine.visible=show;this.handles.visible=show;this.selectedHandle.visible=show;this.renderNeeded=true;}
@@ -88,7 +92,7 @@ export class HeelLab {
   this.risk={bboxWarnings:bbox,nearPlaneWarnings:near,minimumCameraDepth:Number.isFinite(minDepth)?minDepth:0};return this.risk;
  }
  integrity(){return[...this.originals].map(([m,s])=>({name:m.name,geometryUnchanged:fingerprint(m.geometry)===s.fingerprint,localMatrixUnchanged:JSON.stringify(m.matrix.toArray())===JSON.stringify(s.matrix),visible:m.visible,expectedVisible:s.visible}));}
- getState(){const pose=this.pose;return{revision:'lower-exit-longitudinal-v3',ready:this.ready,error:this.error??null,progress:this.progress,playing:this.playing,speed:this.speed,phase:this.returnTrack?'连续返回':phase(this.progress),outbound:pose.outbound,release:pose.release,cameraOwner:this.cameraOwner,view:this.view,camera:this.camera.position.toArray(),target:this.controls.target.toArray(),directorMoving:this.director.moving,parameters:{...this.params},mode:this.ribbon.mode,guides:this.guides,sourceSHA:SOURCE_SHA,browserVerifiedSHA:this.verifiedSHA,shoe:{position:this.shoe.position.toArray(),quaternion:this.shoe.quaternion.toArray()},reaction:pose.response?{force:pose.response.force.toArray(),torque:pose.response.torque.toArray(),angularVelocity:pose.response.angularVelocity.toArray(),method:'deterministic longitudinal-axis advertising inertia'}:null,actor:this.actor?.getState(),ribbon:this.ribbon.stats(),path:{sourceEdge:'lower',controlPoints:this.path.points.map(p=>p.toArray()),offsets:[...this.path.offsets].map(([i,p])=>({i,offset:p.toArray()})),frameError:this.path.frameError,minimumFrameDot:this.path.minimumFrameDot,reversals:this.path.reversals,length:this.path.length,tipLength:this.path.tipLength},risk:this.diagnostics(),drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,pixelRatio:this.renderer.getPixelRatio(),meanFrameInterval:this.intervals.reduce((a,b)=>a+b,0)/Math.max(1,this.intervals.length),contextLost:this.contextLost};}
+ getState(){const pose=this.pose;return{revision:'tangent-flow-heel-macro-v4',duration:DURATION,ready:this.ready,error:this.error??null,progress:this.progress,playing:this.playing,speed:this.speed,phase:this.returnTrack?'连续返回':phase(this.progress),outbound:pose.outbound,release:pose.release,cameraOwner:this.cameraOwner,view:this.view,camera:this.camera.position.toArray(),target:this.controls.target.toArray(),directorMoving:this.director.moving,parameters:{...this.params},mode:this.ribbon.mode,guides:this.guides,sourceSHA:SOURCE_SHA,browserVerifiedSHA:this.verifiedSHA,shoe:{position:this.shoe.position.toArray(),quaternion:this.shoe.quaternion.toArray()},reaction:pose.response?{force:pose.response.force.toArray(),torque:pose.response.torque.toArray(),angularVelocity:pose.response.angularVelocity.toArray(),method:'deterministic longitudinal-axis advertising inertia'}:null,actor:this.actor?.getState(),ribbon:this.ribbon.stats(),path:{sourceEdge:'lower',controlPoints:this.path.points.map(p=>p.toArray()),offsets:[...this.path.offsets].map(([i,p])=>({i,offset:p.toArray()})),frameError:this.path.frameError,minimumFrameDot:this.path.minimumFrameDot,reversals:this.path.reversals,length:this.path.length,tipLength:this.path.tipLength},risk:this.diagnostics(),drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,pixelRatio:this.renderer.getPixelRatio(),meanFrameInterval:this.intervals.reduce((a,b)=>a+b,0)/Math.max(1,this.intervals.length),contextLost:this.contextLost};}
  // Deterministic recording/test hook: real WebGL render at an exact time; not a video player.
  renderAt(p:number){this.seek(p);this.render();return this.getState();}
  private pointerDown=(e:PointerEvent)=>{if(!this.ready)return;this.cameraOwner='free';this.director.cancel();this.controls.enabled=true;this.down={x:e.clientX,y:e.clientY};this.events.change();};

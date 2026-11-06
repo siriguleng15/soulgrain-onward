@@ -1,5 +1,5 @@
 import {CatmullRomCurve3,Matrix4,Quaternion,Vector3} from 'three';
-import {clamp,growthParameter} from './motion.ts';
+import {clamp,feedEase,growthParameter} from './motion.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
 import {flightControls,localTrajectory} from './Trajectory.ts';
@@ -20,6 +20,7 @@ export class MotionPath {
   this.restLength=arcAt(2/(this.points.length-1));
   const t=growthParameter(u,2/(this.points.length-1),coilStart/(this.points.length-1),(coilStart+loops/2)/(this.points.length-1),coilEnd/(this.points.length-1));
   const f=t*1200,i=Math.floor(f);this.tipLength=(lengths[i]??total)+((lengths[Math.min(1200,i+1)]??total)-(lengths[i]??total))*(f-i);
+  if(u<=.11/.74)this.tipLength=this.restLength+(arcAt(coilStart/(this.points.length-1))-this.restLength)*feedEase(u/(.11/.74));
   this.tipLength=Math.max(this.restLength,this.tipLength);
   this.samples=this.curve.getSpacedPoints(this.count);this.tangents=[];this.widths=[];this.normals=[];this.frameError=0;this.minimumFrameDot=1;this.reversals=0;
   let previousT=new Vector3(),width=new Vector3(0,0,-1).transformDirection(pose);
@@ -35,7 +36,11 @@ export class MotionPath {
   }
  }
  at(distance:number){const f=clamp(distance/this.length)*this.count,i=Math.min(this.count-1,Math.floor(f)),w=f-i;
-  return{point:this.samples[i].clone().lerp(this.samples[i+1],w),b:this.widths[i].clone().lerp(this.widths[i+1],w).normalize(),n:this.normals[i].clone().lerp(this.normals[i+1],w).normalize()};
+  // Evaluate the spline itself, not its coarse debug polyline. Linear point
+  // interpolation produced visible little hinges under the new macro camera.
+  const s=clamp(distance/this.length),tangent=this.curve.getTangentAt(s).normalize(),b=this.widths[i].clone().lerp(this.widths[i+1],w);
+  b.addScaledVector(tangent,-b.dot(tangent)).normalize();
+  return{point:this.curve.getPointAt(s),b,n:new Vector3().crossVectors(tangent,b).normalize()};
  }
  setOffset(index:number,axis:'x'|'y'|'z',value:number){if(index<3||index>=this.points.length-2)return;const offset=this.offsets.get(index)?.clone()??new Vector3();offset[axis]=clamp(value,-1.5,1.5);this.offsets.set(index,offset);}
 }

@@ -1,17 +1,17 @@
 import {Vector3} from 'three';
-import {segment} from './motion.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
 
 /** Shoe-local authored motion: X points toward the heel, Y upward. */
-export function localTrajectory(surface:HeelSurface,params:Parameters,u:number,offsets:Map<number,Vector3>){
- const peel=segment(u,0,.18);
+export function localTrajectory(surface:HeelSurface,params:Parameters,_u:number,offsets:Map<number,Vector3>){
  // Traverse the real strip FROM ITS TOP TO ITS BOTTOM. Only the bottom feeds
  // the extension. No control point of the red lead is above the bottom edge.
  const points=[
   surface.upper.clone(),
-  surface.middle.clone().add(new Vector3(.12*peel,-.02*peel,.025*peel)),
-  surface.lower.clone().add(new Vector3(.18*peel,-.12*peel,.035*peel)),
+  surface.middle.clone(),
+  surface.lower.clone(),
+  // Fixed tangent lead-in: the ribbon feeds down, without a preliminary hinge.
+  surface.lower.clone().addScaledVector(surface.exitTangent,.25).add(new Vector3(.012,0,0)),
   surface.lower.clone().add(new Vector3(.35,-(.30+.28*params.radius),-.12))
  ];
  const coilStart=points.length,loops=32;

@@ -1,5 +1,5 @@
 import {CatmullRomCurve3,Quaternion,Vector3} from 'three';
-import {clamp,DURATION,growthParameter,segment} from './motion.ts';
+import {clamp,DURATION,INTRO_END,growthParameter,segment} from './motion.ts';
 import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
 import {flightControls,localTrajectory} from './Trajectory.ts';
@@ -16,7 +16,7 @@ export class HeelReaction {
   const key=JSON.stringify([params,[...offsets].map(([i,p])=>[i,...p.toArray()])]);
   if(key===this.signature)return;this.signature=key;this.samples=[];
   const position=new Vector3(),velocity=new Vector3(),quaternion=new Quaternion(),omega=new Vector3();
-  const dt=DURATION*.74/this.steps,axis=new Vector3(),delta=new Quaternion();
+  const dt=DURATION*(1-INTRO_END)*.74/this.steps,axis=new Vector3(),delta=new Quaternion();
   let previousWinding=0;
   for(let i=0;i<=this.steps;i++){
    const u=i/this.steps,shape=localTrajectory(surface,params,u,offsets),points=[...shape.points];

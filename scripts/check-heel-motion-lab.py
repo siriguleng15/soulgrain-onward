@@ -48,25 +48,26 @@ def main():
         check('real colored GLB loaded and SHA verified in browser',state()['ready'] and state()['browserVerifiedSHA']==SHA)
         initial=state();check('source UV surface correspondence',initial['actor']['exactRestSurfaceError']<1e-6,initial['actor'])
         check('one live WebGL canvas',page.locator('#stage canvas').count()==1)
-        def seek(value):return page.evaluate('(p)=>{window.__heelLab.seek(p);return window.__heelLab.getState();}',value)
+        def story(value):return .10+.90*value
+        def seek(value):return page.evaluate('(p)=>{window.__heelLab.seek(p);return window.__heelLab.getState();}',story(value))
         def view(name):
             page.evaluate('(v)=>window.__heelLab.setView(v)',name)
             page.wait_for_function('!window.__heelLab.getState().directorMoving',timeout=20000)
-        def shot(name,progress,view_name):
-            seek(progress);view(view_name);page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
-            s=state();keyframes.append({'image':name+'.png','progress':progress,'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
+        def shot(name,progress,view_name,raw=False):
+            page.evaluate('(p)=>window.__heelLab.seek(p)',progress if raw else story(progress));view(view_name);page.wait_for_timeout(120);page.screenshot(path=str(OUT/(name+'.png')))
+            s=state();keyframes.append({'image':name+'.png','progress':progress if raw else story(progress),'view':view_name,'state':s,'joinError':page.evaluate(JOIN_JS)})
         # Regression for the art review: inspect actual rendered vertices in the
         # shoe's coordinates, not screen arrows or the curve's intended controls.
         exit_samples=[]
         for progress in [.025,.045,.07,.10,.13]:
             seek(progress)
             result=page.evaluate('''() => {const l=window.__heelLab.lab,inv=l.pose.matrix.clone().invert(),p=l.ribbon.geometry.getAttribute('position'),cols=l.ribbon.across+1;let maxY=-Infinity;const first=l.ribbon.centers[0].clone().applyMatrix4(inv);let last=first,arc=0;for(let i=0;i<l.ribbon.centers.length;i++){const point=l.ribbon.centers[i].clone().applyMatrix4(inv);if(i)arc+=point.distanceTo(last);if(arc>.55)break;for(const j of[0,6,12]){const v=l.path.points[0].clone().fromBufferAttribute(p,i*cols+j).applyMatrix4(inv);maxY=Math.max(maxY,v.y);}last=point;}const cuff=l.asset.getObjectByName('AD_Cuff_Shell');const cuffBox=l.sourceBox.clone().makeEmpty();cuff.traverse(m=>{if(!m.isMesh)return;m.geometry.computeBoundingBox();cuffBox.union(m.geometry.boundingBox.clone().applyMatrix4(inv.clone().multiply(m.matrixWorld)));});return{edge:l.getState().path.sourceEdge,down:last.y-first.y,outward:last.x-first.x,maxY,cuffMinY:cuffBox.min.y,sourceLowerY:l.actor.surface.lower.y};}''')
-            exit_samples.append({'progress':progress,**result})
+            exit_samples.append({'progress':story(progress),'actionProgress':progress,**result})
         check('red ribbon feeds from lower edge downward and outward',all(x['edge']=='lower' and x['down']<-.03 and x['outward']>0 for x in exit_samples),exit_samples)
         check('initial red lead stays below the actual folded cuff',all(x['maxY']<x['cuffMinY']-.02 for x in exit_samples),exit_samples)
         seek(.012);early=state();reaction_samples=[]
         for value in [.08,.15,.23,.33,.44,.56,.68]:
-            sample=seek(value);reaction_samples.append({'progress':value,**sample['reaction'],'shoe':sample['shoe']})
+            sample=seek(value);reaction_samples.append({'progress':story(value),'actionProgress':value,**sample['reaction'],'shoe':sample['shoe']})
         check('shoe rotates only around its longitudinal X axis with delay',math.dist(early['shoe']['quaternion'],[0,0,0,1])<1e-9 and max(abs(s['angularVelocity'][0]) for s in reaction_samples)>.08 and all(abs(s['angularVelocity'][1])+abs(s['angularVelocity'][2])+abs(s['shoe']['quaternion'][1])+abs(s['shoe']['quaternion'][2])<1e-12 for s in reaction_samples),reaction_samples)
         seek(.32);before=state()['shoe']['quaternion'];page.evaluate('window.__heelLab.setParameter("direction",30)');changed=state()['shoe']['quaternion']
         check('diagonal ribbon orientation preserves longitudinal-only shoe rotation',math.dist(before,changed)<1e-12,{'before':before,'after':changed})
@@ -76,7 +77,31 @@ def main():
         check('winding count still controls longitudinal rotation',math.dist(before,state()['shoe']['quaternion'])>.1)
         page.evaluate('window.__heelLab.lab.resetPath()')
         report['lowerExitSamples']=exit_samples;report['reactionSamples']=reaction_samples
-        shot('01-original-director',0,'director')
+        camera_samples=[]
+        for progress in [0,.045,.09,.105,.145,.22,.32,.43]:
+            sample=page.evaluate('(p)=>window.__heelLab.renderAt(p)',progress)
+            frame=page.evaluate('''() => {const l=window.__heelLab.lab,a=l.actor,upper=a.surface.upper.clone().applyMatrix4(l.pose.matrix).project(l.camera),lower=a.surface.lower.clone().applyMatrix4(l.pose.matrix).project(l.camera);return{distance:l.camera.position.distanceTo(l.controls.target),heelScreenHeight:Math.abs(upper.y-lower.y)/2,sourceError:a.maxRestError,rootError:l.path.points[2].clone().applyMatrix4(l.pose.matrix.clone().invert()).distanceTo(a.surface.lower)};}''')
+            camera_samples.append({'progress':progress,'ribbonVisible':sample['ribbon']['tip'] is not None,**frame})
+        check('camera reaches the heel before any ribbon emerges',all(not s['ribbonVisible'] for s in camera_samples[:3]) and camera_samples[2]['distance']<camera_samples[0]['distance']*.4,camera_samples[:4])
+        check('heel closeup occupies more than half the viewport height',camera_samples[2]['heelScreenHeight']>.5,camera_samples[2])
+        check('camera pulls back gradually after ribbon emergence',camera_samples[4]['ribbonVisible'] and all(camera_samples[i+1]['distance']>camera_samples[i]['distance'] for i in range(3,len(camera_samples)-1)),camera_samples)
+        check('source leather and lower anchor do not hinge outward',all(s['sourceError']<1e-6 and s['rootError']<1e-8 for s in camera_samples),camera_samples)
+        # Inspect the actual cap, not just the animation easing function.
+        cap_samples=[]
+        for value in [.003,.006,.012]:
+            seek(value)
+            cap_samples.append(page.evaluate('''() => {const l=window.__heelLab.lab,r=l.ribbon,a=r.geometry.getAttribute('position'),layer=(r.segments+1)*(r.across+1),i=r.segments*(r.across+1)+r.across/2,p=l.path.points[0].clone().fromBufferAttribute(a,i),q=l.path.points[0].clone().fromBufferAttribute(a,i+layer);return{length:l.path.tipLength-l.path.restLength,thickness:p.distanceTo(q),maximum:l.params.thickness};}'''))
+        check('emerging cap thickness grows with actual fed length',all(s['thickness']<s['maximum']*.9 for s in cap_samples[:2]) and cap_samples[0]['thickness']<cap_samples[-1]['thickness'],cap_samples)
+        # Returning during the introductory camera move must also be continuous.
+        page.evaluate('window.__heelLab.renderAt(.075)');before=state();page.locator('[data-action="return"]').click();immediate=state()
+        check('return from camera introduction starts without a jump',math.dist(before['camera'],immediate['camera'])<1e-8 and math.dist(before['target'],immediate['target'])<1e-8)
+        page.evaluate('window.__heelLab.lab.advance(5);window.__heelLab.pause()');page.wait_for_function('Math.hypot(...window.__heelLab.getState().camera.map((v,i)=>v-[4.9,2.65,8][i]))<.001',timeout=30000)
+        check('intro return restores the whole-shoe director camera',state()['actor']['originalPanelVisible'] and state()['progress']==1)
+        page.evaluate('window.__heelLab.lab.cancel()')
+        report['cameraSamples']=camera_samples;report['capSamples']=cap_samples
+        shot('01-original-director',0,'director',raw=True)
+        shot('15-heel-camera-closeup',.095,'director',raw=True)
+        shot('16-tangent-feed-closeup',.145,'director',raw=True)
         # Actual range drag, not a call to the scene API.
         slider=page.locator('[data-ui="progress"]');box=slider.bounding_box();x=box['x']+box['width']*.43;y=box['y']+box['height']/2
         page.mouse.move(box['x']+8,y);page.mouse.down();page.mouse.move(x,y,steps=12);page.mouse.up()
@@ -88,7 +113,7 @@ def main():
         for speed in [.25,.5,1]:
             page.locator('[data-ui="speed"]').select_option(str(speed) if speed!=1 else '1')
             delta=page.evaluate('''() => {const l=window.__heelLab.lab;l.seek(.2);l.play();l.advance(1);l.pause();return l.progress-.2;}''')
-            check('actual playback rate '+str(speed),abs(delta-speed/26)<1e-10,delta)
+            check('actual playback rate '+str(speed),abs(delta-speed/30)<1e-10,delta)
         seek(.56);before=page.evaluate(HASH_JS);page.locator('[data-mode="rectangular-outline"]').click();after=page.evaluate(HASH_JS)
         check('two modes share positions and center path',before==after and state()['mode']=='rectangular-outline' and state()['ribbon']['sharedVertexBuffers'])
         shot('09-outline-above',.56,'above');page.locator('[data-mode="solid-ribbon"]').click()
@@ -106,7 +131,7 @@ def main():
         check('five phases and three observation angles rendered',{'rear','side','above'}.issubset({k['view'] for k in keyframes}) and len(keyframes)>=9)
         samples=[]
         for value in [.0001,.01,.04,.08,.11,.2,.35,.5,.59,.68,.74,.82,.9,.96,.99,.9999]:
-            s=seek(value);gap=page.evaluate(JOIN_JS);samples.append({'progress':value,'gap':gap,'frameError':s['path']['frameError'],'minimumFrameDot':s['path']['minimumFrameDot'],'reversals':s['path']['reversals'],'risk':s['risk']})
+            s=seek(value);gap=page.evaluate(JOIN_JS);samples.append({'progress':story(value),'actionProgress':value,'gap':gap,'frameError':s['path']['frameError'],'minimumFrameDot':s['path']['minimumFrameDot'],'reversals':s['path']['reversals'],'risk':s['risk']})
         check('connected source edge throughout release and return',max(x['gap'] for x in samples)<1e-6,max(x['gap'] for x in samples))
         check('stable orthonormal moving frames in all five stages',all(x['frameError']<1e-6 and x['minimumFrameDot']>0 and x['reversals']==0 for x in samples),{'maximumError':max(x['frameError'] for x in samples),'minimumDot':min(x['minimumFrameDot'] for x in samples)})
         report['geometrySamples']=samples
