@@ -1,0 +1,296 @@
+{
+  "passed": true,
+  "revision": "heel-pattern-ribbon-v10",
+  "baseline": "f0a7756952910f0eeb3cbfc708cd4640c3d09cdb",
+  "unchangedMotionModules": [
+    "src/heel-motion-lab/motion.ts",
+    "src/heel-motion-lab/CameraFrame.ts",
+    "src/heel-motion-lab/DirectorShot.ts",
+    "src/heel-motion-lab/Trajectory.ts",
+    "src/heel-motion-lab/TerminalShot.ts",
+    "src/heel-motion-lab/Feed.ts",
+    "src/heel-motion-lab/Path.ts",
+    "src/heel-motion-lab/Reaction.ts",
+    "src/heel-motion-lab/HeelActor.ts",
+    "src/heel-motion-lab/Surface.ts"
+  ],
+  "scope": "Actual default reconstructed meander and rasterized repeat tested; synthetic calibration chart used separately for generic texture lifecycle checks; no physical iPad Safari test",
+  "checks": [
+    {
+      "name": "desktop: actual reconstructed meander is the default loaded material",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+        "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+        "width": 573,
+        "height": 756,
+        "error": null
+      }
+    },
+    {
+      "name": "desktop: rasterized SVG period and both tile edges match without a join",
+      "passed": true,
+      "detail": {
+        "seamMaximum": 0,
+        "repeatedPeriodMaximum": 0,
+        "fullTraceTileMaximum": 0,
+        "red": [
+          160,
+          15,
+          24
+        ],
+        "white": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "name": "desktop: exact file bytes identified; PBR and source aspect retained",
+      "passed": true,
+      "detail": {
+        "state": {
+          "status": "ready",
+          "source": "http://127.0.0.1:4538/qa-ribbon-artwork.png",
+          "sha256": "fa923e60726dda2d92acc6fd3790f11f51cd0f8efd4d6f4e1f16ac1e28a656a5",
+          "width": 128,
+          "height": 512,
+          "error": null
+        },
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "roughness": 0.36,
+        "metalness": 0.06,
+        "repeat": [
+          1,
+          0.25
+        ],
+        "colorSpace": "srgb",
+        "flipY": false
+      }
+    },
+    {
+      "name": "desktop: artwork does not alter V1.7 position, UV, path or camera",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: seeking never recompiles the artwork material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: missing image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "Error: 纹样加载失败 HTTP 404",
+        "same": true
+      }
+    },
+    {
+      "name": "desktop: invalid image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "EncodingError: The source image cannot be decoded.",
+        "same": true
+      }
+    },
+    {
+      "name": "desktop: replacing disposes only the owned texture, without shader churn",
+      "passed": true,
+      "detail": {
+        "disposals": 1,
+        "sameProgramVersion": true,
+        "isolated": true
+      }
+    },
+    {
+      "name": "desktop: both display modes share the artwork and position buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: manual reverse remains complete and source geometry is intact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: clear restores original ribbon color and removes the owned map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: no JavaScript errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "tablet: actual reconstructed meander is the default loaded material",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+        "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+        "width": 573,
+        "height": 756,
+        "error": null
+      }
+    },
+    {
+      "name": "tablet: rasterized SVG period and both tile edges match without a join",
+      "passed": true,
+      "detail": {
+        "seamMaximum": 0,
+        "repeatedPeriodMaximum": 0,
+        "fullTraceTileMaximum": 0,
+        "red": [
+          160,
+          15,
+          24
+        ],
+        "white": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "name": "tablet: exact file bytes identified; PBR and source aspect retained",
+      "passed": true,
+      "detail": {
+        "state": {
+          "status": "ready",
+          "source": "http://127.0.0.1:4538/qa-ribbon-artwork.png",
+          "sha256": "fa923e60726dda2d92acc6fd3790f11f51cd0f8efd4d6f4e1f16ac1e28a656a5",
+          "width": 128,
+          "height": 512,
+          "error": null
+        },
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "roughness": 0.36,
+        "metalness": 0.06,
+        "repeat": [
+          1,
+          0.25
+        ],
+        "colorSpace": "srgb",
+        "flipY": false
+      }
+    },
+    {
+      "name": "tablet: artwork does not alter V1.7 position, UV, path or camera",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: seeking never recompiles the artwork material",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: missing image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "Error: 纹样加载失败 HTTP 404",
+        "same": true
+      }
+    },
+    {
+      "name": "tablet: invalid image preserves the last valid texture",
+      "passed": true,
+      "detail": {
+        "error": "EncodingError: The source image cannot be decoded.",
+        "same": true
+      }
+    },
+    {
+      "name": "tablet: replacing disposes only the owned texture, without shader churn",
+      "passed": true,
+      "detail": {
+        "disposals": 1,
+        "sameProgramVersion": true,
+        "isolated": true
+      }
+    },
+    {
+      "name": "tablet: both display modes share the artwork and position buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: manual reverse remains complete and source geometry is intact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: clear restores original ribbon color and removes the owned map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: no JavaScript errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "approved V1.7 module byte identity: motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: CameraFrame",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: DirectorShot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: Trajectory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: TerminalShot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: Feed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: Path",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: Reaction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: HeelActor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.7 module byte identity: Surface",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

@@ -6,7 +6,7 @@
     "trigger": "independent reverse button at 3x; separate from forward film",
     "restored": true,
     "finalState": {
-      "revision": "heel-uplift-hold-v9",
+      "revision": "heel-pattern-ribbon-v10",
       "duration": 25.14,
       "ready": true,
       "error": null,
@@ -116,6 +116,14 @@
         "solidTriangles": 15648,
         "outlineTriangles": 3728,
         "tip": null
+      },
+      "artwork": {
+        "status": "ready",
+        "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+        "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+        "width": 573,
+        "height": 756,
+        "error": null
       },
       "path": {
         "sourceEdge": "lower",
@@ -459,16 +467,16 @@
       "drawCalls": 43,
       "triangles": 463512,
       "pixelRatio": 1,
-      "meanFrameInterval": 778.0985,
+      "meanFrameInterval": 698.1173333333334,
       "contextLost": false
     }
   },
   "file": "heel-motion-lab-v1.mp4",
   "method": "Playwright actual viewport recording of button-triggered real-time WebGL playback; H.264 conversion, no synthetic/interpolated animation frames",
   "environment": "Linux Chromium + SwiftShader, not hardware-GPU or iPad Safari",
-  "playbackWallSeconds": 25.215492068004096,
+  "playbackWallSeconds": 25.69859392700164,
   "finalState": {
-    "revision": "heel-uplift-hold-v9",
+    "revision": "heel-pattern-ribbon-v10",
     "duration": 25.14,
     "ready": true,
     "error": null,
@@ -582,6 +590,14 @@
         2.6919617337859676,
         7.346663056442796
       ]
+    },
+    "artwork": {
+      "status": "ready",
+      "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+      "sha256": "276e7c1bf844875bfc0507d16f1771140898fbb20dca7a2c1c41644d36f83fe5",
+      "width": 573,
+      "height": 756,
+      "error": null
     },
     "path": {
       "sourceEdge": "lower",
@@ -925,7 +941,7 @@
     "drawCalls": 44,
     "triangles": 479160,
     "pixelRatio": 1,
-    "meanFrameInterval": 844.9151515151516,
+    "meanFrameInterval": 830.9171428571428,
     "contextLost": false
   },
   "errors": []

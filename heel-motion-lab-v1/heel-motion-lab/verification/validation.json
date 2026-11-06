@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-07T00:28:39.879908+08:00",
+  "testedAt": "2026-11-07T01:37:58.960946+08:00",
   "url": "http://127.0.0.1:4538/heel-motion-lab.html",
   "environment": "Linux Chromium + SwiftShader software WebGL; desktop and emulated touch. NOT physical iPad Safari.",
   "checks": [
@@ -988,7 +988,7 @@
     {
       "name": "pause holds exact scene progress",
       "passed": true,
-      "detail": 0.461799522673031
+      "detail": 0.4631241050119333
     },
     {
       "name": "reverse seek returns identical geometry and pose",
@@ -1312,7 +1312,7 @@
           "before": 0.17840095465393796,
           "after": 0.17840095465393796
         },
-        "cameraError": 9.930136612989092e-16
+        "cameraError": 2.220446049250313e-16
       }
     },
     {
@@ -1364,11 +1364,6 @@
       "name": "all normal application requests loaded",
       "passed": true,
       "detail": []
-    },
-    {
-      "name": "recorded real-time playback ends and holds without reverse",
-      "passed": true,
-      "detail": null
     }
   ],
   "errors": [],
@@ -1379,7 +1374,7 @@
       "progress": 0.0,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -1490,6 +1485,14 @@
           "outlineTriangles": 3728,
           "tip": null
         },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
+        },
         "path": {
           "sourceEdge": "lower",
           "presentationLength": 28.409638866163366,
@@ -1832,7 +1835,7 @@
         "drawCalls": 43,
         "triangles": 463512,
         "pixelRatio": 1,
-        "meanFrameInterval": 1419.3833333333334,
+        "meanFrameInterval": 1578.5125714285714,
         "contextLost": false
       },
       "joinError": 0
@@ -1842,7 +1845,7 @@
       "progress": 0.11336515513126491,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -1953,6 +1956,14 @@
           "outlineTriangles": 3728,
           "tip": null
         },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
+        },
         "path": {
           "sourceEdge": "lower",
           "presentationLength": 28.409638866163366,
@@ -2295,7 +2306,7 @@
         "drawCalls": 43,
         "triangles": 463512,
         "pixelRatio": 1,
-        "meanFrameInterval": 3409.3857142857137,
+        "meanFrameInterval": 2851.5588,
         "contextLost": false
       },
       "joinError": 0
@@ -2305,7 +2316,7 @@
       "progress": 0.17303102625298328,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -2419,6 +2430,14 @@
             -0.6481178444004454,
             -0.004692088920270014
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -2762,7 +2781,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 2673.22,
+        "meanFrameInterval": 2731.708,
         "contextLost": false
       },
       "joinError": 7.450580596923828e-09
@@ -2772,7 +2791,7 @@
       "progress": 0.3126491646778043,
       "view": "side",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -2886,6 +2905,14 @@
             0.3091781033275211,
             -1.0929156872092538
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -3229,7 +3256,7 @@
         "drawCalls": 48,
         "triangles": 484368,
         "pixelRatio": 1,
-        "meanFrameInterval": 2389.6461538461535,
+        "meanFrameInterval": 2351.0991428571433,
         "contextLost": false
       },
       "joinError": 7.450580596923828e-09
@@ -3239,7 +3266,7 @@
       "progress": 0.7207637231503582,
       "view": "above",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -3353,6 +3380,14 @@
             0.928470414424248,
             -1.3026283442858217
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -3696,7 +3731,7 @@
         "drawCalls": 44,
         "triangles": 467240,
         "pixelRatio": 1,
-        "meanFrameInterval": 1583.2677419354836,
+        "meanFrameInterval": 1549.4183750000002,
         "contextLost": false
       },
       "joinError": 0
@@ -3706,7 +3741,7 @@
       "progress": 0.6563245823389021,
       "view": "above",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -3820,6 +3855,14 @@
             1.1698236395321333,
             -0.748220131712493
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -4172,7 +4215,7 @@
         "drawCalls": 48,
         "triangles": 484368,
         "pixelRatio": 1,
-        "meanFrameInterval": 1502.797142857143,
+        "meanFrameInterval": 1498.5524444444445,
         "contextLost": false
       },
       "joinError": 1.1920928955078125e-07
@@ -4182,7 +4225,7 @@
       "progress": 0.20525059665871123,
       "view": "rear",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -4296,6 +4339,14 @@
             -0.7758463638591534,
             -0.0295514202667917
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -4639,7 +4690,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1417.4641025641026,
+        "meanFrameInterval": 1363.8354285714286,
         "contextLost": false
       },
       "joinError": 7.450580596923828e-09
@@ -4649,7 +4700,7 @@
       "progress": 0.19451073985680192,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -4763,6 +4814,14 @@
             -0.7320759535992357,
             -0.017044767852728137
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -5106,7 +5165,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1378.1166666666668,
+        "meanFrameInterval": 1350.3175111111111,
         "contextLost": false
       },
       "joinError": 7.450580596923828e-09
@@ -5116,7 +5175,7 @@
       "progress": 0.3341288782816229,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -5230,6 +5289,14 @@
             0.8248532681916965,
             -1.1421412933889834
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -5573,7 +5640,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1416.6093023255814,
+        "meanFrameInterval": 1340.5705833333334,
         "contextLost": false
       },
       "joinError": 1.4901161193847656e-08
@@ -5583,7 +5650,7 @@
       "progress": 0.4737470167064439,
       "view": "side",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -5697,6 +5764,14 @@
             0.854983247455913,
             -0.03458704732710664
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -6040,7 +6115,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1404.3866666666668,
+        "meanFrameInterval": 1329.031137254902,
         "contextLost": false
       },
       "joinError": 0
@@ -6050,7 +6125,7 @@
       "progress": 0.7207637231503582,
       "view": "above",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -6164,6 +6239,14 @@
             0.928470414424248,
             -1.3026283442858217
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -6507,7 +6590,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1315.28,
+        "meanFrameInterval": 1297.5234181818182,
         "contextLost": false
       },
       "joinError": 0
@@ -6517,7 +6600,7 @@
       "progress": 0.7207637231503582,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -6631,6 +6714,14 @@
             0.928470414424248,
             -1.3026283442858217
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -6974,7 +7065,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1268.7363636363636,
+        "meanFrameInterval": 1244.9497999999999,
         "contextLost": false
       },
       "joinError": 0
@@ -6984,7 +7075,7 @@
       "progress": 0.9946300715990452,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -7098,6 +7189,14 @@
             2.6843683501217686,
             7.344043939099439
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -7441,7 +7540,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1291.6142857142859,
+        "meanFrameInterval": 1267.4358688524592,
         "contextLost": false
       },
       "joinError": 0
@@ -7451,7 +7550,7 @@
       "progress": 1,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -7565,6 +7664,14 @@
             2.6919617337859667,
             7.343330804934659
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -7908,7 +8015,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1247.1716666666666,
+        "meanFrameInterval": 1227.3859692307692,
         "contextLost": false
       },
       "joinError": 0
@@ -7918,7 +8025,7 @@
       "progress": 0.2756563245823389,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -8032,6 +8139,14 @@
             -0.49945458802305664,
             -0.6105884479276716
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -8375,7 +8490,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1243.336507936508,
+        "meanFrameInterval": 1221.4491014492753,
         "contextLost": false
       },
       "joinError": 7.450580596923828e-09
@@ -8385,7 +8500,7 @@
       "progress": 0.9140811455847255,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -8499,6 +8614,14 @@
             1.5137728492368923,
             -1.9500236332404783
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -8842,7 +8965,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1245.8476923076923,
+        "meanFrameInterval": 1225.4269714285715,
         "contextLost": false
       },
       "joinError": 1.1926748300777466e-07
@@ -8852,7 +8975,7 @@
       "progress": 0.9725536992840095,
       "view": "director",
       "state": {
-        "revision": "heel-uplift-hold-v9",
+        "revision": "heel-pattern-ribbon-v10",
         "duration": 25.14,
         "ready": true,
         "error": null,
@@ -8966,6 +9089,14 @@
             2.508612149589553,
             7.369583900654179
           ]
+        },
+        "artwork": {
+          "status": "ready",
+          "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+          "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+          "width": 573,
+          "height": 756,
+          "error": null
         },
         "path": {
           "sourceEdge": "lower",
@@ -9309,7 +9440,7 @@
         "drawCalls": 44,
         "triangles": 479160,
         "pixelRatio": 1,
-        "meanFrameInterval": 1209.1304347826087,
+        "meanFrameInterval": 1221.5477183098592,
         "contextLost": false
       },
       "joinError": 0
@@ -9320,7 +9451,7 @@
     "No physical iPad Safari or hardware-GPU performance certification.",
     "This is the V1 motion study, not final advertising quality."
   ],
-  "revision": "heel-uplift-hold-v9",
+  "revision": "heel-pattern-ribbon-v10",
   "pullDirectionProof": {
     "right": {
       "force": [
@@ -9985,7 +10116,7 @@
       "risk": {
         "bboxWarnings": 0,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 9.025099033791097
+        "minimumCameraDepth": 9.025096222416334
       }
     },
     {
@@ -9998,7 +10129,7 @@
       "risk": {
         "bboxWarnings": 0,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 9.014914463373122
+        "minimumCameraDepth": 9.014911534309334
       }
     },
     {
@@ -10011,7 +10142,7 @@
       "risk": {
         "bboxWarnings": 0,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 8.973823885120403
+        "minimumCameraDepth": 8.973820357280248
       }
     },
     {
@@ -10024,7 +10155,7 @@
       "risk": {
         "bboxWarnings": 0,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 8.929877869227287
+        "minimumCameraDepth": 8.92987343713932
       }
     },
     {
@@ -10037,7 +10168,7 @@
       "risk": {
         "bboxWarnings": 2,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 8.781582294310674
+        "minimumCameraDepth": 8.781567664559866
       }
     },
     {
@@ -10050,7 +10181,7 @@
       "risk": {
         "bboxWarnings": 1,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 9.180300749216414
+        "minimumCameraDepth": 9.180248692233793
       }
     },
     {
@@ -10063,7 +10194,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 9.993630601414862
+        "minimumCameraDepth": 9.993576896346125
       }
     },
     {
@@ -10076,7 +10207,7 @@
       "risk": {
         "bboxWarnings": 7,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 10.340103117781245
+        "minimumCameraDepth": 10.340071343056408
       }
     },
     {
@@ -10089,7 +10220,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 10.450567578519534
+        "minimumCameraDepth": 10.450534670785235
       }
     },
     {
@@ -10102,7 +10233,7 @@
       "risk": {
         "bboxWarnings": 10,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 10.454538944988537
+        "minimumCameraDepth": 10.454505004555546
       }
     },
     {
@@ -10115,7 +10246,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750587184678844
+        "minimumCameraDepth": 0.8749999999999989
       }
     },
     {
@@ -10128,7 +10259,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750587184678844
+        "minimumCameraDepth": 0.8749999999999989
       }
     },
     {
@@ -10141,7 +10272,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750587184678844
+        "minimumCameraDepth": 0.8749999999999989
       }
     },
     {
@@ -10154,7 +10285,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750587184678844
+        "minimumCameraDepth": 0.8749999999999989
       }
     },
     {
@@ -10167,7 +10298,7 @@
       "risk": {
         "bboxWarnings": 6,
         "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750587184678844
+        "minimumCameraDepth": 0.8749999999999989
       }
     }
   ],
@@ -10178,28 +10309,28 @@
     "controlPoints": 63
   },
   "performanceSample": {
-    "revision": "heel-uplift-hold-v9",
+    "revision": "heel-pattern-ribbon-v10",
     "duration": 25.14,
     "ready": true,
     "error": null,
-    "progress": 0.30435958631662713,
+    "progress": 0.24601829753381046,
     "playing": false,
     "speed": 1,
     "playbackDirection": 1,
     "phase": "第一圈",
-    "outbound": 0.21009936766034354,
-    "release": 1,
+    "outbound": 0.1438527551942184,
+    "release": 0.9414498280774826,
     "cameraOwner": "director",
     "view": "director",
     "camera": [
-      4.428152174634063,
-      1.47125493976099,
-      3.740718612341429
+      4.338662138059285,
+      0.6175526449018769,
+      2.074981227597568
     ],
     "target": [
-      0.8879372110599535,
-      0.2931948387753116,
-      -0.028937828535915838
+      1.3712612514902527,
+      -0.02536360258922679,
+      -0.0037465910239969278
     ],
     "directorMoving": false,
     "parameters": {
@@ -10217,15 +10348,15 @@
     "browserVerifiedSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
     "shoe": {
       "position": [
-        -0.006302708626588624,
-        -0.0014006019170196944,
-        -0.027311737381883926
+        -0.0002118339079220533,
+        -4.7074201760455006e-05,
+        -0.0009179469343288569
       ],
       "quaternion": [
         0,
         0,
-        0.2213796626733246,
-        0.975187697294549
+        0.08441896833673852,
+        0.9964303476836507
       ],
       "pivotLocal": [
         0,
@@ -10233,14 +10364,14 @@
         0
       ],
       "pivotWorld": [
-        -0.006302708626588599,
-        -0.0014006019170197444,
-        -0.027311737381883926
+        -0.00021183390792204395,
+        -4.7074201760509724e-05,
+        -0.0009179469343288569
       ],
       "motionTranslation": [
-        -0.006302708626588599,
-        -0.001400601917019689,
-        -0.027311737381883926
+        -0.00021183390792204395,
+        -4.707420176045421e-05,
+        -0.0009179469343288569
       ],
       "stagingOffset": [
         -0.0,
@@ -10255,21 +10386,21 @@
     },
     "reaction": {
       "force": [
-        0.12336429711187873,
+        0.051124116717118265,
         0,
         0
       ],
       "torque": [
         0,
         0,
-        0.06525473896820833
+        0.02704259635452125
       ],
       "angularVelocity": [
         0,
         0,
-        0.28397486441923475
+        0.10566384337792664
       ],
-      "signedAngle": 0.44645802026817977,
+      "signedAngle": 0.16903912154406345,
       "forceSpace": "initial shoe side frame; horizontal component only; not Newtons",
       "method": "single-axis response with direction from heel lever cross horizontal pull"
     },
@@ -10279,7 +10410,7 @@
       "originalSewingVisible": false,
       "derivedVisible": true,
       "exactRestSurfaceError": 1.2150347798144652e-07,
-      "maxRestError": 7.823225007151739e-08
+      "maxRestError": 6.553889188280939e-08
     },
     "ribbon": {
       "mode": "solid-ribbon",
@@ -10288,14 +10419,22 @@
       "solidTriangles": 15648,
       "outlineTriangles": 3728,
       "tip": [
-        1.0705834100975054,
-        0.09821693702794698,
-        -1.0120295143266465
+        1.6170512161219268,
+        -0.8059199358618122,
+        -0.22580446450467134
       ]
+    },
+    "artwork": {
+      "status": "ready",
+      "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
+      "sha256": "66c57b78861259860d27eabfbc15dbe2b15d9863ce8e82a83a0970840f5e9d22",
+      "width": 573,
+      "height": 756,
+      "error": null
     },
     "path": {
       "sourceEdge": "lower",
-      "presentationLength": 28.773412143528596,
+      "presentationLength": 28.547682865083708,
       "milestones": {
         "coilStart": 8,
         "coilHalf": 24,
@@ -10305,264 +10444,264 @@
       },
       "controlPoints": [
         [
-          1.0060803665082194,
-          1.244817001627362,
-          -0.027353806541742957
+          1.3147701052084715,
+          0.9212565163703165,
+          -0.0009600160941878885
         ],
         [
-          1.3495298669370397,
-          0.7352056342080119,
-          -0.027353776741735936
+          1.5055186190556429,
+          0.33706792557713655,
+          -0.0009599862941808653
         ],
         [
-          1.719470423764269,
-          0.23827526048513337,
-          -0.027353752901730297
+          1.7252183143767592,
+          -0.2421797380261004,
+          -0.0009599624541752269
         ],
         [
-          1.7629228543438349,
-          0.15542914544994163,
-          -0.028896257161306293
+          1.7443199553737068,
+          -0.3337587738963253,
+          -0.002502466713751225
         ],
         [
-          1.8009432458071457,
-          0.040837499824133025,
-          -0.03564659409685216
+          1.7495029681607837,
+          -0.4543818719858012,
+          -0.00925280364929709
         ],
         [
-          1.8292561661918287,
-          -0.08515462265296132,
-          -0.050788999943594704
+          1.7422273739023082,
+          -0.5833109304450119,
+          -0.02439520949603963
         ],
         [
-          1.8435861835355103,
-          -0.20220216824201115,
-          -0.07750771093676073
+          1.723953193762597,
+          -0.6998078474244421,
+          -0.05111392048920566
         ],
         [
-          1.8396578658758156,
-          -0.28996008320368544,
-          -0.11898696331157707
+          1.6961404489059666,
+          -0.7831345210745759,
+          -0.092593172864022
         ],
         [
-          1.8131957812503718,
-          -0.32808331379865324,
-          -0.17841099330327045
+          1.6602491604967344,
+          -0.8125528495458973,
+          -0.1520172028557154
         ],
         [
-          1.5719628649525097,
-          -0.28196462833828145,
-          -0.5458341068603847
+          1.4408703706903896,
+          -0.7021300274606617,
+          -0.5194403164128296
         ],
         [
-          1.2756534398219215,
-          -0.08668258226422255,
-          -0.8646974040527101
+          1.209372881230735,
+          -0.4331629935811033,
+          -0.838303613605155
         ],
         [
-          0.9312721253231099,
-          0.23705667970320593,
-          -1.0790137218463338
+          0.9668226159548181,
+          -0.02748458852393585,
+          -1.0526199313987787
         ],
         [
-          0.5606541773408067,
-          0.6385003916220415,
-          -1.1231673739342132
+          0.720320100889197,
+          0.4601128143322621,
+          -1.096773583486658
         ],
         [
-          0.20884368886140312,
-          1.019402977977519,
-          -0.9596393202204307
+          0.4862802689427553,
+          0.9228035935346253,
+          -0.9332455297728757
         ],
         [
-          -0.07333437996453447,
-          1.2704619571967988,
-          -0.6198546591159712
+          0.2836496911022574,
+          1.2415447463482965,
+          -0.5934608686684161
         ],
         [
-          -0.2605444447965481,
-          1.3366301719855092,
-          -0.1929764788259456
+          0.12171926589647343,
+          1.3564550523064902,
+          -0.16658268837839055
         ],
         [
-          -0.3545058147626881,
-          1.220326647367983,
-          0.23541792034088999
+          -0.0005020705225412415,
+          1.2703319206383756,
+          0.26181171078844506
         ],
         [
-          -0.36775177250729224,
-          0.9474003239065939,
-          0.602403090616948
+          -0.08798904087356503,
+          1.0114685136965644,
+          0.628796881064503
         ],
         [
-          -0.3207844260723088,
-          0.5610326715005873,
-          0.865353295047245
+          -0.14863357779391118,
+          0.6270102785154342,
+          0.8917470854948001
         ],
         [
-          -0.2367513273163981,
-          0.11042707070478489,
-          1.0013947798740588
+          -0.1912226649585936,
+          0.17061884694649496,
+          1.0277885703216139
         ],
         [
-          -0.1383119950665425,
-          -0.35595035684013937,
-          1.0028554418342055
+          -0.2242758288492553,
+          -0.30488687900644834,
+          1.0292492322817606
         ],
         [
-          -0.04695439842773982,
-          -0.7920197142800801,
-          0.8729512794522942
+          -0.2558393650823149,
+          -0.7493038432890521,
+          0.8993450698998493
         ],
         [
-          0.01649942969629529,
-          -1.1532433213749145,
-          0.6247262897037676
+          -0.29374146804847495,
+          -1.1140946233492677,
+          0.6511200801513227
         ],
         [
-          0.03204884264452738,
-          -1.3971375156147112,
-          0.28359550971125874
+          -0.3455828935153448,
+          -1.352922236561135,
+          0.3099893001588138
         ],
         [
-          -0.017187590761296577,
-          -1.4882202967591434,
-          -0.10905388229946633
+          -0.4178820175913331,
+          -1.4270379302661496,
+          -0.08266009185191125
         ],
         [
-          -0.1403671556788235,
-          -1.407727611795649,
-          -0.49563253757931963
+          -0.5143070125066691,
+          -1.315887141238446,
+          -0.46923874713176456
         ],
         [
-          -0.33368105473651705,
-          -1.1646022835192738,
-          -0.8094527888329894
+          -0.63364391619349,
+          -1.0291138993960007,
+          -0.7830589983854344
         ],
         [
-          -0.5775152404439818,
-          -0.8014031260251279,
-          -0.9896949650122705
+          -0.7686843727200369,
+          -0.6130215860505346,
+          -0.9633011745647154
         ],
         [
-          -0.8387887247120878,
-          -0.3893405732603922,
-          -0.9995969987486288
+          -0.9071149247972037,
+          -0.14515796999966285,
+          -0.9732032083010738
         ],
         [
-          -1.0789207296531451,
-          -0.011503494858663931,
-          -0.8395381496855111
+          -1.034585803309926,
+          0.2839986596163325,
+          -0.813144359237956
         ],
         [
-          -1.264605233028419,
-          0.25981695905210206,
-          -0.5477454093207434
+          -1.1388631011038037,
+          0.5957995073843803,
+          -0.5213516188731884
         ],
         [
-          -1.3765889059370673,
-          0.3816558387962864,
-          -0.1874870743767464
+          -1.213196618992102,
+          0.7436493762844875,
+          -0.16109328392919134
         ],
         [
-          -1.412614179307371,
-          0.3467200695512541,
-          0.17294329223277716
+          -1.2574124895048986,
+          0.7199157484761882,
+          0.1993370826803322
         ],
         [
-          -1.3840878113293982,
-          0.17661550970370726,
-          0.4776897477092648
+          -1.276564053484482,
+          0.5485024101734812,
+          0.5040835381568198
         ],
         [
-          -1.3094291116077306,
-          -0.09188973831943488,
-          0.6913371569948089
+          -1.2782965353691962,
+          0.26981622794225113,
+          0.717730947442364
         ],
         [
-          -1.2081286350189353,
-          -0.41915932893563185,
-          0.7971511047145753
+          -1.2704999087284854,
+          -0.07268396784197834,
+          0.8235448951621304
         ],
         [
-          -1.0979779800521594,
-          -0.7684100677777715,
-          0.7906125199878751
+          -1.26021155378969,
+          -0.4387487095531182,
+          0.8170063104354301
         ],
         [
-          -0.9953060241869837,
-          -1.105210581534216,
-          0.6742618301627114
+          -1.253706159112251,
+          -0.7907910314802926,
+          0.7006556206102664
         ],
         [
-          -0.9162788144450066,
-          -1.3948166530279373,
-          0.45699663911224003
+          -1.2570161286850534,
+          -1.090967680517249,
+          0.4833904295597951
         ],
         [
-          -0.877184470786042,
-          -1.6016813501453624,
-          0.15709840717928938
+          -1.276071429171679,
+          -1.3006299473727172,
+          0.18349219762684443
         ],
         [
-          -0.8926825597525855,
-          -1.6932629769754284,
-          -0.1941592487694102
+          -1.3160587971904962,
+          -1.3844654740507554,
+          -0.16776545832185516
         ],
         [
-          -0.9503864495101692,
-          -1.5408731634153794,
-          -0.504122265415849
+          -1.3298207792167545,
+          -1.2220985992864402,
+          -0.4777284749682939
         ],
         [
-          -1.0570216590255253,
-          -1.2862649888841453,
-          -0.7393494991029785
+          -1.3626482516620533,
+          -0.9480206040015863,
+          -0.7129557086554235
         ],
         [
-          -1.1933459802959223,
-          -0.9696357538682606,
-          -0.8662239172630521
+          -1.4070437234688586,
+          -0.6061618098780037,
+          -0.8398301268154971
         ],
         [
-          -1.3375595722811326,
-          -0.6365256978625008,
-          -0.8734834375471723
+          -1.4545131531409148,
+          -0.24629166278040568,
+          -0.8470896470996172
         ],
         [
-          -1.4679659975407824,
-          -0.3322590484791108,
-          -0.7668889452804653
+          -1.4966027891302454,
+          0.0820564637838875,
+          -0.7404951548329102
         ],
         [
-          -1.5659771756708136,
-          -0.09566662250188858,
-          -0.567517724499599
+          -1.5260700131995684,
+          0.3364456337064146,
+          -0.541123934052044
         ],
         [
-          -1.6185272702733684,
-          0.04595682513677972,
-          -0.3079968227631105
+          -1.5378238819634755,
+          0.4870462974927369,
+          -0.28160303231555545
         ],
         [
-          -1.6195828304419553,
-          0.08000731265764242,
-          -0.027311737381884475
+          -1.5295135350523525,
+          0.5200839735898042,
+          -0.0009179469343294065
         ],
         [
-          -1.2240355723922591,
-          0.9963044304780424,
-          0.6091597529227946
+          -1.1431485000373993,
+          1.367090198391774,
+          0.6314295136129192
         ],
         [
-          -0.1526225192029998,
-          1.7559675789933666,
-          2.005226700800176
+          -0.103240223179414,
+          1.9755357630169765,
+          2.0184235960239536
         ],
         [
-          1.019752453653492,
-          2.289600353790188,
-          3.5046976369051053
+          1.0354561491814118,
+          2.3581860271449115,
+          3.508821666662536
         ],
         [
           1.7181854707048863,
@@ -10622,955 +10761,21 @@
       ],
       "offsets": [],
       "frameError": 1.1102230246251565e-15,
-      "minimumFrameDot": 0.9328443222193415,
+      "minimumFrameDot": 0.9380414610898384,
       "reversals": 0,
-      "length": 29.10990435986737,
-      "tipLength": 3.112604991699047
+      "length": 28.884175081422484,
+      "tipLength": 1.961125723502604
     },
     "risk": {
-      "bboxWarnings": 4,
+      "bboxWarnings": 0,
       "nearPlaneWarnings": 0,
-      "minimumCameraDepth": 4.750148260513699
+      "minimumCameraDepth": 3.4291274208630838
     },
     "drawCalls": 44,
     "triangles": 479160,
     "pixelRatio": 1,
-    "meanFrameInterval": 1105.0352380952381,
+    "meanFrameInterval": 1097.3921923076923,
     "contextLost": false
   },
-  "recording": {
-    "passed": true,
-    "forwardHeld": true,
-    "reverseRecording": {
-      "file": "heel-motion-lab-v1-reverse.mp4",
-      "trigger": "independent reverse button at 3x; separate from forward film",
-      "restored": true,
-      "finalState": {
-        "revision": "heel-uplift-hold-v9",
-        "duration": 25.14,
-        "ready": true,
-        "error": null,
-        "progress": 0,
-        "playing": false,
-        "speed": 3,
-        "playbackDirection": -1,
-        "phase": "已复位",
-        "outbound": 0,
-        "release": 0,
-        "cameraOwner": "director",
-        "view": "director",
-        "camera": [
-          4.9,
-          2.65,
-          8
-        ],
-        "target": [
-          -0.12000000000000001,
-          0.15,
-          0
-        ],
-        "directorMoving": false,
-        "parameters": {
-          "radius": 1.15,
-          "turns": 2,
-          "pitch": 1,
-          "width": 0.18,
-          "thickness": 0.012,
-          "twist": 110,
-          "direction": 0
-        },
-        "mode": "solid-ribbon",
-        "guides": false,
-        "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "browserVerifiedSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "shoe": {
-          "position": [
-            0,
-            0,
-            0
-          ],
-          "quaternion": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "pivotLocal": [
-            0,
-            -5.551115123125783e-17,
-            0
-          ],
-          "pivotWorld": [
-            0,
-            -5.551115123125783e-17,
-            0
-          ],
-          "motionTranslation": [
-            0,
-            0,
-            0
-          ],
-          "stagingOffset": [
-            -0.0,
-            -0.0,
-            -0.0
-          ],
-          "rotationAxis": [
-            0,
-            0,
-            1
-          ]
-        },
-        "reaction": {
-          "force": [
-            0,
-            0,
-            0
-          ],
-          "torque": [
-            0,
-            0,
-            0
-          ],
-          "angularVelocity": [
-            0,
-            0,
-            0
-          ],
-          "signedAngle": 0,
-          "forceSpace": "initial shoe side frame; horizontal component only; not Newtons",
-          "method": "single-axis response with direction from heel lever cross horizontal pull"
-        },
-        "actor": {
-          "surfaceMode": "source-locked-flow",
-          "originalPanelVisible": true,
-          "originalSewingVisible": true,
-          "derivedVisible": false,
-          "exactRestSurfaceError": 1.2150347798144652e-07,
-          "maxRestError": 6.452302477554716e-08
-        },
-        "ribbon": {
-          "mode": "solid-ribbon",
-          "sharedVertexBuffers": true,
-          "vertices": 7826,
-          "solidTriangles": 15648,
-          "outlineTriangles": 3728,
-          "tip": null
-        },
-        "path": {
-          "sourceEdge": "lower",
-          "presentationLength": 28.410602729963326,
-          "milestones": {
-            "coilStart": 8,
-            "coilHalf": 24,
-            "coilEnd": 40,
-            "toeEnd": 48,
-            "presentationStart": 56
-          },
-          "controlPoints": [
-            [
-              1.4512350722191585,
-              0.6869458285515424,
-              -4.206915985903158e-05
-            ],
-            [
-              1.54098371368354,
-              0.0789931276749661,
-              -4.203935985200848e-05
-            ],
-            [
-              1.660102129921019,
-              -0.5289596787393763,
-              -4.2015519846370015e-05
-            ],
-            [
-              1.6635246914124413,
-              -0.6224469964489653,
-              -0.0015845197794223677
-            ],
-            [
-              1.6483407737412497,
-              -0.7422228039328174,
-              -0.008334856714968234
-            ],
-            [
-              1.6194784678319785,
-              -0.8680902091042604,
-              -0.023477262561710774
-            ],
-            [
-              1.5818658646091608,
-              -0.9798523198766226,
-              -0.0501959735548768
-            ],
-            [
-              1.5404310549973297,
-              -1.0573122441632319,
-              -0.09167522592969314
-            ],
-            [
-              1.500102129921019,
-              -1.080273089877416,
-              -0.15109925592138654
-            ],
-            [
-              1.3024271837133494,
-              -0.9345168937965668,
-              -0.5185223694785007
-            ],
-            [
-              1.1194789913332286,
-              -0.6304374439073367,
-              -0.8373856666708261
-            ],
-            [
-              0.9486352306055278,
-              -0.18973572058921667,
-              -1.05170198446445
-            ],
-            [
-              0.7876772145743369,
-              0.3323823065666067,
-              -1.0958556365523293
-            ],
-            [
-              0.6348140775829273,
-              0.8278520447399427,
-              -0.9323275828385468
-            ],
-            [
-              0.48869511417960904,
-              1.1761397449346265,
-              -0.5925429217340872
-            ],
-            [
-              0.3484046668275957,
-              1.316654624589785,
-              -0.16566474144406168
-            ],
-            [
-              0.2134364202593596,
-              1.2523209529809827,
-              0.2627296577227739
-            ],
-            [
-              0.08364646416831328,
-              1.0118655501874358,
-              0.6297148279988319
-            ],
-            [
-              -0.04081312360241206,
-              0.6430895945330392,
-              0.892665032429129
-            ],
-            [
-              -0.15957630703129458,
-              0.20036815229548013,
-              1.0287065172559426
-            ],
-            [
-              -0.2721551818656039,
-              -0.26279942428804914,
-              1.0301671792160894
-            ],
-            [
-              -0.3780354354872132,
-              -0.6955719590620625,
-              0.9002630168341782
-            ],
-            [
-              -0.47676798093476386,
-              -1.0487868612047173,
-              0.6520380270856516
-            ],
-            [
-              -0.5680497258825445,
-              -1.2754888798684307,
-              0.31090724709314266
-            ],
-            [
-              -0.6517872333572667,
-              -1.3363849325931478,
-              -0.0817421449175824
-            ],
-            [
-              -0.7281383907155119,
-              -1.210596307050295,
-              -0.4683208001974357
-            ],
-            [
-              -0.7975290043676561,
-              -0.9078338068040422,
-              -0.7821410514511055
-            ],
-            [
-              -0.8606433206262768,
-              -0.4749535448293402,
-              -0.9623832276303865
-            ],
-            [
-              -0.9183896552419789,
-              0.00953045058334425,
-              -0.9722852613667449
-            ],
-            [
-              -0.9718444051893846,
-              0.4540153516994858,
-              -0.8122264123036271
-            ],
-            [
-              -1.022179533997074,
-              0.7789151798188303,
-              -0.5204336719388595
-            ],
-            [
-              -1.0705800082444208,
-              0.9371632436555193,
-              -0.16017533699486247
-            ],
-            [
-              -1.118158497116966,
-              0.9212065619593658,
-              0.20025502961466107
-            ],
-            [
-              -1.1658748562563424,
-              0.7554583673344335,
-              0.5050014850911487
-            ],
-            [
-              -1.2144674827120447,
-              0.48103579844798827,
-              0.7186488943766929
-            ],
-            [
-              -1.2644025863488335,
-              0.142105633186775,
-              0.8244628420964593
-            ],
-            [
-              -1.3158458637334063,
-              -0.22047240611417884,
-              0.817924257369759
-            ],
-            [
-              -1.3686591171630074,
-              -0.5685914616827678,
-              0.7015735675445953
-            ],
-            [
-              -1.4224222011039762,
-              -0.8639328020514762,
-              0.48430837649412395
-            ],
-            [
-              -1.476478486631522,
-              -1.0674009534034106,
-              0.1844101445611733
-            ],
-            [
-              -1.53,
-              -1.1433142772748115,
-              -0.1668475113875263
-            ],
-            [
-              -1.51625,
-              -0.9809463873765255,
-              -0.47681052803396506
-            ],
-            [
-              -1.5025,
-              -0.7052521220271876,
-              -0.7120377617210946
-            ],
-            [
-              -1.48875,
-              -0.3607970008044383,
-              -0.8389121798811682
-            ],
-            [
-              -1.475,
-              0.0019299033885608191,
-              -0.8461717001652883
-            ],
-            [
-              -1.46125,
-              0.33267900342663415,
-              -0.7395772078985813
-            ],
-            [
-              -1.4475,
-              0.5883997584861796,
-              -0.5402059871177151
-            ],
-            [
-              -1.4337499999999999,
-              0.7388313072510583,
-              -0.2806850853812266
-            ],
-            [
-              -1.42,
-              0.77,
-              -5.496214834573321e-16
-            ],
-            [
-              -1.0512666092865244,
-              1.5769808171344726,
-              0.6342123079173255
-            ],
-            [
-              -0.05671316733366133,
-              2.0996261952968265,
-              2.0253090545425305
-            ],
-            [
-              1.0353658283062974,
-              2.396910063424537,
-              3.5198097893952838
-            ],
-            [
-              1.6966758800810608,
-              2.527806350455079,
-              4.464234061995254
-            ],
-            [
-              2.2317140181555564,
-              2.5201017818995552,
-              5.183643761901429
-            ],
-            [
-              3.0564872035316597,
-              2.4264277649458457,
-              6.17674913560457
-            ],
-            [
-              3.8099658349124996,
-              2.3430252510465968,
-              7.050542268022005
-            ],
-            [
-              4.131120311001206,
-              2.366135191654454,
-              7.41201524407106
-            ],
-            [
-              4.131087440896806,
-              2.4193556259881626,
-              7.395485463108584
-            ],
-            [
-              4.1292345583473775,
-              2.4729901292653786,
-              7.381252858791431
-            ],
-            [
-              4.12616837208226,
-              2.527053346584935,
-              7.369285873542937
-            ],
-            [
-              4.122495590830793,
-              2.5815599230456634,
-              7.3595529497864405
-            ],
-            [
-              4.118822923322314,
-              2.636524503746397,
-              7.352022529945282
-            ],
-            [
-              4.115757078286161,
-              2.6919617337859676,
-              7.346663056442797
-            ]
-          ],
-          "offsets": [],
-          "frameError": 1.1102230246251565e-15,
-          "minimumFrameDot": 0.9268098487332374,
-          "reversals": 0,
-          "length": 28.747131014479443,
-          "tipLength": 1.2317050704443169
-        },
-        "risk": {
-          "bboxWarnings": 0,
-          "nearPlaneWarnings": 0,
-          "minimumCameraDepth": 0
-        },
-        "drawCalls": 43,
-        "triangles": 463512,
-        "pixelRatio": 1,
-        "meanFrameInterval": 778.0985,
-        "contextLost": false
-      }
-    },
-    "file": "heel-motion-lab-v1.mp4",
-    "method": "Playwright actual viewport recording of button-triggered real-time WebGL playback; H.264 conversion, no synthetic/interpolated animation frames",
-    "environment": "Linux Chromium + SwiftShader, not hardware-GPU or iPad Safari",
-    "playbackWallSeconds": 25.215492068004096,
-    "finalState": {
-      "revision": "heel-uplift-hold-v9",
-      "duration": 25.14,
-      "ready": true,
-      "error": null,
-      "progress": 1,
-      "playing": false,
-      "speed": 1,
-      "playbackDirection": 1,
-      "phase": "终态定格",
-      "outbound": 1,
-      "release": 1,
-      "cameraOwner": "director",
-      "view": "director",
-      "camera": [
-        4.75,
-        2.7700000000000005,
-        8
-      ],
-      "target": [
-        -0.12,
-        0.1499999999999999,
-        -0.15000000000000036
-      ],
-      "directorMoving": false,
-      "parameters": {
-        "radius": 1.15,
-        "turns": 2,
-        "pitch": 1,
-        "width": 0.18,
-        "thickness": 0.012,
-        "twist": 110,
-        "direction": 0
-      },
-      "mode": "solid-ribbon",
-      "guides": false,
-      "sourceSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-      "browserVerifiedSHA": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-      "shoe": {
-        "position": [
-          -0.8071502049794461,
-          -1.0310541936422015,
-          -5.666931718030151
-        ],
-        "quaternion": [
-          0,
-          0,
-          0.49252862815136134,
-          -0.8702962429261303
-        ],
-        "pivotLocal": [
-          0,
-          -5.551115123125783e-17,
-          0
-        ],
-        "pivotWorld": [
-          -0.8071502049794461,
-          -1.0310541936422015,
-          -5.666931718030151
-        ],
-        "motionTranslation": [
-          -0.8071502049794461,
-          -1.0310541936422015,
-          -5.666931718030151
-        ],
-        "stagingOffset": [
-          -0.3571502176689083,
-          -0.931054196462082,
-          -3.7169317730178206
-        ],
-        "rotationAxis": [
-          0,
-          0,
-          1
-        ]
-      },
-      "reaction": {
-        "force": [
-          0.0023914331175403803,
-          0,
-          0
-        ],
-        "torque": [
-          0,
-          0,
-          0.0012649716935808643
-        ],
-        "angularVelocity": [
-          0,
-          0,
-          0
-        ],
-        "signedAngle": 5.253199603225055,
-        "forceSpace": "initial shoe side frame; horizontal component only; not Newtons",
-        "method": "single-axis response with direction from heel lever cross horizontal pull"
-      },
-      "actor": {
-        "surfaceMode": "source-locked-flow",
-        "originalPanelVisible": false,
-        "originalSewingVisible": false,
-        "derivedVisible": true,
-        "exactRestSurfaceError": 1.2150347798144652e-07,
-        "maxRestError": 2.629118046651253e-07
-      },
-      "ribbon": {
-        "mode": "solid-ribbon",
-        "sharedVertexBuffers": true,
-        "vertices": 7826,
-        "solidTriangles": 15648,
-        "outlineTriangles": 3728,
-        "tip": [
-          4.11575707828616,
-          2.6919617337859676,
-          7.346663056442796
-        ]
-      },
-      "path": {
-        "sourceEdge": "lower",
-        "presentationLength": 33.23190338219832,
-        "milestones": {
-          "coilStart": 8,
-          "coilHalf": 24,
-          "coilEnd": 40,
-          "toeEnd": 48,
-          "presentationStart": 56
-        },
-        "controlPoints": [
-          [
-            0.5289036534696232,
-            -1.9215247959231894,
-            -5.66697378719001
-          ],
-          [
-            0.05391628393158321,
-            -2.311458513274176,
-            -5.666973757390003
-          ],
-          [
-            -0.40595070260340294,
-            -2.7265707470245575,
-            -5.666973733549997
-          ],
-          [
-            -0.4843345564142183,
-            -2.777635059038536,
-            -5.668516237809573
-          ],
-          [
-            -0.5948345066047502,
-            -2.826282324348564,
-            -5.675266574745119
-          ],
-          [
-            -0.7175987921766595,
-            -2.8663393658645226,
-            -5.690408980591862
-          ],
-          [
-            -0.8327756521316078,
-            -2.8916330064962925,
-            -5.717127691585028
-          ],
-          [
-            -0.9205133254712564,
-            -2.8959900691537523,
-            -5.758606943959844
-          ],
-          [
-            -0.9609600511972665,
-            -2.873237376746783,
-            -5.8180309739515375
-          ],
-          [
-            -0.9377736945661013,
-            -2.628732477163285,
-            -6.185454087508652
-          ],
-          [
-            -0.7712763468472094,
-            -2.3153429653051742,
-            -6.504317384700977
-          ],
-          [
-            -0.48142212987829913,
-            -1.9419930859420163,
-            -6.718633702494601
-          ],
-          [
-            -0.11668090832134559,
-            -1.535202527419664,
-            -6.76278735458248
-          ],
-          [
-            0.22938245364541388,
-            -1.1490710088917506,
-            -6.599259300868698
-          ],
-          [
-            0.452739996793484,
-            -0.8444951045726135,
-            -6.259474639764238
-          ],
-          [
-            0.5009763414473785,
-            -0.6518838482110955,
-            -5.832596459474212
-          ],
-          [
-            0.3763377723320602,
-            -0.5692976751961203,
-            -5.404202060307377
-          ],
-          [
-            0.10337746233419076,
-            -0.581823752019675,
-            -5.037216890031319
-          ],
-          [
-            -0.2768467440985475,
-            -0.6649829204827311,
-            -4.774266685601022
-          ],
-          [
-            -0.7175311110796787,
-            -0.791095004969137,
-            -4.638225200774208
-          ],
-          [
-            -1.1725599034836025,
-            -0.9330351513007694,
-            -4.636764538814061
-          ],
-          [
-            -1.5980826224407478,
-            -1.0650696566886384,
-            -4.7666687011959725
-          ],
-          [
-            -1.9517213864337004,
-            -1.1622730888694752,
-            -5.014893690944499
-          ],
-          [
-            -2.193065810606835,
-            -1.2007312628699727,
-            -5.356024470937008
-          ],
-          [
-            -2.2883821600207814,
-            -1.1602949805244216,
-            -5.748673862947733
-          ],
-          [
-            -2.219852574688815,
-            -1.030079875870114,
-            -6.1352525182275865
-          ],
-          [
-            -1.996021263602595,
-            -0.8147203323253545,
-            -6.449072769481257
-          ],
-          [
-            -1.6574098514760722,
-            -0.5377527354809546,
-            -6.629314945660537
-          ],
-          [
-            -1.271795386737437,
-            -0.23881985746831047,
-            -6.639216979396895
-          ],
-          [
-            -0.9182623694565084,
-            0.03584110318028366,
-            -6.4791581303337775
-          ],
-          [
-            -0.6656425562505202,
-            0.2462615239569701,
-            -6.187365389969011
-          ],
-          [
-            -0.5548958852228594,
-            0.3692258703006155,
-            -5.827107055025014
-          ],
-          [
-            -0.5930703006767558,
-            0.40179951453795226,
-            -5.46667668841549
-          ],
-          [
-            -0.7597307061950538,
-            0.35737402429396226,
-            -5.161930232939002
-          ],
-          [
-            -1.0200078727464195,
-            0.2577508029442599,
-            -4.948282823653458
-          ],
-          [
-            -1.336278010696528,
-            0.12606795918612423,
-            -4.842468875933692
-          ],
-          [
-            -1.6735977278608536,
-            -0.01649660086850302,
-            -4.849007460660392
-          ],
-          [
-            -1.99922718557976,
-            -0.1504427574146181,
-            -4.965358150485556
-          ],
-          [
-            -2.280099752135901,
-            -0.25640302299467055,
-            -5.1826233415360266
-          ],
-          [
-            -2.48236115209314,
-            -0.3148127542639292,
-            -5.482521573468977
-          ],
-          [
-            -2.57499554884439,
-            -0.3080117489714461,
-            -5.833779229417678
-          ],
-          [
-            -2.4287199883418644,
-            -0.23620746936574355,
-            -6.143742246064116
-          ],
-          [
-            -2.185290674794473,
-            -0.10605924712526593,
-            -6.3789694797512455
-          ],
-          [
-            -1.882913255088295,
-            0.05948920224353027,
-            -6.505843897911319
-          ],
-          [
-            -1.5648715887906626,
-            0.23444453375435526,
-            -6.513103418195439
-          ],
-          [
-            -1.2742442263161204,
-            0.3929366971476491,
-            -6.4065089259287324
-          ],
-          [
-            -1.0479380359464547,
-            0.5128019350967421,
-            -6.207137705147866
-          ],
-          [
-            -0.9118954007812019,
-            0.5784610150559824,
-            -5.947616803411377
-          ],
-          [
-            -0.8780958137561621,
-            0.5827198675557408,
-            -5.666931718030152
-          ],
-          [
-            -0.5835645703769585,
-            1.4049102326062892,
-            -4.147261329170615
-          ],
-          [
-            0.223545931802771,
-            1.9934945977161727,
-            -0.8081568044725452
-          ],
-          [
-            1.1235284846623397,
-            2.3629632184706746,
-            2.6343517084530728
-          ],
-          [
-            1.6966758800810608,
-            2.527806350455079,
-            4.464234061995254
-          ],
-          [
-            2.2317140181555564,
-            2.5201017818995552,
-            5.183643761901429
-          ],
-          [
-            3.0564872035316597,
-            2.4264277649458457,
-            6.17674913560457
-          ],
-          [
-            3.8099658349124996,
-            2.3430252510465968,
-            7.050542268022005
-          ],
-          [
-            4.131120311001206,
-            2.366135191654454,
-            7.41201524407106
-          ],
-          [
-            4.131087440896806,
-            2.4193556259881626,
-            7.395485463108584
-          ],
-          [
-            4.1292345583473775,
-            2.4729901292653786,
-            7.381252858791431
-          ],
-          [
-            4.12616837208226,
-            2.527053346584935,
-            7.369285873542937
-          ],
-          [
-            4.122495590830793,
-            2.5815599230456634,
-            7.3595529497864405
-          ],
-          [
-            4.118822923322314,
-            2.636524503746397,
-            7.352022529945282
-          ],
-          [
-            4.115757078286161,
-            2.6919617337859676,
-            7.346663056442797
-          ]
-        ],
-        "offsets": [],
-        "frameError": 1.1102230246251565e-15,
-        "minimumFrameDot": 0.9053402476709711,
-        "reversals": 0,
-        "length": 33.56843166671444,
-        "tipLength": 33.56843166671444
-      },
-      "risk": {
-        "bboxWarnings": 6,
-        "nearPlaneWarnings": 0,
-        "minimumCameraDepth": 0.8750000000000012
-      },
-      "drawCalls": 44,
-      "triangles": 479160,
-      "pixelRatio": 1,
-      "meanFrameInterval": 844.9151515151516,
-      "contextLost": false
-    },
-    "errors": []
-  },
-  "passed": true,
-  "motionSourceCommit": "09890754a82d07c9539938c71ad0a8c5feb18ae1",
-  "authoringBase": "561acb07b6b2dc8c8947ed2d1aa103e4dfe4d986"
+  "passed": true
 }
