@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "baseCommit": "4c0bd8a36d8cf714821b9e2cb36c2eb5407e71f4",
+  "scope": "Only new tongue-motion-lab files; no original asset or existing page edits.",
+  "allBaselineFilesUnchanged": true,
+  "baselineFileCount": 585,
+  "protectedDirtyWorktreeChecks": {
+    "head": true,
+    "branch": true,
+    "status": true,
+    "diff": true,
+    "cached": true,
+    "file:public/pattern-reveal-fullshoe/review.html": true,
+    "file:research/pattern-reveal-fullshoe/README.zh-CN.md": true,
+    "file:scripts/check-pattern-reveal-fullshoe.mjs": true,
+    "file:src/pattern-reveal/CursorReveal.ts": true,
+    "file:src/pattern-reveal/RevealControl.ts": true,
+    "file:src/pattern-reveal/main.ts": true,
+    "file:src/pattern-reveal/style.css": true,
+    "file:scripts/check-touch-reveal.mjs": true,
+    "file:src/pattern-reveal/TouchRevealInput.ts": true
+  },
+  "protectedDirtyWorktreeUnchanged": true,
+  "heelWorktreeHEADUnchanged": true,
+  "previousAnimationHEADUnchanged": true,
+  "previousAnimationWorktreeClean": true,
+  "previousAnimationCacheSHA256": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db"
+}

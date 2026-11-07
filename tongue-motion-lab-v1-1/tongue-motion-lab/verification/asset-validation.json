@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "sourceShoeSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "sourcePartsSHA256": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+  "cacheSHA256": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
+  "finiteCache": true,
+  "sourceTopologyRetained": true,
+  "footConnectedTongueRootExactlyPinned": true,
+  "tongueTrimFollowers": [
+    {
+      "node": 13,
+      "primitive": 0,
+      "prefix": "follower-13-0",
+      "movingVertices": 1367,
+      "totalVertices": 5917
+    },
+    {
+      "node": 14,
+      "primitive": 0,
+      "prefix": "follower-14-0",
+      "movingVertices": 4144,
+      "totalVertices": 7020
+    }
+  ],
+  "nonRigidBestFitResidualMetres": 0.03787199672508947,
+  "handRoofChecks": 249,
+  "minimumClothHeightAboveHandMetres": 0.00037543279704523903,
+  "maximumClothHeightAboveHandMetres": 0.012995244528087826,
+  "intermediateSupportSamples": [
+    {
+      "pose": 6,
+      "sampledOverHand": 0,
+      "minimumClearanceMm": null
+    },
+    {
+      "pose": 12,
+      "sampledOverHand": 41,
+      "minimumClearanceMm": 23.324539292088406
+    },
+    {
+      "pose": 18,
+      "sampledOverHand": 29,
+      "minimumClearanceMm": 5.3464761619091385
+    }
+  ],
+  "crystalUniqueColors": 2068,
+  "sourceFreeArcMetres": 0.11416924411913706,
+  "fittedFreeArcMetres": 0.10844332703569085,
+  "pinchPoseErrorMetres": 4.0971218926828324e-05,
+  "snapPoseErrorMetres": 4.1811807416522595e-05,
+  "note": "Numerical checks at sampled ornament positions; not a complete cloth collision proof or factory dimensional certification."
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "file": "tongue-motion-v1-1-review.mp4",
+  "fps": 24,
+  "quality": {
+    "dpr": 0.8,
+    "width": 888,
+    "height": 736,
+    "shadowSize": 1024
+  },
+  "frames": 457,
+  "storyDuration": 19,
+  "captureWallSeconds": 777.178,
+  "method": "Fixed-timestep captures of the actual browser WebGL scene, encoded H.264. Not a real-time performance claim. No synthetic image interpolation or pre-rendered substitute in the live lab.",
+  "environment": "Linux Chromium / SwiftShader",
+  "terminalHeld": true,
+  "silverInstances": 785,
+  "errors": []
+}
