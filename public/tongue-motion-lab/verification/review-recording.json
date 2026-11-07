@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "file": "tongue-motion-v1-review.mp4",
+  "fps": 24,
+  "frames": 457,
+  "storyDuration": 19,
+  "captureWallSeconds": 788.986,
+  "method": "Fixed-timestep captures of the actual browser WebGL scene, encoded H.264. Not a real-time performance claim. No synthetic image interpolation or pre-rendered substitute in the live lab.",
+  "environment": "Linux Chromium / SwiftShader",
+  "terminalHeld": true,
+  "silverInstances": 785,
+  "errors": [],
+  "deliveryEncoding": "H.264 / limited-range yuv420p / BT.709 / faststart",
+  "colorPackagingNote": "Full-range JPEG capture converted to limited-range BT.709 for final packaging; no motion interpolation."
+}

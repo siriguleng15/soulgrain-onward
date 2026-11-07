@@ -1,0 +1,8 @@
+{
+  "source": "Original procedural microfacet textile, matched to user blue-crystal appearance reference; no source art edited",
+  "size": 1024,
+  "crystalCells": 5220,
+  "normalMap": "tangent-space RGB",
+  "colorSpace": "sRGB for color, linear for normal/roughness",
+  "seed": 4419
+}

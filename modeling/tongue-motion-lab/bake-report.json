@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "poses": 30,
+  "cacheBytes": 25865056,
+  "finalFlatMedallionMaxCenterErrorMetres": 2.7710431089400522e-05,
+  "flatBoundsMetres": [
+    [
+      -0.0515,
+      -0.019680499953653,
+      0.0
+    ],
+    [
+      0.0515,
+      0.0418488152235364,
+      0.158
+    ]
+  ],
+  "sourceTopologyUnchanged": true,
+  "sameExistingBindingIDs": 785,
+  "method": "Integrated rolling centerline + distributed twist + layered reference fit; row-wise support release; source-sampled installed surface"
+}
