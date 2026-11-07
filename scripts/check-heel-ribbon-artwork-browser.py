@@ -49,7 +49,7 @@ def main():
    after=[]
    for progress in [.14,.35,.65,1]:
     page.evaluate('(p)=>window.__heelLab.renderAt(p)',progress);after.append(page.evaluate(SNAPSHOT))
-   check(device+': artwork does not alter V1.7 position, UV, path or camera',before==after)
+   check(device+': artwork does not alter current position, UV, path or camera',before==after)
    check(device+': seeking never recompiles the artwork material',page.evaluate('window.mapVersion===window.__heelLab.lab.ribbon.material.version'))
    for suffix in ['missing','invalid']:
     outcome=page.evaluate('''async suffix=>{try{await window.__heelLab.loadRibbonArtwork(new URL('qa-ribbon-'+suffix+'.png',location.href).href);}catch{}const l=window.__heelLab.lab;return{error:l.ribbonArtwork.getState().error,same:l.ribbon.material.map===window.firstMap};}''',suffix)
@@ -64,11 +64,11 @@ def main():
    check(device+': clear restores original ribbon color and removes the owned map',page.evaluate('()=>{const l=window.__heelLab.lab;return l.ribbonArtwork.getState().status==="unassigned"&&l.ribbon.material.map===null&&l.ribbon.material.color.getHex()===0xb8192c&&window.originalMaps.every(([m,map])=>m.map===map);}'))
    check(device+': no JavaScript errors',not errors,errors);page.close()
   browser.close()
- root=Path(__file__).resolve().parents[1];baseline='f0a7756952910f0eeb3cbfc708cd4640c3d09cdb';unchanged=[]
- for name in ['motion','CameraFrame','DirectorShot','Trajectory','TerminalShot','Feed','Path','Reaction','HeelActor','Surface']:
+ root=Path(__file__).resolve().parents[1];baseline='a4ef4627128b54d476095a40c77267faa9d3b970';unchanged=[]
+ for name in ['motion','CameraFrame','DirectorShot','Trajectory','TerminalShot','Feed','Reaction','HeelActor','Surface','Ribbon','RibbonArtwork']:
   relative=f'src/heel-motion-lab/{name}.ts';prior=subprocess.check_output(['git','show',f'{baseline}:{relative}'],cwd=root)
-  check('approved V1.7 module byte identity: '+name,prior==(root/relative).read_bytes());unchanged.append(relative)
- report={'passed':True,'revision':'heel-pattern-ribbon-v10','baseline':baseline,'unchangedMotionModules':unchanged,'scope':'Actual default reconstructed meander and rasterized repeat tested; synthetic calibration chart used separately for generic texture lifecycle checks; no physical iPad Safari test','checks':checks}
+  check('approved V1.8 non-spacing module byte identity: '+name,prior==(root/relative).read_bytes());unchanged.append(relative)
+ report={'passed':True,'revision':'heel-coil-spacing-v11','baseline':baseline,'unchangedMotionModules':unchanged,'scope':'Actual default reconstructed meander and rasterized repeat tested; synthetic calibration chart used separately for generic texture lifecycle checks; no physical iPad Safari test','checks':checks}
  path=Path(args.out);path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print('Report:',path)
 

@@ -28,13 +28,19 @@ def main():
    page.screenshot(path=str(OUT/('23-face-'+name+'.png')))
    if name=='desktop':
     rise=page.evaluate('''()=>{const l=window.__heelLab.lab,rows=[];for(const p of[24.195/l.getState().duration,1]){l.renderAt(p);const v=l.ribbon.centers.at(-1).clone().project(l.camera);rows.push(v.toArray());}return{from:rows[0],to:rows[1],up:rows[1][1]-rows[0][1]};}''');check('leading edge rises from below into the held broad face',rise['up']>.8,rise)
-    baseline=json.loads((ROOT/'research/heel-motion-lab/v16-approved-early.json').read_text())['frames'];maximum=0
+    baseline=json.loads((ROOT/'research/heel-motion-lab/v16-approved-early.json').read_text())['frames'];maximum=0;axialTrim=0;minimumTrim=0
     for frame in baseline:
      actual=page.evaluate('''seconds=>{const l=window.__heelLab.lab;l.renderAt(seconds/l.getState().duration);const s=l.getState();return{shoe:s.shoe,camera:s.camera,target:s.target,localPoints:l.path.points.slice(0,49).map(v=>v.clone().applyMatrix4(l.pose.matrix.clone().invert()).toArray())};}''',frame['seconds'])
      for key in ['position','quaternion']:maximum=max(maximum,max(abs(a-b) for a,b in zip(actual['shoe'][key],frame['shoe'][key])))
      for key in ['camera','target']:maximum=max(maximum,max(abs(a-b) for a,b in zip(actual[key],frame[key])))
-     maximum=max(maximum,max(abs(a-b) for x,y in zip(actual['localPoints'],frame['localPoints']) for a,b in zip(x,y)))
-    check('approved early camera, shoe pose and local coil stay unchanged at real times',maximum<1e-10,{'maximumError':maximum,'frames':len(baseline)})
+     for index,(point,original) in enumerate(zip(actual['localPoints'],frame['localPoints'])):
+      if 8<index<40:
+       # This round explicitly authorizes a tiny heelward X trim of coils.
+       # Their angular/radial geometry and every other local point stay frozen.
+       axialTrim=max(axialTrim,point[0]-original[0]);minimumTrim=min(minimumTrim,point[0]-original[0])
+       maximum=max(maximum,abs(point[1]-original[1]),abs(point[2]-original[2]))
+      else:maximum=max(maximum,max(abs(a-b) for a,b in zip(point,original)))
+    check('camera, shoe, winding radii and all unedited route points preserve the approved timing',maximum<1e-10 and minimumTrim>-.000000001 and axialTrim<=.166,{'maximumUnchangedError':maximum,'minimumCoilXTrim':minimumTrim,'maximumCoilXTrim':axialTrim,'frames':len(baseline)})
    if name=='desktop':
     temporal=page.evaluate('''()=>{const l=window.__heelLab.lab;let last=null,minimum=1,spatial=1;for(let i=0;i<=120;i++){l.seek((.766+(.837-.766)*i/120)*30/l.getState().duration);const path=l.path,frame=path.at(path.tipLength).b;if(last)minimum=Math.min(minimum,last.dot(frame));last=frame;spatial=Math.min(spatial,path.minimumFrameDot);}return{samples:121,minimumTemporalWidthDot:minimum,minimumSpatialWidthDot:spatial};}''');check('no visible roll reversal during approach and surface reveal',temporal['minimumTemporalWidthDot']>.90 and temporal['minimumSpatialWidthDot']>0,temporal)
     page.evaluate('window.__heelLab.renderAt(.262*30/window.__heelLab.getState().duration)');feed=page.evaluate('''()=>{const l=window.__heelLab.lab,p=l.ribbon.centers.at(-1).clone().applyMatrix4(l.pose.matrix.clone().invert());return{rootX:l.actor.surface.lower.x,tipX:p.x,advancement:l.actor.surface.lower.x-p.x};}''');check('actual ribbon tip advances toward toe by the marked 26.2% stage',feed['advancement']>.5,feed);page.screenshot(path=str(OUT/'22-prompt-toe-feed.png'))

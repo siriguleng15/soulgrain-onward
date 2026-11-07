@@ -1,11 +1,16 @@
-# Heel Motion Lab V1.8 · 回纹飘带
+# Heel Motion Lab V1.8.1 · 圈位微调
 
-本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮纹样分支为 `feat/heel-ribbon-original-artwork`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
+本实验基于 `chore/onward-ad-skills-v1` 的 `eabb19a9d7b55c661e0c7e392e6ea415aab430d7`，使用独立 worktree `/workspace/heel-motion-lab-v1`、原开发分支 `feat/heel-motion-lab-v1`；本轮微调分支为 `polish/heel-coil-spacing-v1.8.1`。用户已批准仅将独立实验室构建发布至 `gh-pages/heel-motion-lab-v1/`，不推送源分支、不更改正式广告。已读取 AGENTS.md，并实际使用 onward-asset-contract、onward-ribbon-geometry 的流程、源契约与检查脚本。
 
 
 V1.8 根据用户授权，用聊天中的红白回纹图重建可编辑 SVG 和连续单元，已应用到独立表演飘带的整个表面。V1.7 已确认的动作、镜头、单轴翻转、上翘定格及独立倒放保持不变。描图与颜色假设见 [纹样来源与实现](artwork-integration-status.md)；不是恢复出原始图片文件，也不声称逐像素比对。
 
 本轮通过原有交互 72 项、镜头／构图 23 项、贴图专项 34 项检查。专项同时验证 SVG 首尾及完整描图的重复单元逐像素连续、默认真实贴图加载、PBR、加载失败回退、纹理释放，以及 10 个 V1.7 动作模块字节不变。使用 Linux Chromium／SwiftShader 与平板／手机视口模拟，未进行真实 iPad Safari 测试。
+
+本轮 V1.8.1 只在渲染用中心路径中加入局部 +X 微调：第一圈约 +0.10 u，上方圈位最大 +0.165 u，首尾使用零位移、零导数的连续权重。原 `Trajectory.ts`、`Reaction.ts`、导演镜头、`TerminalShot.ts`、统一时钟和纹样资源均未修改。1280宽同机位对比中，第一圈下移约8像素，原来挨近的上方间隙由16.6增至31.4像素。它是空间圈位微调，没有修改原鞋体。
+
+复验命令：`python3 -B scripts/check-heel-coil-spacing.py`。测试以独立 `spacingScale=0` 重现已确认的V1.8，检查20项屏幕投影与三维不变量；正常播放固定使用 `spacingScale=1`。基线原始数据见 `v18-spacing-baseline.json`，本次实际结果见 `verification/coil-spacing.json`。末段24fps审核片从18.93秒开始，用来集中看清本次调整；全程实际按钮录屏另附。
+
 ## 直接预览
 
 开发入口：`http://127.0.0.1:4536/heel-motion-lab.html`。

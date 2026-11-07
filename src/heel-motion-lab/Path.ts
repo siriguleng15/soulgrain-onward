@@ -5,14 +5,18 @@ import type {Parameters} from './motion.ts';
 import type {HeelSurface} from './Surface.ts';
 import {localTrajectory} from './Trajectory.ts';
 import {terminalFlightControls} from './TerminalShot.ts';
+import {refineCoilSpacing} from './CoilSpacing.ts';
 export class MotionPath {
  points:Vector3[]=[];curve=new CatmullRomCurve3();offsets=new Map<number,Vector3>();
  samples:Vector3[]=[];tangents:Vector3[]=[];widths:Vector3[]=[];normals:Vector3[]=[];
  length=1;tipLength=0;frameError=0;minimumFrameDot=1;restLength=1;reversals=0;presentationLength=0;
  routeIndices={coilStart:0,coilHalf:0,coilEnd:0,toeEnd:0,presentationStart:0};
  readonly count=600;
+ // Reproducible A/B verification of the tiny trim; normal playback uses 1.
+ spacingScale=1;
  update(surface:HeelSurface,params:Parameters,pose:Matrix4,u:number,aspect=1){
   const{points:local,coilStart,loops,coilEnd,toeEnd}=localTrajectory(surface,params,u,this.offsets);
+  refineCoilSpacing(local,coilStart,loops,this.spacingScale);
   this.points=local.map(p=>p.applyMatrix4(pose));
   const flight=terminalFlightControls(this.points,aspect),presentationStart=flight.presentationStart;
   this.routeIndices={coilStart,coilHalf:coilStart+loops/2,coilEnd,toeEnd,presentationStart};
