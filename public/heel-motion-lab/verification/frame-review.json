@@ -1,29 +1,26 @@
 {
-  "revision": "heel-pattern-ribbon-v10",
-  "motionSourceCommit": "a43b13e114cc34c3048fb26c950e3c41593e401c",
+  "revision": "heel-coil-spacing-v11",
+  "motionSourceCommit": "eae22c3e391054fe9a063222b3a88fd26e8685ea",
   "passed": true,
-  "file": "heel-motion-lab-v1-24fps.mp4",
-  "frames": 640,
+  "file": "heel-motion-lab-v1.8.1-tail-24fps.mp4",
+  "frames": 186,
   "fps": 24,
   "duration": 25.14,
-  "samplingWallSeconds": 580.6108270199984,
+  "samplingWallSeconds": 145.7157342999999,
   "maximumFrameError": 1.7763568394002505e-15,
-  "minimumFrameDot": 0.9050264268934367,
+  "minimumFrameDot": 0.9018990604758992,
   "phases": [
     "上翘展面",
-    "后跟特写推进",
-    "第一圈",
     "第二圈",
     "终态定格",
     "近镜冲刺",
-    "鞋头绕行",
-    "顺势出带"
+    "鞋头绕行"
   ],
   "finalHeld": true,
   "holdSeconds": 1.5,
   "automaticReverse": false,
   "method": "Every frame is a fresh screenshot of the actual WebGL lab at a deterministic 1/24-second animation time. No generated/interpolated image frames. This is a sampled motion review, NOT real-time device performance; see the separate real-time recording.",
-  "videoSHA256": "e2ce7fe47216acdbacd2cfeda7d42e3fecf7d87629aedb053a6de305bd0173fa",
+  "videoSHA256": "39b45e7f14f505660bf7dca8fcd2fb66894c530343be328d7a7a8b67258a10f0",
   "artwork": {
     "status": "ready",
     "source": "./heel-motion-lab/artwork/heel-meander-tile.svg",
@@ -31,5 +28,8 @@
     "width": 573,
     "height": 756,
     "error": null
-  }
+  },
+  "segmentStartSeconds": 18.93,
+  "segmentEndSeconds": 25.14,
+  "fullSequence": false
 }
