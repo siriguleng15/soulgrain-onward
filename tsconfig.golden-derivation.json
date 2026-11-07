@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["src/golden-derivation","vite.golden-derivation.config.ts"]}

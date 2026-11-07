@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "nativeVideoPlayed": true,
+  "nativeVideoSeeked": true,
+  "video": {
+    "width": 1280,
+    "height": 670,
+    "duration": 43.066667,
+    "time": 24.5
+  },
+  "errors": [],
+  "environment": "Linux Chromium native H.264 decoder; not physical iPad Safari."
+}

@@ -1,0 +1,15 @@
+{
+  "source": "Actual WebGL canvas, deterministic frame stepping and synchronous pixel readback",
+  "fpsSource": 20,
+  "fpsEncoded": 30,
+  "duration": 43,
+  "frames": 861,
+  "canvas": [
+    1280,
+    669
+  ],
+  "codec": "H.264/yuv420p",
+  "softwareRenderer": "Chromium / SwiftShader",
+  "runtimeVideoUsed": false,
+  "performanceEvidence": false
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "sourceBytes": 33432084,
+  "sourceVertices": 696427,
+  "sourceTriangles": 1393074,
+  "surfaceAnchors": 241,
+  "surfaceReconstructionMaxError": 5.551115123125783e-17,
+  "rectangleAspect": 1.6180339887498947,
+  "phi": 1.618033988749895,
+  "frameOrthogonalityError": 0,
+  "arcEndpointContinuityError": 0,
+  "arcTangentContinuityError": 0,
+  "tangencyFit": {
+    "planeTangencyCrossError": 1.4871437414853972e-13,
+    "sourcePositionFinite": true,
+    "seamSurfaceAnchors": 241,
+    "maximumAnchorReconstructionError": 0,
+    "toeLineOffsetFromSeamStart": 0
+  },
+  "notes": [
+    "Source GLB is loaded unchanged; separate runtime material and 3D construction geometry only.",
+    "Seam control locations are manually interpreted from the supplied mesh and storyboard; not factory coordinates.",
+    "Seam follows source triangle/barycentric surface anchors. Euclidean guides and golden rectangles use the recorded XY construction plane in front of the shoe.",
+    "Tangency and golden ratio apply in that side construction plane, not to geodesic distances on the curved shoe.",
+    "Division lines extrapolate the observed cuff directions; source stitches are not modified."
+  ]
+}

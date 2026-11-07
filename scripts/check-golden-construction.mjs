@@ -1,0 +1,33 @@
+import{readFile,writeFile,mkdir}from'node:fs/promises';
+import{createHash}from'node:crypto';
+import ts from'typescript';
+import{pathToFileURL}from'node:url';
+import path from'node:path';
+import assert from'node:assert/strict';
+const input=await readFile('src/golden-derivation/construction.ts','utf8');
+const compiled=ts.transpileModule(input,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ESNext}}).outputText.replace(/from 'three'/g,`from '${pathToFileURL(path.resolve('node_modules/three/build/three.module.js')).href}'`);
+await writeFile('/tmp/golden-construction-test.mjs',compiled);
+const{Construction,goldenArcs,PHI,SOURCE_SHA,spiralProgress,pathSample}=await import('file:///tmp/golden-construction-test.mjs?'+Date.now());
+const data=JSON.parse(await readFile('public/golden-derivation/construction.json','utf8')),raw=await readFile('public/golden-derivation/xiezitu.glb');
+assert.equal(createHash('sha256').update(raw).digest('hex'),SOURCE_SHA);assert.equal(data.sourceSha256,SOURCE_SHA);assert.equal(raw.length,33432084);
+const jsonSize=raw.readUInt32LE(12),doc=JSON.parse(raw.subarray(20,20+jsonSize)),bin=raw.subarray(28+jsonSize);
+const primitive=doc.meshes[0].primitives[0],pa=doc.accessors[primitive.attributes.POSITION],pv=doc.bufferViews[pa.bufferView];
+const positions=new Float32Array(bin.buffer,bin.byteOffset+(pv.byteOffset??0)+(pa.byteOffset??0),pa.count*3);
+let error=0;
+for(const a of data.seam.anchors){
+ assert.ok(a.barycentric.every(v=>v>=-1e-7&&v<=1+1e-7));assert.ok(Math.abs(a.barycentric.reduce((a,b)=>a+b,0)-1)<1e-8);
+ for(let k=0;k<3;k++){const p=a.ids.reduce((s,id,i)=>s+positions[id*3+k]*a.barycentric[i],0);error=Math.max(error,Math.abs(p-a.point[k]));}
+}assert.ok(error<1e-10);
+const c=new Construction(data),r=c.rectangle();
+const width=r.points[0].distanceTo(r.points[1]),height=r.points[1].distanceTo(r.points[2]);
+assert.ok(Math.abs(width/height-PHI)<1e-12);assert.ok(Math.abs(c.e.dot(c.v))<1e-12);
+assert.ok(c.golden[0].points[0].distanceTo(c.p)<1e-10);assert.ok(c.golden[1].points[0].distanceTo(c.local(PHI,1))<1e-10);
+let seamJoin=0,tangentJoin=0;
+const arcs=goldenArcs();for(let i=1;i<arcs.length;i++){
+ const a=arcs[i-1],b=arcs[i];
+ const end=[a.center.x+Math.cos(a.b)*a.radius,a.center.y+Math.sin(a.b)*a.radius],start=[b.center.x+Math.cos(b.a)*b.radius,b.center.y+Math.sin(b.a)*b.radius];
+ seamJoin=Math.max(seamJoin,Math.hypot(end[0]-start[0],end[1]-start[1]));tangentJoin=Math.max(tangentJoin,Math.abs(Math.cos(a.b)-Math.cos(b.a)),Math.abs(Math.sin(a.b)-Math.sin(b.a)));
+}assert.ok(seamJoin<1e-10);assert.ok(tangentJoin<1e-10);
+let last=-1;for(let i=0;i<=1000;i++){const t=spiralProgress(i/1000);assert.ok(t>=last);last=t;for(const p of c.golden){const s=pathSample(p,t);assert.ok([...s.point.toArray(),...s.tangent.toArray()].every(Number.isFinite));}}
+const report={passed:true,sourceSha256:SOURCE_SHA,sourceBytes:raw.length,sourceVertices:pa.count,sourceTriangles:doc.accessors[primitive.indices].count/3,surfaceAnchors:data.seam.anchors.length,surfaceReconstructionMaxError:error,rectangleAspect:width/height,phi:PHI,frameOrthogonalityError:Math.abs(c.e.dot(c.v)),arcEndpointContinuityError:seamJoin,arcTangentContinuityError:tangentJoin,tangencyFit:data.validation,notes:data.notes};
+await mkdir('public/golden-derivation/verification',{recursive:true});await writeFile('public/golden-derivation/verification/geometry-check.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
