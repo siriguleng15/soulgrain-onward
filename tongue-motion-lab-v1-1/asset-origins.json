@@ -1,0 +1,26 @@
+{
+  "archiveCommit": "a6e060a30075d511d574015984d728a6a2087995",
+  "reason": "Reuse byte-identical immutable binary assets; keep the existing Pages site below the hosting size limit.",
+  "assets": {
+    "assets/onward-ad-v1/onward-ad-v1.glb": {
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/a6e060a30075d511d574015984d728a6a2087995/tongue-motion-lab-v1-1/assets/onward-ad-v1/onward-ad-v1.glb?preview=1.1",
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "bytes": 23873476
+    },
+    "tongue-sleeve-lab/assets/user-hand-parts.glb": {
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/a6e060a30075d511d574015984d728a6a2087995/tongue-motion-lab-v1-1/tongue-sleeve-lab/assets/user-hand-parts.glb?preview=1.1",
+      "sha256": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+      "bytes": 6193560
+    },
+    "tongue-sleeve-lab/assets/user-hand-rig.glb": {
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/a6e060a30075d511d574015984d728a6a2087995/tongue-motion-lab-v1-1/tongue-sleeve-lab/assets/user-hand-rig.glb?preview=1.1",
+      "sha256": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116",
+      "bytes": 2868808
+    },
+    "tongue-motion-lab/assets/tongue-cuff-morphs.f16": {
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/a6e060a30075d511d574015984d728a6a2087995/tongue-motion-lab-v1-1/tongue-motion-lab/assets/tongue-cuff-morphs.f16?preview=1.1",
+      "sha256": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
+      "bytes": 32856568
+    }
+  }
+}
