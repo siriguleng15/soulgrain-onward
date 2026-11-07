@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "phase": "Asset preparation and binding validation, not completed story animation",
+  "environment": "Linux Chromium / SwiftShader; iPad viewport and touch emulation, not physical iPad Safari",
+  "sourceFingerprintsPreserved": true,
+  "wardrobe": {
+    "hand": true,
+    "robe": true,
+    "under": true,
+    "cuff": false,
+    "silver": false
+  },
+  "bindingCheck": {
+    "error": 6.179691897363162e-8,
+    "radiusError": 3.888042849915091e-11,
+    "maxBendCpuMs": 26.799999997019768,
+    "resetExact": true,
+    "identityStable": true
+  },
+  "poseCheck": {
+    "identity": "3f3d7165-8dae-420a-8f6f-fb04284ee5b1",
+    "allCurlsZero": true,
+    "boneCount": 22
+  },
+  "contextLossAndRecovery": true,
+  "actualTouchDragRotates": true,
+  "mobileNoHorizontalOverflow": true,
+  "loadFailureShowsError": true,
+  "singleCanvas": true,
+  "errors": []
+}

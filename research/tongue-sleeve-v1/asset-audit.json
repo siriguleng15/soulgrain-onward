@@ -1,0 +1,3455 @@
+{
+  "baseline": "0bbbc8245ef574b73be3e7a7f842190e5af9277a",
+  "phase": "01-asset-preparation",
+  "finalReferencesReceived": true,
+  "assets": {
+    "shoe": {
+      "path": "public/assets/onward-ad-v1/onward-ad-v1.glb",
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "bytes": 23873476,
+      "nodeCount": 29,
+      "meshCount": 29,
+      "renderVertexCount": 292682,
+      "triangles": 463512,
+      "skins": [],
+      "animations": [],
+      "meshes": [
+        {
+          "node": 0,
+          "name": "AD_Cuff_Shell",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Collar_Outer_Canvas",
+              "vertices": 27111,
+              "triangles": 52528,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 27111,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "0c1abcc14de7c0d66c2bf3ced0601adbc0d91522f6306f43a0c02cafc51e8481"
+                },
+                "_SG_FLAT": {
+                  "count": 27111,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e93fe39a87b20dfc9a69176c26783ec5409bb6f41d765034deb179381882f12c"
+                },
+                "_SG_NORMAL": {
+                  "count": 27111,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "a0edd775731fd3768e659ff9b1bf3f6d451057dbbcb0e805badba14666fe45cb"
+                },
+                "POSITION": {
+                  "count": 27111,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.025620706379413605,
+                    0.013324106112122536,
+                    -0.05620412528514862
+                  ],
+                  "maximum": [
+                    0.13408739864826202,
+                    0.10995589941740036,
+                    0.042056307196617126
+                  ],
+                  "sha256": "1170df7fc6baf9513bd04aa6f6ca7781f0f2589841e7e4b712f6368b81b7a335"
+                },
+                "NORMAL": {
+                  "count": 27111,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "45b5c4d5076d3bfbcd2f72dd13215e9d05580baa83bcc1c2431e4f7ec582164f"
+                },
+                "TEXCOORD_0": {
+                  "count": 27111,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "3199916d4cf2fd3649435388aeceb9ad60a1b020678a7de834c5a6884c41935f"
+                }
+              },
+              "index": {
+                "count": 157584,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "54ce449836cf57a481e5694c48671dc03596314cf74ccb82fb91a05978ffe384"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Collar_Canvas",
+              "vertices": 27780,
+              "triangles": 53864,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 27780,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "d3593f2209e082fbd344c1eaa3c8a2fed46babc8acfdfa6a70b23aaea6f53ee8"
+                },
+                "_SG_FLAT": {
+                  "count": 27780,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "830e9cc4678865aaa3e5a55a2e5f0060429e40d4bf66a402e7d4060f7e6fea70"
+                },
+                "_SG_NORMAL": {
+                  "count": 27780,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "12ea7f83f849aa896c30fe1eb2deb8108cba7a291e98ed431e40cc14082ab7de"
+                },
+                "POSITION": {
+                  "count": 27780,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.025189517065882683,
+                    0.013308246619999409,
+                    -0.057951297610998154
+                  ],
+                  "maximum": [
+                    0.1358017772436142,
+                    0.11131768673658371,
+                    0.043805669993162155
+                  ],
+                  "sha256": "3585ca0e2b5bb97f67e6816992b73e6d00c9d09c79c88a0410eaaee1c0892f5b"
+                },
+                "NORMAL": {
+                  "count": 27780,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "cb3a198235538156219c4814c51632a5fd61361b1a3569e007f3413b367bdf8a"
+                },
+                "TEXCOORD_0": {
+                  "count": 27780,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "213b8de8c29d29ed4cb3c89794ab6f287d297e503c46764235eda2708b70c39f"
+                }
+              },
+              "index": {
+                "count": 161592,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "70d841bb3e18aba7fa97e532a234e521d40a0c1a5b2d20e3e4f3d0eda5785d95"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 1,
+          "name": "AD_Garment_Binding",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Canvas_Trim",
+              "vertices": 3383,
+              "triangles": 5976,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 3383,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "d0eeafc0b24732b801b4017d4845c7d51e6b09ea4745baf3816e3777d8b1fc42"
+                },
+                "_SG_FLAT": {
+                  "count": 3383,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "edd7d8a093543fe6902442102921222cdd672e64569d1166b358e9091935c7f9"
+                },
+                "_SG_NORMAL": {
+                  "count": 3383,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "0b60a5439cb74d94c9ca9d51503722f0005d7a0112736ecef17ffb496ec26803"
+                },
+                "POSITION": {
+                  "count": 3383,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.02472178265452385,
+                    0.012182524427771568,
+                    -0.05739428475499153
+                  ],
+                  "maximum": [
+                    0.13531193137168884,
+                    0.09756127744913101,
+                    0.043106988072395325
+                  ],
+                  "sha256": "a064fc0152784c1ab7954f4faddb7eefee47f5d2916a17b66e45f7de0e75085f"
+                },
+                "NORMAL": {
+                  "count": 3383,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "79eaee1317987b215d3f0aa68da486559c94b724292ca0ac2dc24e9ccdd10334"
+                },
+                "TEXCOORD_0": {
+                  "count": 3383,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "5cdb037acb87db417eeefccb3722f12040d430a6cbb62c7d49cf0a5cb03dea84"
+                }
+              },
+              "index": {
+                "count": 17928,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "5548fddb3a27d2a691774d0744c11c3bf805f490c79577fea5e4b51b3f15e8e5"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 2,
+          "name": "AD_Garment_Stitching",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Stitching",
+              "vertices": 4420,
+              "triangles": 4760,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 4420,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "8608a4b6f8d6201910c7386a5d394dd5b9b040951c4b3c29d89f7cbf9b1a3cde"
+                },
+                "_SG_FLAT": {
+                  "count": 4420,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "39976449178993a3e9786c236015398e1c153609d4d078d85828754a64dd9cd7"
+                },
+                "_SG_NORMAL": {
+                  "count": 4420,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "136d28b815b82f3b9c1205af5e3e449779d9b21988a92124ff6c744ec57dd576"
+                },
+                "POSITION": {
+                  "count": 4420,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.029873941093683243,
+                    0.02170047163963318,
+                    -0.05788688361644745
+                  ],
+                  "maximum": [
+                    0.13576912879943848,
+                    0.1002260372042656,
+                    0.043667279183864594
+                  ],
+                  "sha256": "95f9da181354fa91999f1547ea9915b180d8c3eb3f1811c24cb43005389d9d35"
+                },
+                "NORMAL": {
+                  "count": 4420,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1b063729dd3b41d45d1150fa98b755b480a6a82e1304a9e99ea616d20878f136"
+                },
+                "TEXCOORD_0": {
+                  "count": 4420,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "38c1869e1b31eed3d2768eb774a0918b147df6ff88fd5b71e7797043323db120"
+                }
+              },
+              "index": {
+                "count": 14280,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "2e226ce039a5427dbe9077719fd45823671ae8004b4519fd4b7fb1e24dc49dfc"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 3,
+          "name": "Convertible_Shaft_Fixed",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Body_Canvas",
+              "vertices": 8411,
+              "triangles": 16408,
+              "attributes": {
+                "POSITION": {
+                  "count": 8411,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.03307091072201729,
+                    0.04500000551342964,
+                    -0.00737373810261488
+                  ],
+                  "maximum": [
+                    0.12569712102413177,
+                    0.10546490550041199,
+                    0.02904847078025341
+                  ],
+                  "sha256": "33da58d1710ec2a4bebb7ccaf169a193e668de0c11be0adb0f8d8027a97820b8"
+                },
+                "NORMAL": {
+                  "count": 8411,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "5b9499d9ad25af9a347d283172856360957b80311a0912f1afc68e64faad8576"
+                },
+                "TEXCOORD_0": {
+                  "count": 8411,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "11751f99a22d3622473ce850e34e0dc879ab9c3eab6b77117253d40710e06604"
+                }
+              },
+              "index": {
+                "count": 49224,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "a25580ae400c842677bb1d224fdd53ee0dd9f5a096e7549d1b670e31ab03b0c3"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Inner_Lining",
+              "vertices": 8764,
+              "triangles": 16876,
+              "attributes": {
+                "POSITION": {
+                  "count": 8764,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.03307091072201729,
+                    0.044295765459537506,
+                    -0.00737373810261488
+                  ],
+                  "maximum": [
+                    0.12569712102413177,
+                    0.10558821260929108,
+                    0.028041237965226173
+                  ],
+                  "sha256": "768e53ee06b79dc840d21edde766438b89e0236d02e7ce9942b88e06aa946b0e"
+                },
+                "NORMAL": {
+                  "count": 8764,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "20f28decef013205296cf383a4fa672668bdf5a783b3444fe6d9b038c5933198"
+                },
+                "TEXCOORD_0": {
+                  "count": 8764,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "ea04a3b6236f01729d7faeb629c8368f2adb8ec30520fa417e9beb04f231a13d"
+                }
+              },
+              "index": {
+                "count": 50628,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "61a3d674f1d5127d3ec0e9e3be6428fa2b272cca553495d4ea68ebd2521471e7"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 2,
+              "material": "Body_Inner_Canvas",
+              "vertices": 8415,
+              "triangles": 16416,
+              "attributes": {
+                "POSITION": {
+                  "count": 8415,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.034381747245788574,
+                    0.04500000551342964,
+                    -0.04184689000248909
+                  ],
+                  "maximum": [
+                    0.1256895512342453,
+                    0.10546490550041199,
+                    -0.00645632715895772
+                  ],
+                  "sha256": "46039be2b83eb515af11de345bf24e3ee9ea64257840f5e42627c4e1d93d7b5e"
+                },
+                "NORMAL": {
+                  "count": 8415,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "bbfad7ff905007bbb014b621a67b9f80936760ac345eec2685b8303baef5067d"
+                },
+                "TEXCOORD_0": {
+                  "count": 8415,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "b700351277b78dc3f900c411fa16ecd5f45ea7198e0628c0d4b784c18f3461c2"
+                }
+              },
+              "index": {
+                "count": 49248,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "f43c05b5c68345247bf2c2872e38deee9112c2f8d5cb392e9a95c4b9903bec9b"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 3,
+              "material": "Inner_Lining",
+              "vertices": 8757,
+              "triangles": 16884,
+              "attributes": {
+                "POSITION": {
+                  "count": 8757,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.034381747245788574,
+                    0.04431699588894844,
+                    -0.041041452437639236
+                  ],
+                  "maximum": [
+                    0.1256895512342453,
+                    0.10558821260929108,
+                    -0.006470231339335442
+                  ],
+                  "sha256": "c7fbf35e9e472875514b7bcccd73a1a17b4197f578c7066740afcf87b644a291"
+                },
+                "NORMAL": {
+                  "count": 8757,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "2de7ddebc70b703b496d7339e824829e602759f8ff7b8c9032ec551bac81ea4e"
+                },
+                "TEXCOORD_0": {
+                  "count": 8757,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1d2722be25af82f7ab8ea8f4024af755c5107deb8aad9783700c08774afa3510"
+                }
+              },
+              "index": {
+                "count": 50652,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "47fde6225f7921388a5a4ddb666488c48a1a24bf5dd0b1b5bc1dca082344f55e"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 4,
+          "name": "Convertible_Tongue",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Convertible_Tongue",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Tongue_Reverse_Canvas",
+              "vertices": 19956,
+              "triangles": 38528,
+              "attributes": {
+                "POSITION": {
+                  "count": 19956,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04841524735093117,
+                    0.046644143760204315,
+                    -0.0408780463039875
+                  ],
+                  "maximum": [
+                    0.021748356521129608,
+                    0.11721765249967575,
+                    0.027847731485962868
+                  ],
+                  "sha256": "d774ca107f82abd97c3e4e4489b5b32b162213ac8acdfa6d8134ec3f3cd14b3a"
+                },
+                "NORMAL": {
+                  "count": 19956,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "4f4e54488c2727e831793fe5dca7533852f41ad16a0c5cda1f34e2a62ae81b77"
+                },
+                "TEXCOORD_0": {
+                  "count": 19956,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "b06b8b43651afc2a6963c56d6c4efaffa56fe0ebf90559d7e23c41296320f8c4"
+                }
+              },
+              "index": {
+                "count": 115584,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "00d280a6d64b7ea79bc0d774132a448cde31019d604279cd34f90aa96864ef35"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Tongue_Canvas",
+              "vertices": 20352,
+              "triangles": 39460,
+              "attributes": {
+                "POSITION": {
+                  "count": 20352,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04841524735093117,
+                    0.04619072377681732,
+                    -0.0408780463039875
+                  ],
+                  "maximum": [
+                    0.021748356521129608,
+                    0.115287646651268,
+                    0.027847731485962868
+                  ],
+                  "sha256": "f1fb334fdefecd7912f4541f238b9f8f5937f2e0bda99a8d2a8ee08f48e6ef9a"
+                },
+                "NORMAL": {
+                  "count": 20352,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "11bb0e383ad80746e2a25b20c0886e3d4e4ffbaecfedf4a6beed4faeb29654fe"
+                },
+                "TEXCOORD_0": {
+                  "count": 20352,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "8650ba3f5342ecdc672bdc27debe35edef47ee50ff11ec4fd43d9dcf913b5194"
+                }
+              },
+              "index": {
+                "count": 118380,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "63a88888ac89a5b2236e10203bb30f02e7641b553e72d03da327d20891ef1d48"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 2,
+              "material": "Body_Canvas",
+              "vertices": 33676,
+              "triangles": 66652,
+              "attributes": {
+                "POSITION": {
+                  "count": 33676,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.03997741639614105,
+                    0.04398438334465027,
+                    -0.038988690823316574
+                  ],
+                  "maximum": [
+                    0.03707997128367424,
+                    0.10178631544113159,
+                    0.025988677516579628
+                  ],
+                  "sha256": "ce05cf1d2717d4e5a2fd1d68ec6421bf66be794251f928c40ef6d1ae1ee12381"
+                },
+                "NORMAL": {
+                  "count": 33676,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "3478956d1b7be7e2c147ff137d7a0e6ad6f97eaeeb664c87b62b0586e4eb6f92"
+                },
+                "TEXCOORD_0": {
+                  "count": 33676,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "754d97d44b9039d6db0c57d8ea0afa8f96f730d8f8cfa7cc74866f27e6b5f001"
+                }
+              },
+              "index": {
+                "count": 199956,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "c539faacd3a3bbf14a9bb0a301117764f0c99ed376bd9f1046c057afadd4a986"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 5,
+          "name": "Convertible_Tongue_Eyelets",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "part": "Convertible_Tongue_Eyelets",
+            "independent_color_and_print": true,
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Eyelets",
+              "vertices": 640,
+              "triangles": 1280,
+              "attributes": {
+                "POSITION": {
+                  "count": 640,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04697384312748909,
+                    0.046737439930438995,
+                    -0.03149545565247536
+                  ],
+                  "maximum": [
+                    -0.041100822389125824,
+                    0.053608041256666183,
+                    0.018496381118893623
+                  ],
+                  "sha256": "6a0f337c4a085fb44b84f060fe6cf8199442242932ace1dbe0b133053958373b"
+                },
+                "NORMAL": {
+                  "count": 640,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "5cccd84f23b3d3633dbba6b7e01c0da0986cc35fcb64e876ad9c9f795009ba12"
+                },
+                "TEXCOORD_0": {
+                  "count": 640,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "16935d48b02c6daa03bfccb8c727176c63cb64bb5aef75358b065172700ed9a7"
+                }
+              },
+              "index": {
+                "count": 3840,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "6f5bf1915a7e6cf4805b0be117807c1435d47bda6df880f5ac5b90bc03694f62"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 6,
+          "name": "Convertible_Upper_Eyelets",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "part": "Convertible_Upper_Eyelets",
+            "independent_color_and_print": true,
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Eyelets",
+              "vertices": 3200,
+              "triangles": 6400,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "9fe1bda7c5827196f11e0cf0d52b02e7af21e317a64c6eda75c727454aa63b87"
+                },
+                "_SG_FLAT": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "55ba41b4317d725f16fffff1999eefa8805d7c137196a38ebae546384141a320"
+                },
+                "_SG_NORMAL": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "d5005905384c591309d067c8c2be6fb29ced80a5646a254e44dc87c43f31fd84"
+                },
+                "POSITION": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.03430097550153732,
+                    0.026158804073929787,
+                    -0.05711868777871132
+                  ],
+                  "maximum": [
+                    0.07484310120344162,
+                    0.088614322245121,
+                    0.04314468801021576
+                  ],
+                  "sha256": "d091d2330085c6c85ecaab92204e1420b7bbe0a62e6612ef37a5649480433f80"
+                },
+                "NORMAL": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "fa29dd4ae0f509be8cff813b09d4a490ed530c64dc12dba3bf977c88aeae7aac"
+                },
+                "TEXCOORD_0": {
+                  "count": 3200,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "6876e4908122e65e32690c7bb85f7f5bc6a462b0637eb81b54d6a6bc1bf5289b"
+                }
+              },
+              "index": {
+                "count": 19200,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "92c2908a211e0958168ae8190cffc0ea7bf46677e89b2c4dd73b6a84d3f3c854"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 7,
+          "name": "Cuff_Artwork_Borders",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Cuff_Artwork_Borders",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Cuff_Border",
+              "vertices": 1446,
+              "triangles": 1920,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 1446,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "018895717389ff8624a6f3778977ced48cee8d967f06cf53e40a044bf66e7d82"
+                },
+                "_SG_FLAT": {
+                  "count": 1446,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "acaab74098cbe748675b679fa0c65275ca00ff2fec54e69d199c4b1da7bc506e"
+                },
+                "_SG_NORMAL": {
+                  "count": 1446,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "7d1d3730bbef42dc2ff521ad81a666ed22f6d8aac013228349636f87b6cc81da"
+                },
+                "POSITION": {
+                  "count": 1446,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.025613104924559593,
+                    0.014974408783018589,
+                    -0.05804039165377617
+                  ],
+                  "maximum": [
+                    0.13589324057102203,
+                    0.10539193451404572,
+                    0.04388643428683281
+                  ],
+                  "sha256": "1878a979dcaa7050c3e3af92fdd85c23847d2c88d78915709a4a842dce3f284e"
+                },
+                "NORMAL": {
+                  "count": 1446,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "4609b23472301ee88ab50c005d1b5e3659668975ab62999de7694a9e22d691c0"
+                },
+                "TEXCOORD_0": {
+                  "count": 1446,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "65cc1f145334f509080dcd1cd913933ded85273276fa4d9e1a74df7ac4904368"
+                }
+              },
+              "index": {
+                "count": 5760,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "40dc01ca8634bee497c851f3f03fc84215d7d4dd19078a570c99e74213e360fb"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 8,
+          "name": "Draped_Lace_Ends",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "part": "Draped_Lace_Ends",
+            "independent_color_and_print": true,
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Laces",
+              "vertices": 1766,
+              "triangles": 3256,
+              "attributes": {
+                "POSITION": {
+                  "count": 1766,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04725782573223114,
+                    0.012888346798717976,
+                    -0.054045431315898895
+                  ],
+                  "maximum": [
+                    0.015098346397280693,
+                    0.061693646013736725,
+                    0.04104902222752571
+                  ],
+                  "sha256": "8ed6edf69ee5cb30d39832a91ac1ad7eaf28262d201116bef00c0291d7b7e927"
+                },
+                "NORMAL": {
+                  "count": 1766,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "35748d05595b5b2851e4ac64cb046f01befb1bb3358b6bd7343308a024e891e6"
+                },
+                "TEXCOORD_0": {
+                  "count": 1766,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "ba2a284761a515f50b63dc396879738b436e1200006f640d8bddf97bc4e88ab0"
+                }
+              },
+              "index": {
+                "count": 9768,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "996f985636473d08aee34fda115a04b1dde84a910e60566216c2e6a3645140ed"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 9,
+          "name": "Finished_Foxing_Stripe",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Finished_Foxing_Stripe",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Foxing_Navy_Stripe",
+              "vertices": 3069,
+              "triangles": 5540,
+              "attributes": {
+                "POSITION": {
+                  "count": 3069,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.08665076643228531,
+                    -0.009200002066791058,
+                    -0.05099231004714966
+                  ],
+                  "maximum": [
+                    0.13111409544944763,
+                    -0.006299998145550489,
+                    0.03887142986059189
+                  ],
+                  "sha256": "6ee7ad0cdae68ed511d7ade300a7fc5c9c889c2dbbbd59667c93ba295914d101"
+                },
+                "NORMAL": {
+                  "count": 3069,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "38d727496c7245a8210b83e1b49d252338f4eaa53189c0dd90cffdf3a85a2289"
+                },
+                "TEXCOORD_0": {
+                  "count": 3069,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "8ed7ebc5a8b4113e787911d11623f61c834d6923970a649edc1c0ab40a244fa9"
+                }
+              },
+              "index": {
+                "count": 16620,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "6437f0427f9e30697dc3f7c7f5dd8c2a2abe928b5f3c94a4a000284b6bd2b0a4"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 10,
+          "name": "Finished_Heel_Leather",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Finished_Heel_Leather",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "estimated": "Width and stitch allowance estimated from overall reference; rear view not supplied.",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Heel_Strip",
+              "vertices": 793,
+              "triangles": 1440,
+              "attributes": {
+                "POSITION": {
+                  "count": 793,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.11575143039226532,
+                    0.00699999975040555,
+                    -0.013500005006790161
+                  ],
+                  "maximum": [
+                    0.13277597725391388,
+                    0.10199999809265137,
+                    0.0004999997327104211
+                  ],
+                  "sha256": "c45d9268555a520615c879f5e0b4b19abf3a1754e8e9f86f1e60dc5131ba0592"
+                },
+                "NORMAL": {
+                  "count": 793,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "20eaa616a4ebd30867d336b9590965399bec64578b749b873758ba6f4c266326"
+                },
+                "TEXCOORD_0": {
+                  "count": 793,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1bb0ce9906a5f3933c8110aa6415470a2b4a159cbe89df636d2c56f00e1c34c6"
+                }
+              },
+              "index": {
+                "count": 4320,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "33c6a8ccb1d078e0bd1759214021044d5f7bff6d07cd5f97df87b0daf71cad19"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 11,
+          "name": "Finished_Heel_Logo",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Finished_Heel_Logo",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Heel_Logo",
+              "vertices": 231,
+              "triangles": 384,
+              "attributes": {
+                "POSITION": {
+                  "count": 231,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.11372561007738113,
+                    -0.011400001123547554,
+                    -0.028999999165534973
+                  ],
+                  "maximum": [
+                    0.13322235643863678,
+                    0.002900000661611557,
+                    0.01600000075995922
+                  ],
+                  "sha256": "85e7052bef10e59c72ad28b7dbf9a408cf1eeb6522d54126c98728897034f26b"
+                },
+                "NORMAL": {
+                  "count": 231,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1377349fc77eb12afb5ed7b05dd63a04e742eae71978052f838cef4d6459006e"
+                },
+                "TEXCOORD_0": {
+                  "count": 231,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "ff1e85fc5a3d7a88cf0b3c1beddf21c4452d24495e4a4d2772ced3109d89bf90"
+                }
+              },
+              "index": {
+                "count": 1152,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "964b2064dcbe4364ade2350e9c1d4ab6e8990871fb4ff770a67e9f358abacb1b"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 12,
+          "name": "Finished_Lace_Aglets",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Finished_Lace_Aglets",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Aglet_Artwork",
+              "vertices": 1650,
+              "triangles": 3072,
+              "attributes": {
+                "POSITION": {
+                  "count": 1650,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04743108153343201,
+                    0.012696117162704468,
+                    -0.053950000554323196
+                  ],
+                  "maximum": [
+                    -0.030716119334101677,
+                    0.04212627187371254,
+                    0.040950000286102295
+                  ],
+                  "sha256": "eec53f93b9999c3a6dba699acb88f95d481649b033954565efba4bab336693b3"
+                },
+                "NORMAL": {
+                  "count": 1650,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "eed544779102fef415e08680a040d803038dd210495a8c3c661765b5b4d079ce"
+                },
+                "TEXCOORD_0": {
+                  "count": 1650,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "eabc2b1222699c4ee0e61d1509237b91380240ac6006dafe7f1c8c4e1da11d36"
+                }
+              },
+              "index": {
+                "count": 9216,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "5d54cca6199bfe2305dcbf9a31bfe45e7dae3b460fd72418c7206ca858d8c273"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Hardware_Silver",
+              "vertices": 840,
+              "triangles": 1280,
+              "attributes": {
+                "POSITION": {
+                  "count": 840,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.047443654388189316,
+                    0.010556348599493504,
+                    -0.05403999984264374
+                  ],
+                  "maximum": [
+                    -0.030569758266210556,
+                    0.042593877762556076,
+                    0.041039999574422836
+                  ],
+                  "sha256": "9e85f3f342e400fa519af3b12f248879955020d60a3b2008e7a90074a2236118"
+                },
+                "NORMAL": {
+                  "count": 840,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "6ffa0e15f91000e9453ecafdf24d209f5cf3a7c3397c03a55369533335a589cf"
+                },
+                "TEXCOORD_0": {
+                  "count": 840,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "97447293b95ec16b53430ff5b7cad454f36ba08d3242747c89804a69dfb9e0c3"
+                }
+              },
+              "index": {
+                "count": 3840,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "edc39d4aa348e551b4399e5ad91373a731ad832653fea79fdfd79f2c450d1a71"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 13,
+          "name": "Garment_Binding_Fixed",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Canvas_Trim",
+              "vertices": 5917,
+              "triangles": 10416,
+              "attributes": {
+                "POSITION": {
+                  "count": 5917,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04869255796074867,
+                    0.04422185197472572,
+                    -0.04119110852479935
+                  ],
+                  "maximum": [
+                    0.03740815073251724,
+                    0.11522040516138077,
+                    0.028176097199320793
+                  ],
+                  "sha256": "c507bcec195f3f0d3c9ab5189669cc32d527d9cc4ade5e09b19d9eecb7d6a00e"
+                },
+                "NORMAL": {
+                  "count": 5917,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1fd8b0e39e5b1821b1cfbaca62c6bced7c3902d2f0a7ac071414343b1479c68e"
+                },
+                "TEXCOORD_0": {
+                  "count": 5917,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "39fd3fc4b8b4f5c4929293d0ca35c78ce10eaf6097e5d2e69715be5f89d8ccb3"
+                }
+              },
+              "index": {
+                "count": 31248,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "4015e82775ae4c7a79bf987cf2d592cf4ace869241ff175807cb351056788656"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 14,
+          "name": "Garment_Stitching_Fixed",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Stitching",
+              "vertices": 7020,
+              "triangles": 7560,
+              "attributes": {
+                "POSITION": {
+                  "count": 7020,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.04732383415102959,
+                    0.04833933711051941,
+                    -0.04008442163467407
+                  ],
+                  "maximum": [
+                    0.035258855670690536,
+                    0.11570616066455841,
+                    0.02713291347026825
+                  ],
+                  "sha256": "b34a1f6cef20f3b8286811ba66d4b5ac48a90da653e8c41e1d004127cced2948"
+                },
+                "NORMAL": {
+                  "count": 7020,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "da5e205425f739c313143e01061d3e90af92f8230d748bc7e975dee9a96a2ea6"
+                },
+                "TEXCOORD_0": {
+                  "count": 7020,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "0de92d6f040199c276ab955bfa5ae3bd1148c09d2f76895f6564c53804aed66e"
+                }
+              },
+              "index": {
+                "count": 22680,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "3e6f4b5356c7f74e1dd3f716ac4f618ba0c841bd8b8dad612fafacff5124b217"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 15,
+          "name": "Heel_Leather_Stitching",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Heel_Leather_Stitching",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Stitching",
+              "vertices": 952,
+              "triangles": 816,
+              "attributes": {
+                "POSITION": {
+                  "count": 952,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.11587285995483398,
+                    0.007263186387717724,
+                    -0.013140004128217697
+                  ],
+                  "maximum": [
+                    0.132035493850708,
+                    0.10096806287765503,
+                    0.00013999966904520988
+                  ],
+                  "sha256": "9c1264c2165d84cadb6366e755b2e23cadddf997965c4eb76ce9c73801f51753"
+                },
+                "NORMAL": {
+                  "count": 952,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "893291494d692b1da91f09d80bd2c66755cb4a07dbabda5b0bbca0b3bbabeac1"
+                },
+                "TEXCOORD_0": {
+                  "count": 952,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "63cbde8b76a975d89fe7f76f34ffb2d2337e79686f0a82fd89fbce3f4577418c"
+                }
+              },
+              "index": {
+                "count": 2448,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "619a33b782e6cd76169ad3848ef65204413ce292f68a54bc3dbbe68162fe3b8b"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 16,
+          "name": "Heel_Seam_Stitch",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Heel_Seam_Stitch",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Heel_Strip",
+              "vertices": 557,
+              "triangles": 972,
+              "attributes": {
+                "POSITION": {
+                  "count": 557,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.1163824275135994,
+                    0.045103415846824646,
+                    -0.007645933888852596
+                  ],
+                  "maximum": [
+                    0.12657155096530914,
+                    0.10501451790332794,
+                    -0.006240922957658768
+                  ],
+                  "sha256": "6b5ec2884f956ab8f52af2f190c6264cd4caf064b0af23f03fb5719e9d950ba4"
+                },
+                "NORMAL": {
+                  "count": 557,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "1aa9adefe4038a002c30282782cdb1c2888a9d8e1c5aca01425fb8924c7126fd"
+                },
+                "TEXCOORD_0": {
+                  "count": 557,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "75880cf3456fa936b5a43ca3b48067d0e4e00211fc067a50aa35e0adc60634e4"
+                }
+              },
+              "index": {
+                "count": 2916,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "c49da3260c0314d9f9ff4aa5833c8c2cf1fceb59fccaf3b0c638e571cc0c2e64"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 17,
+          "name": "Inner_Lining",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Inner_Lining",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Inner_Lining",
+              "vertices": 390,
+              "triangles": 652,
+              "attributes": {
+                "POSITION": {
+                  "count": 390,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.026656435802578926,
+                    0.009893190115690231,
+                    -0.03842543065547943
+                  ],
+                  "maximum": [
+                    0.12919817864894867,
+                    0.04500000178813934,
+                    0.027193982154130936
+                  ],
+                  "sha256": "9c6db0b1112cf0fa303ebcda05a0bca2ae35356ddf5f647d3c27de0e67d7d306"
+                },
+                "NORMAL": {
+                  "count": 390,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "b9b3a2ab2554335da697118460fbfb480f8a8b9f97369c91b74119334c8e361e"
+                },
+                "TEXCOORD_0": {
+                  "count": 390,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "bae9426a98256837b852681dd7304f590b7876e748fc97f3cacb174dbb0fafd1"
+                }
+              },
+              "index": {
+                "count": 1956,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "a95297eaf104b6795ea92dc42a0477bd06ec01561adbff8b11e7258c19552839"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 18,
+          "name": "Lower_Shoe_Eyelets",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "part": "Lower_Shoe_Eyelets",
+            "independent_color_and_print": true,
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Eyelets",
+              "vertices": 3200,
+              "triangles": 6400,
+              "attributes": {
+                "POSITION": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.05400249734520912,
+                    0.022475561127066612,
+                    -0.0359891913831234
+                  ],
+                  "maximum": [
+                    0.017777476459741592,
+                    0.061717160046100616,
+                    0.02644198387861252
+                  ],
+                  "sha256": "b441deda04c69e12bbb04b90ff4e5608dc19668606674f3508c7380196739171"
+                },
+                "NORMAL": {
+                  "count": 3200,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e01d706a5da95690d6a1a8f7abab502f409a494dca10b68e87163271e1f8b5b7"
+                },
+                "TEXCOORD_0": {
+                  "count": 3200,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "7471aa0a7ecbcb6ebd36a286ee7a3e4d5313de2e59c0e6e7f124f09d16fb3003"
+                }
+              },
+              "index": {
+                "count": 19200,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "92c2908a211e0958168ae8190cffc0ea7bf46677e89b2c4dd73b6a84d3f3c854"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 19,
+          "name": "Mongolian_Clasp_Heads",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Mongolian_Clasp_Heads",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Clasp_Engraved_Head",
+              "vertices": 864,
+              "triangles": 1536,
+              "attributes": {
+                "POSITION": {
+                  "count": 864,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.030411362648010254,
+                    0.03169531375169754,
+                    0.02334231324493885
+                  ],
+                  "maximum": [
+                    0.05035063624382019,
+                    0.06360166519880295,
+                    0.02895219437777996
+                  ],
+                  "sha256": "4e5436e5173abb41353e27faa9ce643bc7ba07dbae5cff874727f7b9416a804f"
+                },
+                "NORMAL": {
+                  "count": 864,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "c33a2defc6a4a8229f33ec54add53f33627837e87900414dd537e5bd1a9fe248"
+                },
+                "TEXCOORD_0": {
+                  "count": 864,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "fcac7c78be4cd02c097a95772bedabee0f08e3521a6e9a0be2fea20361aad823"
+                }
+              },
+              "index": {
+                "count": 4608,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "404bc6e1d4ca737b883a4d9f525f52831f4a12a4675f7eb7c7ac966b8dab0b56"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Hardware_Silver",
+              "vertices": 1170,
+              "triangles": 2048,
+              "attributes": {
+                "POSITION": {
+                  "count": 1170,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.030081363394856453,
+                    0.03136531263589859,
+                    0.02301231399178505
+                  ],
+                  "maximum": [
+                    0.050680238753557205,
+                    0.0639316663146019,
+                    0.027863094583153725
+                  ],
+                  "sha256": "237b6a69bd82ce8e7e4b387907b935fd50957d8df63082f34b1d19a83cb7859c"
+                },
+                "NORMAL": {
+                  "count": 1170,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "460ddee81dc058bad59c6f0f5619ea2cd9993368007e372826f2658dcaa472d1"
+                },
+                "TEXCOORD_0": {
+                  "count": 1170,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "94d316d6b1261264c479d8e7f16e7985752adc4a02c23f3ea07b845ea9e6f6b7"
+                }
+              },
+              "index": {
+                "count": 6144,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "7c5382177f9810916a425927704d0c69ed10fc7315faa79055eb7c0e4e73d5ab"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 20,
+          "name": "Mongolian_Clasp_Loops",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Mongolian_Clasp_Loops",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "clasp",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Clasp_Cream_Cord",
+              "vertices": 2206,
+              "triangles": 3904,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 2206,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "148b8d3e62a295eda3ea6c4ee7cd048d6084ced40e8c1f09238777b64f140dd7"
+                },
+                "_SG_FLAT": {
+                  "count": 2206,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "fdd435488700703a741d532fa913c02e344d035dfeed0f52da99de83451d7175"
+                },
+                "_SG_NORMAL": {
+                  "count": 2206,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "5a07d92b3653cf955e515678bc9789a0f1faa213dc7b310f303afaf0410dd412"
+                },
+                "POSITION": {
+                  "count": 2206,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.033981721848249435,
+                    0.03382689133286476,
+                    0.02289537899196148
+                  ],
+                  "maximum": [
+                    0.09025575965642929,
+                    0.07737290859222412,
+                    0.04489545896649361
+                  ],
+                  "sha256": "7f7b45891fba5a15dec17d3ca0c81dc3feba00cc5614a3f3ff38059513bdd967"
+                },
+                "NORMAL": {
+                  "count": 2206,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "fa2ae3e755bb3de971c97920737c834e2158a2f8dcd169bac9d314f3a9576c1f"
+                },
+                "TEXCOORD_0": {
+                  "count": 2206,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "cbb3cdb95998a7f0358e966695143a24f96780ca4c694d75ecdc7bc93234730e"
+                }
+              },
+              "index": {
+                "count": 11712,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "9fa9d788290fe7eed4b295c767d61a8456351b644416b22d1f5401e186b85a29"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Stitching",
+              "vertices": 280,
+              "triangles": 240,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 280,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e664d6c662dfb22522b43b4ea43109d30920c8c7f4871f77e6f569633feb2e4d"
+                },
+                "_SG_FLAT": {
+                  "count": 280,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "57b528fc06e366d5c6f1024c7631cde45935f7180ec903d852fdd42c90941b94"
+                },
+                "_SG_NORMAL": {
+                  "count": 280,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "3511f6c9a9e6df79b81119cf42a97d243f3b6e6f6e266984caed0be127426f0f"
+                },
+                "POSITION": {
+                  "count": 280,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.07212845236063004,
+                    0.05091869458556175,
+                    0.04088976979255676
+                  ],
+                  "maximum": [
+                    0.08954011648893356,
+                    0.07689844071865082,
+                    0.04504695534706116
+                  ],
+                  "sha256": "ba64d3aaeb592e58c12d02eea8859f26d2bcf227b164d1a269c978c9b1ddc58f"
+                },
+                "NORMAL": {
+                  "count": 280,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "19673e4c839833b3874fac5af6e108b763497525d32ea756bf0511044c362f59"
+                },
+                "TEXCOORD_0": {
+                  "count": 280,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "506e878179f2a548ce8ffda0250bf44cc4eea67406c7c9e1055fa72ad040b7d3"
+                }
+              },
+              "index": {
+                "count": 720,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "bf56b898af8484ea03bd11ee2be1ef35fbd72803e5d97901dbb1443ff5fac14e"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 21,
+          "name": "Original_Lower_Laces",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "lace_return_fit_m": 0.004,
+            "source_lace_limit": "Source lace has pre-existing self/foot intersections and open cropped ends; fitting is not a watertight reconstruction",
+            "part": "Original_Lower_Laces",
+            "independent_color_and_print": true,
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Laces",
+              "vertices": 6296,
+              "triangles": 12266,
+              "attributes": {
+                "POSITION": {
+                  "count": 6296,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.06275103241205215,
+                    0.026041513308882713,
+                    -0.037174470722675323
+                  ],
+                  "maximum": [
+                    0.015170043334364891,
+                    0.0711200013756752,
+                    0.027300965040922165
+                  ],
+                  "sha256": "8b79d8150fa4524ab90c1adf1fe9c6b6f0d9942eb570ab8837032fa20ad83c1d"
+                },
+                "NORMAL": {
+                  "count": 6296,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "d85aee419f19c6c789202cc94729ab742dbd8d38d48e6c33630a48f84a6f4e12"
+                },
+                "TEXCOORD_0": {
+                  "count": 6296,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e67834c7d455987163df0f55aab6e631e7fe3ae9ba616fb95da4a4d9d9909a5b"
+                }
+              },
+              "index": {
+                "count": 36798,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "fd9afb9cecd139cd60e1b3b82c372e1f35943f184234c0d94b60c78b80427d96"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 22,
+          "name": "Original_Vamp",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Original_Vamp",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Body_Canvas",
+              "vertices": 174,
+              "triangles": 262,
+              "attributes": {
+                "POSITION": {
+                  "count": 174,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.08369695395231247,
+                    0.01031811535358429,
+                    -0.03915666788816452
+                  ],
+                  "maximum": [
+                    0.010441862978041172,
+                    0.04500000178813934,
+                    0.032501306384801865
+                  ],
+                  "sha256": "5c0e84f3f2d28c8d649504264e042f849166d47dd2530d40dd8ceb71e0d114e7"
+                },
+                "NORMAL": {
+                  "count": 174,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "4af8ed110e05fcf0ca12d76ab695e45815245493521b18e55d6ff5305d10ca9a"
+                },
+                "TEXCOORD_0": {
+                  "count": 174,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "761d89875fb28c1a153d2127fa29a42b43f3335d775a93cd18fb3bdeeb46c5fb"
+                }
+              },
+              "index": {
+                "count": 786,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "45c9291180365b00f442fbcfe6623e88a9a8489896aa3ab4e899242bd013c7e2"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 23,
+          "name": "Quilt_Seam_Channels",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Quilt_Seam_Channels",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "cuff",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Stitching",
+              "vertices": 2914,
+              "triangles": 5144,
+              "attributes": {
+                "_SG_PARAM": {
+                  "count": 2914,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "31bce42618cc7ec2d612570949330117b2da1c6047b4959ca2627f4e384ced5c"
+                },
+                "_SG_FLAT": {
+                  "count": 2914,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "99b38247eedc8ebdf4d49eb701a1e1fb5f27d8dba03e0e19682b473dd654fef6"
+                },
+                "_SG_NORMAL": {
+                  "count": 2914,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "245abfe8138ea5f7198dfab30abf81d7fd1f62dd3978bde79604ebe39362f03b"
+                },
+                "POSITION": {
+                  "count": 2914,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    0.05524192377924919,
+                    0.04031810536980629,
+                    -0.054739512503147125
+                  ],
+                  "maximum": [
+                    0.13213922083377838,
+                    0.08853091299533844,
+                    0.041247155517339706
+                  ],
+                  "sha256": "738401ea52e9f35d06bc4e2f757e8019e929a5e2360c464709200a994f6385bc"
+                },
+                "NORMAL": {
+                  "count": 2914,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "f88bddd89e61456f909f6cf6239e9c53aa02a4d814c8c3822a77bae8a962bdc1"
+                },
+                "TEXCOORD_0": {
+                  "count": 2914,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "c52cd61ad8983337602862b83f405e63301cbee929e7b6e4154d0edffccac06a"
+                }
+              },
+              "index": {
+                "count": 15432,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "11cf28b199597d5539a9904bc5fba1df037ad2c09e68c1294764c8ab1cff1f57"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 24,
+          "name": "Rubber_Foxing_Moulded_Lip",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "part": "Rubber_Foxing_Moulded_Lip",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Red_Rubber_Piping",
+              "vertices": 2025,
+              "triangles": 3584,
+              "attributes": {
+                "POSITION": {
+                  "count": 2025,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.12975239753723145,
+                    0.006379997823387384,
+                    -0.04865730553865433
+                  ],
+                  "maximum": [
+                    0.13290348649024963,
+                    0.007220001891255379,
+                    0.03753662109375
+                  ],
+                  "sha256": "2b4984277cb5286bc1506f4f70b82b4d81ba00354c4da5e2b7da722ea1042173"
+                },
+                "NORMAL": {
+                  "count": 2025,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "4834f9ad23ca685978e0ba0277ff6f0c43279039ddb663ff9955d73d219b25ac"
+                },
+                "TEXCOORD_0": {
+                  "count": 2025,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e3ffef32cd55226e05594b48db672ef3678b191f88930e94697c093443d3a81b"
+                }
+              },
+              "index": {
+                "count": 10752,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "0ce521db1e2479b814c4d009731ba1baaff4261e245a1fa9bceb3e17b7e4f770"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 25,
+          "name": "Rubber_Toe_Bumper_Relief",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "source": "SoulGrain reconstructed neutral eyelet/lace/rubber detail",
+            "part": "Rubber_Toe_Bumper_Relief",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Rubber_Foxing",
+              "vertices": 4205,
+              "triangles": 8064,
+              "attributes": {
+                "POSITION": {
+                  "count": 4205,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.12970322370529175,
+                    -0.011700001545250416,
+                    -0.04100000113248825
+                  ],
+                  "maximum": [
+                    -0.08837132900953293,
+                    0.004800001624971628,
+                    0.02800000086426735
+                  ],
+                  "sha256": "a56c28b1731a620c80f4c97b1b28e4f8ab32e918eb653de7cbd41a4ba1ec81cd"
+                },
+                "NORMAL": {
+                  "count": 4205,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "d1292a9c96b19a95ba57875e152172d3071cdae4d98db7c57263b54d160a0638"
+                },
+                "TEXCOORD_0": {
+                  "count": 4205,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e6500dfdb0d5686d2f42fa21db5e1e14f11108eaf2bb516074535a528306d993"
+                }
+              },
+              "index": {
+                "count": 24192,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "2be42c560dd7909e22ebe9e4cbeb3e4ddd6c16c20da9acdc4ae09431e60ccf4e"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 26,
+          "name": "Shoe_Body",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Shoe_Body",
+            "independent_color_and_print": true,
+            "construction": "One assembled shoe; shared cloth cut pattern, independent semantic materials and two endpoint poses",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Body_Canvas",
+              "vertices": 1350,
+              "triangles": 2209,
+              "attributes": {
+                "POSITION": {
+                  "count": 1350,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.08754537254571915,
+                    0.006799999624490738,
+                    -0.008020934648811817
+                  ],
+                  "maximum": [
+                    0.13241265714168549,
+                    0.04500000178813934,
+                    0.03726079687476158
+                  ],
+                  "sha256": "c221a478d43875b5e72eb73c14c4d46d67a776f9b82783505988028e5a76f5a5"
+                },
+                "NORMAL": {
+                  "count": 1350,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "dcf3acd99f9e217ab6ff2ed19e22ec71f28fc757efcff3c37568840360cdb3e9"
+                },
+                "TEXCOORD_0": {
+                  "count": 1350,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "ee74d661648180466121f24966666a1e8b9afb0ebe28f883997cc24f5908d87a"
+                }
+              },
+              "index": {
+                "count": 6627,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "6ce53e7fe7ec38e413c15b127de00f819c7cd6228339d57537ca6ebf20c08760"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 1,
+              "material": "Body_Inner_Canvas",
+              "vertices": 1264,
+              "triangles": 2036,
+              "attributes": {
+                "POSITION": {
+                  "count": 1264,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.08354299515485764,
+                    0.006799997761845589,
+                    -0.04821087047457695
+                  ],
+                  "maximum": [
+                    0.13241265714168549,
+                    0.04500000178813934,
+                    -0.004412450361996889
+                  ],
+                  "sha256": "88172382ed89592d8daa61815dc8f612a2a2b668a7339204500cbcc46b03e422"
+                },
+                "NORMAL": {
+                  "count": 1264,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "c54d16e202f991cd4daab55574bd1ff5b641b407c664da6a7a447db7340f0210"
+                },
+                "TEXCOORD_0": {
+                  "count": 1264,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e86b2f5fbd02bc811f900be4057dfb92729775699760a4d7a9ea3d9f8efcefe2"
+                }
+              },
+              "index": {
+                "count": 6108,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "d40ceb4287de8cf386fa7de6329957aae2bc70f2ac13a11699af5ee54831f53e"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 2,
+              "material": "Rubber_Toe",
+              "vertices": 441,
+              "triangles": 751,
+              "attributes": {
+                "POSITION": {
+                  "count": 441,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.129161074757576,
+                    0.006799998227506876,
+                    -0.042535919696092606
+                  ],
+                  "maximum": [
+                    -0.07736341655254364,
+                    0.02999165654182434,
+                    0.035319313406944275
+                  ],
+                  "sha256": "ab29c0c2101a1ddffff2fcdfa49e23bb75006920170b7daf7567aaab3af5e1d9"
+                },
+                "NORMAL": {
+                  "count": 441,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "8224ff921379f7b697a02a5492e09eef5fc3091935bada70783c20dc7f2de241"
+                },
+                "TEXCOORD_0": {
+                  "count": 441,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "a7c347f7ff79793bf842f8e39599452c2db1853ba582811cb3ba945059692fe0"
+                }
+              },
+              "index": {
+                "count": 2253,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "3822f00597b934d574df25a8b4de38ea87f97d1941901df82edbb56ca8e94f0a"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 3,
+              "material": "Rubber_Foxing",
+              "vertices": 1989,
+              "triangles": 3532,
+              "attributes": {
+                "POSITION": {
+                  "count": 1989,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.129500612616539,
+                    -0.013800001703202724,
+                    -0.050792332738637924
+                  ],
+                  "maximum": [
+                    0.1323428750038147,
+                    0.0068000019527971745,
+                    0.03870924189686775
+                  ],
+                  "sha256": "9fbec16e0a21a01d8dd8e7c8f8922f5e13be368b5c699c5fec2f0b2612829629"
+                },
+                "NORMAL": {
+                  "count": 1989,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "88d00714ff7cc4a7f354c71996936d5e82c43f700d0a0961c4ac39951ef1fbc0"
+                },
+                "TEXCOORD_0": {
+                  "count": 1989,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "36f3e3d97a449bff1d315c66a76334f974e74b4f7c43edbffc0152b39585bec7"
+                }
+              },
+              "index": {
+                "count": 10596,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "48880c8b1ed3fe4830629eb461fb6433f3b87c0b45cc93d0d40a3aac2e8ce3d7"
+              },
+              "morphTargetCount": 0
+            },
+            {
+              "primitive": 4,
+              "material": "Rubber_Outsole",
+              "vertices": 676,
+              "triangles": 1140,
+              "attributes": {
+                "POSITION": {
+                  "count": 676,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.08839528262615204,
+                    -0.020561281591653824,
+                    -0.05038883164525032
+                  ],
+                  "maximum": [
+                    0.12149713188409805,
+                    -0.013799997977912426,
+                    0.03836991265416145
+                  ],
+                  "sha256": "fda468223bec26e95ab9be84d012b240419c20052eb8e2f4f5ba5baec67e3644"
+                },
+                "NORMAL": {
+                  "count": 676,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "a2103bf43fbfbd34ba1f061bf698e860161a6c7145fbfb68c71df9135097dccd"
+                },
+                "TEXCOORD_0": {
+                  "count": 676,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "e81c542336ba8de7bd84fef0aab47ce1507496ade956f86f4132e879bfffea54"
+                }
+              },
+              "index": {
+                "count": 3420,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "65ff24adef86fad5c1d78fff79da928b1c3143d2abcdcddef1b292f2b17c88d7"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 27,
+          "name": "Tongue_Border_Studs",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Tongue_Border_Studs",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Border_Studs",
+              "vertices": 1332,
+              "triangles": 2516,
+              "attributes": {
+                "POSITION": {
+                  "count": 1332,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.043655481189489365,
+                    0.053441163152456284,
+                    -0.03421422094106674
+                  ],
+                  "maximum": [
+                    0.0019457784947007895,
+                    0.11241982877254486,
+                    0.021178871393203735
+                  ],
+                  "sha256": "4606b6994a9597986d0ee3fab81811a380ee8220ccf4ef82def4b6240b4bcd43"
+                },
+                "NORMAL": {
+                  "count": 1332,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "2a3f3cf8265e1f6e5ed83bab62b76beb1a3e16d087784aca7c3569c2fb32b26e"
+                },
+                "TEXCOORD_0": {
+                  "count": 1332,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "0f8a53af6f28bdb35ca1a834c66644a7f56b3c7f11738c8a3f85f465abfa88d6"
+                }
+              },
+              "index": {
+                "count": 7548,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "517a87da9f916f52e78d1b6e3d9c6cd33b4b55598476acc70962d7ff0185c9bd"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        },
+        {
+          "node": 28,
+          "name": "Tongue_Rhinestone_Medallion",
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {
+            "part": "Tongue_Rhinestone_Medallion",
+            "finish_version": "V8 from unchanged V7 base geometry",
+            "rhinestones": 785,
+            "layout_source": "User reference 08, raster centre readings",
+            "adActor": "shoe",
+            "sourceCommit": "b169dde54caf700d2557dcfbafad6024c6ffe50b"
+          },
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": "Rhinestone_Silver",
+              "vertices": 62800,
+              "triangles": 34540,
+              "attributes": {
+                "POSITION": {
+                  "count": 62800,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.03370538726449013,
+                    0.07026379555463791,
+                    -0.028084980323910713
+                  ],
+                  "maximum": [
+                    -0.008840118534862995,
+                    0.10450001806020737,
+                    0.015187165699899197
+                  ],
+                  "sha256": "86cc0b844e5e5759290d893f697385adf3893e2fdba2b156991d40cd38fa0474"
+                },
+                "NORMAL": {
+                  "count": 62800,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "447bec31510e0e428915fbb9e6268be129f1cbc82d6f1a76addc1fe57694fabd"
+                },
+                "TEXCOORD_0": {
+                  "count": 62800,
+                  "type": "VEC2",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "78d8d684544a991f8bee4f3c20a304e81dedc07b0ebe43ce16ff57d88419ad27"
+                }
+              },
+              "index": {
+                "count": 103620,
+                "type": "SCALAR",
+                "componentType": 5123,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "2111c56ef771862326ba35f9844b5a58c0be12298c391ba762ec1e298bd6e51b"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        }
+      ],
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "Collar_Outer_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 0,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6000000238418579
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Collar_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 2,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 3
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6000000238418579
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Canvas_Trim",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 4,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.46207699179649353,
+              0.010960093699395657,
+              0.02518685907125473,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6000000238418579
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Stitching",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.7835378050804138,
+              0.672443151473999,
+              0.4969329833984375,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Body_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 5,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 6
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.699999988079071
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Inner_Lining",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 7,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.006512090563774109,
+              0.01850022003054619,
+              0.045186202973127365,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.9399999976158142
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Body_Inner_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 8,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 9
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.699999988079071
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Tongue_Reverse_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 10,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 11
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8299999833106995
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Tongue_Canvas",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 12,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 13
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8299999833106995
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Eyelets",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.4793201684951782,
+              0.4677838087081909,
+              0.423267662525177,
+              1
+            ],
+            "metallicFactor": 0.8399999737739563,
+            "roughnessFactor": 0.25
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Cuff_Border",
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 14
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.75
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Laces",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8549926280975342,
+              0.7758222222328186,
+              0.6239603757858276,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Foxing_Navy_Stripe",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.006048833020031452,
+              0.024157632142305374,
+              0.05448027700185776,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.6399999856948853
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Heel_Strip",
+          "normalTexture": {
+            "extensions": {
+              "KHR_texture_transform": {
+                "offset": [
+                  0,
+                  -11
+                ],
+                "scale": [
+                  12,
+                  12
+                ]
+              }
+            },
+            "index": 15,
+            "scale": 0.18000000715255737
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 16
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.4300000071525574
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Heel_Logo",
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 17
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Aglet_Artwork",
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 18
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.3799999952316284
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Hardware_Silver",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.48514994978904724,
+              0.47353148460388184,
+              0.43415364623069763,
+              1
+            ],
+            "metallicFactor": 0.8799999952316284,
+            "roughnessFactor": 0.23999999463558197
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Clasp_Engraved_Head",
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 19
+            },
+            "metallicFactor": 0.7200000286102295,
+            "roughnessFactor": 0.30000001192092896
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Clasp_Cream_Cord",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8148465752601624,
+              0.7379103899002075,
+              0.5840784311294556,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.800000011920929
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Red_Rubber_Piping",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.5088813304901123,
+              0.007499032188206911,
+              0.024157632142305374,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.5
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Rubber_Foxing",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8549926280975342,
+              0.7991027235984802,
+              0.68668532371521,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Rubber_Toe",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8549926280975342,
+              0.7991027235984802,
+              0.68668532371521,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Rubber_Outsole",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8549926280975342,
+              0.7991027235984802,
+              0.68668532371521,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.7200000286102295
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Border_Studs",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8796223998069763,
+              0.8227857351303101,
+              0.7083757519721985,
+              1
+            ],
+            "metallicFactor": 0.3400000035762787,
+            "roughnessFactor": 0.2199999988079071
+          }
+        },
+        {
+          "doubleSided": true,
+          "name": "Rhinestone_Silver",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8468732237815857,
+              0.838798999786377,
+              0.7991027235984802,
+              1
+            ],
+            "metallicFactor": 0.6800000071525574,
+            "roughnessFactor": 0.18000000715255737
+          }
+        }
+      ]
+    },
+    "hand": {
+      "path": "public/tongue-sleeve-lab/assets/user-hand-original.glb",
+      "sha256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+      "bytes": 4968320,
+      "nodeCount": 1,
+      "meshCount": 1,
+      "renderVertexCount": 103488,
+      "triangles": 206972,
+      "skins": [],
+      "animations": [],
+      "meshes": [
+        {
+          "node": 0,
+          "name": null,
+          "parent": null,
+          "authoredTransform": {},
+          "extras": {},
+          "primitives": [
+            {
+              "primitive": 0,
+              "material": null,
+              "vertices": 103488,
+              "triangles": 206972,
+              "attributes": {
+                "POSITION": {
+                  "count": 103488,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": [
+                    -0.3067600727081299,
+                    -0.353586345911026,
+                    -0.9513574838638306
+                  ],
+                  "maximum": [
+                    0.30132654309272766,
+                    0.369243860244751,
+                    0.9404280185699463
+                  ],
+                  "sha256": "b6b5d4e092031e5941b325075b28687da2f61b5f32f3c0b2e9ddb7332951d289"
+                },
+                "NORMAL": {
+                  "count": 103488,
+                  "type": "VEC3",
+                  "componentType": 5126,
+                  "normalized": false,
+                  "minimum": null,
+                  "maximum": null,
+                  "sha256": "667da6c2e67cbefb80b0c256e185db323b741ca262f3e25a126de4cbcb09872c"
+                }
+              },
+              "index": {
+                "count": 620916,
+                "type": "SCALAR",
+                "componentType": 5125,
+                "normalized": false,
+                "minimum": null,
+                "maximum": null,
+                "sha256": "00a3645113fc9ff41321b0e159435f0dc055b9117dd8cdfe7fe637eb3061dda0"
+              },
+              "morphTargetCount": 0
+            }
+          ]
+        }
+      ],
+      "materials": [
+        {
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0.0,
+            "roughnessFactor": 1.0
+          },
+          "doubleSided": false
+        }
+      ]
+    }
+  },
+  "findings": {
+    "handRig": "New user-provided Mongolian-robe hand is authoritative: one connected unskinned mesh, no UV, no animation. Earlier anatomical candidate must not replace its hand or clothing.",
+    "sleeve": "Separate the existing horseshoe cuff from the hand plus remaining robe sleeve; preserve the robe below it.",
+    "tongue": "Keep all tongue geometry. Clear only Tongue_Reverse_Canvas artwork and old decorative overlays in chapter-owned runtime state.",
+    "oldRhinestones": 785,
+    "oldRhinestoneLayoutStatus": "Existing reference08 visually matches the latest supplied full internal ornament; preserve its layout and calibrate 75mm outer diameter.",
+    "clothDeformation": "Source hand and shoe have no skeleton or morph targets; create derived cuff deformation and a real finger rig without replacing the user hand.",
+    "missing": []
+  },
+  "passed": true
+}

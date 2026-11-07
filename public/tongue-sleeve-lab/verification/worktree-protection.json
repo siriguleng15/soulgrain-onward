@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 14,
+  "protectedWorktree": "/workspace/soulgrain-onward",
+  "protectedHEAD": "e7b3a9f57a652f0248cbc1a6b556a3905e2632d0",
+  "branch": "feat/onward-pattern-reveal-fullshoe",
+  "uncommittedWorktreeAndIndexUnchanged": true,
+  "sourceWorktreeHEAD": "0bbbc8245ef574b73be3e7a7f842190e5af9277a",
+  "note": "All task edits and derivative exports are confined to the independent tongue worktree."
+}

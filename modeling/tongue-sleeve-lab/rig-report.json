@@ -1,0 +1,41 @@
+{
+  "sourceSHA256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+  "derivedHandPositionSHA256": "fe3fd8a5cd9a17e1e1fcc662309d7e0df115890ca1bf8f75efd3d9c7076a7875",
+  "method": "Project-authored 22-joint finger rig, geodesic finger segmentation and smooth joint weights; no third-party hand mesh",
+  "rawOrigin": [
+    0.0067762312882913185,
+    -0.13880751923980897,
+    0.10074097717403754
+  ],
+  "rawToMetres": 0.17,
+  "boneNames": [
+    "wrist",
+    "palm",
+    "thumb_1",
+    "thumb_2",
+    "thumb_3",
+    "thumb_tip",
+    "index_1",
+    "index_2",
+    "index_3",
+    "index_tip",
+    "middle_1",
+    "middle_2",
+    "middle_3",
+    "middle_tip",
+    "ring_1",
+    "ring_2",
+    "ring_3",
+    "ring_tip",
+    "pinky_1",
+    "pinky_2",
+    "pinky_3",
+    "pinky_tip"
+  ],
+  "requiresContactPoseArtReview": true,
+  "sha256": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116",
+  "vertices": 35987,
+  "triangles": 70603,
+  "maxWeightsPerVertex": 4,
+  "weightSumMaxError": 2.220446049250313e-16
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "sourceSHA256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+  "rawOrigin": [
+    0.0067762312882913185,
+    -0.13880751923980897,
+    0.10074097717403754
+  ],
+  "rawToMetres": 0.17,
+  "segmentation": "curvature-guided original hem boundaries",
+  "underCuffRobeReconstructed": true,
+  "sameCuffIdentityThroughoutAnimation": true,
+  "foldCapTrianglesAssignedToCuff": 711,
+  "sourceVertices": 103488,
+  "sourceTriangles": 206972,
+  "sourceAreaRaw": 3.2404631867268527,
+  "separatedSourceAreaRaw": 3.2404631867268527,
+  "relativeExteriorAreaError": 0.0,
+  "parts": {
+    "Hand_Skin": {
+      "vertices": 35987,
+      "triangles": 70603,
+      "boundaryLoops": 1,
+      "sourceExterior": true
+    },
+    "Robe_Sleeve": {
+      "vertices": 10163,
+      "triangles": 19710,
+      "boundaryLoops": 1,
+      "sourceExterior": true
+    },
+    "Horseshoe_Cuff": {
+      "vertices": 61535,
+      "triangles": 121087,
+      "boundaryLoops": 2,
+      "sourceExterior": true
+    },
+    "Robe_UnderCuff": {
+      "vertices": 4095,
+      "triangles": 6207,
+      "sourceExterior": false,
+      "purpose": "Hand remains dressed in the Mongolian robe after the horseshoe cuff is removed"
+    }
+  },
+  "derivedAsset": "public/tongue-sleeve-lab/assets/user-hand-parts.glb",
+  "derivedSHA256": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+  "status": "Separated editable parts. Rigging, sleeve animation, final blue material and contact choreography are not yet complete."
+}

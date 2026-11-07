@@ -1,0 +1,26 @@
+{
+  "sourceSHA256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+  "backPlaneZCoefficients": [
+    -0.5230468998596042,
+    -0.0542099399963057,
+    -0.20538457305654084
+  ],
+  "backOffset": -0.04576853325768243,
+  "frontAngleCenter": [
+    0.015,
+    -0.1
+  ],
+  "frontFourierCoefficients": [
+    0.10643775973585431,
+    -0.022574612643056248,
+    0.03163313797014047,
+    -0.008306830639135275,
+    -0.006658481417074376,
+    -0.003538499179461998,
+    -0.0030958983587514827
+  ],
+  "frontFitRMSE": 0.01731844240920921,
+  "scaleToMetres": 0.17,
+  "boundaryStatus": "geometry-curvature-derived; validate visually against the source seams before animation",
+  "auxiliaryUnderCuffRobe": "reconstruct hidden robe sleeve, not bare wrist; never discard the original robe below the cuff"
+}

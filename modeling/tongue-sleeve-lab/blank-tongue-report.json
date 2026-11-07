@@ -1,0 +1,14 @@
+{
+  "sourceSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "derivedSHA256": "2ed0ddf36e2421c800e1cfecdcebb7d3e0134ffb86e540f89ad774f2d1dd4def",
+  "sourceBINUnchanged": true,
+  "tongueGeometryUVNormalsAndIndicesUnchanged": true,
+  "targetNode": "Convertible_Tongue",
+  "targetPrimitive": 0,
+  "blankMaterial": "Chapter_Tongue_Reverse_Blank_Canvas",
+  "originalDecorationReferenceNodes": [
+    27,
+    28
+  ],
+  "note": "Chapter asset only. Other body printing intentionally unchanged at this preparation stage."
+}

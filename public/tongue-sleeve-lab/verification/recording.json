@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "file": "asset-preparation-interaction.mp4",
+  "purpose": "Actual asset-preparation workbench: blank tongue, removable cuff, remaining robe, stable silver, authored finger joints. Not the completed 19s tongue chapter.",
+  "method": "Real-time Playwright browser recording, H.264 encode; no pre-rendered or interpolated geometry frames",
+  "environment": "Linux Chromium / SwiftShader, not physical iPad Safari",
+  "interactionWallSeconds": 15.949085323998588,
+  "silverCount": 785,
+  "sourceGeometryUnchanged": true,
+  "errors": []
+}

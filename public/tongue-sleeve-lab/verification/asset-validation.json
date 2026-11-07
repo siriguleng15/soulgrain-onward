@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "sourceShoeSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+  "sourceHandSHA256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+  "blankShoeBINExactlyUnchanged": true,
+  "blankTongueGeometryAndUVUnchanged": true,
+  "originalTongueNodePreserved": true,
+  "onlyReversePrimitiveMaterialChanged": true,
+  "perSourceTriangleAreaCoverageRelativeError": 1.5753092363487646e-06,
+  "maxDerivedPointDistanceFromOriginalFaceRawUnits": 4.626760010046412e-08,
+  "maxFloatBarycentricExcursion": 0.0004429297101979923,
+  "rigHandPositionsAndIndicesExactlyPreserved": true,
+  "authoredJoints": 22,
+  "persistentSilverAnchors": 785,
+  "minimumDorsalAnchorNormalY": 0.5790384411811829,
+  "interpretation": "Numerical asset preparation checks, not contact animation, final design fitting or iPad Safari certification."
+}

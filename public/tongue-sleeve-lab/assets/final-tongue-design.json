@@ -1,0 +1,27 @@
+{
+  "referenceReceived": true,
+  "source": "User inline final-tongue image, 1086×1448; visual trace, not recovered factory vector",
+  "nominalSizeMm": {
+    "height": 158,
+    "width": 103
+  },
+  "outline": "tongue-sleeve-lab/assets/final-tongue-outline.svg",
+  "medallion": {
+    "diameterMm": 75,
+    "centerFromTopLeftMm": [
+      50.5,
+      99.1
+    ],
+    "layout": "modeling/finished-shoe-v8/rhinestone-points.json",
+    "recoveredStones": 785,
+    "matchesLatestArtworkVisually": true,
+    "digitizationIsApproximate": true
+  },
+  "horizontalSeamFromTopMm": 50.5,
+  "crystalZones": [
+    "above-horizontal-seam",
+    "below-horizontal-seam-except-silver-stones"
+  ],
+  "guideMarksAreProduct": false,
+  "geometryStatus": "Reference recorded. Source tongue geometry is kept for the latest requested blank-face preparation; final installed and lifted silhouette needs fitting validation."
+}

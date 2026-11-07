@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "download": "tongue-sleeve-lab/assets/user-hand-cuff-prepared.glb",
+  "onlyIntendedMeshes": true,
+  "noJointDisplayHelperMesh": true,
+  "meshes": [
+    "Horseshoe_Cuff",
+    "Robe_Sleeve",
+    "Robe_UnderCuff",
+    "User_Hand_Skinned",
+    "Same_Silver_Medallion_785"
+  ],
+  "skinJoints": 22,
+  "silverParent": "Horseshoe_Cuff",
+  "maxRestBoundsErrorMetres": 3.7378511023204825e-8,
+  "sourcePartTriangleCountsPreserved": true,
+  "clips": 0,
+  "scope": "Prepared source-derived model, not a finished chapter animation."
+}

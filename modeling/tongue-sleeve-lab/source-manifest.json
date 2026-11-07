@@ -1,0 +1,46 @@
+{
+  "sourceCommit": "0bbbc8245ef574b73be3e7a7f842190e5af9277a",
+  "assets": {
+    "public/assets/onward-ad-v1/onward-ad-v1.glb": {
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "bytes": 23873476,
+      "role": "untouched source"
+    },
+    "public/tongue-sleeve-lab/assets/user-hand-original.glb": {
+      "sha256": "9608397f034b054b914c78f7bbf2a01404496045f2fc37d55efadf027c3b7637",
+      "bytes": 4968320,
+      "role": "untouched source"
+    },
+    "public/tongue-sleeve-lab/assets/user-hand-rig.glb": {
+      "sha256": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116",
+      "bytes": 2868808,
+      "role": "independent chapter derivative"
+    },
+    "public/tongue-sleeve-lab/assets/user-hand-parts.glb": {
+      "sha256": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+      "bytes": 6193560,
+      "role": "independent chapter derivative"
+    },
+    "public/tongue-sleeve-lab/assets/shoe-tongue-blank.glb": {
+      "sha256": "2ed0ddf36e2421c800e1cfecdcebb7d3e0134ffb86e540f89ad774f2d1dd4def",
+      "bytes": 23874156,
+      "role": "independent chapter derivative"
+    },
+    "public/tongue-sleeve-lab/assets/user-hand-cuff-prepared.glb": {
+      "sha256": "a5895fe2f0caafa5fd2b13618bcf795bac250f365793f4d35b8dcb3a71df5506",
+      "bytes": 8071452,
+      "role": "independent chapter derivative"
+    },
+    "public/tongue-sleeve-lab/assets/cuff-medallion-bindings.json": {
+      "sha256": "c7855f7369174c5263076ec29490377f8e1faa1870e1a02c3b67280784b168f2",
+      "bytes": 152771,
+      "role": "independent chapter derivative"
+    },
+    "modeling/tongue-sleeve-lab/user-hand-cuff-prepared.blend": {
+      "sha256": "fb4bb756e83a58f8ff575c03234c0040b289c37fa64f39d934a4ab83e8595b4c",
+      "bytes": 11286886,
+      "role": "independent chapter derivative"
+    }
+  },
+  "scope": "Asset preparation. No production page, push or deployment."
+}
