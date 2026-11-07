@@ -1,10 +1,10 @@
 {
-  "preview": "Heel Motion Lab V1.8",
-  "revision": "heel-pattern-ribbon-v10",
-  "sourceCommit": "a4ef4627128b54d476095a40c77267faa9d3b970",
-  "basePagesCommit": "94f8a866f8f652eeef1c24c4dcfe4350056dee23",
+  "preview": "Heel Motion Lab V1.8.1",
+  "revision": "heel-coil-spacing-v11",
+  "sourceCommit": "0bbbc8245ef574b73be3e7a7f842190e5af9277a",
+  "basePagesCommit": "2cfa3d364488f0091b23bc11cd70176b94c32705",
   "publishedSubdirectory": "heel-motion-lab-v1",
-  "preparedAt": "2026-11-06T17:53:48.986014+00:00",
+  "preparedAt": "2026-11-07T04:55:38.304334+00:00",
   "sourceModelSHA256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
   "scope": "Only the approved independent preview prefix; no source branch push or production-page changes."
 }

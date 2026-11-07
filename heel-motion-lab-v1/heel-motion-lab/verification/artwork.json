@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "revision": "heel-pattern-ribbon-v10",
-  "baseline": "f0a7756952910f0eeb3cbfc708cd4640c3d09cdb",
+  "revision": "heel-coil-spacing-v11",
+  "baseline": "a4ef4627128b54d476095a40c77267faa9d3b970",
   "unchangedMotionModules": [
     "src/heel-motion-lab/motion.ts",
     "src/heel-motion-lab/CameraFrame.ts",
@@ -9,10 +9,11 @@
     "src/heel-motion-lab/Trajectory.ts",
     "src/heel-motion-lab/TerminalShot.ts",
     "src/heel-motion-lab/Feed.ts",
-    "src/heel-motion-lab/Path.ts",
     "src/heel-motion-lab/Reaction.ts",
     "src/heel-motion-lab/HeelActor.ts",
-    "src/heel-motion-lab/Surface.ts"
+    "src/heel-motion-lab/Surface.ts",
+    "src/heel-motion-lab/Ribbon.ts",
+    "src/heel-motion-lab/RibbonArtwork.ts"
   ],
   "scope": "Actual default reconstructed meander and rasterized repeat tested; synthetic calibration chart used separately for generic texture lifecycle checks; no physical iPad Safari test",
   "checks": [
@@ -75,7 +76,7 @@
       }
     },
     {
-      "name": "desktop: artwork does not alter V1.7 position, UV, path or camera",
+      "name": "desktop: artwork does not alter current position, UV, path or camera",
       "passed": true,
       "detail": null
     },
@@ -188,7 +189,7 @@
       }
     },
     {
-      "name": "tablet: artwork does not alter V1.7 position, UV, path or camera",
+      "name": "tablet: artwork does not alter current position, UV, path or camera",
       "passed": true,
       "detail": null
     },
@@ -243,52 +244,57 @@
       "detail": []
     },
     {
-      "name": "approved V1.7 module byte identity: motion",
+      "name": "approved V1.8 non-spacing module byte identity: motion",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: CameraFrame",
+      "name": "approved V1.8 non-spacing module byte identity: CameraFrame",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: DirectorShot",
+      "name": "approved V1.8 non-spacing module byte identity: DirectorShot",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: Trajectory",
+      "name": "approved V1.8 non-spacing module byte identity: Trajectory",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: TerminalShot",
+      "name": "approved V1.8 non-spacing module byte identity: TerminalShot",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: Feed",
+      "name": "approved V1.8 non-spacing module byte identity: Feed",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: Path",
+      "name": "approved V1.8 non-spacing module byte identity: Reaction",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: Reaction",
+      "name": "approved V1.8 non-spacing module byte identity: HeelActor",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: HeelActor",
+      "name": "approved V1.8 non-spacing module byte identity: Surface",
       "passed": true,
       "detail": null
     },
     {
-      "name": "approved V1.7 module byte identity: Surface",
+      "name": "approved V1.8 non-spacing module byte identity: Ribbon",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approved V1.8 non-spacing module byte identity: RibbonArtwork",
       "passed": true,
       "detail": null
     }

@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "revision": "heel-coil-spacing-v11",
+  "baseline": "a4ef4627128b54d476095a40c77267faa9d3b970",
+  "devices": [
+    {
+      "device": "desktop",
+      "firstDownPixels": 8.060895462270764,
+      "secondDownPixels": 12.962918444996717,
+      "upperGapBeforePixels": 16.5889473677789,
+      "upperGapAfterPixels": 31.40319215059253,
+      "maximumWorldOffset": 0.1650000000000001,
+      "fractionOfShoeLength": 0.04852941176470591
+    },
+    {
+      "device": "tablet",
+      "firstDownPixels": 7.795600168575788,
+      "secondDownPixels": 12.536290749338605,
+      "upperGapBeforePixels": 16.042982011370963,
+      "upperGapAfterPixels": 30.369669370952714,
+      "maximumWorldOffset": 0.1650000000000001,
+      "fractionOfShoeLength": 0.04852941176470591
+    }
+  ],
+  "checks": [
+    {
+      "name": "desktop: neutral spacing reproduces actual V1.8 coil positions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: lower first coil moves only a little downward",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 8.060895462270764,
+        "secondDownPixels": 12.962918444996717,
+        "upperGapBeforePixels": 16.5889473677789,
+        "upperGapAfterPixels": 31.40319215059253,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "desktop: adjacent upper paths gain a small visible gap",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 8.060895462270764,
+        "secondDownPixels": 12.962918444996717,
+        "upperGapBeforePixels": 16.5889473677789,
+        "upperGapAfterPixels": 31.40319215059253,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "desktop: adjustment stays below five percent of shoe length",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 8.060895462270764,
+        "secondDownPixels": 12.962918444996717,
+        "upperGapBeforePixels": 16.5889473677789,
+        "upperGapAfterPixels": 31.40319215059253,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "desktop: shoe response and director camera remain identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: heel lead, toe wrap and complete foreground flight are untouched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: artwork bytes and material settings are unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: the correction never changes motion timing or shoe rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: transported frames stay stable during the whole sequence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop: independent reverse still restores the source asset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: neutral spacing reproduces actual V1.8 coil positions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: lower first coil moves only a little downward",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 7.795600168575788,
+        "secondDownPixels": 12.536290749338605,
+        "upperGapBeforePixels": 16.042982011370963,
+        "upperGapAfterPixels": 30.369669370952714,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "tablet: adjacent upper paths gain a small visible gap",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 7.795600168575788,
+        "secondDownPixels": 12.536290749338605,
+        "upperGapBeforePixels": 16.042982011370963,
+        "upperGapAfterPixels": 30.369669370952714,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "tablet: adjustment stays below five percent of shoe length",
+      "passed": true,
+      "detail": {
+        "firstDownPixels": 7.795600168575788,
+        "secondDownPixels": 12.536290749338605,
+        "upperGapBeforePixels": 16.042982011370963,
+        "upperGapAfterPixels": 30.369669370952714,
+        "maximumWorldOffset": 0.1650000000000001,
+        "fractionOfShoeLength": 0.04852941176470591
+      }
+    },
+    {
+      "name": "tablet: shoe response and director camera remain identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: heel lead, toe wrap and complete foreground flight are untouched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: artwork bytes and material settings are unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: the correction never changes motion timing or shoe rotation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: transported frames stay stable during the whole sequence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tablet: independent reverse still restores the source asset",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "environment": "Linux Chromium + SwiftShader; viewport simulation, not physical iPad Safari"
+}
