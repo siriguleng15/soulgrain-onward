@@ -1,6 +1,6 @@
 # 鞋舌 · 马蹄袖动画实验室 V1.1
 
-本轮从动画 V1 提交 `0e6c566a84fd2ec51848679338fb743b7d8fde6e` 建立独立 worktree `/workspace/tongue-motion-refinement-v1-1` 和分支 `feat/tongue-motion-refinement-v1-1`。原 V1 工作区、缓存与预览均保留。根据用户五张粗分镜制作实际可操作的 19 秒 Three.js 动画。分镜中的旧紫色图只参考动作；完成状态使用最新蓝色晶体设计。没有修改原展示网站或后跟动画，没有推送、部署或合并。
+本轮从动画 V1 提交 `0e6c566a84fd2ec51848679338fb743b7d8fde6e` 建立独立 worktree `/workspace/tongue-motion-refinement-v1-1` 和分支 `feat/tongue-motion-refinement-v1-1`。原 V1 工作区、缓存与预览均保留。根据用户五张粗分镜制作实际可操作的 19 秒 Three.js 动画。分镜中的旧紫色图只参考动作；完成状态使用最新蓝色晶体设计。没有修改原展示网站或后跟动画。用户随后明确要求可在 iPad 操作的链接，本轮仅发布独立 HTTPS 预览，不推送开发源分支，不合并 main。
 
 ## 本轮具体改善
 
@@ -8,9 +8,21 @@
 - 可见鞋舌与袖面都依据已记录的 `final-tongue-outline.svg` 拟合；原 75 mm 图案及内部排布不变。79 mm 只是保护原图案的区域直径，不是新的烫钻尺寸。
 - 袖口在翻转前连续压薄，减少中段的大环形鼓包；滚翻采样由 17 个增加到 25 个，保留同一袖面和同一套银钻。
 - 减少过曝与过重的地面影子，让白布和银钻之间更容易辨认；夹取姿态增加轻微食指内收。
-- 新版预览使用 4553；旧版 4551 与旧提交保持原样，没有发布任何外部网站。
+- 本地新版使用 4553；旧版 4551 与旧提交保持原样。公开预览只在 gh-pages 新增独立目录，正式入口和后跟实验室保持不变。
 
 轮廓比对图：`public/tongue-motion-lab/verification/tongue-outline-comparison.svg`。几何检查：`geometry-consistency.json`。这些是与近似参考描边的数值比对，不是工厂尺寸认证。
+
+## iPad Safari 公开预览
+
+- [进入真实 3D 交互页面](https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/?autoplay=0&v=1.1)
+- [动作审片与关键帧](https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/tongue-motion-lab/review.html)
+
+公开 HTTPS 页面已通过模型 SHA 校验、播放／暂停、进度定位、旋转与双指缩放模拟检查，见 `public-preview.json`。测试使用 Chromium 的 iPad 设备模拟，不冒称 Safari 实机验收。
+
+首次打开需要加载模型，等待顶部显示 LIVE 3D 后点击播放。支持单指旋转、双指缩放、时间轴、暂停、重播及独立倒放。公开交互页面的代码版本为 `ce58404`，静态发布提交为 `cd07922`，没有更改正式展示页。
+
+发布使用固定版本地址读取四个二进制资产，运行时仍核对相同 SHA-256。原始资产归档在 `a6e060a`，由标签 `onward-tongue-assets-a6e060a` 保留；仅调整传输位置，模型、UV、纹样和动画数据没有变化。预览页面本身约 13 MB，首次运行仍需加载约 66 MB 的原始模型与形变数据。
+
 
 ## 本地预览
 

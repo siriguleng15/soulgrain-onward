@@ -1,0 +1,92 @@
+{
+  "verifiedAt": "2026-11-07T22:16:53+08:00",
+  "url": "https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/?autoplay=0&v=1.1",
+  "reviewURL": "https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/tongue-motion-lab/review.html",
+  "sourceCodeCommit": "ce58404f2c57dd0d91310c924cb27d9416e2a1a7",
+  "pagesCommit": "cd079228adacd811da6f03b132405946c80db5ca",
+  "assetArchiveCommit": "a6e060a30075d511d574015984d728a6a2087995",
+  "assetArchiveTag": "onward-tongue-assets-a6e060a",
+  "deploymentStatus": "success",
+  "existingPublishedFilesChanged": 0,
+  "existingPublicPages": [
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/",
+      "status": 200,
+      "bytes": 672348,
+      "sha256": "8dbcad8244a3f5f988dc9dc3b9e03be3b0023c5e2de9216831532a68db28f6e8",
+      "unchangedAfterPublication": true
+    },
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/heel-motion-lab-v1/heel-motion-lab.html",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "810a46df5128b64c3491f35bc48d608f3381d6eb6dc0363c6de9537d2c612f6e",
+      "unchangedAfterPublication": true
+    },
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/onward-immersive/",
+      "status": 200,
+      "bytes": 233,
+      "sha256": "f39205ac47f01ebed7513ff68f5180380e165515d5c7c4697c2abf620efde7e4",
+      "unchangedAfterPublication": true
+    }
+  ],
+  "browserValidation": {
+    "passed": true,
+    "url": "https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/?v=1.1&autoplay=0",
+    "sourceVersion": "1.1",
+    "sourceVerified": {
+      "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+      "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
+      "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
+    },
+    "loadedBytes": 66007194,
+    "realWebGL": true,
+    "playPause": true,
+    "timeline": true,
+    "touchRotate": true,
+    "touchPinchZoom": true,
+    "directorRestored": true,
+    "finalHeld": true,
+    "errors": [],
+    "failures": [],
+    "environment": "Linux Chromium / SwiftShader with iPad device emulation; not physical iPad Safari.",
+    "browserTLSNote": "Automation ignores the managed cloud proxy CA mismatch. System-trust-store HTTPS downloads and asset SHA-256 were verified separately; the deployed page contains no certificate bypass."
+  },
+  "assetIntegrity": [
+    {
+      "file": "assets/onward-ad-v1/onward-ad-v1.glb",
+      "status": 200,
+      "bytes": 23873476,
+      "sha256": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
+      "seconds": 1.3,
+      "matches": true
+    },
+    {
+      "file": "tongue-sleeve-lab/assets/user-hand-parts.glb",
+      "status": 200,
+      "bytes": 6193560,
+      "sha256": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
+      "seconds": 0.37,
+      "matches": true
+    },
+    {
+      "file": "tongue-sleeve-lab/assets/user-hand-rig.glb",
+      "status": 200,
+      "bytes": 2868808,
+      "sha256": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116",
+      "seconds": 0.77,
+      "matches": true
+    },
+    {
+      "file": "tongue-motion-lab/assets/tongue-cuff-morphs.f16",
+      "status": 200,
+      "bytes": 32856568,
+      "sha256": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
+      "seconds": 0.78,
+      "matches": true
+    }
+  ],
+  "scope": "User requested an iPad-operable HTTPS preview. Only a new Pages directory and immutable asset tag were published; main and source branches were not pushed."
+}
