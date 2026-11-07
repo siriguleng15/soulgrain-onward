@@ -21,5 +21,8 @@
     "file:src/pattern-reveal/TouchRevealInput.ts": true
   },
   "protectedDirtyWorktreeUnchanged": true,
-  "heelWorktreeHEADUnchanged": true
+  "heelWorktreeHEADUnchanged": true,
+  "previousAnimationHEADUnchanged": true,
+  "previousAnimationWorktreeClean": true,
+  "previousAnimationCacheSHA256": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db"
 }

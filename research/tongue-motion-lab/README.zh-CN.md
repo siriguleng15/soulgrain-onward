@@ -1,6 +1,16 @@
-# 鞋舌 · 马蹄袖动画实验室 V1
+# 鞋舌 · 马蹄袖动画实验室 V1.1
 
-本轮从已确认的资产准备提交 `4c0bd8a36d8cf714821b9e2cb36c2eb5407e71f4` 建立独立分支 `feat/tongue-motion-lab-v1`。根据用户五张粗分镜制作实际可操作的 19 秒 Three.js 动画。分镜中的旧紫色图只参考动作；完成状态使用最新蓝色晶体设计。没有修改原展示网站或后跟动画，没有推送、部署或合并。
+本轮从动画 V1 提交 `0e6c566a84fd2ec51848679338fb743b7d8fde6e` 建立独立 worktree `/workspace/tongue-motion-refinement-v1-1` 和分支 `feat/tongue-motion-refinement-v1-1`。原 V1 工作区、缓存与预览均保留。根据用户五张粗分镜制作实际可操作的 19 秒 Three.js 动画。分镜中的旧紫色图只参考动作；完成状态使用最新蓝色晶体设计。没有修改原展示网站或后跟动画，没有推送、部署或合并。
+
+## 本轮具体改善
+
+- 初态不再从旧窄鞋舌逐渐变宽。初态／终态基面一致，抬平／覆袖基面一致；浏览器验证对实际采样顶点作逐项比较。
+- 可见鞋舌与袖面都依据已记录的 `final-tongue-outline.svg` 拟合；原 75 mm 图案及内部排布不变。79 mm 只是保护原图案的区域直径，不是新的烫钻尺寸。
+- 袖口在翻转前连续压薄，减少中段的大环形鼓包；滚翻采样由 17 个增加到 25 个，保留同一袖面和同一套银钻。
+- 减少过曝与过重的地面影子，让白布和银钻之间更容易辨认；夹取姿态增加轻微食指内收。
+- 新版预览使用 4553；旧版 4551 与旧提交保持原样，没有发布任何外部网站。
+
+轮廓比对图：`public/tongue-motion-lab/verification/tongue-outline-comparison.svg`。几何检查：`geometry-consistency.json`。这些是与近似参考描边的数值比对，不是工厂尺寸认证。
 
 ## 本地预览
 
@@ -8,13 +18,13 @@
 
 ```bash
 node scripts/build-tongue-motion-lab.mjs
-node node_modules/vite/bin/vite.js preview --config vite.tongue-motion-lab.config.ts --host 0.0.0.0 --port 4551 --strictPort
+node node_modules/vite/bin/vite.js preview --config vite.tongue-motion-lab.config.ts --host 0.0.0.0 --port 4553 --strictPort
 ```
 
-- 实时交互：`http://localhost:4551/tongue-motion-lab.html`
-- 审片、录屏及九张关键画面：`http://localhost:4551/tongue-motion-lab/review.html`
+- 实时交互：`http://localhost:4553/tongue-motion-lab.html`
+- 审片、录屏及九张关键画面：`http://localhost:4553/tongue-motion-lab/review.html`
 - 禁用自动播放：入口后加 `?autoplay=0`；系统减少动态偏好同样不自动播放。
-- 本地构建只写 `/tmp/tongue-motion-lab-v1-build`，不运行旧站点的发布脚本。这些地址是本机地址，不能作为外部 iPad 可访问的 HTTPS 发布链接。
+- 本地构建只写 `/tmp/tongue-motion-lab-v1-1-build`，不运行旧站点的发布脚本。这些地址是本机地址，不能作为外部 iPad 可访问的 HTTPS 发布链接。
 
 ## 已实现的动作
 
@@ -60,13 +70,14 @@ node node_modules/vite/bin/vite.js preview --config vite.tongue-motion-lab.confi
 | `SilverSurfaceBatch.ts` | 无循环临时对象分配的银钻绑定求值；与准备阶段通用 `SurfaceBinding` 独立比对。 |
 | `CrystalCloth.ts` | 布面内部 PBR 混合及固定材质程序，时间变化仅更新 uniform。 |
 | `PlainCanvas.ts` | 章节专属素帆布与细织纹法线。 |
+| `modeling/tongue-motion-lab/design_surface.py` | SVG 参考轮廓、原图案保护区与共用材质坐标。 |
 | `modeling/tongue-motion-lab/build_motion.py` | 鞋舌轮廓、真实源 UV 对应、滚翻形变、真实手表面支撑与落布姿态烘焙。 |
 | `modeling/tongue-motion-lab/build_crystal.py` | 独立生成 1024² 色彩、切面法线与粗糙度贴图，5,220 个细晶胞。 |
 | `scripts/bake-tongue-hand-poses.mjs` | 在实际用户手模上制作抓取与响指姿态，CCD 接触拟合，输出固定骨骼四元数。 |
 
 需要修改动作时，先编辑相应源，再按下列命令重建本章派生文件；这些脚本只写新章节目录，不保存或覆盖原 GLB / Blender。
 
-作者环境为 Python 3.12、NumPy 2.3.5、SciPy 1.17.0、Pillow 12.3.0，以及仓库既有的 Three.js 0.180.0。浏览器验证与录制需要 Playwright、Chromium 和 FFmpeg；重建页面本身不需要 Blender。
+作者环境为 Python 3.12、NumPy 2.3.5、SciPy 1.17.0、Pillow 12.3.0、Matplotlib 3.10.8，以及仓库既有的 Three.js 0.180.0。Python 作者工具版本列于 `modeling/tongue-motion-lab/requirements.txt`。浏览器验证与录制需要 Playwright、Chromium 和 FFmpeg；重建页面本身不需要 Blender。
 
 ```bash
 python3 -B modeling/tongue-motion-lab/build_motion.py
@@ -75,7 +86,7 @@ node scripts/bake-tongue-hand-poses.mjs
 node scripts/build-tongue-motion-lab.mjs
 ```
 
-分镜语义复用 `src/tongue-sleeve-lab/ChapterContract.ts`，未更改准备阶段契约。袖面共 30 个预制姿态：17 个滚翻、12 个逐段落布、1 个最终安装姿态。30 个位置与法线目标通过 GPU 插值，不在每个动画帧重算六万多个顶点，也不进行实时布料模拟。缓存约 25.9 MB，传输为半浮点混合固定根部 float32，运行时解码 float32；当前仍为完整研究资产，尚未制作轻量 LOD。
+分镜语义复用 `src/tongue-sleeve-lab/ChapterContract.ts`，未更改准备阶段契约。袖面共 38 个预制姿态：25 个滚翻、12 个逐段落布、1 个最终安装姿态。38 个位置与法线目标通过 GPU 插值，不在每个动画帧重算六万多个顶点，也不进行实时布料模拟。缓存约 32.9 MB，传输为半浮点混合固定根部 float32，运行时解码 float32；当前仍为完整研究资产，尚未制作轻量 LOD。
 
 ## 可重复检查
 
@@ -83,8 +94,10 @@ node scripts/build-tongue-motion-lab.mjs
 
 ```bash
 python3 -B scripts/check-tongue-motion-assets.py
+python3 -B scripts/check-tongue-design-domain.py
 node scripts/check-tongue-sleeve-contracts.mjs
 node scripts/check-tongue-motion-browser.cjs
+python3 -B scripts/compare-tongue-revisions.py
 python3 -B scripts/check-tongue-motion-protection.py
 node scripts/record-tongue-motion.cjs
 python3 -B scripts/record-tongue-motion-live.py
@@ -96,15 +109,15 @@ python3 -B scripts/check-tongue-motion-delivery.py
 
 浏览器检查包括九个分镜、13.8 / 16.8 秒同姿态银钻矩阵完全相等、响指前水晶进度严格为零、确定性正反向定位、多次重播、各阶段取消、终态保持、独立倒放、相机交接不跳、旋转时不争夺控制、WebGL 上下文恢复、加载失败显示、单画布及桌面／平板／手机布局。操作录屏还执行快速重播／取消与模拟页面隐藏暂停检查。触控使用 Chromium iPad 设备模拟；尚无 iPad Safari 实机结论。
 
-审片 MP4 为 24 fps 固定时间步捕捉真实 WebGL 各帧，用于看动作；真实操作 MP4 则为软件渲染浏览器的实时录制，用于检查按钮与交互。均为 H.264 / yuv420p / faststart，不能拿审片帧率作为实时性能证明。运行时统计的 render submission 时间也不等于 GPU 实际呈现帧率。
+V1.1 审片 MP4 为 24 fps 固定时间步捕捉真实 WebGL 各帧，使用 DPR 0.8、1024 阴影，输出 888 × 736，用于看动作；真实操作 MP4 则为软件渲染浏览器的实时录制，用于检查按钮与交互。均为 H.264 / yuv420p / faststart，不能拿审片帧率作为实时性能证明。运行时统计的 render submission 时间也不等于 GPU 实际呈现帧率。
 
 ## 当前视觉问题与下一步条件
 
-1. 滚翻是真实连续网格变形，但依然为艺术控制的烘焙。中段袖口形成的褶皱、根部局部拉伸及边缘收口需要细修，尤其自由视角会暴露源 AI 拓扑不均匀。
+1. 滚翻是真实连续网格变形，但依然为艺术控制的烘焙。大环状折口已压薄，局部褶皱、根部拉伸及边缘收口仍需细修，自由视角会暴露源 AI 拓扑不均匀。
 2. 夹取锚点已接触；整根指头的碰撞体积、指节形态、响指关节速度和手掌接触仍需动画师级润饰。没有用隐藏手部或淡入淡出掩饰这些问题。
 3. 蓝色晶体为独立程序 PBR 纹理，保留深蓝／宝蓝／青蓝细晶体反光；与最终图的密度、颜色、银钻高光仍有差距，需要下一轮艺术比对。
 4. 部分源鞋舌背面与根部在翻平时仍有可见边界与皱褶；数值根部固定并不代表整段连接形态已经最终精修。
-   素帆布初态沿用已确认清理过的原鞋舌基面；覆袖后的设计外形由派生袖面形成。基面与覆袖后外形的宽度、边缘轮廓尚未在所有姿态统一到最终裁片，不能把当前版本视为鞋舌几何定稿。
+   V1.1 已让初态和最终状态使用同一安装基面，抬平与覆盖阶段使用同一展开基面；可见游离段和袖面共享 SVG 参考材质坐标，宽度约 103 mm。连接鞋身的根部仍精确保留原顶点，因此该隐藏连接段没有强行改成裁片轮廓。
 5. 完整资产初次加载约 59 MB 加晶体贴图，显存中还有 float32 形变；桌面 DPR ≤ 1.5、触控 DPR ≤ 1.15，阴影分别 2048 / 1024。已避免逐帧重编译与大量银钻对象分配，仍需真实 iPad 的 Safari 设备测试后决定 LOD／缓存压缩。
 6. 本轮是独立动画实验室。正式接入既有鞋舌章节、网页滚动导航与跨章节状态，需要艺术确认后的集成步骤，不把独立实验说成已经替换生产页面。
 

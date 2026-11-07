@@ -59,6 +59,13 @@ def main():
     if heel.is_dir():
         checks['heelWorktreeHEADUnchanged'] = git(heel, 'rev-parse', 'HEAD').decode().strip() == '0bbbc8245ef574b73be3e7a7f842190e5af9277a'
         assert checks['heelWorktreeHEADUnchanged']
+    previous = Path('/workspace/tongue-sleeve-lab-v1')
+    if previous.is_dir() and previous.resolve() != ROOT.resolve():
+        checks['previousAnimationHEADUnchanged'] = git(previous, 'rev-parse', 'HEAD').decode().strip() == '0e6c566a84fd2ec51848679338fb743b7d8fde6e'
+        checks['previousAnimationWorktreeClean'] = git(previous, 'status', '--porcelain') == b''
+        checks['previousAnimationCacheSHA256'] = digest((previous / 'public/tongue-motion-lab/assets/tongue-cuff-morphs.f16').read_bytes())
+        assert checks['previousAnimationHEADUnchanged'] and checks['previousAnimationWorktreeClean']
+        assert checks['previousAnimationCacheSHA256'] == '0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db'
     report = {'passed': True, 'baseCommit': BASE, 'scope': 'Only new tongue-motion-lab files; no original asset or existing page edits.', **checks}
     output = ROOT / 'public/tongue-motion-lab/verification/worktree-protection.json'
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')

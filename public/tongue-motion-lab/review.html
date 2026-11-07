@@ -2,24 +2,26 @@
 <html lang="zh-CN">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SOULGRAIN — 鞋舌动画 V1 审片</title>
+<title>SOULGRAIN — 鞋舌动画 V1.1 审片</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#080e17;color:#dce6ef;font:16px/1.7 system-ui,sans-serif}main{max-width:1400px;margin:auto;padding:36px 24px 80px}h1{font-weight:500;font-size:clamp(24px,4vw,40px);letter-spacing:.02em}h2{font-size:22px;font-weight:500;margin-top:42px}p{max-width:900px;color:#aabacb}a{color:#c5d9ed;text-underline-offset:5px}.tag{font:12px/1.6 ui-monospace,monospace;letter-spacing:.16em;color:#8298ae}video{width:100%;max-height:80vh;background:#080e17;border:1px solid #253343}figure{margin:0}figcaption{padding:10px 0 20px;color:#aabacb;font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}img{display:block;width:100%;border:1px solid #253343}.links{display:flex;flex-wrap:wrap;gap:24px;padding:16px 0;border-bottom:1px solid #253343}li{margin-bottom:8px}@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid,.pair{grid-template-columns:1fr}main{padding:24px 16px}}
 </style>
 <main>
 <div class="tag">SOULGRAIN / ONWARD — INDEPENDENT CHAPTER STUDY</div>
-<h1>马蹄袖 → 鞋舌 · 动画 V1</h1>
+<h1>马蹄袖 → 鞋舌 · 动画 V1.1</h1>
 <nav class="links"><a href="../tongue-motion-lab.html">进入实时 3D 动画实验室 ↗</a><a href="verification/browser-validation.json">浏览器验证数据</a><a href="verification/asset-validation.json">几何与资产验证</a></nav>
 <p>19 秒连续叙事：手进入、捏起抬平、摊掌、同一袖面翻转、抽手、响指、水晶布面变化、返回整鞋视角。银钻在手登场时已经存在，响指只改变布面。结束定格；倒放使用独立按钮。</p>
 <h2>完整动作审片</h2>
-<video controls playsinline preload="metadata" poster="verification/09-final-shoe.png"><source src="verification/tongue-motion-v1-review.mp4" type="video/mp4"></video>
-<p>24 fps 固定时间步逐帧捕捉真实 WebGL 场景，H.264 编码；用于看动作连续性，不代表设备实时帧率。实验室本身为真实三维交互，不播放这个视频冒充动画。</p>
+<video controls playsinline preload="metadata" poster="verification/09-final-shoe.png"><source src="verification/tongue-motion-v1-1-review.mp4" type="video/mp4"></video>
+<p>24 fps 固定时间步逐帧捕捉真实 WebGL 场景，DPR 0.8 / 1024 阴影，888 × 736，H.264 编码；用于看动作连续性，不代表设备实时帧率。实验室本身为真实三维交互，不播放这个视频冒充动画。</p>
 <h2>真实浏览器操作录屏</h2>
-<video controls playsinline preload="metadata" poster="verification/01-plain-shoe.png"><source src="verification/tongue-motion-v1-interaction.mp4" type="video/mp4"></video>
+<video controls playsinline preload="metadata" poster="verification/01-plain-shoe.png"><source src="verification/tongue-motion-v1-1-interaction.mp4" type="video/mp4"></video>
 <p>实际点击播放、独立倒放、拖查时间轴、自由旋转和恢复导演机位。录制环境为 Linux Chromium / SwiftShader 软件渲染，可能比真实 GPU 慢。尚未完成 iPad Safari 实机检查。</p>
+<h2>与 V1 的实际渲染对照</h2><figure><img loading="lazy" src="verification/v1-v1-1-comparison.jpg" alt="旧版与新版初态鞋舌和翻袖中段对比"><figcaption>相同时间、相同导演机位的浏览器截图，仅裁切与排版；左为 V1，右为 V1.1。</figcaption></figure>
+<h2>本轮轮廓一致性检查</h2><p>初态与装回时采用同一安装基面，抬平与覆袖前后采用同一展开基面，可见部分宽度均约 103 mm。下图灰线为已记录的参考描边，蓝线为鞋舌游离段边缘，点为袖面；原连接根部保留。烫钻图案仍约 75 mm。</p><figure><img style="max-width:460px;margin:auto" src="verification/tongue-outline-comparison.svg" alt="参考轮廓、鞋舌游离段与袖面对应关系"><figcaption><a href="verification/geometry-consistency.json">查看数值检查</a> · 依据近似设计描边，不代表工厂实测精度。</figcaption></figure>
 <h2>关键阶段</h2>
 <div class="grid">
-<figure><img loading="lazy" src="verification/01-plain-shoe.png" alt="初始素帆布鞋"><figcaption>00 · 初始素帆布，已清理的原鞋舌无钻无水晶。</figcaption></figure>
+<figure><img loading="lazy" src="verification/01-plain-shoe.png" alt="初始素帆布鞋"><figcaption>00 · 初始素帆布，直接使用拟合后的宽鞋舌，无钻无水晶。</figcaption></figure>
 <figure><img loading="lazy" src="verification/02-cuff-enters.png" alt="带银钻马蹄袖进入"><figcaption>01 · 手与袍袖入场，银钻已在马蹄袖上。</figcaption></figure>
 <figure><img loading="lazy" src="verification/03-real-pinch.png" alt="真实手模捏起鞋舌"><figcaption>02 · 拇指、食指夹住真实鞋舌表面锚点并抬平。</figcaption></figure>
 <figure><img loading="lazy" src="verification/04-palm-contact.png" alt="手掌展开贴合"><figcaption>03 · 俯视，鞋头朝上，手掌依次展开。</figcaption></figure>
@@ -33,7 +35,7 @@
 <div class="pair"><figure><img loading="lazy" src="verification/material-before-snap.png" alt="响指前白布银钻"><figcaption>13.8 s · 银钻在白布上。</figcaption></figure><figure><img loading="lazy" src="verification/material-after-snap.png" alt="响指后同一套银钻蓝布"><figcaption>16.8 s · 同一套银钻，布面变为蓝色晶体材质。</figcaption></figure></div>
 <p>此对比使用相同袖面姿态，785 个银钻实例矩阵逐项完全一致。几何、实例身份、图案与银钻材质没有在响指时被替换。</p>
 <h2>本轮仍需艺术审核</h2>
-<ul><li>袖口滚翻的褶皱、边缘收口及鞋舌根部仍有拉伸与细小边界瑕疵，需要继续修饰；原鞋舌基面与覆袖后的轮廓尚未在所有姿态统一到最终裁片。</li><li>手使用用户模型的派生骨骼；关节弯曲、抓取体积和响指力度仍有可见人工感。</li><li>蓝色微晶纹理是独立制作的 PBR 近似，颜色层次、晶体密度与银钻反光还需对照最终图打磨。</li><li>数值检查覆盖指定锚点与采样阶段，不等于全表面、全时间连续碰撞证明，也不是实时布料模拟。</li></ul>
+<ul><li>袖口滚翻的褶皱、边缘收口及鞋舌根部仍有拉伸与细小边界瑕疵，需要继续修饰；可见部分已统一参考轮廓，连接根部仍保留原鞋结构。</li><li>手使用用户模型的派生骨骼；关节弯曲、抓取体积和响指力度仍有可见人工感。</li><li>蓝色微晶纹理是独立制作的 PBR 近似，颜色层次、晶体密度与银钻反光还需对照最终图打磨。</li><li>数值检查覆盖指定锚点与采样阶段，不等于全表面、全时间连续碰撞证明，也不是实时布料模拟。</li></ul>
 <p>独立实验页面。未修改原 GLB、原贴图、既有广告与后跟动画，未推送或部署正式网站。</p>
 </main>
 </html>

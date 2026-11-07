@@ -2,7 +2,7 @@ import './style.css';
 import { MotionScene } from './MotionScene.ts';
 import { SHOTS } from '../tongue-sleeve-lab/ChapterContract.ts';
 const app = document.getElementById('app')!;
-app.innerHTML = `<header><div><b>SOULGRAIN</b><small>ONWARD / NIGHTFALL</small></div><span>TONGUE MOTION LAB <em>V1</em></span><small id="status" role="status">正在载入鞋模、手部与连续形变…</small></header>
+app.innerHTML = `<header><div><b>SOULGRAIN</b><small>ONWARD / NIGHTFALL</small></div><span>TONGUE MOTION LAB <em>V1.1</em></span><small id="status" role="status">正在载入鞋模、手部与连续形变…</small></header>
 <main><section class="viewport"><div id="stage"></div><div class="scene-top">02 — TONGUE / THE HORSESHOE CUFF</div><div id="error" role="alert" hidden></div><div class="scene-bottom"><div><small id="shot-number">SHOT 00</small><h1 id="shot-title">素帆布初始展示</h1></div><span id="camera-label">导演镜头</span></div></section>
 <aside><section><div class="section-head"><h2>时间轴</h2><output id="time">0.00 / 19.00 s</output></div><div class="row"><button id="play" class="primary">播放</button><button id="pause">暂停</button><button id="replay">重播</button></div><label for="timeline">动画进度</label><input id="timeline" type="range" min="0" max="19" step=".01" value="0" aria-label="动画进度"><div class="row small-row"><select id="speed" aria-label="播放速度"><option value=".25">0.25×</option><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="3">3×</option></select><button id="reverse">独立倒放</button><button id="reset">取消／复位</button></div></section>
 <section><h2>分镜定位</h2><div class="shots">${SHOTS.map(s => `<button data-time="${s.id === '09' ? 19 : s.start}" data-shot="${s.id}"><span>${s.id}</span>${s.title}</button>`).join('')}</div></section>

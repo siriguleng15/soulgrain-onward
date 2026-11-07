@@ -3,7 +3,7 @@ const { chromium, devices } = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const root = path.resolve(__dirname, '..'), out = path.join(root, 'public/tongue-motion-lab/verification'), url = process.env.TONGUE_MOTION_URL || 'http://127.0.0.1:4551/tongue-motion-lab.html?autoplay=0';
+const root = path.resolve(__dirname, '..'), out = path.join(root, 'public/tongue-motion-lab/verification'), url = process.env.TONGUE_MOTION_URL || 'http://127.0.0.1:4553/tongue-motion-lab.html?autoplay=0';
 const launch = { executablePath: '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] };
 async function ready(p) { p.setDefaultTimeout(45000); console.log('QA loading page'); await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 }); await p.waitForFunction(() => window.__tongueMotion?.state().ready, undefined, { timeout: 180000 }); await p.evaluate(() => window.__tongueMotion.pause()); }
 async function seek(p, t, force = true) { const revision = await p.evaluate(([t, f]) => window.__tongueMotion.renderAt(t, f), [t, force]); await p.waitForFunction(r => window.__tongueMotion.state().drawRevision >= r, revision, { timeout: 30000 }); return p.evaluate(() => window.__tongueMotion.state()); }
@@ -23,6 +23,21 @@ let browser;
     assert.equal(initial.crystalFront, 0);
     assert.equal(initial.handVisible, false);
     assert.equal(await p.locator('canvas').count(), 1);
+    const consistency = await p.evaluate(() => {
+        const a = window.__tongueMotion, l = a.lab;
+        function sample(t) {
+            a.renderAt(t, true);
+            const points = [];
+            for (const mesh of [...l.tongues, ...l.eyelets, ...l.followers])
+                for (let i = 0; i < mesh.geometry.getAttribute('position').count; i += 79)
+                    points.push(...mesh.getVertexPosition(i, l.camera.position.clone()).toArray());
+            return points;
+        }
+        const rest = sample(0), final = sample(19), lifted = sample(6), covered = sample(13.8);
+        return { restFinalMaxError: Math.max(...rest.map((v, i) => Math.abs(v - final[i]))), flatCoveredMaxError: Math.max(...lifted.map((v, i) => Math.abs(v - covered[i]))) };
+    });
+    assert.equal(consistency.restFinalMaxError, 0, 'Plain initial tongue has a different shape from the final tongue');
+    assert.equal(consistency.flatCoveredMaxError, 0, 'Tongue changes shape during cuff coverage');
     const frames = [[0, '01-plain-shoe'], [2.9, '02-cuff-enters'], [5.8, '03-real-pinch'], [7.8, '04-palm-contact'], [9.3, '05-sleeve-flip'], [13.3, '06-white-sleeve-left'], [14.43, '07-snap'], [15.6, '08-crystal-front'], [19, '09-final-shoe']], states = [];
     for (const [t, name] of frames) {
         const s = await seek(p, t);
@@ -147,6 +162,14 @@ let browser;
         await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: tx + i * 9, y: ty + i * 2 }] });
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     assert.equal((await tp.evaluate(() => window.__tongueMotion.state())).cameraOwner, 'user');
+    const pinchBefore = await tp.evaluate(() => { const l = window.__tongueMotion.lab; return l.camera.position.distanceTo(l.controls.target); });
+    const pcx = tr.x + tr.width * .45, pcy = tr.y + tr.height * .50;
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ id: 1, x: pcx - 70, y: pcy }, { id: 2, x: pcx + 70, y: pcy }] });
+    for (let i = 1; i <= 5; i++)
+        await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ id: 1, x: pcx - 70 - i * 6, y: pcy }, { id: 2, x: pcx + 70 + i * 6, y: pcy }] });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    const pinchAfter = await tp.evaluate(() => { const l = window.__tongueMotion.lab; return l.camera.position.distanceTo(l.controls.target); });
+    assert.ok(Math.abs(pinchAfter - pinchBefore) > .01, 'Two-finger touch did not zoom the actual camera');
     await tp.screenshot({ path: path.join(out, '10-tablet-touch.png') });
     await tablet.close();
     console.log('QA phone');
@@ -162,7 +185,7 @@ let browser;
     await fail.locator('#error').waitFor({ state: 'visible', timeout: 60000 });
     assert.equal(await fail.locator('canvas').count(), 1);
     assert.deepEqual(errors, []);
-    const report = { passed: true, environment: 'Linux Chromium / SwiftShader; touch is device emulation, not physical iPad Safari', sameSilverAndCuffThroughout: true, silverGeometryExactlyEqualAcrossMaterialChange: true, preSnapCrystalAlwaysZero: true, frames: states, framing, repeat, fastSilverBindingMaxError: batchError, cancelEachPhase: true, forwardHeld: true, independentReverseRestored: true, pauseStable: true, cameraOwnershipNoJump: true, timelineRetainsUserCamera: true, contextRestored: context, touchDrag: true, mobileNoOverflow: true, loadFailureVisible: true, singleCanvas: true, errors };
+    const report = { passed: true, environment: 'Linux Chromium / SwiftShader; touch is device emulation, not physical iPad Safari', tonguePoseConsistency: consistency, sameSilverAndCuffThroughout: true, silverGeometryExactlyEqualAcrossMaterialChange: true, preSnapCrystalAlwaysZero: true, frames: states, framing, repeat, fastSilverBindingMaxError: batchError, cancelEachPhase: true, forwardHeld: true, independentReverseRestored: true, pauseStable: true, cameraOwnershipNoJump: true, timelineRetainsUserCamera: true, contextRestored: context, touchDrag: true, touchPinchZoom: true, mobileNoOverflow: true, loadFailureVisible: true, singleCanvas: true, errors };
     fs.writeFileSync(path.join(out, 'browser-validation.json'), JSON.stringify(report, null, 2) + '\n');
     console.log(JSON.stringify({ passed: true, framing, repeat, errors }, null, 2));
     await b.close();

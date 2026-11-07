@@ -36,8 +36,9 @@ def main():
             page.set_default_timeout(45000)
             errors = []
             page.on('pageerror', lambda e: errors.append(str(e)))
-            page.goto('http://127.0.0.1:4551/tongue-motion-lab.html?autoplay=0', wait_until='domcontentloaded')
+            page.goto('http://127.0.0.1:4553/tongue-motion-lab.html?autoplay=0', wait_until='domcontentloaded')
             page.wait_for_function('window.__tongueMotion?.state().ready', timeout=180000)
+            print('Live capture ready: V1.1', flush=True)
             # Warm the real renderer, then use only visible controls for the recording.
             page.locator('[data-shot="09"]').click()
             page.wait_for_timeout(500)
@@ -62,10 +63,12 @@ def main():
             page.locator('#play').click()
             page.wait_for_function('window.__tongueMotion.state().time===19 && !window.__tongueMotion.state().playing')
             forward_seconds = time.monotonic() - start
+            print('Forward playback and end hold complete', flush=True)
             page.wait_for_timeout(1200)
             page.select_option('#speed', '3')
             page.locator('#reverse').click()
             page.wait_for_function('window.__tongueMotion.state().time===0 && !window.__tongueMotion.state().playing')
+            print('Independent reverse complete', flush=True)
             page.wait_for_timeout(500)
             slider = page.locator('#timeline')
             slider.focus()
@@ -93,7 +96,7 @@ def main():
             recorded = video.path()
             browser.close()
             assert not errors, errors
-        output = OUT / 'tongue-motion-v1-interaction.mp4'
+        output = OUT / 'tongue-motion-v1-1-interaction.mp4'
         subprocess.run([ffmpeg, '-y', '-ss', str(cut_in), '-i', str(recorded), '-an', '-c:v', 'libx264',
             '-preset', 'fast', '-crf', '20', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', str(output)],
             check=True, capture_output=True)

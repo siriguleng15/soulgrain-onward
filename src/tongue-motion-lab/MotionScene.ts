@@ -92,11 +92,11 @@ export class MotionScene {
         const pmrem = new PMREMGenerator(this.renderer), room = new RoomEnvironment();
         this.environment = pmrem.fromScene(room, .035);
         this.scene.environment = this.environment.texture;
-        this.scene.environmentIntensity = .65;
+        this.scene.environmentIntensity = .55;
         pmrem.dispose();
         room.dispose();
-        this.scene.add(new HemisphereLight(0xcadcf2, 0x17141c, .9));
-        const key = new DirectionalLight(0xf0f4ff, 2.5);
+        this.scene.add(new HemisphereLight(0xcadcf2, 0x17141c, .5));
+        const key = new DirectionalLight(0xf0f4ff, 1.8);
         key.position.set(-3, 7, 5);
         key.castShadow = true;
         const coarse = matchMedia('(pointer:coarse)').matches;
@@ -106,17 +106,17 @@ export class MotionScene {
         key.shadow.normalBias = .005;
         key.shadow.radius = 3;
         this.scene.add(key);
-        const rim = new DirectionalLight(0x82bdf1, 1.5);
+        const rim = new DirectionalLight(0x82bdf1, 1.25);
         rim.position.set(5, 3, -5);
         this.scene.add(rim);
-        const fill = new DirectionalLight(0xffffff, .8);
+        const fill = new DirectionalLight(0xffffff, .45);
         fill.position.set(-5, 2, -2);
         this.scene.add(fill);
         this.product.name = 'Chapter_Only_Product_Root';
         this.product.scale.setScalar(DISPLAY_SCALE);
         this.product.position.fromArray(SHOE_CENTER).multiplyScalar(-DISPLAY_SCALE);
         this.scene.add(this.product);
-        const ground = new Mesh(new PlaneGeometry(200, 200), new ShadowMaterial({ color: 0x000000, opacity: .28, side: DoubleSide }));
+        const ground = new Mesh(new PlaneGeometry(200, 200), new ShadowMaterial({ color: 0x000000, opacity: .08, side: DoubleSide }));
         ground.rotation.x = -Math.PI / 2;
         ground.position.y = -.95;
         ground.receiveShadow = true;
@@ -200,6 +200,13 @@ export class MotionScene {
         });
         this.product.add(shoe.scene);
         this.actor = new CuffActor(parts.scene, layout, rig.scene);
+        const silver = this.actor.stones.material;
+        if (silver instanceof MeshStandardMaterial) {
+            silver.color.setHex(0xd9dee4);
+            silver.metalness = 1;
+            silver.roughness = .21;
+            silver.envMapIntensity = .8;
+        }
         this.product.add(this.actor.root);
         this.actor.root.add(this.handGroup, this.clothGroup);
         this.handGroup.add(rig.scene, this.actor.robe, this.actor.underRobe);
@@ -261,8 +268,10 @@ export class MotionScene {
     private setTongue(lift: number, installed: number) {
         for (const mesh of [...this.tongues, ...this.eyelets, ...this.followers]) {
             const weights = mesh.morphTargetInfluences!;
-            weights[0] = lift * (1 - installed);
-            weights[1] = installed;
+        weights[0] = lift * (1 - installed);
+        // Initial canvas and final cloth share the same fitted tongue shape.
+        // The untouched source geometry is retained only as protected input.
+        weights[1] = 1 - weights[0];
         }
     }
     private pinchTransform(pointWorld: Vector3, normal: Vector3) {

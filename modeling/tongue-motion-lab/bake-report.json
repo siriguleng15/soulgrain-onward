@@ -1,18 +1,18 @@
 {
   "passed": true,
-  "poses": 30,
-  "cacheBytes": 25865056,
-  "finalFlatMedallionMaxCenterErrorMetres": 2.7710431089400522e-05,
+  "poses": 38,
+  "cacheBytes": 32856568,
+  "finalFlatMedallionMaxCenterErrorMetres": 2.3012048923220133e-05,
   "flatBoundsMetres": [
     [
-      -0.0515,
-      -0.019680499953653,
-      0.0
+      -0.05148334567075564,
+      -0.017161611253874796,
+      8.521732557294215e-05
     ],
     [
-      0.0515,
+      0.05149300371901817,
       0.0418488152235364,
-      0.158
+      0.15794549724213022
     ]
   ],
   "sourceTopologyUnchanged": true,

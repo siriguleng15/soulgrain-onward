@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { copyFile, mkdir, readFile, writeFile, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-const root = fileURLToPath(new URL('../', import.meta.url)), out = '/tmp/tongue-motion-lab-v1-build';
+const root = fileURLToPath(new URL('../', import.meta.url)), out = '/tmp/tongue-motion-lab-v1-1-build';
 execFileSync(process.execPath, [path.join(root, 'node_modules/typescript/bin/tsc'), '-p', path.join(root, 'tsconfig.tongue-motion-lab.json')], { cwd: root, stdio: 'inherit' });
 const contract = JSON.parse(await readFile(path.join(root, 'public/tongue-motion-lab/assets/motion-contract.json'), 'utf8'));
 const handPose = JSON.parse(await readFile(path.join(root, 'public/tongue-motion-lab/assets/hand-contact-poses.json'), 'utf8'));
@@ -16,7 +16,7 @@ await build({ root, configFile: path.join(root, 'vite.tongue-motion-lab.config.t
 await mkdir(path.join(out, 'assets/onward-ad-v1'), { recursive: true });
 await copyFile(path.join(root, 'public/assets/onward-ad-v1/onward-ad-v1.glb'), path.join(out, 'assets/onward-ad-v1/onward-ad-v1.glb'));
 await mkdir(path.join(out, 'tongue-sleeve-lab/assets'), { recursive: true });
-for (const name of ['user-hand-parts.glb', 'user-hand-rig.glb', 'cuff-medallion-bindings.json'])
+for (const name of ['user-hand-parts.glb', 'user-hand-rig.glb', 'cuff-medallion-bindings.json', 'final-tongue-outline.svg', 'final-tongue-design.json'])
     await copyFile(path.join(root, 'public/tongue-sleeve-lab/assets', name), path.join(out, 'tongue-sleeve-lab/assets', name));
 await cp(path.join(root, 'public/tongue-motion-lab'), path.join(out, 'tongue-motion-lab'), { recursive: true });
 await writeFile(path.join(out, 'tongue-motion-build.json'), JSON.stringify({ sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(), branch: execFileSync('git', ['branch', '--show-current'], { cwd: root, encoding: 'utf8' }).trim(), chapterDuration: 19, sourceShoeSHA256: contract.sourceShoeSHA256, sourcePartsSHA256: contract.sourcePartsSHA256, scope: 'Isolated local chapter. No push, deployment or production changes.' }, null, 2) + '\n');

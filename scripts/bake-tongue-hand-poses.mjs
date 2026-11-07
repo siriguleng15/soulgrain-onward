@@ -57,6 +57,12 @@ poses.entry = capture();
 function contact(which) { let best; for (const curl of [.65, .75, .85, .95, 1.05, 1.15, 1.25, 1.35]) {
     reset();
     finger(which, curl);
+    // Slight MCP adduction brings the fingertip toward the thumb, avoiding
+    // solving the pinch solely by folding the index into a tight hook.
+    if (which === 'index') {
+        bones.get('index_1').quaternion.premultiply(new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), -.12));
+        scene.updateMatrixWorld(true);
+    }
     for (const other of ['index', 'middle', 'ring', 'pinky'])
         if (other !== which)
             finger(other, which === 'middle' ? .45 : .25);

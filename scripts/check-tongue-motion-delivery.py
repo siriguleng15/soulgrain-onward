@@ -13,7 +13,7 @@ OUT = ROOT / 'public/tongue-motion-lab/verification'
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--url', default='http://127.0.0.1:4551')
+    parser.add_argument('--url', default='http://127.0.0.1:4553')
     args = parser.parse_args()
     base = args.url.rstrip('/')
     for route in ['/tongue-motion-lab.html', '/tongue-motion-lab/review.html']:
@@ -21,7 +21,7 @@ def main():
             assert response.status == 200 and 'text/html' in response.headers.get('Content-Type', '')
             assert b'tongue-motion' in response.read()
     videos = []
-    for name in ['tongue-motion-v1-review.mp4', 'tongue-motion-v1-interaction.mp4']:
+    for name in ['tongue-motion-v1-1-review.mp4', 'tongue-motion-v1-1-interaction.mp4']:
         file = OUT / name
         probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'v:0',
             '-show_entries', 'stream=codec_name,pix_fmt,width,height,avg_frame_rate,duration,color_range',

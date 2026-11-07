@@ -1,15 +1,19 @@
 {
   "passed": true,
   "environment": "Linux Chromium / SwiftShader; touch is device emulation, not physical iPad Safari",
+  "tonguePoseConsistency": {
+    "restFinalMaxError": 0,
+    "flatCoveredMaxError": 0
+  },
   "sameSilverAndCuffThroughout": true,
   "silverGeometryExactlyEqualAcrossMaterialChange": true,
   "preSnapCrystalAlwaysZero": true,
   "frames": [
     {
       "ready": true,
-      "revision": 4,
-      "drawRevision": 4,
-      "loadedBytes": 59013045,
+      "revision": 8,
+      "drawRevision": 8,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 0,
       "playing": false,
@@ -26,31 +30,31 @@
       "handVisible": false,
       "cuffVisible": false,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 241.7093901619795,
-        "thumbGripMm": 278.6179291668264,
+        "indexGripMm": 242.02855599253488,
+        "thumbGripMm": 280.0655596197112,
         "padGapMm": 73.65505586737204
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 42,
       "triangles": 426460,
-      "meanRenderSubmissionMs": 586.6249999962747,
+      "meanRenderSubmissionMs": 638.2000000067055,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 5,
-      "drawRevision": 5,
-      "loadedBytes": 59013045,
+      "revision": 9,
+      "drawRevision": 9,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 2.9,
       "playing": false,
@@ -67,31 +71,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 71.5772673670766,
-        "thumbGripMm": 78.73927842469134,
-        "padGapMm": 71.33555735761308
+        "indexGripMm": 71.0847335346751,
+        "thumbGripMm": 79.41344142146056,
+        "padGapMm": 71.20130923213812
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 47,
       "triangles": 681747,
-      "meanRenderSubmissionMs": 469.7799999952316,
+      "meanRenderSubmissionMs": 511.06000000536443,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 6,
-      "drawRevision": 6,
-      "loadedBytes": 59013045,
+      "revision": 10,
+      "drawRevision": 10,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 5.8,
       "playing": false,
@@ -108,31 +112,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 0.9999999999999986,
-        "thumbGripMm": 1.02776935971445,
-        "padGapMm": 2.0273610348127633
+        "indexGripMm": 1.0000000000000142,
+        "thumbGripMm": 1.02309483327542,
+        "padGapMm": 2.0228117645914123
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 47,
       "triangles": 681747,
-      "meanRenderSubmissionMs": 391.86666666219634,
+      "meanRenderSubmissionMs": 426.31666667262715,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 7,
-      "drawRevision": 7,
-      "loadedBytes": 59013045,
+      "revision": 11,
+      "drawRevision": 11,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 7.8,
       "playing": false,
@@ -149,31 +153,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 58.674206275533024,
-        "thumbGripMm": 96.36412786520805,
+        "indexGripMm": 58.50833717101415,
+        "thumbGripMm": 96.19387856543305,
         "padGapMm": 76.59157479943282
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 47,
       "triangles": 681747,
-      "meanRenderSubmissionMs": 336.19999999659404,
+      "meanRenderSubmissionMs": 365.7142857185432,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 8,
-      "drawRevision": 8,
-      "loadedBytes": 59013045,
+      "revision": 12,
+      "drawRevision": 12,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 9.3,
       "playing": false,
@@ -190,31 +194,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 58.674206275533024,
-        "thumbGripMm": 96.36412786520805,
+        "indexGripMm": 58.50833717101415,
+        "thumbGripMm": 96.19387856543305,
         "padGapMm": 76.59157479943282
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 47,
       "triangles": 681747,
-      "meanRenderSubmissionMs": 294.4624999985099,
+      "meanRenderSubmissionMs": 320.23750000447035,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 9,
-      "drawRevision": 9,
-      "loadedBytes": 59013045,
+      "revision": 13,
+      "drawRevision": 13,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 13.3,
       "playing": false,
@@ -231,31 +235,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 188.11994154695583,
-        "thumbGripMm": 244.1710547984518,
+        "indexGripMm": 187.92452196553876,
+        "thumbGripMm": 243.98985955160063,
         "padGapMm": 72.76615860043624
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 46,
       "triangles": 680467,
-      "meanRenderSubmissionMs": 261.9444444427888,
+      "meanRenderSubmissionMs": 284.92222222685814,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 10,
-      "drawRevision": 10,
-      "loadedBytes": 59013045,
+      "revision": 14,
+      "drawRevision": 14,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 14.43,
       "playing": false,
@@ -272,31 +276,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 195.57531121220003,
-        "thumbGripMm": 251.3882151615082,
+        "indexGripMm": 195.3896694084452,
+        "thumbGripMm": 251.21383875898294,
         "padGapMm": 62.42743594273513
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 46,
       "triangles": 680467,
-      "meanRenderSubmissionMs": 235.92999999821185,
+      "meanRenderSubmissionMs": 256.6900000035763,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 11,
-      "drawRevision": 11,
-      "loadedBytes": 59013045,
+      "revision": 15,
+      "drawRevision": 15,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 15.6,
       "playing": false,
@@ -313,31 +317,31 @@
       "handVisible": true,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 188.11994154695583,
-        "thumbGripMm": 244.1710547984518,
+        "indexGripMm": 187.92452196553876,
+        "thumbGripMm": 243.98985955160063,
         "padGapMm": 72.76615860043624
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 46,
       "triangles": 680467,
-      "meanRenderSubmissionMs": 214.64545454355803,
+      "meanRenderSubmissionMs": 233.52727273106575,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     },
     {
       "ready": true,
-      "revision": 12,
-      "drawRevision": 12,
-      "loadedBytes": 59013045,
+      "revision": 16,
+      "drawRevision": 16,
+      "loadedBytes": 66007194,
       "loadingStage": "预热 GPU 着色器",
       "time": 19,
       "playing": false,
@@ -354,23 +358,23 @@
       "handVisible": false,
       "cuffVisible": true,
       "silverCount": 785,
-      "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741",
-      "cuffIdentity": "d6774b97-6e13-4e0a-bb27-068fe7cc3cef",
-      "silverMaterial": "83f097e7-2e7e-442b-bf45-e984c96a6b4c",
+      "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5",
+      "cuffIdentity": "ca96a8d7-d5fd-418d-ad7d-d353c9ebd3dc",
+      "silverMaterial": "06211bf4-1c17-4ed2-8a17-fa795bc9fcf8",
       "gripContactMm": {
-        "indexGripMm": 403.4251317439917,
-        "thumbGripMm": 445.7372922648553,
+        "indexGripMm": 403.28080053954926,
+        "thumbGripMm": 445.60629676732754,
         "padGapMm": 72.7661586004363
       },
       "contextLost": false,
       "sourceShoeMeshes": 42,
       "drawCalls": 43,
       "triangles": 583947,
-      "meanRenderSubmissionMs": 196.88333333159486,
+      "meanRenderSubmissionMs": 214.3666666696469,
       "verified": {
         "tongue-sleeve-lab/assets/user-hand-parts.glb": "4322c0c2b1f613ba152ee742f3ca9d69f98c97c6a71cab3eaf4fabebbad53798",
         "assets/onward-ad-v1/onward-ad-v1.glb": "1d8b8433fffe61a57be644d50270c935b4ffcd2f26776105540ec05c078121c4",
-        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "0831086fe9066b08ddd8e3b91c3ac56ac4126f16ec5efc955254ed5d57fe39db",
+        "tongue-motion-lab/assets/tongue-cuff-morphs.f16": "c2be91e342839c984124a13624087c602f238e83fbf02614a43d625cbd52e746",
         "tongue-sleeve-lab/assets/user-hand-rig.glb": "e4cd583aaa210418653954734a9696dd64e2bac8a2830278535fafc1c46f3116"
       }
     }
@@ -378,12 +382,12 @@
   "framing": [
     {
       "time": 2.9,
-      "visibleRatio": 0.9554140127388535,
+      "visibleRatio": 0.9490445859872612,
       "aimError": 0,
       "palmNdc": [
-        -0.23701229691791006,
-        -0.3007345806259254,
-        0.9932935956983849
+        -0.2353299656616367,
+        -0.2774618197071179,
+        0.9933073769680882
       ]
     },
     {
@@ -391,9 +395,9 @@
       "visibleRatio": 0,
       "aimError": 0,
       "palmNdc": [
-        -0.35863435500282886,
-        0.1350933653163513,
-        0.9884376465381354
+        -0.3508542921000255,
+        0.13264070598473948,
+        0.9884603215366392
       ]
     },
     {
@@ -421,9 +425,9 @@
     "deterministic": true,
     "rootError": 0,
     "programs": 18,
-    "silverIdentity": "5ab57550-7c5b-4878-ad41-787d02ca3741"
+    "silverIdentity": "ff530a12-b254-46a6-820d-799457a376c5"
   },
-  "fastSilverBindingMaxError": 1.8509081268412012e-7,
+  "fastSilverBindingMaxError": 1.873913907566186e-7,
   "cancelEachPhase": true,
   "forwardHeld": true,
   "independentReverseRestored": true,
@@ -432,6 +436,7 @@
   "timelineRetainsUserCamera": true,
   "contextRestored": true,
   "touchDrag": true,
+  "touchPinchZoom": true,
   "mobileNoOverflow": true,
   "loadFailureVisible": true,
   "singleCanvas": true,

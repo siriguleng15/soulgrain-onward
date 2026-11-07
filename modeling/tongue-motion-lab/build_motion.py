@@ -6,6 +6,7 @@ from pathlib import Path
 import json,struct,hashlib
 import numpy as np
 from scipy.interpolate import LinearNDInterpolator,NearestNDInterpolator
+from design_surface import DesignSurface
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'public/tongue-motion-lab/assets';HERE=Path(__file__).resolve().parent
 OUT.mkdir(parents=True,exist_ok=True)
 
@@ -33,7 +34,7 @@ def tongue_st(name,uv):
  return .5+(uv[:,0]-.68)*.19/.065,(.9-uv[:,1])*.46*.19/.06
 
 def main():
- shoe,read,shoe_sha=load(ROOT/'public/assets/onward-ad-v1/onward-ad-v1.glb');parts,pread,parts_sha=load(ROOT/'public/tongue-sleeve-lab/assets/user-hand-parts.glb');bindings=json.loads((ROOT/'public/tongue-sleeve-lab/assets/cuff-medallion-bindings.json').read_text());spec=json.loads((ROOT/'modeling/tongue-sleeve-lab/separation-spec.json').read_text())
+ shoe,read,shoe_sha=load(ROOT/'public/assets/onward-ad-v1/onward-ad-v1.glb');parts,pread,parts_sha=load(ROOT/'public/tongue-sleeve-lab/assets/user-hand-parts.glb');bindings=json.loads((ROOT/'public/tongue-sleeve-lab/assets/cuff-medallion-bindings.json').read_text());spec=json.loads((ROOT/'modeling/tongue-sleeve-lab/separation-spec.json').read_text());design=DesignSurface(ROOT/'public/tongue-sleeve-lab/assets/final-tongue-outline.svg')
  tongue=[]
  for i,prim in enumerate(shoe['meshes'][shoe['nodes'][4]['mesh']]['primitives']):
   p=read(prim['attributes']['POSITION']).astype(float);n=read(prim['attributes']['NORMAL']).astype(float);uv=read(prim['attributes']['TEXCOORD_0']).astype(float);f=read(prim['indices']).reshape(-1,3);name=shoe['materials'][prim['material']]['name'];s,t=tongue_st(name,uv);tongue.append({'p':p,'n':n,'f':f,'s':s,'t':t,'primitive':i,'name':name})
@@ -56,30 +57,33 @@ def main():
  tongue_height=.135;root_x=.0183;center_z=-.0065;wrist_x=root_x+.0505
  hand_node=next(node for node in parts['nodes'] if node['name']=='Hand_Skin');hand_pr=parts['meshes'][hand_node['mesh']]['primitives'][0];hand_p=pread(hand_pr['attributes']['POSITION']).astype(float);hand_f=pread(hand_pr['indices']).reshape(-1,3)
  palm_region=(hand_p[:,2]>=.0505)&(hand_p[:,2]<=.158)&(abs(hand_p[:,0])<=.0325);palm_q=np.clip((hand_p[:,2]-.0505)/.1075,0,1);palm_support=.1023+(tongue_height-.1023)*smooth(0,.22,palm_q)+.0015*np.sin(palm_q*np.pi);wrist_y=float((palm_support[palm_region]-hand_p[palm_region,1]).max())+.0006
- def flat_surface(s,t,wide=True):
-  y=design_y(t);q=np.clip((y-.0505)/.1075,0,1);w=half_width(y)*2 if wide else np.full(len(t),.065);corner=.017*np.abs(2*s-1)**6*smooth(.115,.158,y);y_end=y-corner
-  x=root_x-(y_end-.0505);height=.1023+(tongue_height-.1023)*smooth(0,.22,q)+.0015*np.sin(q*np.pi);z=center_z+(.5-s)*w
-  p=np.column_stack([x,height,z]);root=t<.46
-  p[root]=sample(s[root],t[root])[:,:3] # Foot-connected section remains attached.
-  blend=smooth(.46,.50,t);original=sample(s,t)[:,:3];p=original*(1-blend[:,None])+p*blend[:,None]
-  return p
- def installed_surface(s,t,wide=True):
-  value=sample(s,t);p=value[:,:3].copy();n=value[:,3:];y=design_y(t);center=sample(np.full(len(t),.5),t)[:,:3]
-  if wide:
-   edge0=sample(np.zeros(len(t)),t)[:,:3];edge1=sample(np.ones(len(t)),t)[:,:3];source_width=np.maximum(abs(edge0[:,2]-edge1[:,2]),.040);ratio=np.where(t>=.46,half_width(y)*2/source_width,1)
-   p[:,2]=center[:,2]+(p[:,2]-center[:,2])*ratio*np.where(t>=.46,.90,1)
+ def material_points(s,t):
+  return design.tongue((.5-np.clip(s,0,1))*.103,design_y(t))
+ def flat_material(across,y):
+  t=design_t(y);s=.5-across/.103;q=np.clip((y-.0505)/.1075,0,1)
+  p=np.column_stack([root_x-(y-.0505),.1023+(tongue_height-.1023)*smooth(0,.22,q)+.0015*np.sin(q*np.pi),center_z+across])
+  original=sample(s,t)[:,:3];blend=smooth(.46,.50,t);return original*(1-blend[:,None])+p*blend[:,None]
+ def installed_material(across,y):
+  t=design_t(y);s=.5-across/.103;original=sample(s,t);value=sample(np.full(len(t),.5),t);p=value[:,:3].copy();n=value[:,3:]
   free=t>=.46;p[free,:2]=source_root[:2]+(p[free,:2]-source_root[:2])*arc_scale
-  blend=smooth(.46,.50,t);p=value[:,:3]*(1-blend[:,None])+p*blend[:,None]
+  # A small transverse cup follows the shoe; width never changes by pose.
+  p[:,2]+=across;p-=n*(.003*(across/.0515)**2*smooth(.46,.55,t))[:,None]
+  blend=smooth(.46,.50,t);p=original[:,:3]*(1-blend[:,None])+p*blend[:,None]
   return p,n
+ def flat_surface(s,t):
+  coordinates=material_points(s,t);return flat_material(coordinates[:,0],coordinates[:,1])
+ def installed_surface(s,t):
+  coordinates=material_points(s,t);return installed_material(coordinates[:,0],coordinates[:,1])
  # Preserve the approved source mesh; animate only derivative morph targets.
  cache=bytearray();sections={}
  def store(name,array,dtype='<f2'):
   arr=np.asarray(array,dtype=dtype);offset=len(cache);cache.extend(arr.tobytes());sections[name]={'offset':offset,'bytes':arr.nbytes,'shape':list(arr.shape),'type':dtype}
  for item in tongue:
-  p,n,f,s,t=(item[k] for k in ['p','n','f','s','t']);lift=flat_surface(s,t,False);installed,ni=installed_surface(s,t,True)
+  p,n,f,s,t=(item[k] for k in ['p','n','f','s','t']);lift=flat_surface(s,t);installed,ni=installed_surface(s,t)
   # Keep the original shell thickness and both surfaces when lifting.
   reverse=sample(s,t);shell=(p-reverse[:,:3]);shell_blend=smooth(.46,.50,t);lift+=shell*(1-shell_blend[:,None])+np.column_stack([np.zeros(len(t)),np.sum(shell*reverse[:,3:],axis=1),np.zeros(len(t))])*shell_blend[:,None]
   installed+=shell;root_mask=t<.46;lift[root_mask]=p[root_mask];installed[root_mask]=p[root_mask]
+  store(f'tongue-{item["primitive"]}-design-xy',material_points(s,t),'<f4')
   for name,positions in [('lift',lift),('installed',installed)]:
    out_normal=normals(positions,f,n);out_normal[root_mask]=n[root_mask];dtype='<f4' if item['primitive']==2 else '<f2';store(f'tongue-{item["primitive"]}-{name}-p',positions,dtype);store(f'tongue-{item["primitive"]}-{name}-n',out_normal,dtype)
  # Tongue-end eyelets keep their actual local relationship while lifting.
@@ -87,14 +91,14 @@ def main():
  reverse=tongue[0];tree=cKDTree(reverse['p']);eyelets=[]
  for pi,prim in enumerate(shoe['meshes'][shoe['nodes'][5]['mesh']]['primitives']):
   ep=read(prim['attributes']['POSITION']).astype(float);en=read(prim['attributes']['NORMAL']).astype(float);ef=read(prim['indices']).reshape(-1,3);_,nearest=tree.query(ep);es=reverse['s'][nearest];et=reverse['t'][nearest];delta=ep-reverse['p'][nearest];base_n=reverse['n'][nearest]
-  lift=flat_surface(es,et,False);lift[:,1]+=np.sum(delta*base_n,axis=1);final,fn=installed_surface(es,et,True);final+=delta
+  lift=flat_surface(es,et);lift[:,1]+=np.sum(delta*base_n,axis=1);final,fn=installed_surface(es,et);final+=delta
   for name,positions in [('lift',lift),('installed',final)]:store(f'eyelet-{pi}-{name}-p',positions);store(f'eyelet-{pi}-{name}-n',normals(positions,ef,en))
   eyelets.append(pi)
  # Existing tongue trim/stitches share nodes with other garment parts.
  # Move only connected components confirmed close to the tongue surface.
  from scipy.sparse import coo_matrix
  from scipy.sparse.csgraph import connected_components
- followers=[];reverse_lift=flat_surface(reverse['s'],reverse['t'],False);reverse_inst,_=installed_surface(reverse['s'],reverse['t'],True);reverse_lift_n=normals(reverse_lift,reverse['f'],reverse['n']);reverse_inst_n=normals(reverse_inst,reverse['f'],reverse['n'])
+ followers=[];reverse_lift=flat_surface(reverse['s'],reverse['t']);reverse_inst,_=installed_surface(reverse['s'],reverse['t']);reverse_lift_n=normals(reverse_lift,reverse['f'],reverse['n']);reverse_inst_n=normals(reverse_inst,reverse['f'],reverse['n'])
  def rotate_offsets(delta,a,b):
   axis=np.cross(a,b);dot=np.sum(a*b,axis=1);first=np.cross(axis,delta);return delta+first+np.cross(axis,first)/np.maximum((1+dot)[:,None],1e-5)
  for ni in [13,14]:
@@ -124,7 +128,8 @@ def main():
  # Correct only the non-artwork margins to the nominal 103 x 158 mm bounds.
  for sign in [-1,1]:
   extent=float((width*sign).max());mask=width*sign>.0395;width[mask]=sign*(.0395+(width[mask]*sign-.0395)*(.0515-.0395)/(extent-.0395))
- minimum=float(y.min());mask=y<.055;y[mask]=.055*(y[mask]-minimum)/(.055-minimum);u=np.clip(.5-width/.103,0,1);uv=np.column_stack([u,y/.158]);store('cuff-uv',uv,'<f4')
+ minimum=float(y.min());mask=y<.055;y[mask]=.055*(y[mask]-minimum)/(.055-minimum)
+ fitted=design.cuff(np.column_stack([width,y]),faces);width=fitted[:,0];y=fitted[:,1];u=np.clip(.5-width/.103,0,1);uv=np.column_stack([u,y/.158]);store('cuff-uv',uv,'<f4');store('cuff-design-xy',fitted,'<f4')
  # Paired surfaces remain a thin closed-section fabric instead of collapsing
  # the entire tube into a singular zero-thickness sheet.
  layer=.0014*np.tanh((p[:,1]-.026)*150)
@@ -144,21 +149,25 @@ def main():
  # Arc integration makes every longitudinal row follow a different rotation.
  # An explicit distributed twist returns the decorated outside facing up.
  distance=np.clip(d,0,.145);grid=np.linspace(0,.15,257)
- for step in range(17):
-  progress=step/16;e=progress*progress*(3-2*progress);q=grid/.15;theta_curve=np.pi*e+.45*np.sin(np.pi*progress)*np.sin(q*np.pi*1.4+.5);theta_curve*=.85+.15*smooth(0,.20,q);theta_curve=(1-e)*theta_curve+e*np.pi*e
-  dy=np.sin(theta_curve);dz=-np.cos(theta_curve);cy=np.concatenate([[0],np.cumsum((dy[1:]+dy[:-1])*.5*np.diff(grid))]);cz=np.concatenate([[0],np.cumsum((dz[1:]+dz[:-1])*.5*np.diff(grid))]);angle=np.interp(distance,grid,theta_curve);twist=np.pi*e+.45*np.sin(np.pi*progress)*np.sin(distance/.15*np.pi);ct,st=np.cos(twist),np.sin(twist);ca,sa=np.cos(angle),np.sin(angle)
-  residual=p[:,1]-.026;positions=np.column_stack([p[:,0]*ct-residual*st,np.interp(distance,grid,cy)+.026+(p[:,0]*st+residual*ct)*ca,np.interp(distance,grid,cz)+(p[:,0]*st+residual*ct)*sa]);positions[:,2]+=np.where(d<0,p[:,2]*(1-e),0)
+ flip_steps=24
+ for step in range(flip_steps+1):
+  progress=step/flip_steps;e=progress*progress*(3-2*progress);q=grid/.15;theta_curve=np.pi*e+.10*np.sin(np.pi*progress)*np.sin(q*np.pi);theta_curve*=.92+.08*smooth(0,.20,q);theta_curve=(1-e)*theta_curve+e*np.pi*e
+  dy=np.sin(theta_curve);dz=-np.cos(theta_curve);cy=np.concatenate([[0],np.cumsum((dy[1:]+dy[:-1])*.5*np.diff(grid))]);cz=np.concatenate([[0],np.cumsum((dz[1:]+dz[:-1])*.5*np.diff(grid))]);angle=np.interp(distance,grid,theta_curve);twist=np.pi*e+.08*np.sin(np.pi*progress)*np.sin(distance/.15*np.pi);ct,st=np.cos(twist),np.sin(twist);ca,sa=np.cos(angle),np.sin(angle)
+  # The hollow cuff compresses into a thin fold before crossing the hand.
+  # Keep two distinct cloth layers, avoiding the former inflated torus/tent.
+  collapse=smooth(.05,.40,progress);residual=(p[:,1]-.026)*(1-collapse)+layer*collapse
+  positions=np.column_stack([p[:,0]*ct-residual*st,np.interp(distance,grid,cy)+.026+(p[:,0]*st+residual*ct)*ca,np.interp(distance,grid,cz)+(p[:,0]*st+residual*ct)*sa]);positions[:,2]+=np.where(d<0,p[:,2]*(1-e),0)
   # Source -> rolling cuff -> full reference-shaped layered cloth.
-  flatten=smooth(.58,1,progress);positions=positions*(1-flatten)+flat*flatten
+  flatten=smooth(.25,.96,progress)**1.15;positions=positions*(1-flatten)+flat*flatten
   if progress>.55:
    lower=roof(positions[:,[0,2]])+layer;correction=np.maximum(0,lower-positions[:,1]);positions[:,1]+=correction*smooth(.55,.8,progress)
-  if progress>=.65:positions=constrain_to_hand(positions)
+  if progress>=.15:positions=constrain_to_hand(positions)
   if step==0:positions=p.copy()
   poses.append(positions);pose_names.append('flip-'+str(step))
  # After the fingers recede, cloth settles row-by-row onto the raised tongue.
- s=u;t=design_t(y);target_flat_world=flat_surface(s,t,True);target_inst_world,normal_inst=installed_surface(s,t,True);source_center=sample(np.full(len(t),.5),t)[:,:3];free=t>=.46;target_inst_world[free,2]=source_center[free,2]+(target_inst_world[free,2]-source_center[free,2])/.90
+ s=u;t=design_t(y);target_flat_world=flat_material(width,y);target_inst_world,normal_inst=installed_material(width,y)
  # Surface offsets are normal to the source tongue, not a floating image board.
- target_inst_world+=normal_inst*(.0018+layer)[:,None]
+ target_inst_world+=normal_inst*(.003+layer)[:,None]
  target_flat_local=np.column_stack([target_flat_world[:,2]-center_z,target_flat_world[:,1]-wrist_y+.0018+layer,wrist_x-target_flat_world[:,0]])
  target_inst_local=np.column_stack([target_inst_world[:,2]-center_z,target_inst_world[:,1]-wrist_y,wrist_x-target_inst_world[:,0]])
  withdraw_steps=12
@@ -167,8 +176,9 @@ def main():
  poses.append(target_inst_local);pose_names.append('installed')
  for i,position in enumerate(poses):store(f'cuff-{i}-p',position);store(f'cuff-{i}-n',n if i==0 else normals(position,faces,n))
  # Source-derived centerline, grip samples and authoring reference for runtime.
- table_t=np.linspace(0,1,201);table=sample(np.full(len(table_t),.5),table_t);lift_table=flat_surface(np.full(len(table_t),.5),table_t,False)
- metadata={'version':1,'sourceShoeSHA256':shoe_sha,'sourcePartsSHA256':parts_sha,'cuffVertices':len(p),'flipSteps':16,'withdrawSteps':withdraw_steps,'flatPose':16+withdraw_steps,'installedPose':17+withdraw_steps,'cuffPoses':pose_names,'sections':sections,'cuffUV':'Final blueprint coordinates; stable on the same original topology','physicalDesignMm':{'height':158,'width':103,'medallion':75},'palmPose':{'position':[wrist_x,wrist_y,center_z],'rotationY':-np.pi/2},'tongueHeight':tongue_height,'rootX':root_x,'centerZ':center_z,'tongueTable':{'t':table_t.tolist(),'source':table.tolist(),'lift':lift_table.tolist()},'sameSilverInstances':785,'tongueGripAnchor':grip,'eyeletPrimitives':eyelets,'followers':followers,'sourceFreeArcLengthMetres':arc_total,'nominalFreeArcLengthMetres':.1075,'fittedFreeArcLengthMetres':float(np.linalg.norm(np.diff(installed_surface(np.full(len(arc_t),.5),arc_t)[0],axis=0),axis=1).sum()),'handSupport':'Actual uploaded hand upper envelope, pre-baked support projection','note':'Art-directed continuous deformation cache, not real-time cloth simulation. Hand collision and silhouette require visual review.'}
+ table_t=np.linspace(0,1,201);table=sample(np.full(len(table_t),.5),table_t);lift_table=flat_surface(np.full(len(table_t),.5),table_t)
+ metadata={'version':1,'sourceShoeSHA256':shoe_sha,'sourcePartsSHA256':parts_sha,'cuffVertices':len(p),'flipSteps':flip_steps,'withdrawSteps':withdraw_steps,'flatPose':flip_steps+withdraw_steps,'installedPose':flip_steps+1+withdraw_steps,'cuffPoses':pose_names,'sections':sections,'cuffUV':'Final blueprint coordinates; stable on the same original topology','physicalDesignMm':{'height':158,'width':103,'medallion':75},'palmPose':{'position':[wrist_x,wrist_y,center_z],'rotationY':-np.pi/2},'tongueHeight':tongue_height,'rootX':root_x,'centerZ':center_z,'tongueTable':{'t':table_t.tolist(),'source':table.tolist(),'lift':lift_table.tolist()},'sameSilverInstances':785,'tongueGripAnchor':grip,'eyeletPrimitives':eyelets,'followers':followers,'sourceFreeArcLengthMetres':arc_total,'nominalFreeArcLengthMetres':.1075,'fittedFreeArcLengthMetres':float(np.linalg.norm(np.diff(installed_surface(np.full(len(arc_t),.5),arc_t)[0],axis=0),axis=1).sum()),'handSupport':'Actual uploaded hand upper envelope, pre-baked support projection','note':'Art-directed continuous deformation cache, not real-time cloth simulation. Hand collision and silhouette require visual review.'}
+ metadata['version']='1.1';metadata['sharedDesign']={'referenceSHA256':design.reference_sha256,'referencePath':'public/tongue-sleeve-lab/assets/final-tongue-outline.svg','protectedArtworkDiameterMetres':design.PROTECTED_RADIUS*2,'method':'Single SVG material domain used by blank rest, lifted tongue, installed tongue and cuff. Original foot-connected root remains pinned.','restIsInstalledShape':True,'transverseCupMetres':.003}
  output=OUT/'tongue-cuff-morphs.f16';output.write_bytes(cache);metadata['cacheSHA256']=hashlib.sha256(cache).hexdigest();metadata['cacheBytes']=len(cache);(OUT/'motion-contract.json').write_text(json.dumps(metadata,separators=(',',':'))+'\n')
  # Independently measure final flat medallion center arrangement against artwork.
  layout=np.array([a['artworkCenter'] for a in bindings['anchors']]);diameter=.075;art_center=np.array([626.5,626.5]);points=json.loads((ROOT/'modeling/finished-shoe-v8/rhinestone-points.json').read_text())['stones'];extent=max(np.linalg.norm(np.array([r['x'],r['y']])-art_center)+r['radius_px'] for r in points);artscale=diameter/(2*extent);errors=[]
