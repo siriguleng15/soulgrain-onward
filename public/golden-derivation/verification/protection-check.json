@@ -1,32 +1,12 @@
 {
   "passed": true,
-  "existingWorktrees": [
-    {
-      "worktree": "soulgrain-onward",
-      "headUnchanged": true,
-      "dirtyStatusUnchanged": true,
-      "workingDiffUnchanged": true,
-      "indexUnchanged": true
-    },
-    {
-      "worktree": "tongue-motion-refinement-v1-1",
-      "headUnchanged": true,
-      "dirtyStatusUnchanged": true,
-      "workingDiffUnchanged": true,
-      "indexUnchanged": true
-    },
-    {
-      "worktree": "heel-motion-lab-v1",
-      "headUnchanged": true,
-      "dirtyStatusUnchanged": true,
-      "workingDiffUnchanged": true,
-      "indexUnchanged": true
-    }
-  ],
-  "uploadedOriginalMatchesChapterCopy": true,
-  "originalV10BackupUnchanged": true,
+  "revision": "1.1",
   "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
-  "previouslyTrackedFilesChanged": [],
-  "pushed": false,
-  "deployed": false
+  "unrelatedWorktreesUnchanged": [
+    "soulgrain-onward",
+    "heel-motion-lab-v1",
+    "tongue-motion-refinement-v1-1"
+  ],
+  "mainMerged": false,
+  "sourceModelChanged": false
 }

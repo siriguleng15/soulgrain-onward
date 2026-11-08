@@ -1,4 +1,5 @@
 {
+  "revision": "1.1",
   "source": "Actual WebGL canvas, deterministic frame stepping and synchronous pixel readback",
   "fpsSource": 20,
   "fpsEncoded": 30,

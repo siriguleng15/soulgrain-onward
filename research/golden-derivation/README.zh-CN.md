@@ -87,3 +87,5 @@ GOLDEN_ENCODE_ONLY=1 node scripts/record-golden-derivation.cjs
 - 原鞋头起点、后跟顶端、主轴、翻筒辅助线方向与间距、43 秒分镜及播放控制保留。P 沿既有主轴移动；跟随镜头按修正后的实际路径重新求值。
 - `scripts/check-golden-placement.cjs` 输出两张带编号的实际 WebGL 校准图：`15-fourth-eyelet-contact.png`、`16-same-short-edge-starts.png`。图中编号是审核标注，不会叠加到正常产品界面。
 - V1.1 独立构建目录 `/tmp/xiezitu-golden-v1-1-build`，本地入口 `http://localhost:4566/golden-derivation.html`；使用 `serve-golden-preview.py --directory /tmp/xiezitu-golden-v1-1-build --port 4566`。
+
+V1.1 已完成发布：[打开修正后的交互动画](https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-1/golden-derivation.html?autoplay=0) · [编号校准图与更新录屏](https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-1/golden-derivation/review.html?release=1.1-final)。网站实际加载、模拟触控及原生视频播放／拖动检查通过；记录见 `public-preview-v1-1.json`。原始 GLB 和 V1 归档均保留。

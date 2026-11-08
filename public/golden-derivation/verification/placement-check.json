@@ -2,7 +2,6 @@
   "passed": true,
   "revision": "1.1",
   "counting": "visible laced eyelets, toe toward shoe opening",
-  "fourthEyeletUnderContact": true,
   "contactProjection": {
     "contact": {
       "x": 687.2062300262443,
@@ -48,5 +47,6 @@
     ]
   },
   "modelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
-  "environment": "Actual WebGL in Linux Chromium / SwiftShader; numbered labels are QA annotations only."
+  "environment": "Actual WebGL in Linux Chromium / SwiftShader; numbered labels are QA annotations only.",
+  "contactBelowFourthEyelet": true
 }
