@@ -1,6 +1,6 @@
 import './style.css';
 import{DerivationScene}from'./Scene.ts';
-import{DURATION,SHOTS,shotAt}from'./construction.ts';
+import{DURATION,SHOTS,shotAt,proofCaption}from'./construction.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML=`
  <header><a class="brand" href="#" aria-label="Soulgrain">SOULGRAIN<span>ONWARD / GEOMETRY STUDY 01</span></a><div class="edition">THE HIDDEN PROPORTION <i>φ</i></div><span id="identity">SOURCE / VERIFYING</span></header>
@@ -9,12 +9,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML=`
    <div id="scene"></div>
    <div class="eyebrow">FROM A SINGLE SEAM<br><span>一条缝线，展开比例的秩序。</span></div>
    <div class="chapter"><span id="chapter-en"></span><h1 id="chapter-title"></h1><p id="chapter-detail"></p></div>
+   <div id="proof-card" hidden aria-live="off"><span id="proof-title"></span><p id="proof-detail"></p></div>
    <div class="view-hint"><span id="owner">导演镜头</span><b>拖动旋转 · 双指缩放</b></div>
    <div id="loading" role="status"><span class="loader-symbol">φ</span><p id="loading-text">正在读取模型…</p></div>
    <div id="error" hidden role="alert"><p id="error-text"></p><button id="retry">重新载入</button></div>
   </section>
   <section class="transport" aria-label="动画控制">
-   <div class="timeline-row"><span id="clock">00.0</span><input id="timeline" type="range" min="0" max="${DURATION}" step="0.01" value="0" aria-label="动画进度"><span class="duration">00:43</span></div>
+   <div class="timeline-row"><span id="clock">00.0</span><input id="timeline" type="range" min="0" max="${DURATION}" step="0.01" value="0" aria-label="动画进度"><span class="duration">01:13</span></div>
    <div class="controls">
     <div class="playback"><button id="play" class="primary" disabled>播放</button><button id="pause" disabled>暂停</button><button id="replay" disabled>重播</button><button id="reverse" disabled>倒放</button><button id="reset" disabled>复位</button></div>
     <div class="options"><label class="speed">速度<select id="speed" aria-label="播放速度"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="3">3×</option></select></label><button id="director" disabled>导演镜头</button><button id="free" disabled>自由观察</button><button id="settings" aria-expanded="false">图层</button></div>
@@ -27,11 +28,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML=`
 const get=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const lab=new DerivationScene(get('scene'),update);
 function update(){
- const s=lab.snapshot(),shot=shotAt(s.time);get('clock').textContent=s.time.toFixed(1).padStart(4,'0');get<HTMLInputElement>('timeline').value=String(s.time);
+ const s=lab.snapshot(),shot=shotAt(s.time),proof=proofCaption(s.time);get('proof-card').hidden=s.time<20||s.time>=68;get('proof-title').textContent=proof.title;get('proof-detail').textContent=proof.detail;get('clock').textContent=s.time.toFixed(1).padStart(4,'0');get<HTMLInputElement>('timeline').value=String(s.time);
  get('chapter-en').textContent=shot.en;get('chapter-title').textContent=shot.label;get('chapter-detail').textContent=shot.text;
  get('owner').textContent=s.cameraOwner==='director'?'导演镜头':'自由观察 / 已暂停';get('play').textContent=s.playing?'正在播放':'播放';get('play').classList.toggle('active',s.playing);
  document.querySelectorAll<HTMLButtonElement>('[data-shot]').forEach((b,i)=>{b.classList.toggle('current',SHOTS[i].id===shot.id);b.setAttribute('aria-current',SHOTS[i].id===shot.id?'step':'false');});
- get('identity').textContent=s.verified?'V1.1 / ORIGINAL GLB VERIFIED':'SOURCE / VERIFYING';
+ get('identity').textContent=s.verified?'V1.2 / ORIGINAL GLB VERIFIED':'SOURCE / VERIFYING';
 }
 get('play').onclick=()=>lab.play();get('pause').onclick=()=>lab.pause();get('replay').onclick=()=>{lab.reset();lab.play();};get('reverse').onclick=()=>lab.play(true);get('reset').onclick=()=>lab.reset();
 get<HTMLInputElement>('timeline').oninput=e=>{const time=Number((e.target as HTMLInputElement).value);lab.pause();lab.seek(time);};

@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "revision": "1.1",
-  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
-  "unrelatedWorktreesUnchanged": [
-    "soulgrain-onward",
-    "heel-motion-lab-v1",
-    "tongue-motion-refinement-v1-1"
+  "version": "1.2",
+  "protectedWorktrees": [
+    "/workspace/soulgrain-onward",
+    "/workspace/heel-motion-lab-v1",
+    "/workspace/tongue-motion-refinement-v1-1"
   ],
-  "mainMerged": false,
-  "sourceModelChanged": false
+  "rawGlbUnchanged": true,
+  "semanticAnchorDataUnchangedFromV1_1": true,
+  "mainMerged": false
 }

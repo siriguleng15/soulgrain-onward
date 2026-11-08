@@ -1,6 +1,27 @@
 {
   "passed": true,
-  "revision": "1.1",
+  "revision": "1.2",
+  "geometryRevision": "1.1",
+  "standardConstruction": {
+    "passed": true,
+    "unitSquareMidpoint": true,
+    "compassRadius": 1.118033988749895,
+    "constructedWidth": 1.618033988749895,
+    "recursivelySimilarGoldenRectangles": 8,
+    "quarterCircleRadii": [
+      1,
+      0.6180339887498949,
+      0.3819660112501051,
+      0.2360679774997898,
+      0.1458980337503153,
+      0.09016994374947451,
+      0.05572809000084078,
+      0.03444185374863373
+    ],
+    "degreesPerArc": 90,
+    "constructionBeforeArcs": true,
+    "deterministicTimeline": true
+  },
   "contactEyeletNumber": 4,
   "contactBelowFourthEyelet": true,
   "firstStart": [

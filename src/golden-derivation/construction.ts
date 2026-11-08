@@ -2,7 +2,10 @@ import { Vector2, Vector3 } from 'three';
 
 export const SOURCE_SHA='b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897';
 export const PHI=(1+Math.sqrt(5))/2;
-export const DURATION=43;
+export const DURATION=73;
+export const ANIMATION_VERSION='1.2';
+export const PROOF_STARTS=[20,44] as const;
+export const ARC_START=14.2, ARC_END=23.8;
 export const clamp=(v:number)=>Math.max(0,Math.min(1,v));
 export const smooth=(v:number)=>{v=clamp(v);return v*v*v*(10+v*(-15+v*6));};
 export const phase=(t:number,a:number,b:number)=>clamp((t-a)/(b-a));
@@ -12,9 +15,9 @@ export const SHOTS=[
  {at:9,end:12,id:'tangent',label:'03 切线',en:'THE POINT OF CONTACT',text:'从切点向下绘制短线；完成约 70% 时，镜头移向翻筒。'},
  {at:12,end:17,id:'cuff',label:'04 交汇',en:'LINES IN CONVERSATION',text:'两条翻筒分区线从后跟向前延伸，与短线同步交汇。'},
  {at:17,end:20,id:'frame',label:'05 构图',en:'A HIDDEN FRAME',text:'回到整体构图，再以切点为中心靠近、转向。'},
- {at:20,end:29,id:'spiral-a',label:'06 第一螺旋',en:'THE GOLDEN PROPORTION / I',text:'黄金矩形逐级分割。生长端居中，切线沿画面纵向。'},
- {at:29,end:38,id:'spiral-b',label:'07 第二螺旋',en:'THE GOLDEN PROPORTION / II',text:'从第一起点斜下方、青色短线的下端起笔。'},
- {at:38,end:43,id:'return',label:'08 全貌',en:'EVERY LINE BELONGS',text:'镜头回到起始视角，保留完整推导。'},
+ {at:20,end:44,id:'spiral-a',label:'06 第一组推导',en:'CONSTRUCTING THE GOLDEN RATIO / I',text:'单位正方形 → 中点作圆 → 黄金矩形 → 递归分割 → 逐段圆弧。'},
+ {at:44,end:68,id:'spiral-b',label:'07 第二组推导',en:'CONSTRUCTING THE GOLDEN RATIO / II',text:'从青色短线的下端起笔，镜像重复相同的数学作图步骤。'},
+ {at:68,end:73,id:'return',label:'08 全貌',en:'EVERY LINE BELONGS',text:'镜头回到起始视角，保留完整推导。'},
 ] as const;
 export function shotAt(t:number){return [...SHOTS].reverse().find(s=>t>=s.at)??SHOTS[0];}
 export interface Path {points:Vector3[];lengths:number[];length:number}
@@ -55,6 +58,33 @@ export function spiralProgress(time:number){
   used+=slot;travel+=arcs[i].radius;
  }
  return 1;
+}
+/** One clock drives construction, compass and camera, including reverse seeks. */
+export function proofState(t:number){
+ const group=t<PROOF_STARTS[1]?0:1,local=t-PROOF_STARTS[group];
+ const progress=spiralProgress(phase(local,ARC_START,ARC_END));
+ const arcs=goldenArcs(),total=arcs.reduce((n,a)=>n+a.radius,0);
+ let arcIndex=0,travel=0;
+ while(arcIndex<arcs.length-1&&travel+arcs[arcIndex].radius<progress*total-1e-10)travel+=arcs[arcIndex++].radius;
+ const arcFraction=clamp((progress*total-travel)/arcs[arcIndex].radius);
+ const cutIndex=Math.min(7,Math.max(0,Math.floor(local-5)));
+ const stage=local<0?'waiting':local<.9?'unit':local<1.7?'midpoint':local<2.7?'compass':local<5?'ratio':local<13?'partition':local<ARC_START?'prepare':local<ARC_END?'arc':'complete';
+ return{group,local,progress,arcIndex,arcFraction,cutIndex,stage};
+}
+export function proofCaption(t:number){
+ const s=proofState(t),n=s.cutIndex,r=PHI**-n;
+ const prefix=s.group?'第二组 · ':'第一组 · ';
+ const info:Record<string,[string,string]>={
+  unit:['01 / 单位正方形','先作边长为 1 的正方形。'],
+  midpoint:['02 / 中点与对角线','底边中点 M → 对角顶点：d = √(1² + 0.5²) = √5 / 2'],
+  compass:['03 / 圆规延长底边','以 M 为圆心、d 为半径转至底边延长线。'],
+  ratio:['04 / 黄金矩形','φ = 1/2 + √5/2 = 1.618034…；φ − 1 = 1/φ ≈ 0.618'],
+  partition:[`05 / 分割正方形 ${n+1} / 8`,`边长 r${n} = φ⁻${n} = ${r.toFixed(3)}；余下矩形仍满足 长 / 宽 = φ`],
+  prepare:['06 / 圆弧作图','每个正方形内，以对应顶角 O 为圆心、边长 r 为半径。'],
+  arc:[`06 / 第 ${s.arcIndex+1} 段圆弧`,`O${s.arcIndex} 为圆心；r${s.arcIndex} = ${(PHI**-s.arcIndex).toFixed(3)}；转过 ${(90*s.arcFraction).toFixed(0)}° / 90°`],
+  complete:['07 / 作图完成','8 段相切的 90° 圆弧依次连接；相邻半径之比为 φ。'],
+ };
+ const [title,detail]=info[s.stage]??['',''];return{...s,title:prefix+title,detail};
 }
 export interface ConstructionData {
  revision:string;

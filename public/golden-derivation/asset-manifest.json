@@ -20,5 +20,16 @@
   "corrections": [
     "P locked below visible laced eyelet 4, counted from toe",
     "Second spiral starts at Q on the same cyan short edge; reflected across the midline"
+  ],
+  "animationRevision": "1.2",
+  "geometryRevision": "1.1",
+  "durationSeconds": 73,
+  "addedConstruction": [
+    "unit square",
+    "midpoint M",
+    "compass radius sqrt(5)/2",
+    "golden rectangle 1:phi",
+    "8 recursive square cuts per group",
+    "90-degree arc centers and radius sweep"
   ]
 }

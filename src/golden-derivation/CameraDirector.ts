@@ -1,5 +1,5 @@
 import { PerspectiveCamera, Quaternion, Vector3 } from 'three';
-import { Construction, phase, smooth, pathSample, spiralProgress } from './construction.ts';
+import { Construction, phase, smooth, pathSample, spiralProgress,proofState,PROOF_STARTS,ARC_START,ARC_END } from './construction.ts';
 
 export interface Pose {position:Vector3;target:Vector3;up:Vector3;quaternion:Quaternion;scale:number}
 const Y=new Vector3(0,1,0),Z=new Vector3(0,0,1);
@@ -30,19 +30,17 @@ export class CameraDirector {
   const follow=this.pose(world(cuffTip),1.68);
   if(t<17)return this.mix(cuffStart,follow,phase(t,13.1,14));
   if(t<18.4)return this.mix(follow,wide,phase(t,17,18.4));
-  const roll=vector(c.v).normalize();
-  const startA=this.pose(p,1.18,roll,Z);
-  if(t<21)return this.mix(wide,startA,phase(t,18.4,21));
+  const overview=this.pose(world(c.local(.809,.5)),Math.max(1.44,1.50/Math.max(.42,aspect)),vector(c.v).negate());
+  if(t<20)return this.mix(wide,overview,phase(t,18.4,20));
   const trace=(k:number,time:number)=>{
-   const progress=spiralProgress(time),sample=pathSample(c.golden[k],progress),target=world(sample.point),up=vector(sample.tangent).normalize();
-   // A source-plane normal view preserves exact screen-vertical tangents.
-   // Zoom is bounded, the existing GLB never approaches the near plane.
-   return this.pose(target,1.18-.52*smooth(time),up,Z);
+   const progress=spiralProgress(time),sample=pathSample(c.golden[k],progress);
+   return this.pose(world(sample.point),Math.max(1.18-.52*smooth(time),1.40/Math.max(.6,aspect)),vector(sample.tangent).normalize(),Z);
   };
-  const endA=trace(0,1),startB=trace(1,0);
-  if(t<28.8)return trace(0,phase(t,21,28.8));
-  if(t<30)return this.mix(endA,startB,phase(t,28.8,30));
-  if(t<37.8)return trace(1,phase(t,30,37.8));
-  return this.mix(trace(1,1),wide,phase(t,37.8,42.8));
+  const state=proofState(t),start=PROOF_STARTS[state.group],local=t-start;
+  if(t>=68)return this.mix(trace(1,1),wide,phase(t,68,72.8));
+  if(state.group&&local<1.2)return this.mix(trace(0,1),overview,phase(local,0,1.2));
+  if(local<13)return overview;
+  if(local<ARC_START)return this.mix(overview,trace(state.group,0),phase(local,13,ARC_START));
+  return trace(state.group,phase(local,ARC_START,ARC_END));
  }
 }
