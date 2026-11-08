@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "version": "1.2",
+  "actualWebGL": true,
+  "bothGroupsAllConstructionStages": true,
+  "compassAndArcRadiusLengthVerified": true,
+  "forwardReverseExactState": true,
+  "proofCountsAndCameraDeterministic": true,
+  "ipadAndPhoneConstructionScreenshots": true,
+  "disposeRemovedCanvas": true,
+  "errors": [],
+  "environment": "Chromium / SwiftShader with touch emulation, not physical Safari"
+}

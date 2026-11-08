@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "animationVersion": "1.2",
+  "buildEntry": "/tmp/xiezitu-golden-v1-2-build/golden-derivation.html",
+  "localReferencesResolve": true,
+  "originalModelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "unchangedGeometryVersion": "1.1",
+  "duration": 73,
+  "review": "Actual WebGL interaction and current keyframes",
+  "deviceScope": "Chromium touch emulation, not physical iPad Safari testing.",
+  "published": false
+}

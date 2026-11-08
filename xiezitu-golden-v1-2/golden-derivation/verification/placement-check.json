@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "revision": "1.2",
+  "counting": "visible laced eyelets, toe toward shoe opening",
+  "contactBelowFourthEyelet": true,
+  "contactProjection": {
+    "contact": {
+      "x": 687.2062300262443,
+      "y": 336.8342290387431
+    },
+    "fourth": {
+      "x": 687.2062300262443,
+      "y": 298.1750742333752
+    }
+  },
+  "secondStartDiagonallyBelowFirst": true,
+  "startProjections": {
+    "first": {
+      "x": 687.2062300262443,
+      "y": 336.83422903874316
+    },
+    "second": {
+      "x": 777.1429090627983,
+      "y": 506.5245417421894
+    }
+  },
+  "placement": {
+    "eyelet": 4,
+    "eyeletPoint": [
+      -0.062325918355419965,
+      0.08903702622202854,
+      0.25422283952159086
+    ],
+    "contact": [
+      -0.062325918355419965,
+      0.01556370101369925,
+      0.3986404206752777
+    ],
+    "firstStart": [
+      -0.062325918355419944,
+      0.01556370101369921,
+      0.3986404206752777
+    ],
+    "secondStart": [
+      0.10860246588572599,
+      -0.3069397678989795,
+      0.3986404206752777
+    ]
+  },
+  "modelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "environment": "Actual WebGL in Linux Chromium / SwiftShader; numbered labels are QA annotations only."
+}

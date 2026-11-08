@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "version": "1.2",
+  "protectedWorktrees": [
+    "/workspace/soulgrain-onward",
+    "/workspace/heel-motion-lab-v1",
+    "/workspace/tongue-motion-refinement-v1-1"
+  ],
+  "rawGlbUnchanged": true,
+  "semanticAnchorDataUnchangedFromV1_1": true,
+  "mainMerged": false
+}
