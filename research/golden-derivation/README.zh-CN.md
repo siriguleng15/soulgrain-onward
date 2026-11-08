@@ -66,7 +66,7 @@ GOLDEN_ENCODE_ONLY=1 node scripts/record-golden-derivation.cjs
 4. **细段运镜会旋转较多。** 按用户要求以端点为中心、切线保持竖直，会随内圈转向连续转动画面；需由用户确认内圈节奏与微距程度。未增加眩光、粒子或其他表演效果。
 5. **设备性能未获实机认证。** 完整原模约 139 万三角形。本版限制 DPR／像素数、暂停时停止渲染；保留原精度，也意味着较老 iPad 仍需实机评估。Chromium 模拟触控不等于 iPad Safari 测试。
 
-未推送、未部署、未修改正式站点。正式 HTTPS 独立预览需要在用户授权的发布范围内另行进行。
+用户于 2026-11-08 批准发布后，独立预览已上线：[打开实时动画](https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation.html?autoplay=0) · [查看录屏与关键帧](https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation/review.html)。部署记录见 `public-preview.json`。main 未合并，原页面未覆盖。
 
 ## 本版检查结果
 
@@ -78,4 +78,4 @@ GOLDEN_ENCODE_ONLY=1 node scripts/record-golden-derivation.cjs
 - 仍需用户审核切点解释与分区线贴合，并在真实 iPad Safari 上检查性能和手感。
 
 - 完整审核片为 43.067 秒、1280×670、H.264/yuv420p、30 fps 封装（20 fps 原始 WebGL 采样），带 faststart；完成原生 Chromium 播放和 24.5 秒跳转检查。源画布为 1280×669，编码仅补齐一行以满足 4:2:0 格式要求。
-- 交付包只包含独立静态构建与本地 Range 服务器；尚未发布，不能把 localhost 当作 iPad 公网预览链接。
+- 原始交付包包含独立静态构建与本地 Range 服务器；公网 iPad 预览请使用上面的 HTTPS 链接，localhost 是本机运行方式。

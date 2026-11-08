@@ -1,0 +1,75 @@
+{
+  "published": true,
+  "authorizedDate": "2026-11-08",
+  "sourceCodeCommit": "581b210ec1c2eded59598d741b770070dd4505c5",
+  "pagesCommit": "4aca662e4ba0ee0c6070198c56b8f317e511cb59",
+  "mediaArchiveCommit": "e695726da5891216d782231e8e5e6ae9ac2939cf",
+  "deploymentRun": "https://github.com/siriguleng15/soulgrain-onward/actions/runs/42444497212",
+  "deploymentConclusion": "success",
+  "url": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation.html?autoplay=0",
+  "reviewUrl": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation/review.html",
+  "treeProtection": {
+    "onlyNewPreviewFiles": 16,
+    "resultingPagesBytes": 996463462,
+    "oldFilesModified": 0,
+    "oldFilesDeleted": 0,
+    "originalTreeEntriesVerified": 773
+  },
+  "originalPages": [
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/",
+      "status": 200,
+      "sha256": "8dbcad8244a3f5f988dc9dc3b9e03be3b0023c5e2de9216831532a68db28f6e8",
+      "unchanged": true
+    },
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/heel-motion-lab-v1/heel-motion-lab.html",
+      "status": 200,
+      "sha256": "810a46df5128b64c3491f35bc48d608f3381d6eb6dc0363c6de9537d2c612f6e",
+      "unchanged": true
+    },
+    {
+      "url": "https://siriguleng15.github.io/soulgrain-onward/tongue-motion-lab-v1-1/tongue-motion-lab.html",
+      "status": 200,
+      "sha256": "9ce41c49b76119d015eecc32f8e1c924426a46cae28658719ac848aa5a4e5f4e",
+      "unchanged": true
+    }
+  ],
+  "liveValidation": {
+    "passed": true,
+    "url": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation.html?autoplay=0",
+    "https": true,
+    "originalModelShaVerified": true,
+    "modelRequests": [
+      {
+        "url": "https://siriguleng15.github.io/soulgrain-onward/onward-model-v10/reference-model-v10/xiezitu-original.glb",
+        "status": 200
+      }
+    ],
+    "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+    "realWebGL": true,
+    "playPause": true,
+    "timeline": true,
+    "spiralTipCentered": true,
+    "spiralTangentVertical": true,
+    "touchRotate": true,
+    "touchPinch": true,
+    "directorHandoff": true,
+    "finalHeld": true,
+    "reviewVideoPlayed": true,
+    "reviewVideoSeeked": true,
+    "media": {
+      "width": 1280,
+      "height": 670,
+      "duration": 43.066667,
+      "currentTime": 24.5
+    },
+    "errors": [],
+    "failures": [],
+    "environment": "Linux Chromium / SwiftShader with iPad device emulation; not physical iPad Safari.",
+    "tlsNote": "Automation trusts the managed test proxy only through context configuration. The deployed site contains no TLS bypass."
+  },
+  "modelReuse": "Byte-identical pre-existing xiezitu original, verified by runtime SHA-256; original uploaded GLB unchanged.",
+  "mediaStorage": "Original PNG and H.264 bytes retained on a separate immutable archive commit; Pages adds only the new preview folder.",
+  "noMainMerge": true
+}
