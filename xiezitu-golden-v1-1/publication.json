@@ -1,6 +1,6 @@
 {
   "revision": "1.1",
-  "stage": "interactive and corrected stills ready; recording regenerating",
+  "stage": "complete",
   "sourceCodeCommit": "4f1130a6b12b3097b4751c6a11fc7862d2524010",
   "stillsArchiveCommit": "4fe921a72fd29299ea676944a3595afe7afe7a5e",
   "sourceModelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
@@ -8,5 +8,47 @@
     "P below visible laced eyelet 4, counted from toe",
     "S2 at cyan short-edge lower end Q, diagonally below S1"
   ],
-  "originalModelUnchanged": true
+  "originalModelUnchanged": true,
+  "mediaArchiveCommit": "793af946d4739dd46846c60a0bbe220e4653e73d",
+  "mediaArchiveBase": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/793af946d4739dd46846c60a0bbe220e4653e73d/xiezitu-golden-media-v1-1/",
+  "recordingUpdated": true,
+  "recordingDuration": 43.066667,
+  "coreLiveCheck": {
+    "passed": true,
+    "url": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-1/golden-derivation.html?autoplay=0",
+    "constructionVersion": "1.1",
+    "placement": {
+      "eyelet": 4,
+      "eyeletPoint": [
+        -0.062325918355419965,
+        0.08903702622202854,
+        0.25422283952159086
+      ],
+      "contact": [
+        -0.062325918355419965,
+        0.01556370101369925,
+        0.3986404206752777
+      ],
+      "firstStart": [
+        -0.062325918355419944,
+        0.01556370101369921,
+        0.3986404206752777
+      ],
+      "secondStart": [
+        0.10860246588572599,
+        -0.3069397678989795,
+        0.3986404206752777
+      ]
+    },
+    "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+    "realWebGL": true,
+    "playPause": true,
+    "timeline": true,
+    "touchRotate": true,
+    "touchPinch": true,
+    "directorHandoff": true,
+    "errors": [],
+    "failures": [],
+    "environment": "Chromium with iPad emulation; not physical Safari"
+  }
 }
