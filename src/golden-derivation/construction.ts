@@ -13,7 +13,7 @@ export const SHOTS=[
  {at:12,end:17,id:'cuff',label:'04 交汇',en:'LINES IN CONVERSATION',text:'两条翻筒分区线从后跟向前延伸，与短线同步交汇。'},
  {at:17,end:20,id:'frame',label:'05 构图',en:'A HIDDEN FRAME',text:'回到整体构图，再以切点为中心靠近、转向。'},
  {at:20,end:29,id:'spiral-a',label:'06 第一螺旋',en:'THE GOLDEN PROPORTION / I',text:'黄金矩形逐级分割。生长端居中，切线沿画面纵向。'},
- {at:29,end:38,id:'spiral-b',label:'07 第二螺旋',en:'THE GOLDEN PROPORTION / II',text:'从矩形另一端开始，以相同镜头规则绘制第二组。'},
+ {at:29,end:38,id:'spiral-b',label:'07 第二螺旋',en:'THE GOLDEN PROPORTION / II',text:'从第一起点斜下方、青色短线的下端起笔。'},
  {at:38,end:43,id:'return',label:'08 全貌',en:'EVERY LINE BELONGS',text:'镜头回到起始视角，保留完整推导。'},
 ] as const;
 export function shotAt(t:number){return [...SHOTS].reverse().find(s=>t>=s.at)??SHOTS[0];}
@@ -57,6 +57,8 @@ export function spiralProgress(time:number){
  return 1;
 }
 export interface ConstructionData {
+ revision:string;
+ calibration:{contactEyeletNumber:number;eyelets:{numberFromToe:number;point:number[]}[];secondSpiralStart:string};
  sourceSha256:string;seam:{points:number[][];anchors:unknown[]};
  frame:{origin:number[];axis:number[];down:number[];height:number;depth:number};
  landmarks:Record<string,number[]>;notes:string[];validation:Record<string,unknown>;
@@ -85,7 +87,9 @@ export class Construction {
   }
  }
  local(x:number,y:number,opposite=false){
-  if(opposite){x=PHI-x;y=1-y;}
+  // Reflect across the midline: the second start is Q on P's short edge.
+  // A half-turn wrongly puts it at the far corner, as happened in V1.
+  if(opposite)y=1-y;
   return this.p.clone().addScaledVector(this.e,x*this.height).addScaledVector(this.v,y*this.height);
  }
  rectangle(){return pathOf([this.local(0,0),this.local(PHI,0),this.local(PHI,1),this.local(0,1),this.local(0,0)]);}

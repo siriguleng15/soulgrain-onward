@@ -24,7 +24,7 @@
 | `public/golden-derivation/construction.json` | 241 个源表面锚点、构图坐标架与来源说明 |
 | `research/golden-derivation/STORYBOARD.zh-CN.md` | 12 张分镜的逐项记录 |
 
-当前数学曲线是黄金矩形递归正方形中的四分之一圆弧，具有相邻端点和切线连续性；不是严格的对数螺旋。第二组由同一模板旋转 180°，从外框另一端出发。
+当前数学曲线是黄金矩形递归正方形中的四分之一圆弧，具有相邻端点和切线连续性；不是严格的对数螺旋。V1.1 的第二组对同一模板作纵向镜像（x 不变，y → 1−y），从青色短边下端 Q 出发；V1 的 180° 旋转误读已修正。
 
 导演模式采用正交相机，避免鞋面深度与构图平面之间的透视视差，使主线的末端对准后跟顶端。仍是真实三维几何、PBR 光照和可自由旋转的 WebGL 场景。推近／拉远连续改变相机位置及正交取景范围；自由观察支持单指／鼠标旋转、双指／滚轮缩放。
 
@@ -79,3 +79,11 @@ GOLDEN_ENCODE_ONLY=1 node scripts/record-golden-derivation.cjs
 
 - 完整审核片为 43.067 秒、1280×670、H.264/yuv420p、30 fps 封装（20 fps 原始 WebGL 采样），带 faststart；完成原生 Chromium 播放和 24.5 秒跳转检查。源画布为 1280×669，编码仅补齐一行以满足 4:2:0 格式要求。
 - 原始交付包包含独立静态构建与本地 Range 服务器；公网 iPad 预览请使用上面的 HTTPS 链接，localhost 是本机运行方式。
+
+## V1.1 · 按用户原图修正两个定位错误
+
+- V1 切点错误来自按拟合曲线候选交点选择位置，未锁定第四鞋眼。现在用 `user-anchors-v1-1.json` 中从鞋头往鞋口编号的六个穿带鞋眼，强制 P 的 X 与第 4 孔一致，Y 位于其下方的原主轴。局部拟合仅作用于独立红色描线，不移动源模型。
+- V1 把第二起点误读为矩形对角顶点。现在 S2=Q=P+H·V，在第一起点斜下方、同一条青色短边上；两组圆弧按 y → 1−y 镜像。没有只把起点标记挪走、保留错误轨迹。
+- 原鞋头起点、后跟顶端、主轴、翻筒辅助线方向与间距、43 秒分镜及播放控制保留。P 沿既有主轴移动；跟随镜头按修正后的实际路径重新求值。
+- `scripts/check-golden-placement.cjs` 输出两张带编号的实际 WebGL 校准图：`15-fourth-eyelet-contact.png`、`16-same-short-edge-starts.png`。图中编号是审核标注，不会叠加到正常产品界面。
+- V1.1 独立构建目录 `/tmp/xiezitu-golden-v1-1-build`，本地入口 `http://localhost:4566/golden-derivation.html`；使用 `serve-golden-preview.py --directory /tmp/xiezitu-golden-v1-1-build --port 4566`。

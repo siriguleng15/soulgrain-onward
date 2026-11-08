@@ -31,7 +31,7 @@ function update(){
  get('chapter-en').textContent=shot.en;get('chapter-title').textContent=shot.label;get('chapter-detail').textContent=shot.text;
  get('owner').textContent=s.cameraOwner==='director'?'导演镜头':'自由观察 / 已暂停';get('play').textContent=s.playing?'正在播放':'播放';get('play').classList.toggle('active',s.playing);
  document.querySelectorAll<HTMLButtonElement>('[data-shot]').forEach((b,i)=>{b.classList.toggle('current',SHOTS[i].id===shot.id);b.setAttribute('aria-current',SHOTS[i].id===shot.id?'step':'false');});
- get('identity').textContent=s.verified?'ORIGINAL GLB / SHA-256 VERIFIED':'SOURCE / VERIFYING';
+ get('identity').textContent=s.verified?'V1.1 / ORIGINAL GLB VERIFIED':'SOURCE / VERIFYING';
 }
 get('play').onclick=()=>lab.play();get('pause').onclick=()=>lab.pause();get('replay').onclick=()=>{lab.reset();lab.play();};get('reverse').onclick=()=>lab.play(true);get('reset').onclick=()=>lab.reset();
 get<HTMLInputElement>('timeline').oninput=e=>{const time=Number((e.target as HTMLInputElement).value);lab.pause();lab.seek(time);};

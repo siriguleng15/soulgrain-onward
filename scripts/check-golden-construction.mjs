@@ -21,7 +21,17 @@ for(const a of data.seam.anchors){
 const c=new Construction(data),r=c.rectangle();
 const width=r.points[0].distanceTo(r.points[1]),height=r.points[1].distanceTo(r.points[2]);
 assert.ok(Math.abs(width/height-PHI)<1e-12);assert.ok(Math.abs(c.e.dot(c.v))<1e-12);
-assert.ok(c.golden[0].points[0].distanceTo(c.p)<1e-10);assert.ok(c.golden[1].points[0].distanceTo(c.local(PHI,1))<1e-10);
+assert.equal(data.revision,'1.1');assert.equal(data.calibration.contactEyeletNumber,4);
+const eye4=data.calibration.eyelets.find(e=>e.numberFromToe===4).point;
+assert.ok(Math.abs(c.p.x-eye4[0])<1e-12);assert.ok(c.p.y<eye4[1]);
+assert.ok(c.golden[0].points[0].distanceTo(c.p)<1e-10);assert.ok(c.golden[1].points[0].distanceTo(c.q)<1e-10);
+const startDelta=c.golden[1].points[0].clone().sub(c.p);
+assert.ok(Math.abs(startDelta.dot(c.e))<1e-12);assert.ok(Math.abs(startDelta.dot(c.v)-height)<1e-12);
+for(let i=0;i<c.golden[0].points.length;i++){
+ const a=c.golden[0].points[i].clone().sub(c.p),b=c.golden[1].points[i].clone().sub(c.p);
+ assert.ok(Math.abs(a.dot(c.e)-b.dot(c.e))<1e-12);
+ assert.ok(Math.abs(a.dot(c.v)+b.dot(c.v)-height)<1e-12);
+}
 let seamJoin=0,tangentJoin=0;
 const arcs=goldenArcs();for(let i=1;i<arcs.length;i++){
  const a=arcs[i-1],b=arcs[i];
@@ -29,5 +39,5 @@ const arcs=goldenArcs();for(let i=1;i<arcs.length;i++){
  seamJoin=Math.max(seamJoin,Math.hypot(end[0]-start[0],end[1]-start[1]));tangentJoin=Math.max(tangentJoin,Math.abs(Math.cos(a.b)-Math.cos(b.a)),Math.abs(Math.sin(a.b)-Math.sin(b.a)));
 }assert.ok(seamJoin<1e-10);assert.ok(tangentJoin<1e-10);
 let last=-1;for(let i=0;i<=1000;i++){const t=spiralProgress(i/1000);assert.ok(t>=last);last=t;for(const p of c.golden){const s=pathSample(p,t);assert.ok([...s.point.toArray(),...s.tangent.toArray()].every(Number.isFinite));}}
-const report={passed:true,sourceSha256:SOURCE_SHA,sourceBytes:raw.length,sourceVertices:pa.count,sourceTriangles:doc.accessors[primitive.indices].count/3,surfaceAnchors:data.seam.anchors.length,surfaceReconstructionMaxError:error,rectangleAspect:width/height,phi:PHI,frameOrthogonalityError:Math.abs(c.e.dot(c.v)),arcEndpointContinuityError:seamJoin,arcTangentContinuityError:tangentJoin,tangencyFit:data.validation,notes:data.notes};
+const report={passed:true,revision:data.revision,contactEyeletNumber:4,contactBelowFourthEyelet:true,firstStart:c.p.toArray(),secondStart:c.q.toArray(),secondStartOnCyanLowerEnd:true,mirroredAcrossMidline:true,sourceSha256:SOURCE_SHA,sourceBytes:raw.length,sourceVertices:pa.count,sourceTriangles:doc.accessors[primitive.indices].count/3,surfaceAnchors:data.seam.anchors.length,surfaceReconstructionMaxError:error,rectangleAspect:width/height,phi:PHI,frameOrthogonalityError:Math.abs(c.e.dot(c.v)),arcEndpointContinuityError:seamJoin,arcTangentContinuityError:tangentJoin,tangencyFit:data.validation,notes:data.notes};
 await mkdir('public/golden-derivation/verification',{recursive:true});await writeFile('public/golden-derivation/verification/geometry-check.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

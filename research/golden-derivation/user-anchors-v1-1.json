@@ -1,0 +1,111 @@
+{
+  "revision": "1.1",
+  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "countingDirection": "toe to shoe opening; visible laced eyelets only, not cuff eyelets",
+  "referenceCamera": {
+    "projection": "perspective",
+    "position": [
+      0,
+      0,
+      2.25
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ],
+    "fovDegrees": 37,
+    "viewport": [
+      1600,
+      900
+    ]
+  },
+  "eyelets": [
+    {
+      "numberFromToe": 1,
+      "pixel": [
+        493,
+        510
+      ],
+      "point": [
+        -0.45536653284019474,
+        -0.08899671651599896,
+        0.25512638711356495
+      ],
+      "triangle": 371032
+    },
+    {
+      "numberFromToe": 2,
+      "pixel": [
+        618,
+        460
+      ],
+      "point": [
+        -0.26856760376609745,
+        -0.014756461745389915,
+        0.26539131052180287
+      ],
+      "triangle": 530788
+    },
+    {
+      "numberFromToe": 3,
+      "pixel": [
+        696,
+        430
+      ],
+      "point": [
+        -0.15430238557467912,
+        0.029673535687438267,
+        0.25459087723961904
+      ],
+      "triangle": 642992
+    },
+    {
+      "numberFromToe": 4,
+      "pixel": [
+        758,
+        390
+      ],
+      "point": [
+        -0.062325918355419965,
+        0.08903702622202854,
+        0.25422283952159086
+      ],
+      "triangle": 736189
+    },
+    {
+      "numberFromToe": 5,
+      "pixel": [
+        817,
+        341
+      ],
+      "point": [
+        0.025050295898051567,
+        0.16061660311103657,
+        0.26821475304441167
+      ],
+      "triangle": 822866
+    },
+    {
+      "numberFromToe": 6,
+      "pixel": [
+        869,
+        285
+      ],
+      "point": [
+        0.10216076139314048,
+        0.2442974728966405,
+        0.25874131723015004
+      ],
+      "triangle": 883683
+    }
+  ],
+  "contact": {
+    "eyeletNumber": 4,
+    "rule": "X aligned with fourth visible laced eyelet, Y on the existing toe-to-heel construction axis, below the eyelet"
+  },
+  "secondSpiral": {
+    "start": "Q, the lower end of the cyan short edge from P",
+    "templateTransform": "x unchanged, y -> 1-y; not 180-degree rotation"
+  }
+}

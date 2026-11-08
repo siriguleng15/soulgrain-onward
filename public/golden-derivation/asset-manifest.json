@@ -15,5 +15,10 @@
   "uvOrTextureIntroduced": false,
   "runtime": "Three.js 0.180, original source mesh, independent 3D construction layer, orthographic director and OrbitControls handoff",
   "sourceMaterials": "No UV/textures in the supplied file. Independent neutral runtime material; original GLB bytes remain unchanged.",
-  "storyboard": "12 user-supplied annotated images; ST0 through ST7 chapter timeline documented separately."
+  "storyboard": "12 user-supplied annotated images; ST0 through ST7 chapter timeline documented separately.",
+  "revision": "1.1",
+  "corrections": [
+    "P locked below visible laced eyelet 4, counted from toe",
+    "Second spiral starts at Q on the same cyan short edge; reflected across the midline"
+  ]
 }

@@ -8,7 +8,6 @@ from pathlib import Path
 import hashlib, json, struct
 import numpy as np
 from scipy.interpolate import CubicSpline
-from scipy.optimize import brentq
 
 ROOT=Path(__file__).resolve().parents[1]
 SRC=ROOT/'public/golden-derivation/xiezitu.glb'
@@ -53,27 +52,31 @@ controls=np.array([p['point'][:2] for p in observed[:11]])
 spline=CubicSpline(controls[:,0],controls[:,1])
 heel=np.array(observed[11]['point'][:2]);a=controls[0].copy()
 slope=(heel[1]-a[1])/(heel[0]-a[0])
-def equation(x):return spline(x)-a[1]-(x-a[0])*slope
-grid=np.linspace(controls[0,0]+.02,controls[-1,0],200)
-roots=[brentq(equation,a,b) for a,b in zip(grid[:-1],grid[1:]) if equation(a)*equation(b)<0]
-assert roots,'No fitted seam tangent to the heel landmark'
-px=min(roots,key=lambda x:abs(x-.05));p=np.array([px,float(spline(px))])
+semantic=json.loads((ROOT/'research/golden-derivation/user-anchors-v1-1.json').read_text())
+assert semantic['sourceSha256']==sha
+eyelets=semantic['eyelets'];fourth=next(e for e in eyelets if e['numberFromToe']==4)
+# The approved fourth-eyelet placement takes precedence over an arbitrary
+# spline/chord root. Do not choose another root to solve the visual brief.
+px=float(fourth['point'][0]);p=np.array([px,float(a[1]+(px-a[0])*slope)])
+grid=np.linspace(controls[0,0],controls[-1,0],300)
 # Constrain the hand-fitted seam's derivative locally, with a compact C2 bump.
-# At the contact its position is unchanged; the model is never deformed.
+# The independent traced seam is fitted at the locked user contact. Neither
+# source positions nor the actual source stitching are modified.
 # This resolves the approximate storyboard observations into one consistent
 # Euclidean study, rather than claiming the AI stitch is an analytic curve.
-delta=slope-float(spline(px,1));support=.065
+offset=float(p[1]-spline(px));delta=slope-float(spline(px,1));support=.075
 def curve(x):
  q=(x-px)/support
- return spline(x)+delta*(x-px)*np.maximum(0,1-q*q)**3
+ return spline(x)+(offset+delta*(x-px))*np.maximum(0,1-q*q)**3
 e=(heel-p)/np.linalg.norm(heel-p);v=np.array([e[1],-e[0]])
 depth=float(vertices[:,2].max()+.009)
 lift=lambda q:[float(q[0]),float(q[1]),depth]
 anchors=[hit(float(x),float(curve(x))) for x in np.linspace(controls[0,0],controls[-1,0],241)]
 seam=[(np.array(a['point'])+np.array(a['normal'])*.0025).tolist() for a in anchors]
 landmarks={'toe':lift(a),'heel':lift(heel),'contact':lift(p)}
-data={'sourceSha256':sha,'sourceBytes':len(raw),'sourceVertices':len(vertices),'sourceTriangles':len(faces),
- 'seam':{'controlsXY':controls.tolist(),'points':seam,'anchors':anchors,'contactFit':{'support':support,'derivativeAdjustment':delta,'maxXYAdjustment':float(np.max(np.abs(curve(grid)-spline(grid))))}},
+data={'revision':'1.1','sourceSha256':sha,'sourceBytes':len(raw),'sourceVertices':len(vertices),'sourceTriangles':len(faces),
+ 'calibration':{'countingDirection':semantic['countingDirection'],'eyelets':eyelets,'contactEyeletNumber':4,'contactRule':semantic['contact']['rule'],'secondSpiralStart':'cyan lower endpoint Q'},
+ 'seam':{'controlsXY':controls.tolist(),'points':seam,'anchors':anchors,'contactFit':{'support':support,'positionAdjustment':offset,'derivativeAdjustment':delta,'maxXYAdjustment':float(np.max(np.abs(curve(grid)-spline(grid))))}},
  'landmarks':landmarks,'frame':{'origin':lift(p),'axis':[*e.tolist(),0],'down':[*v.tolist(),0],'height':.365,'depth':depth},
  'notes':['Source GLB is loaded unchanged; separate runtime material and 3D construction geometry only.',
  'Seam control locations are manually interpreted from the supplied mesh and storyboard; not factory coordinates.',

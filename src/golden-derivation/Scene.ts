@@ -49,7 +49,8 @@ export class DerivationScene {
   ]);
   if(!crypto.subtle)throw Error('请通过 HTTPS 或本机 localhost 打开预览，以校验原始鞋模。');
   const digest=await crypto.subtle.digest('SHA-256',source);const sha=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
-  if(sha!==SOURCE_SHA||data.sourceSha256!==sha)throw Error('模型身份与当前缝线定位不一致，已停止加载。');this.verified=true;
+  if(sha!==SOURCE_SHA||data.sourceSha256!==sha)throw Error('模型身份与当前缝线定位不一致，已停止加载。');
+  if(data.revision!=='1.1'||data.calibration?.contactEyeletNumber!==4)throw Error('定位数据版本不一致，请重新载入 V1.1 预览。');this.verified=true;
   onProgress('正在建立三维推导…');
   const gltf=await new GLTFLoader().parseAsync(source,'');if(this.disposed)return;
   this.asset=gltf.scene;this.asset.traverse(o=>{if(o instanceof Mesh){o.material=this.material;o.name='Uploaded_Xiezitu_Unchanged';}});
@@ -153,7 +154,7 @@ export class DerivationScene {
   const trace=this.time>=21&&this.time<28.8?0:this.time>=30&&this.time<37.8?1:-1;
   let tracking=null;
   if(this.ready&&trace>=0){const progress=spiralProgress(phase(this.time,trace?30:21,trace?37.8:28.8)),s=pathSample(this.construction.golden[trace],progress);const p=this.root.localToWorld(s.point.clone()).project(this.camera),t=this.root.localToWorld(s.point.clone().addScaledVector(s.tangent,.0001)).project(this.camera).sub(p);tracking={tipNdc:p.toArray(),tangentHorizontalFraction:Math.abs(t.x)/Math.hypot(t.x,t.y)};}
-  return{ready:this.ready,time:this.time,playing:this.playing,speed:this.speed,cameraOwner:this.cameraOwner,cameraTransition:!!this.transition,verified:this.verified,contextLost:this.contextLost,revision:this.revision,drawRevision:this.drawRevision,shot:shotAt(this.time).id,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,dpr:this.renderer.getPixelRatio(),tracking,sourceSha256:SOURCE_SHA,assetMatrix:this.asset?.matrix.toArray(),camera:this.camera.position.toArray(),quaternion:this.camera.quaternion.toArray(),sourceGeometry:this.asset?.children.filter(o=>o instanceof Mesh).map(o=>({vertices:(o as Mesh<BufferGeometry>).geometry.getAttribute('position').count,triangles:((o as Mesh<BufferGeometry>).geometry.index?.count??0)/3})),guideCounts:this.lines.map(l=>l.line.geometry.instanceCount)};
+  return{ready:this.ready,constructionVersion:this.ready?this.construction.data.revision:null,placement:this.ready?{eyelet:this.construction.data.calibration.contactEyeletNumber,eyeletPoint:this.construction.data.calibration.eyelets.find(e=>e.numberFromToe===4)?.point,contact:this.construction.p.toArray(),firstStart:this.construction.golden[0].points[0].toArray(),secondStart:this.construction.golden[1].points[0].toArray()}:null,time:this.time,playing:this.playing,speed:this.speed,cameraOwner:this.cameraOwner,cameraTransition:!!this.transition,verified:this.verified,contextLost:this.contextLost,revision:this.revision,drawRevision:this.drawRevision,shot:shotAt(this.time).id,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,dpr:this.renderer.getPixelRatio(),tracking,sourceSha256:SOURCE_SHA,assetMatrix:this.asset?.matrix.toArray(),camera:this.camera.position.toArray(),quaternion:this.camera.quaternion.toArray(),sourceGeometry:this.asset?.children.filter(o=>o instanceof Mesh).map(o=>({vertices:(o as Mesh<BufferGeometry>).geometry.getAttribute('position').count,triangles:((o as Mesh<BufferGeometry>).geometry.index?.count??0)/3})),guideCounts:this.lines.map(l=>l.line.geometry.instanceCount)};
  }
  dispose(){
   this.disposed=true;cancelAnimationFrame(this.raf);this.observer.disconnect();this.controls.dispose();document.removeEventListener('visibilitychange',this.visibility);
