@@ -1,0 +1,27 @@
+{
+  "comparison-side.png": {
+    "bytes": 1370827,
+    "sha256": "d33d38de4359d6990a88f35bcf0ee3c38e36725edc89c9bd4fe95507a686f7b2"
+  },
+  "soulgrain-eyelet-fix-v2-GLB.zip": {
+    "bytes": 43909298,
+    "sha256": "cfa826de71df27785cb05d9b1b5ac4dc1a14eb0d0c038b5f9f337baa099e6e04"
+  },
+  "comparison-detail.png": {
+    "bytes": 2744462,
+    "sha256": "be64ed57168471bf012dd55bc54dd80ce75f4847ba4bd9568554f3d31557775e"
+  },
+  "soulgrain-eyelet-fix-v2-review.zip": {
+    "bytes": 23227849,
+    "sha256": "d2007b04f023b82e0c2f5174a3e9e62d1b9632b8927329549c7c5c1ed11364c4"
+  },
+  "README.txt": {
+    "bytes": 1773,
+    "sha256": "c1ee526a9c10aaa227539f38498a80cd109b60f4624c4afa3775c5ef7eea99d6"
+  },
+  "embeddedGLB": {
+    "file": "soulgrain-texture-test-v2-eyelet-fix.glb",
+    "bytes": 67349368,
+    "sha256": "d3775cc1c7f3568aa0cd4a7b85d8d98f8818b207b621210d439a951829e65a56"
+  }
+}
