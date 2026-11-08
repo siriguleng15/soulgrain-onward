@@ -1,0 +1,13 @@
+/* Independent preview transport. The animation bundle and original GLB are unchanged. */
+(function () {
+ 'use strict';
+ var base = new URL('.', document.currentScript.src);
+ var local = new URL('golden-derivation/xiezitu.glb', base).href;
+ var original = new URL('../onward-model-v10/reference-model-v10/xiezitu-original.glb', base).href;
+ var nativeFetch = window.fetch.bind(window);
+ window.fetch = function (input, options) {
+  var url = input instanceof Request ? input.url : new URL(String(input), document.baseURI).href;
+  if (url !== local) return nativeFetch(input, options);
+  return nativeFetch(input instanceof Request ? new Request(original, input) : original, options);
+ };
+}());

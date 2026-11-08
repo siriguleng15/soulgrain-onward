@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "revision": "1.1",
+  "contactEyeletNumber": 4,
+  "contactBelowFourthEyelet": true,
+  "firstStart": [
+    -0.062325918355419965,
+    0.01556370101369925,
+    0.3986404206752777
+  ],
+  "secondStart": [
+    0.10860246588572602,
+    -0.30693976789897953,
+    0.3986404206752777
+  ],
+  "secondStartOnCyanLowerEnd": true,
+  "mirroredAcrossMidline": true,
+  "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "sourceBytes": 33432084,
+  "sourceVertices": 696427,
+  "sourceTriangles": 1393074,
+  "surfaceAnchors": 241,
+  "surfaceReconstructionMaxError": 5.551115123125783e-17,
+  "rectangleAspect": 1.6180339887498945,
+  "phi": 1.618033988749895,
+  "frameOrthogonalityError": 0,
+  "arcEndpointContinuityError": 0,
+  "arcTangentContinuityError": 0,
+  "tangencyFit": {
+    "planeTangencyCrossError": 1.1102230246251565e-16,
+    "sourcePositionFinite": true,
+    "seamSurfaceAnchors": 241,
+    "maximumAnchorReconstructionError": 0,
+    "toeLineOffsetFromSeamStart": 0
+  },
+  "notes": [
+    "Source GLB is loaded unchanged; separate runtime material and 3D construction geometry only.",
+    "Seam control locations are manually interpreted from the supplied mesh and storyboard; not factory coordinates.",
+    "Seam follows source triangle/barycentric surface anchors. Euclidean guides and golden rectangles use the recorded XY construction plane in front of the shoe.",
+    "Tangency and golden ratio apply in that side construction plane, not to geodesic distances on the curved shoe.",
+    "Division lines extrapolate the observed cuff directions; source stitches are not modified."
+  ]
+}

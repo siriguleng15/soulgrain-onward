@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "buildEntry": "/tmp/xiezitu-golden-v1-build/golden-derivation.html",
+  "localReferencesResolve": true,
+  "originalModelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "movie": {
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "dimensions": [
+      1280,
+      670
+    ],
+    "duration": 43.066667,
+    "frameRate": "30/1",
+    "faststart": true,
+    "decodedFrameSeconds": 24.5
+  },
+  "deviceScope": "Container and decode validation, not physical iPad Safari testing.",
+  "published": false
+}
