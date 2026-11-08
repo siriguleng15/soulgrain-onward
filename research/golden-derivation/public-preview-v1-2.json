@@ -1,0 +1,79 @@
+{
+  "revision": "1.2",
+  "published": true,
+  "sourceCodeCommit": "2cdac4027609e1abea274527cab5ace42f7c306e",
+  "pagesCommit": "f7a890c26ef6f94934dd1eae6d3487dd1ef0ff36",
+  "mediaArchiveCommit": "040cd7069f3206a501f643b3a1ff763bc6e8c992",
+  "deploymentRun": "https://github.com/siriguleng15/soulgrain-onward/actions/runs/42454617845",
+  "deploymentConclusion": "success",
+  "url": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-2/golden-derivation.html?autoplay=0",
+  "reviewUrl": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-2/golden-derivation/review.html",
+  "durationSeconds": 73,
+  "stages": [
+    "unit square",
+    "midpoint and diagonal",
+    "compass extension to phi",
+    "golden rectangle dimensions",
+    "recursive square cuts",
+    "circle centers, radius and 90-degree arcs"
+  ],
+  "geometryVersionUnchanged": "1.1",
+  "physicalSafariTested": false,
+  "liveValidation": {
+    "passed": true,
+    "url": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1-2/golden-derivation.html?autoplay=0",
+    "constructionVersion": "1.2",
+    "placement": {
+      "eyelet": 4,
+      "eyeletPoint": [
+        -0.062325918355419965,
+        0.08903702622202854,
+        0.25422283952159086
+      ],
+      "contact": [
+        -0.062325918355419965,
+        0.01556370101369925,
+        0.3986404206752777
+      ],
+      "firstStart": [
+        -0.062325918355419944,
+        0.01556370101369921,
+        0.3986404206752777
+      ],
+      "secondStart": [
+        0.10860246588572599,
+        -0.3069397678989795,
+        0.3986404206752777
+      ]
+    },
+    "sourceSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+    "realWebGL": true,
+    "playPause": true,
+    "timeline": true,
+    "touchRotate": true,
+    "touchPinch": true,
+    "directorHandoff": true,
+    "errors": [],
+    "failures": [],
+    "environment": "Chromium with iPad emulation; not physical Safari"
+  },
+  "publicReviewValidation": {
+    "passed": true,
+    "publicReviewCurrentKeyframes": 18,
+    "allImagesDecoded": true,
+    "oldMovieNotPresentedAsCurrent": true
+  },
+  "treeProtection": {
+    "passed": true,
+    "previousEntriesVerifiedUnchanged": 806,
+    "newPreviewFiles": 16,
+    "pagesBytes": 998093870,
+    "oldSourceModelAndAllPreviewsUnchanged": true,
+    "mainMerged": false
+  },
+  "localPackage": {
+    "path": "/workspace/artifacts/xiezitu-golden-derivation-v1-2-preview.zip",
+    "bytes": 35322417,
+    "sha256": "259141ff3699d0cc7ffccf2f0183081f34e19a4a7895772c52966373e1ebd0d8"
+  }
+}
