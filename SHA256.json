@@ -1,0 +1,29 @@
+{
+  "purpose": "Download delivery only; TEST V1 for review, not final artwork acceptance",
+  "modelInsideZip": "soulgrain-A-geometry-B-texture-test-v1.glb",
+  "modelSha256": "40550cf9c006df1167665ad55c3f74c2df02d3594c51b0d2ec9cabdfe40c4d09",
+  "files": [
+    {
+      "name": "soulgrain-texture-transfer-test-v1-GLB.zip",
+      "bytes": 47857276,
+      "sha256": "228f49c11ea911f253b08adac6f42dd94ce1fd3457ef41632abddefe35b4b9bb"
+    },
+    {
+      "name": "soulgrain-transfer-test-v1-review.zip",
+      "bytes": 26963765,
+      "sha256": "59553596a42d49138ddbad222b7e7a0c250cb90681b6280ead59444d06db5c37"
+    },
+    {
+      "name": "comparison-overview.png",
+      "bytes": 2181304,
+      "sha256": "a284252760b4996efedbf08b04f34d97097a8b81ff1b97cccc83824ca60788bf"
+    }
+  ],
+  "sourceGeometry": "A/default.glb only",
+  "sourceGeometrySha256": "d8c0e30facc80b59e022981456b566c2712d36aeb77e1dc1d5400d28541eb29b",
+  "textureSourceSha256": "04e686d73e357cd16a20095c8e4e96d9b5e22bf39f33af82e39af7d7350ea264",
+  "spatialTriangleCoordinateDifference": 0,
+  "unmatchedRegions": "White in test model; marked in review images",
+  "existingWebsiteOrAnimationChanged": false,
+  "originalReleaseAssetsOverwritten": false
+}
