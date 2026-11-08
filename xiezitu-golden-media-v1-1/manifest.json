@@ -1,0 +1,75 @@
+{
+  "revision": "1.1",
+  "sourceCodeCommit": "4f1130a6b12b3097b4751c6a11fc7862d2524010",
+  "sourceModelSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "files": {
+    "04-cross-growing.png": {
+      "bytes": 597816,
+      "sha256": "b947c9e26a4edc6f166b288ebf9f68f8441ec8188b83636742b434e491798f74"
+    },
+    "motion-review.mp4": {
+      "bytes": 10769593,
+      "sha256": "365c911657f93166bc6aa2032fc4265c00ee257a4351fb263cde72a1a3ab0024"
+    },
+    "07-golden-frame.png": {
+      "bytes": 652320,
+      "sha256": "d2f3e89dd4c31c41733a699dca524376e33c36cb7c0121ea1e5eca2ae5ed060d"
+    },
+    "03-axis-contact.png": {
+      "bytes": 290026,
+      "sha256": "974b0139ef36ae9f2dd753e293a8b69b269fe7a60d69904c01b208314df31b67"
+    },
+    "09-second-spiral.png": {
+      "bytes": 524187,
+      "sha256": "aabd5ad97a3737583658b04a0d747ae64ed9a84a0981055edfee8543e507e028"
+    },
+    "05-cuff-intersection.png": {
+      "bytes": 486708,
+      "sha256": "e7aa4b4307d527ca8e93ba41fffd5b8f802f9c9f89f4b6bc988311ce909cd19e"
+    },
+    "12-phone-layout.png": {
+      "bytes": 498968,
+      "sha256": "3e5330ca5ddac863e98e6d2b788ce7c0d8071cba8a1b5abc9364c82dc26d08b3"
+    },
+    "06-whole-framework.png": {
+      "bytes": 290034,
+      "sha256": "656f910ac24ad7049db0785731f6c319cae384e799621a2e837b6c4e1c67be7e"
+    },
+    "14-review-browser.png": {
+      "bytes": 436281,
+      "sha256": "6186d8284fa4a5859f1aa3b1d71b4c378d3314a213de69967ae6201d354002df"
+    },
+    "13-video-decoded.png": {
+      "bytes": 509915,
+      "sha256": "41967b1688aa7eb1599fdb58318911ad039b919e361ac601c7eb8c4f807da44b"
+    },
+    "10-complete.png": {
+      "bytes": 293554,
+      "sha256": "a3be1f24812a77142a07e925a8cbbeeb39d14b4850c148b298235c77a043cf60"
+    },
+    "15-fourth-eyelet-contact.png": {
+      "bytes": 396738,
+      "sha256": "4d8abc9a7b181d1295a7c1b68d92d4aa87deeb42ba662f66379b7326c861524e"
+    },
+    "01-original.png": {
+      "bytes": 282905,
+      "sha256": "a5cff7d46af1bd56757863a13d71161dd5c770d225beac6d52227c1c1cb52052"
+    },
+    "08-first-spiral.png": {
+      "bytes": 517796,
+      "sha256": "58bb4d8efcfab342a74bd652d87f51d12428477c95bbff1a1e6c4718c18f94be"
+    },
+    "02-origin-macro.png": {
+      "bytes": 449030,
+      "sha256": "8a0e0b2429bc4b43b29b414838f1ff5ea5e2f04a430a08170b39214a740e4c49"
+    },
+    "11-ipad-layout.png": {
+      "bytes": 817033,
+      "sha256": "380b12024c1b327fac588d560d24444fb65487c79eebdbab76bdc9b65f2b94ec"
+    },
+    "16-same-short-edge-starts.png": {
+      "bytes": 403766,
+      "sha256": "cc25f5fd1a1fc1d3b202ba5fb5a742fc2b3307579a6d5a7ad7e3af440b1b2519"
+    }
+  }
+}
