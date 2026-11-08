@@ -1,0 +1,66 @@
+{
+  "sourceCommit": "581b210ec1c2eded59598d741b770070dd4505c5",
+  "purpose": "Immutable original review media for the authorized independent preview",
+  "files": {
+    "verification/01-original.png": {
+      "bytes": 283218,
+      "sha256": "d75db2d2d8a4c38b0d96b71a32352a6c84245d33c176562efc1a9085ac8f6f65"
+    },
+    "verification/02-origin-macro.png": {
+      "bytes": 449718,
+      "sha256": "ebb567dba928bd20dc64e95140069b23fa400415258bba5b870175be736f2e7f"
+    },
+    "verification/03-axis-contact.png": {
+      "bytes": 290410,
+      "sha256": "5302777f657beb967cb88d2543826dec46ee385cf5c28fb32a850f77f571f661"
+    },
+    "verification/04-cross-growing.png": {
+      "bytes": 616092,
+      "sha256": "47babb098c12f7555070fd88a8507c6c4b96ee698b3b959a43c8caaf3a80f142"
+    },
+    "verification/05-cuff-intersection.png": {
+      "bytes": 499363,
+      "sha256": "bd50daaabe4781366f39f6e8d2e873d68205763a1b43eaf52499ce2ddb9bd441"
+    },
+    "verification/06-whole-framework.png": {
+      "bytes": 290176,
+      "sha256": "2c18ae7f536d1215b51dab8baf19d673ba417095091efd46a472808409ca212f"
+    },
+    "verification/07-golden-frame.png": {
+      "bytes": 614825,
+      "sha256": "b6a20b28761f6921be9a2721bb8ef38b0a0d9334d50953a5386342217b2ee2a1"
+    },
+    "verification/08-first-spiral.png": {
+      "bytes": 462526,
+      "sha256": "f21cf84488510949f6fcd1fb80e5112915b26b0a24fb0034bb0cd6b2ce0c1cf9"
+    },
+    "verification/09-second-spiral.png": {
+      "bytes": 737454,
+      "sha256": "484fada40ec80905e1a09ebbf52ea55e8109e6c007bfa6d6f8d3e9569957daa0"
+    },
+    "verification/10-complete.png": {
+      "bytes": 294316,
+      "sha256": "30c1292ee1f3373a1d0f6643ba45060b5c160fb730320ec4771e979ed03c38bc"
+    },
+    "verification/11-ipad-layout.png": {
+      "bytes": 819038,
+      "sha256": "eef8d7ddddd50952f2a68ab24dc6fa8be09b1e87fabdf205abefd902fa8ae2cf"
+    },
+    "verification/12-phone-layout.png": {
+      "bytes": 499728,
+      "sha256": "78864508684891f0386998cb5ae290577ecd52676daaa6628ba5c126c6d6766b"
+    },
+    "verification/13-video-decoded.png": {
+      "bytes": 413291,
+      "sha256": "f435571512bc6f96e8c13425e62e21d0e33b9ec49d9b569c6af0a41c381257db"
+    },
+    "verification/14-review-browser.png": {
+      "bytes": 379758,
+      "sha256": "e805e1dd257629e6d53e1143908bcd8256259d316c3ee5e2fc0e0762fe56a086"
+    },
+    "verification/motion-review.mp4": {
+      "bytes": 10238945,
+      "sha256": "911a76aaa89d99ae8ac5c380b246114e2295e0b21cf1bcba8cf8df27b9bb826b"
+    }
+  }
+}
