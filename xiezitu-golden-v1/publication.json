@@ -1,0 +1,19 @@
+{
+  "authorized": "User explicitly approved independent preview publication on 2026-11-08",
+  "sourceCommit": "581b210ec1c2eded59598d741b770070dd4505c5",
+  "parentPagesCommit": "cd079228adacd811da6f03b132405946c80db5ca",
+  "originalModel": {
+    "url": "https://siriguleng15.github.io/soulgrain-onward/onward-model-v10/reference-model-v10/xiezitu-original.glb",
+    "sha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+    "bytes": 33432084,
+    "runtimeShaVerified": true
+  },
+  "reviewMedia": {
+    "commit": "e695726da5891216d782231e8e5e6ae9ac2939cf",
+    "base": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/e695726da5891216d782231e8e5e6ae9ac2939cf/xiezitu-golden-media-v1/"
+  },
+  "animationBundleUnchanged": true,
+  "publicEntry": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation.html",
+  "reviewEntry": "https://siriguleng15.github.io/soulgrain-onward/xiezitu-golden-v1/golden-derivation/review.html",
+  "newFolderBytes": 805704
+}

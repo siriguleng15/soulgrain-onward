@@ -1,0 +1,19 @@
+{
+  "chapter": "xiezitu-golden-derivation-v1",
+  "baseline": "1fc22816b0fd180a80ddef8a316be4acadaa26fb",
+  "source": {
+    "uploadedFileId": "file_000000005e908207a2234ed529794109",
+    "originalName": "xiezitu.glb",
+    "file": "xiezitu.glb",
+    "sha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+    "bytes": 33432084,
+    "vertices": 696427,
+    "triangles": 1393074
+  },
+  "originalGlbModified": false,
+  "sourcePositionsNormalsIndicesModified": false,
+  "uvOrTextureIntroduced": false,
+  "runtime": "Three.js 0.180, original source mesh, independent 3D construction layer, orthographic director and OrbitControls handoff",
+  "sourceMaterials": "No UV/textures in the supplied file. Independent neutral runtime material; original GLB bytes remain unchanged.",
+  "storyboard": "12 user-supplied annotated images; ST0 through ST7 chapter timeline documented separately."
+}
