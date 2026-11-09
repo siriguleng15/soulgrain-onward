@@ -1,0 +1,17 @@
+{
+  "patternAssemblyConfirmed": true,
+  "source": "User supplied front shoe photograph and two actual paper patterns",
+  "frontFanTowardToe": true,
+  "sewnEdgeVertices": 65,
+  "frontPatternVertices": 3520,
+  "backPatternVertices": 2598,
+  "tongueTriangles": 24216,
+  "watertight": true,
+  "windingConsistent": true,
+  "connectedComponents": 1,
+  "holes": 2,
+  "thicknessModelUnits": 0.0048,
+  "frontFinishedSurface": "closed cloth, drafting slits closed",
+  "frontCoverage": "full width between eyestays; no original lace geometry used as deformation scaffold",
+  "photoMetricLimit": "Pattern proportions traced from perspective photos; no factory-scale unfolding certification"
+}

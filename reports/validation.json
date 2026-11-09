@@ -1,0 +1,131 @@
+{
+  "asset": "SOULGRAIN-V5.2-no-laces-two-panel-tongue.glb",
+  "bytes": 82597456,
+  "sha256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+  "scope": {
+    "sourceV4SHA256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+    "sourceV4HashUnchanged": true,
+    "retainedAttributesExact": true,
+    "retainedTriangleIndicesExact": true,
+    "original18ImagesByteIdentical": true,
+    "original10MaterialsIdentical": true,
+    "tenCuffEyeletMeshesNodesUntouched": true,
+    "frontEyeletGuardFacesRemoved": 0,
+    "deletedKnownLaceCorridorFaces": 396480,
+    "replacedOldTongueFaces": 199139,
+    "removedCentroidBounds": [
+      [
+        -0.6446275115013123,
+        -0.21894006431102753,
+        -0.32165810465812683
+      ],
+      [
+        0.2099999636411667,
+        0.48890599608421326,
+        0.3274027407169342
+      ]
+    ],
+    "removedAuditCandidateLabels": {
+      "0": 391988,
+      "1": 0,
+      "2": 0,
+      "3": 11973,
+      "4": 40384,
+      "5": 0,
+      "6": 151274,
+      "7": 0,
+      "8": 0
+    },
+    "candidateLabelWarning": "Original spatial audit labels are not certified part IDs. Some inner eyestay faces labelled side/body were removed within the local lace junction; do not interpret the entire body as geometry-identical."
+  },
+  "tongue": {
+    "vertices": 12106,
+    "triangles": 24216,
+    "watertight": true,
+    "windingConsistent": true,
+    "connectedComponents": 1,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "zeroAreaFaces": 0,
+    "finiteAttributes": true,
+    "genus": 2,
+    "holeCount": 2,
+    "sewnSharedVertices": 65,
+    "frontBackThickness": [
+      0.004799966234713793,
+      0.004800000227987766,
+      0.004800033289939165
+    ],
+    "units": "uncalibrated model units; physical thickness not certified",
+    "normalRaySample": {
+      "samples": 1600,
+      "hits": 1599,
+      "distanceQuantiles": [
+        0.00048287504946864827,
+        0.004768606511429192,
+        0.004799622772247783,
+        0.004799990301635777,
+        0.005266907995933568
+      ],
+      "shorterThan0_001": 2,
+      "shortHits": [
+        {
+          "sourceFace": 432,
+          "facePart": 2,
+          "faceSide": 2,
+          "distance": 0.0007615610668374049,
+          "point": [
+            -0.7299191355705261,
+            -0.25466713309288025,
+            0.106574647128582
+          ]
+        },
+        {
+          "sourceFace": 15,
+          "facePart": 0,
+          "faceSide": 0,
+          "distance": 0.00048287504946864827,
+          "point": [
+            -0.7035138607025146,
+            -0.3056359589099884,
+            -0.18606603145599365
+          ]
+        }
+      ],
+      "note": "inward face-centroid rays; sampled only, not an exhaustive self intersection or cloth simulation certificate"
+    }
+  },
+  "uv": [
+    {
+      "part": "PNL_FRONT_FAN_AND_FLAT_LACING_DECK",
+      "faces": 13234,
+      "finite": true,
+      "zeroAreaTriangles": 0,
+      "note": "plain V4 canvas patch intentionally tiled; U/V outside 0..1 are valid repeats"
+    },
+    {
+      "part": "PNL_BACK_FOLD_ROUNDED_TWO_HOLES",
+      "faces": 9564,
+      "finite": true,
+      "zeroAreaTriangles": 0,
+      "note": "plain V4 canvas patch intentionally tiled; U/V outside 0..1 are valid repeats"
+    },
+    {
+      "part": "GEO_TONGUE_THICKNESS_AND_HOLE_WALLS",
+      "faces": 1418,
+      "finite": true,
+      "zeroAreaTriangles": 0,
+      "note": "plain V4 canvas patch intentionally tiled; U/V outside 0..1 are valid repeats"
+    }
+  ],
+  "userConfirmed": {
+    "fanFacesToe": true,
+    "frontNarrowEdgeSewnToBackUpperEdge": true
+  },
+  "knownOpenIssues": [
+    "V4 fused lace/eyelet junctions have residual malformed eyelet skins and local cut boundaries; preserved for review rather than inventing replacement hardware. This test is not final accepted cleanup.",
+    "Pattern photographs are perspective views; proportions and seam allowances need physical scale confirmation before production cutting or unfolding.",
+    "A complete folded two-panel shell is provided; no production rig, unfolding animation, collision proof or cloth bake is certified.",
+    "Existing body lining, heel and sole defects outside this scope remain."
+  ]
+}

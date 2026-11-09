@@ -1,0 +1,14 @@
+from common import *
+from scipy.interpolate import PchipInterpolator
+from scipy.spatial import cKDTree
+q=np.load('/workspace/artifacts/onward-tongue-v5-1/data/source-body.npz');p=q['positions'];f=q['faces'];m=q['material'];c=p[f].mean(1);a=np.load('/workspace/artifacts/onward-structure-audit-20261109/data/inspection-mesh.npz');labels=a['labels'][:len(f)];rgb=a['centroidRGB'][:len(f)];mr=np.load(R/'data/metal-mask.npz')['mr'];curve=PchipInterpolator([-.65,-.58,-.48,-.36,-.27,-.17,-.065,.045,.155,.23],[-.155,-.145,-.12,-.105,-.078,-.012,.066,.14,.208,.26]);seat=curve(c[:,0]);gap=.12+.08*np.clip((c[:,0]+.6)/.8,0,1)
+# Protect the original eyelet seats and adjacent metal skin, not just material slot 7 (which belongs to cuff bores).
+eyeSeeds=(m==0)&(mr[:,2]>75)&(abs(c[:,2])>gap-.045)&(abs(c[:,2])<gap+.09)&(abs(c[:,1]-seat)<.045)&(c[:,0]>-.64)&(c[:,0]<.20)
+dist,_=cKDTree(c[eyeSeeds]).query(c,workers=4);eyes=(dist<.0025)&(abs(c[:,2])>gap-.055)&(abs(c[:,1]-seat)<.052)
+protected=np.isin(labels,[1,2,3,4,5,7,8])|eyes
+zone=(c[:,0]>-.645)&(c[:,0]<.195)&(c[:,1]>-.205)&(c[:,1]<.49)&(c[:,1]>seat-.22)&(abs(c[:,2])<gap+.03)
+white=(rgb.min(1)>150)&(rgb.max(1)-rgb.min(1)<100);tails=(c[:,0]>-.64)&(c[:,0]<.195)&(c[:,1]>seat+.018)&(c[:,1]<.49)&(abs(c[:,2])<.345)&white
+old=np.load('/workspace/artifacts/onward-tongue-v5-1/data/tongue-rebuilt.npz')['sourceRemove'];inner=(c[:,0]>-.645)&(c[:,0]<.195)&(abs(c[:,2])<gap-.018)&(c[:,1]>seat-.035)&(c[:,1]<.49)&np.isin(m,[0,9]);laceSkin=(c[:,0]>-.645)&(c[:,0]<.195)&(c[:,1]>seat-.065)&(c[:,1]<.49)&(abs(c[:,2])<gap+.090)&white&~np.isin(labels,[1,2,5,7,8]);laces=(((zone|tails)&~protected)|inner|laceSkin)&~eyes&~old&np.isin(m,[0,9]);old=old&~eyes
+np.savez_compressed(R/'data/cleanup.npz',laces=laces,oldTongue=old,eyesProtected=eyes,eyeSeeds=eyeSeeds,seat=seat)
+w=Writer();w.split_body({'V4_BODY_LACEFREE_REFERENCE':~laces&~old,'OLD_TONGUE_REFERENCE_ONLY':old});w.doc['asset']['generator']='Soulgrain V5.2 stage1: actual lace deletion, original eyelet guards retained';w.doc.setdefault('extras',{}).update({'source':'V4','lacesDeletedTriangles':int(laces.sum()),'inspectionOldTongueNode':'OLD_TONGUE_REFERENCE_ONLY','eyeletGeometryNotMoved':True});w.write(R/'output/SOULGRAIN-V5.2-stage1-no-laces.glb')
+report={'source':'V4, not rejected V5.1 geometry','deletedLaceTriangles':int(laces.sum()),'oldTongueRetainedAsSeparateReferenceTriangles':int(old.sum()),'eyeletGuardTriangles':int(eyes.sum()),'eyeletSeedTriangles':int(eyeSeeds.sum()),'protectedOtherRegionsRemoved':int((laces&np.isin(labels,[1,2,3,4,5,7,8])).sum()),'tenCuffEyelets':'all original meshes and nodes unchanged','method':'Geometric throat corridor + source material/metal neighborhood guards. Visual check required before final delivery.'};(R/'reports/cleanup.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))

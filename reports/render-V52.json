@@ -1,0 +1,165 @@
+[
+  {
+    "file": "V52-quarter.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "quarter",
+    "hidden": []
+  },
+  {
+    "file": "V52-front.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "front",
+    "hidden": []
+  },
+  {
+    "file": "V52-opening.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "opening",
+    "hidden": []
+  },
+  {
+    "file": "V52-opposite.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "opposite",
+    "hidden": []
+  },
+  {
+    "file": "V52-flat-front-panel-on-shoe.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "opening",
+    "hidden": [
+      "DEC_CONTINUOUS_WHITE_ZIGZAG_OVERLOCK",
+      "GEO_TONGUE_SILVER_EYELET_1",
+      "GEO_TONGUE_SILVER_EYELET_2",
+      "GEO_TONGUE_THICKNESS_AND_HOLE_WALLS",
+      "PNL_BACK_FOLD_ROUNDED_TWO_HOLES"
+    ]
+  },
+  {
+    "file": "V52-isolated-whole.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "isolated",
+    "hidden": [
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V52-side-thickness.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "side",
+    "hidden": [
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V52-isolated-back.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "opposite",
+    "hidden": [
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V52-sewn-connection.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "seam",
+    "hidden": [
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V52-exploded.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "quarter",
+    "hidden": []
+  },
+  {
+    "file": "V52-restored.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "quarter",
+    "hidden": []
+  },
+  {
+    "file": "V52-back-panel-two-holes.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "cloth-front",
+    "hidden": [
+      "GEO_TONGUE_THICKNESS_AND_HOLE_WALLS",
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "PNL_FRONT_FAN_AND_FLAT_LACING_DECK",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V52-front-fan-panel-only.png",
+    "sourceSHA256": "074289a0d16ebdb2369b7d58e1923fa43733f0d45dd166e994275bf2c03c9992",
+    "camera": "isolated",
+    "hidden": [
+      "DEC_CONTINUOUS_WHITE_ZIGZAG_OVERLOCK",
+      "GEO_TONGUE_SILVER_EYELET_1",
+      "GEO_TONGUE_SILVER_EYELET_2",
+      "GEO_TONGUE_THICKNESS_AND_HOLE_WALLS",
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "PNL_BACK_FOLD_ROUNDED_TWO_HOLES",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source": "V4, not rejected V5.1 geometry",
+  "deletedLaceTriangles": 396480,
+  "oldTongueRetainedAsSeparateReferenceTriangles": 199139,
+  "eyeletGuardTriangles": 12566,
+  "eyeletSeedTriangles": 5189,
+  "protectedOtherRegionsRemoved": 52357,
+  "tenCuffEyelets": "all original meshes and nodes unchanged",
+  "method": "Geometric throat corridor + source material/metal neighborhood guards. Visual check required before final delivery."
+}

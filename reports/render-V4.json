@@ -1,0 +1,26 @@
+[
+  {
+    "file": "V4-quarter.png",
+    "sourceSHA256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+    "camera": "quarter",
+    "hidden": []
+  },
+  {
+    "file": "V4-front.png",
+    "sourceSHA256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+    "camera": "front",
+    "hidden": []
+  },
+  {
+    "file": "V4-opening.png",
+    "sourceSHA256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+    "camera": "opening",
+    "hidden": []
+  },
+  {
+    "file": "V4-opposite.png",
+    "sourceSHA256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+    "camera": "opposite",
+    "hidden": []
+  }
+]
