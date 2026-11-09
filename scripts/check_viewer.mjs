@@ -1,0 +1,13 @@
+import { chromium } from '/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import fs from 'node:fs';
+const R='/workspace/artifacts/onward-tongue-v5-1';
+const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1024,height:768},hasTouch:true,deviceScaleFactor:1});page.setDefaultTimeout(120000);const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+await page.goto('http://127.0.0.1:8893/viewer/index.html',{waitUntil:'load'});await page.waitForFunction(()=>window.onwardDebug?.ready,{timeout:180000});
+let baseline=await page.evaluate(()=>window.onwardDebug.snapshot());await page.screenshot({path:R+'/images/viewer-assembled.png'});
+await page.locator('#highlight').check();await page.locator('#only').check();await page.getByRole('button',{name:'背面',exact:true}).click();await page.waitForTimeout(500);await page.screenshot({path:R+'/images/viewer-isolated-back.png'});
+await page.locator('#show').uncheck();let hidden=await page.evaluate(()=>window.onwardDebug.snapshot());await page.locator('#show').check();await page.locator('#only').uncheck();await page.locator('#laces').uncheck();await page.waitForTimeout(300);await page.screenshot({path:R+'/images/viewer-laces-hidden.png'});
+const cycles=await page.evaluate(()=>{let a=window.onwardDebug;for(let i=0;i<20;i++){a.set({explode:1,highlight:true});a.set({explode:0,highlight:false})}return a.snapshot()});await page.getByRole('button',{name:'复位全部',exact:true}).click();const restored=await page.evaluate(()=>window.onwardDebug.snapshot());
+await page.setViewportSize({width:768,height:1024});await page.waitForTimeout(300);await page.screenshot({path:R+'/images/viewer-ipad-portrait.png'});
+const report={baseline,hidden,after20ExplodeRestoreCycles:cycles,restored,restorationError:Math.max(...cycles.tonguePosition.map((v,i)=>Math.abs(v-cycles.basePosition[i]))),errors,scope:'Chromium WebGL software rendering, touch and tablet viewport. This does not certify actual iPad Safari GPU performance.'};
+fs.writeFileSync(R+'/reports/viewer-validation.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));await browser.close();if(errors.length||report.restorationError!==0||hidden.state.visible!==false)process.exitCode=1;

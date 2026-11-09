@@ -1,0 +1,124 @@
+{
+  "testAsset": "SOULGRAIN-V5.1-tongue-structure-test.glb",
+  "sha256": "27eec69e821417a75c3077789f5154d903e116fabe4fbe9d20e3a5596213ee12",
+  "geometry": {
+    "vertices": 88874,
+    "triangles": 177752,
+    "components": 1,
+    "watertight": true,
+    "windingConsistent": true,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "zeroAreaTriangles": 0,
+    "finitePositionsNormalsUV": true,
+    "genus": 2,
+    "intendedHoles": 2,
+    "pairedFrontBackDistanceQuantiles": [
+      0.004999983590096235,
+      0.0054969703778624535,
+      0.005500009283423424,
+      0.007820322923362232,
+      0.015500023029744625
+    ],
+    "thicknessUnits": "uncalibrated model units; no millimeter claim",
+    "rootNearestV4VertexDistanceQuantiles": [
+      0.0002999826187835664,
+      0.0011462302922186968,
+      0.0043873569811469955,
+      0.005392118623798853
+    ],
+    "rootSeamStatus": "Provisional seam location; physically attached to actual vamp triangle coordinates, with barycentric reference data.",
+    "normalRaySampling": {
+      "samples": 1800,
+      "hits": 1778,
+      "distanceQuantiles": [
+        0.002718296738299146,
+        0.005495944648467101,
+        0.005500010409173122,
+        0.007987699502341699,
+        0.13408808010341533
+      ],
+      "shorterThan0_001": 0,
+      "shortHits": [],
+      "interpretation": "Sampled front-to-back interior ray distances; this is not an exhaustive self-intersection certificate."
+    },
+    "rootToActualVampAnchorDistanceQuantiles": [
+      0.00029996056016462925,
+      0.00029998794423184434,
+      0.0003000163017136408,
+      0.0003000347898268315
+    ]
+  },
+  "uv": [
+    {
+      "role": "upperFront",
+      "triangles": 56177,
+      "zeroAreaUV": 0,
+      "uvMin": [
+        0.01857282593846321,
+        0.0
+      ],
+      "uvMax": [
+        0.9833822250366211,
+        1.0
+      ]
+    },
+    {
+      "role": "hiddenContinuousFront",
+      "triangles": 31739,
+      "zeroAreaUV": 0,
+      "uvMin": [
+        0.0,
+        0.0
+      ],
+      "uvMax": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "role": "back",
+      "triangles": 87916,
+      "zeroAreaUV": 0,
+      "uvMin": [
+        0.0,
+        0.0
+      ],
+      "uvMax": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "role": "rimSeparateUVIslands",
+      "triangles": 1920,
+      "zeroAreaUV": 0,
+      "uvMin": [
+        0.001612903201021254,
+        0.001612903201021254
+      ],
+      "uvMax": [
+        0.9983870983123779,
+        0.9983870983123779
+      ]
+    }
+  ],
+  "scope": {
+    "retainedV4SpatialTrianglesNormalsUVExact": true,
+    "protectedSemanticRegionsTrianglesRemoved": 0,
+    "original18ImagesByteIdentical": true,
+    "original10MaterialsIdentical": true,
+    "tenIndependentEyeletsUntouched": true,
+    "removedOldTongueFaces": 199139,
+    "laceShapeChanged": false,
+    "laceDisplaySplitOnly": true,
+    "newTongueUVPolicy": "Retopologized visible tongue uses a dedicated V4 appearance chart. It does not claim the original exposed UV coordinates are unchanged. Protected body retains exact original UVs.",
+    "sourceV4Unchanged": true
+  },
+  "knownLimitations": [
+    "No unfolding animation or production rig is certified in this stage.",
+    "Root seam and hidden back material need confirmation.",
+    "Source body pre-existing defects outside tongue scope are retained.",
+    "No exhaustive triangle-pair collision certificate."
+  ]
+}

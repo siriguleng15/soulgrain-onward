@@ -1,0 +1,97 @@
+{
+  "baseline": {
+    "ready": true,
+    "tongueMeshes": 4,
+    "triangleCount": 1499039,
+    "tonguePosition": [
+      0,
+      0,
+      0
+    ],
+    "basePosition": [
+      0,
+      0,
+      0
+    ],
+    "state": {
+      "visible": true,
+      "highlight": false,
+      "only": false,
+      "laces": true,
+      "explode": 0
+    },
+    "sourceHash": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  "hidden": {
+    "ready": true,
+    "tongueMeshes": 4,
+    "triangleCount": 1499039,
+    "tonguePosition": [
+      0,
+      0,
+      0
+    ],
+    "basePosition": [
+      0,
+      0,
+      0
+    ],
+    "state": {
+      "visible": false,
+      "highlight": true,
+      "only": true,
+      "laces": true,
+      "explode": 0
+    },
+    "sourceHash": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  "after20ExplodeRestoreCycles": {
+    "ready": true,
+    "tongueMeshes": 4,
+    "triangleCount": 1499039,
+    "tonguePosition": [
+      0,
+      0,
+      0
+    ],
+    "basePosition": [
+      0,
+      0,
+      0
+    ],
+    "state": {
+      "visible": true,
+      "highlight": false,
+      "only": false,
+      "laces": false,
+      "explode": 0
+    },
+    "sourceHash": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  "restored": {
+    "ready": true,
+    "tongueMeshes": 4,
+    "triangleCount": 1499039,
+    "tonguePosition": [
+      0,
+      0,
+      0
+    ],
+    "basePosition": [
+      0,
+      0,
+      0
+    ],
+    "state": {
+      "visible": true,
+      "highlight": false,
+      "only": false,
+      "laces": true,
+      "explode": 0
+    },
+    "sourceHash": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  "restorationError": 0,
+  "errors": [],
+  "scope": "Chromium WebGL software rendering, touch and tablet viewport. This does not certify actual iPad Safari GPU performance."
+}

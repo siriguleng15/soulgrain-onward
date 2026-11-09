@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/workspace/artifacts/glb-material-finish-v4/output/soulgrain-B-style-sole-toe-tongue-test-v4.glb",
+    "bytes": 70739456,
+    "sha256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  {
+    "path": "/workspace/artifacts/onward-structure-audit-20261109/SOULGRAIN-structure-audit.pdf",
+    "bytes": 2815472,
+    "sha256": "1ff57b7835528c7efa2ab57f76d6edc72c9df331bcd490d2b490a955afa082ec"
+  },
+  {
+    "path": "/workspace/artifacts/onward-structure-audit-20261109/audit-report.zh-CN.md",
+    "bytes": 28805,
+    "sha256": "7f02fc1f8ada285b879f8d810d99ba97e6aa7059f08bc484fddbd0927b5fc9c9"
+  },
+  {
+    "path": "/workspace/artifacts/onward-structure-audit-20261109/reports/semantic-candidates.json",
+    "bytes": 2749,
+    "sha256": "5c782abfbeb15ebfc6d2fc2c58db1089f28eace429f897537eb3b3d83ddc8036"
+  },
+  {
+    "path": "/workspace/artifacts/onward-structure-audit-20261109/reports/topology-issue-locations.json",
+    "bytes": 4923,
+    "sha256": "e961a874861090bb8dfc47a8bde8aa64cc885ff79c32e4e02e0e7cbb4994c552"
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "file": "V51-assembled.png",
+    "camera": "quarter",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": []
+  },
+  {
+    "file": "V51-tongue-front-in-shoe.png",
+    "camera": "front",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": []
+  },
+  {
+    "file": "V51-laces-hidden.png",
+    "camera": "under-laces",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": [
+      "DEBUG_LACES_VISIBILITY_ONLY"
+    ]
+  },
+  {
+    "file": "V51-isolated-front.png",
+    "camera": "front",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": [
+      "DEBUG_LACES_VISIBILITY_ONLY",
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V51-isolated-back.png",
+    "camera": "back",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": [
+      "DEBUG_LACES_VISIBILITY_ONLY",
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V51-isolated-side-thickness.png",
+    "camera": "side",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": [
+      "DEBUG_LACES_VISIBILITY_ONLY",
+      "New_minus_eyelet_1",
+      "New_minus_eyelet_2",
+      "New_minus_eyelet_3",
+      "New_minus_eyelet_4",
+      "New_minus_eyelet_5",
+      "Preserved_plus_eyelet_1",
+      "Preserved_plus_eyelet_2",
+      "Preserved_plus_eyelet_3",
+      "Preserved_plus_eyelet_4",
+      "Preserved_plus_eyelet_5",
+      "Shoe_TEST_V3"
+    ]
+  },
+  {
+    "file": "V51-exploded.png",
+    "camera": "quarter",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": []
+  },
+  {
+    "file": "V51-restored.png",
+    "camera": "quarter",
+    "source": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "sameLighting": true,
+    "geometryHidden": []
+  }
+]

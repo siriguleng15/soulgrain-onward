@@ -1,0 +1,53 @@
+{
+  "status": "V5.1 test; root seam position requires confirmation",
+  "sourceUpperReference": "V4 sampled shape, two original holes, edge outline and color/material values",
+  "holes": 2,
+  "frontVertices": 44437,
+  "triangles": 177752,
+  "thicknessModelUnits": 0.0055,
+  "rootLineBounds": [
+    [
+      -0.6162086913304474,
+      -0.1845566068469116,
+      -0.10899662118880778
+    ],
+    [
+      -0.5799983451579465,
+      -0.14644857354883578,
+      0.11694103583874782
+    ]
+  ],
+  "rootConfidence": "provisional throat/vamp surface attachment; no factory pattern provided",
+  "foldBoundaryVertexCount": 139,
+  "watertight": true,
+  "windingConsistent": true,
+  "connectedComponents": 1,
+  "sourceFacesRemoved": 199139,
+  "sourceFacesRemovedByMaterial": {
+    "0": 44119,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 155020
+  },
+  "removedFaceCentroidBounds": [
+    [
+      -0.37551307678222656,
+      0.052210550755262375,
+      -0.32165810465812683
+    ],
+    [
+      0.2099999636411667,
+      0.48890599608421326,
+      0.3229101896286011
+    ]
+  ],
+  "debugLaceTrianglesNoShapeEdits": 234705,
+  "UVPolicy": "All retained V4 geometry keeps exact original attributes and image bytes. Reconstructed tongue has a dedicated UV chart resampled from V4, no redesigned artwork; new hidden leg/back have separate UV and plain matching cloth.",
+  "noOtherDesignChanges": true
+}

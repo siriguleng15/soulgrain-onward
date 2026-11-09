@@ -1,0 +1,12 @@
+{
+  "file": "/workspace/artifacts/onward-tongue-v5-1/output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+  "bytes": 91738704,
+  "sha256": "27eec69e821417a75c3077789f5154d903e116fabe4fbe9d20e3a5596213ee12",
+  "nodes": 15,
+  "tongueNode": 13,
+  "assemblyNode": 12,
+  "laceNode": 11,
+  "imagesEmbedded": 20,
+  "originalImagesBytePreserved": 18,
+  "sourceOriginalFileUnchanged": true
+}

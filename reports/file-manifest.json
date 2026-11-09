@@ -1,0 +1,277 @@
+[
+  {
+    "path": "README.txt",
+    "bytes": 1981,
+    "sha256": "26a29d7d8a7f0d9571b55b16372eaf3ece1b9bb498ad536d18e08be1755d39ae"
+  },
+  {
+    "path": "SOULGRAIN-V5.1-structure-report.pdf",
+    "bytes": 2258100,
+    "sha256": "61adae1985092cef437707e1f84f878258d4a0df196ea6cbfdcb56c068741b2e"
+  },
+  {
+    "path": "data/tongue-rebuilt.npz",
+    "bytes": 3257969,
+    "sha256": "200767480467cfe45f55959822b942c60cef009dc15f9b54e33e0b99491c1c27"
+  },
+  {
+    "path": "images/V4-assembled.png",
+    "bytes": 2043996,
+    "sha256": "9227f13fea30bf40a2e212ed874bac048a0aa750a0181c6f28f74f7f0799f7dc"
+  },
+  {
+    "path": "images/V4-isolated-back.png",
+    "bytes": 1666051,
+    "sha256": "e5cdc2c5bf1f1e02c3de024e3a60d92291529f9f02ea40af3cdd12644bfc44d4"
+  },
+  {
+    "path": "images/V4-isolated-front.png",
+    "bytes": 1611815,
+    "sha256": "f1687d61e9d1d5f9f1ea4878295d2c233374ffa4ef0206a8f64ef51aaf021183"
+  },
+  {
+    "path": "images/V4-isolated-side-thickness.png",
+    "bytes": 1548794,
+    "sha256": "d4a48e9b4b5581907137eaae948a7cb406b37cd85c649deec01a15fd920de0a9"
+  },
+  {
+    "path": "images/V4-laces-hidden.png",
+    "bytes": 2273581,
+    "sha256": "00da2c4bd031682d29833512489b8f35a566d1b79762db7eccd1a827d0bd6fe9"
+  },
+  {
+    "path": "images/V4-tongue-front-in-shoe.png",
+    "bytes": 2057892,
+    "sha256": "7323c8a06c6993a98e2ef2648edd56fb166462a8b8cc87242c5a8153162779cf"
+  },
+  {
+    "path": "images/V51-assembled.png",
+    "bytes": 2053900,
+    "sha256": "db4ea6be7a309c21b4cc2569095ca68775a49bb64b21d5b2ffe91fabf17e8bb3"
+  },
+  {
+    "path": "images/V51-exploded.png",
+    "bytes": 1950462,
+    "sha256": "0f2a94ebc723d7092b4c61b30e5752b30c46fd67047076312866fe56719a67f5"
+  },
+  {
+    "path": "images/V51-isolated-back.png",
+    "bytes": 1583342,
+    "sha256": "a25a53a41ef7104d683e72d3b405a181ce68c45772950ed4d7d75eb5aed60bbf"
+  },
+  {
+    "path": "images/V51-isolated-front.png",
+    "bytes": 1645454,
+    "sha256": "942bf25e47bb9bc04f7a0d0f28c38304993c84b6c9c3b9282e7098c22c468b5e"
+  },
+  {
+    "path": "images/V51-isolated-side-thickness.png",
+    "bytes": 1573886,
+    "sha256": "2d59a4bb6ecd77b95d25bdd64a45d14b4b797c9b3b3460d22e39dae068b70929"
+  },
+  {
+    "path": "images/V51-laces-hidden.png",
+    "bytes": 2277638,
+    "sha256": "a91a73a5aac2c79c4b797d2738c6a4e03fe34622453a3f1172bc5508ca7a231c"
+  },
+  {
+    "path": "images/V51-restored.png",
+    "bytes": 2053900,
+    "sha256": "1dae19082c14c1903555b03fcc06c0508dcb169d16eaa5f4dacb2d0df3ee4acd"
+  },
+  {
+    "path": "images/V51-tongue-front-in-shoe.png",
+    "bytes": 2073461,
+    "sha256": "c90e20b71ff8ac5857a743db8f41d0149a09882456e788dcbc3b78574106ce16"
+  },
+  {
+    "path": "images/acceptance-six-views.jpg",
+    "bytes": 487990,
+    "sha256": "f8f5fcdffd34290c887279522268f8c24b131569c0bfa629256d9c6ce0cd11b6"
+  },
+  {
+    "path": "images/compare-assembled.jpg",
+    "bytes": 222920,
+    "sha256": "d219f7e2badfcf2430f4dd48d5f4c6322a9a326bf67152a09a8758db304c5196"
+  },
+  {
+    "path": "images/compare-isolated-back.jpg",
+    "bytes": 100888,
+    "sha256": "669e474c10c28da4de16881aaad78d66ae1a2eee32e2d3d6221675d65af5b2d8"
+  },
+  {
+    "path": "images/compare-isolated-front.jpg",
+    "bytes": 103892,
+    "sha256": "50f45b412917b842046e76e4a75d858442827e4deb8019784ff5cd4c313892bb"
+  },
+  {
+    "path": "images/compare-isolated-side-thickness.jpg",
+    "bytes": 90778,
+    "sha256": "64170c14f418689e1707a21d6f108ace5f48659b24cc679652766cff7da7cff6"
+  },
+  {
+    "path": "images/compare-laces-hidden.jpg",
+    "bytes": 282486,
+    "sha256": "6c6ad4aa613c56da13d47f4bdbbe657ea45d8efc32716ded7b45b2b36c31d2fd"
+  },
+  {
+    "path": "images/compare-tongue-front-in-shoe.jpg",
+    "bytes": 224163,
+    "sha256": "c18d1e1218e8acb102d9ad1c2adc2e7f5a0eaf53f1fbeb02fd0f8b519bc26771"
+  },
+  {
+    "path": "images/continuous-section.png",
+    "bytes": 212977,
+    "sha256": "ae268aaa934ff00c072d70162c85375839569d14d748db4222e6e72b2e4c22e0"
+  },
+  {
+    "path": "images/uv-inspection.png",
+    "bytes": 2234389,
+    "sha256": "a20a24bdf129d59d6f08e28830471e18b59a6b0304adf4e63011281c6f93a03a"
+  },
+  {
+    "path": "images/viewer-ipad-portrait.png",
+    "bytes": 175304,
+    "sha256": "0601c4feb83020612d9874433e83b53b86268adbcc9921d923e3865b57c6c004"
+  },
+  {
+    "path": "output/SOULGRAIN-V5.1-tongue-only.glb",
+    "bytes": 5417944,
+    "sha256": "a3fd01c4443a952255866623642bc8e60ae4493733105c31f032028156426411"
+  },
+  {
+    "path": "output/SOULGRAIN-V5.1-tongue-structure-test.glb",
+    "bytes": 91738704,
+    "sha256": "27eec69e821417a75c3077789f5154d903e116fabe4fbe9d20e3a5596213ee12"
+  },
+  {
+    "path": "report.html",
+    "bytes": 2216276,
+    "sha256": "bd1e01094473f9bb0a45620eb7483d0afecde8697a5ad722714b4c843c74dd2e"
+  },
+  {
+    "path": "reports/construction.json",
+    "bytes": 1436,
+    "sha256": "d10003349ed6a2ba1c09f5fb67ac89a1a27b9d1b788fa9defb47c8214ebc2c1f"
+  },
+  {
+    "path": "reports/delivery-verification.json",
+    "bytes": 1862,
+    "sha256": "1883aedee2714d6643b91011cbc5ba5a1a2cc871401936e268908fb84975cfc8"
+  },
+  {
+    "path": "reports/export.json",
+    "bytes": 379,
+    "sha256": "efd2247854a6eec1ded838795ff113f8d0a79f7bb3bbb9669a2352b294446a21"
+  },
+  {
+    "path": "reports/input-manifest.json",
+    "bytes": 1062,
+    "sha256": "e0215728fd87684a5e42dd1cd2ad54e442d2e82fba80bcffaaae4259a33f81b5"
+  },
+  {
+    "path": "reports/render-V4.json",
+    "bytes": 2390,
+    "sha256": "54bf05346177aba70dc3b2a6799215c3c122f2c226edad6ccab73ce5311ac312"
+  },
+  {
+    "path": "reports/render-V51.json",
+    "bytes": 2960,
+    "sha256": "e115eca3581e01155cdd0c4170dc9cd66b2aadf4b66828059611750895b481b4"
+  },
+  {
+    "path": "reports/report-layout.json",
+    "bytes": 111,
+    "sha256": "d4ce442fe70dfbb692bdd0941c42cbb526f74bab2cae9ca00529d64aa48f0962"
+  },
+  {
+    "path": "reports/validation.json",
+    "bytes": 3404,
+    "sha256": "a7f92e171e1454daa391e405c4a5d5dc5bc0d844fdd5ef2e88e7f694871f0293"
+  },
+  {
+    "path": "reports/viewer-validation.json",
+    "bytes": 1882,
+    "sha256": "814bce4f22dea9da312fe6fc99edd04134dec9b03d1db326117bd4d851541e0d"
+  },
+  {
+    "path": "scripts/build_tongue.py",
+    "bytes": 10622,
+    "sha256": "7c134a99c40134c4dc6f16add78020cac9adae71964cc87150d2cfd5f1aa4d9a"
+  },
+  {
+    "path": "scripts/check_viewer.mjs",
+    "bytes": 2451,
+    "sha256": "831496d586567ef9a1e16cd14cba3569b7bdfda9c36ed74b59ec55b0e7b01e5a"
+  },
+  {
+    "path": "scripts/export_glb.py",
+    "bytes": 6928,
+    "sha256": "e9ac2e31b3ce1842a70c967282b522a06c310a8dca614a7017c568db1844bdfa"
+  },
+  {
+    "path": "scripts/export_reference.py",
+    "bytes": 1946,
+    "sha256": "fd557d97661ee2b3a856c06a9235f71c59d5a7922129fa8c5b5b3dde0aed7c76"
+  },
+  {
+    "path": "scripts/export_tongue_only.py",
+    "bytes": 2851,
+    "sha256": "d95d427361f6292c586de52304c6fda9c9e63d725741c99c10ab654e605ab302"
+  },
+  {
+    "path": "scripts/inspect_tongue.py",
+    "bytes": 2267,
+    "sha256": "15c2c04e6eac0abbb8bb05575f345a5f5325aa5153333da1f3896e53cc267a1d"
+  },
+  {
+    "path": "scripts/make_report.py",
+    "bytes": 13690,
+    "sha256": "e893ab04a2f88768b077874c0fb94be451c452edce44473d12af9c7d255e4c07"
+  },
+  {
+    "path": "scripts/mesh_diagrams.py",
+    "bytes": 3072,
+    "sha256": "f2621461d521e76061650ec48f888e8907d82f5934323ec980b6abadec2cb90d"
+  },
+  {
+    "path": "scripts/package_delivery.py",
+    "bytes": 4305,
+    "sha256": "3d4a103df8e0e690274d143844019463190f0f8fd55cc62fef6dee6354f4a07d"
+  },
+  {
+    "path": "scripts/render_comparison.py",
+    "bytes": 3232,
+    "sha256": "10652bf096a2906c85f8f2b025d9582dc38dd1b09e071f7fa2cf72b09576c92a"
+  },
+  {
+    "path": "scripts/report_pdf.mjs",
+    "bytes": 1602,
+    "sha256": "1e56cba9fce275d1ab3ab88b9d8b35ef5217bb6a89296adec85048cffbac8ec6"
+  },
+  {
+    "path": "scripts/sample_chart.py",
+    "bytes": 4233,
+    "sha256": "3c90d4b8ab0ad74fecc2f3e08f77b6f3f6f4c2f727f0574d014409d95a4b9d99"
+  },
+  {
+    "path": "scripts/validate_asset.py",
+    "bytes": 7209,
+    "sha256": "39226a00a77bca94ce20962eebf7a6bdb6dcd8f4ed988b8e14e4a5550d8461fd"
+  },
+  {
+    "path": "structure-report.zh-CN.md",
+    "bytes": 8985,
+    "sha256": "83f2c452069527b06d8a9fa7e7154a4ffb26ca880b68cbd25625dcf047cff382"
+  },
+  {
+    "path": "viewer/app.js",
+    "bytes": 4969,
+    "sha256": "28996fd19e3d4526e581de0583b5871f12a5e1b85ae72e8bcf327f9c92cb8b5e"
+  },
+  {
+    "path": "viewer/index.html",
+    "bytes": 593629,
+    "sha256": "3873d1239e4df6e587214f2654d6d0db61143a17f3c37752eee27db93899a548"
+  }
+]

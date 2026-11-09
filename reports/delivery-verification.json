@@ -1,0 +1,46 @@
+{
+  "sourceFiles": [
+    {
+      "name": "target_v4",
+      "path": "/workspace/artifacts/glb-material-finish-v4/output/soulgrain-B-style-sole-toe-tongue-test-v4.glb",
+      "sha256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+      "unchanged": true
+    },
+    {
+      "name": "delivered_v4",
+      "path": "/workspace/artifacts/glb-material-finish-v4/download-publication/SOULGRAIN-V4.glb",
+      "sha256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d",
+      "unchanged": true
+    },
+    {
+      "name": "A_original",
+      "path": "/workspace/artifacts/glb-transfer-01-audit/inputs/default.glb",
+      "sha256": "d8c0e30facc80b59e022981456b566c2712d36aeb77e1dc1d5400d28541eb29b",
+      "unchanged": true
+    },
+    {
+      "name": "B_reference",
+      "path": "/workspace/artifacts/glb-transfer-01-audit/inputs/modelb.glb",
+      "sha256": "04e686d73e357cd16a20095c8e4e96d9b5e22bf39f33af82e39af7d7350ea264",
+      "unchanged": true
+    },
+    {
+      "name": "V3_baseline",
+      "path": "/workspace/artifacts/glb-cuff-alignment-v3/output/soulgrain-cuff-aligned-bilateral-eyelets-test-v3.glb",
+      "sha256": "23c1d0942730a9cfe200897c07a22cde22c335ba99720bbb66593a944a4fc719",
+      "unchanged": true
+    }
+  ],
+  "fullGLBSHA256": "27eec69e821417a75c3077789f5154d903e116fabe4fbe9d20e3a5596213ee12",
+  "isolatedTongueSHA256": "a3fd01c4443a952255866623642bc8e60ae4493733105c31f032028156426411",
+  "isolatedTongueGeometryIdenticalToFullTongue": true,
+  "originalSiteGitStatusUnchanged": true,
+  "assembledAndRestoredRenderPixelsIdentical": true,
+  "noCommitPushMergeDeployment": true,
+  "writesConfinedToIndependentWorkspace": "/workspace/artifacts/onward-tongue-v5-1",
+  "pending": [
+    "Factory root seam position",
+    "Back cloth specification",
+    "Future unfolding animation and collision validation"
+  ]
+}
