@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "baseline": "V3 A-derived model",
+  "allSpatialTrianglesExactlyPreserved": true,
+  "maxSpatialCoordinateDifference": 0,
+  "trianglesBefore": 1520426,
+  "trianglesAfter": 1520426,
+  "allPositionNormalUVArraysByteIdentical": true,
+  "originalAccessorsVerified": 65,
+  "indexChange": "One original primitive split by material; every original triangle and winding retained exactly",
+  "nodesAndTransformsIdentical": true,
+  "previousNineMaterialsIdentical": true,
+  "previousSixteenEmbeddedImagesByteIdentical": true,
+  "cuffAndTenEyeletPrimitivesUnchanged": true,
+  "newMaterialScope": [
+    "sole",
+    "toe cap and bumper",
+    "tongue cloth color and existing stitching"
+  ],
+  "newTextureResolution": [
+    4096,
+    2048
+  ],
+  "sourceBGeometryCopied": false,
+  "sourceBUse": "Color/material swatches and measured red/black trim style only",
+  "originalIntegrity": [
+    {
+      "file": "default.glb",
+      "sha256": "d8c0e30facc80b59e022981456b566c2712d36aeb77e1dc1d5400d28541eb29b",
+      "unchanged": true
+    },
+    {
+      "file": "modelb.glb",
+      "sha256": "04e686d73e357cd16a20095c8e4e96d9b5e22bf39f33af82e39af7d7350ea264",
+      "unchanged": true
+    },
+    {
+      "file": "soulgrain-cuff-aligned-bilateral-eyelets-test-v3.glb",
+      "sha256": "23c1d0942730a9cfe200897c07a22cde22c335ba99720bbb66593a944a4fc719",
+      "unchanged": true
+    }
+  ],
+  "finalSha256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+}

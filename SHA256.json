@@ -1,0 +1,22 @@
+{
+  "comparison-overview.jpg": {
+    "bytes": 1242516,
+    "sha256": "b6f659aefab7274d6fa960f4c34d4ae2e04349d56160cbf6ebe592a7f14a813a"
+  },
+  "SOULGRAIN-V4.glb": {
+    "bytes": 70739456,
+    "sha256": "64a95f4d579dc5bd221cbb50d06ebf5b89be2f1ec69eb18394ac9175a65f160d"
+  },
+  "README.txt": {
+    "bytes": 1415,
+    "sha256": "6b8043ffe5a837cb6095e99e576561a44121cb6df3926de4a37d0d838f7dafcd"
+  },
+  "validation.json": {
+    "bytes": 1470,
+    "sha256": "50fe22719606c5004611bda0b1e40f79521d6cf741907545a53f8d87128ba928"
+  },
+  "style-reference.jpg": {
+    "bytes": 436085,
+    "sha256": "9d0d59acbfd163430bb5e0f5f8ed2cf7a9d6ebc380f641a794eea50825d0b7c5"
+  }
+}
