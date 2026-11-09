@@ -1,0 +1,35 @@
+{
+  "comparison-opposite.png": {
+    "bytes": 1373187,
+    "sha256": "16ee0924aff30d4cf347116d1312a9d9fa46900583194113e8a3beb34d69a02d"
+  },
+  "soulgrain-cuff-aligned-v3-GLB.zip": {
+    "bytes": 44881399,
+    "sha256": "7a1e86a47c260a9f00c5794dbfe4f9798996c9395fbba11c58fccba20fe53879"
+  },
+  "comparison-heel.png": {
+    "bytes": 2260827,
+    "sha256": "ef644a2f22e0eda2582c805ec81047b9944a8645a40b1dee86289a4207ab9a06"
+  },
+  "soulgrain-cuff-aligned-v3-review.zip": {
+    "bytes": 33475561,
+    "sha256": "fcc0927738fc64a2c791f341878fb7a9e865f8e05bf4bb5ec2a6d5b2cfcad9da"
+  },
+  "README.txt": {
+    "bytes": 1759,
+    "sha256": "56f8cf5dc4d697eabe138f59c6414e14f78bacc963520e4fdb3baac26de09cc1"
+  },
+  "comparison-reference.png": {
+    "bytes": 1456750,
+    "sha256": "f5ff908bf08c1a6ee42166b7c409cfd2fc5e937e1bb7ddd616eac39091aa36c5"
+  },
+  "comparison-overview.png": {
+    "bytes": 5090671,
+    "sha256": "0231724f6bd57914ce3c46acd0cf418066f4262a155d9be46c58805562cd4171"
+  },
+  "embeddedGLB": {
+    "file": "soulgrain-cuff-aligned-bilateral-eyelets-test-v3.glb",
+    "bytes": 68885404,
+    "sha256": "23c1d0942730a9cfe200897c07a22cde22c335ba99720bbb66593a944a4fc719"
+  }
+}
