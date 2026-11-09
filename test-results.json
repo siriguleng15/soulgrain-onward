@@ -1,0 +1,271 @@
+{
+  "toolVersion": "1.0.0",
+  "scriptSHA256": "17bb11ceb6c7fba8f26a836034b41d45020b2f95c27d296ee4abe6ae3ac31227",
+  "blenderVersion": "5.2.2 LTS",
+  "dateAsiaShanghai": "2026-11-10",
+  "sourceURL": "https://github.com/siriguleng15/soulgrain-onward/releases/download/soul-model-v1/soul.blend",
+  "sourceSHA256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "sourceUnchanged": true,
+  "originalMeshObjects": 13,
+  "originalObjects": 17,
+  "originalFaces": 1499039,
+  "operatorChecks": [
+    {
+      "name": "create working copy",
+      "passed": true
+    },
+    {
+      "name": "current file differs from source",
+      "passed": true
+    },
+    {
+      "name": "no objects removed or duplicated",
+      "passed": true
+    },
+    {
+      "name": "initial integrity validation",
+      "passed": true
+    },
+    {
+      "name": "auto candidates",
+      "passed": true
+    },
+    {
+      "name": "UNKNOWN retained",
+      "passed": true
+    },
+    {
+      "name": "formal boundary not certified",
+      "passed": true
+    },
+    {
+      "name": "enter native edit mode",
+      "passed": true
+    },
+    {
+      "name": "manual face assignment",
+      "passed": true
+    },
+    {
+      "name": "native BMesh has manual state",
+      "passed": true
+    },
+    {
+      "name": "mark crossed-face boundary",
+      "passed": true
+    },
+    {
+      "name": "crossed faces remain UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "blocked from forcing crossed faces into formal part",
+      "passed": true
+    },
+    {
+      "name": "clear issue only explicitly",
+      "passed": true
+    },
+    {
+      "name": "assign after clear",
+      "passed": true
+    },
+    {
+      "name": "rerun auto",
+      "passed": true
+    },
+    {
+      "name": "manual protected on auto rerun",
+      "passed": true
+    },
+    {
+      "name": "export JSON",
+      "passed": true
+    },
+    {
+      "name": "topology mismatch import rejected",
+      "passed": true
+    },
+    {
+      "name": "valid reimport",
+      "passed": true
+    },
+    {
+      "name": "all original geometry UV materials preserved",
+      "passed": true
+    },
+    {
+      "name": "save annotated blend",
+      "passed": true
+    },
+    {
+      "name": "source file SHA unchanged",
+      "passed": true
+    }
+  ],
+  "persistenceUndoAndImportChecks": [
+    {
+      "name": "saved project metadata reloads",
+      "passed": true
+    },
+    {
+      "name": "saved native face attributes reload",
+      "passed": true
+    },
+    {
+      "name": "reloaded integrity and source faces",
+      "passed": true
+    },
+    {
+      "name": "native selected faces assigned before undo",
+      "passed": true
+    },
+    {
+      "name": "native undo restores prior face labels",
+      "passed": true
+    },
+    {
+      "name": "native redo restores new face labels",
+      "passed": true
+    },
+    {
+      "name": "default JSON import protects existing manual corrections",
+      "passed": true
+    },
+    {
+      "name": "explicit replacement restores file-confirmed labels",
+      "passed": true
+    },
+    {
+      "name": "isolate label native faces",
+      "passed": true
+    },
+    {
+      "name": "isolation hides no geometry permanently",
+      "passed": true
+    },
+    {
+      "name": "show all restores faces",
+      "passed": true
+    },
+    {
+      "name": "all faces visible again",
+      "passed": true
+    },
+    {
+      "name": "PBR preview toggles without material changes",
+      "passed": true
+    },
+    {
+      "name": "color preview restores without UV changes",
+      "passed": true
+    },
+    {
+      "name": "source revision mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid face runs rejected atomically",
+      "passed": true
+    },
+    {
+      "name": "original source file unchanged",
+      "passed": true
+    }
+  ],
+  "millionFaceBodyChecks": [
+    {
+      "name": "manual assignment on million-face body",
+      "passed": true
+    },
+    {
+      "name": "edit-mode body UV and normals still match",
+      "passed": true
+    },
+    {
+      "name": "active-edit faces included in counts",
+      "passed": true
+    },
+    {
+      "name": "edit-mode JSON includes full body",
+      "passed": true
+    },
+    {
+      "name": "reimport from edit mode",
+      "passed": true
+    },
+    {
+      "name": "save from body edit mode",
+      "passed": true
+    },
+    {
+      "name": "body manual labels reload from disk",
+      "passed": true
+    },
+    {
+      "name": "reloaded body geometry materials UV intact",
+      "passed": true
+    },
+    {
+      "name": "all panel operator icons exist",
+      "passed": true
+    },
+    {
+      "name": "source SHA unchanged",
+      "passed": true
+    }
+  ],
+  "registration": {
+    "repeat_registration": true,
+    "new_module_registration": true,
+    "unregister": true,
+    "blender": "5.2.2 LTS"
+  },
+  "addonInstall": {
+    "installFromZip": true,
+    "enable": true,
+    "disable": true,
+    "blender": "5.2.2 LTS",
+    "preferencesSaved": false
+  },
+  "automaticDraftCounts": {
+    "faces": 1499039,
+    "unknown": 722781,
+    "manual": 0,
+    "auto": 1499039,
+    "issues": 3582,
+    "parts": {
+      "0": 722781,
+      "40": 29728,
+      "41": 56002,
+      "42": 92022,
+      "1000": 2304,
+      "1001": 2304,
+      "1002": 2304,
+      "1003": 2304,
+      "1004": 2304,
+      "1005": 2304,
+      "1006": 2304,
+      "1007": 2304,
+      "1008": 2304,
+      "1009": 2304,
+      "11": 13198,
+      "12": 20481,
+      "13": 19895,
+      "14": 2094,
+      "21": 25790,
+      "22": 190015,
+      "23": 40242,
+      "30": 26669,
+      "31": 237082
+    }
+  },
+  "nativeUndoScope": "passed in Blender background with explicit undo checkpoints; physical GUI shortcuts still require user Mac validation",
+  "limits": [
+    "Cloud real-model background API/operator tests, not a Mac physical GUI test.",
+    "No cutting, no GLB export, no website changes or deployment.",
+    "Automatic labels are candidates; UNKNOWN is retained.",
+    "Test-only intentionally incorrect HUMAN assignments are not shipped as model or semantic data.",
+    "Blender reported read-only thumbnail/preferences cache warnings in the cloud; saved .blend files were successfully reopened and validated."
+  ]
+}
