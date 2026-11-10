@@ -1,0 +1,94 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "million-face body preview",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "body candidate set nontrivial",
+      "passed": true,
+      "detail": 1000
+    },
+    {
+      "name": "timer updates retained excluded and supplemented live counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "automatic poll detects equal-count selection replacement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "large manual edits counted without recalculation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual supplementation cannot bypass final safety cap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oversized reject leaves labels unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "editable-preview panel warning draw callback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "large preview cancel restores seed and zero ownership writes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "million-face body trimmed confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "body trimmed confirmation native undo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "body trimmed confirmation native redo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all nonretained body labels remain byte-identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all nonretained body preview colors remain identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "final geometry topology UV normals face IDs and PBR validate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "legacy V2 input file not overwritten",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "timings": {
+    "first_body_preview": 7.6257,
+    "automatic_timer_poll_trim_plus_add": 0.1868,
+    "poll_20000_selected_faces": 0.1942,
+    "confirm_trimmed_body": 5.1182
+  },
+  "status": "passed",
+  "body_faces": 1063542,
+  "polling": "Actual _mode_guard timer callback invoked in background; GUI scheduling and physical mouse gestures require Mac acceptance."
+}

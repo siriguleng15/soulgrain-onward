@@ -1,0 +1,18 @@
+{
+  "version": "2.1.1",
+  "script_sha256": "a574476bc3ae454044387b43c20156f3ed1f0047e0d8d7748a0781d26d1ab883",
+  "checks_passed": 185,
+  "old_v2_source_sha256_unchanged": "1a91d667f23017243ea2e9f1c418b92527c7aa5bb75907af434fb132fd0d6bbc",
+  "real_model_triangles": 1499039,
+  "blender_tested": "Linux 5.2.2 LTS",
+  "target": "macOS Blender 5.2.3; physical GUI acceptance pending",
+  "manual_scope": "Explicit scene.sgo_object only; must match active mesh",
+  "rollback_verified": [
+    "partial native write failure",
+    "actual attribute mismatch",
+    "cache update failure"
+  ],
+  "native_undo": "Explicit Blender background checkpoints, not physical Mac shortcuts",
+  "root_cause_replay": "UI history payload replay on actual shoe; not a physical GUI click",
+  "status": "passed"
+}

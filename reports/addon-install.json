@@ -1,0 +1,23 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "install V2.1 addon ZIP",
+      "passed": true
+    },
+    {
+      "name": "enable V2.1 in restricted addon context",
+      "passed": true
+    },
+    {
+      "name": "V2.1 UI property registered",
+      "passed": true
+    },
+    {
+      "name": "disable cleans V2.1 properties",
+      "passed": true
+    }
+  ],
+  "status": "passed",
+  "preferences_saved": false
+}

@@ -1,0 +1,110 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "manual batch operation",
+      "passed": true
+    },
+    {
+      "name": "manual selected face assignment exact",
+      "passed": true
+    },
+    {
+      "name": "native undo restores exact prior labels",
+      "passed": true
+    },
+    {
+      "name": "native redo restores assigned labels",
+      "passed": true
+    },
+    {
+      "name": "explicit UNKNOWN assignment",
+      "passed": true
+    },
+    {
+      "name": "fused boundary issue marker",
+      "passed": true
+    },
+    {
+      "name": "locked issue operation rejected",
+      "passed": true
+    },
+    {
+      "name": "locks protect issue markers too",
+      "passed": true
+    },
+    {
+      "name": "issue clear requires explicit user action",
+      "passed": true
+    },
+    {
+      "name": "actual eyelet seed growth preview",
+      "passed": true
+    },
+    {
+      "name": "actual growth confirmation",
+      "passed": true
+    },
+    {
+      "name": "growth native undo restores candidate labels",
+      "passed": true
+    },
+    {
+      "name": "growth native redo restores human candidates",
+      "passed": true
+    },
+    {
+      "name": "V1 legacy JSON imports into V2",
+      "passed": true
+    },
+    {
+      "name": "legacy import preserves newer human labels",
+      "passed": true
+    },
+    {
+      "name": "bad mesh revision JSON rejected atomically",
+      "passed": true
+    },
+    {
+      "name": "bad import makes zero writes",
+      "passed": true
+    },
+    {
+      "name": "automatic classifier still runs",
+      "passed": true
+    },
+    {
+      "name": "auto preserves all HUMAN and locked faces",
+      "passed": true
+    },
+    {
+      "name": "original/PBR toggle is non destructive",
+      "passed": true
+    },
+    {
+      "name": "preview toggle preserves geometry UV and PBR",
+      "passed": true
+    },
+    {
+      "name": "all panel and tree draw callbacks execute against real metadata",
+      "passed": true
+    },
+    {
+      "name": "raw original can create distinct new V2 copy",
+      "passed": true
+    },
+    {
+      "name": "raw source original SHA unchanged",
+      "passed": true
+    },
+    {
+      "name": "raw V2 geometry UV PBR validates",
+      "passed": true
+    }
+  ],
+  "timings": {
+    "automatic_candidates_seconds": 4.3768
+  },
+  "status": "passed",
+  "undo_scope": "Blender native undo/redo in background with explicit checkpoints. GUI keyboard shortcuts not exercised."
+}

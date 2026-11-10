@@ -1,0 +1,158 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Soulgrain V2.1 热修复 2.1.1 操作指南</title><style>body{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;max-width:1000px;margin:25px auto;padding:0 18px;color:#18232b;font-size:10.5pt;line-height:1.7}h1{font-size:23pt;color:#17465b}h2{font-size:15pt;border-bottom:1px solid #abc;padding-bottom:5px;margin-top:24px;break-after:avoid}h3{font-size:12pt;break-after:avoid}table{border-collapse:collapse;width:100%;font-size:9pt;margin:12px 0}td,th{border:1px solid #b8c5cb;text-align:left;padding:6px}th{background:#e7f0f3}tr{break-inside:avoid}code{font-family:monospace;font-size:.88em;overflow-wrap:anywhere}li{margin-bottom:5px}p{orphans:3;widows:3}.pagebreak{break-before:page}@media print{body{margin:0;padding:0}}</style><body><h1>Soulgrain Semantic V2.1 热修复：手动标注、修剪与补选</h1>
+<p>版本 <strong>2.1.1</strong> · 在 V2 上增量升级 · Blender 5.2 系列</p>
+<h2>先验证这次热修复</h2>
+<p>旧版有实际程序缺陷：普通“指定所选面”可能复用 UNKNOWN 动作参数，多对象编辑又会处理其他对象残留的选区，检查记录还会滞留。本版修复了这些路径，详见《热修复报告.md》。此前已完成的候选修剪、补选功能也保留。</p>
+<p>打开已有 V2 工作工程，运行新版脚本，确认面板顶部显示 <strong>V2.1 热修复 · 2.1.1</strong>，再另存新的工作副本。不要同时运行旧 V2。</p>
+<p>在“网格检查与人工纠错”中，把“明确的编辑对象”设为 <strong>主体（鞋身 / 鞋底 / 翻筒）</strong>，点击“选择该编辑对象”。如果已在模型中选好主体，也可以点“采用当前活动对象为编辑对象”。框选 15 个 UNKNOWN 面，选 UPPER，点普通“指定所选面”。成功结果必须显示明确对象、<strong>真实回读验证成功：15 面 → 鞋身：未细分（10）</strong>；回读区域和零件面数会自动刷新。其他对象残留选区只会说明“未处理”，不会被写入。</p>
+<p>普通指定和 UNKNOWN 现在分成独立动作，UNKNOWN 不再污染普通按钮的参数。对象下拉与活动对象不一致时会明确拒绝，并指出双方名称；不会猜测要改谁。锁定/待处理冲突会整次拒绝，不再悄悄部分跳过。</p>
+<p>写入后真实属性或颜色不匹配、同步/缓存刷新失败时，恢复本次全部标签、状态、置信度、问题和颜色，并验证回滚。没有通过真实回读不会显示成功。若异常导致无法验证回滚，会明确要求重新打开最后有效副本，不会隐藏错误。</p>
+<p>最近一次写入的对象 UUID、源面 ID 列表、目标代码/UUID、校验哈希和状态保存在 Scene 的 <code>_sgo_v21_last_assignment</code> 中，随新工作 <code>.blend</code> 保存。普通用户不需要手动查看这些字段。</p>
+<p><strong>现在可以修改扩展预览选区，不必重新计算。确认时提交你最终选中的面。被排除的面保留原标签、人工/自动状态、置信度、问题和预览颜色。</strong></p>
+<p>工具仍处于语义标注阶段，不切割、不改变几何、拓扑、UV、材质、纹理或源面 ID。原有零件树、颜色图例、检查、手动标注、自动候选、显示控制、锁定、JSON、保存等功能保留。</p>
+<h2>一、下载、传到 Mac 和启动</h2>
+<ol>
+<li>iPad 下载完整 ZIP，在“文件”App 中长按 → 分享 → 隔空投送 → 选择 Mac。</li>
+<li>Mac 上双击 ZIP 解压。推荐先看本 PDF。</li>
+<li>如果旧 V2 是已启用的插件，在 Blender“偏好设置 → 插件”里停用旧 V2。若以前只是运行脚本，可以退出 Blender 后重新打开。停用工具不会删除工程中的标签。</li>
+<li><strong>打开你已有的 <code>soul_SGO_V2_WORK.blend</code></strong>，不要重新从 <code>soul.blend</code> 开始。</li>
+<li>顶部选择 Scripting / 脚本工作区。在文本编辑器点“打开”，选择新版 <strong><code>soulgrain_semantic_v2_1.py</code></strong>，点顶部三角形“运行脚本”。不需要 Codex、终端或另装 Python。</li>
+<li>返回 Layout / 布局，把鼠标放在模型视图内按 N，打开右侧 <strong>Soulgrain</strong> 标签。面板顶部应显示 <strong>Soulgrain V2.1 热修复 · 2.1.1</strong>。</li>
+<li>点 <strong>另存 V2.1 工作副本（保留当前文件）</strong>，选一个不存在的新文件名，例如 <code>soul_SGO_V2_1_WORK.blend</code>。旧 V2 文件不会被覆盖。</li>
+</ol>
+<p>V2 的面属性、对象 UUID、零件 UUID、人工记录、材质和配色直接沿用；不需要重新识别、重新标注或导入 JSON。另存时验证全部标签和原版本保护数据。目标文件已存在时工具会拒绝覆盖。</p>
+<p>也可以长期安装内层 <code>Soulgrain_Semantic_V2_1_Addon.zip</code>：偏好设置 → 插件菜单 → 从磁盘安装 → 选这个内层 ZIP → 启用。不要安装整个资料包，不要同时启用旧 V2 和 V2.1。插件随 Blender 自带的 NumPy 运行，不依赖外部服务。</p>
+<p>只运行 <code>.py</code> 时，下次重新启动 Blender 需要再运行脚本；已经保存在 <code>.blend</code> 的标签仍在。不要在未确认预览时升级/重新运行工具，先确认或取消。</p>
+<h2>二、完整操作流程</h2>
+<ol>
+<li>用零件管理器隐藏无关区域，选择要标注的<strong>编辑对象</strong>，进入面选择模式。</li>
+<li>在模型中全不选，再选择一个面或一小片种子。选好目标语义分类。</li>
+<li>点 <strong>智能扩展预览</strong>。最初橙色高亮是自动候选，尚未写标签。</li>
+<li><strong>减选错误部分：</strong> 使用 Blender 的框选或套索，在工具设置中切到“减选”模式，划掉错误区域。单个面可用 Shift 点击切换选择状态。</li>
+<li><strong>补选遗漏部分：</strong> 把框选/套索切为“添加”模式，再选择遗漏的面。</li>
+<li>可以反复减选、补选，不用重跑扩展。只要保持原对象的<strong>面选择模式</strong>即可。</li>
+<li>看“智能扩展”面板中的保留、排除、补充和最终面数。统计自动刷新；要立即检查可点 <strong>立即刷新修剪统计</strong>。</li>
+<li>只有修剪、没有补选时，直接点 <strong>确认最终选区并写入人工标注</strong>。</li>
+<li>有人工补选时，面板会出现红色提示。观察补选是否越界，勾选 <strong>已检查本次补选</strong>，再确认。改变选区后，该勾选会重置，避免把旧确认套到新的补选上。</li>
+<li>不满意则点 <strong>取消计算 / 取消预览</strong>，恢复预览前的面选择，不写入任何归属。</li>
+</ol>
+<p><strong>不要再次点击“重新计算（丢弃当前修剪）”来刷新统计。</strong> 重新计算会结束当前修剪并从原种子重新生成；只想查看最新面数时使用“立即刷新修剪统计”。改变目标分类或扩展参数仍会取消当前预览，和 V2 的安全行为一致。</p>
+<p>面板统计按模型和选区大小约每 0.5–2 秒刷新，并非每帧扫描；确认按钮会同步重读实际选区，绝不会只相信稍早的面板数字。百万面主体测试单次统计约 0.2 秒。只在有待确认预览时轮询当前对象，不持续扫描整双鞋。</p>
+<h2>三、四个面数是什么意思</h2>
+<table>
+<tr><th>显示项</th><th>含义</th></tr>
+<tr><td>原始</td><td>本次自动扩展生成的候选总数，修剪时不变</td></tr>
+<tr><td>保留</td><td>原始候选中，现在仍被你选中的面</td></tr>
+<tr><td>排除</td><td>原始候选中，被你减选的面</td></tr>
+<tr><td>补充</td><td>你新选中的、原始候选以外的面</td></tr>
+<tr><td>最终将标注</td><td>保留 + 补充，只提交这些面</td></tr>
+</table>
+<p>例如原始 1,000 面，你排除 80 面，再补 20 面：保留 920、排除 80、补充 20、最终 940。被排除的 80 面不写任何属性或颜色。即使排除和补充数量相同、最终总数没变，工具也能识别选区内容变化并重置补选确认。</p>
+<p>橙色依然是 Blender 原生选择高亮。取消橙色选中状态不会删除面，也不会修改原来的分区颜色。没有创建替代模型或永久染色来模拟修剪。</p>
+<h2>四、补选的保护规则</h2>
+<p>人工补选可以弥补自动法线、距离、材质或候选语义限制的不足，因此<strong>不要求补选仍满足自动扩展的几何阈值</strong>。这也是红色“越过原候选边界”提示的原因，需要你核对位置。</p>
+<p>以下保护始终有效，不能通过补选或勾选“已检查”绕过：</p>
+<ul>
+<li>已锁定分类的面，或目标分类已经锁定。</li>
+<li>带未解决边界/融合/重建问题的面。</li>
+<li>已被人工确认且分类不同于目标的面，包括<strong>人工 UNKNOWN</strong>。</li>
+<li>其他对象的面。本次扩展和修剪只提交原活动对象。</li>
+<li>隐藏或上下文失效、源面/拓扑版本不一致的区域。</li>
+</ul>
+<p>存在冲突时面板显示红色冲突数量，确认操作会<strong>整次拒绝，不写一部分、跳过另一部分</strong>。请减选冲突面，或取消预览后用明确的手工纠错操作先处理原标签/问题，再重新预览。问题和锁不会被扩展自动解除。</p>
+<p>最终选区为空时不写入。最终选区超过 <strong>200,000 面</strong>时拒绝，需分批标注。扩展参数中的“最多候选面”约束自动生成部分；手动补选仍受最终 20 万面硬上限保护。</p>
+<p>如果无意选中另一个对象，工具会明确提示，请先取消那部分选择。它不会悄悄忽略其他对象而只写一部分。预览开始时会暂时清除其他编辑对象的旧面选择，取消时一起恢复。</p>
+<h2>五、撤销、取消和保存</h2>
+<p><strong>修剪时撤销/重做：</strong> 原生选择的撤销不会强行丢弃候选集；工具保留原始候选，重新读取当前选择和对象 UUID。若撤销实际改变了标签或几何版本，确认会被阻止，要求取消并重新预览。</p>
+<p><strong>确认后撤销/重做：</strong> 使用面板的“撤销”“重做”，或 Blender 原生快捷键，可恢复确认前后的标签与预览颜色。云端测试使用 Blender 原生撤销栈的显式检查点；Mac 的实际快捷键仍以本地键位设置为准。</p>
+<p><strong>取消预览：</strong> 恢复本次预览前所有相关编辑对象的面选择、活动对象、面选择模式和临时面隐藏状态，不修改标签、颜色或材质。若你在预览中使用了原生建模命令，造成面数/源面 ID 失效，就不能保证安全恢复旧选择；工具会提示，先撤销建模操作。</p>
+<p><strong>保存：</strong> 先确认或取消预览，再保存 V2.1 工作副本。未确认的选区草稿不会导出为正式标签。第一次仍在旧 V2 文件中时，“保存工作工程”会要求先另存 V2.1，不覆盖旧工程。V2.1 的 JSON 沿用 <code>soulgrain.face-semantics/1.0</code>；现有 V1/V2 记录仍可导入。</p>
+<p>关闭文件不会持久化未确认的候选集；请先确认或取消。原生“另存为”和建模命令不是语义锁的一部分，请不要自行把新文件保存回原工程路径。</p>
+<h2>六、仍保留的 V2 功能</h2>
+<ul>
+<li>零件树、名称搜索、真实配置颜色、实际面数。</li>
+<li>按分类/父组件隐藏、同时隐藏多项、单独查看、恢复显示。</li>
+<li>分类锁定、UNKNOWN 控制、选中分类、检查单面和多面统计。</li>
+<li>手动面级纠错、问题标记、保护人工标签的自动候选识别。</li>
+<li>原材质/分区预览切换、版本校验、JSON 导入导出、独立工作副本保存。</li>
+</ul>
+<p>分类显示仍依赖 Blender 编辑模式的原生面隐藏；需要退出时点“返回对象选择”。当前没有实际拆分任何网格。</p>
+<h2>七、测试范围与限制</h2>
+<p>开发环境是 <strong>Linux Blender 5.2.2 LTS</strong>，使用原始真实鞋模的 1,499,039 个三角面和带人工测试标签的 V2 回归副本。你的 Mac 工作工程未上传，不能声称测试过你那份文件。</p>
+<p>已验证修剪确认、补选确认、反复调整、相同数量替换、空选区、保护区域拒绝、补选确认失效、确认撤销/重做、选择撤销/重做、取消恢复多对象选择、百万面主体轮询及确认、非保留面属性/颜色不变、源几何/UV/PBR/面 ID 校验、保存重载和旧功能回归。详细结果见 <code>测试结果.md</code> 和 <code>reports/</code>。</p>
+<p>目标是你的 <strong>Mac Blender 5.2.3 LTS</strong>。云端没有假称完成 Mac 图形界面实机验证：原生框选/套索的鼠标手势、GUI 定时器调度和按钮布局还请在 Mac 上验证。侧栏提示和警告的绘制回调、定时器回调、数据和操作器使用真实模型测试。</p>
+<p>首次邻接建图仍会同步占用几秒；本次升级不重新设计扩展算法。对真实物理边界穿过同一个三角面的情况，修剪也无法代替将来的切面/重建，应留 UNKNOWN/问题标记。不要把最终选择或彩色标签当成已完成物理拆分。</p><div class="pagebreak"></div><h1>Soulgrain Semantic V2.1 热修复报告</h1>
+<p>版本 <strong>2.1.1</strong> · 2026-11-10</p>
+<h2>已复现的根因</h2>
+<p>这次是工具逻辑缺陷。真实 <code>Shoe_TEST_V3</code> 上可以复现：检查显示 15 个人工 UNKNOWN、目标选 UPPER，操作却提示“人工指定 38 面”，主体实际仍为 UNKNOWN。</p>
+<ol>
+<li><strong>UNKNOWN 动作参数串到普通指定按钮。</strong> V2 的两个按钮共用 <code>sgo.assign_selected</code>。UNKNOWN 按钮显式传 <code>unknown=True</code>，普通按钮没有显式传 <code>False</code>，属性也没有 <code>SKIP_SAVE</code>。Blender 的 UI 调用会把上次操作器属性填入本次未设置的属性。于是 <code>_manual_execute()</code> 的 <code>code=0 if self.unknown else scene.sgo_target</code> 可继续选择 0，忽略面板中选好的 UPPER。循环确实执行了，但重新写的是 UNKNOWN。</li>
+<li><strong>写入范围错误。</strong> 旧函数遍历 <code>context.objects_in_mode_unique_data</code>，没有以 <code>scene.sgo_object</code> 限定对象，也不核对活动对象。主体 15 面加上另一对象残留的 23 面，会被算成 38 面并一起写入。</li>
+<li><strong>成功没有回读，检查记录滞留。</strong> 旧版根据循环次数显示成功，把预计结果写进缓存；没有独立验证目标面真实属性。<code>_sgo_v2_inspection</code> 也不自动刷新，旧的 15 面 UNKNOWN 快照会继续显示。</li>
+</ol>
+<p>复现测试先在真实主体选 15 个有效 UNKNOWN 面并设为人工状态，读取检查结果；再在另一个真实孔圈对象留 23 个选中面，重放上一 UI UNKNOWN 动作的历史参数。结果是“人工指定 38 面”、主体真实标签仍全为 0、检查记录未变化。显式使用 <code>unknown=False</code> 后同一 BMesh 能写出 15 个真实 UPPER，说明本次复现的主要原因不是 BMesh 完全不能保存属性，也不是锁定。</p>
+<p>复现记录：<code>reports/v2-root-cause-reproduction.json</code>。这里精确重放了 UI 的历史参数负载，没有假称在云端进行了 Mac 鼠标点击，也没有声称读到了未上传的 Mac 工程或当时历史状态。上述三个程序缺陷及组合故障路径已经复现。</p>
+<h2>为什么之前背景测试漏检</h2>
+<p>Blender 的 Python 操作器调用和正常 UI 调用对历史属性的处理不同。Python 调用不会自动走同样的 UI 历史参数填充路径，单纯 <code>bpy.ops.sgo.assign_selected()</code> 会使用默认 false。因此之前只通过 Python 操作器测试，遗漏了“先点 UNKNOWN 再点普通按钮”的状态复用场景。本次加入了历史负载重放、真实 RNA <code>is_skip_save</code> 检查和面板按钮显式参数测试。</p>
+<p>Blender 行为参考：</p>
+<ul>
+<li>[wm_event_system.cc](https://github.com/blender/blender/blob/main/source/blender/windowmanager/intern/wm_event_system.cc)：UI 路径 <code>use_last_properties</code> 时调用 <code>WM_operator_last_properties_init</code>，Python 路径不同。</li>
+<li>[wm_operators.cc](https://github.com/blender/blender/blob/main/source/blender/windowmanager/intern/wm_operators.cc)：只给未显式设置且不含 <code>PROP_SKIP_SAVE</code> 的属性填入历史值。</li>
+</ul>
+<h2>实际修复</h2>
+<ul>
+<li>普通按钮明确 <code>unknown=False</code>，UNKNOWN 改用独立操作器；保留旧 API 参数以兼容脚本，但增加 <code>SKIP_SAVE</code>。问题标记的 <code>clear</code> 参数也增加同样保护并显式设置按钮参数，防止同类缺陷。</li>
+<li>手动指定、UNKNOWN、问题标记和检查默认只处理面板中明确的一个对象。活动对象与它不一致时直接拒绝，显示双方名称；提供“一键采用当前活动对象”。零件管理器选择对象后同步下拉状态。</li>
+<li>写前保存精确对象 UUID、源面 ID、四个真实面属性和相关角点预览颜色。锁定/问题冲突整次拒绝，不部分跳过。</li>
+<li>写入并同步 BMesh 后，重新读取真实属性和颜色，检查目标分类、人工状态、置信度、问题和源面 ID；缓存/可见性更新后再复查。只有通过才能显示“真实回读验证成功”。</li>
+<li>缓存以真实基线重建，并用真实回读结果更新。成功后自动生成当前对象的新检查记录，显示正确分类、颜色和数量。撤销/重做或失败会清除旧检查，避免冒充当前结果。</li>
+<li>写入、回读、缓存等环节异常时恢复本次属性和颜色，并独立校验回滚；不走可能失败的同一个写入器重试。测试覆盖部分写入、故意错误属性、缓存异常三条路径。若回滚本身无法验证，明确报错，要求重开最后有效工作副本，绝不显示成功。</li>
+<li><code>_sgo_v21_last_assignment</code> 保存最近一次尝试的对象、源面 ID、目标代码/UUID、回读哈希、忽略的其他对象选区和 VERIFIED / REJECTED / ROLLED_BACK 状态，随独立工作文件保存。</li>
+</ul>
+<h2>要求的真实模型测试</h2>
+<p>本轮全部在独立副本上执行；输入是 1,499,039 个三角面的真实鞋模 V2 云端回归工程，不是替代几何。测试结果不只看 FINISHED，每项要求核对真实属性：</p>
+<table>
+<tr><th>场景</th><th>验证</th></tr>
+<tr><td>15 个 UNKNOWN 批量改 UPPER</td><td>15 个实际 <code>sgo_part=10</code>、状态 HUMAN、置信度 1、问题 0；真实角点为 UPPER 配色</td></tr>
+<tr><td>单面纠错</td><td>真实标签变更，原生撤销/重做恢复真实属性和颜色</td></tr>
+<tr><td>多对象编辑</td><td>主体 15 面操作；孔圈 23 个残留选中面的标签和颜色不变；结果只计 15</td></tr>
+<tr><td>上下文不一致</td><td>直接拒绝，原有标签和颜色完全不变</td></tr>
+<tr><td>隐藏/恢复后标注</td><td>恢复后实际面仍可正确赋值</td></tr>
+<tr><td>手动与扩展连续使用</td><td>手动后可扩展、修剪确认；扩展后可再手动赋值；实际属性均核对</td></tr>
+<tr><td>保存重开</td><td>独立 V2.1 <code>.blend</code> 重开后全部标注数组一致，15 面仍是最终分类</td></tr>
+<tr><td>缓存失效</td><td>人为污染运行时缓存后，操作仍以原生属性为准并恢复正确统计</td></tr>
+<tr><td>故障注入</td><td>写一半抛错、实际值不符、缓存刷新抛错均回滚；所有原属性/颜色逐项一致</td></tr>
+<tr><td>原资产保护</td><td>原 V2 输入 SHA 不变；几何、拓扑、UV、法线、面 ID、PBR 和纹理通过源基线校验</td></tr>
+</table>
+<p>完整执行记录见 <code>reports/manual-hotfix.json</code>，候选修剪/补选及旧功能回归另见其余测试 JSON。</p>
+<h2>范围与限制</h2>
+<p>云端实际版本为 <strong>Linux Blender 5.2.2 LTS</strong>。目标为用户的 <strong>Mac Blender 5.2.3</strong>，仍需本机确认 UI 手势和布局。原生 Undo/Redo 在背景模式下使用显式撤销检查点测试，没有冒称实际 Mac 快捷键测试。</p>
+<p>这是增量热修复，保留已有零件管理器、智能扩展、面属性和 JSON schema，也包含此前要求的候选修剪与补选。没有正式拆分，没有改几何/UV/PBR，没有覆盖原始、V1 或旧 V2 文件，没有修改网站或动画。</p><div class="pagebreak"></div><h1>V2.1 热修复测试结果</h1>
+<p>版本 2.1.1 · 脚本 SHA-256 <code>a574476bc3ae454044387b43c20156f3ed1f0047e0d8d7748a0781d26d1ab883</code></p>
+<p><strong>185 项检查通过</strong>，另有旧 V2 根因重放记录。所有输入模型/旧 V2 工作工程均未覆盖；交付不包含测试模型或故意构造的语义标签。</p>
+<table>
+<tr><th>测试组</th><th>项数</th><th>内容</th></tr>
+<tr><td>手动标注热修复、真实回读与故障回滚</td><td>42</td><td>全部通过</td></tr>
+<tr><td>候选修剪、补选、保护、取消、持久化</td><td>63</td><td>全部通过</td></tr>
+<tr><td>百万面主体统计、修剪确认、撤销和属性/颜色完整性</td><td>16</td><td>全部通过</td></tr>
+<tr><td>旧功能、自动识别、JSON、预览与原生撤销</td><td>25</td><td>全部通过</td></tr>
+<tr><td>邻接、保护、法线/材质/距离、取消、上限</td><td>22</td><td>全部通过</td></tr>
+<tr><td>重新载入、重复注册、管理器选择、UNKNOWN 显示</td><td>13</td><td>全部通过</td></tr>
+<tr><td>安装 ZIP、启用、停用和属性清理</td><td>4</td><td>全部通过</td></tr>
+</table>
+<p>本轮使用同一个真实鞋模：13 个 Mesh、1,499,039 三角面，主体 1,063,542 面。并非替代模型。V2 输入副本来自云端回归测试，用户未上传的 Mac 工程未被冒称测试过。</p>
+<h2>性能观测</h2>
+<table>
+<tr><th>操作</th><th>云端秒数</th></tr>
+<tr><td>15 面主体标注，含真实回读、缓存/检查同步</td><td>2.59</td></tr>
+<tr><td>百万面主体首次扩展预览</td><td>7.63</td></tr>
+<tr><td>原生修剪/补选后的自动统计回调</td><td>0.19</td></tr>
+<tr><td>2 万选中面统计</td><td>0.19</td></tr>
+<tr><td>主体修剪确认，含全量保护检查</td><td>5.12</td></tr>
+</table>
+<p>这些是 Linux Blender 5.2.2 LTS 的单次观测值，不是 Mac 速度保证。统计调度约 0.5–2 秒自适应更新；确认前同步读取最终选区。首次邻接建图仍有几秒同步开销。</p>
+<h2>数据层验证</h2>
+<p>热修复测试检查实际 <code>sgo_part/status/confidence/issue/source_face</code> 和角点颜色，记录对象 UUID 及源面 ID，不以 FINISHED 返回值代替验证。15 面 UPPER 和另一对象 23 面不受影响的场景已验证。保存独立 .blend 后重新打开，完整标注数组哈希一致。</p>
+<p>故障注入覆盖：写一部分后异常、写成错误分类、写完后缓存刷新异常。均逐项核对完整回滚。几何位置、拓扑、UV、法线、材质面索引、对象绑定/变换、PBR 和贴图通过原基线校验。</p>
+<p>旧 V2 的根因重放独立运行旧脚本，证明不是只改提示。详见《热修复报告》和 <code>v2-root-cause-reproduction.json</code>。</p>
+<h2>测试限度</h2>
+<p>没有在 Mac 5.2.3 GUI 上点击框选/套索或快捷键。云端执行真实 BMesh、Blender 操作器、定时器回调、全部面板绘制回调和原生撤销栈检查点；实际 GUI 调度、键位与布局仍待用户实机确认。工具不拦截所有原生建模/另存命令，也不能保证 Blender 崩溃后的内存回滚；原文件及旧工作副本保留作为恢复基础。</p></body></html>

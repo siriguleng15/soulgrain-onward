@@ -1,0 +1,107 @@
+{
+  "inspection_before": {
+    "objects": [
+      {
+        "object": "Shoe_TEST_V3",
+        "object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+        "faces": 15
+      }
+    ],
+    "faces": 15,
+    "parts": {
+      "0": 15
+    },
+    "states": {
+      "2": 15
+    },
+    "issues": 0,
+    "mean_confidence": 0.0,
+    "detail": null,
+    "updated_utc": "05:20:19"
+  },
+  "python_call_stored_last_properties": false,
+  "last_unknown_after_unknown_ui_payload": true,
+  "success_message": "人工指定 38 面；锁定或待处理而跳过 0 面。",
+  "actual_body_labels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "actual_eye_labels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "inspection_after": {
+    "objects": [
+      {
+        "object": "Shoe_TEST_V3",
+        "object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+        "faces": 15
+      }
+    ],
+    "faces": 15,
+    "parts": {
+      "0": 15
+    },
+    "states": {
+      "2": 15
+    },
+    "issues": 0,
+    "mean_confidence": 0.0,
+    "detail": null,
+    "updated_utc": "05:20:19"
+  },
+  "blender": "5.2.2 LTS",
+  "ui_history_replayed": true,
+  "physical_gui_click_tested": false,
+  "explicit_false_actual_body_labels": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ]
+}
