@@ -1,0 +1,26 @@
+[
+  {
+    "name": "REPAIR_SOLE_REAR_A",
+    "watertight": true,
+    "winding_consistent": true,
+    "signed_volume": 1.0117405911485403e-05,
+    "body_count": 1,
+    "degenerate_faces": 0
+  },
+  {
+    "name": "REPAIR_SOLE_REAR_B",
+    "watertight": true,
+    "winding_consistent": true,
+    "signed_volume": 1.0185896918634663e-05,
+    "body_count": 1,
+    "degenerate_faces": 0
+  },
+  {
+    "name": "REPAIR_TOECAP_THICKNESS_BAND",
+    "watertight": true,
+    "winding_consistent": true,
+    "signed_volume": 0.00021797959556062174,
+    "body_count": 1,
+    "degenerate_faces": 0
+  }
+]

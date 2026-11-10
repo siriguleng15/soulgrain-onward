@@ -1,0 +1,10 @@
+inputs/
+references/
+stages/*.blend*
+renders/*.exr
+reports/*.npz
+__pycache__/
+*.log
+tooling/
+delivery/*.zip
+delivery/*.blend

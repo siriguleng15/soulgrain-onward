@@ -1,0 +1,23 @@
+[
+  {
+    "name": "REPAIR_SOLE_REAR_A",
+    "new_nonadjacent_self_intersection_pairs": 0,
+    "preserved_exterior_existing_pairs": 0,
+    "samples": [],
+    "seconds": 0.003
+  },
+  {
+    "name": "REPAIR_SOLE_REAR_B",
+    "new_nonadjacent_self_intersection_pairs": 0,
+    "preserved_exterior_existing_pairs": 0,
+    "samples": [],
+    "seconds": 0.002
+  },
+  {
+    "name": "REPAIR_TOECAP_THICKNESS_BAND",
+    "new_nonadjacent_self_intersection_pairs": 0,
+    "preserved_exterior_existing_pairs": 0,
+    "samples": [],
+    "seconds": 0.025
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "original_source": {
+    "original_source_objects": 13,
+    "all_source_geometry_uv_normals_labels_ids_exact": true,
+    "original_materials_and_images_exact": true,
+    "unknown_source_reclassified": 0
+  },
+  "remaining_work": [
+    {
+      "source": "Shoe_TEST_V3",
+      "remaining_faces": 1014665,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "Preserved_plus_eyelet_1",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "Preserved_plus_eyelet_2",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "Preserved_plus_eyelet_3",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "Preserved_plus_eyelet_4",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "Preserved_plus_eyelet_5",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "New_minus_eyelet_1",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "New_minus_eyelet_2",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "New_minus_eyelet_3",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "New_minus_eyelet_4",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "New_minus_eyelet_5",
+      "remaining_faces": 2304,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "DEBUG_LACES_VISIBILITY_ONLY",
+      "remaining_faces": 234705,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    },
+    {
+      "source": "GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+      "remaining_faces": 177752,
+      "geometry_exact_by_source_face_id": true,
+      "uv_exact_by_source_face_id": true,
+      "labels_exact_by_source_face_id": true,
+      "material_indices_exact": true,
+      "all_original_unknown_faces_retained": true
+    }
+  ]
+}
