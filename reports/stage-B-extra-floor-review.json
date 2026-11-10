@@ -1,0 +1,11 @@
+{
+  "extra_proven_floor_collision_source_ids": [
+    505637,
+    506093,
+    506094,
+    506095
+  ],
+  "extra_human_floor_triangles": 4,
+  "all_wrong_floor_triangles": 12050,
+  "criteria": "HUMAN UPPER only; verified intersection with actual replacement footbed; inside foot chamber, low Z, approximately floor-oriented; no UNKNOWN or exterior wall retirement"
+}
