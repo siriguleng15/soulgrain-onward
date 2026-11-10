@@ -1,0 +1,95 @@
+{
+  "blender": "5.2.2 LTS",
+  "fixture_type": "Synthetic test graphs only. Not delivered as shoe partitions.",
+  "checks": [
+    {
+      "name": "connected coplanar region grows",
+      "passed": true
+    },
+    {
+      "name": "manual other-part boundary never crossed",
+      "passed": true
+    },
+    {
+      "name": "manual UNKNOWN is protected too",
+      "passed": true
+    },
+    {
+      "name": "manual same-part can be traversed",
+      "passed": true
+    },
+    {
+      "name": "locked source class blocks frontier",
+      "passed": true
+    },
+    {
+      "name": "unresolved issue blocks frontier",
+      "passed": true
+    },
+    {
+      "name": "hidden faces block frontier",
+      "passed": true
+    },
+    {
+      "name": "automatic other-part candidate blocks by default",
+      "passed": true
+    },
+    {
+      "name": "automatic semantic gate is explicitly adjustable",
+      "passed": true
+    },
+    {
+      "name": "material boundary blocks by default",
+      "passed": true
+    },
+    {
+      "name": "cross material explicit option",
+      "passed": true
+    },
+    {
+      "name": "sharp normal adjacency stops growth",
+      "passed": true
+    },
+    {
+      "name": "global seed-normal envelope prevents accumulated drift",
+      "passed": true
+    },
+    {
+      "name": "disconnected faces are not reached",
+      "passed": true
+    },
+    {
+      "name": "geodesic distance limit",
+      "passed": true
+    },
+    {
+      "name": "face cap enforced",
+      "passed": true
+    },
+    {
+      "name": "cancellation honored before writes",
+      "passed": true
+    },
+    {
+      "name": "wall time cap enforced",
+      "passed": true
+    },
+    {
+      "name": "protected seed is rejected rather than overwritten",
+      "passed": true
+    },
+    {
+      "name": "complete exact coincident edge bridges split indices",
+      "passed": true
+    },
+    {
+      "name": "nearby but noncoincident surfaces never bridged",
+      "passed": true
+    },
+    {
+      "name": "nonmanifold edge is conservatively blocked",
+      "passed": true
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,81 @@
+{
+  "blender": "5.2.2 LTS",
+  "platform": "linux",
+  "checks": [
+    {
+      "name": "default-limit real model preview",
+      "passed": true
+    },
+    {
+      "name": "default limit retained",
+      "passed": true
+    },
+    {
+      "name": "wider multi-seed preview",
+      "passed": true
+    },
+    {
+      "name": "both previews cancel without writing",
+      "passed": true
+    },
+    {
+      "name": "20k face batch assignment operator",
+      "passed": true
+    },
+    {
+      "name": "20k faces receive HUMAN status",
+      "passed": true
+    },
+    {
+      "name": "full post-batch geometry UV normal PBR integrity",
+      "passed": true
+    }
+  ],
+  "measurements": {
+    "fresh_object_mode_statistics": 0.0234,
+    "body_enter_edit_mode": 0.7498,
+    "default_50k_limit_first_preview": 3.9518,
+    "wide_multi_seed_warm_preview": 1.4584,
+    "manual_batch_20000_faces": 1.0349,
+    "full_validate_in_body_edit_mode": 3.8695
+  },
+  "default_growth": {
+    "candidateFaces": 146,
+    "processedFaces": 146,
+    "seconds": 0.18854195799212903,
+    "stopReason": "前沿停止：可达范围或保护边界",
+    "barrierCounts": {
+      "local_normal_angle": 31,
+      "material_boundary": 4,
+      "protected_or_semantic_or_normal": 36
+    },
+    "cancelled": false
+  },
+  "graph": {
+    "faces": 1063542,
+    "adjacentUndirectedEdges": 1592836,
+    "exactCoincidentSeamBridges": 213295,
+    "blockedNonmanifoldEdgeGroups": 2,
+    "isolatedFaces": 40,
+    "buildSeconds": 2.594013056019321,
+    "diagonalModelUnits": 2.2426071166992188,
+    "policy": "Only shared full edges; optional exact endpoint coincidences. No nearest-neighbor jump, no geometry weld.",
+    "retainedArrayBytes": 77579126
+  },
+  "wide_growth": {
+    "candidateFaces": 12296,
+    "processedFaces": 12296,
+    "seconds": 0.2842962960130535,
+    "stopReason": "前沿停止：可达范围或保护边界",
+    "barrierCounts": {
+      "protected_or_semantic_or_normal": 683,
+      "material_boundary": 349,
+      "local_normal_angle": 900,
+      "distance": 12
+    },
+    "cancelled": false
+  },
+  "peak_process_rss_mib_linux": 2405.34,
+  "status": "passed",
+  "hardware": "Cloud Linux. Timings are not MacBook guarantees; RSS includes original textures, Blender and BMesh."
+}

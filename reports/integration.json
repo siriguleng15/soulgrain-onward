@@ -1,0 +1,274 @@
+{
+  "blender": "5.2.2 LTS",
+  "platform": "linux",
+  "checks": [
+    {
+      "name": "register on V1 without changing V1 metadata",
+      "passed": true
+    },
+    {
+      "name": "V1 editing blocked before Save As",
+      "passed": true
+    },
+    {
+      "name": "cannot upgrade over V1 path",
+      "passed": true
+    },
+    {
+      "name": "upgrade to new V2 work file",
+      "passed": true
+    },
+    {
+      "name": "V1 disk SHA preserved",
+      "passed": true
+    },
+    {
+      "name": "all V1 labels confidence issues and source face IDs preserved",
+      "passed": true
+    },
+    {
+      "name": "stable part UUIDs and object UUIDs preserved",
+      "passed": true
+    },
+    {
+      "name": "actual complete face statistics",
+      "passed": true
+    },
+    {
+      "name": "UPPER parent includes all upper descendants",
+      "passed": true
+    },
+    {
+      "name": "parent and exact-category controls distinct",
+      "passed": true
+    },
+    {
+      "name": "unknown controls exist",
+      "passed": true
+    },
+    {
+      "name": "part counts equal actual cached face arrays",
+      "passed": true
+    },
+    {
+      "name": "Chinese search finds matching hierarchy",
+      "passed": true
+    },
+    {
+      "name": "all UI icon names valid",
+      "passed": true
+    },
+    {
+      "name": "legend PNG generated from actual configured color",
+      "passed": true
+    },
+    {
+      "name": "semantic hiding enters real multi-object edit mode",
+      "passed": true
+    },
+    {
+      "name": "hide UPPER all descendants on actual faces",
+      "passed": true
+    },
+    {
+      "name": "multiple hidden categories coexist",
+      "passed": true
+    },
+    {
+      "name": "solo shows only requested semantic family",
+      "passed": true
+    },
+    {
+      "name": "leaving solo restores prior multi-hide",
+      "passed": true
+    },
+    {
+      "name": "visibility never changes ownership or other annotation attributes",
+      "passed": true
+    },
+    {
+      "name": "restore all does not unlock parts",
+      "passed": true
+    },
+    {
+      "name": "all face hide flags cleared",
+      "passed": true
+    },
+    {
+      "name": "manual assignment to locked target rejected",
+      "passed": true
+    },
+    {
+      "name": "manual operation skips locked source faces",
+      "passed": true
+    },
+    {
+      "name": "inspect one real body face",
+      "passed": true
+    },
+    {
+      "name": "inspection includes object UUID part code confidence status issue and source face ID",
+      "passed": true
+    },
+    {
+      "name": "multi selection histogram accurate",
+      "passed": true
+    },
+    {
+      "name": "real body growth preview",
+      "passed": true
+    },
+    {
+      "name": "growth nontrivial and bounded",
+      "passed": true,
+      "detail": 1000
+    },
+    {
+      "name": "preview performs zero annotation writes",
+      "passed": true
+    },
+    {
+      "name": "preview is real native face selection",
+      "passed": true
+    },
+    {
+      "name": "cancel restores seed selection and leaves labels unchanged",
+      "passed": true
+    },
+    {
+      "name": "parameter change invalidates preview without writes",
+      "passed": true
+    },
+    {
+      "name": "confirm rejects edited candidate selection",
+      "passed": true
+    },
+    {
+      "name": "confirm explicit growth",
+      "passed": true
+    },
+    {
+      "name": "only candidate faces changed on active mesh",
+      "passed": true
+    },
+    {
+      "name": "confirmed candidates human and target class",
+      "passed": true
+    },
+    {
+      "name": "all non-target objects unchanged",
+      "passed": true
+    },
+    {
+      "name": "manual preview color matches palette within byte color precision",
+      "passed": true,
+      "detail": {
+        "configured_linear": [
+          0.03,
+          0.3,
+          0.9
+        ],
+        "actual_after_bmesh": [
+          0.029556842520833015,
+          0.3005438446998596,
+          0.8962695598602295
+        ]
+      }
+    },
+    {
+      "name": "geometry UV normals transforms PBR textures all unchanged",
+      "passed": true
+    },
+    {
+      "name": "JSON V1 schema retained and not authorized for split",
+      "passed": true
+    },
+    {
+      "name": "JSON compatible import preserves manual records",
+      "passed": true
+    },
+    {
+      "name": "JSON cannot bypass locked parts",
+      "passed": true
+    },
+    {
+      "name": "save V2 operator",
+      "passed": true
+    },
+    {
+      "name": "repeat tool registration preserves annotation and UUID data",
+      "passed": true
+    },
+    {
+      "name": "reload V2 work persists annotations and IDs",
+      "passed": true
+    },
+    {
+      "name": "reloaded geometry UV materials textures valid",
+      "passed": true
+    },
+    {
+      "name": "original model and V1 work disk hashes unchanged",
+      "passed": true
+    }
+  ],
+  "timings": {
+    "upgrade_full_validation_and_save": 3.4358,
+    "initial_cache_refresh": 0.0119,
+    "hide_upper_first_multi_edit": 1.6238,
+    "hide_second_component_warm": 0.1052,
+    "solo_soling": 0.6178,
+    "restore_all_visibility": 0.2605,
+    "inspect_single_face_multi_edit": 0.2394,
+    "first_body_graph_and_preview": 3.7341,
+    "warm_body_growth_preview": 1.333,
+    "confirm_growth_full_source_validation": 4.5781,
+    "final_full_validation_object_mode": 1.1785,
+    "v2_json_export_payload": 1.2724,
+    "v2_json_roundtrip": 2.0561,
+    "save_v2_work": 1.3476
+  },
+  "fixture_note": "Cloud V1 regression fixture, not the user Mac work file. Deliberately mislabeled test faces are not delivered.",
+  "graph": {
+    "faces": 1063542,
+    "adjacentUndirectedEdges": 1592836,
+    "exactCoincidentSeamBridges": 213295,
+    "blockedNonmanifoldEdgeGroups": 2,
+    "isolatedFaces": 40,
+    "buildSeconds": 2.4283525840146467,
+    "diagonalModelUnits": 2.2426071166992188,
+    "policy": "Only shared full edges; optional exact endpoint coincidences. No nearest-neighbor jump, no geometry weld.",
+    "retainedArrayBytes": 77579126
+  },
+  "first_growth": {
+    "candidateFaces": 1000,
+    "processedFaces": 1000,
+    "seconds": 0.19088726001791656,
+    "stopReason": "达到面数上限（局部候选）",
+    "barrierCounts": {
+      "local_normal_angle": 154,
+      "protected_or_semantic_or_normal": 242,
+      "material_boundary": 27
+    },
+    "cancelled": false
+  },
+  "preview_color_readback": {
+    "configured_linear": [
+      0.03,
+      0.3,
+      0.9
+    ],
+    "actual_after_bmesh": [
+      0.029556842520833015,
+      0.3005438446998596,
+      0.8962695598602295
+    ]
+  },
+  "original_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "v1_fixture_sha256": "fc9f474d013f687791a8283315aeaf4a18a1ba5420cee3ec71d3b023346a027a",
+  "v2_test_file": "/workspace/artifacts/soulgrain-semantic-v2/tests/verification-v2-1794281940973522665.blend",
+  "face_count": 1499039,
+  "mesh_objects": 13,
+  "seconds": 41.314,
+  "status": "passed"
+}

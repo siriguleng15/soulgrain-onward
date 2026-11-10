@@ -1,0 +1,8 @@
+{
+  "blender": "5.2.2 LTS",
+  "install_from_zip": true,
+  "enable": true,
+  "disable": true,
+  "preferences_saved": false,
+  "user_script_dir": "/workspace/artifacts/soulgrain-semantic-v2/tests/blender-user-scripts"
+}

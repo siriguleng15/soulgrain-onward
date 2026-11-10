@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "script_sha256": "1a91d667f23017243ea2e9f1c418b92527c7aa5bb75907af434fb132fd0d6bbc",
+  "test_environment": "Linux Blender 5.2.2 LTS",
+  "target_environment": "macOS Blender 5.2.3 LTS; user GUI acceptance pending",
+  "checks_passed": 115,
+  "real_model_mesh_objects": 13,
+  "real_model_triangle_faces": 1499039,
+  "source_unchanged_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "user_mac_v1_file_tested": false,
+  "cutting_performed": false,
+  "geometry_uv_pbr_changed": false,
+  "gui_rendering_tested": false,
+  "panels_draw_contracts_tested": true,
+  "scope": "Real shoe data/operator tests plus synthetic graph boundary tests. Native undo/redo used explicit background checkpoints.",
+  "addon_zip_install_enable_disable_verified": true
+}
