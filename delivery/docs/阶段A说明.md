@@ -10,12 +10,12 @@
 
 ## Mac 打开
 
-下载 `Soulgrain_Stage_A.blend`，隔空投送给 Mac，在 Blender 使用“文件 → 打开”。已在 Linux Blender 5.2.2 LTS 实测保存、重新打开和逐面校验；Mac 5.2.3 请复核显示。
+下载 `Soulgrain_Stage_A_REVIEW.blend`，隔空投送给 Mac，在 Blender 使用“文件 → 打开”。已在 Linux Blender 5.2.2 LTS 实测保存、重新打开和逐面校验；Mac 5.2.3 请复核显示。
 
-右上角 Scene（场景）菜单：
+下载版右上角 Scene（场景）菜单：
 
 - `REPAIR_A__REAL_GEOMETRY`：实际修复副本。新增对象前缀为 `REPAIR_`，可以独立编辑、隐藏。
-- `SOURCE_UNCHANGED__ORIGINAL_LABELS`：完整原始几何、标签和原始材质的回退场景。
+下载检查版为降低体积，仅省略重复的源归档场景；实际修复网格完整保留。完整工程的源归档与原始 Release 均未改动。回退到原始状态请重新打开原始 Release 的 `SOUL.NEW.blend`，不要将修复副本改名覆盖它。
 
 原始 Release 的模型和语义 JSON 没有改写。全部 UNKNOWN 原面仍在修复副本中，未重新识别、分类或删除。它们可能遮挡修复区域；分区检查图只为检查目标结构进行了隔离，绝不表示整鞋全部缺损已经修好。
 
