@@ -1,0 +1,67 @@
+[
+  {
+    "file": "README.md",
+    "bytes": 3104,
+    "sha256": "7680a2aa0c590f4e6fdc918ed2f96980796b31e8cb79a2676e7a09cd411c6ac2"
+  },
+  {
+    "file": "Saihan_Audio_Report.pdf",
+    "bytes": 4004655,
+    "sha256": "3778e9cc766c187a5ef975afbb8587003f15bb782fe6974239a93c66014214b0"
+  },
+  {
+    "file": "Saihan_Full_Length_MP3.zip",
+    "bytes": 31890592,
+    "sha256": "62e597fc827b83c1b6339689fea62d8a8ff502c28a9ccfa19853165d4b13232e"
+  },
+  {
+    "file": "Saihan_Listen_First_MP3.zip",
+    "bytes": 22098113,
+    "sha256": "504f0e0f5f44bbc33759f218eca6097637fce15881f49acb3fea65937aebb46b"
+  },
+  {
+    "file": "Saihan_Reports_Parameters_and_GPU_Route.zip",
+    "bytes": 14359569,
+    "sha256": "2487638f77160c89a1fad77a6b1501f106a2d95eb267ea5cd0aa5b5381c8be7e"
+  },
+  {
+    "file": "full/A_Conservative_Matched.mp3",
+    "bytes": 9871194,
+    "sha256": "9c9d6d2ec59e55c16e0a1460ea381b4d1fd25f48cef3c5990bb94eecf0dc56c3"
+  },
+  {
+    "file": "full/A_Conservative_Matched.wav",
+    "bytes": 65283884,
+    "sha256": "12c2c60508c759554434f9034849c6a14efad96001a21e8e432635faebbf73b7"
+  },
+  {
+    "file": "full/B_AI_Other_Approximation_Matched.mp3",
+    "bytes": 9871194,
+    "sha256": "292d78fc134764228df57f274d3297e5a74a195c4c5020647be7400b1cf31968"
+  },
+  {
+    "file": "full/B_AI_Other_Approximation_Matched.wav",
+    "bytes": 65283884,
+    "sha256": "3b38d7e172cb3153ae1c6b1c3420f6cc4176d2604506e0171113e8dec1ca8782"
+  },
+  {
+    "file": "full/B_Removed_Check_For_Lost_Strings_Matched.mp3",
+    "bytes": 9871194,
+    "sha256": "f8d91644edbaa978551a922f7f8d03cb55ce20b1b73c3e621f55d1c371a185ce"
+  },
+  {
+    "file": "full/B_Removed_Check_For_Lost_Strings_Matched.wav",
+    "bytes": 65283884,
+    "sha256": "20723f8c3c7c457dc635d7160c1cf6389dc3c9f6230433289e25b5513ff8313a"
+  },
+  {
+    "file": "full/Original_Matched.mp3",
+    "bytes": 9871194,
+    "sha256": "d8c2b0db2cb58f9184401c69bff6bfe65148b8815a89865714a4515d52f3d3d6"
+  },
+  {
+    "file": "full/Original_Matched.wav",
+    "bytes": 65283884,
+    "sha256": "ec5a62735591d07384976c6cd88b197521b9477c4e2c26ad153e4613899a17c7"
+  }
+]
