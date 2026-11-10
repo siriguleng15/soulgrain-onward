@@ -1,0 +1,129 @@
+{
+  "history": [
+    {
+      "iteration": 0,
+      "intersections": 26,
+      "moved_vertices": 4128,
+      "infeasible_vertices": 1
+    },
+    {
+      "iteration": 1,
+      "intersections": 24,
+      "moved_vertices": 6,
+      "infeasible_vertices": 0
+    },
+    {
+      "iteration": 2,
+      "intersections": 18,
+      "moved_vertices": 2,
+      "infeasible_vertices": 1
+    },
+    {
+      "iteration": 3,
+      "intersections": 8,
+      "moved_vertices": 2,
+      "infeasible_vertices": 0
+    },
+    {
+      "iteration": 4,
+      "intersections": 5,
+      "moved_vertices": 2,
+      "infeasible_vertices": 0
+    },
+    {
+      "iteration": 5,
+      "intersections": 8,
+      "moved_vertices": 1,
+      "infeasible_vertices": 0
+    },
+    {
+      "iteration": 6,
+      "intersections": 9,
+      "moved_vertices": 0,
+      "infeasible_vertices": 0
+    },
+    {
+      "iteration": 7,
+      "intersections": 7,
+      "moved_vertices": 1,
+      "infeasible_vertices": 0
+    }
+  ],
+  "withheld_new_triangles": 14,
+  "withheld_triangle_source_grid_vertices": [
+    [
+      488,
+      586,
+      585
+    ],
+    [
+      1775,
+      1776,
+      1873
+    ],
+    [
+      1775,
+      1873,
+      1872
+    ],
+    [
+      1776,
+      1874,
+      1873
+    ],
+    [
+      1872,
+      1873,
+      1970
+    ],
+    [
+      1873,
+      1874,
+      1971
+    ],
+    [
+      1873,
+      1971,
+      1970
+    ],
+    [
+      1875,
+      1973,
+      1972
+    ],
+    [
+      7733,
+      7734,
+      7831
+    ],
+    [
+      18155,
+      18156,
+      18253
+    ],
+    [
+      18155,
+      18253,
+      18252
+    ],
+    [
+      18252,
+      18253,
+      18350
+    ],
+    [
+      18252,
+      18350,
+      18349
+    ],
+    [
+      18348,
+      18349,
+      18446
+    ]
+  ],
+  "remaining_triangles": 36574,
+  "source_outer_unchanged": true,
+  "body_outer_unchanged": true,
+  "unknown_reclassified": 0
+}

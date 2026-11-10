@@ -1,0 +1,62 @@
+{
+  "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED": {
+    "nonadjacent_self_intersections": 0,
+    "intersections_with_verified_body_outer_and_patches": 0,
+    "body_pairs": [],
+    "self_pairs": [],
+    "closest_sample_distance_min": 0.0012113340198993683,
+    "sample_distance_percentiles": [
+      0.003999994709156454,
+      0.00844337996095419,
+      0.046773508191108704,
+      0.17032519876956945,
+      0.27581536024808884
+    ],
+    "full_untouched_unknown_geometry_not_certified_collision_free": true
+  },
+  "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES": {
+    "nonadjacent_self_intersections": 0,
+    "intersections_with_verified_body_outer_and_patches": 0,
+    "body_pairs": [],
+    "self_pairs": [],
+    "closest_sample_distance_min": 0.0,
+    "sample_distance_percentiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "full_untouched_unknown_geometry_not_certified_collision_free": true
+  },
+  "REPAIR_CUFF_NEW_INNER": {
+    "nonadjacent_self_intersections": 0,
+    "intersections_with_verified_body_outer_and_patches": 0,
+    "body_pairs": [],
+    "self_pairs": [],
+    "closest_sample_distance_min": 0.0010111011797562242,
+    "sample_distance_percentiles": [
+      0.00383057008497417,
+      0.0038962521590292453,
+      0.009035974740982056,
+      0.08467709422111513,
+      0.12195637136697765
+    ],
+    "full_untouched_unknown_geometry_not_certified_collision_free": true
+  },
+  "REPAIR_CUFF_RETURN_EDGES": {
+    "nonadjacent_self_intersections": 0,
+    "intersections_with_verified_body_outer_and_patches": 0,
+    "body_pairs": [],
+    "self_pairs": [],
+    "closest_sample_distance_min": 0.009889482520520687,
+    "sample_distance_percentiles": [
+      0.020875300075858833,
+      0.04235703237354756,
+      0.06981426104903221,
+      0.11844657957553863,
+      0.13028773486614226
+    ],
+    "full_untouched_unknown_geometry_not_certified_collision_free": true
+  }
+}

@@ -1,0 +1,1056 @@
+{
+  "objects": {
+    "DEBUG_LACES_VISIBILITY_ONLY": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "B_texture_on_A_test_v1"
+        ]
+      ]
+    },
+    "GEO_TONGUE_CONTINUOUS_FRONT_BACK": {
+      "parent": "TONGUE_ASSEMBLY_V5_1",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "MAT_TONGUE_V4_APPEARANCE_RESAMPLED"
+        ],
+        [
+          "DATA",
+          "MAT_TONGUE_HIDDEN_MATCHED_V4_CLOTH"
+        ]
+      ]
+    },
+    "New_minus_eyelet_1": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "New_minus_eyelet_2": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "New_minus_eyelet_3": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "New_minus_eyelet_4": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "New_minus_eyelet_5": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Preserved_plus_eyelet_1": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Preserved_plus_eyelet_2": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Preserved_plus_eyelet_3": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Preserved_plus_eyelet_4": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Preserved_plus_eyelet_5": {
+      "parent": "Shoe_TEST_V3",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ]
+      ]
+    },
+    "Shoe_TEST_V3": {
+      "parent": null,
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_local": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        [
+          "DATA",
+          "B_texture_on_A_test_v1"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_1"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_2"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_3"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_4"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_5"
+        ],
+        [
+          "DATA",
+          "Local_B_pattern_repair_6"
+        ],
+        [
+          "DATA",
+          "Silver_eyelet_reference_B"
+        ],
+        [
+          "DATA",
+          "Original_B_cuff_diamond_aligned_continuously"
+        ],
+        [
+          "DATA",
+          "B_style_sole_toe_tongue_stitches_V4"
+        ]
+      ]
+    }
+  },
+  "resources": {
+    "materials": {
+      "B_style_sole_toe_tongue_stitches_V4": "f182d86faadf52daff3c56dff1d39ba3a04a1135344217c0f4dfe7af6ec91a5c",
+      "B_texture_on_A_test_v1": "cb9afc9840c0dd7d930b389c848be8ba176a15637746da95fabb8bfbbb53a145",
+      "Local_B_pattern_repair_1": "1e1b583d2258d37f1bb7e4ab8492c2b3dc24c2f57b0256af0702470803a32678",
+      "Local_B_pattern_repair_2": "750e1a0c94588eaecbb3cd578424b6177227f8a677f97fdb92deb4a3fbb17004",
+      "Local_B_pattern_repair_3": "e36908f7b70a78e26d45fb51ca0eb24d5eb1ae54c8c0cb156dac8d912c11ac65",
+      "Local_B_pattern_repair_4": "bd892b8400177b674daa21c5561a199ee922b1d71e299d523731a8b4f5ff2b43",
+      "Local_B_pattern_repair_5": "fa51f6d37118bd1ae050fa93405ef284d83fd258d76dd36a414657257bf13357",
+      "Local_B_pattern_repair_6": "8a06de5a050f43e0b079e6b432a8a01aff38a254c87ded29d7febac77611073d",
+      "MAT_TONGUE_HIDDEN_MATCHED_V4_CLOTH": "f8c8f6c65d77354d335124c69cbc444c998e62938c8f6d160ddb0df6bbdef1e5",
+      "MAT_TONGUE_V4_APPEARANCE_RESAMPLED": "f4da202904820f97cde52f7b2064f4a35a57b76e4c2e3793c50766b1a19d796f",
+      "Material": "21b2066361782e970aa8400c928f243843e9ce0e50a289717038f077cca347a6",
+      "Original_B_cuff_diamond_aligned_continuously": "aaa6d9a0ea2ec19046e285f8022ed477d9a2384c94be61a89f2468c785bb6cb5",
+      "Silver_eyelet_reference_B": "f3bba64bd686dc5f5700e2730f606882f3ffaffacb17f6f7b53b3e474a03ffea"
+    },
+    "images": {
+      "basecolor-8192.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          8192,
+          8192
+        ],
+        "colorspace": "sRGB",
+        "packed": "42ea041ec97dbaca78b61047bcd3b291dd4daaae9f8896dfe66a058dd12d3cee"
+      },
+      "cuff-periodic-basecolor.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "sRGB",
+        "packed": "51840c823fbecdee6c4d3b2669e15d888e21e4e8b6e4063a8994d916f22e3f13"
+      },
+      "cuff-periodic-metallic-roughness.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "Non-Color",
+        "packed": "1b7743b4010c9275fb97c95b99eb6d6070587c3cc322dbfc2224e9854ba4287f"
+      },
+      "finish-basecolor-4096.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB",
+        "packed": "c468879503e447d3381332cefc2b768db9dca1aa199aed9b6f1953cd879aaa1d"
+      },
+      "finish-metallic-roughness-2048.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed": "064a7d2393349075fd08cc190d0ebc64d86a1768bd49ed76af71d5d0e341f0b3"
+      },
+      "local_cloth_1": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "ac4ef500c85d44c3171d1aca83ef508fa2cf7f76ca92e699332ea770e7965af9"
+      },
+      "local_cloth_2": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "7353826c1f47f0bd5b1c12155999f5c9659feab38a937384732226ca731c511d"
+      },
+      "local_cloth_3": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "0fc7ba90760fd2154397e12c36bab1f2c249d5a7598262f78775206eef8204bc"
+      },
+      "local_cloth_4": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "08016fc9a7bb8dc58281e97812fd6edb97798bb0e90931d258b1410bc5cb3e9a"
+      },
+      "local_cloth_5": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "de30ba05d2821a181298bc456360aea3f8f704dcb2145f1a64c7f0ba1c075944"
+      },
+      "local_cloth_6": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "160f8f1ad18c1b6a50300f9a463c7496d7ed9a61a0039f0b556dbcaf48587ea2"
+      },
+      "local_cloth_MR_1": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "3f0c99cf2f69a3e3310fcf7753b1a329d84cfde5a50898bddc632cd549441041"
+      },
+      "local_cloth_MR_2": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "4753c84b1e3f888dc1f4a3a7fe238da524d90ead0eca7ff6ba588f50a98313f5"
+      },
+      "local_cloth_MR_3": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "bef27e1d337b118939fbab37769d4852fbf4212f62631ae1a4d11ade8a448237"
+      },
+      "local_cloth_MR_4": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "d88c6273b0009a9ffb55bfc949b47f0f16205f5cbf67abe70a3fbc79d35080ae"
+      },
+      "local_cloth_MR_5": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "83029c94d07c15a9801f7693d9e3517688d36197e635b9d81b406e7509acb645"
+      },
+      "local_cloth_MR_6": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "b5a43721b81c33005892777d4d7f20e7fd7baaa77a0026bf79b5068c29196a04"
+      },
+      "metallic-roughness-2048.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed": "8706580dc4e3d9616b49af782817819039f014a0b01cad7e0a7133952ddedcf8"
+      },
+      "V51_tongue-front-basecolor.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "sRGB",
+        "packed": "7bdd46e91ee8806b1cd7577d47002b489d0ddbcf82524c8f802833fb295b81f3"
+      },
+      "V51_tongue-front-metallic-roughness.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "Non-Color",
+        "packed": "537c145d5528aea2a367455ee06394ce03dbfdf0df19421453eff41a0ec603d4"
+      }
+    }
+  }
+}

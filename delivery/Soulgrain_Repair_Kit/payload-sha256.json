@@ -1,0 +1,19 @@
+{
+  "reports/REPAIR_SOLE_REAR_B.npz": "d53a6a8cfaa9b9adafa2577e8ee24648e165140e1aba0bee6432235225bbc636",
+  "reports/stage-C-eyelet-channel-check.json": "c5ff60302a9c903cc977af53882bedf7bfce4d67bcf0fb37adb88feaf854e4d0",
+  "reports/REPAIR_UPPER_CONFIRMED_LOCAL_HOLES.npz": "5eebe01faec5d3c27388de126ea8638d250aa2ab35914daa5d6ba018f4feaf15",
+  "reports/stage-C-original-outer-contact-check.json": "2e62689333f5f2ef20745fa121f895eeb5558e1770003771c972a27d33f4d8c1",
+  "reports/REPAIR_CUFF_RETURN_EDGES.npz": "46b386a289eab2a4334a6352d277f049d0b0572b36a8ee5e9b9555cb07c10348",
+  "reports/stage-A-plan.json": "e8af56658807d23ffeea917cdcfe9565d2ade164f81b01465263c41f7ac0c378",
+  "reports/B_human_outer_and_retired_inner.npz": "da3fad6456d1c2c9e903ebc85b4b25bccb8a5f03d61188affca22aa091ebc887",
+  "reports/pending-region-coordinates.json": "f429c14289714a44254fe16dcdd081b3ac42dc1f81f9bd6e0fc9c6989f1a21bd",
+  "reports/REPAIR_CUFF_NEW_INNER.npz": "0730ee679a606a584e03e7a87bfc7ac9fd1cb79c469ef69faf2af893c33f7e02",
+  "reports/C_retired_inner_ids.npz": "913ab5ac64e882c33e3aceff5c9c430fdc35e49090c46ef9e6824fe3ad79aa80",
+  "reports/final-added-surfaces-intersections.json": "83a5d005bee749eeacee0f3ab444a7bf28521ce50c5c382e7038e2c8a51be6f9",
+  "reports/REPAIR_TOECAP_THICKNESS_BAND.npz": "d96e71a080ffe6cd553333cff0d6c0f64fa29e8e9de9a91df88384028e33be0f",
+  "reports/REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED.npz": "00d031c24eee348912c9332f7b9e79c25a7ad56a842a3d5b097c730d862b0907",
+  "reports/B_removed_floor_ids.npz": "3bc93ff5dd8114d6696bf228d8e14d80930e339fa4426b2cc6a84920b84ee631",
+  "reports/stage-C-deep-fold-pending.json": "73005029aef885ed3b0fa2314c5706425f2a575010c4f4bb1b14ae34b5eaed64",
+  "reports/final-new-mesh-metrics.json": "b67727342ac5432e97f2b565c9904735a03844df18618b4fea313607a49e05cf",
+  "reports/REPAIR_SOLE_REAR_A.npz": "8f1fe27b59b5072f5fc62f550897e1f182653695920ee487b46195bb2447c13c"
+}

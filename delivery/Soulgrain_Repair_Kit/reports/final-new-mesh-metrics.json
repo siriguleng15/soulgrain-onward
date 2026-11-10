@@ -1,0 +1,170 @@
+{
+  "REPAIR_SOLE_REAR_A": {
+    "vertices": 952,
+    "used_vertices": 952,
+    "triangles": 1900,
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "boundary_components": 0,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": true,
+    "bbox": [
+      [
+        0.3761383891105652,
+        -0.2457687109708786,
+        -0.3133593797683716
+      ],
+      [
+        0.5058831572532654,
+        -0.23333929479122162,
+        -0.272137850522995
+      ]
+    ]
+  },
+  "REPAIR_SOLE_REAR_B": {
+    "vertices": 1048,
+    "used_vertices": 1048,
+    "triangles": 2092,
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "boundary_components": 0,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": true,
+    "bbox": [
+      [
+        0.4176660478115082,
+        0.2131332904100418,
+        -0.3172922432422638
+      ],
+      [
+        0.5508171319961548,
+        0.2416752576828003,
+        -0.2781192362308502
+      ]
+    ]
+  },
+  "REPAIR_TOECAP_THICKNESS_BAND": {
+    "vertices": 10626,
+    "used_vertices": 10626,
+    "triangles": 21248,
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "boundary_components": 0,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": true,
+    "bbox": [
+      [
+        -0.9490269422531128,
+        -0.2511575520038605,
+        -0.3149999976158142
+      ],
+      [
+        -0.6484732031822205,
+        0.3264831602573395,
+        -0.21257178485393524
+      ]
+    ]
+  },
+  "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES": {
+    "vertices": 472,
+    "used_vertices": 472,
+    "triangles": 638,
+    "connected_components": 24,
+    "boundary_edges": 258,
+    "boundary_components": 24,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": false,
+    "bbox": [
+      [
+        0.1500287503004074,
+        -0.21882863342761993,
+        -0.19919870793819427
+      ],
+      [
+        0.518808126449585,
+        0.22811028361320496,
+        0.27507302165031433
+      ]
+    ]
+  },
+  "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED": {
+    "vertices": 11521,
+    "used_vertices": 9654,
+    "triangles": 18970,
+    "connected_components": 1,
+    "boundary_edges": 336,
+    "boundary_components": 1,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": false,
+    "bbox": [
+      [
+        -0.8199999928474426,
+        -0.18219886720180511,
+        -0.24143347144126892
+      ],
+      [
+        0.7200000286102295,
+        0.21260704100131989,
+        0.38571643829345703
+      ]
+    ]
+  },
+  "REPAIR_CUFF_NEW_INNER": {
+    "vertices": 19133,
+    "used_vertices": 18159,
+    "triangles": 34754,
+    "connected_components": 1,
+    "boundary_edges": 1610,
+    "boundary_components": 21,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": false,
+    "bbox": [
+      [
+        0.15075615048408508,
+        -0.3949962258338928,
+        -0.3083341717720032
+      ],
+      [
+        0.9424012303352356,
+        0.3200036883354187,
+        0.39418143033981323
+      ]
+    ]
+  },
+  "REPAIR_CUFF_RETURN_EDGES": {
+    "vertices": 1152,
+    "used_vertices": 322,
+    "triangles": 290,
+    "connected_components": 16,
+    "boundary_edges": 322,
+    "boundary_components": 16,
+    "nonmanifold_edges_over_two_faces": 0,
+    "degenerate_faces": 0,
+    "winding_consistent": true,
+    "watertight": false,
+    "bbox": [
+      [
+        0.15036137402057648,
+        -0.39852267503738403,
+        -0.3083341717720032
+      ],
+      [
+        0.9461968541145325,
+        0.322928786277771,
+        0.39418143033981323
+      ]
+    ]
+  }
+}

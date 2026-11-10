@@ -1,0 +1,9 @@
+{
+  "stage": "C",
+  "download_filename": "Soulgrain_Stage_C_REVIEW.blend",
+  "bytes": 70055441,
+  "sha256": "0bc9c37787eb0f71de3cd87a1a1a296cbc1169714303ac854071cda4e79a9556",
+  "omits_duplicate_source_scene_only": true,
+  "full_checkpoint": "Soulgrain_Stage_C.blend",
+  "source_release_unchanged": true
+}

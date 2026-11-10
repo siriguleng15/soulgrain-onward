@@ -1,0 +1,196 @@
+[
+  {
+    "original_eyelet": "New_minus_eyelet_1",
+    "source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+    "ring_radius": 0.018999936760657445,
+    "axis": [
+      -0.10073638744739871,
+      -0.9940063693116814,
+      -0.04246784680033027
+    ],
+    "center": [
+      0.22107075154781342,
+      0.2062191665172577,
+      0.20756959915161133
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 120,
+    "new_cut_vertices": 74,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "New_minus_eyelet_2",
+    "source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+    "ring_radius": 0.01899993626271058,
+    "axis": [
+      0.10683154033383002,
+      0.9942519273628355,
+      -0.007080037089434568
+    ],
+    "center": [
+      0.2611373960971832,
+      0.19998835027217865,
+      0.09259804338216782
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 84,
+    "new_cut_vertices": 62,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "New_minus_eyelet_3",
+    "source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+    "ring_radius": 0.018999928314870677,
+    "axis": [
+      0.02247941991553673,
+      0.9784087028545971,
+      0.20545336662767566
+    ],
+    "center": [
+      0.3126610219478607,
+      0.2016904205083847,
+      -0.02906431443989277
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 48,
+    "new_cut_vertices": 38,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "New_minus_eyelet_4",
+    "source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+    "ring_radius": 0.018999845067924643,
+    "axis": [
+      -0.06377941369672999,
+      0.9359274086402799,
+      0.34636984878073934
+    ],
+    "center": [
+      0.37789270281791687,
+      0.24252936244010925,
+      -0.14485710859298706
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 36,
+    "new_cut_vertices": 30,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "New_minus_eyelet_5",
+    "source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+    "ring_radius": 0.018999723467437918,
+    "axis": [
+      0.08704383191110703,
+      -0.9587016140897571,
+      -0.2707666642478828
+    ],
+    "center": [
+      0.44297394156455994,
+      0.2795618772506714,
+      -0.24093487858772278
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 43,
+    "new_cut_vertices": 32,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "Preserved_plus_eyelet_1",
+    "source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+    "ring_radius": 0.018999881607860203,
+    "axis": [
+      0.2981239947401692,
+      -0.9536333548403084,
+      0.04129780013731842
+    ],
+    "center": [
+      0.2280760109424591,
+      -0.2898769974708557,
+      0.2326071560382843
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 100,
+    "new_cut_vertices": 84,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "Preserved_plus_eyelet_2",
+    "source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+    "ring_radius": 0.018999715201737016,
+    "axis": [
+      0.2512579488012725,
+      -0.964378239007306,
+      -0.082728805704811
+    ],
+    "center": [
+      0.2656603753566742,
+      -0.27016690373420715,
+      0.11284671723842621
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 91,
+    "new_cut_vertices": 70,
+    "axis_clear_after": true
+  },
+  {
+    "original_eyelet": "Preserved_plus_eyelet_3",
+    "source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+    "ring_radius": 0.018999875209592582,
+    "axis": [
+      -0.1364350979385554,
+      0.98069835164188,
+      -0.14005787067279085
+    ],
+    "center": [
+      0.29939553141593933,
+      -0.26199668645858765,
+      -0.000825206923764199
+    ],
+    "axis_occluded_by_new_inner_before": false,
+    "source_eyelet_changed": false
+  },
+  {
+    "original_eyelet": "Preserved_plus_eyelet_4",
+    "source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+    "ring_radius": 0.018999804985097634,
+    "axis": [
+      -0.15160749605826251,
+      0.9711619382625469,
+      -0.1840099367128791
+    ],
+    "center": [
+      0.33787965774536133,
+      -0.2782757580280304,
+      -0.10892895609140396
+    ],
+    "axis_occluded_by_new_inner_before": false,
+    "source_eyelet_changed": false
+  },
+  {
+    "original_eyelet": "Preserved_plus_eyelet_5",
+    "source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+    "ring_radius": 0.0189996712791601,
+    "axis": [
+      0.15836732586144295,
+      -0.8364458351847022,
+      0.5246695673484998
+    ],
+    "center": [
+      0.3840923309326172,
+      -0.3117315173149109,
+      -0.23363883793354034
+    ],
+    "axis_occluded_by_new_inner_before": true,
+    "source_eyelet_changed": false,
+    "new_lining_triangles_touched": 32,
+    "new_cut_vertices": 22,
+    "axis_clear_after": true
+  }
+]

@@ -8,3 +8,6 @@ __pycache__/
 tooling/
 delivery/*.zip
 delivery/*.blend
+delivery/Soulgrain_Repair_Kit/inputs/
+delivery/Soulgrain_Repair_Kit/RESULTS_*/
+delivery/Soulgrain_Repair_Kit/stages/

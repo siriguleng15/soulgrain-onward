@@ -1,0 +1,21 @@
+{
+  "blender_tested": "5.2.2 LTS Linux",
+  "mac_5_2_3_tested": false,
+  "real_input_sha256": "725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183",
+  "saved_A_B_C_reopened_and_checked": true,
+  "download_working_geometry_equals_full_checkpoint": true,
+  "all_source_unknown_and_human_data_preserved_in_archive": true,
+  "remaining_source_geometry_uv_labels_material_indices_exact": true,
+  "all_non_target_original_mesh_signatures_exact": true,
+  "working_world_transforms_and_material_slot_order_exact": true,
+  "portable_replay_real_A_B_C_pass": true,
+  "native_blender_operator_preflight_and_real_A_B_C_save_pass": true,
+  "static_python_compile_pass": true,
+  "not_accepted": [
+    "Whole shoe watertightness",
+    "B complete high upper lining, eyestays and collar binding",
+    "C complete deep folds and returns",
+    "New-face seam-continuous original PBR UV transfer",
+    "All untouched UNKNOWN legacy collisions"
+  ]
+}
