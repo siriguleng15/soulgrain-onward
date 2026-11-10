@@ -11,6 +11,8 @@
   "portable_replay_real_A_B_C_pass": true,
   "native_blender_operator_preflight_and_real_A_B_C_save_pass": true,
   "static_python_compile_pass": true,
+  "new_mesh_unused_vertices_after_cleanup": 0,
+  "cleanup_triangle_coordinates_exact": true,
   "not_accepted": [
     "Whole shoe watertightness",
     "B complete high upper lining, eyestays and collar binding",

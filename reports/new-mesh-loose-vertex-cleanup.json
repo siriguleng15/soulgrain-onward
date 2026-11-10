@@ -1,0 +1,58 @@
+[
+  {
+    "name": "REPAIR_SOLE_REAR_A",
+    "unused_new_vertices_removed": 0,
+    "final_new_vertices": 952,
+    "triangles": 1900,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_SOLE_REAR_B",
+    "unused_new_vertices_removed": 0,
+    "final_new_vertices": 1048,
+    "triangles": 2092,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_TOECAP_THICKNESS_BAND",
+    "unused_new_vertices_removed": 0,
+    "final_new_vertices": 10626,
+    "triangles": 21248,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES",
+    "unused_new_vertices_removed": 0,
+    "final_new_vertices": 472,
+    "triangles": 638,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
+    "unused_new_vertices_removed": 1867,
+    "final_new_vertices": 9654,
+    "triangles": 18970,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_CUFF_NEW_INNER",
+    "unused_new_vertices_removed": 974,
+    "final_new_vertices": 18159,
+    "triangles": 34754,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  },
+  {
+    "name": "REPAIR_CUFF_RETURN_EDGES",
+    "unused_new_vertices_removed": 830,
+    "final_new_vertices": 322,
+    "triangles": 290,
+    "triangle_coordinates_exact": true,
+    "source_geometry_changed": 0
+  }
+]

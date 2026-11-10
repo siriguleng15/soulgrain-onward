@@ -11,7 +11,7 @@
     },
     {
       "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
-      "vertices": 11521,
+      "vertices": 9654,
       "triangles": 18970,
       "new_faces": 18970
     }
@@ -98996,6 +98996,6 @@
     }
   ],
   "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/stages/Soulgrain_Stage_B.blend",
-  "bytes": 131507533,
-  "sha256": "3a0efa74e933cef194ab7c77f054f11a8efaa338b86edab7d788a2bcbbb136ba"
+  "bytes": 131495387,
+  "sha256": "a86642ff4c75b97cc506274bf4202307e57e3f6e026d6aa319fa020863436ce6"
 }

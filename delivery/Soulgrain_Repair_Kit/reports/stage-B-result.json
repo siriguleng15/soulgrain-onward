@@ -11,7 +11,7 @@
     },
     {
       "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
-      "vertices": 11521,
+      "vertices": 9654,
       "triangles": 18970,
       "new_faces": 18970
     }
@@ -98995,7 +98995,7 @@
       "all_original_unknown_faces_retained": true
     }
   ],
-  "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Repair_Kit/RESULTS_20261110_211142/Soulgrain_Stage_B.blend",
-  "bytes": 131507238,
-  "sha256": "8bd4a9df748d8577c890a99ae72d5424e740cfda99fa67090ff9cd778bf878e4"
+  "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Repair_Kit/RESULTS_20261110_212050/Soulgrain_Stage_B.blend",
+  "bytes": 131495227,
+  "sha256": "eaeacbc8c52003eaf40bb3ab462a13b727feb61b0fd8fbdf99ad3b4b429f2480"
 }

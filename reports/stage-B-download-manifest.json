@@ -1,8 +1,8 @@
 {
   "stage": "B",
   "download_filename": "Soulgrain_Stage_B_REVIEW.blend",
-  "bytes": 71869671,
-  "sha256": "c28bc8dbbc5e178e3faaef1bee4efeaf87471fb55b4af1f0ed4578a51c8f6042",
+  "bytes": 71852862,
+  "sha256": "845722c412db909ba556d7d880c18f3a6b215608c5ebc2c350c1687fb040218b",
   "omits_duplicate_source_scene_only": true,
   "full_checkpoint": "Soulgrain_Stage_B.blend",
   "source_release_unchanged": true

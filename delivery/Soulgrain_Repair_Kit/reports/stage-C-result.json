@@ -5,13 +5,13 @@
   "created_objects": [
     {
       "name": "REPAIR_CUFF_NEW_INNER",
-      "vertices": 19133,
+      "vertices": 18159,
       "triangles": 34754,
       "new_faces": 34754
     },
     {
       "name": "REPAIR_CUFF_RETURN_EDGES",
-      "vertices": 1152,
+      "vertices": 322,
       "triangles": 290,
       "new_faces": 290
     }
@@ -69739,7 +69739,7 @@
       "all_original_unknown_faces_retained": true
     }
   ],
-  "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Repair_Kit/RESULTS_20261110_211142/Soulgrain_Stage_C.blend",
-  "bytes": 129700625,
-  "sha256": "89d944d3f53524585b800411d2193c86149077433d9d9fd5a8763ce14b7d40ce"
+  "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Repair_Kit/RESULTS_20261110_212050/Soulgrain_Stage_C.blend",
+  "bytes": 129666443,
+  "sha256": "c4c44e45fda4e3a9a13881a56c69a4716e6874c4fd356c8d99fe686ef29dae05"
 }
