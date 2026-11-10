@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+tests/*.blend*
+tests/*.log
+tests/blender-user-scripts/
+reports/x11-capture.png
+reports/publication-verification.json
+tests/*.glb
+tests/publication-files.json

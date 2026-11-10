@@ -1,0 +1,71 @@
+{
+  "version": "2.2.0",
+  "status": "passed",
+  "checks": 270,
+  "suites": [
+    {
+      "report": "reports/addon-install.json",
+      "checks": 5,
+      "status": "passed"
+    },
+    {
+      "report": "reports/compatibility-and-undo.json",
+      "checks": 25,
+      "status": "passed"
+    },
+    {
+      "report": "reports/editable-preview.json",
+      "checks": 63,
+      "status": "passed"
+    },
+    {
+      "report": "reports/export-isolation.json",
+      "checks": 4,
+      "status": "passed"
+    },
+    {
+      "report": "reports/growth-boundaries.json",
+      "checks": 22,
+      "status": "passed"
+    },
+    {
+      "report": "reports/gui-gpu.json",
+      "checks": 7,
+      "status": "passed"
+    },
+    {
+      "report": "reports/interaction-v22.json",
+      "checks": 7,
+      "status": "passed"
+    },
+    {
+      "report": "reports/lifecycle-v22.json",
+      "checks": 19,
+      "status": "passed"
+    },
+    {
+      "report": "reports/lifecycle.json",
+      "checks": 13,
+      "status": "passed"
+    },
+    {
+      "report": "reports/manual-hotfix.json",
+      "checks": 42,
+      "status": "passed"
+    },
+    {
+      "report": "reports/real-model.json",
+      "checks": 63,
+      "status": "passed"
+    }
+  ],
+  "script_sha256": "1b7f4da45c81cb09c7f3b204c1a52887ec3dbd27b9f14ff96ecff46baa4fe0d3",
+  "baseline_script_sha256": "a574476bc3ae454044387b43c20156f3ed1f0047e0d8d7748a0781d26d1ab883",
+  "original_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "actual_model_triangles": 1499039,
+  "actual_environment": "Linux Blender 5.2.2 LTS; actual OpenGL viewport with Mesa; Mac 5.2.3 / Metal not tested",
+  "user_latest_Mac_workfile_available": false,
+  "non_destructive_display": "Runtime real-triangle GPU caches; no proxy bpy.data meshes/objects/materials",
+  "formal_split": false,
+  "website_or_model_assets_changed": false
+}

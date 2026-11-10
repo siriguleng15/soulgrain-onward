@@ -1,0 +1,265 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "V2 source save cannot overwrite existing work",
+      "passed": true
+    },
+    {
+      "name": "Save As refuses existing work path",
+      "passed": true
+    },
+    {
+      "name": "V2 work copied safely to new V2.1 file",
+      "passed": true
+    },
+    {
+      "name": "all V2 labels and stable UUIDs retained",
+      "passed": true
+    },
+    {
+      "name": "old V2 disk SHA unchanged",
+      "passed": true
+    },
+    {
+      "name": "real growth yields editable original candidates",
+      "passed": true
+    },
+    {
+      "name": "original candidate set is immutable",
+      "passed": true
+    },
+    {
+      "name": "trim counts match exact set arithmetic",
+      "passed": true
+    },
+    {
+      "name": "manual trimming changes no ownership state or colors",
+      "passed": true
+    },
+    {
+      "name": "selection undo preserves pending proposal",
+      "passed": true
+    },
+    {
+      "name": "selection undo updates live counts",
+      "passed": true
+    },
+    {
+      "name": "selection redo restores trimmed set",
+      "passed": true
+    },
+    {
+      "name": "trimmed selection confirms without recomputation",
+      "passed": true
+    },
+    {
+      "name": "only retained faces assigned HUMAN target",
+      "passed": true
+    },
+    {
+      "name": "excluded and all other labels states confidence issues unchanged",
+      "passed": true
+    },
+    {
+      "name": "excluded and all other preview colors unchanged",
+      "passed": true
+    },
+    {
+      "name": "trim confirmation native undo restores labels and colors",
+      "passed": true
+    },
+    {
+      "name": "trim confirmation native redo restores final target",
+      "passed": true
+    },
+    {
+      "name": "supplement test faces lie outside original candidates",
+      "passed": true
+    },
+    {
+      "name": "repeated trim and add uses same proposal with no recompute",
+      "passed": true
+    },
+    {
+      "name": "retained excluded added and final counts update",
+      "passed": true
+    },
+    {
+      "name": "unreviewed manual additions cannot confirm",
+      "passed": true
+    },
+    {
+      "name": "unreviewed rejection is atomic",
+      "passed": true
+    },
+    {
+      "name": "review tied to exact current selection",
+      "passed": true
+    },
+    {
+      "name": "same-count different addition resets acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "stale reviewed selection cannot authorize changed additions",
+      "passed": true
+    },
+    {
+      "name": "trim plus reviewed additions confirm",
+      "passed": true
+    },
+    {
+      "name": "final union retained plus additions assigned and no other data changed",
+      "passed": true
+    },
+    {
+      "name": "removed original faces keep exact colors with additions present",
+      "passed": true
+    },
+    {
+      "name": "live protection count manual_other face 0",
+      "passed": true
+    },
+    {
+      "name": "protected supplementation rejected 0",
+      "passed": true
+    },
+    {
+      "name": "protected rejection zero writes 0",
+      "passed": true
+    },
+    {
+      "name": "live protection count manual_other face 2291",
+      "passed": true
+    },
+    {
+      "name": "protected supplementation rejected 2291",
+      "passed": true
+    },
+    {
+      "name": "protected rejection zero writes 2291",
+      "passed": true
+    },
+    {
+      "name": "live protection count issue face 2290",
+      "passed": true
+    },
+    {
+      "name": "protected supplementation rejected 2290",
+      "passed": true
+    },
+    {
+      "name": "protected rejection zero writes 2290",
+      "passed": true
+    },
+    {
+      "name": "live protection count locked face 2292",
+      "passed": true
+    },
+    {
+      "name": "protected supplementation rejected 2292",
+      "passed": true
+    },
+    {
+      "name": "protected rejection zero writes 2292",
+      "passed": true
+    },
+    {
+      "name": "late target lock checked at commit",
+      "passed": true
+    },
+    {
+      "name": "removing protected additions allows original candidate commit",
+      "passed": true
+    },
+    {
+      "name": "empty trimmed selection cannot commit",
+      "passed": true
+    },
+    {
+      "name": "empty rejection makes zero writes",
+      "passed": true
+    },
+    {
+      "name": "stale semantic revision still rejected",
+      "passed": true
+    },
+    {
+      "name": "multi-object preview starts",
+      "passed": true
+    },
+    {
+      "name": "other pre-selections cleared while preview is pending",
+      "passed": true
+    },
+    {
+      "name": "foreign object selections detected",
+      "passed": true
+    },
+    {
+      "name": "foreign object faces never silently submitted",
+      "passed": true
+    },
+    {
+      "name": "cancel editable preview",
+      "passed": true
+    },
+    {
+      "name": "cancel restores full pre-preview selection across both objects",
+      "passed": true
+    },
+    {
+      "name": "cancel restores seed temporary visibility",
+      "passed": true
+    },
+    {
+      "name": "cancel preserves every face attribute and preview color",
+      "passed": true
+    },
+    {
+      "name": "parameter change still cancels preview safely",
+      "passed": true
+    },
+    {
+      "name": "source geometry UV normals PBR and textures unchanged",
+      "passed": true
+    },
+    {
+      "name": "manager hierarchy and semantic counts retained",
+      "passed": true
+    },
+    {
+      "name": "original and preview material toggles retained",
+      "passed": true
+    },
+    {
+      "name": "V1 schema retained by V2.1 export",
+      "passed": true
+    },
+    {
+      "name": "JSON import preserves annotations",
+      "passed": true
+    },
+    {
+      "name": "save only V2.1 copy",
+      "passed": true
+    },
+    {
+      "name": "V2.1 reload persists all confirmed annotations",
+      "passed": true
+    },
+    {
+      "name": "input V2 and original soul.blend disk hashes unchanged",
+      "passed": true
+    }
+  ],
+  "timings": {},
+  "fixture": "Actual soul.blend geometry with V2 cloud regression annotations; not the user Mac work file.",
+  "status": "passed",
+  "seconds": 17.354,
+  "source_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "v2_input_sha256": "f9c68b85298760d6ab6ebc4ad2651ab42e575cc02bec21b84917edba02b3583a",
+  "work_file": "/workspace/artifacts/soulgrain-semantic-v2-2/tests/preview-work-1794303986362949342.blend",
+  "source_faces": 1499039
+}

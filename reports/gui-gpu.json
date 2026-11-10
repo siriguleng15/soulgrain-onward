@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "name": "real sidebar active category is Soulgrain",
+      "passed": true
+    },
+    {
+      "name": "real viewport draw handler compiled shader",
+      "passed": true
+    },
+    {
+      "name": "real GPU triangle batches built from source faces",
+      "passed": true
+    },
+    {
+      "name": "no proxy scene objects or meshes exist during GPU drawing",
+      "passed": true
+    },
+    {
+      "name": "real UI manual transaction creates optional animation caches",
+      "passed": true
+    },
+    {
+      "name": "GPU animated update finishes without draw errors",
+      "passed": true
+    },
+    {
+      "name": "exit removes GPU draw handles and cached triangles",
+      "passed": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "render": "Real interactive Linux OpenGL viewport, Mesa software GPU; not macOS Metal",
+  "status": "passed",
+  "source_faces": 1499039
+}

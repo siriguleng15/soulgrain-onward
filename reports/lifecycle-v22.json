@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "name": "pre-existing native H faces remain hidden and not displayed",
+      "passed": true
+    },
+    {
+      "name": "injected readback failure rolls back real source labels",
+      "passed": true
+    },
+    {
+      "name": "failed commit never moves rejected faces to a proxy",
+      "passed": true
+    },
+    {
+      "name": "JSON roundtrip compatible while workbench active",
+      "passed": true
+    },
+    {
+      "name": "PBR preview switch safely requires exit while workbench active",
+      "passed": true
+    },
+    {
+      "name": "native save exits workbench and restores display first",
+      "passed": true
+    },
+    {
+      "name": "native save does not change intended semantic data",
+      "passed": true
+    },
+    {
+      "name": "native save restores exact H visibility",
+      "passed": true
+    },
+    {
+      "name": "synthetic crash file actually contains emergency display marker",
+      "passed": true
+    },
+    {
+      "name": "load recovery removes stale display state and marker",
+      "passed": true
+    },
+    {
+      "name": "recovery restores exact pre-entry hidden arrays",
+      "passed": true
+    },
+    {
+      "name": "recovery preserves all real semantic annotations",
+      "passed": true
+    },
+    {
+      "name": "source geometry UV PBR identities validate after recovery",
+      "passed": true
+    },
+    {
+      "name": "display failure exits safely and frees runtime caches",
+      "passed": true
+    },
+    {
+      "name": "display failure changes no source labels",
+      "passed": true
+    },
+    {
+      "name": "display failure restores source H state",
+      "passed": true
+    },
+    {
+      "name": "re-run new script cleans old active display layer",
+      "passed": true
+    },
+    {
+      "name": "exactly one lifecycle handler after re-run",
+      "passed": true
+    },
+    {
+      "name": "re-run preserves semantic labels and source invariants",
+      "passed": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "status": "passed"
+}

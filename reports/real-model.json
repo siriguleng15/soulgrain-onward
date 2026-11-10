@@ -1,0 +1,282 @@
+{
+  "checks": [
+    {
+      "name": "V2.1.1 existing HUMAN labels can be read",
+      "passed": true
+    },
+    {
+      "name": "refuses overwrite of V2.1.1 source copy",
+      "passed": true
+    },
+    {
+      "name": "new V2.2 work created",
+      "passed": true
+    },
+    {
+      "name": "copy preserves all source semantic arrays",
+      "passed": true
+    },
+    {
+      "name": "enter real dynamic workbench",
+      "passed": true
+    },
+    {
+      "name": "all 13 actual mesh objects enter native face selection",
+      "passed": true
+    },
+    {
+      "name": "no temporary object or mesh enters bpy.data",
+      "passed": true
+    },
+    {
+      "name": "enter does not alter semantic values",
+      "passed": true
+    },
+    {
+      "name": "UNKNOWN remains visible at source coordinates",
+      "passed": true
+    },
+    {
+      "name": "classified actual triangles exist at surrounding fixed anchors",
+      "passed": true
+    },
+    {
+      "name": "classified eligible source faces are hidden",
+      "passed": true
+    },
+    {
+      "name": "subcategories use common anatomical parent anchor",
+      "passed": true
+    },
+    {
+      "name": "every display vertex equals real source triangle coordinates",
+      "passed": true
+    },
+    {
+      "name": "100 UNKNOWN faces assigned through verified native transaction",
+      "passed": true
+    },
+    {
+      "name": "actual 100 sgo_part values HUMAN UPPER",
+      "passed": true
+    },
+    {
+      "name": "100-face transaction leaves every other source body face attribute unchanged",
+      "passed": true
+    },
+    {
+      "name": "actual readback record VERIFIED exact stable face IDs",
+      "passed": true
+    },
+    {
+      "name": "100 new source faces hidden only after committed labels",
+      "passed": true
+    },
+    {
+      "name": "all 100 added to UPPER display by stable IDs",
+      "passed": true
+    },
+    {
+      "name": "new labels do not change any anchor",
+      "passed": true
+    },
+    {
+      "name": "unrelated component blocks retain same cache objects",
+      "passed": true
+    },
+    {
+      "name": "incremental update rebuilds only affected source blocks",
+      "passed": true
+    },
+    {
+      "name": "foreign editing residual labels untouched",
+      "passed": true
+    },
+    {
+      "name": "real graph growth preview on UNKNOWN source",
+      "passed": true
+    },
+    {
+      "name": "growth preview leaves all true labels unchanged",
+      "passed": true
+    },
+    {
+      "name": "growth preview does not move candidate display prematurely",
+      "passed": true
+    },
+    {
+      "name": "trimmed growth final confirmation passes",
+      "passed": true
+    },
+    {
+      "name": "growth final faces are real HUMAN UPPER and displayed",
+      "passed": true
+    },
+    {
+      "name": "growth confirmation uses full native VERIFIED transaction",
+      "passed": true
+    },
+    {
+      "name": "before undo five new faces present",
+      "passed": true
+    },
+    {
+      "name": "native undo true labels return UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "native undo removes display triangles and unhides central UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "native redo returns labels and accurate display",
+      "passed": true
+    },
+    {
+      "name": "HUMAN only displays exclusively resolved HUMAN faces",
+      "passed": true
+    },
+    {
+      "name": "100 manual faces remain visible in HUMAN-only setting",
+      "passed": true
+    },
+    {
+      "name": "locked target cannot be labeled in workbench",
+      "passed": true
+    },
+    {
+      "name": "locked rejection changes no labels",
+      "passed": true
+    },
+    {
+      "name": "mark fused issue remains UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "issue faces stay visible centrally and never moved",
+      "passed": true
+    },
+    {
+      "name": "problem-marked faces cannot be assigned concrete part",
+      "passed": true
+    },
+    {
+      "name": "manager hide UPPER removes all child display triangles",
+      "passed": true
+    },
+    {
+      "name": "manager restore rebuilds UPPER display",
+      "passed": true
+    },
+    {
+      "name": "in-place component unhides true faces without ownership change",
+      "passed": true
+    },
+    {
+      "name": "only expand current parent group",
+      "passed": true
+    },
+    {
+      "name": "distance changes draw transform only without cache rebuild",
+      "passed": true
+    },
+    {
+      "name": "all source geometry normals UV material indices stable IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "PBR and embedded textures identical to pre-entry",
+      "passed": true
+    },
+    {
+      "name": "normal workbench exit",
+      "passed": true
+    },
+    {
+      "name": "exit restores pre-entry exact face hide arrays",
+      "passed": true
+    },
+    {
+      "name": "exit restores pre-entry manager filters and original edit object",
+      "passed": true
+    },
+    {
+      "name": "exit retains all intended semantic updates",
+      "passed": true
+    },
+    {
+      "name": "exit removes runtime geometry without bpy.data pollution",
+      "passed": true
+    },
+    {
+      "name": "low memory budget cancels safely before source filtering",
+      "passed": true
+    },
+    {
+      "name": "memory refusal restores original face hide arrays",
+      "passed": true
+    },
+    {
+      "name": "optional animation has independent temporary positions only",
+      "passed": true
+    },
+    {
+      "name": "save automatically exits transient workbench",
+      "passed": true
+    },
+    {
+      "name": "saved labels persist exactly after reopen",
+      "passed": true
+    },
+    {
+      "name": "no recovery marker runtime meshes or workbench state serialized",
+      "passed": true
+    },
+    {
+      "name": "reopened model still validates geometry UV PBR stable IDs",
+      "passed": true
+    },
+    {
+      "name": "V2.1.1 input bytes remain exactly unchanged",
+      "passed": true
+    },
+    {
+      "name": "immutable original soul.blend bytes remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "unregister frees display runtime and face recovery marker",
+      "passed": true
+    },
+    {
+      "name": "same script can re-register and read labels",
+      "passed": true
+    }
+  ],
+  "timings": {
+    "initial_enter_seconds": 6.2575,
+    "assign100_with_display_seconds": 2.946,
+    "growth_preview_seconds": 4.4098,
+    "growth_commit_display_seconds": 7.4067,
+    "full_integrity_check_seconds": 3.8506,
+    "exit_seconds": 4.3854
+  },
+  "blender": "5.2.2 LTS",
+  "platform": "linux",
+  "test_file": "/workspace/artifacts/soulgrain-semantic-v2-2/tests/real-v22-1794304488578341302.blend",
+  "initial_display": {
+    "display_triangles": 776297,
+    "cache_blocks": 133,
+    "rebuilt_blocks_total": 191,
+    "cpu_cache_bytes": 118704271,
+    "session": "9b2d134499004c31bccba6027a316dbe",
+    "source_objects": 13
+  },
+  "incremental_rebuilt_blocks": 1,
+  "status": "passed",
+  "total_faces": 1499039,
+  "max_rss_kib": 3571552,
+  "source_work_sha256": "549b99dd27ca77e9e66fa21594c38ddb83582c800823c3a09d1b43dfd9db3322",
+  "original_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "native_undo": "Actual Blender background undo/redo with explicit checkpoints, not Mac GUI shortcuts"
+}

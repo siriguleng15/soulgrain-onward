@@ -1,0 +1,58 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "V2 registry lives outside driver namespace too",
+      "passed": true
+    },
+    {
+      "name": "rerun new script module after loading a blend succeeds",
+      "passed": true
+    },
+    {
+      "name": "exactly one V2 load_post handler",
+      "passed": true
+    },
+    {
+      "name": "exactly one V2 undo_post handler",
+      "passed": true
+    },
+    {
+      "name": "exactly one V2 redo_post handler",
+      "passed": true
+    },
+    {
+      "name": "all V2 child classes and properties unregister",
+      "passed": true
+    },
+    {
+      "name": "same module re-enables safely",
+      "passed": true
+    },
+    {
+      "name": "Blender preview API loads generated palette PNG",
+      "passed": true
+    },
+    {
+      "name": "manager selects visible semantic family across actual objects",
+      "passed": true
+    },
+    {
+      "name": "UNKNOWN solo filters actual mesh faces",
+      "passed": true
+    },
+    {
+      "name": "pending preview cannot be exported as confirmed data",
+      "passed": true
+    },
+    {
+      "name": "target change cancels pending and restores seed",
+      "passed": true
+    },
+    {
+      "name": "lifecycle and preview leave all annotations unchanged",
+      "passed": true
+    }
+  ],
+  "status": "passed"
+}

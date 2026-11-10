@@ -1,0 +1,27 @@
+{
+  "blender": "5.2.2 LTS",
+  "checks": [
+    {
+      "name": "install standalone V2.2 addon ZIP",
+      "passed": true
+    },
+    {
+      "name": "enable V2.2 in restricted addon context",
+      "passed": true
+    },
+    {
+      "name": "V2.2 and inherited V2.1.1 UI properties registered",
+      "passed": true
+    },
+    {
+      "name": "registered panel title is V2.2",
+      "passed": true
+    },
+    {
+      "name": "disable cleans all V2.2 properties",
+      "passed": true
+    }
+  ],
+  "preferences_saved": false,
+  "status": "passed"
+}

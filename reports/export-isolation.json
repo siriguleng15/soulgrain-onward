@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "GLB export contains exactly original 13 source meshes",
+      "passed": true
+    },
+    {
+      "name": "GLB has all 1499039 source triangles despite display filtering",
+      "passed": true
+    },
+    {
+      "name": "no runtime display namespace enters GLB nodes",
+      "passed": true
+    },
+    {
+      "name": "export changes no semantic arrays or source invariants",
+      "passed": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "status": "passed",
+  "triangles": 1499039,
+  "source_meshes": 13,
+  "materials_exported": false,
+  "artifact_delivered": false
+}

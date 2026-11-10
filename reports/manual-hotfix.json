@@ -1,0 +1,181 @@
+{
+  "checks": [
+    {
+      "name": "new V2.1 copy created",
+      "passed": true
+    },
+    {
+      "name": "explicit UNKNOWN operation",
+      "passed": true
+    },
+    {
+      "name": "15 real UNKNOWN HUMAN faces issue zero",
+      "passed": true
+    },
+    {
+      "name": "inspector scope excludes other object remnants",
+      "passed": true
+    },
+    {
+      "name": "normal UI button explicitly disables UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "UNKNOWN UI button is separate operator",
+      "passed": true
+    },
+    {
+      "name": "UNKNOWN flag cannot inherit saved UI properties",
+      "passed": true
+    },
+    {
+      "name": "15 selected UNKNOWN assigned through real normal UI payload",
+      "passed": true
+    },
+    {
+      "name": "all 15 actual sgo_part values are UPPER",
+      "passed": true
+    },
+    {
+      "name": "actual states confidence issues valid",
+      "passed": true
+    },
+    {
+      "name": "real selected corner colors match blue UPPER",
+      "passed": true
+    },
+    {
+      "name": "23 foreign selected faces labels and colors untouched",
+      "passed": true
+    },
+    {
+      "name": "transaction records exact object source IDs target and VERIFIED status",
+      "passed": true
+    },
+    {
+      "name": "success count is 15 not 38 and mentions untouched remnants",
+      "passed": true
+    },
+    {
+      "name": "inspection auto refreshed from real data",
+      "passed": true
+    },
+    {
+      "name": "manager cache and hist equal actual face data",
+      "passed": true
+    },
+    {
+      "name": "explicit object mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "mismatch leaves all target data and colors unchanged",
+      "passed": true
+    },
+    {
+      "name": "failed action clears stale inspector",
+      "passed": true
+    },
+    {
+      "name": "adopt active object explicit UI action",
+      "passed": true
+    },
+    {
+      "name": "single face actual correction",
+      "passed": true
+    },
+    {
+      "name": "native undo restores actual data and colors",
+      "passed": true
+    },
+    {
+      "name": "native redo restores corrected actual part",
+      "passed": true
+    },
+    {
+      "name": "stale cache corrected from real data",
+      "passed": true
+    },
+    {
+      "name": "partial write failure rejects success",
+      "passed": true
+    },
+    {
+      "name": "partial write fully rolled back in actual data and colors",
+      "passed": true
+    },
+    {
+      "name": "rollback recorded and no false success",
+      "passed": true
+    },
+    {
+      "name": "real attribute mismatch caught by read-back",
+      "passed": true
+    },
+    {
+      "name": "readback mismatch restores all data",
+      "passed": true
+    },
+    {
+      "name": "post-write cache failure does not report success",
+      "passed": true
+    },
+    {
+      "name": "cache failure also rolls back native attributes and colors",
+      "passed": true
+    },
+    {
+      "name": "manual assignment works after hide and restore",
+      "passed": true
+    },
+    {
+      "name": "growth starts after manual write",
+      "passed": true
+    },
+    {
+      "name": "trimmed growth confirms after manual write",
+      "passed": true
+    },
+    {
+      "name": "actual growth result remains target HUMAN",
+      "passed": true
+    },
+    {
+      "name": "manual write works immediately after growth",
+      "passed": true
+    },
+    {
+      "name": "post-sequence source geometry UV normals PBR face IDs validate",
+      "passed": true
+    },
+    {
+      "name": "save isolated hotfix work",
+      "passed": true
+    },
+    {
+      "name": "saved blend reopens with identical real annotation arrays",
+      "passed": true
+    },
+    {
+      "name": "15 face labels persist on disk",
+      "passed": true
+    },
+    {
+      "name": "legacy V2 input unchanged on disk",
+      "passed": true
+    },
+    {
+      "name": "reopened source geometry and resources validate",
+      "passed": true
+    }
+  ],
+  "blender": "5.2.2 LTS",
+  "timings": {
+    "assign_15_body_faces_seconds": 2.6024
+  },
+  "status": "passed",
+  "test_file": "/workspace/artifacts/soulgrain-semantic-v2-2/tests/manual-hotfix-1794304116547793714.blend",
+  "source_faces": 1499039,
+  "explicit_scope": "Shoe_TEST_V3",
+  "native_undo": "Background native undo with explicit checkpoints, not physical Mac shortcut testing"
+}
