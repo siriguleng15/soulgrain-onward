@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "sourceModel": "SOUL.NEW.blend",
+  "introSeconds": 3.6,
+  "totalDuration": 76.6,
+  "originalDerivationSeconds": 73,
+  "goldenRatio": 1.618033988749895,
+  "rulerAndCompass": true,
+  "eightRecursiveSimilarRectangles": true,
+  "areaConserved": true,
+  "quarterCircleDegrees": 90,
+  "tangentContinuityError": 0,
+  "endpointContinuityError": 3.7843667304341506e-17,
+  "secondStartsAtSameShortEdgeLowerEnd": true,
+  "proofClockOffsetOnly": true
+}

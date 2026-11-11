@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:4573/golden-derivation.html?autoplay=0",
+  "version": "1.3",
+  "introSeconds": 3.6,
+  "duration": 76.6,
+  "sourceTriangles": 1499039,
+  "sourceBlendSha256": "725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183",
+  "normalSourceMaterials": true,
+  "impactThenRealWireframe": true,
+  "sourceGeometrySharedAndUnmodified": true,
+  "mathStagesPreserved": true,
+  "contactFourthEyelet": true,
+  "secondStartSameShortEdge": true,
+  "absoluteSeekReverseReplayReset": true,
+  "pauseStopsRendering": true,
+  "singleCameraOwner": true,
+  "maxTipNdc": 2.6889336525575184e-15,
+  "maxTangentFraction": 5.543405241010941e-13,
+  "contextLossAndRecovery": true,
+  "loadingFailureRetry": true,
+  "reducedMotionQuietDissolve": true,
+  "ipadTouchRotatePinch": true,
+  "phoneNoOverflow": true,
+  "errors": [],
+  "timings": [
+    {
+      "time": 0,
+      "seekAndCaptureMs": 4145
+    },
+    {
+      "time": 1.52,
+      "seekAndCaptureMs": 6856
+    },
+    {
+      "time": 2.8,
+      "seekAndCaptureMs": 4663
+    },
+    {
+      "time": 12.5,
+      "seekAndCaptureMs": 5157
+    },
+    {
+      "time": 22,
+      "seekAndCaptureMs": 4751
+    },
+    {
+      "time": 26,
+      "seekAndCaptureMs": 4830
+    },
+    {
+      "time": 32.5,
+      "seekAndCaptureMs": 4484
+    },
+    {
+      "time": 39.6,
+      "seekAndCaptureMs": 3079
+    },
+    {
+      "time": 64.6,
+      "seekAndCaptureMs": 2604
+    },
+    {
+      "time": 76.6,
+      "seekAndCaptureMs": 4088
+    }
+  ],
+  "environment": "Linux Chromium / SwiftShader and touch emulation. Not physical iPad Safari."
+}

@@ -16,8 +16,8 @@ export class CameraDirector {
  }
  evaluate(t:number,aspect:number,world:(p:Vector3)=>Vector3,vector:(p:Vector3)=>Vector3):Pose{
   // Fit the 1.90-unit source length inside a narrow portrait viewport too.
-  const c=this.construction,wideDistance=Math.max(2.62,3.45/Math.max(.42,aspect));
-  const wide=this.pose(new Vector3(0,.015,0),wideDistance);
+  const c=this.construction,b=c.data.sourceBounds;const width=b?b[1][0]-b[0][0]:1.9,height=b?b[1][1]-b[0][1]:.99;const wideDistance=Math.max(height/(2*Math.tan(37*Math.PI/360)*.72),width/(2*Math.tan(37*Math.PI/360)*Math.max(.42,aspect)*.80));
+  const bounds=c.data.sourceBounds,center=bounds?new Vector3().fromArray(bounds[0]).add(new Vector3().fromArray(bounds[1])).multiplyScalar(.5):new Vector3(0,.015,0);const wide=this.pose(center,wideDistance);
   const p=world(c.p),origin=this.pose(world(c.a),1.08);
   if(t<3.3)return this.mix(wide,origin,phase(t,.35,2.8));
   if(t<9)return this.mix(origin,wide,phase(t,3.5,8.8));

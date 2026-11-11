@@ -4,3 +4,11 @@ dist/
 .DS_Store
 
 *.tsbuildinfo
+
+# Isolated SOUL web exports/media; originals remain untouched.
+/public/golden-derivation/soul-v1-3/*.glb
+/public/golden-derivation/soul-v1-3/*.png
+/scripts/smoke-golden-world.cjs
+/scripts/compare-golden-wire.cjs
+
+/node_modules

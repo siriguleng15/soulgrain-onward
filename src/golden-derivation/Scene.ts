@@ -1,11 +1,13 @@
 import {
  ACESFilmicToneMapping,AmbientLight,BufferGeometry,DirectionalLight,Group,HemisphereLight,
- Mesh,MeshBasicMaterial,MeshStandardMaterial,OrthographicCamera,Scene,SphereGeometry,SRGBColorSpace,
- TorusGeometry,Vector3,WebGLRenderer,
+ Mesh,MeshBasicMaterial,OrthographicCamera,Scene,SphereGeometry,SRGBColorSpace,
+ TorusGeometry,Vector3,WebGLRenderer,Texture,Material,
 } from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {Construction,DURATION,phase,smooth,pathSample,spiralProgress,SOURCE_SHA,shotAt,proofState,PROOF_STARTS,ARC_START,ARC_END,ANIMATION_VERSION} from './construction.ts';
+import {Construction,DURATION,phase,smooth,pathSample,spiralProgress,SOURCE_SHA,SOURCE_BLEND_SHA,SOURCE_FILE,CONSTRUCTION_FILE,shotAt,proofState,PROOF_STARTS,ARC_START,ARC_END,ANIMATION_VERSION,INTRO_DURATION,derivationTime} from './construction.ts';
+import {geometryWorld} from './GeometryWorld.ts';
+import {WireframeLayer} from './WireframeLayer.ts';
 import type{ConstructionData}from'./construction.ts';
 import {DrawPath} from './DrawPath.ts';
 import {GoldenProof} from './GoldenProof.ts';
@@ -22,13 +24,15 @@ export class DerivationScene {
  private contact=new Group();private endDots:Mesh[]=[];private tip:Mesh;
  private proof!:GoldenProof;
  private observer:ResizeObserver;private raf=0;private last=0;private dirty=true;private disposed=false;private asset?:Group;
- private width=1;private height=1;private showGuides=true;private showSeam=true;private material=new MeshStandardMaterial({color:'#9ba9b1',roughness:.82,metalness:.04});
+ private width=1;private height=1;private showGuides=true;private showSeam=true;
+ private sourceMeshes:Mesh[]=[];private wire?:WireframeLayer;private presentation:'story'|'material'|'wire'='story';
+ readonly reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
  private transition?:{from:Pose;start:number};private hiddenPlaying=false;
  private onChange:()=>void;
  constructor(readonly host:HTMLElement,onChange:()=>void){
   this.onChange=onChange;this.renderer=new WebGLRenderer({antialias:true,powerPreference:'default'});
   this.renderer.outputColorSpace=SRGBColorSpace;this.renderer.toneMapping=ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.13;this.renderer.setClearColor('#080f18',1);
-  const canvas=this.renderer.domElement;canvas.style.cssText='display:block;width:100%;height:100%;touch-action:none';canvas.tabIndex=0;canvas.setAttribute('aria-label','真实 xiezitu 鞋模与黄金比例推导。拖动旋转，双指缩放。');host.append(canvas);
+  const canvas=this.renderer.domElement;canvas.style.cssText='display:block;width:100%;height:100%;touch-action:none';canvas.tabIndex=0;canvas.setAttribute('aria-label','SOUL.NEW 原材质、几何线框与黄金比例推导。拖动旋转，双指缩放。');host.append(canvas);
   this.controls=new OrbitControls(this.camera,canvas);this.controls.enabled=false;this.controls.enableDamping=false;this.controls.enablePan=false;this.controls.minZoom=.1;this.controls.maxZoom=5;this.controls.rotateSpeed=.65;this.controls.zoomSpeed=.6;
   // The capture listener transfers camera ownership before OrbitControls reads
   // pointerdown. No director writes can race with a mouse/touch drag.
@@ -44,17 +48,19 @@ export class DerivationScene {
  }
  async load(base:string,onProgress:(text:string)=>void){
   onProgress('正在校验原始鞋模…');
+  const sourceUrl=(window as Window&{GOLDEN_SOUL_MODEL_URL?:string}).GOLDEN_SOUL_MODEL_URL??base+'golden-derivation/'+SOURCE_FILE;
   const [source,data]=await Promise.all([
-   fetch(base+'golden-derivation/xiezitu.glb').then(r=>{if(!r.ok)throw Error('鞋模读取失败：'+r.status);return r.arrayBuffer();}),
-   fetch(base+'golden-derivation/construction.json').then(r=>{if(!r.ok)throw Error('定位数据读取失败');return r.json() as Promise<ConstructionData>;})
+   fetch(sourceUrl).then(r=>{if(!r.ok)throw Error('鞋模读取失败：'+r.status);return r.arrayBuffer();}),
+   fetch(base+'golden-derivation/'+CONSTRUCTION_FILE).then(r=>{if(!r.ok)throw Error('定位数据读取失败');return r.json() as Promise<ConstructionData>;})
   ]);
   if(!crypto.subtle)throw Error('请通过 HTTPS 或本机 localhost 打开预览，以校验原始鞋模。');
   const digest=await crypto.subtle.digest('SHA-256',source);const sha=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
   if(sha!==SOURCE_SHA||data.sourceSha256!==sha)throw Error('模型身份与当前缝线定位不一致，已停止加载。');
-  if(data.revision!=='1.1'||data.calibration?.contactEyeletNumber!==4)throw Error('定位数据版本不一致，请重新载入 V1.1 预览。');this.verified=true;
+  if(data.revision!=='soul-1.3'||data.sourceBlendSha256!==SOURCE_BLEND_SHA||data.calibration?.contactEyeletNumber!==4)throw Error('SOUL.NEW 定位数据不一致，已停止加载。');this.verified=true;
   onProgress('正在建立三维推导…');
   const gltf=await new GLTFLoader().parseAsync(source,'');if(this.disposed)return;
-  this.asset=gltf.scene;this.asset.traverse(o=>{if(o instanceof Mesh){o.material=this.material;o.name='Uploaded_Xiezitu_Unchanged';}});
+  this.asset=gltf.scene;this.asset.traverse(o=>{if(o instanceof Mesh)this.sourceMeshes.push(o);});
+  this.wire=new WireframeLayer(this.sourceMeshes);
   this.root.add(this.asset);this.construction=new Construction(data);this.director=new CameraDirector(this.construction);
   this.createConstruction();this.ready=true;this.seek(0);onProgress('');
  }
@@ -64,7 +70,7 @@ export class DerivationScene {
   this.seam=line(c.seam,'#ff6f7b',2.3);this.axis=line(c.axis,'#57d5ae',2.3);this.cross=line(c.cross,'#5bd8f8',2.5);
   this.cuff=c.cuff.map(p=>line(p,'#57d5ae',2.3));
   this.proof=new GoldenProof(c);this.guides.add(this.proof.root);this.proof.resize(this.width,this.height);
-  this.spirals=c.golden.map((p,i)=>line(p,i?'#8964cf':'#cf902d',2.8));
+  this.spirals=c.golden.map((p,i)=>line(p,i?'#c5a4ff':'#efbd63',2.8));
 
   for(const p of[c.a,c.b]){const dot=new Mesh(new SphereGeometry(.0055,12,8),new MeshBasicMaterial({color:'#a8e5cd'}));dot.position.copy(p);this.guides.add(dot);this.endDots.push(dot);}
   this.contact.position.copy(c.p);this.lines.forEach(l=>l.resize(this.width,this.height));
@@ -72,7 +78,8 @@ export class DerivationScene {
  }
  seek(t:number){this.time=Math.max(0,Math.min(DURATION,t));this.revision++;this.apply();this.invalidate();this.onChange();}
  private apply(){
-  if(!this.ready)return;const t=this.time,c=this.construction;
+  if(!this.ready)return;const t=derivationTime(this.time),c=this.construction;
+  const world=geometryWorld(this.time,this.reducedMotion);this.wire?.set(this.presentation==='story'?world.wire:this.presentation==='wire'?1:0,.08-.038*smooth(phase(t,17,20))+.025*smooth(phase(t,68,73)));
   const roll=1.12*smooth(phase(t,19.2,21))*(1-smooth(phase(t,68,72.8)));
   this.root.quaternion.setFromAxisAngle(new Vector3(0,0,1),roll);
   // Rotate about the contact point, not the object origin.
@@ -95,10 +102,14 @@ export class DerivationScene {
   else if(t>=34.2&&t<43.8){current=c.golden[0];amount=progress[0];}
   else if(t>=58.2&&t<67.8){current=c.golden[1];amount=progress[1];}
   if(current){this.tip.visible=true;this.tip.position.copy(pathSample(current,amount).point);}
-  this.guides.visible=this.showGuides;
+  this.guides.visible=this.showGuides&&this.time>=INTRO_DURATION;
   if(this.cameraOwner==='director')this.applyCamera();
  }
- private directorPose(){return this.director.evaluate(this.time,this.width/this.height,p=>this.root.localToWorld(p.clone()),p=>p.clone().applyQuaternion(this.root.quaternion));}
+ private directorPose(){
+  const pose=this.director.evaluate(derivationTime(this.time),this.width/this.height,p=>this.root.localToWorld(p.clone()),p=>p.clone().applyQuaternion(this.root.quaternion));
+  if(this.time<INTRO_DURATION){const w=geometryWorld(this.time,this.reducedMotion);pose.scale*=w.zoom;pose.position.x+=w.shake;pose.position.y+=w.shake*.4;}
+  return pose;
+ }
  private applyCamera(){
   if(!this.ready)return;let pose=this.directorPose();
   if(this.transition){const t=(performance.now()-this.transition.start)/650;if(t>=1)this.transition=undefined;else pose=this.director.mix(this.transition.from,pose,t);}
@@ -126,6 +137,7 @@ export class DerivationScene {
  reset(){this.pause();this.transition=undefined;this.cameraOwner='director';this.controls.enabled=false;this.seek(0);}
  setGuides(v:boolean){this.showGuides=v;this.apply();this.invalidate();}
  setSeam(v:boolean){this.showSeam=v;this.apply();this.invalidate();}
+ setPresentation(mode:'story'|'material'|'wire'){this.presentation=mode;this.apply();this.invalidate();this.onChange();}
  private resize=()=>{
   const r=this.host.getBoundingClientRect();this.width=Math.max(1,r.width);this.height=Math.max(1,r.height);
   this.renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5,Math.sqrt(1_750_000/(this.width*this.height))));this.renderer.setSize(this.width,this.height,false);
@@ -143,14 +155,14 @@ export class DerivationScene {
  private lost=(e:Event)=>{e.preventDefault();this.contextLost=true;this.playing=false;cancelAnimationFrame(this.raf);this.raf=0;this.host.dispatchEvent(new CustomEvent('lab-context',{detail:'lost'}));this.onChange();};
  private restored=()=>{this.contextLost=false;this.invalidate();this.host.dispatchEvent(new CustomEvent('lab-context',{detail:'restored'}));this.onChange();};
  snapshot(){
-  const trace=this.time>=34.2&&this.time<43.8?0:this.time>=58.2&&this.time<67.8?1:-1;
+  const t=derivationTime(this.time),trace=t>=34.2&&t<43.8?0:t>=58.2&&t<67.8?1:-1;
   let tracking=null;
-  if(this.ready&&trace>=0){const progress=spiralProgress(phase(this.time,trace?58.2:34.2,trace?67.8:43.8)),s=pathSample(this.construction.golden[trace],progress);const p=this.root.localToWorld(s.point.clone()).project(this.camera),t=this.root.localToWorld(s.point.clone().addScaledVector(s.tangent,.0001)).project(this.camera).sub(p);tracking={tipNdc:p.toArray(),tangentHorizontalFraction:Math.abs(t.x)/Math.hypot(t.x,t.y)};}
-  return{ready:this.ready,constructionVersion:ANIMATION_VERSION,geometryVersion:this.ready?this.construction.data.revision:null,proof:proofState(this.time),duration:DURATION,placement:this.ready?{eyelet:this.construction.data.calibration.contactEyeletNumber,eyeletPoint:this.construction.data.calibration.eyelets.find(e=>e.numberFromToe===4)?.point,contact:this.construction.p.toArray(),firstStart:this.construction.golden[0].points[0].toArray(),secondStart:this.construction.golden[1].points[0].toArray()}:null,time:this.time,playing:this.playing,speed:this.speed,cameraOwner:this.cameraOwner,cameraTransition:!!this.transition,verified:this.verified,contextLost:this.contextLost,revision:this.revision,drawRevision:this.drawRevision,shot:shotAt(this.time).id,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,dpr:this.renderer.getPixelRatio(),tracking,sourceSha256:SOURCE_SHA,assetMatrix:this.asset?.matrix.toArray(),camera:this.camera.position.toArray(),quaternion:this.camera.quaternion.toArray(),sourceGeometry:this.asset?.children.filter(o=>o instanceof Mesh).map(o=>({vertices:(o as Mesh<BufferGeometry>).geometry.getAttribute('position').count,triangles:((o as Mesh<BufferGeometry>).geometry.index?.count??0)/3})),proofCounts:this.proof?.lines.map(l=>l.line.geometry.instanceCount),guideCounts:this.lines.map(l=>l.line.geometry.instanceCount)};
+  if(this.ready&&trace>=0){const progress=spiralProgress(phase(t,trace?58.2:34.2,trace?67.8:43.8)),s=pathSample(this.construction.golden[trace],progress);const p=this.root.localToWorld(s.point.clone()).project(this.camera),delta=this.root.localToWorld(s.point.clone().addScaledVector(s.tangent,.0001)).project(this.camera).sub(p);tracking={tipNdc:p.toArray(),tangentHorizontalFraction:Math.abs(delta.x)/Math.hypot(delta.x,delta.y)};}
+  return{ready:this.ready,constructionVersion:ANIMATION_VERSION,geometryVersion:this.ready?this.construction.data.revision:null,proof:proofState(t),derivationTime:t,world:geometryWorld(this.time,this.reducedMotion),wireframe:this.wire?.snapshot(),presentation:this.presentation,sourceFile:SOURCE_FILE,sourceBlendSha256:SOURCE_BLEND_SHA,reducedMotion:this.reducedMotion,duration:DURATION,placement:this.ready?{eyelet:this.construction.data.calibration.contactEyeletNumber,eyeletPoint:this.construction.data.calibration.eyelets.find(e=>e.numberFromToe===4)?.point,contact:this.construction.p.toArray(),firstStart:this.construction.golden[0].points[0].toArray(),secondStart:this.construction.golden[1].points[0].toArray()}:null,time:this.time,playing:this.playing,speed:this.speed,cameraOwner:this.cameraOwner,cameraTransition:!!this.transition,verified:this.verified,contextLost:this.contextLost,revision:this.revision,drawRevision:this.drawRevision,shot:shotAt(this.time).id,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,dpr:this.renderer.getPixelRatio(),tracking,sourceSha256:SOURCE_SHA,assetMatrix:this.asset?.matrix.toArray(),camera:this.camera.position.toArray(),quaternion:this.camera.quaternion.toArray(),sourceGeometry:this.sourceMeshes.map(o=>({name:o.name,vertices:o.geometry.getAttribute('position').count,triangles:(o.geometry.index?.count??o.geometry.getAttribute('position').count)/3})),proofCounts:this.proof?.lines.map(l=>l.line.geometry.instanceCount),guideCounts:this.lines.map(l=>l.line.geometry.instanceCount)};
  }
  dispose(){
   this.disposed=true;cancelAnimationFrame(this.raf);this.observer.disconnect();this.controls.dispose();document.removeEventListener('visibilitychange',this.visibility);
   const canvas=this.renderer.domElement;canvas.removeEventListener('pointerdown',this.takeControl,true);canvas.removeEventListener('wheel',this.takeControl,true);canvas.removeEventListener('webglcontextlost',this.lost);canvas.removeEventListener('webglcontextrestored',this.restored);
-  this.lines.forEach(l=>l.dispose());this.proof?.dispose();this.root.traverse(o=>{if(o instanceof Mesh){o.geometry.dispose();if(o.material!==this.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose());}});this.material.dispose();this.renderer.dispose();canvas.remove();
+  this.wire?.dispose();this.lines.forEach(l=>l.dispose());this.proof?.dispose();const geometries=new Set<BufferGeometry>(),materials=new Set<Material>(),textures=new Set<Texture>();this.root.traverse(o=>{if(o instanceof Mesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.add(m);for(const v of Object.values(m))if(v instanceof Texture)textures.add(v);}}});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());this.renderer.dispose();canvas.remove();
  }
 }

@@ -10,7 +10,7 @@ export class GoldenProof {
  constructor(readonly c:Construction){
   for(let k=0;k<2;k++){
    const root=new Group();this.root.add(root);
-   const color=k?'#8060bd':'#a96b12';
+   const color=k?'#c5a4ff':'#efbd63';
    const map=(x:number,y:number)=>c.local(x,y,k===1).add(new Vector3(0,0,.004));
    const draw=(points:Vector3[],width=1.5,col=color)=>{const line=new DrawPath(pathOf(points),col,width).attach(root);this.lines.push(line);return line;};
    const label=(text:string,x:number,y:number,width=.12)=>{
@@ -24,10 +24,10 @@ export class GoldenProof {
     root.add(mesh);return mesh;
    };
    const unit=draw([map(0,0),map(1,0),map(1,1),map(0,1),map(0,0)],2);
-   const diagonal=draw([map(.5,1),map(1,0)],2,'#22798d');
+   const diagonal=draw([map(.5,1),map(1,0)],2,'#61d8e6');
    const extension=draw([map(1,1),map(PHI,1)],2);
    const angle=Math.atan2(-1,.5),d=Math.sqrt(5)/2;
-   const compass=draw(Array.from({length:81},(_,i)=>map(.5+d*Math.cos(angle*(1-i/80)),1+d*Math.sin(angle*(1-i/80)))),1.8,'#22798d');
+   const compass=draw(Array.from({length:81},(_,i)=>map(.5+d*Math.cos(angle*(1-i/80)),1+d*Math.sin(angle*(1-i/80)))),1.8,'#61d8e6');
    const rectangle=draw([map(0,0),map(PHI,0),map(PHI,1),map(0,1),map(0,0)],1.7);
    const dimensions:DrawPath[]=[];
    for(const [x0,y0,x1,y1] of [[0,-.11,PHI,-.11],[0,1.13,1,1.13],[1,1.13,PHI,1.13],[-.12,0,-.12,1]]){
@@ -48,7 +48,7 @@ export class GoldenProof {
    const marker=(col:string)=>{const m=new Mesh(new SphereGeometry(.0035,12,8),new MeshBasicMaterial({color:col}));root.add(m);return m;};
    const m=marker('#8fe4da');m.position.copy(map(.5,1));const o=marker(color);
    const geometry=new BufferGeometry();geometry.setAttribute('position',new Float32BufferAttribute(new Float32Array(6),3));
-   const radius=new Line(geometry,new LineBasicMaterial({color:'#15778a',transparent:true,opacity:1,depthWrite:false}));root.add(radius);
+   const radius=new Line(geometry,new LineBasicMaterial({color:'#61d8e6',transparent:true,opacity:1,depthWrite:false}));root.add(radius);
    const highlight=new Mesh(new PlaneGeometry(1,1),new MeshBasicMaterial({color,transparent:true,opacity:.13,depthWrite:false,side:DoubleSide}));root.add(highlight);
    highlight.quaternion.copy(labels[0].quaternion);
    this.groups.push({root,unit,diagonal,extension,compass,rectangle,cuts,squares,dimensions,labels,radii,m,o,radius,highlight});

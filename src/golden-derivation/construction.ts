@@ -1,15 +1,20 @@
 import { Vector2, Vector3 } from 'three';
+import {INTRO_DURATION,DERIVATION_DURATION} from './timeline.ts';
+export {INTRO_DURATION,derivationTime} from './timeline.ts';
 
-export const SOURCE_SHA='b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897';
+export const SOURCE_SHA='ec49238d7ece89fccadf6b777bc71550c1de881bb582b0150cdf7e5cb6081e16';
+export const SOURCE_BLEND_SHA='725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183';
+export const SOURCE_FILE='soul-v1-3/soul-new-web.glb';
+export const CONSTRUCTION_FILE='soul-v1-3/construction.json';
 export const PHI=(1+Math.sqrt(5))/2;
-export const DURATION=73;
-export const ANIMATION_VERSION='1.2';
+export const DURATION=DERIVATION_DURATION+INTRO_DURATION;
+export const ANIMATION_VERSION='1.3';
 export const PROOF_STARTS=[20,44] as const;
 export const ARC_START=14.2, ARC_END=23.8;
 export const clamp=(v:number)=>Math.max(0,Math.min(1,v));
 export const smooth=(v:number)=>{v=clamp(v);return v*v*v*(10+v*(-15+v*6));};
 export const phase=(t:number,a:number,b:number)=>clamp((t-a)/(b-a));
-export const SHOTS=[
+const DERIVATION_SHOTS=[
  {at:0,end:3.3,id:'origin',label:'01 起点',en:'A POINT OF DEPARTURE',text:'镜头推进缝线下端。'},
  {at:3.3,end:9,id:'axis',label:'02 主线',en:'FINDING THE AXIS',text:'从鞋头侧面起点向后跟顶端延伸，经过切点时点亮。'},
  {at:9,end:12,id:'tangent',label:'03 切线',en:'THE POINT OF CONTACT',text:'从切点向下绘制短线；完成约 70% 时，镜头移向翻筒。'},
@@ -19,6 +24,11 @@ export const SHOTS=[
  {at:44,end:68,id:'spiral-b',label:'07 第二组推导',en:'CONSTRUCTING THE GOLDEN RATIO / II',text:'从青色短线的下端起笔，镜像重复相同的数学作图步骤。'},
  {at:68,end:73,id:'return',label:'08 全貌',en:'EVERY LINE BELONGS',text:'镜头回到起始视角，保留完整推导。'},
 ] as const;
+export const SHOTS=[
+ {at:0,end:1.4,id:'material',label:'01 原貌',en:'BEFORE THE GEOMETRY',text:'SOUL.NEW 原材质鞋模。'},
+ {at:1.4,end:INTRO_DURATION,id:'world',label:'02 几何世界',en:'ENTER THE GEOMETRY',text:'从真实材质，进入线与比例的世界。'},
+ ...DERIVATION_SHOTS.map((s,i)=>({...s,at:s.at+INTRO_DURATION,end:s.end+INTRO_DURATION,label:String(i+3).padStart(2,'0')+s.label.slice(2)})),
+];
 export function shotAt(t:number){return [...SHOTS].reverse().find(s=>t>=s.at)??SHOTS[0];}
 export interface Path {points:Vector3[];lengths:number[];length:number}
 export function pathOf(points:Vector3[]):Path{
@@ -88,6 +98,8 @@ export function proofCaption(t:number){
 }
 export interface ConstructionData {
  revision:string;
+ sourceBlendSha256:string;
+ sourceBounds:[number[],number[]];
  calibration:{contactEyeletNumber:number;eyelets:{numberFromToe:number;point:number[]}[];secondSpiralStart:string};
  sourceSha256:string;seam:{points:number[][];anchors:unknown[]};
  frame:{origin:number[];axis:number[];down:number[];height:number;depth:number};
