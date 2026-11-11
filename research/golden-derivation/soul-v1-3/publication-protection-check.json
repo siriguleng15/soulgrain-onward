@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "pagesBase": "f7a890c26ef6f94934dd1eae6d3487dd1ef0ff36",
+  "pagesCommit": "c5d7aa6ba447a55188ef5d02362b059f5625b2bd",
+  "mainUnchanged": "682cf319ffe5dc4169fc28a95fc527f77b6a7e35",
+  "allExistingPagesFilesIdentical": 822,
+  "onlyAddedPrefix": "golden-world-soul-v1-3/",
+  "newFiles": 9,
+  "oldXiezituSha256": "b890baa9f1f6e9e04110d2dffa2e422e6c444f1b7e49c3ae6d57cc7659a02897",
+  "sourceBlendUnchanged": true,
+  "originalSourceWorktreeUnchanged": true,
+  "pagesBytes": 999100800,
+  "pagesDeployment": "https://github.com/siriguleng15/soulgrain-onward/actions/runs/43014127976",
+  "pagesDeploymentConclusion": "success",
+  "liveURL": "https://siriguleng15.github.io/soulgrain-onward/golden-world-soul-v1-3/golden-derivation.html?autoplay=0",
+  "oldV12URLStatus": 200
+}

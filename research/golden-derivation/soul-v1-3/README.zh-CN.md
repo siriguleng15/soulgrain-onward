@@ -41,3 +41,17 @@ SHA-256：725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183。
 - 浏览器测试环境为 Linux Chromium / SwiftShader 与 iPad / 手机尺寸模拟，尚未进行 iPad Safari 实机验收，不承诺实机帧率。
 
 发布使用独立的新预览目录，旧版预览和正式首页保留；不合并 main。由于现有 Pages 站点已接近容量上限，新模型与验证图片由固定提交的独立媒体分支提供。
+
+## 独立访问入口与发布核验
+
+互动页面：https://siriguleng15.github.io/soulgrain-onward/golden-world-soul-v1-3/golden-derivation.html?autoplay=0
+
+画面核对：https://siriguleng15.github.io/soulgrain-onward/golden-world-soul-v1-3/golden-derivation/soul-v1-3/review.html
+
+网页 GLB 与截图固定于媒体提交 `1cbfefa63b031df6a801d2954cb4529d6ad59f01`，客户端仍完整校验 GLB SHA-256，不直接把远程任意模型当作当前资产。首次加载下载约 63 MB。
+
+当前 Pages 发布只新增独立目录中的 9 个小文件，先前 822 个文件的 Git blob 均保持相同，main 未变。发布记录见 publication-protection-check.json；真实网络加载及阶段检查见 publication-candidate-check.json / publication-live-check.json。
+
+测试容器 Chromium 不包含执行代理的 CA，外网浏览器检查仅在测试上下文忽略证书错误；另用系统信任链 HTTPS 下载验证字节数、SHA-256 和跨域响应。网站没有设置 TLS 绕过。该项不能作为 iPad Safari 证书或实机验收。
+
+旧 `check-development-skills.py` 属于早先的“只新增技术准备文件”范围，仍以 `fea6c0e` 比较整个长期仓库，因已有制作文件和本版动画而失败；其范围限制不适用于本次用户已授权的制作阶段。它没有写入模型；本版几何、数学、TypeScript、构建和真实浏览器检查独立记录，未把旧检查宣称为通过。
