@@ -1,0 +1,73 @@
+{
+  "commit": "afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2",
+  "downloads": [
+    {
+      "file": "Soulgrain_C_SEMANTIC_V2_3_CHECK.blend",
+      "bytes": 77473218,
+      "sha256": "4f0deb141b0593bf97fa3d96763e83af019f1e6886829be375ed24b3fb63d572",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/Soulgrain_C_SEMANTIC_V2_3_CHECK.blend",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "Soulgrain_C_V2_3.semantics.json",
+      "bytes": 26390907,
+      "sha256": "f0bc9dd103abb399d8f989062483548fa77c80d7e7dd52fb14c49c9524c80ca2",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/Soulgrain_C_V2_3.semantics.json",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "Soulgrain_REPAIR_STUDIO_V3_DEMO.blend",
+      "bytes": 78020841,
+      "sha256": "ad85cf4c24950f90ac753aa2405719919e1b5dccadce2461fc3433a610756816",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/Soulgrain_REPAIR_STUDIO_V3_DEMO.blend",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "Soulgrain_Repair_Studio_V3_Addon.zip",
+      "bytes": 79216,
+      "sha256": "61e6922c98ddda4d5307e3a925f45daf593834058fce9f68d81348055d7adfaa",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/Soulgrain_Repair_Studio_V3_Addon.zip",
+      "http_status": 200,
+      "content_type": "application/zip",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "Soulgrain_Repair_Studio_V3_Toolkit.zip",
+      "bytes": 2476909,
+      "sha256": "6137eb983d3dfbffc1efea48c08b6f7499826de413bc84c7d6c1b7ae7d87338d",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/Soulgrain_Repair_Studio_V3_Toolkit.zip",
+      "http_status": 200,
+      "content_type": "application/zip",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "soulgrain_repair_studio_v3.py",
+      "bytes": 261830,
+      "sha256": "6d70c7e6d6149d0c3c56b4597406aeb0663bfd663dc8c739883087687cf73669",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/soulgrain_repair_studio_v3.py",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "verified_public_without_auth": true
+    },
+    {
+      "file": "soulgrain_semantic_v2_3_repair.py",
+      "bytes": 199285,
+      "sha256": "cdefbbab922fbac40d8f25c5e019c075c2863ee336f658162fa10d9b9c758580",
+      "url": "https://raw.githubusercontent.com/siriguleng15/soulgrain-onward/afb1fff01e136a4d8d8d3bf7d3c49c4ea869a0b2/delivery/soulgrain_semantic_v2_3_repair.py",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "verified_public_without_auth": true
+    }
+  ],
+  "seconds": 4.072658216988202,
+  "production_refs_unchanged": {
+    "refs/heads/gh-pages": "f7a890c26ef6f94934dd1eae6d3487dd1ef0ff36",
+    "refs/heads/main": "682cf319ffe5dc4169fc28a95fc527f77b6a7e35"
+  }
+}
