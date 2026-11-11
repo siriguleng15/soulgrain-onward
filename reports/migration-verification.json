@@ -1,0 +1,149 @@
+{
+  "output": "Soulgrain_C_SEMANTIC_V2_3_CHECK.blend",
+  "bytes": 77473218,
+  "sha256": "4f0deb141b0593bf97fa3d96763e83af019f1e6886829be375ed24b3fb63d572",
+  "counts": {
+    "inherited_faces": 1281758,
+    "inherited_human": 164407,
+    "inherited_unknown": 412512,
+    "new_faces": 79892,
+    "retired_faces": 217281,
+    "retired_human": 193853
+  },
+  "proof": [
+    {
+      "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+      "current_object_id": "99d15f4d-fad1-5db2-b8c3-140438c767b9",
+      "source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+      "surviving": 200309,
+      "retired": 34396,
+      "source_mapping_hash": "84bf46053d9d009d101e4e31ab7b17f2fa5871750598892b6fd7b1063d4c5507",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+      "current_object_id": "4af348f1-a0cc-57e8-8e9d-2e55e6f3b585",
+      "source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+      "surviving": 177752,
+      "retired": 0,
+      "source_mapping_hash": "e1c7cc793d138e1063f1d324a786b60100cf4db4ff57689cf753548aa813e41d",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_New_minus_eyelet_1",
+      "current_object_id": "c8a24d4b-9799-518f-8bb9-d4fd41ae4716",
+      "source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_New_minus_eyelet_2",
+      "current_object_id": "1be777d1-1e7e-5782-9f1c-dd428655044f",
+      "source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_New_minus_eyelet_3",
+      "current_object_id": "e6a84be2-935e-55e4-b420-c1e76f2d0419",
+      "source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_New_minus_eyelet_4",
+      "current_object_id": "10623624-fdb0-5949-9096-d2e6094f137f",
+      "source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_New_minus_eyelet_5",
+      "current_object_id": "d4fbad19-1c8b-53e2-9b3e-2db92934e4a5",
+      "source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Preserved_plus_eyelet_1",
+      "current_object_id": "6e8c1b8c-bb3b-546e-b155-6194c3cd1150",
+      "source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Preserved_plus_eyelet_2",
+      "current_object_id": "037609c6-77c5-5bfa-a3d5-9f650877a8ee",
+      "source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Preserved_plus_eyelet_3",
+      "current_object_id": "be833a9f-27cf-5f10-b425-7d70e3767ed3",
+      "source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Preserved_plus_eyelet_4",
+      "current_object_id": "1758b607-2d9b-5c31-8b74-b2e17004089f",
+      "source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Preserved_plus_eyelet_5",
+      "current_object_id": "951e3ac8-c9b7-5f86-aa1f-b98fb0ca53fe",
+      "source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+      "surviving": 2304,
+      "retired": 0,
+      "source_mapping_hash": "eebe4a6aa3412ddf394f671ecf58e01afad5aad28303dc9d7018cf64eab2609a",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    },
+    {
+      "name": "WORK_Shoe_TEST_V3",
+      "current_object_id": "31122117-0656-544e-baf2-feb5573d4096",
+      "source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+      "surviving": 880657,
+      "retired": 182885,
+      "source_mapping_hash": "4522ce0c0627c9ff8b7be84fcd44bece119490e6835b822351a4ab22654cd5da",
+      "geometry_uv_labels_exact": true,
+      "retired_list_agrees_with_A_B_C": true
+    }
+  ],
+  "geometry_uv_pbr_transforms_unchanged_by_migration": true,
+  "new_pending_not_human": true,
+  "all_source_inputs_unchanged": true,
+  "original_plugin_sha256": "1b7f4da45c81cb09c7f3b204c1a52887ec3dbd27b9f14ff96ecff46baa4fe0d3"
+}

@@ -1,0 +1,7 @@
+import bpy,sys,json,importlib.util,numpy as np
+from pathlib import Path
+R=Path('/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111');spec=importlib.util.spec_from_file_location('history_test',R/'delivery/soulgrain_repair_studio_v3.py');a=importlib.util.module_from_spec(spec);sys.modules[spec.name]=a;spec.loader.exec_module(a);a.register();bpy.ops.wm.open_mainfile(filepath=str(R/'delivery/Soulgrain_REPAIR_STUDIO_V3_DEMO.blend'),load_ui=False,use_scripts=False);d=a.sr3_guard();key=d['demo_tasks']['rear'];bpy.context.scene.sr3_task=key;d,t,o=a.sr3_preview();uid=o['sr3_object_uuid'];a.sr3_activate(o,False);bpy.context.preferences.edit.use_global_undo=True;report={'real_model':True,'blender':bpy.app.version_string};bpy.ops.ed.undo_push(message='SOUL real model before retract');assert bpy.ops.sgo3.action(action='RETRACT')=={'FINISHED'};assert a.sr3_meta()['tasks'][key]['state']=='RETRACTED';bpy.ops.ed.undo_push(message='SOUL real model after retract')
+if bpy.ops.ed.undo.poll():
+ bpy.ops.ed.undo();assert a.sr3_meta()['tasks'][key]['state']=='PREVIEW';a.sr3_guard();report['undo_retract_restores_preview_task']=True;bpy.ops.ed.redo();assert a.sr3_meta()['tasks'][key]['state']=='RETRACTED';a.sr3_guard();report['redo_retract_restores_retracted_task']=True
+else:report['undo_available']=False;report['limit']='Background Blender undo operator unavailable; Mac GUI verification required.'
+(R/'reports/native-history-tests.json').write_text(json.dumps(report,indent=2));print('NATIVE_HISTORY_RESULT',report,flush=True)

@@ -1,0 +1,10 @@
+inputs/
+__pycache__/
+*.log
+*.blend1
+*.blend2
+reports/*.npz
+/tests/*.blend*
+/scripts/harden_studio.py
+/scripts/replace_export.py
+/scripts/bound_intersections.py

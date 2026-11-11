@@ -1,0 +1,1844 @@
+{
+  "schema": "soulgrain.face-semantics/1.0",
+  "asset_id": "6d1af63b-a864-509f-bb73-cfad89756c7b",
+  "source_path": "/Users/admin/soul.blend",
+  "source_name": "soul.blend",
+  "source_sha256": "0d255d72f07d4b4ffc1d94908222e2ef3da506df7011812d985ad3c5c3d6c1ff",
+  "objects": {
+    "7fe6ac3a-7bad-51e9-962a-58a27820036a": {
+      "source_name": "DEBUG_LACES_VISIBILITY_ONLY",
+      "mesh_name": "DEBUG_V4_LACES_UNCHANGED_GEOMETRY",
+      "mesh": {
+        "vertices": 195523,
+        "edges": 415119,
+        "faces": 234705,
+        "position": "b29437249b559f9e4b682bf1df722bc2bd4c7f5a866a19dc96dcfb34a8c85952",
+        "edges_hash": "ae6486e4954a428c7eee229dbee02a222d467b5505887cc1760cae84d8249f6f",
+        "loops": "0d65d73c79ca71a025b6aa754ae64a6a3ce0bddc20ae7255025f0fbc3ad60e5d",
+        "poly_start": "b37919bf49c7f52b13f39437683abf12a5b73865a1687ea23ecf7ddcbc48ec97",
+        "poly_total": "56e6d8bb05083da11067a734299c0eee5c8d927fb5defeaec830075c567c7db9",
+        "material_index": "523b236189091b80efac96559e2dd06d60ed67ad26dd64acc72aa4467a508e8d",
+        "uv": {
+          "UVMap": "0532c59c33125656525867a6cf6653509f22080ccd72029f62cfa60ed29487a3"
+        },
+        "normals": "be0cdbddb0af659a5fb217ea87f0497ca6ec43ae70fb3946a5bf3378f834fca8"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "B_texture_on_A_test_v1"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d": {
+      "source_name": "GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+      "mesh_name": "GEO_TONGUE_CONTINUOUS_SHELL_V5_1",
+      "mesh": {
+        "vertices": 94773,
+        "edges": 270606,
+        "faces": 177752,
+        "position": "d7082bb70a6e6cee5c0e810ffacd1d554dc56f78f1b95f3c6845b25d230271a3",
+        "edges_hash": "2706490c21a73600c4516d95972e3df0988170e652410e49f463e4da8d951a45",
+        "loops": "41720f611dd1e78be04daab7b0c50558d75257c4c4013014af43680d8fa8edca",
+        "poly_start": "77f4c82186dc5a808dc3aa556ded4f39f026686bc0d728bb7c7402690564e5ee",
+        "poly_total": "6f4779209ecb159b0a14c24ad69b67e78c8b9f5f50ebe3efaa77c5cb73f540c7",
+        "material_index": "44c6cf3d76e328645d7069ea8794b5dc21c5644292e38cf3befe53738dde253d",
+        "uv": {
+          "UVMap": "1239c2e652b38c06b53b7155bcf7b340adf5d2b01d2db7a7f617567e99951402"
+        },
+        "normals": "348e9cc0c25a5cda5f735ec3003c3531154c62387972313f2bf29d627c427c87"
+      },
+      "object": {
+        "parent": "TONGUE_ASSEMBLY_V5_1",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "MAT_TONGUE_V4_APPEARANCE_RESAMPLED"
+          ],
+          [
+            "DATA",
+            "MAT_TONGUE_HIDDEN_MATCHED_V4_CLOTH"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "92dabb0f-a99c-5d08-b151-2734849ffc37": {
+      "source_name": "New_minus_eyelet_1",
+      "mesh_name": "Opposite_hollow_eyelet_1",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "9f0fbdd4c08ab86de9309866b3fc695bab2cb244ab24b5c31c3d65188f17d87c",
+        "edges_hash": "be7aeefeb330ccd1d40ba2161cc41c3f91513fecfa532c61383feafbcd3d42ca",
+        "loops": "c639143919f6314dd362f3f9900f5da41f83cdbbb951599faf4199b44769d4de",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "7b829cb24955b0b1c38ec1c977fe87eea41009cf1d2e5a74a8856263fa670fa0"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928": {
+      "source_name": "New_minus_eyelet_2",
+      "mesh_name": "Opposite_hollow_eyelet_2",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "27868498736294c791ce64bce386bafbfa3265817b1796238ee7f5cd96a1ceb6",
+        "edges_hash": "be7aeefeb330ccd1d40ba2161cc41c3f91513fecfa532c61383feafbcd3d42ca",
+        "loops": "c639143919f6314dd362f3f9900f5da41f83cdbbb951599faf4199b44769d4de",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "69949c375dc2d354c10dcbfe554e570013c16d7b007a1309307e0c27f8808ab5"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee": {
+      "source_name": "New_minus_eyelet_3",
+      "mesh_name": "Opposite_hollow_eyelet_3",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "fe33fb309a409936a9c4f8ea8a549229261fb71f9c70a044b9e32325339209b9",
+        "edges_hash": "be7aeefeb330ccd1d40ba2161cc41c3f91513fecfa532c61383feafbcd3d42ca",
+        "loops": "c639143919f6314dd362f3f9900f5da41f83cdbbb951599faf4199b44769d4de",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "f6d5468327e522190ff8f8213eba8bba6119e3fe823942746218f787816a3f3d"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "d8128fbc-d42b-5e4a-92b0-1bde16978a51": {
+      "source_name": "New_minus_eyelet_4",
+      "mesh_name": "Opposite_hollow_eyelet_4",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "22668a5622fd79fb6b4c790c4c3527b09c77a74af0b0b0699eb8060a57ba2ac3",
+        "edges_hash": "be7aeefeb330ccd1d40ba2161cc41c3f91513fecfa532c61383feafbcd3d42ca",
+        "loops": "c639143919f6314dd362f3f9900f5da41f83cdbbb951599faf4199b44769d4de",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "f5802515a153d9257bbff4c7f8877c7a623689bedf783bc30e3a4bab918aaa2f"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "4c738ead-59a4-52d2-8d45-76f1a2089103": {
+      "source_name": "New_minus_eyelet_5",
+      "mesh_name": "Opposite_hollow_eyelet_5",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "f23583a4e5ec23438ef42980e7406dbab2a70050356f538cbf1415b3db6c3c98",
+        "edges_hash": "be7aeefeb330ccd1d40ba2161cc41c3f91513fecfa532c61383feafbcd3d42ca",
+        "loops": "c639143919f6314dd362f3f9900f5da41f83cdbbb951599faf4199b44769d4de",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "a730934d4e6c75fc59b650fac8e02abfa2ea01163f5b826eae1e73d183763006"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d": {
+      "source_name": "Preserved_plus_eyelet_1",
+      "mesh_name": "Hollow_metal_eyelet_1",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "89357bbd85d317b58fc359aa2b677bf226ce524d10d05d661dcee88b12035fd6",
+        "edges_hash": "dc153d4dffa248533f44086ce28eb8577ed4afe1553df561b35d74dd3c0afa31",
+        "loops": "67f0e0f047aa30ed564ec276c55971d673270408a8dad4e861125ec259b11e1b",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "a3b7d11dfcf337315490a82c21fafa4bb135eafec8e9b9647c653671a0892cdc"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "1a69f39f-c6b2-5db8-8764-b604ea44d628": {
+      "source_name": "Preserved_plus_eyelet_2",
+      "mesh_name": "Hollow_metal_eyelet_2",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "57f6a3fcc2ee07b8047ecd64f596558b5ea242cc89406cbe44f0dcd7f8025725",
+        "edges_hash": "dc153d4dffa248533f44086ce28eb8577ed4afe1553df561b35d74dd3c0afa31",
+        "loops": "67f0e0f047aa30ed564ec276c55971d673270408a8dad4e861125ec259b11e1b",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "61653f12854b8164655900d2406b664fdc04bac03f73eccf814a12fbb830f259"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "95d576b9-181e-5af4-862f-ce0001a38d01": {
+      "source_name": "Preserved_plus_eyelet_3",
+      "mesh_name": "Hollow_metal_eyelet_3",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "7ebc7a382f288822fcf2aa138fe7152236a2f623e6a3f54f1a0d91419086d868",
+        "edges_hash": "dc153d4dffa248533f44086ce28eb8577ed4afe1553df561b35d74dd3c0afa31",
+        "loops": "67f0e0f047aa30ed564ec276c55971d673270408a8dad4e861125ec259b11e1b",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "e8aacc0d907b1f84a080e957c57184fcf01cbd0bbdbe53127b440583316b8540"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a": {
+      "source_name": "Preserved_plus_eyelet_4",
+      "mesh_name": "Hollow_metal_eyelet_4",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "6efdf41c69b83b6d179e5b135d2ed4918c7adea0cd61b7561c09aabb523f001c",
+        "edges_hash": "dc153d4dffa248533f44086ce28eb8577ed4afe1553df561b35d74dd3c0afa31",
+        "loops": "67f0e0f047aa30ed564ec276c55971d673270408a8dad4e861125ec259b11e1b",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "e9ad0bba55696992258615a06189b8fd384bdf05750839ae23f94dcaf92befea"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "c76973b9-f78d-53e8-9873-5bb45e95253f": {
+      "source_name": "Preserved_plus_eyelet_5",
+      "mesh_name": "Hollow_metal_eyelet_5",
+      "mesh": {
+        "vertices": 1152,
+        "edges": 3456,
+        "faces": 2304,
+        "position": "5c6b4691ed586d7af8716de34290a5a37b4149fdd734b540c7b270883a1bc4a0",
+        "edges_hash": "dc153d4dffa248533f44086ce28eb8577ed4afe1553df561b35d74dd3c0afa31",
+        "loops": "67f0e0f047aa30ed564ec276c55971d673270408a8dad4e861125ec259b11e1b",
+        "poly_start": "a8f97a87639f12fb8cb914eb08018cbb8d53bb641dff621d7cfae1fe28d55d33",
+        "poly_total": "4ceea87788fe9eb58b0a51eae5d3d41cbfcfeb14d837f1b13ff129658b1a4b22",
+        "material_index": "2d07a41ae992770085117e9815300bfd0730745883e60b24aaad5e69dfc087ae",
+        "uv": {},
+        "normals": "8de28b59e97e90f3958618c56ac58198427d964906ea7685c5397225bc8227a1"
+      },
+      "object": {
+        "parent": "Shoe_TEST_V3",
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ]
+        ]
+      },
+      "original_active_color": null
+    },
+    "e163f071-a4ef-53e8-9be7-4b8644a5950f": {
+      "source_name": "Shoe_TEST_V3",
+      "mesh_name": "GEO_V4_PROTECTED_BODY_LOCAL_TONGUE_REMOVAL",
+      "mesh": {
+        "vertices": 774228,
+        "edges": 1811080,
+        "faces": 1063542,
+        "position": "a8fdd0660dfd8378fb8a86740462c64c7790f4e7efda18843850cec70d39f2fa",
+        "edges_hash": "f7dd647baa0cf324bbee477eb06259995653bcb288a290bd68ff16c3e697cd92",
+        "loops": "263b564e58a82f6234764857f6c4a61239b649d44255859a34bb037a2ded8ce8",
+        "poly_start": "a524605cf684d576555e196f21357a662fdce7b1d72ec3cf17cbec2bba8c3707",
+        "poly_total": "ecda74e1268450a8f56cca939e1cd80b9c04936ccb54b5e3cdc0a5c9baeb8c37",
+        "material_index": "e5391395ffb9d600bca3bf9f56afb259c969be59fb0bcf0b2c2d007543e2130d",
+        "uv": {
+          "UVMap": "a223a449f74ead8749fec4536189de2e7aab5912aa6667b9a9f750ed73b4785c"
+        },
+        "normals": "30080ae640161c9fabcf7d7bb8867e861c1062b50d8702032b44cf24ba1d906e"
+      },
+      "object": {
+        "parent": null,
+        "matrix_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrix_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "materials": [
+          [
+            "DATA",
+            "B_texture_on_A_test_v1"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_1"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_2"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_3"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_4"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_5"
+          ],
+          [
+            "DATA",
+            "Local_B_pattern_repair_6"
+          ],
+          [
+            "DATA",
+            "Silver_eyelet_reference_B"
+          ],
+          [
+            "DATA",
+            "Original_B_cuff_diamond_aligned_continuously"
+          ],
+          [
+            "DATA",
+            "B_style_sole_toe_tongue_stitches_V4"
+          ]
+        ]
+      },
+      "original_active_color": null
+    }
+  },
+  "parts": [
+    {
+      "code": 0,
+      "key": "UNKNOWN",
+      "name": "UNKNOWN 未识别 / 待确认",
+      "parent": "",
+      "color": [
+        1,
+        0.015,
+        0.5
+      ],
+      "id": "c277e828-6757-5c06-a16f-23c8db5acf24",
+      "parent_id": null
+    },
+    {
+      "code": 10,
+      "key": "UPPER",
+      "name": "鞋身：未细分",
+      "parent": "SHOE",
+      "color": [
+        0.05,
+        0.34,
+        0.92
+      ],
+      "id": "01f8fab2-8e39-5936-afe7-3c7a47f2ba55",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 11,
+      "key": "UPPER_SIDE_A",
+      "name": "鞋帮侧 A（原坐标 Y<0）",
+      "parent": "UPPER",
+      "color": [
+        0.03,
+        0.3,
+        0.9
+      ],
+      "id": "71be6101-1dd6-5d83-b4e7-33ecde577f53",
+      "parent_id": "01f8fab2-8e39-5936-afe7-3c7a47f2ba55"
+    },
+    {
+      "code": 12,
+      "key": "UPPER_SIDE_B",
+      "name": "鞋帮侧 B（原坐标 Y>0）",
+      "parent": "UPPER",
+      "color": [
+        0.02,
+        0.66,
+        0.92
+      ],
+      "id": "cd9d14f6-a258-5599-a27e-2946a77482cb",
+      "parent_id": "01f8fab2-8e39-5936-afe7-3c7a47f2ba55"
+    },
+    {
+      "code": 13,
+      "key": "VAMP",
+      "name": "前鞋面 / 布面鞋头",
+      "parent": "UPPER",
+      "color": [
+        0.07,
+        0.75,
+        0.6
+      ],
+      "id": "f873ff56-2cb3-5da9-8a56-8343b0f75a8f",
+      "parent_id": "01f8fab2-8e39-5936-afe7-3c7a47f2ba55"
+    },
+    {
+      "code": 14,
+      "key": "HEEL",
+      "name": "后跟鞋身",
+      "parent": "UPPER",
+      "color": [
+        0.15,
+        0.37,
+        0.62
+      ],
+      "id": "d60bc1d3-b416-5ce6-8c57-467ccd8cea4f",
+      "parent_id": "01f8fab2-8e39-5936-afe7-3c7a47f2ba55"
+    },
+    {
+      "code": 20,
+      "key": "SOLING",
+      "name": "鞋底组件：未细分",
+      "parent": "SHOE",
+      "color": [
+        0.3,
+        0.62,
+        0.05
+      ],
+      "id": "10d6dbac-2ebe-56b6-8855-592444b8d9c5",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 21,
+      "key": "OUTSOLE",
+      "name": "外底 / 底面",
+      "parent": "SOLING",
+      "color": [
+        0.13,
+        0.32,
+        0.025
+      ],
+      "id": "748140ad-211d-5498-8fe2-cbee9fdb41ae",
+      "parent_id": "10d6dbac-2ebe-56b6-8855-592444b8d9c5"
+    },
+    {
+      "code": 22,
+      "key": "SIDEWALL",
+      "name": "鞋底侧墙",
+      "parent": "SOLING",
+      "color": [
+        0.48,
+        0.75,
+        0.1
+      ],
+      "id": "da13525f-2fe7-5dd7-92bd-60c2a53a18c6",
+      "parent_id": "10d6dbac-2ebe-56b6-8855-592444b8d9c5"
+    },
+    {
+      "code": 23,
+      "key": "TOE_CAP",
+      "name": "橡胶包头",
+      "parent": "SOLING",
+      "color": [
+        0.98,
+        0.4,
+        0.035
+      ],
+      "id": "b0bd9e41-7a79-504c-b502-df562f10f2b6",
+      "parent_id": "10d6dbac-2ebe-56b6-8855-592444b8d9c5"
+    },
+    {
+      "code": 24,
+      "key": "FOXING",
+      "name": "硫化围条",
+      "parent": "SOLING",
+      "color": [
+        0.95,
+        0.7,
+        0.03
+      ],
+      "id": "6a692475-cdd7-5aef-8eef-d9d729414cf8",
+      "parent_id": "10d6dbac-2ebe-56b6-8855-592444b8d9c5"
+    },
+    {
+      "code": 25,
+      "key": "RED_ACCENT",
+      "name": "红色装饰带（表面区域）",
+      "parent": "FOXING",
+      "color": [
+        0.92,
+        0.04,
+        0.025
+      ],
+      "id": "8da2ae70-e87d-5b7e-8228-d5dde455475f",
+      "parent_id": "6a692475-cdd7-5aef-8eef-d9d729414cf8"
+    },
+    {
+      "code": 30,
+      "key": "CUFF",
+      "name": "翻筒：未细分",
+      "parent": "SHOE",
+      "color": [
+        0.41,
+        0.055,
+        0.8
+      ],
+      "id": "8a10c57c-827c-5613-96be-39c54308b9fe",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 31,
+      "key": "CUFF_OUTER",
+      "name": "翻筒外表面",
+      "parent": "CUFF",
+      "color": [
+        0.54,
+        0.08,
+        0.9
+      ],
+      "id": "fae25564-2857-5729-b290-1cd71a5a9c47",
+      "parent_id": "8a10c57c-827c-5613-96be-39c54308b9fe"
+    },
+    {
+      "code": 32,
+      "key": "CUFF_INNER",
+      "name": "翻筒内表面",
+      "parent": "CUFF",
+      "color": [
+        0.73,
+        0.3,
+        0.9
+      ],
+      "id": "187b7080-58cd-5dfb-b52a-bd960e54a961",
+      "parent_id": "8a10c57c-827c-5613-96be-39c54308b9fe"
+    },
+    {
+      "code": 33,
+      "key": "CUFF_EDGE",
+      "name": "翻筒边缘",
+      "parent": "CUFF",
+      "color": [
+        0.35,
+        0.025,
+        0.42
+      ],
+      "id": "4b1afb8e-7d8b-5242-94ea-90f9e52a46fb",
+      "parent_id": "8a10c57c-827c-5613-96be-39c54308b9fe"
+    },
+    {
+      "code": 40,
+      "key": "TONGUE",
+      "name": "鞋舌：未细分",
+      "parent": "SHOE",
+      "color": [
+        0.03,
+        0.76,
+        0.88
+      ],
+      "id": "9c4212ae-b5ff-5ea5-8948-ea963de275c7",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 41,
+      "key": "TONGUE_FRONT",
+      "name": "鞋舌外观面候选",
+      "parent": "TONGUE",
+      "color": [
+        0.04,
+        0.6,
+        0.82
+      ],
+      "id": "d0521267-f621-5f69-b904-6a9cec524128",
+      "parent_id": "9c4212ae-b5ff-5ea5-8948-ea963de275c7"
+    },
+    {
+      "code": 42,
+      "key": "TONGUE_BACK",
+      "name": "鞋舌背面候选",
+      "parent": "TONGUE",
+      "color": [
+        0.02,
+        0.3,
+        0.43
+      ],
+      "id": "b48dd648-dbeb-5c61-9494-bf06794d216c",
+      "parent_id": "9c4212ae-b5ff-5ea5-8948-ea963de275c7"
+    },
+    {
+      "code": 43,
+      "key": "TONGUE_EDGE",
+      "name": "鞋舌边缘 / 厚度",
+      "parent": "TONGUE",
+      "color": [
+        0.08,
+        0.85,
+        0.6
+      ],
+      "id": "3ce5fbcd-98c3-56f5-ba6c-852724f6719d",
+      "parent_id": "9c4212ae-b5ff-5ea5-8948-ea963de275c7"
+    },
+    {
+      "code": 44,
+      "key": "TONGUE_DECOR",
+      "name": "鞋舌装饰区域",
+      "parent": "TONGUE",
+      "color": [
+        0.72,
+        0.6,
+        0.04
+      ],
+      "id": "63db04ed-03be-55bb-b3c6-9252e8f5d279",
+      "parent_id": "9c4212ae-b5ff-5ea5-8948-ea963de275c7"
+    },
+    {
+      "code": 50,
+      "key": "LACE",
+      "name": "鞋带（仅确定的面）",
+      "parent": "SHOE",
+      "color": [
+        0.97,
+        0.86,
+        0.035
+      ],
+      "id": "3046d296-da02-522c-87f0-e9fa1fa82d46",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 60,
+      "key": "EYELET",
+      "name": "孔圈：未细分",
+      "parent": "HARDWARE",
+      "color": [
+        0.04,
+        0.72,
+        0.13
+      ],
+      "id": "852763ea-1be6-5e1b-8e7d-4d3f290c5d59",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 70,
+      "key": "HEEL_STRIP",
+      "name": "后跟皮条 / 回纹条",
+      "parent": "HEEL",
+      "color": [
+        0.67,
+        0.17,
+        0.08
+      ],
+      "id": "85a05729-bca2-5043-a3eb-d935130e3bd9",
+      "parent_id": "d60bc1d3-b416-5ce6-8c57-467ccd8cea4f"
+    },
+    {
+      "code": 71,
+      "key": "CLASP",
+      "name": "扣件",
+      "parent": "HARDWARE",
+      "color": [
+        0.62,
+        0.53,
+        0.2
+      ],
+      "id": "3fdde22e-47df-51c6-8a0c-97adac164371",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 72,
+      "key": "STRAP",
+      "name": "连接带",
+      "parent": "HARDWARE",
+      "color": [
+        0.58,
+        0.37,
+        0.05
+      ],
+      "id": "44530f65-9392-5bd4-8e40-ebd69d6f8854",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 80,
+      "key": "STITCH",
+      "name": "缝线 / 包边区域",
+      "parent": "DECORATION",
+      "color": [
+        0.84,
+        0.82,
+        0.58
+      ],
+      "id": "9fa981ab-ed68-5a29-84e2-fed95b1a465f",
+      "parent_id": "6ccfefb0-4763-51c7-a6a5-b0d3257dedf9"
+    },
+    {
+      "code": 90,
+      "key": "DECORATION",
+      "name": "其他已确认装饰",
+      "parent": "SHOE",
+      "color": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "id": "6ccfefb0-4763-51c7-a6a5-b0d3257dedf9",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    },
+    {
+      "code": 1000,
+      "key": "CUFF_EYELET_New_minus_eyelet_1",
+      "name": "独立翻筒孔圈 · New_minus_eyelet_1",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "5db49c14-14d6-5d7b-94d3-be22f712be6c",
+      "source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1001,
+      "key": "CUFF_EYELET_New_minus_eyelet_2",
+      "name": "独立翻筒孔圈 · New_minus_eyelet_2",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "ae150a18-e288-5c54-b052-12c9921dd03f",
+      "source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1002,
+      "key": "CUFF_EYELET_New_minus_eyelet_3",
+      "name": "独立翻筒孔圈 · New_minus_eyelet_3",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "08ff6691-b3a5-586d-8628-f28674ce11d6",
+      "source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1003,
+      "key": "CUFF_EYELET_New_minus_eyelet_4",
+      "name": "独立翻筒孔圈 · New_minus_eyelet_4",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "561cd856-5fc1-5604-97ed-a329174db9a3",
+      "source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1004,
+      "key": "CUFF_EYELET_New_minus_eyelet_5",
+      "name": "独立翻筒孔圈 · New_minus_eyelet_5",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "d56d38d5-2318-5619-87ab-154584e09e72",
+      "source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1005,
+      "key": "CUFF_EYELET_Preserved_plus_eyelet_1",
+      "name": "独立翻筒孔圈 · Preserved_plus_eyelet_1",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "0c967969-294b-592c-9912-b5cdf4db3959",
+      "source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1006,
+      "key": "CUFF_EYELET_Preserved_plus_eyelet_2",
+      "name": "独立翻筒孔圈 · Preserved_plus_eyelet_2",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "27ae96df-b1ec-5426-881b-bbb2dbf94440",
+      "source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1007,
+      "key": "CUFF_EYELET_Preserved_plus_eyelet_3",
+      "name": "独立翻筒孔圈 · Preserved_plus_eyelet_3",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "4d92b57c-b1f6-528d-bf67-5589c7e8fbb1",
+      "source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1008,
+      "key": "CUFF_EYELET_Preserved_plus_eyelet_4",
+      "name": "独立翻筒孔圈 · Preserved_plus_eyelet_4",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "c9851cc5-39d7-5b73-821d-4bd1750bde3b",
+      "source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    },
+    {
+      "code": 1009,
+      "key": "CUFF_EYELET_Preserved_plus_eyelet_5",
+      "name": "独立翻筒孔圈 · Preserved_plus_eyelet_5",
+      "parent": "HARDWARE",
+      "color": [
+        0.055,
+        0.73,
+        0.12
+      ],
+      "id": "a6c9b1e4-09cf-5dee-ae82-74964e0b06cd",
+      "source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+      "parent_id": "f3be7e72-1318-54de-97e6-48eaef1cab25"
+    }
+  ],
+  "resources": {
+    "materials": {
+      "B_style_sole_toe_tongue_stitches_V4": "f182d86faadf52daff3c56dff1d39ba3a04a1135344217c0f4dfe7af6ec91a5c",
+      "B_texture_on_A_test_v1": "cb9afc9840c0dd7d930b389c848be8ba176a15637746da95fabb8bfbbb53a145",
+      "Local_B_pattern_repair_1": "1e1b583d2258d37f1bb7e4ab8492c2b3dc24c2f57b0256af0702470803a32678",
+      "Local_B_pattern_repair_2": "750e1a0c94588eaecbb3cd578424b6177227f8a677f97fdb92deb4a3fbb17004",
+      "Local_B_pattern_repair_3": "e36908f7b70a78e26d45fb51ca0eb24d5eb1ae54c8c0cb156dac8d912c11ac65",
+      "Local_B_pattern_repair_4": "bd892b8400177b674daa21c5561a199ee922b1d71e299d523731a8b4f5ff2b43",
+      "Local_B_pattern_repair_5": "fa51f6d37118bd1ae050fa93405ef284d83fd258d76dd36a414657257bf13357",
+      "Local_B_pattern_repair_6": "8a06de5a050f43e0b079e6b432a8a01aff38a254c87ded29d7febac77611073d",
+      "MAT_TONGUE_HIDDEN_MATCHED_V4_CLOTH": "f8c8f6c65d77354d335124c69cbc444c998e62938c8f6d160ddb0df6bbdef1e5",
+      "MAT_TONGUE_V4_APPEARANCE_RESAMPLED": "f4da202904820f97cde52f7b2064f4a35a57b76e4c2e3793c50766b1a19d796f",
+      "Material": "21b2066361782e970aa8400c928f243843e9ce0e50a289717038f077cca347a6",
+      "Original_B_cuff_diamond_aligned_continuously": "aaa6d9a0ea2ec19046e285f8022ed477d9a2384c94be61a89f2468c785bb6cb5",
+      "Silver_eyelet_reference_B": "f3bba64bd686dc5f5700e2730f606882f3ffaffacb17f6f7b53b3e474a03ffea"
+    },
+    "images": {
+      "basecolor-8192.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          8192,
+          8192
+        ],
+        "colorspace": "sRGB",
+        "packed": "42ea041ec97dbaca78b61047bcd3b291dd4daaae9f8896dfe66a058dd12d3cee"
+      },
+      "cuff-periodic-basecolor.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "sRGB",
+        "packed": "51840c823fbecdee6c4d3b2669e15d888e21e4e8b6e4063a8994d916f22e3f13"
+      },
+      "cuff-periodic-metallic-roughness.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "Non-Color",
+        "packed": "1b7743b4010c9275fb97c95b99eb6d6070587c3cc322dbfc2224e9854ba4287f"
+      },
+      "finish-basecolor-4096.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB",
+        "packed": "c468879503e447d3381332cefc2b768db9dca1aa199aed9b6f1953cd879aaa1d"
+      },
+      "finish-metallic-roughness-2048.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed": "064a7d2393349075fd08cc190d0ebc64d86a1768bd49ed76af71d5d0e341f0b3"
+      },
+      "local_cloth_1": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "ac4ef500c85d44c3171d1aca83ef508fa2cf7f76ca92e699332ea770e7965af9"
+      },
+      "local_cloth_2": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "7353826c1f47f0bd5b1c12155999f5c9659feab38a937384732226ca731c511d"
+      },
+      "local_cloth_3": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "0fc7ba90760fd2154397e12c36bab1f2c249d5a7598262f78775206eef8204bc"
+      },
+      "local_cloth_4": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "08016fc9a7bb8dc58281e97812fd6edb97798bb0e90931d258b1410bc5cb3e9a"
+      },
+      "local_cloth_5": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "de30ba05d2821a181298bc456360aea3f8f704dcb2145f1a64c7f0ba1c075944"
+      },
+      "local_cloth_6": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          512,
+          512
+        ],
+        "colorspace": "sRGB",
+        "packed": "160f8f1ad18c1b6a50300f9a463c7496d7ed9a61a0039f0b556dbcaf48587ea2"
+      },
+      "local_cloth_MR_1": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "3f0c99cf2f69a3e3310fcf7753b1a329d84cfde5a50898bddc632cd549441041"
+      },
+      "local_cloth_MR_2": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "4753c84b1e3f888dc1f4a3a7fe238da524d90ead0eca7ff6ba588f50a98313f5"
+      },
+      "local_cloth_MR_3": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "bef27e1d337b118939fbab37769d4852fbf4212f62631ae1a4d11ade8a448237"
+      },
+      "local_cloth_MR_4": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "d88c6273b0009a9ffb55bfc949b47f0f16205f5cbf67abe70a3fbc79d35080ae"
+      },
+      "local_cloth_MR_5": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "83029c94d07c15a9801f7693d9e3517688d36197e635b9d81b406e7509acb645"
+      },
+      "local_cloth_MR_6": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          256,
+          256
+        ],
+        "colorspace": "Non-Color",
+        "packed": "b5a43721b81c33005892777d4d7f20e7fd7baaa77a0026bf79b5068c29196a04"
+      },
+      "metallic-roughness-2048.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "Non-Color",
+        "packed": "8706580dc4e3d9616b49af782817819039f014a0b01cad7e0a7133952ddedcf8"
+      },
+      "V51_tongue-front-basecolor.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "sRGB",
+        "packed": "7bdd46e91ee8806b1cd7577d47002b489d0ddbcf82524c8f802833fb295b81f3"
+      },
+      "V51_tongue-front-metallic-roughness.png": {
+        "source": "FILE",
+        "path": "",
+        "size": [
+          1024,
+          1024
+        ],
+        "colorspace": "Non-Color",
+        "packed": "537c145d5528aea2a367455ee06394ce03dbfdf0df19421453eff41a0ec603d4"
+      }
+    }
+  },
+  "issue_notes": [],
+  "hierarchy": [
+    {
+      "key": "SHOE",
+      "name": "单只鞋（左右脚待确认）",
+      "parent": null,
+      "id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae",
+      "parent_id": null
+    },
+    {
+      "key": "HARDWARE",
+      "name": "五金件",
+      "parent": "SHOE",
+      "id": "f3be7e72-1318-54de-97e6-48eaef1cab25",
+      "parent_id": "e10b7d7f-ac3c-5825-9b95-8b5f0e969eae"
+    }
+  ],
+  "v2": {
+    "version": "2.0.0",
+    "input_work_path": "/Users/admin/soul_SGO_V1_WORK.blend",
+    "input_work_name": "soul_SGO_V1_WORK.blend",
+    "input_sha256": "491918d99f029d1c41d0ef0642175d5db125760b1759cdb3e8a9f8c9e706d5e4",
+    "migrated_utc": "2026-11-10T04:48:37Z"
+  },
+  "v21": {
+    "version": "2.1.1",
+    "input_work_path": "/Users/admin/soul_SGO_V2_1_WORK.blend",
+    "input_work_name": "soul_SGO_V2_1_WORK.blend",
+    "input_sha256": "fd1a2c8ddf1716852c2b8400c8306100d533beeec561a69b7d41db45e48e5dd3"
+  },
+  "v22": {
+    "version": "2.2.0",
+    "input_work_path": "/Users/admin/soul_SGO_V2_1_1_WORK_V2_2_WORK.blend",
+    "input_work_name": "soul_SGO_V2_1_1_WORK_V2_2_WORK.blend",
+    "input_sha256": "f73bf642acea8d184d4bd38a1b7ca4372df00a9a28687c2c0dc03eab2ecc2182",
+    "temporary_display": "runtime triangle/GPU caches only; no source topology edits"
+  }
+}

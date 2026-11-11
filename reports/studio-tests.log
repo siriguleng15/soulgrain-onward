@@ -1,0 +1,12 @@
+Failed to create secure directory (/home/agent/.config/pulse): Read-only file system
+00:00.372  blend            | Read blend: "/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111/delivery/Soulgrain_REPAIR_STUDIO_V3_DEMO.blend"
+REAR_QUALITY_PASS
+00:54.163  image.write      | ERROR OpenImageIO write failed: Could not open file "/home/agent/.cache/thumbnails/large/blender_671040_62716be3934c838273dac0ee9f03f851.png.png"
+00:54.164  blend            | Read blend: "/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111/tests/STUDIO_VERIFIED_SAVE.blend"
+01:08.579  blend            | Read blend: "/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111/tests/STUDIO_ACCEPTED_OUTPUT.blend"
+Info: Saved as "STUDIO_VERIFIED_SAVE.blend"
+Info: Saved copy as "workspace_copy.blend"
+REAL_MODEL_REPAIR_STUDIO_TESTS_PASS 74.81328328204108
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:34:58)
+
+Blender quit

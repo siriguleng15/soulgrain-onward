@@ -1,0 +1,6 @@
+{
+  "real_model": true,
+  "blender": "5.2.2 LTS",
+  "undo_retract_restores_preview_task": true,
+  "redo_retract_restores_retracted_task": true
+}

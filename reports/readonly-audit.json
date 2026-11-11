@@ -1,0 +1,3906 @@
+{
+  "root_file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/inputs/SOUL.NEW.blend",
+  "root_sha256": "725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183",
+  "root_counts": {
+    "faces": 1499039,
+    "human": 358260,
+    "unknown": 412512
+  },
+  "stages": {
+    "A_full": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/stages/Soulgrain_Stage_A.blend",
+      "sha256": "5f7458970dc9bf7699a4235c5ae6cc4456504b95be865b042d1dd01b31434529",
+      "scene": "REPAIR_A__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [
+        "SOURCE_UNCHANGED__ORIGINAL_LABELS"
+      ],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 1014665,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 48877,
+          "retired_human": 25449,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 234705,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        }
+      ],
+      "inherited_faces": 1450162,
+      "inherited_human": 332811,
+      "unknown": 412512,
+      "new_faces_without_semantics": 25240,
+      "removed_source_faces": 48877,
+      "retired_human": 25449,
+      "input_unchanged": true
+    },
+    "A_download": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Stage_A_REVIEW.blend",
+      "sha256": "1fb32e9ab66be765d87d2e394aeba164e4a17814fdc78e3ed1091428ef7b0b24",
+      "scene": "REPAIR_A__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record",
+        "repair_download_notice"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 1014665,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 48877,
+          "retired_human": 25449,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 234705,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        }
+      ],
+      "inherited_faces": 1450162,
+      "inherited_human": 332811,
+      "unknown": 412512,
+      "new_faces_without_semantics": 25240,
+      "removed_source_faces": 48877,
+      "retired_human": 25449,
+      "input_unchanged": true
+    },
+    "B_full": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/stages/Soulgrain_Stage_B.blend",
+      "sha256": "a86642ff4c75b97cc506274bf4202307e57e3f6e026d6aa319fa020863436ce6",
+      "scene": "REPAIR_B__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [
+        "SOURCE_UNCHANGED__ORIGINAL_LABELS"
+      ],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 950236,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 113306,
+          "retired_human": 89878,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 200309,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 34396,
+          "retired_human": 34396,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES",
+          "faces": 638,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 638,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
+          "faces": 18970,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": {
+              "domain": "FACE",
+              "type": "INT"
+            }
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 18970,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous",
+            "repair_new_region_key": "1 lining side A (Y<-.03), 2 lining side B, 3 footbed; NEW geometry only, no original semantic change"
+          }
+        }
+      ],
+      "inherited_faces": 1351337,
+      "inherited_human": 233986,
+      "unknown": 412512,
+      "new_faces_without_semantics": 44848,
+      "removed_source_faces": 147702,
+      "retired_human": 124274,
+      "input_unchanged": true
+    },
+    "B_download": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Stage_B_REVIEW.blend",
+      "sha256": "845722c412db909ba556d7d880c18f3a6b215608c5ebc2c350c1687fb040218b",
+      "scene": "REPAIR_B__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record",
+        "repair_download_notice"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 950236,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 113306,
+          "retired_human": 89878,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 200309,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 34396,
+          "retired_human": 34396,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES",
+          "faces": 638,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 638,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
+          "faces": 18970,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": {
+              "domain": "FACE",
+              "type": "INT"
+            }
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 18970,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous",
+            "repair_new_region_key": "1 lining side A (Y<-.03), 2 lining side B, 3 footbed; NEW geometry only, no original semantic change"
+          }
+        }
+      ],
+      "inherited_faces": 1351337,
+      "inherited_human": 233986,
+      "unknown": 412512,
+      "new_faces_without_semantics": 44848,
+      "removed_source_faces": 147702,
+      "retired_human": 124274,
+      "input_unchanged": true
+    },
+    "C_full": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/stages/Soulgrain_Stage_C.blend",
+      "sha256": "d73b6e88a7baad6a16b46621c4013f0a29d5b18a72e5bdf15986d200fca9ea94",
+      "scene": "REPAIR_C__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [
+        "SOURCE_UNCHANGED__ORIGINAL_LABELS"
+      ],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 880657,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 182885,
+          "retired_human": 159457,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 200309,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 34396,
+          "retired_human": 34396,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES",
+          "faces": 638,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 638,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
+          "faces": 18970,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": {
+              "domain": "FACE",
+              "type": "INT"
+            }
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 18970,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous",
+            "repair_new_region_key": "1 lining side A (Y<-.03), 2 lining side B, 3 footbed; NEW geometry only, no original semantic change"
+          }
+        },
+        {
+          "name": "REPAIR_CUFF_NEW_INNER",
+          "faces": 34754,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 34754,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_CUFF_RETURN_EDGES",
+          "faces": 290,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 290,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        }
+      ],
+      "inherited_faces": 1281758,
+      "inherited_human": 164407,
+      "unknown": 412512,
+      "new_faces_without_semantics": 79892,
+      "removed_source_faces": 217281,
+      "retired_human": 193853,
+      "input_unchanged": true
+    },
+    "C_download": {
+      "file": "/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/delivery/Soulgrain_Stage_C_REVIEW.blend",
+      "sha256": "3e91b772b242dc6d02867f8a524c9e16841636a5bc946e57509d877a800f1449",
+      "scene": "REPAIR_C__REAL_GEOMETRY",
+      "has_active_scene_meta": false,
+      "scenes_with_meta": [],
+      "source_properties": [
+        "repair_input_sha256",
+        "repair_source_records",
+        "repair_source_resources",
+        "repair_stage",
+        "repair_change_record",
+        "repair_download_notice"
+      ],
+      "meshes": [
+        {
+          "name": "WORK_Shoe_TEST_V3",
+          "faces": 880657,
+          "old_object_id": null,
+          "repair_source_object_id": "e163f071-a4ef-53e8-9be7-4b8644a5950f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 182885,
+          "retired_human": 159457,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "05c7c645-8f9d-5da1-8ec6-bd16e4423e2d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1a69f39f-c6b2-5db8-8764-b604ea44d628",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "95d576b9-181e-5af4-862f-ce0001a38d01",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c33a3ad4-a6a7-59d3-b8ce-cd79b844148a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_Preserved_plus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "c76973b9-f78d-53e8-9873-5bb45e95253f",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_1",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "92dabb0f-a99c-5d08-b151-2734849ffc37",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_2",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "1eb8b32f-f6a0-50cb-8d9b-8f074d5c5928",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_3",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "0a98b0b8-a8cf-562d-8819-ebb4fb8f43ee",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_4",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "d8128fbc-d42b-5e4a-92b0-1bde16978a51",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_New_minus_eyelet_5",
+          "faces": 2304,
+          "old_object_id": null,
+          "repair_source_object_id": "4c738ead-59a4-52d2-8d45-76f1a2089103",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_DEBUG_LACES_VISIBILITY_ONLY",
+          "faces": 200309,
+          "old_object_id": null,
+          "repair_source_object_id": "7fe6ac3a-7bad-51e9-962a-58a27820036a",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": false,
+          "retired_source_faces": 34396,
+          "retired_human": 34396,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "WORK_GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+          "faces": 177752,
+          "old_object_id": null,
+          "repair_source_object_id": "d14a0c67-e5f2-5401-be3a-f5dddd3b1b3d",
+          "attributes": {
+            "sgo_part": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_status": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_confidence": {
+              "domain": "FACE",
+              "type": "FLOAT"
+            },
+            "sgo_issue": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "sgo_source_face": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_is_new": null,
+            "repair_new_surface_region": null
+          },
+          "geometry_exact": true,
+          "labels_exact": true,
+          "uv_exact": true,
+          "material_indices_exact": true,
+          "world_transform_exact": true,
+          "source_fid_contiguous_zero_based": true,
+          "retired_source_faces": 0,
+          "retired_human": 0,
+          "all_original_unknown_retained": true
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_A",
+          "faces": 1900,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 1900,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_SOLE_REAR_B",
+          "faces": 2092,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 2092,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_TOECAP_THICKNESS_BAND",
+          "faces": 21248,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 21248,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONFIRMED_LOCAL_HOLES",
+          "faces": 638,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 638,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_UPPER_CONTINUOUS_LINING_FOOTBED",
+          "faces": 18970,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": {
+              "domain": "FACE",
+              "type": "INT"
+            }
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 18970,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous",
+            "repair_new_region_key": "1 lining side A (Y<-.03), 2 lining side B, 3 footbed; NEW geometry only, no original semantic change"
+          }
+        },
+        {
+          "name": "REPAIR_CUFF_NEW_INNER",
+          "faces": 34754,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 34754,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        },
+        {
+          "name": "REPAIR_CUFF_RETURN_EDGES",
+          "faces": 290,
+          "old_object_id": null,
+          "repair_source_object_id": null,
+          "attributes": {
+            "sgo_part": null,
+            "sgo_status": null,
+            "sgo_confidence": null,
+            "sgo_issue": null,
+            "sgo_source_face": null,
+            "repair_is_new": {
+              "domain": "FACE",
+              "type": "INT"
+            },
+            "repair_new_surface_region": null
+          },
+          "construction_tags": {
+            "repair_geometry": "real editable mesh; not a display proxy",
+            "repair_added_faces": 290,
+            "repair_uv_status": "NEW UV only: local construction coordinates; not certified atlas-continuous"
+          }
+        }
+      ],
+      "inherited_faces": 1281758,
+      "inherited_human": 164407,
+      "unknown": 412512,
+      "new_faces_without_semantics": 79892,
+      "removed_source_faces": 217281,
+      "retired_human": 193853,
+      "input_unchanged": true
+    }
+  }
+}

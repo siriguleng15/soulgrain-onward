@@ -1,0 +1,13 @@
+{
+  "real_model": true,
+  "valid_original_preview_passes_disk_topology": true,
+  "native_preview_interior_face_deletion_detected": true,
+  "damaged_preview_confirmation_rejected": true,
+  "source_unchanged": true,
+  "damaged_patch_topology": {
+    "connected_components": 1,
+    "boundary_components": 2,
+    "pinched_boundary_vertices": 0,
+    "loose_vertices": 0
+  }
+}

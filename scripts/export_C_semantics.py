@@ -1,0 +1,3 @@
+import bpy,sys,json,importlib.util
+from pathlib import Path
+R=Path('/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111');spec=importlib.util.spec_from_file_location('export_C',R/'delivery/soulgrain_semantic_v2_3_repair.py');a=importlib.util.module_from_spec(spec);sys.modules[spec.name]=a;spec.loader.exec_module(a);a.register();bpy.ops.wm.open_mainfile(filepath=str(R/'delivery/Soulgrain_C_SEMANTIC_V2_3_CHECK.blend'),load_ui=False,use_scripts=False);out=R/'delivery/Soulgrain_C_V2_3.semantics.json';out.write_text(json.dumps(a.export_payload(),ensure_ascii=False,indent=2));print('C_JSON_EXPORTED',out.stat().st_size,flush=True)

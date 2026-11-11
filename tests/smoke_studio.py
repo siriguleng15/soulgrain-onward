@@ -1,0 +1,3 @@
+import bpy,sys,importlib.util
+from pathlib import Path
+R=Path('/workspace/artifacts/soulgrain-semantic-repair-bridge-20261111');s=importlib.util.spec_from_file_location('studio_smoke',R/'delivery/soulgrain_repair_studio_v3.py');a=importlib.util.module_from_spec(s);sys.modules[s.name]=a;s.loader.exec_module(a);a.register();bpy.ops.wm.open_mainfile(filepath='/workspace/artifacts/soulgrain-geometry-repair-01-03-20261111/inputs/SOUL.NEW.blend',load_ui=False,use_scripts=False);a.sr3_initialize(R/'tests/STUDIO_SMOKE.blend');proxy=a.sr3_scope();print('SOURCE_SCOPE',len(proxy.data.polygons));a.sr3_guard();print('STUDIO_SOURCE_SCOPE_GUARD_PASS',flush=True)
