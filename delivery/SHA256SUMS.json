@@ -1,10 +1,5 @@
 [
   {
-    "file": "SHA256SUMS.json",
-    "bytes": 1278,
-    "sha256": "2281eaae8bb965c8467f8124f86a80fae1553037e94b432950cf7b0464cfe49e"
-  },
-  {
     "file": "Soulgrain_C_SEMANTIC_V2_3_CHECK.blend",
     "bytes": 77473218,
     "sha256": "4f0deb141b0593bf97fa3d96763e83af019f1e6886829be375ed24b3fb63d572"
@@ -27,7 +22,7 @@
   {
     "file": "Soulgrain_Repair_Studio_V3_Toolkit.zip",
     "bytes": 2476909,
-    "sha256": "a050990af99b7f89cfba6817edf061b4ef68efc160bac08084c6affa43ecfe9e"
+    "sha256": "6137eb983d3dfbffc1efea48c08b6f7499826de413bc84c7d6c1b7ae7d87338d"
   },
   {
     "file": "soulgrain_repair_studio_v3.py",

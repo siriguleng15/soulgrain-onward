@@ -88,7 +88,7 @@ with zipfile.ZipFile(R/'delivery/Soulgrain_Repair_Studio_V3_Toolkit.zip','w',zip
  for p in files:z.write(p,p.relative_to(R))
 manifest=[]
 for p in sorted((R/'delivery').iterdir()):
- if p.is_file() and p.suffix in ['.py','.zip','.blend','.json']:manifest.append({'file':p.name,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+ if p.is_file() and p.name!='SHA256SUMS.json' and p.suffix in ['.py','.zip','.blend','.json']:manifest.append({'file':p.name,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 (R/'delivery/SHA256SUMS.json').write_text(json.dumps(manifest,indent=2));(R/'delivery/SHA256SUMS.txt').write_text(''.join(x['sha256']+'  '+x['file']+'\n' for x in manifest))
 for p in (R/'delivery').glob('*.zip'):
  with zipfile.ZipFile(p) as z:assert z.testzip() is None
