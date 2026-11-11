@@ -1,0 +1,23 @@
+{
+  "source_blend_unchanged": true,
+  "export_glb_sha256": "967adf96bdc437804175bb5be4990c3c968c2c66dfec35cb1c5a3765e64638d5",
+  "web_glb_sha256": "ec49238d7ece89fccadf6b777bc71550c1de881bb582b0150cdf7e5cb6081e16",
+  "web_glb_bytes": 63006336,
+  "geometry_uv_index_normal_buffer_views_byte_identical": true,
+  "material_definitions_unchanged": true,
+  "texture_changes": [
+    {
+      "name": "basecolor-8192",
+      "from": [
+        8192,
+        8192
+      ],
+      "to": [
+        4096,
+        4096
+      ],
+      "source_sha256": "42ea041ec97dbaca78b61047bcd3b291dd4daaae9f8896dfe66a058dd12d3cee",
+      "web_sha256": "bf6845d9d99583bfe01d2cfe4da2f1f114b4bea818b706979e85bd11a71f574f"
+    }
+  ]
+}

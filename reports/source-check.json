@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "sourceBlendSha256": "725756904a0c71ee9c927b3e39332655c4cd175d3b9d55d0272ae70adb105183",
+  "webGlbSha256": "ec49238d7ece89fccadf6b777bc71550c1de881bb582b0150cdf7e5cb6081e16",
+  "all_source_triangles_retained": 1499039,
+  "parts": [
+    {
+      "name": "Shoe_TEST_V3",
+      "source_triangles": 1063542,
+      "exported_triangles": 1063542,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "Preserved_plus_eyelet_1",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "Preserved_plus_eyelet_2",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "Preserved_plus_eyelet_3",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "Preserved_plus_eyelet_4",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "Preserved_plus_eyelet_5",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "New_minus_eyelet_1",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "New_minus_eyelet_2",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "New_minus_eyelet_3",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "New_minus_eyelet_4",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "New_minus_eyelet_5",
+      "source_triangles": 2304,
+      "exported_triangles": 2304,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "DEBUG_LACES_VISIBILITY_ONLY",
+      "source_triangles": 234705,
+      "exported_triangles": 234705,
+      "oriented_triangle_positions_exact": true
+    },
+    {
+      "name": "GEO_TONGUE_CONTINUOUS_FRONT_BACK",
+      "source_triangles": 177752,
+      "exported_triangles": 177752,
+      "oriented_triangle_positions_exact": true
+    }
+  ],
+  "newSourceBarycentricAnchors": 241,
+  "maxAnchorReconstructionError": 5.551115123125783e-17,
+  "contactBelowFourthLacedEyelet": true,
+  "secondStartOnSameShortEdge": true,
+  "sourceSavedOrClassified": false
+}
