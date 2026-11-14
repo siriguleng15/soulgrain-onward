@@ -1,0 +1,14 @@
+{
+  "self_intersections": 0,
+  "degenerate_triangles": 0,
+  "new_triangles": 20480,
+  "mean_outward_move_from_rejected_version": 0.11304816184247239,
+  "source_base_protrusion_edited": false,
+  "old_wrong_patch_replaced": true,
+  "outer_shape_basis": "preserved exterior heel-root contour",
+  "estimated_upper_taper": 0.035,
+  "limitations": [
+    "Independent layer; not welded",
+    "New navy material; print pending"
+  ]
+}
